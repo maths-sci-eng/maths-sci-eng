@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Page not found | Mathematics for Scientists and Engineers</title>
+  <title>Chapter 7 Complex Numbers | Mathematics for Scientists and Engineers</title>
   <meta name="description" content="Mathematics Lecture Notes for UoE Penryn Science and Engineering Disciplines." />
   <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Page not found | Mathematics for Scientists and Engineers" />
+  <meta property="og:title" content="Chapter 7 Complex Numbers | Mathematics for Scientists and Engineers" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="Mathematics Lecture Notes for UoE Penryn Science and Engineering Disciplines." />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Page not found | Mathematics for Scientists and Engineers" />
+  <meta name="twitter:title" content="Chapter 7 Complex Numbers | Mathematics for Scientists and Engineers" />
   
   <meta name="twitter:description" content="Mathematics Lecture Notes for UoE Penryn Science and Engineering Disciplines." />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-
+<link rel="prev" href="trigonometry.html"/>
+<link rel="next" href="references.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -147,19 +147,103 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="page-not-found" class="section level1">
-<h1>Page not found</h1>
-<p>The page you requested cannot be found (perhaps it was moved or renamed).</p>
-<p>You may want to try searching to find the page's new location, or use
-the table of contents to find the page you are looking for.</p>
+<div id="complex-numbers" class="section level1 hasAnchor" number="7">
+<h1><span class="header-section-number">Chapter 7</span> Complex Numbers<a href="complex-numbers.html#complex-numbers" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>We are familiar with natural numbers (<span class="math inline">\(1, 2, 3, \dots\)</span>), denoted by <span class="math inline">\(\mathbb{N}\)</span>, integers (<span class="math inline">\(\dots, -5, -4, -3, -2, -1, 0, 1 \dots\)</span>), denoted by <span class="math inline">\(\mathbb{Z}\)</span>, and rational numbers (<span class="math inline">\(1/2, 4/5\)</span>, etc.), denoted by <span class="math inline">\(\mathbb{Q}\)</span>. We also know about irrational numbers such as <span class="math inline">\(e\)</span>, <span class="math inline">\(\pi\)</span> (the area of a circle with radius equal to <span class="math inline">\(1\)</span>) or <span class="math inline">\(\sqrt{2}\)</span> — one solution of the quadratic equation
+<span class="math display">\[
+x^2 - 2 = 0.
+\]</span>
+The collection of natural numbers, integers, rational and irrational numbers make up what we call the <em>real numbers</em>, denoted by <span class="math inline">\(\mathbb{R}\)</span>.</p>
+<p>But do we have “enough” numbers? The answer is no! We do not have to look hard for why we do not have enough numbers. The simple equation
+<span class="math display">\[
+x^2 + 1 = 0
+\]</span>
+does not have real solutions. The answer would be <span class="math inline">\(\pm \sqrt{-1}\)</span>, if that would make sense. More generally, the quadratic equation
+<span class="math display">\[
+a x^2 + b x + c = 0, \quad \text{with}\quad b^2 - 4 ac &lt; 0
+\]</span>
+does not have real number solutions!</p>
+<div id="i-and-complex-numbers" class="section level2 hasAnchor" number="7.1">
+<h2><span class="header-section-number">7.1</span> <span class="math inline">\(i\)</span> and complex numbers<a href="complex-numbers.html#i-and-complex-numbers" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Our fix is to define the <em>imaginary number</em> <span class="math inline">\(i\)</span> by
+<span class="math display">\[
+i = \sqrt{-1},\quad \text{ so that }\quad i^2 = -1.
+\]</span>
+With this definition in mind, consider the quadratic equation
+<span class="math display">\[
+x^2 + 4 x + 13 = 0.
+\]</span>
+Completing the square gives<a href="#fn8" class="footnote-ref" id="fnref8"><sup>8</sup></a>
+<span class="math display">\[
+(x+2)^2 + 9 = 0 \quad \implies \quad
+x+2 = \pm \sqrt{-9} = \pm 3 \sqrt{-1} = \pm 3 i \quad \implies \quad
+x = 2 \pm 3 i.
+\]</span></p>
+<p>This leads us to <em>Complex Numbers</em>, denoted by <span class="math inline">\(\mathbb{C}\)</span>, defined as the set of all numbers
+<span class="math display">\[
+z = x + i y, \quad \text{where $x$ and $y$ are real numbers}.
+\]</span>
+This form is also called the <em>Cartesian representation</em> of a complex number. It has a <em>real part</em> <span class="math inline">\(\mathbf{Re}(z) = x\)</span> and an <em>imaginary part</em> <span class="math inline">\(\mathbf{Im}(z) = y\)</span>. We can then represent a complex number graphically by plotting the real and imaginary parts as coordinates in a Cartesian coordinate system, as in figure <a href="complex-numbers.html#fig:complexcart">7.1</a>. The <span class="math inline">\(x\)</span>-axis is called the <em>real axis</em> and the <span class="math inline">\(y\)</span>-axis is called the <em>imaginary axis</em>.</p>
+<div class="figure"><span style="display:block;" id="fig:complexcart"></span>
+<img src="figures/triangle.png" alt="The complex number $z = x + iy$ in Cartesian coordinates."  />
+<p class="caption">
+Figure 7.1: The complex number <span class="math inline">\(z = x + iy\)</span> in Cartesian coordinates.
+</p>
+</div>
+<p>We can add, subtract and multiply complex numbers <span class="math inline">\(z = x+iy\)</span> and <span class="math inline">\(w = u+iv\)</span>, using usual algebraic rules for expanding brackets — just remembering that <span class="math inline">\(i^2 = -1\)</span>:
+<span class="math display">\[\begin{align*}
+z + w &amp;= (x + iy) + (u + iv) = (x+u) + i (y+v),\\
+z - w &amp;= (x + iy) - (u + iv) = (x-u) + i (y-v),\\
+z \times w &amp;= (x + iy) \times (u + iv) = x u + i x v + i yu + i^2 y v = (xu - yv) + i (xv + yu).
+\end{align*}\]</span></p>
+<div class="example">
+<p><span id="exm:complexarithmetic" class="example"><strong>Example 7.1  (Complex Arithmetic) </strong></span>Let <span class="math inline">\(z = 3 - 5i\)</span> (that is, <span class="math inline">\(z = 3 + (-5)i\)</span>) and <span class="math inline">\(w = 2 + i\)</span> then
+<span class="math display">\[
+z + w = 5 - 4i, \qquad z - w = 1 - 6i,
+\]</span>
+and
+<span class="math display">\[
+z\times w = (3 - 5i)\times (2+i) = 6 + 3i - 10i - 5i^2 = 11 - 7i.
+\]</span>
+Thus <span class="math inline">\(\mathbf{Re}(z\times w) = 11\)</span> and <span class="math inline">\(\mathbf{Im}(z\times w) = -7\)</span>.</p>
+</div>
+<p>The <em>complex conjugate</em> of <span class="math inline">\(z = x + iy\)</span> is the complex number
+<span class="math display">\[
+\overline{z} = x - iy.
+\]</span>
+This is the “mirror image” of <span class="math inline">\(z\)</span> in the real axis. The <em>modulus</em> of <span class="math inline">\(z = x + iy\)</span> is
+<span class="math display">\[
+|z| = \sqrt{x^2 + y^2} \qquad \text{(the non-negative square root).}
+\]</span>
+Geometrically, this is the distance of <span class="math inline">\(z\)</span> (i.e. the point <span class="math inline">\(P\)</span>) from the origin – See figure <a href="complex-numbers.html#fig:complexcart">7.1</a>. Note that if <span class="math inline">\(b = 0\)</span> (so that <span class="math inline">\(z\)</span> is actually a real number), then this definition of <span class="math inline">\(|z|\)</span> agrees with the usual modulus (absolute value) for real numbers.</p>
+<div class="example">
+<p><span id="exm:conjugate" class="example"><strong>Example 7.2  (Complex conjugate) </strong></span>For <span class="math inline">\(z = 2 - i\)</span>, we have <span class="math inline">\(\overline{z} = 2 + i\)</span> and <span class="math inline">\(|z| = \sqrt{2^2 + (-1)^2} = \sqrt{5}\)</span>.</p>
+</div>
+<p>Some properties of modulus and conjugate: For any <span class="math inline">\(z, w \in \mathbb{C}\)</span>,</p>
+<ul>
+<li><span class="math inline">\(\overline{\overline{z}} = z\)</span>;</li>
+<li><span class="math inline">\(\overline{z \pm w} = \overline{z} + \overline{w}\)</span>;</li>
+<li><span class="math inline">\(\overline{z\times w} = \overline{z}\times \overline{w}\)</span>;</li>
+<li><span class="math inline">\(|z|\)</span> is a positive real number unless <span class="math inline">\(z = 0\)</span> with <span class="math inline">\(|0| = 0\)</span>;</li>
+<li><span class="math inline">\(z\times \overline{z} = |z|^2\)</span>;</li>
+<li><span class="math inline">\(|z\times w| = |z|\,|w|\)</span>.</li>
+</ul>
+
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="8">
+<li id="fn8"><p>Note, the notation “<span class="math inline">\(A \implies B\)</span>” is read as “statement <span class="math inline">\(A\)</span> implies statement <span class="math inline">\(B\)</span>”.<a href="complex-numbers.html#fnref8" class="footnote-back">↩︎</a></p></li>
+</ol>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-
+<a href="trigonometry.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -180,7 +264,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/maths-sci-eng/maths-sci-eng.github.io/edit/master/%s",
+"link": "https://github.com/maths-sci-eng/maths-sci-eng.github.io/edit/master/06-complex.Rmd",
 "text": "Edit"
 },
 "history": {

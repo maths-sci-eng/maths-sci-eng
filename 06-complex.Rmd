@@ -1,0 +1,87 @@
+# Complex Numbers
+
+We are familiar with natural numbers ($1, 2, 3, \dots$), denoted by $\mathbb{N}$, integers ($\dots, -5, -4, -3, -2, -1, 0, 1 \dots$), denoted by $\mathbb{Z}$, and rational numbers ($1/2, 4/5$, etc.), denoted by $\mathbb{Q}$. We also know about irrational numbers such as $e$, $\pi$ (the area of a circle with radius equal to $1$) or $\sqrt{2}$ --- one solution of the quadratic equation
+$$
+x^2 - 2 = 0.
+$$
+The collection of natural numbers, integers, rational and irrational numbers make up what we call the *real numbers*, denoted by $\mathbb{R}$.
+
+But do we have "enough" numbers? The answer is no! We do not have to look hard for why we do not have enough numbers. The simple equation
+$$
+x^2 + 1 = 0
+$$
+does not have real solutions. The answer would be $\pm \sqrt{-1}$, if that would make sense. More generally, the quadratic equation
+$$
+a x^2 + b x + c = 0, \quad \text{with}\quad b^2 - 4 ac < 0
+$$
+does not have real number solutions! 
+
+## $i$ and complex numbers
+
+Our fix is to define the *imaginary number* $i$ by
+$$
+i = \sqrt{-1},\quad \text{ so that }\quad i^2 = -1.
+$$
+With this definition in mind, consider the quadratic equation
+$$
+x^2 + 4 x + 13 = 0.
+$$
+Completing the square gives^[Note, the notation "$A \implies B$" is read as "statement $A$ implies statement $B$".]
+$$
+(x+2)^2 + 9 = 0 \quad \implies \quad
+x+2 = \pm \sqrt{-9} = \pm 3 \sqrt{-1} = \pm 3 i \quad \implies \quad
+x = 2 \pm 3 i.
+$$
+
+This leads us to *Complex Numbers*, denoted by $\mathbb{C}$, defined as the set of all numbers
+$$
+z = x + i y, \quad \text{where $x$ and $y$ are real numbers}.
+$$
+This form is also called the *Cartesian representation* of a complex number. It has a *real part* $\mathbf{Re}(z) = x$ and an *imaginary part* $\mathbf{Im}(z) = y$. We can then represent a complex number graphically by plotting the real and imaginary parts as coordinates in a Cartesian coordinate system, as in figure \@ref(fig:complexcart). The $x$-axis is called the *real axis* and the $y$-axis is called the *imaginary axis*.
+
+```{r complexcart, echo=FALSE, fig.cap = "The complex number $z = x + iy$ in Cartesian coordinates.", fig.alt = "The complex number $z = x + iy$ in Cartesian coordinates."}
+knitr::include_graphics("figures/triangle.png")
+```
+
+We can add, subtract and multiply complex numbers $z = x+iy$ and $w = u+iv$, using usual algebraic rules for expanding brackets --- just remembering that $i^2 = -1$:
+\begin{align*}
+z + w &= (x + iy) + (u + iv) = (x+u) + i (y+v),\\
+z - w &= (x + iy) - (u + iv) = (x-u) + i (y-v),\\
+z \times w &= (x + iy) \times (u + iv) = x u + i x v + i yu + i^2 y v = (xu - yv) + i (xv + yu).
+\end{align*}
+
+::: {.example #complexarithmetic name="Complex Arithmetic"}
+Let $z = 3 - 5i$ (that is, $z = 3 + (-5)i$) and $w = 2 + i$ then
+$$
+z + w = 5 - 4i, \qquad z - w = 1 - 6i,
+$$
+and
+$$
+z\times w = (3 - 5i)\times (2+i) = 6 + 3i - 10i - 5i^2 = 11 - 7i.
+$$
+Thus $\mathbf{Re}(z\times w) = 11$ and $\mathbf{Im}(z\times w) = -7$.
+:::
+
+The *complex conjugate* of $z = x + iy$ is the complex number
+$$
+\overline{z} = x - iy.
+$$
+This is the "mirror image" of $z$ in the real axis. The *modulus* of $z = x + iy$ is
+$$
+|z| = \sqrt{x^2 + y^2} \qquad \text{(the non-negative square root).}
+$$
+Geometrically, this is the distance of $z$ (i.e. the point $P$) from the origin -- See figure \@ref(fig:complexcart). Note that if $b = 0$ (so that $z$ is actually a real number), then this definition of $|z|$ agrees with the usual modulus (absolute value) for real numbers.
+
+::: {.example #conjugate name="Complex conjugate"}
+For $z = 2 - i$, we have $\overline{z} = 2 + i$ and $|z| = \sqrt{2^2 + (-1)^2} = \sqrt{5}$.
+:::
+
+Some properties of modulus and conjugate: For any $z, w \in \mathbb{C}$,
+
+* $\overline{\overline{z}} = z$;
+* $\overline{z \pm w} = \overline{z} + \overline{w}$;
+* $\overline{z\times w} = \overline{z}\times \overline{w}$;
+* $|z|$ is a positive real number unless $z = 0$ with $|0| = 0$;
+* $z\times \overline{z} = |z|^2$;
+* $|z\times w| = |z|\,|w|$.
+

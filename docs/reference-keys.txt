@@ -41,6 +41,9 @@ thm:sinerule
 thm:cosinerule
 fig:sinusoid
 fig:sinusoidal
+fig:complexcart
+exm:complexarithmetic
+exm:conjugate
 welcome
 intro
 foundations
@@ -79,3 +82,5 @@ trigonometric-ratios
 sine-and-cosine-rules
 trigonometric-waveforms
 trigonometric-identities
+complex-numbers
+i-and-complex-numbers
