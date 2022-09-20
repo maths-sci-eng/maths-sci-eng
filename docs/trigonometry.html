@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 6 Trigonometry | Mathematics for Scientists and Engineers</title>
+  <meta name="description" content="Mathematics Lecture Notes for UoE Penryn Science and Engineering Disciplines." />
+  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 6 Trigonometry | Mathematics for Scientists and Engineers" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Mathematics Lecture Notes for UoE Penryn Science and Engineering Disciplines." />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 6 Trigonometry | Mathematics for Scientists and Engineers" />
+  
+  <meta name="twitter:description" content="Mathematics Lecture Notes for UoE Penryn Science and Engineering Disciplines." />
+  
+
+<meta name="author" content="Mark Callaway" />
+
+
+<meta name="date" content="2022-09-20" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="functions-and-graphs.html"/>
+<link rel="next" href="references.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Mathematics for Scientists and Engineers</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Welcome</a></li>
+<li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> Introduction</a></li>
+<li class="chapter" data-level="3" data-path="foundations.html"><a href="foundations.html"><i class="fa fa-check"></i><b>3</b> Foundations</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="foundations.html"><a href="foundations.html#numbers"><i class="fa fa-check"></i><b>3.1</b> Numbers</a></li>
+<li class="chapter" data-level="3.2" data-path="foundations.html"><a href="foundations.html#algebra"><i class="fa fa-check"></i><b>3.2</b> Algebra</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="foundations.html"><a href="foundations.html#exponents"><i class="fa fa-check"></i><b>3.2.1</b> Rules of Exponents</a></li>
+<li class="chapter" data-level="3.2.2" data-path="foundations.html"><a href="foundations.html#brackets"><i class="fa fa-check"></i><b>3.2.2</b> Brackets</a></li>
+<li class="chapter" data-level="3.2.3" data-path="foundations.html"><a href="foundations.html#simplifiying-expressions"><i class="fa fa-check"></i><b>3.2.3</b> Simplifiying Expressions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="equations-and-inequalities.html"><a href="equations-and-inequalities.html"><i class="fa fa-check"></i><b>4</b> Equations and Inequalities</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="equations-and-inequalities.html"><a href="equations-and-inequalities.html#equations"><i class="fa fa-check"></i><b>4.1</b> Equations</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="equations-and-inequalities.html"><a href="equations-and-inequalities.html#formulas"><i class="fa fa-check"></i><b>4.1.1</b> Formulas</a></li>
+<li class="chapter" data-level="4.1.2" data-path="equations-and-inequalities.html"><a href="equations-and-inequalities.html#conditional-equations"><i class="fa fa-check"></i><b>4.1.2</b> Conditional equations</a></li>
+<li class="chapter" data-level="4.1.3" data-path="equations-and-inequalities.html"><a href="equations-and-inequalities.html#quadratic-equations"><i class="fa fa-check"></i><b>4.1.3</b> Quadratic equations</a></li>
+<li class="chapter" data-level="4.1.4" data-path="equations-and-inequalities.html"><a href="equations-and-inequalities.html#simultaneous-equations"><i class="fa fa-check"></i><b>4.1.4</b> Simultaneous equations</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="equations-and-inequalities.html"><a href="equations-and-inequalities.html#inequalities"><i class="fa fa-check"></i><b>4.2</b> Inequalities</a></li>
+<li class="chapter" data-level="4.3" data-path="equations-and-inequalities.html"><a href="equations-and-inequalities.html#common-mistakes"><i class="fa fa-check"></i><b>4.3</b> Common Mistakes!</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="functions-and-graphs.html"><a href="functions-and-graphs.html"><i class="fa fa-check"></i><b>5</b> Functions and Graphs</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="functions-and-graphs.html"><a href="functions-and-graphs.html#lines"><i class="fa fa-check"></i><b>5.1</b> Lines</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="functions-and-graphs.html"><a href="functions-and-graphs.html#parallel-lines"><i class="fa fa-check"></i><b>5.1.1</b> Parallel Lines</a></li>
+<li class="chapter" data-level="5.1.2" data-path="functions-and-graphs.html"><a href="functions-and-graphs.html#perpendicular-lines"><i class="fa fa-check"></i><b>5.1.2</b> Perpendicular Lines</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="functions-and-graphs.html"><a href="functions-and-graphs.html#polynomials"><i class="fa fa-check"></i><b>5.2</b> Polynomials</a></li>
+<li class="chapter" data-level="5.3" data-path="functions-and-graphs.html"><a href="functions-and-graphs.html#rational-functions"><i class="fa fa-check"></i><b>5.3</b> Rational functions</a></li>
+<li class="chapter" data-level="5.4" data-path="functions-and-graphs.html"><a href="functions-and-graphs.html#root-functions"><i class="fa fa-check"></i><b>5.4</b> Root functions</a></li>
+<li class="chapter" data-level="5.5" data-path="functions-and-graphs.html"><a href="functions-and-graphs.html#trigonometric-functions"><i class="fa fa-check"></i><b>5.5</b> Trigonometric functions</a></li>
+<li class="chapter" data-level="5.6" data-path="functions-and-graphs.html"><a href="functions-and-graphs.html#exponentials-and-logarithms"><i class="fa fa-check"></i><b>5.6</b> Exponentials and Logarithms</a>
+<ul>
+<li class="chapter" data-level="5.6.1" data-path="functions-and-graphs.html"><a href="functions-and-graphs.html#logarthmic-plots"><i class="fa fa-check"></i><b>5.6.1</b> Logarthmic Plots</a></li>
+</ul></li>
+<li class="chapter" data-level="5.7" data-path="functions-and-graphs.html"><a href="functions-and-graphs.html#hyperbolic-functions"><i class="fa fa-check"></i><b>5.7</b> Hyperbolic functions</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="trigonometry.html"><a href="trigonometry.html"><i class="fa fa-check"></i><b>6</b> Trigonometry</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="trigonometry.html"><a href="trigonometry.html#pythagoras"><i class="fa fa-check"></i><b>6.1</b> Pythagoras</a></li>
+<li class="chapter" data-level="6.2" data-path="trigonometry.html"><a href="trigonometry.html#degrees-and-radians"><i class="fa fa-check"></i><b>6.2</b> Degrees and radians</a></li>
+<li class="chapter" data-level="6.3" data-path="trigonometry.html"><a href="trigonometry.html#trigonometric-ratios"><i class="fa fa-check"></i><b>6.3</b> Trigonometric ratios</a></li>
+<li class="chapter" data-level="6.4" data-path="trigonometry.html"><a href="trigonometry.html#sine-and-cosine-rules"><i class="fa fa-check"></i><b>6.4</b> Sine and Cosine Rules</a></li>
+<li class="chapter" data-level="6.5" data-path="trigonometry.html"><a href="trigonometry.html#trigonometric-waveforms"><i class="fa fa-check"></i><b>6.5</b> Trigonometric waveforms</a></li>
+<li class="chapter" data-level="6.6" data-path="trigonometry.html"><a href="trigonometry.html#trigonometric-identities"><i class="fa fa-check"></i><b>6.6</b> Trigonometric Identities</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Mathematics for Scientists and Engineers</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="trigonometry" class="section level1 hasAnchor" number="6">
+<h1><span class="header-section-number">Chapter 6</span> Trigonometry<a href="trigonometry.html#trigonometry" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="pythagoras" class="section level2 hasAnchor" number="6.1">
+<h2><span class="header-section-number">6.1</span> Pythagoras<a href="trigonometry.html#pythagoras" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The most fundamental result in trigonometry is the Pythagorean Theorem:</p>
+<div class="theorem">
+<p><span id="thm:pythag" class="theorem"><strong>Theorem 6.1  (Pythagorean Theorem) </strong></span>In a right-angle triangle, the <em>hypotenuse</em> is the side opposite the right angle.</p>
+<p>In any right-angle triangle, the square of the hypotenuse is equal to the sum of the squares of the other two sides.</p>
+<p>With reference to figure <a href="trigonometry.html#fig:pythag">6.1</a>, we have</p>
+<p><span class="math display">\[c^2=a^2+b^2\]</span></p>
+<div class="figure"><span style="display:block;" id="fig:pythag"></span>
+<img src="figures/pythag.png" alt="A right-angled triangle labelled with sides $a, b$ and $c$, with $c$ being the hypotenuse."  />
+<p class="caption">
+Figure 6.1: A right-angled triangle with sides <span class="math inline">\(a, b\)</span> and <span class="math inline">\(c\)</span>, with <span class="math inline">\(c\)</span> being the hypotenuse.
+</p>
+</div>
+</div>
+<p>One particular application is finding the distance between two points in a Cartesian coordinate system.</p>
+</div>
+<div id="degrees-and-radians" class="section level2 hasAnchor" number="6.2">
+<h2><span class="header-section-number">6.2</span> Degrees and radians<a href="trigonometry.html#degrees-and-radians" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We can measure an angle in two different units: degrees or radians.</p>
+<p>In <em>degrees</em>, we split a full circle into 360 segments and then call the angle bewteen each segment 1 degree, or <span class="math inline">\(1^\circ\)</span>. Of course a full circle is <span class="math inline">\(360^\circ\)</span>.</p>
+<p>An alternative measure of angle is <em>radians</em>. In this case, we start from the fact that the circumference of a circle is given by
+<span class="math display">\[
+C=2\pi r
+\]</span>
+where <span class="math inline">\(r\)</span> is the radius of the circle. If we had a circle with radius <span class="math inline">\(r=1\)</span>, then the circumference is <span class="math inline">\(C=2\pi\)</span>. Now we consider this circle to be split into <span class="math inline">\(2\pi\)</span> segments<a href="#fn7" class="footnote-ref" id="fnref7"><sup>7</sup></a>, with each segment being 1 radian, or <span class="math inline">\(1 \text{ rad}\)</span>. A full circle is then <span class="math inline">\(2\pi \text{ rad} = 6.283 \text{ rad}\)</span> (to 3 sig. fig.).</p>
+<p>Sometimes it is more convenient to work in degrees, and other times it is more convenient to work in radians. We can easily convert between degrees and radians as follows. If we have an angle <span class="math inline">\(D^\circ\)</span> in degrees, then the corresponding angle in radians <span class="math inline">\(R \text{ rad}\)</span> is:
+<span class="math display">\[
+R \text{ rad}=\frac{2\pi}{360}\times D^\circ
+\]</span>
+and in the other direction
+<span class="math display">\[
+D^\circ=\frac{360}{2\pi}\times R \text{ rad}.
+\]</span></p>
+<p>Where possible, we would state radians as multiples of <span class="math inline">\(\pi\)</span>, so in particular:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Degrees</th>
+<th>Radians</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(360^\circ\)</span></td>
+<td><span class="math inline">\(2\pi\text{ rad}\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(270^\circ\)</span></td>
+<td><span class="math inline">\(\frac{3}{2}\pi\text{ rad}\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(180^\circ\)</span></td>
+<td><span class="math inline">\(\pi\text{ rad}\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(120^\circ\)</span></td>
+<td><span class="math inline">\(\frac{2}{3}\pi\text{ rad}\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(90^\circ\)</span></td>
+<td><span class="math inline">\(\frac{\pi}{2}\text{ rad}\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(60^\circ\)</span></td>
+<td><span class="math inline">\(\frac{\pi}{3}\text{ rad}\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(45^\circ\)</span></td>
+<td><span class="math inline">\(\frac{\pi}{4}\text{ rad}\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(30^\circ\)</span></td>
+<td><span class="math inline">\(\frac{\pi}{6}\text{ rad}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Note that a scientific calculator will have a button to switch between using degrees and radians: make sure your calculator is in the correct mode!</p>
+</div>
+<div id="trigonometric-ratios" class="section level2 hasAnchor" number="6.3">
+<h2><span class="header-section-number">6.3</span> Trigonometric ratios<a href="trigonometry.html#trigonometric-ratios" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Calculating angles and side lengths of right-angled triangles is of fundamental importance in science and engineering applications.</p>
+<div class="figure"><span style="display:block;" id="fig:rh-triangle"></span>
+<img src="figures/rh-triangle.png" alt="A right-angled triangle labelled with the angle $   heta$ and corresponding sides: hypotenuse, opposite and adjacent."  />
+<p class="caption">
+Figure 6.2: A right-angled triangle.
+</p>
+</div>
+<p>Recall that we can calculate relationships between angles and side lengths of a right-angled triangle (as described in figure <a href="trigonometry.html#fig:rh-triangle">6.2</a>) using sine, cosine and tangent:</p>
+<p><span class="math display">\[\begin{align*}
+\sin(\theta)&amp;=\frac{Opp.}{Hyp.}\\
+\cos(\theta)&amp;=\frac{Adj.}{Hyp.}\\
+\tan(\theta)&amp;=\frac{Opp.}{Adj.}
+\end{align*}\]</span></p>
+<p>A useful way to remember these relationships is the mnemonic “SOH CAH TOA”:</p>
+<p>SOH - Sine equals Opposite over Hypotenuse</p>
+<p>CAH - Cosine equals Adjacent over Hypotenuse</p>
+<p>TOA - Tan equals Opposite over Adjacent</p>
+</div>
+<div id="sine-and-cosine-rules" class="section level2 hasAnchor" number="6.4">
+<h2><span class="header-section-number">6.4</span> Sine and Cosine Rules<a href="trigonometry.html#sine-and-cosine-rules" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The Pythagorean Theorem and Trigonometric ratios above only apply to right-angle triangles. For general triangles, the sine and cosine rules give us useful relationsips between angles and side lengths.</p>
+<div class="figure"><span style="display:block;" id="fig:tri"></span>
+<img src="figures/triangle.png" alt="A general triangle with angles $A, B,$ and $C$ and the corresponding opposite sides as $a, b$ and $c$."  />
+<p class="caption">
+Figure 6.3: A general triangle with angles <span class="math inline">\(A, B,\)</span> and <span class="math inline">\(C\)</span> and the corresponding opposite sides as <span class="math inline">\(a, b\)</span> and <span class="math inline">\(c\)</span>.
+</p>
+</div>
+<div class="theorem">
+<p><span id="thm:sinerule" class="theorem"><strong>Theorem 6.2  (Sine Rule) </strong></span>Label a triangle with angles <span class="math inline">\(A, B,\)</span> and <span class="math inline">\(C\)</span> and the corresponding opposite sides as <span class="math inline">\(a, b\)</span> and <span class="math inline">\(c\)</span> (as in figure <a href="trigonometry.html#fig:tri">6.3</a>). Then,</p>
+<p><span class="math display">\[\frac{a}{\sin(A)}=\frac{b}{\sin(B)}=\frac{c}{\sin(C)}.\]</span></p>
+<p>This is useful when we have:</p>
+<ol style="list-style-type: decimal">
+<li>one side and any two angles, or</li>
+<li>two sides and an angle (but not the included angle).</li>
+</ol>
+</div>
+<div class="theorem">
+<p><span id="thm:cosinerule" class="theorem"><strong>Theorem 6.3  (Cosine Rule) </strong></span>Label a triangle with angles <span class="math inline">\(A, B,\)</span> and <span class="math inline">\(C\)</span> and the corresponding opposite sides as <span class="math inline">\(a, b\)</span> and <span class="math inline">\(c\)</span> (as in figure <a href="trigonometry.html#fig:tri">6.3</a>). Then,</p>
+<p><span class="math display">\[\begin{align*}
+a^2&amp;= b^2 +c^2 -2bc\cos(A)\quad\text{ or,}\\
+b^2&amp;=a^2+c^2-2ac\cos(B)\quad\text{ or,}\\
+c^2&amp;=a^2+b^2-2ab\cos(C).
+\end{align*}\]</span></p>
+<p>This is useful when we have:</p>
+<ol style="list-style-type: decimal">
+<li>two sides and the included angle, or</li>
+<li>three sides.</li>
+</ol>
+</div>
+</div>
+<div id="trigonometric-waveforms" class="section level2 hasAnchor" number="6.5">
+<h2><span class="header-section-number">6.5</span> Trigonometric waveforms<a href="trigonometry.html#trigonometric-waveforms" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The trigonometric functions often arise in applications in the context of <em>waves</em>. Whilst there are different forms of waves, trigonometric waves are arguably the most ubiquitous.</p>
+<p>In general, a function of the form
+<span class="math display">\[
+f(x)=A\sin(\omega x + \phi)
+\]</span>
+with parameters <span class="math inline">\(A,\omega\)</span> and <span class="math inline">\(\phi\)</span> is known as a <em>sinusoidal function</em>.</p>
+<div class="figure"><span style="display:block;" id="fig:sinusoid"></span>
+<img src="figures/sinusoid.png" alt="A sinusoidal wave form labelled with amplitude $A$, phase $\phi$ and period $T$."  />
+<p class="caption">
+Figure 6.4: A sinusoidal wave form plotted in radians.
+</p>
+</div>
+<ul>
+<li><span class="math inline">\(A\)</span> is called the <em>amplitude</em> – this determines the range of values, from <span class="math inline">\(-A\)</span> to <span class="math inline">\(A\)</span>;</li>
+<li><span class="math inline">\(\omega\)</span> is the <em>angular frequency</em> – the rate of change of the sine function argument in units of radians per second or degrees per second;</li>
+<li><span class="math inline">\(\phi\)</span> is the <em>phase</em> – this determines the offset of the sine function at <span class="math inline">\(x=0\)</span> in units of radians or degrees.</li>
+<li><span class="math inline">\(T=\frac{2\pi}{\omega}\)</span> is the length of one cycle e.g. measured from peak to peak, or trough to trough. If <span class="math inline">\(x\)</span> represents time, then <span class="math inline">\(T\)</span> is called the <em>period</em>. If <span class="math inline">\(x\)</span> represents distance, then <span class="math inline">\(T\)</span> is usually denoted by <span class="math inline">\(\lambda\)</span> and called the <em>wavelength</em>.</li>
+</ul>
+<div class="figure"><span style="display:block;" id="fig:sinusoidal"></span>
+<iframe src="https://www.desmos.com/calculator/l0f1omebm2" width="672" height="400px" data-external="1">
+</iframe>
+<p class="caption">
+Figure 6.5: The function <span class="math inline">\(f(x)=A\sin(\omega x + \phi)\)</span> (blue curve). <a href="https://www.desmos.com/calculator/l0f1omebm2">[Open graph in browser.]</a>
+</p>
+</div>
+</div>
+<div id="trigonometric-identities" class="section level2 hasAnchor" number="6.6">
+<h2><span class="header-section-number">6.6</span> Trigonometric Identities<a href="trigonometry.html#trigonometric-identities" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Recall that there are a number of useful relationships between the trigonometric functions. Here are some key ones:</p>
+<p><span class="math display">\[\begin{gather*}
+\sin^2(x)+\cos^2(x)=1\\
+1+\tan^2(x)=\sec^2(x)\\
+\sin(2x)=2\sin(x)\cos(x)\\
+\cos(2x)=\cos^2(x)-\sin^2(x)
+\end{gather*}\]</span></p>
+<p>There are also the angle sum identities, product to sum identities etc. Look these up and add them to your notes if you cannot remember them.</p>
+
+
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="7">
+<li id="fn7"><p>Note this is not an integer number of segments! It is approximately 6.283 segments.<a href="trigonometry.html#fnref7" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="functions-and-graphs.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/maths-sci-eng/maths-sci-eng.github.io/edit/master/05-trigonometry.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["maths-notes.pdf", "maths-notes.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

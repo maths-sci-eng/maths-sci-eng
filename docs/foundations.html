@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 3 Foundations | Mathematics for Scientists and Engineers</title>
+  <meta name="description" content="Mathematics Lecture Notes for UoE Penryn Science and Engineering Disciplines." />
+  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 3 Foundations | Mathematics for Scientists and Engineers" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Mathematics Lecture Notes for UoE Penryn Science and Engineering Disciplines." />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 3 Foundations | Mathematics for Scientists and Engineers" />
+  
+  <meta name="twitter:description" content="Mathematics Lecture Notes for UoE Penryn Science and Engineering Disciplines." />
+  
+
+<meta name="author" content="Mark Callaway" />
+
+
+<meta name="date" content="2022-09-20" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="intro.html"/>
+<link rel="next" href="equations-and-inequalities.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Mathematics for Scientists and Engineers</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Welcome</a></li>
+<li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> Introduction</a></li>
+<li class="chapter" data-level="3" data-path="foundations.html"><a href="foundations.html"><i class="fa fa-check"></i><b>3</b> Foundations</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="foundations.html"><a href="foundations.html#numbers"><i class="fa fa-check"></i><b>3.1</b> Numbers</a></li>
+<li class="chapter" data-level="3.2" data-path="foundations.html"><a href="foundations.html#algebra"><i class="fa fa-check"></i><b>3.2</b> Algebra</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="foundations.html"><a href="foundations.html#exponents"><i class="fa fa-check"></i><b>3.2.1</b> Rules of Exponents</a></li>
+<li class="chapter" data-level="3.2.2" data-path="foundations.html"><a href="foundations.html#brackets"><i class="fa fa-check"></i><b>3.2.2</b> Brackets</a></li>
+<li class="chapter" data-level="3.2.3" data-path="foundations.html"><a href="foundations.html#simplifiying-expressions"><i class="fa fa-check"></i><b>3.2.3</b> Simplifiying Expressions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="equations-and-inequalities.html"><a href="equations-and-inequalities.html"><i class="fa fa-check"></i><b>4</b> Equations and Inequalities</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="equations-and-inequalities.html"><a href="equations-and-inequalities.html#equations"><i class="fa fa-check"></i><b>4.1</b> Equations</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="equations-and-inequalities.html"><a href="equations-and-inequalities.html#formulas"><i class="fa fa-check"></i><b>4.1.1</b> Formulas</a></li>
+<li class="chapter" data-level="4.1.2" data-path="equations-and-inequalities.html"><a href="equations-and-inequalities.html#conditional-equations"><i class="fa fa-check"></i><b>4.1.2</b> Conditional equations</a></li>
+<li class="chapter" data-level="4.1.3" data-path="equations-and-inequalities.html"><a href="equations-and-inequalities.html#quadratic-equations"><i class="fa fa-check"></i><b>4.1.3</b> Quadratic equations</a></li>
+<li class="chapter" data-level="4.1.4" data-path="equations-and-inequalities.html"><a href="equations-and-inequalities.html#simultaneous-equations"><i class="fa fa-check"></i><b>4.1.4</b> Simultaneous equations</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="equations-and-inequalities.html"><a href="equations-and-inequalities.html#inequalities"><i class="fa fa-check"></i><b>4.2</b> Inequalities</a></li>
+<li class="chapter" data-level="4.3" data-path="equations-and-inequalities.html"><a href="equations-and-inequalities.html#common-mistakes"><i class="fa fa-check"></i><b>4.3</b> Common Mistakes!</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="functions-and-graphs.html"><a href="functions-and-graphs.html"><i class="fa fa-check"></i><b>5</b> Functions and Graphs</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="functions-and-graphs.html"><a href="functions-and-graphs.html#lines"><i class="fa fa-check"></i><b>5.1</b> Lines</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="functions-and-graphs.html"><a href="functions-and-graphs.html#parallel-lines"><i class="fa fa-check"></i><b>5.1.1</b> Parallel Lines</a></li>
+<li class="chapter" data-level="5.1.2" data-path="functions-and-graphs.html"><a href="functions-and-graphs.html#perpendicular-lines"><i class="fa fa-check"></i><b>5.1.2</b> Perpendicular Lines</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="functions-and-graphs.html"><a href="functions-and-graphs.html#polynomials"><i class="fa fa-check"></i><b>5.2</b> Polynomials</a></li>
+<li class="chapter" data-level="5.3" data-path="functions-and-graphs.html"><a href="functions-and-graphs.html#rational-functions"><i class="fa fa-check"></i><b>5.3</b> Rational functions</a></li>
+<li class="chapter" data-level="5.4" data-path="functions-and-graphs.html"><a href="functions-and-graphs.html#root-functions"><i class="fa fa-check"></i><b>5.4</b> Root functions</a></li>
+<li class="chapter" data-level="5.5" data-path="functions-and-graphs.html"><a href="functions-and-graphs.html#trigonometric-functions"><i class="fa fa-check"></i><b>5.5</b> Trigonometric functions</a></li>
+<li class="chapter" data-level="5.6" data-path="functions-and-graphs.html"><a href="functions-and-graphs.html#exponentials-and-logarithms"><i class="fa fa-check"></i><b>5.6</b> Exponentials and Logarithms</a>
+<ul>
+<li class="chapter" data-level="5.6.1" data-path="functions-and-graphs.html"><a href="functions-and-graphs.html#logarthmic-plots"><i class="fa fa-check"></i><b>5.6.1</b> Logarthmic Plots</a></li>
+</ul></li>
+<li class="chapter" data-level="5.7" data-path="functions-and-graphs.html"><a href="functions-and-graphs.html#hyperbolic-functions"><i class="fa fa-check"></i><b>5.7</b> Hyperbolic functions</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="trigonometry.html"><a href="trigonometry.html"><i class="fa fa-check"></i><b>6</b> Trigonometry</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="trigonometry.html"><a href="trigonometry.html#pythagoras"><i class="fa fa-check"></i><b>6.1</b> Pythagoras</a></li>
+<li class="chapter" data-level="6.2" data-path="trigonometry.html"><a href="trigonometry.html#degrees-and-radians"><i class="fa fa-check"></i><b>6.2</b> Degrees and radians</a></li>
+<li class="chapter" data-level="6.3" data-path="trigonometry.html"><a href="trigonometry.html#trigonometric-ratios"><i class="fa fa-check"></i><b>6.3</b> Trigonometric ratios</a></li>
+<li class="chapter" data-level="6.4" data-path="trigonometry.html"><a href="trigonometry.html#sine-and-cosine-rules"><i class="fa fa-check"></i><b>6.4</b> Sine and Cosine Rules</a></li>
+<li class="chapter" data-level="6.5" data-path="trigonometry.html"><a href="trigonometry.html#trigonometric-waveforms"><i class="fa fa-check"></i><b>6.5</b> Trigonometric waveforms</a></li>
+<li class="chapter" data-level="6.6" data-path="trigonometry.html"><a href="trigonometry.html#trigonometric-identities"><i class="fa fa-check"></i><b>6.6</b> Trigonometric Identities</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Mathematics for Scientists and Engineers</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="foundations" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">Chapter 3</span> Foundations<a href="foundations.html#foundations" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>We begin with some foundational material that forms the basis of all applied mathematics.</p>
+<div id="numbers" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> Numbers<a href="foundations.html#numbers" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We deal with various number systems in mathematics.</p>
+<ul>
+<li><p>The set of <em>natural numbers</em> are the familiar counting numbers:
+<span class="math display">\[1, 2, 3,\dotsc\]</span>
+We denote these by the symbol <span class="math inline">\(\mathbb{N}\)</span>.</p></li>
+<li><p>The <em>integers</em> are the “whole numbers”, which include zero and negative numbers:
+<span class="math display">\[\dots,-2,-1,0,1,2,\dots\]</span>
+We denote these by the symbol <span class="math inline">\(\mathbb{Z}\)</span>.</p></li>
+<li><p>We sometimes want to focus on just the <em>positive integers</em>, which is another name for the natural numbers.</p></li>
+<li><p>The <em>non-negative integers</em> are the numbers:
+<span class="math display">\[0, 1, 2, 3,\dotsc\]</span>
+(the natural numbers and zero).</p></li>
+<li><p>The <em>negative integers</em> are the numbers:
+<span class="math display">\[-1, -2, -3,\dotsc\]</span></p></li>
+<li><p>The <em>rational numbers</em> are numbers which can be written in the form <span class="math inline">\(\frac{a}{b}\)</span> where <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are integers, with <span class="math inline">\(b\neq 0\)</span>, so numbers like
+<span class="math display">\[\frac{1}{2}, \frac{3}{2}, -\frac{4}{5}, \dotsc\]</span>
+Note these include the integers since they can be written as <span class="math inline">\(\frac{a}{1}\)</span>. Rational numbers are denoted <span class="math inline">\(\mathbb{Q}\)</span>.</p></li>
+<li><p>The ancient Greeks discovered that there are numbers that are not rational – so-called <em>irrational numbers</em>. For example, <span class="math inline">\(\sqrt{2}, \pi\)</span> and <span class="math inline">\(e\)</span> are all irrational numbers. One way of characterising irrational numbers is that they have a decimal representation that never repeats…
+<span class="math display">\[
+  \pi=3.141592653589793238462643383279502884197169399375105820\dots
+  \]</span>
+In contrast, all rational numbers have an eventually repeating decimal expansion (after perhaps some initial jumble of digits, there is a repeating pattern), for example:</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Rational Number</th>
+<th>Repeating pattern</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(\frac{1}{3}=0.333\dots\)</span></td>
+<td>repeating <span class="math inline">\(3\)</span>’s</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\frac{3}{2}=1.5000\dots\)</span></td>
+<td>repeating <span class="math inline">\(0\)</span>’s after the first decimal digit, which we normally don’t write down!</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\frac{219}{1750}=0.125142857142857\dots\)</span></td>
+<td>repeating sequence <span class="math inline">\(142857\)</span> of length <span class="math inline">\(6\)</span> after the first <span class="math inline">\(3\)</span> decimal digits</td>
+</tr>
+</tbody>
+</table></li>
+<li><p>The <em>real numbers</em> consist of all rational and irrational numbers together
+We can think of real numbers as points on a continuous straight line, or as numbers that possibly have a decimal representation requiring an infinite number of digits<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>.
+The set of real numbers is denoted by <span class="math inline">\(\mathbb{R}\)</span>.</p></li>
+<li><p>We learn about all of the above numbers early on in our mathematical education. However, there is a further set of numbers that is very useful in science and engineering that you may not have encountered before: the <em>complex numbers</em>, denoted by <span class="math inline">\(\mathbb{C}\)</span>. These are not as intuitive as real numbers and we explore them in detail in section <a href="#complex"><strong>??</strong></a>.</p></li>
+</ul>
+</div>
+<div id="algebra" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> Algebra<a href="foundations.html#algebra" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>This section contains some basic algebraic rules. Fluency with notation and manipulations allows us to progress to higher level mathematics with ease.</p>
+<p>We are familiar with the basic rules of arithmetic: <span class="math inline">\(+, -, \times, \div\)</span>. When an expression contains multiple operations we can use brackets to indicate the order in which the operations are executed. We also commonly use powers (exponents). When evaluating an expression, remember to use the mnemonic BEDMAS, which defines the precedence of these operations:</p>
+<p>B - Brackets</p>
+<p>E - Exponents</p>
+<p>D - Division</p>
+<p>M - Multiplication</p>
+<p>A - Addition</p>
+<p>S - Subtraction</p>
+<p>Division and Multiplication can be carried out in either order, as can Addition and Subtraction. We’ll recap the rules of Brackets and Exponents in the next sections.</p>
+<div class="example">
+<p><span id="exm:BEDMAS" class="example"><strong>Example 3.1  (BEDMAS) </strong></span>We have
+<span class="math display">\[3+2\times 4=11,\]</span>
+whilst
+<span class="math display">\[(3+2)\times 4 = 20.\]</span></p>
+</div>
+<div id="exponents" class="section level3 hasAnchor" number="3.2.1">
+<h3><span class="header-section-number">3.2.1</span> Rules of Exponents<a href="foundations.html#exponents" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>In their most basic form, we use exponents as a shorthand for multiplication of a number by itself some positive integer number of times. For example:</p>
+<p><span class="math inline">\(5\times 5 = 5^2\)</span> spoken as “5 squared”</p>
+<p><span class="math inline">\(5\times 5\times 5=5^3\)</span> spoken as “5 cubed”</p>
+<p>and more generally, for any real number <span class="math inline">\(x\)</span> and positive integer <span class="math inline">\(n\)</span>,
+<span class="math inline">\(\underbrace{x\times \dotsb \times x}_{\text{with }n\, x\text{&#39;s}} = x^n\)</span> spoken as “x to the power <span class="math inline">\(n\)</span>”</p>
+<p>The number <span class="math inline">\(x\)</span> is known as the <em>base</em> and the number <span class="math inline">\(n\)</span> is known as the <em>power</em>, <em>index</em> or <em>exponent</em>.</p>
+<p>Now for any real number <span class="math inline">\(x\)</span> and positive integers <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>, it should be clear that the following rule holds:</p>
+<div class="theorem">
+<p><span id="thm:exprule1" class="theorem"><strong>Theorem 3.1  (Rule 1) </strong></span><span class="math display">\[x^ax^b=x^{a+b}\]</span></p>
+</div>
+<p>since we are multiplying <span class="math inline">\(a\)</span> <span class="math inline">\(x\)</span>’s by a further <span class="math inline">\(b\)</span> <span class="math inline">\(x\)</span>’s to give a total of <span class="math inline">\(a+b\)</span> <span class="math inline">\(x\)</span>’s multiplied together. Extending this idea, we also have:</p>
+<div class="theorem">
+<p><span id="thm:exprule1" class="theorem"><strong>Theorem 3.1  (Rule 2) </strong></span><span class="math display">\[(x^a)^b=x^{ab}\]</span></p>
+</div>
+<div class="exercise">
+<p><span id="exr:rule2" class="exercise"><strong>Exercise 3.1  </strong></span>Why does Rule 2 hold? Can you prove it using Rule 1? Furthermore, show that <span class="math inline">\((x^a)^b=(x^b)^a\)</span>.</p>
+</div>
+<p>So far we have allowed the exponents to be positive integers. Can we make sense of negative integers as exponents? Consider for <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> as positive integers the product</p>
+<p><span class="math display">\[x^a\frac{1}{x^b}\frac{x^a}{x^b}\]</span></p>
+<p>For arguments sake let’s take <span class="math inline">\(a&gt;b\)</span>, then since we have <span class="math inline">\(a\)</span> <span class="math inline">\(x\)</span>’s on the top and <span class="math inline">\(b\)</span> <span class="math inline">\(x\)</span>’s on the bottom, we can cancel the common factors to leave <span class="math inline">\(a-b\)</span> <span class="math inline">\(x\)</span>’s. So,</p>
+<p><span class="math display" id="eq:divexps">\[\begin{equation}
+x^a\frac{1}{x^b}=\frac{x^a}{x^b}=x^{a-b} \tag{3.1}
+\end{equation}\]</span></p>
+<p>and following Rule 1 we could think of this as <span class="math inline">\(x^{a-b}=x^{a+(-b)}=x^ax^{-b}\)</span>, and therefore using a negative exponent <span class="math inline">\(-b\)</span> gives the reciprocal of <span class="math inline">\(x^b\)</span></p>
+<div class="theorem">
+<p><span id="thm:exprule1" class="theorem"><strong>Theorem 3.1  (Rule 3) </strong></span><span class="math display">\[x^{-a}=\frac{1}{x^a}\]</span></p>
+</div>
+<p>Next, we can consider the value of <span class="math inline">\(x^0\)</span>. In <a href="foundations.html#eq:divexps">(3.1)</a> with the particular case <span class="math inline">\(b=a\)</span>, we have</p>
+<p><span class="math display">\[1=\frac{x^a}{x^a}=x^{a-a}=x^0\]</span></p>
+<p>so we get that for any non-zero<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a> value of <span class="math inline">\(x\)</span></p>
+<div class="theorem">
+<p><span id="thm:unlabeled-div-1" class="theorem"><strong>Theorem 3.2  (Rule 4) </strong></span><span class="math display">\[x^0=1\]</span></p>
+</div>
+<p>Now lets try to make sense of a power of the form <span class="math inline">\(x^{\frac{a}{b}}\)</span> where <span class="math inline">\(a\)</span> is an integer and <span class="math inline">\(b\)</span> is a positive integer. That is, we now allow for fractional (otherwise known as <em>rational</em>) exponents. Since we have <span class="math inline">\(\frac{a}{b}=a\frac{1}{b}\)</span> we can write (using Rule 2):</p>
+<p><span class="math display">\[x^{\frac{a}{b}}=(x^a)^{\frac{1}{b}}\]</span>.</p>
+<p>In the case <span class="math inline">\(b=a\)</span>, we therefore have</p>
+<p><span class="math inline">\(x=x^1=x^{\frac{a}{a}}=(x^{\frac{1}{a}})^a\)</span>.</p>
+<p>This means that raising <span class="math inline">\(x^\frac{1}{a}\)</span> to the power <span class="math inline">\(a\)</span> gets us back to <span class="math inline">\(x\)</span>, hence the number <span class="math inline">\(x^\frac{1}{a}\)</span> is the <span class="math inline">\(a\)</span>^{th} root of <span class="math inline">\(x\)</span>. For example <span class="math inline">\((3^\frac{1}{2})^2=3^{2\frac{1}{2}}=3^1=3\)</span>, so we must have <span class="math inline">\(3^\frac{1}{2}=\sqrt{3}\)</span>.</p>
+<div class="theorem">
+<p><span id="thm:unlabeled-div-2" class="theorem"><strong>Theorem 3.3  (Rule 5) </strong></span><span class="math display">\[x^{\frac{1}{a}}=\sqrt[n]{x}.\]</span></p>
+</div>
+<p>In particular the square root is <span class="math inline">\(x^{\frac{1}{2}}=\sqrt{x}\)</span> and the cube root is <span class="math inline">\(x^{\frac{1}{3}}=\sqrt[3]{x}\)</span>; we tend to use the root notation for expressions containing square or cube roots on their own, and use the power notation when combining different roots.</p>
+<p>It turns out that we can extend exponents beyond rational numbers to any <em>real</em> number, with all of the above rules still holding. Proving this is beyond the scope of these notes, but the interested reader can easily find out more about this in a textbook or online.</p>
+<p>Something’s missing: we said <span class="math inline">\(x\)</span> can be any real number, but then how do we interpret something like <span class="math inline">\(y=(-1)^\frac{1}{2}\)</span>? That is, <span class="math inline">\(y\)</span> must be a number such that when it is multiplied by itself it gives the negative number <span class="math inline">\(-1\)</span>, but this is impossible for a real number! Answering this conundrum requires us to invent a new set of numbers, called <em>complex numbers</em> – see section <a href="#complex"><strong>??</strong></a>.</p>
+<p>A summary of the rules:</p>
+<div class="theorem">
+<ol style="list-style-type: decimal">
+<li><span id="thm:exprules" class="theorem"><strong>Theorem 3.4  (Rules of Exponents) </strong></span></li>
+<li><span class="math inline">\(x^ax^b=x^{a+b}\)</span></li>
+<li><span class="math inline">\((x^a)^b=x^{ab}\)</span></li>
+<li><span class="math inline">\(x^{-a}=\frac{1}{x^a}\)</span></li>
+<li><span class="math inline">\(x^0=1\)</span></li>
+<li><span class="math inline">\(x^{\frac{1}{a}}=\sqrt[n]{x}.\)</span></li>
+</ol>
+</div>
+</div>
+<div id="brackets" class="section level3 hasAnchor" number="3.2.2">
+<h3><span class="header-section-number">3.2.2</span> Brackets<a href="foundations.html#brackets" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We use brackets to set the precedence (or order) of evaluating the different parts of an expression. We evaluate the innermost brackets first. Note we usually omit the multiplication sign when multiplying a bracketed expression.</p>
+<div class="example">
+<p><span id="exm:unlabeled-div-3" class="example"><strong>Example 3.2  (brackets) </strong></span><span class="math display">\[5(((2+4)\div (5-2))+1)=5((6\div 3)+1)=5(2+1)=5\times 3 = 15\]</span></p>
+</div>
+<p>Sometimes you might find it helpful to add “redundant” brackets to make the calculation clearer. For example, we could write
+<span class="math display">\[3+2\times 4=11\]</span>
+as
+<span class="math display">\[3+(2\times 4)=11.\]</span>
+The brackets are not really needed in the second version, since we get the same result from following BEDMAS, but adding brackets can make an expression easier to read and evaluate.</p>
+<div id="expansion" class="section level4 hasAnchor" number="3.2.2.1">
+<h4><span class="header-section-number">3.2.2.1</span> Expansion<a href="foundations.html#expansion" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Recall that we can expand expressions involving multiplication of brackets such as the following:</p>
+<p><span class="math display">\[a(b+c)=ab+ac\]</span>
+<span class="math display">\[(a+b)(c+d)=ac+ad+bc+bd\]</span>
+<span class="math display">\[(a+b)^2=(a+b)(a+b)=a^2+ab+ba+b^2=a^2+b^2+2ab\]</span>
+<span class="math display">\[(ab)^2=(ab)(ab)=a^2b^2\]</span></p>
+<p>We often want to expand expressions in order to simplify them by grouping together like-terms, for example:</p>
+<p><span class="math display">\[(a+b)(b+c)+2ac=ab+ac+b^2+bc+2ac=ab+3ac+b^2+bc\]</span></p>
+<p>In the case of the sum of two numbers (a <em>binomial</em> term) to a postive integer power, i.e. something of the form</p>
+<p><span class="math display">\[(a+b)^n\]</span></p>
+<p>which involves multiplying out the brackets <span class="math inline">\(n\)</span> times, we have a general formula for the expansion. We start by looking at a slightly simpler form
+<span class="math display">\[(1+x)^n\]</span></p>
+<p>Let’s take a look at the expansion for the first few values of <span class="math inline">\(n\)</span>.</p>
+<p><span class="math inline">\(n=0:\)</span> <span class="math inline">\((1+x)^0 = 1\)</span></p>
+<p><span class="math inline">\(n=1:\)</span> <span class="math inline">\((1+x)^1=1+x\)</span></p>
+<p><span class="math inline">\(n=2:\)</span> <span class="math inline">\((1+x)^2=(1+x)(1+x)=x^2+2x+1\)</span></p>
+<p><span class="math inline">\(n=3:\)</span> <span class="math inline">\((1+x^3)=(1+x)(1+x)^2=(1+x)(x^2+2x+1)=x^3+3x^2+3x+1\)</span></p>
+<p>The coefficients of <span class="math inline">\(x\)</span> form the <span class="math inline">\(n^\text{th}\)</span> row of Pascal’s triangle.</p>
+<p>The general formula is:</p>
+<p><span class="math display">\[(1+x)^n = \binom{n}{0}x^0+\binom{n}{1}x^1+\binom{n}{2}x^2+\dotsb+\binom{n}{n-1}x^{n-1}+\binom{n}{n}x^n\]</span></p>
+<p>where <span class="math inline">\(\binom{n}{k}\)</span> is the binomial coefficient</p>
+<p><span class="math display">\[\binom{n}{k}=\frac{n!}{k!(n-k)!}\]</span></p>
+<p>and <span class="math inline">\(n!\)</span> is the <em>factorial</em> of <span class="math inline">\(n\)</span>:</p>
+<p><span class="math display">\[n!=n\times(n-1)\times(n-2)\times\dotsb \times3\times 2\times 1\]</span>.</p>
+<p>Given the more general form <span class="math inline">\((a+b)^n\)</span>, we can first extract a factor of <span class="math inline">\(a\)</span> to give</p>
+<p><span class="math display">\[(a+b)^n=(a(1+\frac{b}{a}))^n=a^n(1+\frac{b}{a})^n\]</span></p>
+<p>so we now just need to evaluate <span class="math inline">\((1+\frac{b}{a})^n\)</span> using the formula and substituting <span class="math inline">\(x\)</span> with <span class="math inline">\(\frac{b}{a}\)</span>. Alternatively, the full formula is:</p>
+<p><span class="math display">\[(x+y)^n = \binom{n}{0}x^ny^0+\binom{n}{1}x^{n-1}y^1+\binom{n}{2}x^{n-2}y^2+\dotsb+\binom{n}{n-1}x^1y^{n-1}\binom{n}{n}x^0y^n.\]</span></p>
+</div>
+<div id="factorisation" class="section level4 hasAnchor" number="3.2.2.2">
+<h4><span class="header-section-number">3.2.2.2</span> Factorisation<a href="foundations.html#factorisation" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>At other times, we wish to simplify by extracting common factors from an expression, which we call <em>factorisation</em>. In the simplest form, this could just be factorising a single number</p>
+<p><span class="math display">\[2x+2y=2(x+y)\]</span></p>
+<p>Or, it could involve extracting more complicated factors, for example</p>
+<p><span class="math display">\[2xy+6x^2y=2xy(1+3x)\]</span>
+<span class="math display">\[x^2-3x-10=(x+2)(x-5)\]</span></p>
+<p>The second example here is <em>factorising a quadratic</em> which we can do systematically by finding the roots – we will see how to do this later in section XYZ</p>
+</div>
+</div>
+<div id="simplifiying-expressions" class="section level3 hasAnchor" number="3.2.3">
+<h3><span class="header-section-number">3.2.3</span> Simplifiying Expressions<a href="foundations.html#simplifiying-expressions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>In order to simplify an expression we can carry out the following proceedures:</p>
+<ul>
+<li>Expand brackets</li>
+<li>Collect together any like-terms, e.g. <span class="math inline">\(2a+3b+a=3a+3b\)</span>, <span class="math inline">\(a^3a^2+b^2=a^5+b^2\)</span></li>
+<li>Simplify any fractions: use common denominators, e.g. <span class="math inline">\(\frac{a}{b}+\frac{c}{d}=\frac{da+bc}{bd}\)</span>; cancel any common factors, e.g. <span class="math inline">\(\frac{ab}{ac}=\frac{b}{c}\)</span></li>
+<li>Factorise</li>
+</ul>
+<p>Note: these are “rules of thumb”, as there usually does not exist such a thing as a “simplest” form for a given algebraic expression. The meaning of “simple” is dependent on what we want to gain from it. The intention is to put the expression in a form that is easier to understand (in the given context) and which usually uses fewer symbols (but not always).</p>
+
+</div>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="1">
+<li id="fn1"><p>Real numbers require quite a bit of work to define in a rigorous mathematical way and we will not do this here; the interested reader should look up “construction of real numbers by Dedekind cuts” or “construction of real numbers by Cauchy sequences”.<a href="foundations.html#fnref1" class="footnote-back">↩︎</a></p></li>
+<li id="fn2"><p>We need to be more careful when <span class="math inline">\(x=0\)</span>, since we would have <span class="math inline">\(\frac{0^a}{0^a}=\frac{0}{0}\)</span>, which is an indeterminate form so the argument is not valid; it turns out <span class="math inline">\(0^0\)</span> is also an indeterminate form.<a href="foundations.html#fnref2" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="intro.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="equations-and-inequalities.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/maths-sci-eng/maths-sci-eng.github.io/edit/master/02-foundations.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["maths-notes.pdf", "maths-notes.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
