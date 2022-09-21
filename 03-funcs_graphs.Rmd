@@ -100,7 +100,7 @@ The number $n$ corresponding to the highest power in the polynomial is called th
 * Degree 4: a *quartic* polynomial
 * Degree 5: a *quintic* polynomial
 
-The higher the degree of the polynomial, the more "wavey" its graph can be.
+The higher the degree of the polynomial, the more "wavey" its graph can be; in fact, a degree $n$ polynomial can have at most $n-1$ turning points.
 
 A polynomial which has only one term is called a *monomial*, for example
 
@@ -115,11 +115,38 @@ are all monomials.
 knitr::include_url("https://www.desmos.com/calculator/fxiq9a83fp")
 ```
 
+We are often interested in finding the values of $x$ for which $f(x)=0$, known as the *roots* of a polynomial (this use of the word roots has a different meaning to "sqaure roots" etc.). We already know how to find roots of a quadratic using the quadratic formula (section \@ref(quad-eqs)). We will now look at the more general *factor theorem* that can help in finding roots of higher degree polynomials.
 
-factorising (remainder theorem, factor theorem)
-quadratics
-roots
-division, remainders, partial fractions
+If we factorise the quadratic equation
+$$x^2-3x-10=0$$
+we obtain
+$$(x+2)(x-5)=0.$$
+If the product of two numbers is zero, then either one or both of the numbers must be zero. So the possible roots are
+$$(x+2)=0 \quad \implies\quad x=-2$$
+or
+$$(x-5)=0\quad \implies\quad x=5.$$
+More generally, a factor $(x-a)$ corresponds to a root $x=a$. Knowing the factors tells us the roots, and vice versa. It turns out this holds more generally for any degree polynomial.
+
+::: {.theorem #factors name="Factor Theorem"}
+The value $x=a$ is a root of the polynomial equation $f(x)=0$ if and only if $(x-a)$ is a factor of the polynomial $f(x)$.
+:::
+
+We already have a fool-proof way to solve quadratic equations -- use the quadratic formula. There are also formulae for [cubic](https://en.wikipedia.org/wiki/Cubic_equation#General_cubic_formula) and [quartic](https://en.wikipedia.org/wiki/Quartic_equation#The_general_case) polynomials, but these are a bit more complicated. Furthermore, it turns out it is **impossible** to derive a formula for [quintic](https://en.wikipedia.org/wiki/Abel%E2%80%93Ruffini_theorem) and higher degree polynomials! The factor theorem can be helpful in finding roots of polynomials greater than degree 2. Here is an example.
+
+::: {.example #factorthmcubic name="Factor theorem applied to a cubic polynomial"}
+Find the roots of the cubic polynomial $$f(x)=x^3-7x-6.$$
+
+After a little trial and error with small integer values of $x$ we find
+$$f(3)=3^3-7(3)-6=0$$
+which by the factor theorem implies that $(x-3)$ is a factor. Now applying polynomial division by the factor $(x-3)$ we find
+$$\frac{x^3-7x-6}{x-3}=x^2+3x+2$$
+so that
+$$x^3-7x-6=(x-3)(x^2+3x+2).$$
+Now that we have taken out one linear factor we are left with a quadratic factor, which we know how to deal with. Factorising the quadratic factor yields
+$$x^3-7x-6=(x-3)(x+1)(x+2).$$
+Hence the roots are
+$$x=3, x=-1,\,\text{ and } x=-2.$$
+:::
 
 ## Rational functions
 
