@@ -18,7 +18,7 @@ does not have real number solutions!
 
 ## $i$ and complex numbers
 
-Our fix is to define the *imaginary number* $i$ by
+Our fix is to define the *imaginary number* $i$ by^[Engineers often use the notation $j$ instead of $i$.]
 $$
 i = \sqrt{-1},\quad \text{ so that }\quad i^2 = -1.
 $$
@@ -26,7 +26,7 @@ With this definition in mind, consider the quadratic equation
 $$
 x^2 + 4 x + 13 = 0.
 $$
-Completing the square gives^[Note, the notation "$A \implies B$" is read as "statement $A$ implies statement $B$".]
+Completing the square gives
 $$
 (x+2)^2 + 9 = 0 \quad \implies \quad
 x+2 = \pm \sqrt{-9} = \pm 3 \sqrt{-1} = \pm 3 i \quad \implies \quad
@@ -42,6 +42,22 @@ This form is also called the *Cartesian representation* of a complex number. It 
 ```{r complexcart, echo=FALSE, fig.cap = "The complex number $z = x + iy$ in Cartesian coordinates.", fig.alt = "The complex number $z = x + iy$ in Cartesian coordinates."}
 knitr::include_graphics("figures/complexcart.png")
 ```
+
+Note that any real number $x$ can also be considered as a complex number, since it is a complex number that happens to have $0$ imaginary part: $x = x +0i$; it is a complex number that lies on the real axis.
+
+We know from experience that a quadratic equation can have at most 2 roots. Once we have accepted complex numbers as part of our everyday lives, we see that they complete the picture of roots of polynomials.
+
+::: {.theorem #FTA name="Fundamental Theorem of Algebra"}
+Every non-zero, complex, single variable, degree $n$ polynomial, has exactly $n$ roots.
+:::
+
+To clarify the above theorem, we are talking about a polynomial of the form
+$$f(x)=a_0 + a_1 x + a_2 x^2 + \dotsb + a_n x^n$$
+where the variable $x$ can be a complex number (so can also be a real number) and the coefficients $a_i$ are complex numbers (so can also be real numbers) and at least one of these coefficients is not $0$. Since we allow the single variable $x$ to be a complex number, the roots may be complex numbers. Note that some of the $n$ roots might be *repeated roots*, for example, according to the theorem the quadratic
+$$x^2-4x+4=(x-2)(x-2)$$
+must have two roots and in this case they happen to be repeated roots; we say the root is $x=2$ with *multiplicity* 2.
+
+## Complex Arithmetic
 
 We can add, subtract and multiply complex numbers $z = x+iy$ and $w = u+iv$, using usual algebraic rules for expanding brackets --- just remembering that $i^2 = -1$:
 \begin{align*}
@@ -66,7 +82,9 @@ The *complex conjugate* of $z = x + iy$ is the complex number
 $$
 \overline{z} = x - iy.
 $$
-This is the "mirror image" of $z$ in the real axis. The *modulus* of $z = x + iy$ is
+This is the "mirror image" of $z$ in the real axis.
+
+The *modulus* of $z = x + iy$ is
 $$
 |z| = \sqrt{x^2 + y^2} \qquad \text{(the non-negative square root).}
 $$
@@ -85,6 +103,22 @@ Some properties of modulus and conjugate: For any complex numbers $z, w$,
 * $z\times \overline{z} = |z|^2$;
 * $|z\times w| = |z|\,|w|$.
 
+What about division of complex numbers? This is made easy using the complex conjugate as follows:
+$$\frac{z}{w}=\frac{z}{w}\frac{\overline{w}}{\overline{w}}=\frac{z\times \overline{w}}{|w|^2}.$$
+
+::: {.example #complexdiv name="Complex division"}
+Let $z = 2 + 3i$ and $w = 4 - 2i$.
+
+\begin{align*}
+\frac{z}{w}&=\frac{2 + 3i}{4 - 2i}\frac{4+2i}{4+2i}\\
+&=\frac{8+4i+12i+6i^2}{16+4}\\
+&=\frac{2+16i}{20}\\
+&=\frac{1}{10}+\frac{4}{5}i
+\end{align*}
+:::
+
+A useful fact: if a polynomial has *real* coefficients and has a complex root $z$, then its complex conjugate $\overline{z}$ is also a root; we say that complex roots appear in *complex conjugate pairs* in real polynomials.
+
 ## The argument, polar and exponential form for complex numbers
 
 If we think of the complex number $z = x + iy$ as a point $P = z$ in the $(x,y)$-plane, then it is natural to think also of representing $P$ in *polar coordinates* $(r,\theta)$ -- see figure \@ref(fig:complexpolar).
@@ -99,30 +133,53 @@ P = (x,y) \quad \text{(in Cartesian coordinates)}\quad \text{or} \quad
 P = (r,\theta) \quad \text{(in Polar coordinates)}
 $$
 with
-$$\arraycolsep1.5pt\begin{array}{rrclcrcl}
-& r &=& \sqrt{x^2 + y^2} & \quad\text{and}\quad & \tan\theta &=& \frac{y}{x},\\
-\text{or} \qquad & x &=& r \cos \theta & \quad\text{and}\quad & y &=& r \sin \theta.
+$$\begin{array}{rrclcrcl}
+& r &=& \sqrt{x^2 + y^2} & \quad\text{and}\quad & \tan(\theta) &=& \frac{y}{x},\\
+\text{or} \qquad & x &=& r \cos(\theta) & \quad\text{and}\quad & y &=& r \sin(\theta).
 \end{array}$$
 
 Therefore, we can recover the Cartesian coordinates of $P$ from the polar form $(r, \theta)$ of a complex number $z$ as
 $$
-z = r \cos \theta + i (r \sin \theta) = r (\cos \theta + i \sin \theta),
+z = r \cos(\theta) + i (r \sin(\theta)) = r (\cos(\theta) + i \sin(\theta)),
 $$
-which can be written as *exponential form* of z:
+
+::: {.theorem #euler name="Euler's formula"}
+For any real number $\theta$,
 $$
-z = r (\cos \theta + i \sin \theta) = re^{i\theta}.
+e^{i\theta}=\cos (\theta) + i \sin(\theta).
 $$
-The latter is motivated by the fact that, for the product of two complex numbers $z = re^{i\theta}$ and $w = se^{i\phi}$, we have
+:::
+
+This can be derived from the power series of $e^\theta, \sin(\theta)$ and $\cos(\theta)$. Eulers formula allows us to write any complex number $z$ in yet another form, the *exponential form* of $z$:
+$$
+z = r (\cos (\theta) + i \sin (\theta)) = re^{i\theta}.
+$$
+
+The usual rules of exponents hold for complex exponentials, now using the rules of complex arithmetic. The exponential form is particularly nice when taking the product of two complex numbers. For $z = re^{i\theta}$ and $w = se^{i\phi}$, we have
 \begin{align*}
-u = (re^{i\theta}) \times (se^{i\phi}) &= (r(\cos \theta + i \sin \theta)) \times (s(\cos \phi + i \sin \phi)) \\
-&= rs[(\cos \theta \cos \phi - \sin \theta \sin \phi) + i (\sin \theta \cos \phi + \cos \theta \sin \phi)] \\
-&= rs[\cos (\theta + \phi) + i \sin (\theta + \phi)] \\
+u = (re^{i\theta}) \times (se^{i\phi})\\
 &= rs e^{i(\theta + \phi)} \\
 &= R e^{i\alpha},
 \end{align*}
-where $R = rs$ is the distance of $u$ from the origin and $\alpha = \theta + \phi$ is the argument of $u$. For the third equality above, we apply standard trigonometric identities.
+where $R = rs$ is the distance of $u$ from the origin and $\alpha = \theta + \phi$ is the argument of $u$.
 
-**Caution**: For $z = x + iy$ (with $x \neq 0$), if $\theta = \arg(z)$ then we always have $\tan \theta = y/x$. However, this does not mean that $\theta = \tan^{-1}(y/x)$. The $\tan^{-1}$ (or $\arctan$) function can only give values in the first and fourth quadrants (between $-\pi/2$ and $\pi/2$), but the argument of a complex number could be in any of the four quadrants (between $-\pi$ and $\pi$). Therefore, to find the argument of a complex number always draw a diagram. (A quick sketch is all that is needed.)
+**Caution**: For $z = x + iy$ (with $x \neq 0$), if $\theta = \arg(z)$ then we always have $\tan (\theta) = y/x$. However, this does not mean that $\theta = \tan^{-1}(y/x)$. The $\tan^{-1}$ (or $\arctan$) function can only give values in the first and fourth quadrants (between $-\pi/2$ and $\pi/2$), but the argument of a complex number could be in any of the four quadrants (between $-\pi$ and $\pi$). Therefore, to find the argument of a complex number always draw a diagram. (A quick sketch is all that is needed.)
+
+## Roots of complex numbers
+
+We know that square roots of positive real numbers have two solutions, for example $\sqrt{4}=\pm 2$. This agrees with Theorem \ref@(thm:FTA) as we could formulate this as a solution to the equation
+$$x^2=4$$
+which is the quadratic
+$$x^2-4=0$$
+and so must have two roots. Theorem \ref@(thm:FTA) therefore implies that there are $n$ solutions to taking the $n^{th}$ root of *any* number $w$, although these could be complex, since we are equivalently looking for the roots of the polynomial
+$$z^n-w=0.$$
+Furthermore, it turns out that these roots will be distinct (no repeated roots). The easiest way to find these complex roots is using the exponential form.
+
+\begin{align*}
+w=Re^{i\theta}
+\end{align*}
+
+
 
 
 ## $e^{i\theta}$ and trig identities

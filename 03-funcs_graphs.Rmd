@@ -86,7 +86,9 @@ where $p$ and $q$ are constants.
 ## Polynomials
 
 A *polynomial* is a function made up of non-negative integer powers of the independent variable $x$ multiplied by constant coefficients, i.e. it has the form
+
 $$f(x)=a_0 + a_1 x + a_2 x^2 + \dotsb + a_n x^n$$
+
 where the fixed numbers $a_0,\dots,a_n$ are the coefficients (which could be positive, negative or zero). For example, the following are all polynomials:
 \begin{align*}f(x)&=x^2\\
 g(x)&=2+\frac{1}{3}x^4 - x^5\\
@@ -115,7 +117,7 @@ are all monomials.
 knitr::include_url("https://www.desmos.com/calculator/fxiq9a83fp")
 ```
 
-We are often interested in finding the values of $x$ for which $f(x)=0$, known as the *roots* of a polynomial (this use of the word roots has a different meaning to "sqaure roots" etc.). We already know how to find roots of a quadratic using the quadratic formula (section \@ref(quad-eqs)). We will now look at the more general *factor theorem* that can help in finding roots of higher degree polynomials.
+We are often interested in finding the values of $x$ for which $f(x)=0$, known as the *roots* of a polynomial. We already know how to find roots of a quadratic using the quadratic formula (section \@ref(quad-eqs)). We will now look at the more general *factor theorem* that can help in finding roots of higher degree polynomials.
 
 If we factorise the quadratic equation
 $$x^2-3x-10=0$$

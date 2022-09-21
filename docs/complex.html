@@ -124,12 +124,15 @@
 <li class="chapter" data-level="6" data-path="complex.html"><a href="complex.html"><i class="fa fa-check"></i><b>6</b> Complex Numbers</a>
 <ul>
 <li class="chapter" data-level="6.1" data-path="complex.html"><a href="complex.html#i-and-complex-numbers"><i class="fa fa-check"></i><b>6.1</b> <span class="math inline">\(i\)</span> and complex numbers</a></li>
-<li class="chapter" data-level="6.2" data-path="complex.html"><a href="complex.html#the-argument-polar-and-exponential-form-for-complex-numbers"><i class="fa fa-check"></i><b>6.2</b> The argument, polar and exponential form for complex numbers</a></li>
-<li class="chapter" data-level="6.3" data-path="complex.html"><a href="complex.html#eitheta-and-trig-identities"><i class="fa fa-check"></i><b>6.3</b> <span class="math inline">\(e^{i\theta}\)</span> and trig identities</a></li>
+<li class="chapter" data-level="6.2" data-path="complex.html"><a href="complex.html#complex-arithmetic"><i class="fa fa-check"></i><b>6.2</b> Complex Arithmetic</a></li>
+<li class="chapter" data-level="6.3" data-path="complex.html"><a href="complex.html#the-argument-polar-and-exponential-form-for-complex-numbers"><i class="fa fa-check"></i><b>6.3</b> The argument, polar and exponential form for complex numbers</a></li>
+<li class="chapter" data-level="6.4" data-path="complex.html"><a href="complex.html#roots-of-complex-numbers"><i class="fa fa-check"></i><b>6.4</b> Roots of complex numbers</a></li>
+<li class="chapter" data-level="6.5" data-path="complex.html"><a href="complex.html#eitheta-and-trig-identities"><i class="fa fa-check"></i><b>6.5</b> <span class="math inline">\(e^{i\theta}\)</span> and trig identities</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="vectors.html"><a href="vectors.html"><i class="fa fa-check"></i><b>7</b> Vectors</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
-<li class="chapter" data-level="8" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>8</b> Introduction</a></li>
+<li class="chapter" data-level="8" data-path="notation.html"><a href="notation.html"><i class="fa fa-check"></i><b>8</b> Notation</a></li>
+<li class="chapter" data-level="9" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>9</b> Introduction</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -168,7 +171,7 @@ a x^2 + b x + c = 0, \quad \text{with}\quad b^2 - 4 ac &lt; 0
 does not have real number solutions!</p>
 <div id="i-and-complex-numbers" class="section level2 hasAnchor" number="6.1">
 <h2><span class="header-section-number">6.1</span> <span class="math inline">\(i\)</span> and complex numbers<a href="complex.html#i-and-complex-numbers" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Our fix is to define the <em>imaginary number</em> <span class="math inline">\(i\)</span> by
+<p>Our fix is to define the <em>imaginary number</em> <span class="math inline">\(i\)</span> by<a href="#fn8" class="footnote-ref" id="fnref8"><sup>8</sup></a>
 <span class="math display">\[
 i = \sqrt{-1},\quad \text{ so that }\quad i^2 = -1.
 \]</span>
@@ -176,7 +179,7 @@ With this definition in mind, consider the quadratic equation
 <span class="math display">\[
 x^2 + 4 x + 13 = 0.
 \]</span>
-Completing the square gives<a href="#fn8" class="footnote-ref" id="fnref8"><sup>8</sup></a>
+Completing the square gives
 <span class="math display">\[
 (x+2)^2 + 9 = 0 \quad \implies \quad
 x+2 = \pm \sqrt{-9} = \pm 3 \sqrt{-1} = \pm 3 i \quad \implies \quad
@@ -193,6 +196,19 @@ This form is also called the <em>Cartesian representation</em> of a complex numb
 Figure 6.1: The complex number <span class="math inline">\(z = x + iy\)</span> in Cartesian coordinates.
 </p>
 </div>
+<p>Note that any real number <span class="math inline">\(x\)</span> can also be considered as a complex number, since it is a complex number that happens to have <span class="math inline">\(0\)</span> imaginary part: <span class="math inline">\(x = x +0i\)</span>; it is a complex number that lies on the real axis.</p>
+<p>We know from experience that a quadratic equation can have at most 2 roots. Once we have accepted complex numbers as part of our everyday lives, we see that they complete the picture of roots of polynomials.</p>
+<div class="theorem">
+<p><span id="thm:FTA" class="theorem"><strong>Theorem 6.1  (Fundamental Theorem of Algebra) </strong></span>Every non-zero, complex, single variable, degree <span class="math inline">\(n\)</span> polynomial, has exactly <span class="math inline">\(n\)</span> roots.</p>
+</div>
+<p>To clarify the above theorem, we are talking about a polynomial of the form
+<span class="math display">\[f(x)=a_0 + a_1 x + a_2 x^2 + \dotsb + a_n x^n\]</span>
+where the variable <span class="math inline">\(x\)</span> can be a complex number (so can also be a real number) and the coefficients <span class="math inline">\(a_i\)</span> are complex numbers (so can also be real numbers) and at least one of these coefficients is not <span class="math inline">\(0\)</span>. Since we allow the single variable <span class="math inline">\(x\)</span> to be a complex number, the roots may be complex numbers. Note that some of the <span class="math inline">\(n\)</span> roots might be <em>repeated roots</em>, for example, according to the theorem the quadratic
+<span class="math display">\[x^2-4x+4=(x-2)(x-2)\]</span>
+must have two roots and in this case they happen to be repeated roots; we say the root is <span class="math inline">\(x=2\)</span> with <em>multiplicity</em> 2.</p>
+</div>
+<div id="complex-arithmetic" class="section level2 hasAnchor" number="6.2">
+<h2><span class="header-section-number">6.2</span> Complex Arithmetic<a href="complex.html#complex-arithmetic" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>We can add, subtract and multiply complex numbers <span class="math inline">\(z = x+iy\)</span> and <span class="math inline">\(w = u+iv\)</span>, using usual algebraic rules for expanding brackets — just remembering that <span class="math inline">\(i^2 = -1\)</span>:
 <span class="math display">\[\begin{align*}
 z + w &amp;= (x + iy) + (u + iv) = (x+u) + i (y+v),\\
@@ -214,7 +230,8 @@ Thus <span class="math inline">\(\mathbf{Re}(z\times w) = 11\)</span> and <span 
 <span class="math display">\[
 \overline{z} = x - iy.
 \]</span>
-This is the “mirror image” of <span class="math inline">\(z\)</span> in the real axis. The <em>modulus</em> of <span class="math inline">\(z = x + iy\)</span> is
+This is the “mirror image” of <span class="math inline">\(z\)</span> in the real axis.</p>
+<p>The <em>modulus</em> of <span class="math inline">\(z = x + iy\)</span> is
 <span class="math display">\[
 |z| = \sqrt{x^2 + y^2} \qquad \text{(the non-negative square root).}
 \]</span>
@@ -231,9 +248,21 @@ Geometrically, this is the distance of <span class="math inline">\(z\)</span> (i
 <li><span class="math inline">\(z\times \overline{z} = |z|^2\)</span>;</li>
 <li><span class="math inline">\(|z\times w| = |z|\,|w|\)</span>.</li>
 </ul>
+<p>What about division of complex numbers? This is made easy using the complex conjugate as follows:
+<span class="math display">\[\frac{z}{w}=\frac{z}{w}\frac{\overline{w}}{\overline{w}}=\frac{z\times \overline{w}}{|w|^2}.\]</span></p>
+<div class="example">
+<p><span id="exm:complexdiv" class="example"><strong>Example 6.3  (Complex division) </strong></span>Let <span class="math inline">\(z = 2 + 3i\)</span> and <span class="math inline">\(w = 4 - 2i\)</span>.</p>
+<p><span class="math display">\[\begin{align*}
+\frac{z}{w}&amp;=\frac{2 + 3i}{4 - 2i}\frac{4+2i}{4+2i}\\
+&amp;=\frac{8+4i+12i+6i^2}{16+4}\\
+&amp;=\frac{2+16i}{20}\\
+&amp;=\frac{1}{10}+\frac{4}{5}i
+\end{align*}\]</span></p>
 </div>
-<div id="the-argument-polar-and-exponential-form-for-complex-numbers" class="section level2 hasAnchor" number="6.2">
-<h2><span class="header-section-number">6.2</span> The argument, polar and exponential form for complex numbers<a href="complex.html#the-argument-polar-and-exponential-form-for-complex-numbers" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>A useful fact: if a polynomial has <em>real</em> coefficients and has a complex root <span class="math inline">\(z\)</span>, then its complex conjugate <span class="math inline">\(\overline{z}\)</span> is also a root; we say that complex roots appear in <em>complex conjugate pairs</em> in real polynomials.</p>
+</div>
+<div id="the-argument-polar-and-exponential-form-for-complex-numbers" class="section level2 hasAnchor" number="6.3">
+<h2><span class="header-section-number">6.3</span> The argument, polar and exponential form for complex numbers<a href="complex.html#the-argument-polar-and-exponential-form-for-complex-numbers" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>If we think of the complex number <span class="math inline">\(z = x + iy\)</span> as a point <span class="math inline">\(P = z\)</span> in the <span class="math inline">\((x,y)\)</span>-plane, then it is natural to think also of representing <span class="math inline">\(P\)</span> in <em>polar coordinates</em> <span class="math inline">\((r,\theta)\)</span> – see figure <a href="complex.html#fig:complexpolar">6.2</a>.</p>
 <div class="figure"><span style="display:block;" id="fig:complexpolar"></span>
 <img src="figures/complexpolar.png" alt="The complex number $z = x + iy$ in polar coordinates."  />
@@ -247,31 +276,48 @@ P = (x,y) \quad \text{(in Cartesian coordinates)}\quad \text{or} \quad
 P = (r,\theta) \quad \text{(in Polar coordinates)}
 \]</span>
 with
-<span class="math display">\[\arraycolsep1.5pt\begin{array}{rrclcrcl}
-&amp; r &amp;=&amp; \sqrt{x^2 + y^2} &amp; \quad\text{and}\quad &amp; \tan\theta &amp;=&amp; \frac{y}{x},\\
-\text{or} \qquad &amp; x &amp;=&amp; r \cos \theta &amp; \quad\text{and}\quad &amp; y &amp;=&amp; r \sin \theta.
+<span class="math display">\[\begin{array}{rrclcrcl}
+&amp; r &amp;=&amp; \sqrt{x^2 + y^2} &amp; \quad\text{and}\quad &amp; \tan(\theta) &amp;=&amp; \frac{y}{x},\\
+\text{or} \qquad &amp; x &amp;=&amp; r \cos(\theta) &amp; \quad\text{and}\quad &amp; y &amp;=&amp; r \sin(\theta).
 \end{array}\]</span></p>
 <p>Therefore, we can recover the Cartesian coordinates of <span class="math inline">\(P\)</span> from the polar form <span class="math inline">\((r, \theta)\)</span> of a complex number <span class="math inline">\(z\)</span> as
 <span class="math display">\[
-z = r \cos \theta + i (r \sin \theta) = r (\cos \theta + i \sin \theta),
-\]</span>
-which can be written as <em>exponential form</em> of z:
+z = r \cos(\theta) + i (r \sin(\theta)) = r (\cos(\theta) + i \sin(\theta)),
+\]</span></p>
+<div class="theorem">
+<p><span id="thm:euler" class="theorem"><strong>Theorem 6.2  (Euler's formula) </strong></span>For any real number <span class="math inline">\(\theta\)</span>,
 <span class="math display">\[
-z = r (\cos \theta + i \sin \theta) = re^{i\theta}.
-\]</span>
-The latter is motivated by the fact that, for the product of two complex numbers <span class="math inline">\(z = re^{i\theta}\)</span> and <span class="math inline">\(w = se^{i\phi}\)</span>, we have
+e^{i\theta}=\cos (\theta) + i \sin(\theta).
+\]</span></p>
+</div>
+<p>This can be derived from the power series of <span class="math inline">\(e^\theta, \sin(\theta)\)</span> and <span class="math inline">\(\cos(\theta)\)</span>. Eulers formula allows us to write any complex number <span class="math inline">\(z\)</span> in yet another form, the <em>exponential form</em> of <span class="math inline">\(z\)</span>:
+<span class="math display">\[
+z = r (\cos (\theta) + i \sin (\theta)) = re^{i\theta}.
+\]</span></p>
+<p>The usual rules of exponents hold for complex exponentials, now using the rules of complex arithmetic. The exponential form is particularly nice when taking the product of two complex numbers. For <span class="math inline">\(z = re^{i\theta}\)</span> and <span class="math inline">\(w = se^{i\phi}\)</span>, we have
 <span class="math display">\[\begin{align*}
-u = (re^{i\theta}) \times (se^{i\phi}) &amp;= (r(\cos \theta + i \sin \theta)) \times (s(\cos \phi + i \sin \phi)) \\
-&amp;= rs[(\cos \theta \cos \phi - \sin \theta \sin \phi) + i (\sin \theta \cos \phi + \cos \theta \sin \phi)] \\
-&amp;= rs[\cos (\theta + \phi) + i \sin (\theta + \phi)] \\
+u = (re^{i\theta}) \times (se^{i\phi})\\
 &amp;= rs e^{i(\theta + \phi)} \\
 &amp;= R e^{i\alpha},
 \end{align*}\]</span>
-where <span class="math inline">\(R = rs\)</span> is the distance of <span class="math inline">\(u\)</span> from the origin and <span class="math inline">\(\alpha = \theta + \phi\)</span> is the argument of <span class="math inline">\(u\)</span>. For the third equality above, we apply standard trigonometric identities.</p>
-<p><strong>Caution</strong>: For <span class="math inline">\(z = x + iy\)</span> (with <span class="math inline">\(x \neq 0\)</span>), if <span class="math inline">\(\theta = \arg(z)\)</span> then we always have <span class="math inline">\(\tan \theta = y/x\)</span>. However, this does not mean that <span class="math inline">\(\theta = \tan^{-1}(y/x)\)</span>. The <span class="math inline">\(\tan^{-1}\)</span> (or <span class="math inline">\(\arctan\)</span>) function can only give values in the first and fourth quadrants (between <span class="math inline">\(-\pi/2\)</span> and <span class="math inline">\(\pi/2\)</span>), but the argument of a complex number could be in any of the four quadrants (between <span class="math inline">\(-\pi\)</span> and <span class="math inline">\(\pi\)</span>). Therefore, to find the argument of a complex number always draw a diagram. (A quick sketch is all that is needed.)</p>
+where <span class="math inline">\(R = rs\)</span> is the distance of <span class="math inline">\(u\)</span> from the origin and <span class="math inline">\(\alpha = \theta + \phi\)</span> is the argument of <span class="math inline">\(u\)</span>.</p>
+<p><strong>Caution</strong>: For <span class="math inline">\(z = x + iy\)</span> (with <span class="math inline">\(x \neq 0\)</span>), if <span class="math inline">\(\theta = \arg(z)\)</span> then we always have <span class="math inline">\(\tan (\theta) = y/x\)</span>. However, this does not mean that <span class="math inline">\(\theta = \tan^{-1}(y/x)\)</span>. The <span class="math inline">\(\tan^{-1}\)</span> (or <span class="math inline">\(\arctan\)</span>) function can only give values in the first and fourth quadrants (between <span class="math inline">\(-\pi/2\)</span> and <span class="math inline">\(\pi/2\)</span>), but the argument of a complex number could be in any of the four quadrants (between <span class="math inline">\(-\pi\)</span> and <span class="math inline">\(\pi\)</span>). Therefore, to find the argument of a complex number always draw a diagram. (A quick sketch is all that is needed.)</p>
 </div>
-<div id="eitheta-and-trig-identities" class="section level2 hasAnchor" number="6.3">
-<h2><span class="header-section-number">6.3</span> <span class="math inline">\(e^{i\theta}\)</span> and trig identities<a href="complex.html#eitheta-and-trig-identities" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="roots-of-complex-numbers" class="section level2 hasAnchor" number="6.4">
+<h2><span class="header-section-number">6.4</span> Roots of complex numbers<a href="complex.html#roots-of-complex-numbers" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We know that square roots of positive real numbers have two solutions, for example <span class="math inline">\(\sqrt{4}=\pm 2\)</span>. This agrees with Theorem (thm:FTA) as we could formulate this as a solution to the equation
+<span class="math display">\[x^2=4\]</span>
+which is the quadratic
+<span class="math display">\[x^2-4=0\]</span>
+and so must have two roots. Theorem (thm:FTA) therefore implies that there are <span class="math inline">\(n\)</span> solutions to taking the <span class="math inline">\(n^{th}\)</span> root of <em>any</em> number <span class="math inline">\(w\)</span>, although these could be complex, since we are equivalently looking for the roots of the polynomial
+<span class="math display">\[z^n-w=0.\]</span>
+Furthermore, it turns out that these roots will be distinct (no repeated roots). The easiest way to find these complex roots is using the exponential form.</p>
+<p><span class="math display">\[\begin{align*}
+w=Re^{i\theta}
+\end{align*}\]</span></p>
+</div>
+<div id="eitheta-and-trig-identities" class="section level2 hasAnchor" number="6.5">
+<h2><span class="header-section-number">6.5</span> <span class="math inline">\(e^{i\theta}\)</span> and trig identities<a href="complex.html#eitheta-and-trig-identities" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>There are many double angle, and similar, formulas relating the various trig functions. Remembering them can be quite a struggle. In fact we can recover them easily using complex numbers in polar form:
 <span class="math display">\[
 e^{i \theta} = \cos \theta + i \sin \theta.
@@ -298,7 +344,7 @@ and equating real and imaginary parts on the left and right hand sides gives:
 <div class="footnotes">
 <hr />
 <ol start="8">
-<li id="fn8"><p>Note, the notation “<span class="math inline">\(A \implies B\)</span>” is read as “statement <span class="math inline">\(A\)</span> implies statement <span class="math inline">\(B\)</span>”.<a href="complex.html#fnref8" class="footnote-back">↩︎</a></p></li>
+<li id="fn8"><p>Engineers often use the notation <span class="math inline">\(j\)</span> instead of <span class="math inline">\(i\)</span>.<a href="complex.html#fnref8" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>
