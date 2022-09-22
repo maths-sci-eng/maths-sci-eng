@@ -50,6 +50,9 @@ exm:conjugate
 exm:complexdiv
 fig:complexpolar
 thm:euler
+fig:complexpolargeo
+exm:complexroots
+fig:complexrootsexmp
 welcome
 foundations
 numbers
@@ -90,3 +93,8 @@ trigonometric-identities
 complex
 i-and-complex-numbers
 complex-arithmetic
+the-argument-polar-and-exponential-form-for-complex-numbers
+roots-of-complex-numbers
+eitheta-and-trig-identities
+vectors
+notation

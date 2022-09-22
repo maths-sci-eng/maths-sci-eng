@@ -37,7 +37,7 @@ This leads us to *Complex Numbers*, denoted by $\mathbb{C}$, defined as the set 
 $$
 z = x + i y, \quad \text{where $x$ and $y$ are real numbers}.
 $$
-This form is also called the *Cartesian representation* of a complex number. It has a *real part* $\mathbf{Re}(z) = x$ and an *imaginary part* $\mathbf{Im}(z) = y$. We can then represent a complex number graphically by plotting the real and imaginary parts as coordinates in a Cartesian coordinate system, as in figure \@ref(fig:complexcart). The $x$-axis is called the *real axis* and the $y$-axis is called the *imaginary axis*.
+This form is also called the *Cartesian representation* of a complex number. It has a *real part* $\mathbf{Re}(z) = x$ and an *imaginary part* $\mathbf{Im}(z) = y$. We can then represent a complex number graphically by plotting the real and imaginary parts as coordinates in a Cartesian coordinate system, as in figure \@ref(fig:complexcart), known as the *complex plane*. The $x$-axis is called the *real axis* and the $y$-axis is called the *imaginary axis*.
 
 ```{r complexcart, echo=FALSE, fig.cap = "The complex number $z = x + iy$ in Cartesian coordinates.", fig.alt = "The complex number $z = x + iy$ in Cartesian coordinates."}
 knitr::include_graphics("figures/complexcart.png")
@@ -155,9 +155,17 @@ $$
 z = r (\cos (\theta) + i \sin (\theta)) = re^{i\theta}.
 $$
 
+Note that since $\sin$ and $\cos$ are periodic with period $2\pi$, there are actually an infinite number of ways of expressing a complex number in polar or exponential form; for any integer value of $m$
+$$re^{i(\theta+2m\pi)}=r(\cos(\theta+2m\pi)+i\sin(\theta+2m\pi))=r(\cos(\theta)+i\sin(\theta))=re^{i\theta}=w$$
+so we can add any multiple of $2m\pi$ to $\theta$ and get the same complex number. Graphically, this corresponds to going around a full circle $m$ times in the complex plane and back to the same point.
+
+```{r, complexpolargeo, echo=FALSE, fig.cap="A complex number $w=re^{i\\theta}$ plotted in the complex plane. Drag the sliders to vary $\\theta$ and $r$. [[Open graph in browser.]](https://www.geogebra.org/calculator/mvgafsek)"}
+knitr::include_url("https://www.geogebra.org/calculator/mvgafsek")
+```
+
 The usual rules of exponents hold for complex exponentials, now using the rules of complex arithmetic. The exponential form is particularly nice when taking the product of two complex numbers. For $z = re^{i\theta}$ and $w = se^{i\phi}$, we have
 \begin{align*}
-u = (re^{i\theta}) \times (se^{i\phi})\\
+u &= (re^{i\theta}) \times (se^{i\phi})\\
 &= rs e^{i(\theta + \phi)} \\
 &= R e^{i\alpha},
 \end{align*}
@@ -168,19 +176,57 @@ where $R = rs$ is the distance of $u$ from the origin and $\alpha = \theta + \ph
 ## Roots of complex numbers
 
 We know that square roots of positive real numbers have two solutions, for example $\sqrt{4}=\pm 2$. This agrees with Theorem \ref@(thm:FTA) as we could formulate this as a solution to the equation
+
 $$x^2=4$$
+
 which is the quadratic
+
 $$x^2-4=0$$
-and so must have two roots. Theorem \ref@(thm:FTA) therefore implies that there are $n$ solutions to taking the $n^{th}$ root of *any* number $w$, although these could be complex, since we are equivalently looking for the roots of the polynomial
+
+and so must have two roots. More generally, the $n^\text{th}$ root of any number $w$ can be formulated as the solutions to the polynomial equation
+
 $$z^n-w=0.$$
-Furthermore, it turns out that these roots will be distinct (no repeated roots). The easiest way to find these complex roots is using the exponential form.
+
+Theorem \ref@(thm:FTA) implies that there are $n$ solutions, allowing for these to be complex numbers. Furthermore, it turns out that these roots will be distinct (no repeated roots). The easiest way to find these roots is using the exponential form. We can write $w$ as
+
+$$w=re^{i\theta}$$
+
+then the first $n^\text{th}$ root is
+
+$$w^{\frac{1}{n}}=(re^{i\theta})^\frac{1}{n}=r^\frac{1}{n}e^{i\frac{\theta}{n}}$$
+
+but where are the remaining $n-1$ roots? Well, since we can also write $w=re^{i(\theta+2m\pi)}$, so
+
+$$w^{\frac{1}{n}}=r^{\frac{1}{n}}e^{i(\frac{\theta}{n}+\frac{2m}{n}\pi)}$$
+
+and we have a distinct solution for all values of $m=0,\dotsc,n-1$. Once we reach $m=n$ we have gone full circle and are back to the original solution. To double check these are solutions, we can take them to the power $n$
 
 \begin{align*}
-w=Re^{i\theta}
+(r^{\frac{1}{n}}e^{i(\frac{\theta}{n}+\frac{2m}{n}\pi)})^n&=re^{in(\frac{\theta}{n}+\frac{2m}{n}\pi)}\\
+&=re^{i(\frac{n\theta}{n}+\frac{2mn}{n}\pi)}\\
+&=re^{i(\theta+2m\pi)}\\
+&=re^{i\theta}\\
+&=w.
 \end{align*}
 
+Geometrically, these $n$ solutions are evenly spaced around a circle of radius $r^{\frac{1}{n}}$ in the complex plane, with an angle of $\frac{2}{n}\pi$ between them.
 
+::: {.example #complexroots name="Complex roots"}
+Find the cube roots of $z=2$ and sketch them in the complex plane.
 
+We first write $z=2+0i$ in exponential form
+$$z=2e^{i0}$$
+then the solutions are
+\begin{align*}
+w_1&=\sqrt[3]{2}e^{i0}=\sqrt[3]{2}\\
+w_2&=\sqrt[3]{2}e^{i(0+\frac{2\pi}{3})}=\sqrt[3]{2}e^{i\frac{2\pi}{3}}\\
+w_3&=\sqrt[3]{2}e^{i(0+\frac{2(2)\pi}{3})}=\sqrt[3]{2}e^{i\frac{4\pi}{3}}
+\end{align*}
+
+```{r complexrootsexmp, echo=FALSE, fig.cap = "The cube roots of $2$ in the complex plane. Note they are evenly spaced around a circle of radius $\\sqrt[3]{2}$.", fig.alt = "The cube roots of $2$ in the complex plane. Note they are evenly spaced around a circle of radius $\\sqrt[3]{2}$."}
+knitr::include_graphics("figures/complexroots.png")
+```
+:::
 
 ## $e^{i\theta}$ and trig identities
 
