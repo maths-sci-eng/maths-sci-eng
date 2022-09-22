@@ -331,7 +331,7 @@ knitr::include_url("https://www.desmos.com/calculator/xrpc0in171")
 The usual trigonometric identities also hold for the corresponding hyperbolic functions, except that where ever there is a $\sin^2$ we replace it with a $-\sinh^2$. For example:
 
 \begin{align*}
-&\text{\textbf{Trigonometric}}  &\text{\textbf{Hyperbolic}}\\
+&\text{Trigonometric}           &\text{Hyperbolic}\\
 &\sin^2(x)+\cos^2(x)=1          &\cosh^2(x)-\sinh^2(x)=1          \\
 &\sin(2x)=2\sin(x)\cos(x)       &\sinh(2x)=2\sinh(x)\cosh(x)       \\
 &\cos(2x)=\cos^2(x)-\sin^2(x)   &\cosh(2x)=\cosh^2(x)+\sinh^2(x)   \\

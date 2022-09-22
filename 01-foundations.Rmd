@@ -104,7 +104,7 @@ Why does Rule 2 hold? Can you prove it using Rule 1? Furthermore, show that $(x^
 
 So far we have allowed the exponents to be positive integers. Can we make sense of negative integers as exponents? Consider for $a$ and $b$ as positive integers the product
 
-$$x^a\frac{1}{x^b}\frac{x^a}{x^b}$$
+$$x^a\frac{1}{x^b}=\frac{x^a}{x^b}$$
 
 For arguments sake let's take $a>b$, then since we have $a$ $x$'s on the top and $b$ $x$'s on the bottom, we can cancel the common factors to leave $a-b$ $x$'s. So,
 
@@ -130,7 +130,7 @@ $$x^0=1$$
 
 Now lets try to make sense of a power of the form $x^{\frac{a}{b}}$ where $a$ is an integer and $b$ is a positive integer. That is, we now allow for fractional (otherwise known as *rational*) exponents. Since we have $\frac{a}{b}=a\frac{1}{b}$ we can write (using Rule 2):
 
-$$x^{\frac{a}{b}}=(x^a)^{\frac{1}{b}}$$.
+$$x^{\frac{a}{b}}=(x^a)^{\frac{1}{b}}.$$
 
 In the case $b=a$, we therefore have
 
