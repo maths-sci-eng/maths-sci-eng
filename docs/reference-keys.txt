@@ -56,7 +56,6 @@ thm:euler
 fig:complexpolargeo
 exm:complexroots
 fig:complexrootsexmp
-welcome
 foundations
 numbers
 algebra

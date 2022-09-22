@@ -39,7 +39,7 @@ $$
 Two lines are parallel if they have the same angle of inclination $\theta$, or same gradient $m$.
 
 ```{r inclination, echo=FALSE, fig.cap = "The angle of inclination of a line.", fig.alt = "Diagram showing the angle of inclination of a line."}
-knitr::include_graphics("figures/inclination.svg")
+knitr::include_graphics("figures/inclination.png")
 ```
 
 Hence if two (non-vertical) lines are parallel they are of the form
@@ -60,7 +60,7 @@ m_2&=\tan\Big(\theta + \frac{\pi}{2}\Big)=\frac{\sin(\theta + \frac{\pi}{2})}{\c
 \end{align*}
 
 ```{r perpendicular, echo=FALSE, fig.cap = "Perpendicular lines.", fig.alt = "Diagram showing a pair of perpendicular lines."}
-knitr::include_graphics("figures/perpendicular.svg")
+knitr::include_graphics("figures/perpendicular.png")
 ```
 
 Thus, two (non-vertical) lines are perpendicular if
@@ -168,7 +168,7 @@ knitr::include_url("https://www.desmos.com/calculator/m4ssgias64")
 
 ## Root functions
 
-Taking the $n^\text{th}$ root of a number $\sqrt[n]{x}$ returns the answer to the question "what number multiplied by itself $n$ times equals $x$?". We saw in section \@ref(exponents) that this is the same as taking the power $x^\frac{1}{n}$. Taking the $n$th root can also be thought of as reversing the operation of taking the $n$th power (and vice versa). In this sense, the functions $f(x)=x^n$ and $g(x)=\sqrt[n]{x} are *inverse* functions -- they each "undo" the action of the other to return to the original value $x$. If we first apply $f$ and then $g$ (known as the *composition* of $f$ and $g$), or the other way around, then the result is to get back to $x$:
+Taking the $n^\text{th}$ root of a number $\sqrt[n]{x}$ returns the answer to the question "what number multiplied by itself $n$ times equals $x$?". We saw in section \@ref(exponents) that this is the same as taking the power $x^\frac{1}{n}$. Taking the $n$th root can also be thought of as reversing the operation of taking the $n$th power (and vice versa). In this sense, the functions $f(x)=x^n$ and $g(x)=\sqrt[n]{x}$ are *inverse* functions -- they each "undo" the action of the other to return to the original value $x$. If we first apply $f$ and then $g$ (known as the *composition* of $f$ and $g$), or the other way around, then the result is to get back to $x$:
 
 $$g(f(x)) = \sqrt[n]{x^n}=x$$
 and
@@ -302,13 +302,13 @@ When we have quatities that change over a large range of magnitudes, it can be m
 The following is a "semi-log" plot, where the $y$-axis is the logarithmic scale and the $x$-axis is a (normal) linear scale. This means that every unit moved up along the $y$-axis actually represents a power of 10 increase in the amplitude of the seismograph waves.
 
 ```{r earthquake, echo=FALSE, fig.cap = "Magnitude of the August 2016 Central Italy earthquake (red dot) and aftershocks (which continued to occur after the period shown here). From [Wikipedia - Phoenix7777](https://commons.wikimedia.org/w/index.php?curid=50891603).", fig.alt = "Plot showing 2016 Central Italy Earthquake Data."}
-knitr::include_graphics("figures/2016_Central_Italy_earthquake_(magnitude).svg")
+knitr::include_graphics("figures/2016_Central_Italy_earthquake_(magnitude).png")
 ```
 
 The logarithmic nature of the scale is sometimes made clearer by labelling the axis with an exponentially increasing scale and drawing in the minor gridlines. In figure \@ref(fig:semilog) the major grid lines on the $y$-axis increase by a power of $10$. The minor grid lines between $1$ and $10$ represent increments of $1$ unit, then the minor grid lines between $10$ and $10^2=100$ represent increments of $10$ units, and so on.
 
 ```{r semilog, echo=FALSE, fig.cap = "Semi log graph paper (base 10). From [wikimedia](https://commons.wikimedia.org/w/index.php?curid=79843775).", fig.alt = "Semi log graph paper (base 10)."}
-knitr::include_graphics("figures/Semilog_graph_paper.svg")
+knitr::include_graphics("figures/Semilog_graph_paper.png")
 ```
 
 ## Hyperbolic functions
