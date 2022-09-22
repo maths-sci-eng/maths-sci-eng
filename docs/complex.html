@@ -409,7 +409,6 @@ w_1&amp;=\sqrt[3]{2}e^{i0}=\sqrt[3]{2}\\
 w_2&amp;=\sqrt[3]{2}e^{i(0+\frac{2\pi}{3})}=\sqrt[3]{2}e^{i\frac{2\pi}{3}}\\
 w_3&amp;=\sqrt[3]{2}e^{i(0+\frac{2(2)\pi}{3})}=\sqrt[3]{2}e^{i\frac{4\pi}{3}}
 \end{align*}\]</span></p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="complex.html#cb1-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&quot;figures/complexroots.png&quot;</span>)</span></code></pre></div>
 <div class="figure"><span style="display:block;" id="fig:complexrootsexmp"></span>
 <img src="figures/complexroots.png" alt="The cube roots of $2$ in the complex plane. Note they are evenly spaced around a circle of radius $\sqrt[3]{2}$."  />
 <p class="caption">
@@ -422,23 +421,23 @@ Figure 6.4: The cube roots of <span class="math inline">\(2\)</span> in the comp
 <h2><span class="header-section-number">6.5</span> <span class="math inline">\(e^{i\theta}\)</span> and trig identities<a href="complex.html#eitheta-and-trig-identities" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>There are many double angle, and similar, formulas relating the various trig functions. Remembering them can be quite a struggle. In fact we can recover them easily using complex numbers in polar form:
 <span class="math display">\[
-e^{i \theta} = \cos \theta + i \sin \theta.
+e^{i \theta} = \cos (\theta) + i \sin (\theta).
 \]</span>
 So for arbitrary <span class="math inline">\(\theta\)</span> and <span class="math inline">\(\phi\)</span>
 <span class="math display">\[
-e^{i \theta} e^{i \phi} = \begin{cases} (\cos \theta + i \sin \theta) \times (\cos \phi + i \sin \phi) &amp; \text{or} \\
+e^{i \theta} e^{i \phi} = \begin{cases} (\cos (\theta) + i \sin (\theta)) \times (\cos (\phi) + i \sin (\phi)) &amp; \text{or} \\
 e^{i (\theta + \phi)} = \cos (\theta + \phi) + i \sin (\theta + \phi). \end{cases}
 \]</span>
 It follows that
 <span class="math display">\[\begin{align*}
-(\cos \theta + i \sin \theta) \times (\cos \phi + i \sin \phi)
-&amp;= \cos \theta \cos \phi - \sin \theta \sin \phi + i (\cos \theta \sin \phi + \sin \theta \cos \phi)\\
+(\cos (\theta) + i \sin (\theta)) \times (\cos (\phi) + i \sin (\phi))
+&amp;= \cos (\theta) \cos (\phi) - \sin (\theta) \sin (\phi) + i (\cos (\theta) \sin (\phi) + \sin (\theta) \cos (\phi))\\
 &amp;= \cos (\theta + \phi) + i \sin (\theta + \phi)
 \end{align*}\]</span>
 and equating real and imaginary parts on the left and right hand sides gives:
 <span class="math display">\[
-\cos \theta \cos \phi - \sin \theta \sin \phi   = \cos (\theta + \phi) \qquad
-\text{and}\qquad \cos \theta \sin \phi + \sin \theta \cos \phi = \sin (\theta + \phi)
+\cos (\theta) \cos (\phi) - \sin (\theta) \sin (\phi)   = \cos (\theta + \phi) \qquad
+\text{and}\qquad \cos (\theta) \sin (\phi) + \sin (\theta) \cos (\phi) = \sin (\theta + \phi)
 \]</span></p>
 
 </div>

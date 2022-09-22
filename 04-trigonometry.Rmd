@@ -82,6 +82,35 @@ CAH - Cosine equals Adjacent over Hypotenuse
 
 TOA - Tan equals Opposite over Adjacent
 
+These are most commonly used to determine angles by using the *inverse* functions:
+
+\begin{align*}
+\theta&=\sin^{-1}(\frac{Opp.}{Hyp.})\\
+\theta&=\cos^{-1}(\frac{Adj.}{Hyp.})\\
+\theta&=\tan^{-1}(\frac{Opp.}{Adj.})
+\end{align*}
+
+**WARNING**: the notation suggests we are taking $\sin$ to the power $-1$, so that $\sin^{-1}=\frac{1}{\sin}$, but this is NOT how the inverse is defined. Remember that the inverse "undoes" the action of the function. Scientific calculators will have buttons to apply these functions. The inverses are also sometimes called
+
+\begin{align*}
+\arcsin&=\sin^{-1},\\
+\arccos&=\cos^{-1},\\
+\arctan&=\tan^{-1}.
+\end{align*}
+
+
+::: {.example #inversetrig name="Applying inverse trig. functions"}
+Calculate the angle $\theta$ in the following triangle.
+
+```{r inversetrigexmp, fig.cap = "A right angled triangle with hypotenuse legth 14 units and adjacent length 8 units.", fig.alt = "A right angled triangle with hypotenuse legth 14 units and adjacent length 8 units."}
+knitr::include_graphics("figures/rh-triangleexmp.png")
+```
+
+Since we have the lengths of the hypotenuse and adjacent, we can use $\cos^{-1}$ to find $\theta$. Using a calculator we find
+
+$$\theta=\cos^{-1}\left(\frac{8}{14}\right)=55.15^\circ \text{(to 2 d.p.)}$$
+:::
+
 ## Sine and Cosine Rules
 
 The Pythagorean Theorem and Trigonometric ratios above only apply to right-angle triangles. For general triangles, the sine and cosine rules give us useful relationsips between angles and side lengths.

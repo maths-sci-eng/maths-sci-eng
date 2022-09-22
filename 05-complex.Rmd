@@ -232,21 +232,21 @@ knitr::include_graphics("figures/complexroots.png")
 
 There are many double angle, and similar, formulas relating the various trig functions. Remembering them can be quite a struggle. In fact we can recover them easily using complex numbers in polar form:
 $$
-e^{i \theta} = \cos \theta + i \sin \theta.
+e^{i \theta} = \cos (\theta) + i \sin (\theta).
 $$
 So for arbitrary $\theta$ and $\phi$
 $$
-e^{i \theta} e^{i \phi} = \begin{cases} (\cos \theta + i \sin \theta) \times (\cos \phi + i \sin \phi) & \text{or} \\ 
+e^{i \theta} e^{i \phi} = \begin{cases} (\cos (\theta) + i \sin (\theta)) \times (\cos (\phi) + i \sin (\phi)) & \text{or} \\ 
 e^{i (\theta + \phi)} = \cos (\theta + \phi) + i \sin (\theta + \phi). \end{cases}
 $$
 It follows that
 \begin{align*}
-(\cos \theta + i \sin \theta) \times (\cos \phi + i \sin \phi) 
-&= \cos \theta \cos \phi - \sin \theta \sin \phi + i (\cos \theta \sin \phi + \sin \theta \cos \phi)\\
+(\cos (\theta) + i \sin (\theta)) \times (\cos (\phi) + i \sin (\phi)) 
+&= \cos (\theta) \cos (\phi) - \sin (\theta) \sin (\phi) + i (\cos (\theta) \sin (\phi) + \sin (\theta) \cos (\phi))\\
 &= \cos (\theta + \phi) + i \sin (\theta + \phi)
 \end{align*}
 and equating real and imaginary parts on the left and right hand sides gives:
 $$
-\cos \theta \cos \phi - \sin \theta \sin \phi	= \cos (\theta + \phi) \qquad
-\text{and}\qquad \cos \theta \sin \phi + \sin \theta \cos \phi = \sin (\theta + \phi)
+\cos (\theta) \cos (\phi) - \sin (\theta) \sin (\phi)	= \cos (\theta + \phi) \qquad
+\text{and}\qquad \cos (\theta) \sin (\phi) + \sin (\theta) \cos (\phi) = \sin (\theta + \phi)
 $$

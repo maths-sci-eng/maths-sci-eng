@@ -465,7 +465,7 @@ Figure 4.11: The functions <span class="math inline">\(f(x)=a^x\)</span> for var
 </div>
 <p>In engineering applications it is also common to use base <span class="math inline">\(2\)</span> and base <span class="math inline">\(10\)</span>. For base <span class="math inline">\(10\)</span>, the following notation is sometimes used</p>
 <p><span class="math display">\[\log(x)=\log_{10}(x)\]</span></p>
-<p>but we should check what the author intends as sometimes <span class="math inline">\(\log(x)\)</span> is used to mean <span class="math inline">\(\ln(x)\)</span>. We have the following rules for manipulating logarithms (these follow from the laws of exponents; try to derive them yourself):</p>
+<p>but we should always check what the author intends as sometimes <span class="math inline">\(\log(x)\)</span> is used to mean <span class="math inline">\(\ln(x)\)</span>. We have the following rules for manipulating logarithms (these follow from the laws of exponents; try to derive them yourself):</p>
 <div class="theorem">
 <ol style="list-style-type: decimal">
 <li><span id="thm:logrules" class="theorem"><strong>Theorem 4.2  (Rules of Logarithms) </strong></span></li>
@@ -501,11 +501,18 @@ The “natural” choice of base for mathematical use is <span class="math inlin
 Figure 4.12: Magnitude of the August 2016 Central Italy earthquake (red dot) and aftershocks (which continued to occur after the period shown here). From <a href="https://commons.wikimedia.org/w/index.php?curid=50891603">Wikipedia - Phoenix7777</a>.
 </p>
 </div>
+<p>The logarithmic nature of the scale is sometimes made clearer by labelling the axis with an exponentially increasing scale and drawing in the minor gridlines. In figure <a href="functions-and-graphs.html#fig:semilog">4.13</a> the major grid lines on the <span class="math inline">\(y\)</span>-axis increase by a power of <span class="math inline">\(10\)</span>. The minor grid lines between <span class="math inline">\(1\)</span> and <span class="math inline">\(10\)</span> represent increments of <span class="math inline">\(1\)</span> unit, then the minor grid lines between <span class="math inline">\(10\)</span> and <span class="math inline">\(10^2=100\)</span> represent increments of <span class="math inline">\(10\)</span> units, and so on.</p>
+<div class="figure"><span style="display:block;" id="fig:semilog"></span>
+<img src="figures/Semilog_graph_paper.svg" alt="Semi log graph paper (base 10)."  />
+<p class="caption">
+Figure 4.13: Semi log graph paper (base 10). From <a href="https://commons.wikimedia.org/w/index.php?curid=79843775">wikimedia</a>.
+</p>
+</div>
 </div>
 </div>
 <div id="hyperbolic-functions" class="section level2 hasAnchor" number="4.7">
 <h2><span class="header-section-number">4.7</span> Hyperbolic functions<a href="functions-and-graphs.html#hyperbolic-functions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The hyperbolic functions are defined in terms of the exponential function. They are named due to possessing some similar properties to corresponding trigonometric functions.</p>
+<p>The hyperbolic functions are defined in terms of the exponential function. They are named after the trigonometric functions due to possessing some similar properties, although their graphs are quite different.</p>
 <p>Hyperbolic sine, usually spoken as “shine” is defined as
 <span class="math display">\[\sinh(x)=\frac{e^x-e^{-x}}{2}\]</span></p>
 <p>Hyperbolic cosine or “cosh” is defined as
@@ -516,10 +523,18 @@ Figure 4.12: Magnitude of the August 2016 Central Italy earthquake (red dot) and
 <iframe src="https://www.desmos.com/calculator/xrpc0in171" width="672" height="400px" data-external="1">
 </iframe>
 <p class="caption">
-Figure 4.13: The functions <span class="math inline">\(\sinh(x)\)</span> (red curve), <span class="math inline">\(\cosh(x)\)</span> (blue curve) and <span class="math inline">\(\tanh(x)\)</span> (green curve). <a href="https://www.desmos.com/calculator/xrpc0in171">[Open graph in browser.]</a>
+Figure 4.14: The functions <span class="math inline">\(\sinh(x)\)</span> (red curve), <span class="math inline">\(\cosh(x)\)</span> (blue curve) and <span class="math inline">\(\tanh(x)\)</span> (green curve). <a href="https://www.desmos.com/calculator/xrpc0in171">[Open graph in browser.]</a>
 </p>
 </div>
-<p>As an example of where these functions arise in the real-world is the shape formed by a flexible cable or chain hanging from its ends under its own weight. It has the general form
+<p>The usual trigonometric identities also hold for the corresponding hyperbolic functions, except that where ever there is a <span class="math inline">\(\sin^2\)</span> we replace it with a <span class="math inline">\(-\sinh^2\)</span>. For example:</p>
+<p><span class="math display">\[\begin{align*}
+&amp;\text{\textbf{Trigonometric}}  &amp;\text{\textbf{Hyperbolic}}\\
+&amp;\sin^2(x)+\cos^2(x)=1          &amp;\cosh^2(x)-\sinh^2(x)=1          \\
+&amp;\sin(2x)=2\sin(x)\cos(x)       &amp;\sinh(2x)=2\sinh(x)\cosh(x)       \\
+&amp;\cos(2x)=\cos^2(x)-\sin^2(x)   &amp;\cosh(2x)=\cosh^2(x)+\sinh^2(x)   \\
+&amp;1+\tan^2(x)=\sec^2(x)          &amp;1-\tanh^2(x)=\text{sech}^2(x)
+\end{align*}\]</span></p>
+<p>As an example of where these functions arise in the real-world, the shape formed by a flexible cable or chain hanging from its ends under its own weight has the general form
 <span class="math display">\[\begin{equation*}
 y=a\cosh\left(\frac{x}{a}\right)
 \end{equation*}\]</span>
@@ -527,7 +542,7 @@ and is known as a <em>catenary curve</em>.</p>
 <div class="figure"><span style="display:block;" id="fig:catenary"></span>
 <img src="figures/Kette_Kettenkurve_Catenary_2008_PD.jpg" alt="A chain hanging from points forms a catenary."  />
 <p class="caption">
-Figure 4.14: A chain hanging from points forms a catenary. From <a href="https://commons.wikimedia.org/w/index.php?curid=5609313">Wikipedia - Kamel15</a>
+Figure 4.15: A chain hanging from points forms a catenary. From <a href="https://commons.wikimedia.org/w/index.php?curid=5609313">Wikipedia - Kamel15</a>
 </p>
 </div>
 

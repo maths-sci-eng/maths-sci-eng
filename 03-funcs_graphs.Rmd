@@ -265,7 +265,7 @@ In engineering applications it is also common to use base $2$ and base $10$. For
 
 $$\log(x)=\log_{10}(x)$$
 
-but we should check what the author intends as sometimes $\log(x)$ is used to mean $\ln(x)$. We have the following rules for manipulating logarithms (these follow from the laws of exponents; try to derive them yourself):
+but we should always check what the author intends as sometimes $\log(x)$ is used to mean $\ln(x)$. We have the following rules for manipulating logarithms (these follow from the laws of exponents; try to derive them yourself):
 
 ::: {.theorem #logrules name="Rules of Logarithms"}
 
@@ -305,10 +305,15 @@ The following is a "semi-log" plot, where the $y$-axis is the logarithmic scale 
 knitr::include_graphics("figures/2016_Central_Italy_earthquake_(magnitude).svg")
 ```
 
+The logarithmic nature of the scale is sometimes made clearer by labelling the axis with an exponentially increasing scale and drawing in the minor gridlines. In figure \@ref(fig:semilog) the major grid lines on the $y$-axis increase by a power of $10$. The minor grid lines between $1$ and $10$ represent increments of $1$ unit, then the minor grid lines between $10$ and $10^2=100$ represent increments of $10$ units, and so on.
+
+```{r semilog, echo=FALSE, fig.cap = "Semi log graph paper (base 10). From [wikimedia](https://commons.wikimedia.org/w/index.php?curid=79843775).", fig.alt = "Semi log graph paper (base 10)."}
+knitr::include_graphics("figures/Semilog_graph_paper.svg")
+```
 
 ## Hyperbolic functions
 
-The hyperbolic functions are defined in terms of the exponential function. They are named due to possessing some similar properties to corresponding trigonometric functions.
+The hyperbolic functions are defined in terms of the exponential function. They are named after the trigonometric functions due to possessing some similar properties, although their graphs are quite different.
 
 Hyperbolic sine, usually spoken as "shine" is defined as
 $$\sinh(x)=\frac{e^x-e^{-x}}{2}$$
@@ -323,7 +328,17 @@ $${\tanh(x)=\dfrac{\sinh(x)}{\cosh(x)}=\dfrac{e^x-e^{-x}}{e^x+e^{-x}}}$$
 knitr::include_url("https://www.desmos.com/calculator/xrpc0in171")
 ```
 
-As an example of where these functions arise in the real-world is the shape formed by a flexible cable or chain hanging from its ends under its own weight. It has the general form
+The usual trigonometric identities also hold for the corresponding hyperbolic functions, except that where ever there is a $\sin^2$ we replace it with a $-\sinh^2$. For example:
+
+\begin{align*}
+&\text{\textbf{Trigonometric}}  &\text{\textbf{Hyperbolic}}\\
+&\sin^2(x)+\cos^2(x)=1          &\cosh^2(x)-\sinh^2(x)=1          \\
+&\sin(2x)=2\sin(x)\cos(x)       &\sinh(2x)=2\sinh(x)\cosh(x)       \\
+&\cos(2x)=\cos^2(x)-\sin^2(x)   &\cosh(2x)=\cosh^2(x)+\sinh^2(x)   \\
+&1+\tan^2(x)=\sec^2(x)          &1-\tanh^2(x)=\text{sech}^2(x)
+\end{align*}
+
+As an example of where these functions arise in the real-world, the shape formed by a flexible cable or chain hanging from its ends under its own weight has the general form
 \begin{equation*}
 y=a\cosh\left(\frac{x}{a}\right)
 \end{equation*}

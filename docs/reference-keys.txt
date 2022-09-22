@@ -33,11 +33,14 @@ fig:expln
 thm:logrules
 thm:changebase
 fig:earthquake
+fig:semilog
 fig:hyperbol
 fig:catenary
 thm:pythag
 fig:pythag
 fig:rh-triangle
+exm:inversetrig
+fig:inversetrigexmp
 fig:tri
 thm:sinerule
 thm:cosinerule

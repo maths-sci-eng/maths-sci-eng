@@ -316,6 +316,30 @@ Figure 5.2: A right-angled triangle.
 <p>SOH - Sine equals Opposite over Hypotenuse</p>
 <p>CAH - Cosine equals Adjacent over Hypotenuse</p>
 <p>TOA - Tan equals Opposite over Adjacent</p>
+<p>These are most commonly used to determine angles by using the <em>inverse</em> functions:</p>
+<p><span class="math display">\[\begin{align*}
+\theta&amp;=\sin^{-1}(\frac{Opp.}{Hyp.})\\
+\theta&amp;=\cos^{-1}(\frac{Adj.}{Hyp.})\\
+\theta&amp;=\tan^{-1}(\frac{Opp.}{Adj.})
+\end{align*}\]</span></p>
+<p><strong>WARNING</strong>: the notation suggests we are taking <span class="math inline">\(\sin\)</span> to the power <span class="math inline">\(-1\)</span>, so that <span class="math inline">\(\sin^{-1}=\frac{1}{\sin}\)</span>, but this is NOT how the inverse is defined. Remember that the inverse “undoes” the action of the function. Scientific calculators will have buttons to apply these functions. The inverses are also sometimes called</p>
+<p><span class="math display">\[\begin{align*}
+\arcsin&amp;=\sin^{-1},\\
+\arccos&amp;=\cos^{-1},\\
+\arctan&amp;=\tan^{-1}.
+\end{align*}\]</span></p>
+<div class="example">
+<p><span id="exm:inversetrig" class="example"><strong>Example 5.1  (Applying inverse trig. functions) </strong></span>Calculate the angle <span class="math inline">\(\theta\)</span> in the following triangle.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="trigonometry.html#cb1-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&quot;figures/rh-triangleexmp.png&quot;</span>)</span></code></pre></div>
+<div class="figure"><span style="display:block;" id="fig:inversetrigexmp"></span>
+<img src="figures/rh-triangleexmp.png" alt="A right angled triangle with hypotenuse legth 14 units and adjacent length 8 units."  />
+<p class="caption">
+Figure 5.3: A right angled triangle with hypotenuse legth 14 units and adjacent length 8 units.
+</p>
+</div>
+<p>Since we have the lengths of the hypotenuse and adjacent, we can use <span class="math inline">\(\cos^{-1}\)</span> to find <span class="math inline">\(\theta\)</span>. Using a calculator we find</p>
+<p><span class="math display">\[\theta=\cos^{-1}\left(\frac{8}{14}\right)=55.15^\circ \text{(to 2 d.p.)}\]</span></p>
+</div>
 </div>
 <div id="sine-and-cosine-rules" class="section level2 hasAnchor" number="5.4">
 <h2><span class="header-section-number">5.4</span> Sine and Cosine Rules<a href="trigonometry.html#sine-and-cosine-rules" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -323,11 +347,11 @@ Figure 5.2: A right-angled triangle.
 <div class="figure"><span style="display:block;" id="fig:tri"></span>
 <img src="figures/triangle.png" alt="A general triangle with angles $A, B,$ and $C$ and the corresponding opposite sides as $a, b$ and $c$."  />
 <p class="caption">
-Figure 5.3: A general triangle with angles <span class="math inline">\(A, B,\)</span> and <span class="math inline">\(C\)</span> and the corresponding opposite sides as <span class="math inline">\(a, b\)</span> and <span class="math inline">\(c\)</span>.
+Figure 5.4: A general triangle with angles <span class="math inline">\(A, B,\)</span> and <span class="math inline">\(C\)</span> and the corresponding opposite sides as <span class="math inline">\(a, b\)</span> and <span class="math inline">\(c\)</span>.
 </p>
 </div>
 <div class="theorem">
-<p><span id="thm:sinerule" class="theorem"><strong>Theorem 5.2  (Sine Rule) </strong></span>Label a triangle with angles <span class="math inline">\(A, B,\)</span> and <span class="math inline">\(C\)</span> and the corresponding opposite sides as <span class="math inline">\(a, b\)</span> and <span class="math inline">\(c\)</span> (as in figure <a href="trigonometry.html#fig:tri">5.3</a>). Then,</p>
+<p><span id="thm:sinerule" class="theorem"><strong>Theorem 5.2  (Sine Rule) </strong></span>Label a triangle with angles <span class="math inline">\(A, B,\)</span> and <span class="math inline">\(C\)</span> and the corresponding opposite sides as <span class="math inline">\(a, b\)</span> and <span class="math inline">\(c\)</span> (as in figure <a href="trigonometry.html#fig:tri">5.4</a>). Then,</p>
 <p><span class="math display">\[\frac{a}{\sin(A)}=\frac{b}{\sin(B)}=\frac{c}{\sin(C)}.\]</span></p>
 <p>This is useful when we have:</p>
 <ol style="list-style-type: decimal">
@@ -336,7 +360,7 @@ Figure 5.3: A general triangle with angles <span class="math inline">\(A, B,\)</
 </ol>
 </div>
 <div class="theorem">
-<p><span id="thm:cosinerule" class="theorem"><strong>Theorem 5.3  (Cosine Rule) </strong></span>Label a triangle with angles <span class="math inline">\(A, B,\)</span> and <span class="math inline">\(C\)</span> and the corresponding opposite sides as <span class="math inline">\(a, b\)</span> and <span class="math inline">\(c\)</span> (as in figure <a href="trigonometry.html#fig:tri">5.3</a>). Then,</p>
+<p><span id="thm:cosinerule" class="theorem"><strong>Theorem 5.3  (Cosine Rule) </strong></span>Label a triangle with angles <span class="math inline">\(A, B,\)</span> and <span class="math inline">\(C\)</span> and the corresponding opposite sides as <span class="math inline">\(a, b\)</span> and <span class="math inline">\(c\)</span> (as in figure <a href="trigonometry.html#fig:tri">5.4</a>). Then,</p>
 <p><span class="math display">\[\begin{align*}
 a^2&amp;= b^2 +c^2 -2bc\cos(A)\quad\text{ or,}\\
 b^2&amp;=a^2+c^2-2ac\cos(B)\quad\text{ or,}\\
@@ -360,7 +384,7 @@ with parameters <span class="math inline">\(A,\omega\)</span> and <span class="m
 <div class="figure"><span style="display:block;" id="fig:sinusoid"></span>
 <img src="figures/sinusoid.png" alt="A sinusoidal wave form labelled with amplitude $A$, phase $\phi$ and period $T$."  />
 <p class="caption">
-Figure 5.4: A sinusoidal wave form plotted in radians.
+Figure 5.5: A sinusoidal wave form plotted in radians.
 </p>
 </div>
 <ul>
@@ -373,7 +397,7 @@ Figure 5.4: A sinusoidal wave form plotted in radians.
 <iframe src="https://www.desmos.com/calculator/l0f1omebm2" width="672" height="400px" data-external="1">
 </iframe>
 <p class="caption">
-Figure 5.5: The function <span class="math inline">\(f(x)=A\sin(\omega x + \phi)\)</span> (blue curve). <a href="https://www.desmos.com/calculator/l0f1omebm2">[Open graph in browser.]</a>
+Figure 5.6: The function <span class="math inline">\(f(x)=A\sin(\omega x + \phi)\)</span> (blue curve). <a href="https://www.desmos.com/calculator/l0f1omebm2">[Open graph in browser.]</a>
 </p>
 </div>
 </div>
