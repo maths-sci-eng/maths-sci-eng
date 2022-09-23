@@ -5,16 +5,16 @@ date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 output: bookdown::gitbook
 documentclass: book
-bibliography: [book.bib, packages.bib]
+bibliography: [book.bib]
 biblio-style: apalike
 link-citations: yes
-github-repo: rstudio/bookdown-demo
+github-repo:  maths-sci-eng/maths-sci-eng.github.io 
 description: "Mathematics Lecture Notes for UoE Penryn Science and Engineering Disciplines."
 ---
 
 # Preface {-}
 
-These notes have been compiled for use alongside the modules CSM1027, CSM1033, CSM1040 and CSM1041. They are a work in progress -- please let me know if you find any errors or have any feedback.
+These notes have been compiled for use alongside the University of Exeter modules CSM1027, CSM1033, CSM1040 and CSM1041. They are a work in progress -- please let me know if you find any errors or have any feedback.
 
 Contact: m.callaway@exeter.ac.uk
 

@@ -8,8 +8,8 @@ thm:exprules
 exm:unlabeled-div-3
 exm:factorise
 exm:factorise2
+exm:completesqr
 thm:quadform
-exr:quadfact
 exr:quadform
 exm:simul-lin
 exm:simul-nonlin
@@ -104,6 +104,5 @@ i-and-complex-numbers
 complex-arithmetic
 the-argument-polar-and-exponential-form-for-complex-numbers
 roots-of-complex-numbers
-eitheta-and-trig-identities
+eitheta-and-trigonometric-identities
 vectors
-notation
