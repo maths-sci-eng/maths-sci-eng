@@ -20,10 +20,10 @@
   <meta name="twitter:description" content="Mathematics Lecture Notes for UoE Penryn Science and Engineering Disciplines." />
   
 
-<meta name="author" content="Mark Callaway" />
+<meta name="author" content="Dr Mark Callaway" />
 
 
-<meta name="date" content="2022-09-22" />
+<meta name="date" content="2022-09-23" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -153,7 +153,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="2.1.1" data-path="equations-and-inequalities.html"><a href="equations-and-inequalities.html#formulas"><i class="fa fa-check"></i><b>2.1.1</b> Formulas</a></li>
 <li class="chapter" data-level="2.1.2" data-path="equations-and-inequalities.html"><a href="equations-and-inequalities.html#conditional-equations"><i class="fa fa-check"></i><b>2.1.2</b> Conditional equations</a></li>
-<li class="chapter" data-level="2.1.3" data-path="equations-and-inequalities.html"><a href="equations-and-inequalities.html#quadratic-equations"><i class="fa fa-check"></i><b>2.1.3</b> Quadratic equations</a></li>
+<li class="chapter" data-level="2.1.3" data-path="equations-and-inequalities.html"><a href="equations-and-inequalities.html#quad-eqs"><i class="fa fa-check"></i><b>2.1.3</b> Quadratic equations</a></li>
 <li class="chapter" data-level="2.1.4" data-path="equations-and-inequalities.html"><a href="equations-and-inequalities.html#simultaneous-equations"><i class="fa fa-check"></i><b>2.1.4</b> Simultaneous equations</a></li>
 </ul></li>
 <li class="chapter" data-level="2.2" data-path="equations-and-inequalities.html"><a href="equations-and-inequalities.html#inequalities"><i class="fa fa-check"></i><b>2.2</b> Inequalities</a></li>
@@ -183,7 +183,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.3" data-path="trigonometry.html"><a href="trigonometry.html#trigonometric-ratios"><i class="fa fa-check"></i><b>4.3</b> Trigonometric ratios</a></li>
 <li class="chapter" data-level="4.4" data-path="trigonometry.html"><a href="trigonometry.html#sine-and-cosine-rules"><i class="fa fa-check"></i><b>4.4</b> Sine and Cosine Rules</a></li>
 <li class="chapter" data-level="4.5" data-path="trigonometry.html"><a href="trigonometry.html#trigonometric-waveforms"><i class="fa fa-check"></i><b>4.5</b> Trigonometric waveforms</a></li>
-<li class="chapter" data-level="4.6" data-path="trigonometry.html"><a href="trigonometry.html#trigonometric-identities"><i class="fa fa-check"></i><b>4.6</b> Trigonometric Identities</a></li>
+<li class="chapter" data-level="4.6" data-path="trigonometry.html"><a href="trigonometry.html#trigonometric-identities"><i class="fa fa-check"></i><b>4.6</b> Trigonometric Identities</a>
+<ul>
+<li class="chapter" data-level="4.6.1" data-path="trigonometry.html"><a href="trigonometry.html#pythagorean-identities"><i class="fa fa-check"></i><b>4.6.1</b> Pythagorean identities</a></li>
+<li class="chapter" data-level="4.6.2" data-path="trigonometry.html"><a href="trigonometry.html#compound-angle-formulae"><i class="fa fa-check"></i><b>4.6.2</b> Compound angle formulae</a></li>
+<li class="chapter" data-level="4.6.3" data-path="trigonometry.html"><a href="trigonometry.html#double-angle-formulae"><i class="fa fa-check"></i><b>4.6.3</b> Double angle formulae</a></li>
+<li class="chapter" data-level="4.6.4" data-path="trigonometry.html"><a href="trigonometry.html#product-to-sum-formulae"><i class="fa fa-check"></i><b>4.6.4</b> Product to sum formulae</a></li>
+<li class="chapter" data-level="4.6.5" data-path="trigonometry.html"><a href="trigonometry.html#sum-to-product-formulae"><i class="fa fa-check"></i><b>4.6.5</b> Sum to product formulae</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="complex.html"><a href="complex.html"><i class="fa fa-check"></i><b>5</b> Complex Numbers</a>
 <ul>
@@ -269,8 +276,7 @@ In contrast, all rational numbers have an eventually repeating decimal expansion
 </tr>
 </tbody>
 </table></li>
-<li><p>The <em>real numbers</em> consist of all rational and irrational numbers together
-We can think of real numbers as points on a continuous straight line, or as numbers that possibly have a decimal representation requiring an infinite number of digits<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>.
+<li><p>The <em>real numbers</em> consist of all rational and irrational numbers together. We can think of real numbers as points on a continuous straight line, or as numbers that possibly have a decimal representation requiring an infinite number of digits<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>.
 The set of real numbers is denoted by <span class="math inline">\(\mathbb{R}\)</span>.</p></li>
 <li><p>We learn about all of the above numbers early on in our mathematical education. However, there is a further set of numbers that is very useful in science and engineering that you may not have encountered before: the <em>complex numbers</em>, denoted by <span class="math inline">\(\mathbb{C}\)</span>. These are not as intuitive as real numbers and we explore them in detail in section <a href="complex.html#complex">5</a>.</p></li>
 </ul>
@@ -317,26 +323,26 @@ whilst
 <p><span class="math display" id="eq:divexps">\[\begin{equation}
 x^a\frac{1}{x^b}=\frac{x^a}{x^b}=x^{a-b} \tag{1.1}
 \end{equation}\]</span></p>
-<p>and following Rule 1 we could think of this as <span class="math inline">\(x^{a-b}=x^{a+(-b)}=x^ax^{-b}\)</span>, and therefore using a negative exponent <span class="math inline">\(-b\)</span> gives the reciprocal of <span class="math inline">\(x^b\)</span></p>
+<p>and following Rule 1 we could think of this as <span class="math inline">\(x^{a-b}=x^{a+(-b)}=x^ax^{-b}\)</span>, and therefore using a negative exponent <span class="math inline">\(-b\)</span> gives the reciprocal of <span class="math inline">\(x^b\)</span>.</p>
 <div class="theorem">
 <p><span id="thm:exprule1" class="theorem"><strong>Theorem 1.1  (Rule 3) </strong></span><span class="math display">\[x^{-a}=\frac{1}{x^a}\]</span></p>
 </div>
 <p>Next, we can consider the value of <span class="math inline">\(x^0\)</span>. In <a href="foundations.html#eq:divexps">(1.1)</a> with the particular case <span class="math inline">\(b=a\)</span>, we have</p>
 <p><span class="math display">\[1=\frac{x^a}{x^a}=x^{a-a}=x^0\]</span></p>
-<p>so we get that for any non-zero<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a> value of <span class="math inline">\(x\)</span></p>
+<p>so we get that for any non-zero<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a> value of <span class="math inline">\(x\)</span>:</p>
 <div class="theorem">
 <p><span id="thm:unlabeled-div-1" class="theorem"><strong>Theorem 1.2  (Rule 4) </strong></span><span class="math display">\[x^0=1\]</span></p>
 </div>
 <p>Now lets try to make sense of a power of the form <span class="math inline">\(x^{\frac{a}{b}}\)</span> where <span class="math inline">\(a\)</span> is an integer and <span class="math inline">\(b\)</span> is a positive integer. That is, we now allow for fractional (otherwise known as <em>rational</em>) exponents. Since we have <span class="math inline">\(\frac{a}{b}=a\frac{1}{b}\)</span> we can write (using Rule 2):</p>
 <p><span class="math display">\[x^{\frac{a}{b}}=(x^a)^{\frac{1}{b}}.\]</span></p>
 <p>In the case <span class="math inline">\(b=a\)</span>, we therefore have</p>
-<p><span class="math inline">\(x=x^1=x^{\frac{a}{a}}=(x^{\frac{1}{a}})^a\)</span>.</p>
-<p>This means that raising <span class="math inline">\(x^\frac{1}{a}\)</span> to the power <span class="math inline">\(a\)</span> gets us back to <span class="math inline">\(x\)</span>, hence the number <span class="math inline">\(x^\frac{1}{a}\)</span> is the <span class="math inline">\(a\)</span>^{th} root of <span class="math inline">\(x\)</span>. For example <span class="math inline">\((3^\frac{1}{2})^2=3^{2\frac{1}{2}}=3^1=3\)</span>, so we must have <span class="math inline">\(3^\frac{1}{2}=\sqrt{3}\)</span>.</p>
+<p><span class="math display">\[x=x^1=x^{\frac{a}{a}}=(x^{\frac{1}{a}})^a.\]</span></p>
+<p>This means that raising <span class="math inline">\(x^\frac{1}{a}\)</span> to the power <span class="math inline">\(a\)</span> gets us back to <span class="math inline">\(x\)</span>, hence the number <span class="math inline">\(x^\frac{1}{a}\)</span> is the <span class="math inline">\(a^\text{th}\)</span> root of <span class="math inline">\(x\)</span>. For example <span class="math inline">\((3^\frac{1}{2})^2=3^{2\frac{1}{2}}=3^1=3\)</span>, so we must have <span class="math inline">\(3^\frac{1}{2}=\sqrt{3}\)</span>.</p>
 <div class="theorem">
-<p><span id="thm:unlabeled-div-2" class="theorem"><strong>Theorem 1.3  (Rule 5) </strong></span><span class="math display">\[x^{\frac{1}{a}}=\sqrt[n]{x}.\]</span></p>
+<p><span id="thm:unlabeled-div-2" class="theorem"><strong>Theorem 1.3  (Rule 5) </strong></span><span class="math display">\[x^{\frac{1}{a}}=\sqrt[a]{x}.\]</span></p>
 </div>
 <p>In particular the square root is <span class="math inline">\(x^{\frac{1}{2}}=\sqrt{x}\)</span> and the cube root is <span class="math inline">\(x^{\frac{1}{3}}=\sqrt[3]{x}\)</span>; we tend to use the root notation for expressions containing square or cube roots on their own, and use the power notation when combining different roots.</p>
-<p>It turns out that we can extend exponents beyond rational numbers to any <em>real</em> number, with all of the above rules still holding. Proving this is beyond the scope of these notes, but the interested reader can easily find out more about this in a textbook or online.</p>
+<p>It turns out that we can extend exponents beyond rational numbers to any <em>real</em> number, with all of the above rules still holding. Proving this is beyond the scope of these notes.</p>
 <p>Something’s missing: we said <span class="math inline">\(x\)</span> can be any real number, but then how do we interpret something like <span class="math inline">\(y=(-1)^\frac{1}{2}\)</span>? That is, <span class="math inline">\(y\)</span> must be a number such that when it is multiplied by itself it gives the negative number <span class="math inline">\(-1\)</span>, but this is impossible for a real number! Answering this conundrum requires us to invent a new set of numbers, called <em>complex numbers</em> – see section <a href="complex.html#complex">5</a>.</p>
 <p>A summary of the rules:</p>
 <div class="theorem">
@@ -346,7 +352,7 @@ x^a\frac{1}{x^b}=\frac{x^a}{x^b}=x^{a-b} \tag{1.1}
 <li><span class="math inline">\((x^a)^b=x^{ab}\)</span></li>
 <li><span class="math inline">\(x^{-a}=\frac{1}{x^a}\)</span></li>
 <li><span class="math inline">\(x^0=1\)</span></li>
-<li><span class="math inline">\(x^{\frac{1}{a}}=\sqrt[n]{x}.\)</span></li>
+<li><span class="math inline">\(x^{\frac{1}{a}}=\sqrt[a]{x}.\)</span></li>
 </ol>
 </div>
 </div>
@@ -354,31 +360,31 @@ x^a\frac{1}{x^b}=\frac{x^a}{x^b}=x^{a-b} \tag{1.1}
 <h3><span class="header-section-number">1.2.2</span> Brackets<a href="foundations.html#brackets" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>We use brackets to set the precedence (or order) of evaluating the different parts of an expression. We evaluate the innermost brackets first. Note we usually omit the multiplication sign when multiplying a bracketed expression.</p>
 <div class="example">
-<p><span id="exm:unlabeled-div-3" class="example"><strong>Example 1.2  (brackets) </strong></span><span class="math display">\[5(((2+4)\div (5-2))+1)=5((6\div 3)+1)=5(2+1)=5\times 3 = 15\]</span></p>
+<p><span id="exm:unlabeled-div-3" class="example"><strong>Example 1.2  (Evaluating brackets) </strong></span><span class="math display">\[5(((2+4)\div (5-2))+1)=5((6\div 3)+1)=5(2+1)=5\times 3 = 15\]</span></p>
 </div>
 <p>Sometimes you might find it helpful to add “redundant” brackets to make the calculation clearer. For example, we could write
 <span class="math display">\[3+2\times 4=11\]</span>
 as
 <span class="math display">\[3+(2\times 4)=11.\]</span>
-The brackets are not really needed in the second version, since we get the same result from following BEDMAS, but adding brackets can make an expression easier to read and evaluate.</p>
+The brackets are not really needed in the second version since we get the same result from following BEDMAS, but adding brackets can make an expression easier to read and evaluate.</p>
 <div id="expansion" class="section level4 hasAnchor" number="1.2.2.1">
 <h4><span class="header-section-number">1.2.2.1</span> Expansion<a href="foundations.html#expansion" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Recall that we can expand expressions involving multiplication of brackets such as the following:</p>
 <p><span class="math display">\[a(b+c)=ab+ac\]</span>
 <span class="math display">\[(a+b)(c+d)=ac+ad+bc+bd\]</span>
 <span class="math display">\[(a+b)^2=(a+b)(a+b)=a^2+ab+ba+b^2=a^2+b^2+2ab\]</span>
-<span class="math display">\[(ab)^2=(ab)(ab)=a^2b^2\]</span></p>
+<span class="math display">\[(ab)^2=(ab)(ab)=a^2b^2.\]</span></p>
 <p>We often want to expand expressions in order to simplify them by grouping together like-terms, for example:</p>
-<p><span class="math display">\[(a+b)(b+c)+2ac=ab+ac+b^2+bc+2ac=ab+3ac+b^2+bc\]</span></p>
+<p><span class="math display">\[(a+b)(b+c)+2ac=ab+ac+b^2+bc+2ac=ab+3ac+b^2+bc.\]</span></p>
 <p>In the case of the sum of two numbers (a <em>binomial</em> term) to a postive integer power, i.e. something of the form</p>
-<p><span class="math display">\[(a+b)^n\]</span></p>
+<p><span class="math display">\[(a+b)^n.\]</span></p>
 <p>which involves multiplying out the brackets <span class="math inline">\(n\)</span> times, we have a general formula for the expansion. We start by looking at a slightly simpler form
-<span class="math display">\[(1+x)^n\]</span></p>
+<span class="math display">\[(1+x)^n.\]</span></p>
 <p>Let’s take a look at the expansion for the first few values of <span class="math inline">\(n\)</span>.</p>
 <p><span class="math inline">\(n=0:\)</span> <span class="math inline">\((1+x)^0 = 1\)</span></p>
 <p><span class="math inline">\(n=1:\)</span> <span class="math inline">\((1+x)^1=1+x\)</span></p>
 <p><span class="math inline">\(n=2:\)</span> <span class="math inline">\((1+x)^2=(1+x)(1+x)=x^2+2x+1\)</span></p>
-<p><span class="math inline">\(n=3:\)</span> <span class="math inline">\((1+x^3)=(1+x)(1+x)^2=(1+x)(x^2+2x+1)=x^3+3x^2+3x+1\)</span></p>
+<p><span class="math inline">\(n=3:\)</span> <span class="math inline">\((1+x)^3=(1+x)(1+x)^2=(1+x)(x^2+2x+1)=x^3+3x^2+3x+1\)</span></p>
 <p>The coefficients of <span class="math inline">\(x\)</span> form the <span class="math inline">\(n^\text{th}\)</span> row of Pascal’s triangle.</p>
 <p>The general formula is:</p>
 <p><span class="math display">\[(1+x)^n = \binom{n}{0}x^0+\binom{n}{1}x^1+\binom{n}{2}x^2+\dotsb+\binom{n}{n-1}x^{n-1}+\binom{n}{n}x^n\]</span></p>
@@ -406,7 +412,7 @@ The brackets are not really needed in the second version, since we get the same 
 <p>In order to simplify an expression we can carry out the following proceedures:</p>
 <ul>
 <li>Expand brackets</li>
-<li>Collect together any like-terms, e.g. <span class="math inline">\(2a+3b+a=3a+3b\)</span>, <span class="math inline">\(a^3a^2+b^2=a^5+b^2\)</span></li>
+<li>Collect together any like-terms, e.g. <span class="math inline">\(2a+3b+a=3a+3b\)</span>, or <span class="math inline">\(a^3a^2+b^2=a^5+b^2\)</span></li>
 <li>Simplify any fractions: use common denominators, e.g. <span class="math inline">\(\frac{a}{b}+\frac{c}{d}=\frac{da+bc}{bd}\)</span>; cancel any common factors, e.g. <span class="math inline">\(\frac{ab}{ac}=\frac{b}{c}\)</span></li>
 <li>Factorise</li>
 </ul>

@@ -111,7 +111,16 @@ Since we have the lengths of the hypotenuse and adjacent, we can use $\cos^{-1}$
 $$\theta=\cos^{-1}\left(\frac{8}{14}\right)=55.15^\circ \text{(to 2 d.p.)}$$
 :::
 
-## Sine and Cosine Rules
+
+We also have special names for the reciprocal trigonometric functions:
+
+\begin{align*}
+\operatorname{cosec}(\theta)&=\frac{1}{\sin(\theta)},\\
+\sec(\theta)&=\frac{1}{\cos(\theta)},\\
+\cot(\theta)&=\frac{1}{\tan(\theta)}.
+\end{align*}
+
+## Sine and cosine rules
 
 The Pythagorean Theorem and Trigonometric ratios above only apply to right-angle triangles. For general triangles, the sine and cosine rules give us useful relationsips between angles and side lengths.
 
@@ -171,15 +180,62 @@ knitr::include_graphics("figures/sinusoid.png")
 knitr::include_url("https://www.desmos.com/calculator/l0f1omebm2")
 ```
 
-## Trigonometric Identities
+## Trigonometric identities
 
-Recall that there are a number of useful relationships between the trigonometric functions. Here are some key ones:
+Recall that there are a number of useful relationships between the trigonometric functions. Here are some key ones.
+
+
+### Pythagorean identities
+
+These follow from the Pythagorean theorem.
 
 \begin{gather*}
-\sin^2(x)+\cos^2(x)=1\\
-1+\tan^2(x)=\sec^2(x)\\
-\sin(2x)=2\sin(x)\cos(x)\\
-\cos(2x)=\cos^2(x)-\sin^2(x)
+\sin^2(\theta)+\cos^2(\theta)=1\\
+1+\tan^2(\theta)=\sec^2(\theta)\\
+\cot^2(\theta)+1=\operatorname{cosec}^2(\theta)
 \end{gather*}
 
-There are also the angle sum identities, product to sum identities etc. Look these up and add them to your notes if you cannot remember them.
+### Compound angle formulae
+
+The following formulae allow us to manipulate sines, cosines and tangents of the sum or difference of two angles.
+
+\begin{align*}
+\sin(\theta+\phi)&=\sin(\theta)\cos(\phi)+\cos(\theta)\sin(\phi)\\
+\sin(\theta-\phi)&=\sin(\theta)\cos(\phi)-\cos(\theta)\sin(\phi)\\
+\cos(\theta+\phi)&=\cos(\theta)\cos(\phi)-\sin(\theta)\sin(\phi)\\
+\cos(\theta-\phi)&=\cos(\theta)\cos(\phi)+\sin(\theta)\sin(\phi)\\
+\tan(\theta+\phi)&=\frac{\tan(\theta)+\tan(\phi)}{1-\tan(\theta)\tan(\phi)}\\
+\tan(\theta-\phi)&=\frac{\tan(\theta)-\tan(\phi)}{1+\tan(\theta)\tan(\phi)}
+\end{align*}
+
+### Double angle formulae
+
+Setting $\phi=\theta$ in the compound angle formulae gives the following double angle formulae:
+
+\begin{align*}
+\sin(2\theta)&=2\sin(\theta)\cos(\theta)\\
+\cos(2\theta)&=\cos^2(\theta)-\sin^2(\theta)\\
+\tan(2\theta)&=\frac{2\tan(\theta)}{1-\tan^2(\theta)}
+\end{align*}
+
+### Product to sum formulae
+
+From the compound angle formulae we can derive the following.
+
+\begin{align*}
+\sin(\theta)\cos(\phi)&=\frac{1}{2}[\sin(\theta+\phi)+\sin(\theta-\phi)]\\
+\cos(\theta)\sin(\phi)&=\frac{1}{2}[\sin(\theta+\phi)-\sin(\theta-\phi)]\\
+\cos(\theta)\cos(\phi)&=\frac{1}{2}[\cos(\theta+\phi)+\cos(\theta-\phi)]\\
+\sin(\theta)\sin(\phi)&=-\frac{1}{2}[\cos(\theta+\phi)-\cos(\theta-\phi)]\\
+\end{align*}
+
+### Sum to product formulae
+
+In the other direction (also derived from the compound angle formulae) we have the following.
+
+\begin{align*}
+\sin(\theta)+\sin(\phi)=2\sin\left(\frac{\theta+\phi}{2}\right)\cos\left(\frac{\theta-\phi}{2}\right)\\
+\sin(\theta)-\sin(\phi)=2\cos\left(\frac{\theta+\phi}{2}\right)\sin\left(\frac{\theta-\phi}{2}\right)\\
+\cos(\theta)+\cos(\phi)=2\cos\left(\frac{\theta+\phi}{2}\right)\cos\left(\frac{\theta-\phi}{2}\right)\\
+\cos(\theta)-\cos(\phi)=-2\sin\left(\frac{\theta+\phi}{2}\right)\sin\left(\frac{\theta-\phi}{2}\right)
+\end{align*}

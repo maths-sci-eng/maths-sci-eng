@@ -1,6 +1,6 @@
 --- 
 title: "Mathematics for Scientists and Engineers"
-author: "Mark Callaway"
+author: "Dr Mark Callaway"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 output: bookdown::gitbook
@@ -14,12 +14,8 @@ description: "Mathematics Lecture Notes for UoE Penryn Science and Engineering D
 
 # Preface {-}
 
-These notes have been compiled by Dr Mark Callaway for use alongside the modules CSM1027, CSM1033, CSM1040 and CSM1041. They are a work in progress -- please let me know if you find any errors or have any feedback.
+These notes have been compiled for use alongside the modules CSM1027, CSM1033, CSM1040 and CSM1041. They are a work in progress -- please let me know if you find any errors or have any feedback.
 
 Contact: m.callaway@exeter.ac.uk
 
-Recommended text: Engineering Mathematics, John Bird.
-
-Available online through the UoE library here:
-
-https://encore.exeter.ac.uk/iii/encore/record/C__Rb4511752
+Recommended text: Engineering Mathematics, John Bird. Available online through the UoE library here: <https://encore.exeter.ac.uk/iii/encore/record/C__Rb4511752>

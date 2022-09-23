@@ -6,10 +6,10 @@ A function $f$ can be thought of as a machine that takes an input value $x$ and 
 Consider the set of coordinates $(x,y)$ that satisfy the equation
 $$ax+by+c=0$$
 for some fixed values $a,b$ and $c$. When $b\neq0$, solving the equation gives $y=-\dfrac{a}{b}x-\dfrac{c}{b}$, which is of the form
-$$y=mx+c$$
-i.e. it is a straight line with gradient $m$ which intercepts the $y$-axis at the value $c$.
+$$y=mx+d$$
+i.e. it is a straight line with gradient $m$ which intercepts the $y$-axis at the value $d$.
 
-On the other hand, when $b=0$ we have the solution $x=-\dfrac{c}{a}$. This is a straight vertical line; let's set the constant $A=-\dfrac{c}{a}$, then it is all of the coordinates where $x=A$, and since this equation does not depend on $y$ it includes all possible $y$ values. Note that we cannot write such a line in the form $y=mx+c$, since it effectively has an "infinite" gradient.
+On the other hand, when $b=0$ we have the solution $x=-\dfrac{c}{a}$. This is a straight vertical line; let's set the constant $A=-\dfrac{c}{a}$, then it is all of the coordinates where $x=A$, and since this equation does not depend on $y$ it includes all possible $y$ values. Note that we cannot write such a line in the form $y=mx+d$, since it effectively has an "infinite" gradient.
 
 We can also have horizontal lines. This corresponds to an equation of the form $y=B$ (this happens when $a=0$ and where we have set $B=-\dfrac{c}{b}$), so that $y$ does not depend on $x$ and equals the constant value $B$ for all possible values of $x$.
 
@@ -26,11 +26,11 @@ Also, a line can be defined by specifying any two points $(x_1,y_1)$ and $(x_2,y
 $$
 m=\frac{y_2-y_1}{x_2-x_1}
 $$
-but there is a problem if $x_2=x_1$ and we have an "infinite" gradient -- since $x_1=x_2$ this, of course, corresponds to a vertical line, which we can write as $x=x_1$.
+but there is a problem if $x_2=x_1$ and we have an "infinite" gradient -- since $x_1=x_2$ this, of course, corresponds to a vertical line, which we can write as the equation $x=x_1$.
 
-The form $ax+by+c=0$ is a general way to express any line in the plane and includes both vertical and non-vertical lines. The $y=mx+d$ form is useful when thinking about non-vertical lines as we can easily identify the gradient and intercept, but we will use the more general form later in section \@ref(linear) when solving simultaneous linear equations.
+The form $ax+by+c=0$ is a general way to express any line in the plane and includes both vertical and non-vertical lines. The $y=mx+d$ form is useful when thinking about non-vertical lines as we can easily identify the gradient and intercept. In section \@ref(linear) we will be using the more general form for solving simultaneous linear equations.
 
-### Parallel Lines
+### Parallel lines
 
 A line makes an angle $\theta$ from the positive $x$-axis, the *angle of inclination*. This is related to the gradient $m$ by
 $$
@@ -48,7 +48,7 @@ y&=mx + d_1\\
 y&=mx + d_2
 \end{align*}
 
-### Perpendicular Lines
+### Perpendicular lines
 	
 Two lines are perpendicular, or *normal*, if they meet at a right angle. We have
 \begin{align*}
@@ -168,7 +168,7 @@ knitr::include_url("https://www.desmos.com/calculator/m4ssgias64")
 
 ## Root functions
 
-Taking the $n^\text{th}$ root of a number $\sqrt[n]{x}$ returns the answer to the question "what number multiplied by itself $n$ times equals $x$?". We saw in section \@ref(exponents) that this is the same as taking the power $x^\frac{1}{n}$. Taking the $n$th root can also be thought of as reversing the operation of taking the $n$th power (and vice versa). In this sense, the functions $f(x)=x^n$ and $g(x)=\sqrt[n]{x}$ are *inverse* functions -- they each "undo" the action of the other to return to the original value $x$. If we first apply $f$ and then $g$ (known as the *composition* of $f$ and $g$), or the other way around, then the result is to get back to $x$:
+Taking the $n^\text{th}$ root of a number $\sqrt[n]{x}$ returns the answer to the question "what number multiplied by itself $n$ times equals $x$?". We saw in section \@ref(exponents) that this is the same as taking the power $x^\frac{1}{n}$. Taking the $n^\text{th}$ root can also be thought of as reversing the operation of taking the $n^\text{th}$ power (and vice versa). In this sense, the functions $f(x)=x^n$ and $g(x)=\sqrt[n]{x}$ are *inverse* functions -- they each "undo" the action of the other to return to the original value $x$. If we first apply $f$ and then $g$ (known as the *composition* of $f$ and $g$), or the other way around, then the result is to get back to $x$:
 
 $$g(f(x)) = \sqrt[n]{x^n}=x$$
 and
@@ -211,7 +211,7 @@ Like sine and cosine it is periodic with period $2\pi$. It is undefined at $x=\f
 
 Close to these points, the value of $\cos(x)$ in the denominator of \@ref(eq:tan) is very small, whilst the value of $\sin(x)$ is close to $1$ or $-1$, which results in very large positive or negative values of $\tan(x)$ and we have vertical asymptotes at these points.
 
-## Exponentials and Logarithms
+## Exponentials and logarithms
 
 An exponential function is one of the form
 $$
@@ -295,7 +295,7 @@ a^x&=b^{\log_b (a^x)} \quad \text{(note that $b^{\log_b y}=y$)} \\
 \end{align*}
 The "natural" choice of base for mathematical use is $b=e$ and hence we usually only consider exponential functions in the form $e^{kx}$ where $k=\log_b(a)$.
 
-### Logarthmic Plots
+### Logarthmic plots
 
 When we have quatities that change over a large range of magnitudes, it can be more convenient to plot them on a "logarthmic scale" so that they do not take up so much space on the page. For example, the Ricther Magnitude Scale for measuring earthquakes is a logarthmic scale, which takes the logarithm to the base 10 of the amplitude of waves recorded by seismographs.
 

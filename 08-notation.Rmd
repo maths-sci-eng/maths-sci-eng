@@ -1,6 +1,23 @@
-# Notation
+# Notation {-}
 
 A summary of notation used in these notes
 
 
 "$A \implies B$" is read as "statement $A$ implies statement $B$".
+
+We often use Greek letters for mathematical symbols:
+
+| Capital letter | Small letter | Name |
+|---|---|---|
+| $A$ | $\alpha$ | Alpha |
+| $B$ | $\beta$ | Beta |
+| $\Gamma$ | $\gamma$ | Gamma |
+| $\Delta$ | $\delta$ | Delta |
+| $E$ | $\epsilon$, $\varepsilon$ | Epsilon |
+| $\Delta$ | $\delta$ | Delta |
+| $Z$ | $\zeta$ | Zeta |
+| $H$ | $\eta$ | Eta |
+| $\Theta$ | $\theta$, $\vartheta$ | Theta |
+| $I$ | $\iota$ | Iota |
+| $K$ | $\kappa$ | Kappa |
+| $\Lambda$ | $\lambda$ | Lambda | 

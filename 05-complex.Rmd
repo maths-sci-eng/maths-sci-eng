@@ -57,7 +57,7 @@ where the variable $x$ can be a complex number (so can also be a real number) an
 $$x^2-4x+4=(x-2)(x-2)$$
 must have two roots and in this case they happen to be repeated roots; we say the root is $x=2$ with *multiplicity* 2.
 
-## Complex Arithmetic
+## Complex arithmetic
 
 We can add, subtract and multiply complex numbers $z = x+iy$ and $w = u+iv$, using usual algebraic rules for expanding brackets --- just remembering that $i^2 = -1$:
 \begin{align*}
@@ -228,9 +228,9 @@ knitr::include_graphics("figures/complexroots.png")
 ```
 :::
 
-## $e^{i\theta}$ and trig identities
+## $e^{i\theta}$ and trigonometric identities
 
-There are many double angle, and similar, formulas relating the various trig functions. Remembering them can be quite a struggle. In fact we can recover them easily using complex numbers in polar form:
+There are many double angle, and similar, formulas relating the various trig. functions. Remembering them can be quite a struggle. In fact we can recover them easily using complex numbers in polar form:
 $$
 e^{i \theta} = \cos (\theta) + i \sin (\theta).
 $$

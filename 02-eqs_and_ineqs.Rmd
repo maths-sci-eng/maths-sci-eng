@@ -62,26 +62,21 @@ $$0=1$$
 
 which is false, so no value of $x$ can give us equality.
 
-### Quadratic equations
+### Quadratic equations {#quad-eqs}
 
-A particularly common form of equation that arise in science and engineering are *quadratic* equations. These are equations of the form
+A particularly common form of equations that arise in science and engineering are *quadratic* equations. These are equations of the form
 
 $$ax^2+bx+c=0$$
 
-where $a$, $b$ and $c$ are constants and we wish to find the values of $x$ satisfying this equation. We explore some different methods below.
+where $a$, $b$ and $c$ are constants and we wish to find the values of $x$ satisfying this equation. We explore three different methods below.
 
 #### Factorisation by inspection
 
-Firstly, we can factor out the constant $a$ to obtain
-
-$$ax^2+bx+c=a(x^2+\frac{b}{a}x+\frac{c}{a})=0$$
-and then dividing both sides by $a$
-$$x^2+\frac{b}{a}x+\frac{c}{a}=0$$
-The values of $x$ satisfying this new equation will be the same as those for the original, so in studying the general method we can just think about quadtratic equations where the $x^2$ coefficient is $1$. Now for simplicity we can just re-label the constants $\frac{b}{a}$ and $\frac{c}{a}$ by $b$ and $c$ respectively
+First consider a quadratic where $a=1$, that is
 
 $$x^2+bx+c=0.$$
 
-If we can write a quadratic equation as a product of two simpler factors in the form^[Actually, any quadratic can be factorised as a product of two linear factors, but we may need complex numbers to do this; more on this in section \@ref().]:
+If we can write a quadratic equation as a product of two simpler factors in the form^[In fact, any quadratic can be factorised as a product of two linear factors, but we may need complex numbers to do this; more on this in section \@ref(complex).]:
 
 $$x^2+bx+c = (x+\alpha)(x+\beta)$$
 
@@ -89,7 +84,7 @@ then $x=-\alpha$ and $x=-\beta$ are solutions to $ax^2+bx+c=0$, since for $x=-\a
 
 $$(-\alpha+\alpha)(-\alpha+\beta)=0(-\alpha+\beta)=0$$
 
-and similarly for $x=-\beta$. Furthermore, these will be the only two solutions: it is possible there are two different solutions $\alpha\neq\beta$, one "repeated" solution where $\alpha=\beta$ so that the quadratic factorises as $(x+\alpha)^2$, or there may be no solutions^[That is, no solutions for which $\alpha$ and $\beta$ are real numbers, but there will instead be complex number solutions.]. In many cases it is easy to spot the values of $\alpha$ and $\beta$. To see this, let's work backwards and expand the brackets:
+and similarly for $x=-\beta$. Furthermore, these will be the only two solutions: it is possible there are two different solutions $\alpha\neq\beta$, one "repeated" solution where $\alpha=\beta$ so that the quadratic factorises as $(x+\alpha)(x+\alpha)=(x+\alpha)^2$, or there may be no solutions^[That is, no solutions for which $\alpha$ and $\beta$ are real numbers, but there will instead be complex number solutions.]. In many cases it is easy to spot the values of $\alpha$ and $\beta$. To see this, let's work backwards and expand the brackets:
 
 $$(x+\alpha)(x+\beta)=x^2+\beta x +\alpha x +\alpha\beta = x^2 + (\alpha + \beta)x + \alpha\beta$$
 
@@ -102,26 +97,90 @@ we are looking for two numbers that sum to make $5$ and multiply to make $6$, so
 $$x^2+5x+6=(x+2)(x+3).$$
 :::
 
+If we have a more general quadratic where $a\neq1$, then we could start by taking out a factor of $a$
+$$ax^2+bx+c=a\left(x^2+\frac{b}{a}x+\frac{c}{a}\right)=0$$
+and then dividing both sides by $a$
+$$x^2+\frac{b}{a}x+\frac{c}{a}=0$$
+The values of $x$ satisfying this new equation will be the same as those for the original, so we can now use the above method to find the solutions. However, sometimes we not only want the solution, but also want to know how to factorise the quadratic. In this case we shall have to keep the factor of $a$. To factorise we just need to find the values of the coefficients in the factorisation that will give the answer we need when we expand the brackets.
+
+::: {.example #factorise2}
+Solve $4x^2 + 8x + 3 = 0$ by factorising.
+
+We need the $x$ terms to multiply together to make $4x^2$, so we could have either
+$$(4x + \star)(x + \star)$$
+or
+$$(2x + \star)(2x + \star)$$
+and we need the constant terms to multiply together to make $3$, so we could have either
+$$(\star + 3)(\star + 1)$$
+or
+$$(\star - 3)(\star - 1).$$
+The sum of the products of the outer terms and inner terms needs to be $8x$ and the only way this is possible is with
+$$(2x+3)(2x+1).$$
+
+The solutions then come from solving for each factor being $0$, giving
+$$x=-\frac{3}{2}\quad\text{ or }\quad x= -\frac{1}{2}$$
+:::
+
+#### Completing the square
+
+In this method, we first rewrite a quadratic equation
+$$ax^2+bx+c=0$$
+into the form
+$$a(x-h)^2+k=0$$
+that is, a squared term plus a constant, hence the name "completing the square".
+
+We then solve by rearranging and taking sqaure roots
+\begin{align*}
+(x-h)^2+k&=0\\
+(x-h)^2&=-k\\
+x-h&=\pm\sqrt{-k}\\
+x&=h\pm\sqrt{-k}
+\end{align*}
+where $\pm$ means there is one solution coming from taking the $+$ option and the other from taking the $-$ option.
+
+We just need to find $h$ and $k$. They are given by
+$$h=-\frac{b}{2a},\quad k=c-\frac{b^2}{4a}.$$
+
+It is not necessary to remember these formulae, we can instead figure out the coefficients as we go along.
+
+::: {.example #completesqr name="Completing the Square"}
+Consider the quadratic equation
+$$2x^2+6x-26=0.$$
+We first take out the factor $a=2$
+$$2x^2+12x-26=2(x^2+6x-13)$$
+Next we can make a square term that agrees with the first two terms by taking half the $x$ coefficient (i.e. $6\div2=3$):
+$$(x+3)^2=x^2+6x+9.$$
+
+This differs from the required result in the constant term by
+$$-13-9=-22$$
+and so we need to "complete the square" by adding $-22$, to obtain
+$$2x^2+6x+13=2[(x+3)^2-22]=2(x+3)^2-44.$$
+
+The solutions are then
+\begin{align*}
+2(x+3)^2-44&=0\\
+2(x+3)^2&=44\\
+(x+3)^2&=22\\
+x&=\sqrt{22}-3.
+\end{align*}
+:::
+
+
 #### The quadratic formula
 
-Sometimes it is difficult to spot the solutions, and so thankfully we have a forumula for finding them (or to determine if there are no real number solutions).
+Sometimes it is difficult to find the solutions using the above methods and so thankfully we have a forumula for finding them (or to determine if there are no real number solutions).
 
 ::: {.theorem #quadform name="Quadratic Formula"}
 The solutions to the quadratic equation
 $$ax^2+bx+c=0$$
 are given by
-$$x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}$$
-where $\pm$ means there is one solution coming from taking the $+$ option and the other from the $-$ option.
+$$x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}.$$
 
 If the quantity $\Delta = b^2-4ac$, known as the *discriminant*, is such that $\Delta = 0$ then there will be one repeated solution; if $\Delta$ is negative, then there are no real number solutions (since we cannot take the square root of a negative number).
 :::
 
-::: {.exercise #quadfact}
-The quadratic formula finds the solutions to $ax^2+bx+c=0$. How do you then find the factorisation of the quadratic?
-:::
-
 ::: {.exercise #quadform}
-Derive the quadratic formula. Hint: use the method of "completing the square".
+Derive the quadratic formula. Hint: use the method of "completing the square" on a general quadratic equation.
 :::
 
 ### Simultaneous equations
@@ -190,7 +249,7 @@ The examples presented above are relatively simple, and in some real-world scena
 
 ## Inequalities
 
-We are familiar with the symbols $<, \leq, >,$ and $\geq$, (less than, less than or equal to, greater than, greater than or equal to) which are used to define inequalities.
+We are familiar with the symbols $<, \leq, >$ and $\geq$, (less than, less than or equal to, greater than and greater than or equal to) which are used to define inequalities.
 
 ::: {.example #ineqs}
 $$x<5$$ denotes all numbers that are strictly less that $5$ (so not including $5$ itself).
@@ -272,14 +331,14 @@ We wish to find all values of $x$ satisfying the following inequalities.
 The general strategy for finding $P>Q$ (or similar) is therefore: (1) Consider $P-Q$ and factorise as much as possible; (2) Determine the sign of each factor of $P-Q$ for varying $x$; (3) Determine when $P-Q>0$ (and hence when $P>Q$).
 
 
-## Common Mistakes!
+## Common mistakes!
 
 We finish this section with some common algebraic errors to watch out for! Invent your own examples to convince yourself that these things are true.
 
-Fractions: $\frac{a}{b+c}\neq \frac{a}{b}+\frac{a}{c}$ and $\frac{a+b}{c+b}\neq\frac{a}{c}$ (can't "cancel" the $b$'s.).
+**Fractions:** $\frac{a}{b+c}\neq \frac{a}{b}+\frac{a}{c}$ and $\frac{a+b}{c+b}\neq\frac{a}{c}$ (can't "cancel" the $b$'s.).
 
-Inequalities: $ab>c$ does not imply that $a>\frac{c}{b}$ (what happens if $b$ is negative?).
+**Inequalities:** $ab>c$ does not imply that $a>\frac{c}{b}$ (what happens if $b$ is negative?).
 
-Powers: $(a+b)^2\neq a^2+b^2$.
+**Powers:** $(a+b)^2\neq a^2+b^2$.
 
-Roots: $\sqrt{a+b}\neq \sqrt{a}+\sqrt{b}$.
+**Roots:** $\sqrt{a+b}\neq \sqrt{a}+\sqrt{b}$.

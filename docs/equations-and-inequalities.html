@@ -20,10 +20,10 @@
   <meta name="twitter:description" content="Mathematics Lecture Notes for UoE Penryn Science and Engineering Disciplines." />
   
 
-<meta name="author" content="Mark Callaway" />
+<meta name="author" content="Dr Mark Callaway" />
 
 
-<meta name="date" content="2022-09-22" />
+<meta name="date" content="2022-09-23" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -153,7 +153,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="2.1.1" data-path="equations-and-inequalities.html"><a href="equations-and-inequalities.html#formulas"><i class="fa fa-check"></i><b>2.1.1</b> Formulas</a></li>
 <li class="chapter" data-level="2.1.2" data-path="equations-and-inequalities.html"><a href="equations-and-inequalities.html#conditional-equations"><i class="fa fa-check"></i><b>2.1.2</b> Conditional equations</a></li>
-<li class="chapter" data-level="2.1.3" data-path="equations-and-inequalities.html"><a href="equations-and-inequalities.html#quadratic-equations"><i class="fa fa-check"></i><b>2.1.3</b> Quadratic equations</a></li>
+<li class="chapter" data-level="2.1.3" data-path="equations-and-inequalities.html"><a href="equations-and-inequalities.html#quad-eqs"><i class="fa fa-check"></i><b>2.1.3</b> Quadratic equations</a></li>
 <li class="chapter" data-level="2.1.4" data-path="equations-and-inequalities.html"><a href="equations-and-inequalities.html#simultaneous-equations"><i class="fa fa-check"></i><b>2.1.4</b> Simultaneous equations</a></li>
 </ul></li>
 <li class="chapter" data-level="2.2" data-path="equations-and-inequalities.html"><a href="equations-and-inequalities.html#inequalities"><i class="fa fa-check"></i><b>2.2</b> Inequalities</a></li>
@@ -183,7 +183,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.3" data-path="trigonometry.html"><a href="trigonometry.html#trigonometric-ratios"><i class="fa fa-check"></i><b>4.3</b> Trigonometric ratios</a></li>
 <li class="chapter" data-level="4.4" data-path="trigonometry.html"><a href="trigonometry.html#sine-and-cosine-rules"><i class="fa fa-check"></i><b>4.4</b> Sine and Cosine Rules</a></li>
 <li class="chapter" data-level="4.5" data-path="trigonometry.html"><a href="trigonometry.html#trigonometric-waveforms"><i class="fa fa-check"></i><b>4.5</b> Trigonometric waveforms</a></li>
-<li class="chapter" data-level="4.6" data-path="trigonometry.html"><a href="trigonometry.html#trigonometric-identities"><i class="fa fa-check"></i><b>4.6</b> Trigonometric Identities</a></li>
+<li class="chapter" data-level="4.6" data-path="trigonometry.html"><a href="trigonometry.html#trigonometric-identities"><i class="fa fa-check"></i><b>4.6</b> Trigonometric Identities</a>
+<ul>
+<li class="chapter" data-level="4.6.1" data-path="trigonometry.html"><a href="trigonometry.html#pythagorean-identities"><i class="fa fa-check"></i><b>4.6.1</b> Pythagorean identities</a></li>
+<li class="chapter" data-level="4.6.2" data-path="trigonometry.html"><a href="trigonometry.html#compound-angle-formulae"><i class="fa fa-check"></i><b>4.6.2</b> Compound angle formulae</a></li>
+<li class="chapter" data-level="4.6.3" data-path="trigonometry.html"><a href="trigonometry.html#double-angle-formulae"><i class="fa fa-check"></i><b>4.6.3</b> Double angle formulae</a></li>
+<li class="chapter" data-level="4.6.4" data-path="trigonometry.html"><a href="trigonometry.html#product-to-sum-formulae"><i class="fa fa-check"></i><b>4.6.4</b> Product to sum formulae</a></li>
+<li class="chapter" data-level="4.6.5" data-path="trigonometry.html"><a href="trigonometry.html#sum-to-product-formulae"><i class="fa fa-check"></i><b>4.6.5</b> Sum to product formulae</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="complex.html"><a href="complex.html"><i class="fa fa-check"></i><b>5</b> Complex Numbers</a>
 <ul>
@@ -258,24 +265,20 @@ is only true when <span class="math inline">\(x=3\)</span>. We can solve this eq
 <p><span class="math display">\[0=1\]</span></p>
 <p>which is false, so no value of <span class="math inline">\(x\)</span> can give us equality.</p>
 </div>
-<div id="quadratic-equations" class="section level3 hasAnchor" number="2.1.3">
-<h3><span class="header-section-number">2.1.3</span> Quadratic equations<a href="equations-and-inequalities.html#quadratic-equations" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>A particularly common form of equation that arise in science and engineering are <em>quadratic</em> equations. These are equations of the form</p>
+<div id="quad-eqs" class="section level3 hasAnchor" number="2.1.3">
+<h3><span class="header-section-number">2.1.3</span> Quadratic equations<a href="equations-and-inequalities.html#quad-eqs" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A particularly common form of equations that arise in science and engineering are <em>quadratic</em> equations. These are equations of the form</p>
 <p><span class="math display">\[ax^2+bx+c=0\]</span></p>
-<p>where <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span> and <span class="math inline">\(c\)</span> are constants and we wish to find the values of <span class="math inline">\(x\)</span> satisfying this equation. We explore some different methods below.</p>
+<p>where <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span> and <span class="math inline">\(c\)</span> are constants and we wish to find the values of <span class="math inline">\(x\)</span> satisfying this equation. We explore three different methods below.</p>
 <div id="factorisation-by-inspection" class="section level4 hasAnchor" number="2.1.3.1">
 <h4><span class="header-section-number">2.1.3.1</span> Factorisation by inspection<a href="equations-and-inequalities.html#factorisation-by-inspection" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>Firstly, we can factor out the constant <span class="math inline">\(a\)</span> to obtain</p>
-<p><span class="math display">\[ax^2+bx+c=a(x^2+\frac{b}{a}x+\frac{c}{a})=0\]</span>
-and then dividing both sides by <span class="math inline">\(a\)</span>
-<span class="math display">\[x^2+\frac{b}{a}x+\frac{c}{a}=0\]</span>
-The values of <span class="math inline">\(x\)</span> satisfying this new equation will be the same as those for the original, so in studying the general method we can just think about quadtratic equations where the <span class="math inline">\(x^2\)</span> coefficient is <span class="math inline">\(1\)</span>. Now for simplicity we can just re-label the constants <span class="math inline">\(\frac{b}{a}\)</span> and <span class="math inline">\(\frac{c}{a}\)</span> by <span class="math inline">\(b\)</span> and <span class="math inline">\(c\)</span> respectively</p>
+<p>First consider a quadratic where <span class="math inline">\(a=1\)</span>, that is</p>
 <p><span class="math display">\[x^2+bx+c=0.\]</span></p>
 <p>If we can write a quadratic equation as a product of two simpler factors in the form<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a>:</p>
 <p><span class="math display">\[x^2+bx+c = (x+\alpha)(x+\beta)\]</span></p>
 <p>then <span class="math inline">\(x=-\alpha\)</span> and <span class="math inline">\(x=-\beta\)</span> are solutions to <span class="math inline">\(ax^2+bx+c=0\)</span>, since for <span class="math inline">\(x=-\alpha\)</span></p>
 <p><span class="math display">\[(-\alpha+\alpha)(-\alpha+\beta)=0(-\alpha+\beta)=0\]</span></p>
-<p>and similarly for <span class="math inline">\(x=-\beta\)</span>. Furthermore, these will be the only two solutions: it is possible there are two different solutions <span class="math inline">\(\alpha\neq\beta\)</span>, one “repeated” solution where <span class="math inline">\(\alpha=\beta\)</span> so that the quadratic factorises as <span class="math inline">\((x+\alpha)^2\)</span>, or there may be no solutions<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a>. In many cases it is easy to spot the values of <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span>. To see this, let’s work backwards and expand the brackets:</p>
+<p>and similarly for <span class="math inline">\(x=-\beta\)</span>. Furthermore, these will be the only two solutions: it is possible there are two different solutions <span class="math inline">\(\alpha\neq\beta\)</span>, one “repeated” solution where <span class="math inline">\(\alpha=\beta\)</span> so that the quadratic factorises as <span class="math inline">\((x+\alpha)(x+\alpha)=(x+\alpha)^2\)</span>, or there may be no solutions<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a>. In many cases it is easy to spot the values of <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span>. To see this, let’s work backwards and expand the brackets:</p>
 <p><span class="math display">\[(x+\alpha)(x+\beta)=x^2+\beta x +\alpha x +\alpha\beta = x^2 + (\alpha + \beta)x + \alpha\beta\]</span></p>
 <p>so we just need to find the values of <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span> that sum to <span class="math inline">\(b\)</span> and multiply together to give <span class="math inline">\(c\)</span>.</p>
 <div class="example">
@@ -284,9 +287,32 @@ The values of <span class="math inline">\(x\)</span> satisfying this new equatio
 we are looking for two numbers that sum to make <span class="math inline">\(5\)</span> and multiply to make <span class="math inline">\(6\)</span>, so the answer is clearly <span class="math inline">\(x=2\)</span> and <span class="math inline">\(x=3\)</span>, giving the factorisation
 <span class="math display">\[x^2+5x+6=(x+2)(x+3).\]</span></p>
 </div>
+<p>If we have a more general quadratic where <span class="math inline">\(a\neq1\)</span>, then we could start by taking out a factor of <span class="math inline">\(a\)</span>
+<span class="math display">\[ax^2+bx+c=a\left(x^2+\frac{b}{a}x+\frac{c}{a}\right)=0\]</span>
+and then dividing both sides by <span class="math inline">\(a\)</span>
+<span class="math display">\[x^2+\frac{b}{a}x+\frac{c}{a}=0\]</span>
+The values of <span class="math inline">\(x\)</span> satisfying this new equation will be the same as those for the original, so we can now use the above method to find the solutions. However, sometimes we not only want the solution, but also want to know how to factorise the quadratic. In this case we shall have to keep the factor of <span class="math inline">\(a\)</span>. To factorise we just need to find the values of the coefficients in the factorisation that will give the answer we need when we expand the brackets.</p>
+<div class="example">
+<p><span id="exm:factorise2" class="example"><strong>Example 2.2  </strong></span>Solve <span class="math inline">\(4x^2 + 8x + 3 = 0\)</span> by factorising.</p>
+<p>We need the <span class="math inline">\(x\)</span> terms to multiply together to make <span class="math inline">\(4x^2\)</span>, so we could have either
+<span class="math display">\[(4x + \star)(x + \star)\]</span>
+or
+<span class="math display">\[(2x + \star)(2x + \star)\]</span>
+and we need the constant terms to multiply together to make <span class="math inline">\(3\)</span>, so we could have either
+<span class="math display">\[(\star + 3)(\star + 1)\]</span>
+or
+<span class="math display">\[(\star - 3)(\star - 1).\]</span>
+The product of the outer terms need to sum to <span class="math inline">\(8x\)</span> and the only way this is possible is with
+<span class="math display">\[(2x+3)(2x+1).\]</span></p>
+<p>The solutions then come from solving for each factor being <span class="math inline">\(0\)</span>, giving
+<span class="math display">\[x=-\frac{3}{2}\quad\text{ or }\quad x= -\frac{1}{2}\]</span></p>
 </div>
-<div id="the-quadratic-formula" class="section level4 hasAnchor" number="2.1.3.2">
-<h4><span class="header-section-number">2.1.3.2</span> The quadratic formula<a href="equations-and-inequalities.html#the-quadratic-formula" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+</div>
+<div id="completing-the-square" class="section level4 hasAnchor" number="2.1.3.2">
+<h4><span class="header-section-number">2.1.3.2</span> Completing the square<a href="equations-and-inequalities.html#completing-the-square" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+</div>
+<div id="the-quadratic-formula" class="section level4 hasAnchor" number="2.1.3.3">
+<h4><span class="header-section-number">2.1.3.3</span> The quadratic formula<a href="equations-and-inequalities.html#the-quadratic-formula" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Sometimes it is difficult to spot the solutions, and so thankfully we have a forumula for finding them (or to determine if there are no real number solutions).</p>
 <div class="theorem">
 <p><span id="thm:quadform" class="theorem"><strong>Theorem 2.1  (Quadratic Formula) </strong></span>The solutions to the quadratic equation
@@ -297,7 +323,7 @@ where <span class="math inline">\(\pm\)</span> means there is one solution comin
 <p>If the quantity <span class="math inline">\(\Delta = b^2-4ac\)</span>, known as the <em>discriminant</em>, is such that <span class="math inline">\(\Delta = 0\)</span> then there will be one repeated solution; if <span class="math inline">\(\Delta\)</span> is negative, then there are no real number solutions (since we cannot take the square root of a negative number).</p>
 </div>
 <div class="exercise">
-<p><span id="exr:quadfact" class="exercise"><strong>Exercise 2.1  </strong></span>The quadratic formula finds the solutions to <span class="math inline">\(ax^2+bx+c=0\)</span>. How do you then find the factorisation of the quadratic?</p>
+<p><span id="exr:quadfact" class="exercise"><strong>Exercise 2.1  </strong></span>The quadratic formula finds the solutions to <span class="math inline">\(ax^2+bx+c=0\)</span>. How can you use the solutions to factorise of the quadratic?</p>
 </div>
 <div class="exercise">
 <p><span id="exr:quadform" class="exercise"><strong>Exercise 2.2  </strong></span>Derive the quadratic formula. Hint: use the method of “completing the square”.</p>
@@ -308,7 +334,7 @@ where <span class="math inline">\(\pm\)</span> means there is one solution comin
 <h3><span class="header-section-number">2.1.4</span> Simultaneous equations<a href="equations-and-inequalities.html#simultaneous-equations" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Sometimes a problem will be formulated in terms of multiple equations with multiple, shared variables. The set of equations usually represent constraints between the variables and we need to determine which values of the variables are valid solutions, i.e. which values satisfy all of the equations <em>simultaneously</em> – hence such sets of equations are known as <em>simultaneous equations</em>. Sometimes we can solve simultaneous equations by rearranging one equation to set one of the variables as the subject and then substitute this into another equation in order to eliminate one of the variables.</p>
 <div class="example">
-<p><span id="exm:simul-lin" class="example"><strong>Example 2.2  </strong></span>Given the following two simultaneous equations in the variables <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>
+<p><span id="exm:simul-lin" class="example"><strong>Example 2.3  </strong></span>Given the following two simultaneous equations in the variables <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>
 <span class="math display">\[\begin{align*}
 3x+2y&amp;=5\\
 x-4y&amp;=1
@@ -331,7 +357,7 @@ Hence the solution is
 </div>
 <p>The above example shows a particular type of simultaneous equations called <em>linear</em> simultaneous equations (if we were to plot a graph of each of the equations we would see that they form straight lines, hence the term <em>linear</em>). We shall look at a systematic way to deal with linear simultaneous equations in section <a href="#linear"><strong>??</strong></a>.</p>
 <div class="example">
-<p><span id="exm:simul-nonlin" class="example"><strong>Example 2.3  </strong></span>Given the following two simultaneous equations in the variables <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>
+<p><span id="exm:simul-nonlin" class="example"><strong>Example 2.4  </strong></span>Given the following two simultaneous equations in the variables <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>
 <span class="math display">\[\begin{align*}
 2x+y&amp;=7\\
 x^2-xy&amp;=6
@@ -368,7 +394,7 @@ and
 <h2><span class="header-section-number">2.2</span> Inequalities<a href="equations-and-inequalities.html#inequalities" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>We are familiar with the symbols <span class="math inline">\(&lt;, \leq, &gt;,\)</span> and <span class="math inline">\(\geq\)</span>, (less than, less than or equal to, greater than, greater than or equal to) which are used to define inequalities.</p>
 <div class="example">
-<p><span id="exm:ineqs" class="example"><strong>Example 2.4  </strong></span><span class="math display">\[x&lt;5\]</span> denotes all numbers that are strictly less that <span class="math inline">\(5\)</span> (so not including <span class="math inline">\(5\)</span> itself).
+<p><span id="exm:ineqs" class="example"><strong>Example 2.5  </strong></span><span class="math display">\[x&lt;5\]</span> denotes all numbers that are strictly less that <span class="math inline">\(5\)</span> (so not including <span class="math inline">\(5\)</span> itself).
 <span class="math display">\[-1&lt; x \leq 1\]</span> denotes all numbers that are strictly greater than <span class="math inline">\(-1\)</span> but less that or equal to <span class="math inline">\(1\)</span> (so <span class="math inline">\(x=1\)</span> is a possibility).</p>
 </div>
 <p>When solving inequalities (i.e. finding values of <span class="math inline">\(x\)</span> which satisfy the expression) we need to be a bit more careful with their manipulation than with equalities. If we perform the same operation to both sides in an equality then the equality still holds true, but this is not the case in general for inequalities – in particular we need to be careful with multiplication by negative numbers which “flips” the inequality.</p>
@@ -385,7 +411,7 @@ and
 <p>It should not be necessary to memorise all of these, it just requires a little thought when manipulating inequalities: the important ones to be careful with are multiplying or dividing by negative values.</p>
 <p>Assume we are comparing two expressions <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span> that depend on the variable <span class="math inline">\(x\)</span> and need to find, for example, the values of <span class="math inline">\(x\)</span> for which <span class="math inline">\(P&gt;Q\)</span>. Let us take a look at a range of examples to see how to solve these types of problems.</p>
 <div class="example">
-<p><span id="exm:solvineqs" class="example"><strong>Example 2.5  </strong></span>We wish to find all values of <span class="math inline">\(x\)</span> satisfying the following inequalities.</p>
+<p><span id="exm:solvineqs" class="example"><strong>Example 2.6  </strong></span>We wish to find all values of <span class="math inline">\(x\)</span> satisfying the following inequalities.</p>
 <ol style="list-style-type: decimal">
 <li><p><span class="math inline">\(2x+6&lt;18.\)</span></p>
 <p>Here we can easily re-arrange the inequality (subtract <span class="math inline">\(6\)</span> from each side and divide by the positive number <span class="math inline">\(2\)</span> – which preserves the direction of the inequality) to obtain
@@ -444,7 +470,7 @@ Figure 2.1: A plot of the inequality <span class="math inline">\(\frac{1}{x-3}&g
 <div class="footnotes">
 <hr />
 <ol start="3">
-<li id="fn3"><p>Actually, any quadratic can be factorised as a product of two linear factors, but we may need complex numbers to do this; more on this in section @ref().<a href="equations-and-inequalities.html#fnref3" class="footnote-back">↩︎</a></p></li>
+<li id="fn3"><p>In fact, any quadratic can be factorised as a product of two linear factors, but we may need complex numbers to do this; more on this in section <a href="complex.html#complex">5</a>.<a href="equations-and-inequalities.html#fnref3" class="footnote-back">↩︎</a></p></li>
 <li id="fn4"><p>That is, no solutions for which <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span> are real numbers, but there will instead be complex number solutions.<a href="equations-and-inequalities.html#fnref4" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>

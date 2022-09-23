@@ -39,8 +39,7 @@ We deal with various number systems in mathematics.
     |$\frac{3}{2}=1.5000\dots$|repeating $0$'s after the first decimal digit, which we normally don't write down!|
     |$\frac{219}{1750}=0.125142857142857\dots$|repeating sequence $142857$ of length $6$ after the first $3$ decimal digits|    
 
-* The *real numbers* consist of all rational and irrational numbers together
-    We can think of real numbers as points on a continuous straight line, or as numbers that possibly have a decimal representation requiring an infinite number of digits^[Real numbers require quite a bit of work to define in a rigorous mathematical way and we will not do this here; the interested reader should look up "construction of real numbers by Dedekind cuts" or "construction of real numbers by Cauchy sequences".].
+* The *real numbers* consist of all rational and irrational numbers together. We can think of real numbers as points on a continuous straight line, or as numbers that possibly have a decimal representation requiring an infinite number of digits^[Real numbers require quite a bit of work to define in a rigorous mathematical way and we will not do this here; the interested reader should look up "construction of real numbers by Dedekind cuts" or "construction of real numbers by Cauchy sequences".].
     The set of real numbers is denoted by $\mathbb{R}$.
 
 * We learn about all of the above numbers early on in our mathematical education. However, there is a further set of numbers that is very useful in science and engineering that you may not have encountered before: the *complex numbers*, denoted by $\mathbb{C}$. These are not as intuitive as real numbers and we explore them in detail in section \@ref(complex).
@@ -112,7 +111,7 @@ For arguments sake let's take $a>b$, then since we have $a$ $x$'s on the top and
 x^a\frac{1}{x^b}=\frac{x^a}{x^b}=x^{a-b} (\#eq:divexps)
 \end{equation}
 
-and following Rule 1 we could think of this as $x^{a-b}=x^{a+(-b)}=x^ax^{-b}$, and therefore using a negative exponent $-b$ gives the reciprocal of $x^b$
+and following Rule 1 we could think of this as $x^{a-b}=x^{a+(-b)}=x^ax^{-b}$, and therefore using a negative exponent $-b$ gives the reciprocal of $x^b$.
 
 ::: {.theorem #exprule1 name="Rule 3"}
 $$x^{-a}=\frac{1}{x^a}$$
@@ -122,7 +121,7 @@ Next, we can consider the value of $x^0$. In \@ref(eq:divexps) with the particul
 
 $$1=\frac{x^a}{x^a}=x^{a-a}=x^0$$
 
-so we get that for any non-zero^[We need to be more careful when $x=0$, since we would have $\frac{0^a}{0^a}=\frac{0}{0}$, which is an indeterminate form so the argument is not valid; it turns out $0^0$ is also an indeterminate form.] value of $x$ 
+so we get that for any non-zero^[We need to be more careful when $x=0$, since we would have $\frac{0^a}{0^a}=\frac{0}{0}$, which is an indeterminate form so the argument is not valid; it turns out $0^0$ is also an indeterminate form.] value of $x$:
 
 ::: {.theorem name="Rule 4"}
 $$x^0=1$$
@@ -134,17 +133,17 @@ $$x^{\frac{a}{b}}=(x^a)^{\frac{1}{b}}.$$
 
 In the case $b=a$, we therefore have
 
-$x=x^1=x^{\frac{a}{a}}=(x^{\frac{1}{a}})^a$.
+$$x=x^1=x^{\frac{a}{a}}=(x^{\frac{1}{a}})^a.$$
 
-This means that raising $x^\frac{1}{a}$ to the power $a$ gets us back to $x$, hence the number $x^\frac{1}{a}$ is the $a$^{th} root of $x$. For example $(3^\frac{1}{2})^2=3^{2\frac{1}{2}}=3^1=3$, so we must have $3^\frac{1}{2}=\sqrt{3}$.
+This means that raising $x^\frac{1}{a}$ to the power $a$ gets us back to $x$, hence the number $x^\frac{1}{a}$ is the $a^\text{th}$ root of $x$. For example $(3^\frac{1}{2})^2=3^{2\frac{1}{2}}=3^1=3$, so we must have $3^\frac{1}{2}=\sqrt{3}$.
 
 ::: {.theorem name="Rule 5"}
-$$x^{\frac{1}{a}}=\sqrt[n]{x}.$$
+$$x^{\frac{1}{a}}=\sqrt[a]{x}.$$
 :::
 
 In particular the square root is $x^{\frac{1}{2}}=\sqrt{x}$ and the cube root is $x^{\frac{1}{3}}=\sqrt[3]{x}$; we tend to use the root notation for expressions containing square or cube roots on their own, and use the power notation when combining different roots.
 
-It turns out that we can extend exponents beyond rational numbers to any *real* number, with all of the above rules still holding. Proving this is beyond the scope of these notes, but the interested reader can easily find out more about this in a textbook or online.
+It turns out that we can extend exponents beyond rational numbers to any *real* number, with all of the above rules still holding. Proving this is beyond the scope of these notes.
 
 Something's missing: we said $x$ can be any real number, but then how do we interpret something like $y=(-1)^\frac{1}{2}$? That is, $y$ must be a number such that when it is multiplied by itself it gives the negative number $-1$, but this is impossible for a real number! Answering this conundrum requires us to invent a new set of numbers, called *complex numbers* -- see section \@ref(complex).
 
@@ -153,11 +152,13 @@ A summary of the rules:
 
 ::: {.theorem #exprules name="Rules of Exponents"}
 
+
 1. $x^ax^b=x^{a+b}$
 2. $(x^a)^b=x^{ab}$
 3. $x^{-a}=\frac{1}{x^a}$
 4. $x^0=1$
-5. $x^{\frac{1}{a}}=\sqrt[n]{x}.$
+5. $x^{\frac{1}{a}}=\sqrt[a]{x}.$
+
 :::
 
 
@@ -165,7 +166,7 @@ A summary of the rules:
 
 We use brackets to set the precedence (or order) of evaluating the different parts of an expression. We evaluate the innermost brackets first. Note we usually omit the multiplication sign when multiplying a bracketed expression.
 
-::: {.example name="brackets"}
+::: {.example name="Evaluating brackets"}
 $$5(((2+4)\div (5-2))+1)=5((6\div 3)+1)=5(2+1)=5\times 3 = 15$$
 :::
 
@@ -173,7 +174,7 @@ Sometimes you might find it helpful to add "redundant" brackets to make the calc
 $$3+2\times 4=11$$
 as
 $$3+(2\times 4)=11.$$
-The brackets are not really needed in the second version, since we get the same result from following BEDMAS, but adding brackets can make an expression easier to read and evaluate.
+The brackets are not really needed in the second version since we get the same result from following BEDMAS, but adding brackets can make an expression easier to read and evaluate.
 
 #### Expansion
 Recall that we can expand expressions involving multiplication of brackets such as the following:
@@ -181,18 +182,18 @@ Recall that we can expand expressions involving multiplication of brackets such 
 $$a(b+c)=ab+ac$$
 $$(a+b)(c+d)=ac+ad+bc+bd$$
 $$(a+b)^2=(a+b)(a+b)=a^2+ab+ba+b^2=a^2+b^2+2ab$$
-$$(ab)^2=(ab)(ab)=a^2b^2$$
+$$(ab)^2=(ab)(ab)=a^2b^2.$$
 
 We often want to expand expressions in order to simplify them by grouping together like-terms, for example:
 
-$$(a+b)(b+c)+2ac=ab+ac+b^2+bc+2ac=ab+3ac+b^2+bc$$
+$$(a+b)(b+c)+2ac=ab+ac+b^2+bc+2ac=ab+3ac+b^2+bc.$$
 
 In the case of the sum of two numbers (a *binomial* term) to a postive integer power, i.e. something of the form
 
-$$(a+b)^n$$
+$$(a+b)^n.$$
 
 which involves multiplying out the brackets $n$ times, we have a general formula for the expansion. We start by looking at a slightly simpler form
-$$(1+x)^n$$
+$$(1+x)^n.$$
 
 Let's take a look at the expansion for the first few values of $n$.
 
@@ -202,7 +203,7 @@ $n=1:$ $(1+x)^1=1+x$
 
 $n=2:$ $(1+x)^2=(1+x)(1+x)=x^2+2x+1$
 
-$n=3:$ $(1+x^3)=(1+x)(1+x)^2=(1+x)(x^2+2x+1)=x^3+3x^2+3x+1$
+$n=3:$ $(1+x)^3=(1+x)(1+x)^2=(1+x)(x^2+2x+1)=x^3+3x^2+3x+1$
 
 The coefficients of $x$ form the $n^\text{th}$ row of Pascal's triangle.
 
@@ -245,7 +246,7 @@ The second example here is *factorising a quadratic* which we can do systematica
 In order to simplify an expression we can carry out the following proceedures:
 
 * Expand brackets
-* Collect together any like-terms, e.g. $2a+3b+a=3a+3b$, $a^3a^2+b^2=a^5+b^2$
+* Collect together any like-terms, e.g. $2a+3b+a=3a+3b$, or $a^3a^2+b^2=a^5+b^2$
 * Simplify any fractions: use common denominators, e.g. $\frac{a}{b}+\frac{c}{d}=\frac{da+bc}{bd}$;  cancel any common factors, e.g. $\frac{ab}{ac}=\frac{b}{c}$
 * Factorise
 

@@ -7,6 +7,7 @@ thm:unlabeled-div-2
 thm:exprules
 exm:unlabeled-div-3
 exm:factorise
+exm:factorise2
 thm:quadform
 exr:quadfact
 exr:quadform
@@ -68,8 +69,9 @@ equations-and-inequalities
 equations
 formulas
 conditional-equations
-quadratic-equations
+quad-eqs
 factorisation-by-inspection
+completing-the-square
 the-quadratic-formula
 simultaneous-equations
 inequalities
@@ -92,6 +94,11 @@ trigonometric-ratios
 sine-and-cosine-rules
 trigonometric-waveforms
 trigonometric-identities
+pythagorean-identities
+compound-angle-formulae
+double-angle-formulae
+product-to-sum-formulae
+sum-to-product-formulae
 complex
 i-and-complex-numbers
 complex-arithmetic
