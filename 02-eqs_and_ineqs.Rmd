@@ -76,7 +76,7 @@ First consider a quadratic where $a=1$, that is
 
 $$x^2+bx+c=0.$$
 
-If we can write a quadratic equation as a product of two simpler factors in the form^[In fact, any quadratic can be factorised as a product of two linear factors, but we may need complex numbers to do this; more on this in section \@ref(complex).]:
+If we can write a quadratic equation as a product of two simple linear factors in the form^[In fact, any quadratic can be factorised as a product of two linear factors, but we may need complex numbers to do this; more on this in section \@ref(complex).]:
 
 $$x^2+bx+c = (x+\alpha)(x+\beta)$$
 
@@ -121,6 +121,14 @@ The solutions then come from solving for each factor being $0$, giving
 $$x=-\frac{3}{2}\quad\text{ or }\quad x= -\frac{1}{2}$$
 :::
 
+Not all quadratics will factorise "nicely", that is to say, where the coefficients in the linear factors will be integers. We can first test if the quadratic will factorise with integer coefficients by computing the quantity
+
+$$\Delta = b^2 - 4ac$$
+
+which is known as the *discriminant* of a quadratic: if this number is a perfect square, then the linear factors will have integer coefficients; if it is not a perfect square, the coefficients will not be integers.
+
+In the case where the coefficients are not integers it can be difficult to determine the coefficients by inspection and the following two methods can be applied instead.
+
 #### Completing the square
 
 In this method, we first rewrite a quadratic equation
@@ -161,7 +169,7 @@ The solutions are then
 2(x+3)^2-44&=0\\
 2(x+3)^2&=44\\
 (x+3)^2&=22\\
-x&=\sqrt{22}-3.
+x&=\pm\sqrt{22}-3.
 \end{align*}
 :::
 

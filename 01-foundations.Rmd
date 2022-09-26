@@ -188,11 +188,11 @@ We often want to expand expressions in order to simplify them by grouping togeth
 
 $$(a+b)(b+c)+2ac=ab+ac+b^2+bc+2ac=ab+3ac+b^2+bc.$$
 
-In the case of the sum of two numbers (a *binomial* term) to a postive integer power, i.e. something of the form
+In the case of the sum of two numbers (a *binomial* term) to a postive integer power we have a general formula for the expansion, i.e. something of the form
 
 $$(a+b)^n.$$
 
-which involves multiplying out the brackets $n$ times, we have a general formula for the expansion. We start by looking at a slightly simpler form
+which involves multiplying out the brackets $n$ times. We start by looking at a slightly simpler form
 $$(1+x)^n.$$
 
 Let's take a look at the expansion for the first few values of $n$.
@@ -238,7 +238,7 @@ Or, it could involve extracting more complicated factors, for example
 $$2xy+6x^2y=2xy(1+3x)$$
 $$x^2-3x-10=(x+2)(x-5)$$
 
-The second example here is *factorising a quadratic* which we can do systematically by finding the roots -- we will see how to do this later in section XYZ
+The second example here is *factorising a quadratic* which we can do systematically by finding the roots -- we will see how to do this later in section \@ref(quad-eqs).
 
 
 ### Simplifiying Expressions
