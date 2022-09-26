@@ -153,7 +153,7 @@ It is not necessary to remember these formulae, we can instead figure out the co
 
 ::: {.example #completesqr name="Completing the Square"}
 Consider the quadratic equation
-$$2x^2+6x-26=0.$$
+$$2x^2+12x-26=0.$$
 We first take out the factor $a=2$
 $$2x^2+12x-26=2(x^2+6x-13)$$
 Next we can make a square term that agrees with the first two terms by taking half the $x$ coefficient (i.e. $6\div2=3$):
@@ -169,7 +169,7 @@ The solutions are then
 2(x+3)^2-44&=0\\
 2(x+3)^2&=44\\
 (x+3)^2&=22\\
-x&=\pm\sqrt{22}-3.
+x&=-3\pm\sqrt{22}.
 \end{align*}
 :::
 
