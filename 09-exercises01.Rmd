@@ -1,15 +1,6 @@
----
-title: "Exercises 1"
-output: 
-  pdf_document:
-    latex_engine: pdflatex
-  html_document:
-    theme: paper
----
+# Exercise Set 1 {-}
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo=FALSE)
-```
+These exercises cover the topics of Algebra, Equations and Inequalities.
 
 1. Simplify each of the following (*Hint*: use the rules of exponents where needed).
     a. $x = 3pq+5pr=2qr+qp-6rp$
