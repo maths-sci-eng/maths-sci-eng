@@ -39,9 +39,10 @@ z = x + i y, \quad \text{where $x$ and $y$ are real numbers}.
 $$
 This form is also called the *Cartesian representation* of a complex number. It has a *real part* $\mathbf{Re}(z) = x$ and an *imaginary part* $\mathbf{Im}(z) = y$. We can then represent a complex number graphically by plotting the real and imaginary parts as coordinates in a Cartesian coordinate system, as in figure \@ref(fig:complexcart), known as the *complex plane*. The $x$-axis is called the *real axis* and the $y$-axis is called the *imaginary axis*.
 
-```{r complexcart, echo=FALSE, fig.cap = "The complex number $z = x + iy$ in Cartesian coordinates.", fig.alt = "The complex number $z = x + iy$ in Cartesian coordinates."}
-knitr::include_graphics("figures/complexcart.png")
-```
+<div class="figure">
+<img src="figures/complexcart.png" alt="The complex number $z = x + iy$ in Cartesian coordinates."  />
+<p class="caption">(\#fig:complexcart)The complex number $z = x + iy$ in Cartesian coordinates.</p>
+</div>
 
 Note that any real number $x$ can also be considered as a complex number, since it is a complex number that happens to have $0$ imaginary part: $x = x +0i$; it is a complex number that lies on the real axis.
 
@@ -123,9 +124,10 @@ A useful fact: if a polynomial has *real* coefficients and has a complex root $z
 
 If we think of the complex number $z = x + iy$ as a point $P = z$ in the $(x,y)$-plane, then it is natural to think also of representing $P$ in *polar coordinates* $(r,\theta)$ -- see figure \@ref(fig:complexpolar).
 
-```{r complexpolar, echo=FALSE, fig.cap = "The complex number $z = x + iy$ in polar coordinates.", fig.alt = "The complex number $z = x + iy$ in polar coordinates."}
-knitr::include_graphics("figures/complexpolar.png")
-```
+<div class="figure">
+<img src="figures/complexpolar.png" alt="The complex number $z = x + iy$ in polar coordinates."  />
+<p class="caption">(\#fig:complexpolar)The complex number $z = x + iy$ in polar coordinates.</p>
+</div>
 
 Here, $r = |z| = \sqrt{x^2 + y^2}$ is the distance from the origin $O$ and $\theta$ is the angle between the positive real axis and the line $OP$. We call $\theta$ the *argument* of $z$, denoted $\theta = \arg(z)$. We have that
 $$
@@ -159,9 +161,10 @@ Note that since $\sin$ and $\cos$ are periodic with period $2\pi$, there are act
 $$re^{i(\theta+2m\pi)}=r(\cos(\theta+2m\pi)+i\sin(\theta+2m\pi))=r(\cos(\theta)+i\sin(\theta))=re^{i\theta}=w$$
 so we can add any multiple of $2m\pi$ to $\theta$ and get the same complex number. Graphically, this corresponds to going around a full circle $m$ times in the complex plane and back to the same point.
 
-```{r, complexpolargeo, echo=FALSE, fig.cap="A complex number $w=re^{i\\theta}$ plotted in the complex plane. Drag the sliders to vary $\\theta$ and $r$. [[Open graph in browser.]](https://www.geogebra.org/calculator/mvgafsek)"}
-knitr::include_url("https://www.geogebra.org/calculator/mvgafsek")
-```
+<div class="figure">
+<iframe src="https://www.geogebra.org/calculator/mvgafsek" width="672" height="400px" data-external="1"></iframe>
+<p class="caption">(\#fig:complexpolargeo)A complex number $w=re^{i\theta}$ plotted in the complex plane. Drag the sliders to vary $\theta$ and $r$. [[Open graph in browser.]](https://www.geogebra.org/calculator/mvgafsek)</p>
+</div>
 
 The usual rules of exponents hold for complex exponentials, now using the rules of complex arithmetic. The exponential form is particularly nice when taking the product of two complex numbers. For $z = re^{i\theta}$ and $w = se^{i\phi}$, we have
 \begin{align*}
@@ -223,9 +226,10 @@ w_2&=\sqrt[3]{2}e^{i(0+\frac{2\pi}{3})}=\sqrt[3]{2}e^{i\frac{2\pi}{3}}\\
 w_3&=\sqrt[3]{2}e^{i(0+\frac{2(2)\pi}{3})}=\sqrt[3]{2}e^{i\frac{4\pi}{3}}
 \end{align*}
 
-```{r complexrootsexmp, echo=FALSE, fig.cap = "The cube roots of $2$ in the complex plane. Note they are evenly spaced around a circle of radius $\\sqrt[3]{2}$.", fig.alt = "The cube roots of $2$ in the complex plane. Note they are evenly spaced around a circle of radius $\\sqrt[3]{2}$."}
-knitr::include_graphics("figures/complexroots.png")
-```
+<div class="figure">
+<img src="figures/complexroots.png" alt="The cube roots of $2$ in the complex plane. Note they are evenly spaced around a circle of radius $\sqrt[3]{2}$."  />
+<p class="caption">(\#fig:complexrootsexmp)The cube roots of $2$ in the complex plane. Note they are evenly spaced around a circle of radius $\sqrt[3]{2}$.</p>
+</div>
 :::
 
 ## $e^{i\theta}$ and trigonometric identities

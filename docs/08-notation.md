@@ -1,0 +1,36 @@
+# Notation {-}
+
+A summary of notation used in these notes.
+
+
+"$A \implies B$" is read as "statement $A$ implies statement $B$".
+
+
+We often use Greek letters for mathematical symbols.
+
+| Capital letter | Small letter | Name |
+|---|---|---|
+| $A$ | $\alpha$ | Alpha |
+| $B$ | $\beta$ | Beta |
+| $\Gamma$ | $\gamma$ | Gamma |
+| $\Delta$ | $\delta$ | Delta |
+| $E$ | $\epsilon$, $\varepsilon$ | Epsilon |
+| $Z$ | $\zeta$ | Zeta |
+| $H$ | $\eta$ | Eta |
+| $\Theta$ | $\theta$, $\vartheta$ | Theta |
+| $I$ | $\iota$ | Iota |
+| $K$ | $\kappa$ | Kappa |
+| $\Lambda$ | $\lambda$ | Lambda |
+| $M$ | $\mu$ | Mu |
+| $N$ | $\nu$ | Nu |
+| $\Xi$ | $\xi$ | Xi |
+| $O$ | $\omicron$ | Omicron |
+| $\Pi$ | $\pi$ | Pi |
+| $R$ | $\rho$, $\varrho$ | Rho |
+| $\Sigma$ | $\sigma$ | Sigma |
+| $T$ | $\tau$ | Tau |
+| $Upsilon$ | $\upsilon$ | Upsilon |
+| $\Phi$ | $\phi$, $\varphi$ | Phi |
+| $X$ | $\chi$ | Chi |
+| $\Psi$ | $\psi$ | Psi |
+| $\Omega$ | $\omega$ | Omega |
