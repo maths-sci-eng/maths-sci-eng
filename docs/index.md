@@ -1,7 +1,7 @@
 --- 
 title: "Mathematics for Scientists and Engineers"
 author: "Dr Mark Callaway"
-date: "2022-09-28"
+date: "2022-09-30"
 site: bookdown::bookdown_site
 output: bookdown::gitbook
 documentclass: book
@@ -19,3 +19,6 @@ These notes have been compiled for use alongside the University of Exeter module
 Contact: m.callaway@exeter.ac.uk
 
 Recommended text: Engineering Mathematics, John Bird. Available online through the UoE library here: <https://encore.exeter.ac.uk/iii/encore/record/C__Rb4511752>
+
+
+

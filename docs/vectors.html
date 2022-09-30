@@ -23,7 +23,7 @@
 <meta name="author" content="Dr Mark Callaway" />
 
 
-<meta name="date" content="2022-09-28" />
+<meta name="date" content="2022-09-30" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -200,11 +200,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.4" data-path="complex.html"><a href="complex.html#roots-of-complex-numbers"><i class="fa fa-check"></i><b>5.4</b> Roots of complex numbers</a></li>
 <li class="chapter" data-level="5.5" data-path="complex.html"><a href="complex.html#eitheta-and-trigonometric-identities"><i class="fa fa-check"></i><b>5.5</b> <span class="math inline">\(e^{i\theta}\)</span> and trigonometric identities</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="vectors.html"><a href="vectors.html"><i class="fa fa-check"></i><b>6</b> Vectors</a></li>
+<li class="chapter" data-level="6" data-path="vectors.html"><a href="vectors.html"><i class="fa fa-check"></i><b>6</b> Vectors</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="vectors.html"><a href="vectors.html#vector-addition"><i class="fa fa-check"></i><b>6.1</b> Vector addition</a></li>
+<li class="chapter" data-level="6.2" data-path="vectors.html"><a href="vectors.html#scalar-multiplication"><i class="fa fa-check"></i><b>6.2</b> Scalar multiplication</a></li>
+<li class="chapter" data-level="6.3" data-path="vectors.html"><a href="vectors.html#vectors-in-cartesian-coordinates"><i class="fa fa-check"></i><b>6.3</b> Vectors in Cartesian coordinates</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="chapter" data-level="" data-path="notation.html"><a href="notation.html"><i class="fa fa-check"></i>Notation</a></li>
 <li class="chapter" data-level="" data-path="exercise-set-1.html"><a href="exercise-set-1.html"><i class="fa fa-check"></i>Exercise Set 1</a></li>
-<li class="chapter" data-level="" data-path="exercise-set-2.html"><a href="exercise-set-2.html"><i class="fa fa-check"></i>Exercise Set 2</a></li>
+<li class="chapter" data-level="" data-path="exercise-set-4.html"><a href="exercise-set-4.html"><i class="fa fa-check"></i>Exercise Set 4</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -227,7 +232,121 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="vectors" class="section level1 hasAnchor" number="6">
 <h1><span class="header-section-number">Chapter 6</span> Vectors<a href="vectors.html#vectors" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>In physics, we distiguish between <em>scalar</em> quantities and <em>vector</em> quantities:
+* Scalars are defined by a single numeric value. Examples include distance, speed, time, temperature, pressure, mass and energy.
+* Vectors have associated both a numeric value and a direction. Examples include displacement, velocity, acceleration, force, and momentum.</p>
+<p>We depict vectors by arrows whose length is proportional to the magnitude of the quantity in question and whose direction is that of the action of the quantity. In symbols, we will use bold typeface to indicate a vector, such as <span class="math inline">\(\mathbf{v}\)</span>, and we will denote a vector from point <span class="math inline">\(A\)</span> to <span class="math inline">\(B\)</span> by <span class="math inline">\(\overrightarrow{AB}\)</span>. See figure <a href="vectors.html#fig:vector">6.1</a>.</p>
+<div class="figure"><span style="display:block;" id="fig:vector"></span>
+<img src="figures/vector.png" alt="A vector $\mathbf{v}$ between points $A$ and $B$." height="120%" />
+<p class="caption">
+Figure 6.1: The vector <span class="math inline">\(\mathbf{v} = \overrightarrow{AB}\)</span> is the vector from <span class="math inline">\(A\)</span> to <span class="math inline">\(B\)</span>.
+</p>
+</div>
+<div id="vector-addition" class="section level2 hasAnchor" number="6.1">
+<h2><span class="header-section-number">6.1</span> Vector addition<a href="vectors.html#vector-addition" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Geometrically, to add two vectors together we can place the tail of one vector at the head of the other and take the vector that goes from the starting point to the finish point.</p>
+<div class="figure"><span style="display:block;" id="fig:label"></span>
+<img src="figures/vecadd.png" alt="Geometric addition of two vectors $\textbf{v}$ and $\textbf{w}$ by aligning them tail to head." height="120%" />
+<p class="caption">
+Figure 6.2: Addition of two vectors <span class="math inline">\(\textbf{v}\)</span> and <span class="math inline">\(\textbf{w}\)</span> by aligning them tail to head.
+</p>
+</div>
+<div class="example">
+<p><span id="exm:vecadd" class="example"><strong>Example 6.1  (Vector addition) </strong></span>A swallow is flying at 40 km/h due north with an easterly wind blowing at a speed of 20 km/h. The swallow’s groundspeed can be found by adding the velocity vectors:
+<span class="math display">\[\begin{align*}
+\mathbf{v} &amp;= 40 \text{ km/h North}\\
+\mathbf{w} &amp;= 20 \text{ km/h West}\\
+\mathbf{v}+\mathbf{w}&amp;=20\sqrt{5} \text{ km/h North by North West}.
+\end{align*}\]</span></p>
+</div>
+<p>Alternatively, we can use the parallelogram rule (which amounts to the same thing): we draw a parallelogram with two of the non-parallel sides given by the vectors and take the diagonal as the resultant vector, as in figure <a href="vectors.html#fig:vecaddpara">6.3</a>.</p>
+<div class="figure"><span style="display:block;" id="fig:vecaddpara"></span>
+<img src="figures/vecaddpara.png" alt="Parallelogram for addition of two vectors $\textbf{v}$ and $\textbf{w}$." height="120%" />
+<p class="caption">
+Figure 6.3: Parallelogram for addition of two vectors <span class="math inline">\(\textbf{v}\)</span> and <span class="math inline">\(\textbf{w}\)</span>.
+</p>
+</div>
+</div>
+<div id="scalar-multiplication" class="section level2 hasAnchor" number="6.2">
+<h2><span class="header-section-number">6.2</span> Scalar multiplication<a href="vectors.html#scalar-multiplication" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>If we multiply a vector by a positive scalar, we change only the magnitude of the vector and keep its direction. For example, if the sparrow in example <a href="#exmp:vecadd"><strong>??</strong></a> starts flying twice as fast, we have the velocity vector
+<span class="math display">\[2\mathbf{v} = 80 \text{ km/h North}.\]</span>
+If we multiply by a negative value, the vector now points in the opposite direction:
+<span class="math display">\[-2\mathbf{v} = 80 \text{ km/h South}.\]</span></p>
+<div class="figure"><span style="display:block;" id="fig:scalarmult"></span>
+<img src="figures/scalarmult.png" alt="Scalar multiplication of a vector $\mathbf{v}$." height="120%" />
+<p class="caption">
+Figure 6.4: Scalar multiplication of a vector <span class="math inline">\(\mathbf{v}\)</span>.
+</p>
+</div>
+<p>Finally, if we multiply by <span class="math inline">\(0\)</span>, we get the <em>zero-vector</em> <span class="math inline">\(\mathbf{0}\)</span>, which has magnitude <span class="math inline">\(0\)</span> and no direction:
+<span class="math display">\[0\mathbf{v}=\mathbf{0}\]</span>.</p>
+</div>
+<div id="vectors-in-cartesian-coordinates" class="section level2 hasAnchor" number="6.3">
+<h2><span class="header-section-number">6.3</span> Vectors in Cartesian coordinates<a href="vectors.html#vectors-in-cartesian-coordinates" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We mostly deal with vectors in a Cartesian coordinate system. We then define vectors of length 1 that point out from the origin along the coordinate axes. In three dimensions we label these as <span class="math inline">\(\mathbf{i}\)</span> along the <span class="math inline">\(x\)</span>-axis, <span class="math inline">\(\mathbf{j}\)</span> along the <span class="math inline">\(y\)</span>-axis and <span class="math inline">\(\mathbf{k}\)</span> along the <span class="math inline">\(z\)</span>-axis. In two dimensions we simply drop the <span class="math inline">\(\mathbf{k}\)</span> vector.</p>
+<p>We can then write any vector <span class="math inline">\(\overrightarrow{OA}\)</span> from the origin <span class="math inline">\(O\)</span> to a point <span class="math inline">\(A\)</span> as some combination of the these vectors. For example, the vector in the plane from the origin to the point <span class="math inline">\(A=(2,3)\)</span> is given by:
+<span class="math display">\[\overrightarrow{OA}=2\mathbf{i} + 3\mathbf{j}.\]</span>
+We can reconcile this with our geometric understanding of addition of two vectors: we place the vector <span class="math inline">\(2\mathbf{i}\)</span> from the origin to the point <span class="math inline">\((2,0)\)</span> and then place the tail of the vector <span class="math inline">\(3\mathbf{j}\)</span> at the head of <span class="math inline">\(2\mathbf{i}\)</span> to get to the point <span class="math inline">\((2,3)\)</span>; or, in terms of the parallelogram rule we have a rectangle with sides <span class="math inline">\(2\mathbf{i}\)</span> and <span class="math inline">\(3\mathbf{j}\)</span>.</p>
+<p>Yet another way to write this vector is as a <em>column vector</em>
+<span class="math display">\[\overrightarrow{OA}=
+\begin{pmatrix}
+2\\
+3
+\end{pmatrix}.
+\]</span>
+Such a representation is called a <em>coordinate vector</em>.
+More generally, the vector
+<span class="math display">\[\mathbf{v}=x\mathbf{i}+y\mathbf{j}+z\mathbf{k}\]</span>
+can be written as the column
+<span class="math display">\[\begin{pmatrix}
+x\\
+y\\
+z
+\end{pmatrix}.
+\]</span></p>
+<p>Now addition and scalar multiplication can be carried out component-wise as follows. If we have
+<span class="math display">\[\mathbf{v}=x\mathbf{i}+y\mathbf{j}+z\mathbf{k}\]</span>
+and
+<span class="math display">\[\mathbf{w}=x&#39;\mathbf{i}+y&#39;\mathbf{j}+z&#39;\mathbf{k}\]</span>
+then
+<span class="math display">\[\mathbf{v}+\mathbf{w}=(x+x&#39;)\mathbf{i}+(y+y&#39;)\mathbf{j}+(z+z&#39;)\mathbf{k}\]</span>
+and with <span class="math inline">\(a\)</span> a scalar,
+<span class="math display">\[a\mathbf{v}=ax\mathbf{i}+ay\mathbf{j}+az\mathbf{k}.\]</span></p>
+<p>Or, as column vectors with
+<span class="math display">\[
+\mathbf{v} =
+\begin{pmatrix}
+x\\
+y\\
+z
+\end{pmatrix},
+\qquad
+\mathbf{w} =
+\begin{pmatrix}
+x&#39;\\
+y&#39;\\
+z&#39;
+\end{pmatrix}
+\]</span>
+we have
+<span class="math display">\[\mathbf{v}+\mathbf{w}= \begin{pmatrix}
+x+x&#39;\\
+y+y&#39;\\
+z+z&#39;
+\end{pmatrix}.
+\]</span>
+and
+<span class="math display">\[
+a\mathbf{v} =
+\begin{pmatrix}
+ax\\
+ay\\
+az
+\end{pmatrix}.
+\]</span></p>
 
+</div>
 </div>
             </section>
 

@@ -1,4 +1,4 @@
-# Exercise Set 2 {-}
+# Exercise Set 4 {-}
 
 1. Let $u=2+3i$ and $v=5+8i$. Determine the following.
     a. $u+v$

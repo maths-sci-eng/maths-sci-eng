@@ -19,3 +19,10 @@ These notes have been compiled for use alongside the University of Exeter module
 Contact: m.callaway@exeter.ac.uk
 
 Recommended text: Engineering Mathematics, John Bird. Available online through the UoE library here: <https://encore.exeter.ac.uk/iii/encore/record/C__Rb4511752>
+
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(
+  comment = "#>", echo = FALSE, fig.align = 'center'
+)
+```
