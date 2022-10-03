@@ -191,8 +191,7 @@ Sine and cosine look similar, like "waves", with one graph shifted along the $x$
 knitr::include_url("https://www.desmos.com/calculator/gyj6vrtzbu")
 ```
 
-In figure \@ref(fig:sincos) we have plotted the functions with the $x$ axis in units of *radians*. This is the natural mathematical choice of units, but in applications we tend to use *degrees*. We'll understand more about radians see how these units are related to degrees in section \@ref(trigonometry). Note the graphs repeat every $2\pi$ radians -- they are *periodic* functions with *period* $2\pi$.
-We'll understand more about radians see how these units are related to degrees in section \@ref(trigonometry). Note the graphs repeat every $2\pi$ radians -- they are *periodic functions* with *period* $2\pi$.
+In figure \@ref(fig:sincos) we have plotted the functions with the $x$ axis in units of *radians*. This is the natural mathematical choice of units, but in applications we tend to use *degrees*. We'll understand more about radians and see how these units are related to degrees in section \@ref(trigonometry). Note the graphs repeat every $2\pi$ radians -- they are *periodic* functions with *period* $2\pi$.
 
 The tangent function is defined via sine and cosine as:
 

@@ -47,7 +47,7 @@ These exercises cover the topics of Algebra, Equations and Inequalities.
 1. Solve the following sets of simultaneous equations.
     a. $3x+4y=7$, $5x+6y=11$
     a. $2x+y=7$, $x^2-xy=6$
-    a. $x + y=2$, $w^2-xy+y^2 = 1$  
+    a. $x + y=2$, $x^2-xy+y^2 = 1$  
 
 1. Solve the following inequalities.
     a. $7-3x>x-5$

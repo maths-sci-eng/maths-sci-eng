@@ -8,7 +8,7 @@ We depict vectors by arrows whose length is proportional to the magnitude of the
 
 
 
-```{r vector, echo=FALSE, fig.cap = "The vector $\\mathbf{v} = \\overrightarrow{AB}$ is the vector from $A$ to $B$.", fig.alt = "A vector $\\mathbf{v}$ between points $A$ and $B$.", out.height= "120%"}
+```{r vector, echo=FALSE, fig.cap = "The vector $\\mathbf{v} = \\overrightarrow{AB}$ is the vector from $A$ to $B$.", fig.alt = "A vector $\\mathbf{v}$ between points $A$ and $B$.", out.width= "40%"}
 knitr::include_graphics("figures/vector.png")
 ```
 
@@ -17,7 +17,7 @@ knitr::include_graphics("figures/vector.png")
 
 Geometrically, to add two vectors together we can place the tail of one vector at the head of the other and take the vector that goes from the starting point to the finish point.
 
-```{r label, echo=FALSE, fig.cap = "Addition of two vectors $\\textbf{v}$ and $\\textbf{w}$ by aligning them tail to head.", fig.alt = "Geometric addition of two vectors $\\textbf{v}$ and $\\textbf{w}$ by aligning them tail to head.", out.height= "120%"}
+```{r label, echo=FALSE, fig.cap = "Addition of two vectors $\\textbf{v}$ and $\\textbf{w}$ by aligning them tail to head.", fig.alt = "Geometric addition of two vectors $\\textbf{v}$ and $\\textbf{w}$ by aligning them tail to head.", out.width= "30%"}
 knitr::include_graphics("figures/vecadd.png")
 ```
 
@@ -33,18 +33,18 @@ A swallow is flying at 40 km/h due north with an easterly wind blowing at a spee
 Alternatively, we can use the parallelogram rule (which amounts to the same thing): we draw a parallelogram with two of the non-parallel sides given by the vectors and take the diagonal as the resultant vector, as in figure \@ref(fig:vecaddpara).
 
 
-```{r vecaddpara, echo=FALSE, fig.cap = "Parallelogram for addition of two vectors $\\textbf{v}$ and $\\textbf{w}$.", fig.alt = "Parallelogram for addition of two vectors $\\textbf{v}$ and $\\textbf{w}$.", fig.align = 'center', out.height = "150%"}
+```{r vecaddpara, echo=FALSE, fig.cap = "Parallelogram for addition of two vectors $\\textbf{v}$ and $\\textbf{w}$.", fig.alt = "Parallelogram for addition of two vectors $\\textbf{v}$ and $\\textbf{w}$.", fig.align = 'center', out.width= "40%"}
 knitr::include_graphics("figures/vecaddpara.png")
 ```
 
 ## Scalar multiplication
 
-If we multiply a vector by a positive scalar, we change only the magnitude of the vector and keep its direction. For example, if the sparrow in example \@ref(exmp:vecadd) starts flying twice as fast, we have the velocity vector
+If we multiply a vector by a positive scalar, we change only the magnitude of the vector and keep its direction. For example, if the swallow in example \@ref(exm:vecadd) starts flying twice as fast, we have the velocity vector
 $$2\mathbf{v} = 80 \text{ km/h North}.$$
 If we multiply by a negative value, the vector now points in the opposite direction:
 $$-2\mathbf{v} = 80 \text{ km/h South}.$$
 
-```{r scalarmult, echo=FALSE, fig.cap = "Scalar multiplication of a vector $\\mathbf{v}$.", fig.alt = "Scalar multiplication of a vector $\\mathbf{v}$.", out.height= "120%"}
+```{r scalarmult, echo=FALSE, fig.cap = "Scalar multiplication of a vector $\\mathbf{v}$.", fig.alt = "Scalar multiplication of a vector $\\mathbf{v}$.", out.width= "25%"}
 knitr::include_graphics("figures/scalarmult.png")
 ```
 
@@ -58,7 +58,11 @@ We mostly deal with vectors in a Cartesian coordinate system. We then define vec
 
 We can then write any vector $\overrightarrow{OA}$ from the origin $O$ to a point $A$ as some combination of the these vectors. For example, the vector in the plane from the origin to the point $A=(2,3)$ is given by:
 $$\overrightarrow{OA}=2\mathbf{i} + 3\mathbf{j}.$$
-We can reconcile this with our geometric understanding of addition of two vectors: we place the vector $2\mathbf{i}$ from the origin to the point $(2,0)$ and then place the tail of the vector $3\mathbf{j}$ at the head of $2\mathbf{i}$ to get to the point $(2,3)$; or, in terms of the parallelogram rule we have a rectangle with sides $2\mathbf{i}$ and $3\mathbf{j}$.
+We can reconcile this with our geometric understanding of addition of two vectors: we place the vector $2\mathbf{i}$ from the origin to the point $(2,0)$ and then place the tail of the vector $3\mathbf{j}$ at the head of $2\mathbf{i}$ to get to the point $(2,3)$; or, in terms of the parallelogram rule we have a rectangle with sides $2\mathbf{i}$ and $3\mathbf{j}$. See figure \@ref(fig:coordvecs).
+
+```{r coordvecs, echo=FALSE, fig.cap = "The vector $2\\mathbf{i}+3\\mathbf{j}$.", fig.alt = "The vector $2\\mathbf{i}+3\\mathbf{j}$.", out.width= "40%"}
+knitr::include_graphics("figures/coordvecs.png")
+```
 
 Yet another way to write this vector is as a *column vector*
 $$\overrightarrow{OA}=
