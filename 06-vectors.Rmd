@@ -156,7 +156,7 @@ We have seen how to add vectors and how to multiply vectors with a scalar. In th
 The *dot product* (also called the *scalar product* or *inner product*) of two vectors $\mathbf{u}$ and $\mathbf{v}$, denoted $\mathbf{u}\cdot\mathbf{v}$, is defined to be the quantity
 \begin{equation}
 \mathbf{u}\cdot\mathbf{v} = |\mathbf{u}||\mathbf{v}|\cos(\theta)
-{#eq:dotprod}
+(\#eq:dotprod)
 \end{equation}
 where $\theta$ is the angle between the vectors $\mathbf{u}$ and $\mathbf{v}$. Note that the symmetry of the $\cos$ function means it does not matter which direction we measure the angle, i.e. clockwise or anticlockwise.
 

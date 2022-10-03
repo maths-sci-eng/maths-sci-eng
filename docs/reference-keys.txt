@@ -64,6 +64,7 @@ fig:vecaddpara
 fig:scalarmult
 fig:coordvecs
 exm:unitvec
+eq:dotprod
 fig:dotproj
 foundations
 numbers
