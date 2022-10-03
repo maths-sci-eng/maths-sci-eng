@@ -141,6 +141,10 @@
 <li class="chapter" data-level="6.1" data-path="vectors.html"><a href="vectors.html#vector-addition"><i class="fa fa-check"></i><b>6.1</b> Vector addition</a></li>
 <li class="chapter" data-level="6.2" data-path="vectors.html"><a href="vectors.html#scalar-multiplication"><i class="fa fa-check"></i><b>6.2</b> Scalar multiplication</a></li>
 <li class="chapter" data-level="6.3" data-path="vectors.html"><a href="vectors.html#vectors-in-cartesian-coordinates"><i class="fa fa-check"></i><b>6.3</b> Vectors in Cartesian coordinates</a></li>
+<li class="chapter" data-level="6.4" data-path="vectors.html"><a href="vectors.html#vector-products"><i class="fa fa-check"></i><b>6.4</b> Vector products</a>
+<ul>
+<li class="chapter" data-level="6.4.1" data-path="vectors.html"><a href="vectors.html#dot-product"><i class="fa fa-check"></i><b>6.4.1</b> Dot product</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="chapter" data-level="" data-path="notation.html"><a href="notation.html"><i class="fa fa-check"></i>Notation</a></li>
@@ -287,7 +291,93 @@ ay\\
 az
 \end{pmatrix}.
 \]</span></p>
+<p>If points <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> have coordinates <span class="math inline">\((a_1,a_2,a_3)\)</span> and <span class="math inline">\((b_1,b_2,b_3)\)</span>, respectively, then the vector from <span class="math inline">\(A\)</span> to <span class="math inline">\(B\)</span> is
+<span class="math display">\[\overrightarrow{AB} = \begin{pmatrix} b_1 - a_1 \\ b_2 - a_2\\ b_3 - a_3\end{pmatrix}.
+\]</span>
+In 3-dimensional Cartesian coordinates, the <em>length</em> of the vector
+<span class="math display">\[\mathbf{v} = \begin{pmatrix} x\\ y\\ z\end{pmatrix}\]</span>
+is written as <span class="math inline">\(|\mathbf{v}|\)</span> and defined as
+<span class="math display">\[|\mathbf{v}| = \sqrt{x^2 + y^2 + z^2}\]</span>.
+This is essentially a three-dimensional version of the Pythagorean theorem.</p>
+<p>A vector <span class="math inline">\(\mathbf{u}\)</span> is said to be a <em>unit vector</em> if it has unit length. That is, if <span class="math inline">\(|\mathbf{u}| = 1\)</span>. For any non-zero vector <span class="math inline">\(\mathbf{v}\)</span>, the vector
+<span class="math display">\[
+\mathbf{u}=\frac{1}{|\mathbf{v}|} \mathbf{v}
+\]</span>
+is a unit vector in the same direction as <span class="math inline">\(\mathbf{v}\)</span>.</p>
+<div class="example">
+<p><span id="exm:unitvec" class="example"><strong>Example 6.2  </strong></span>Let
+<span class="math display">\[\mathbf{v} = \begin{pmatrix} 2\\ -3\\ 6\end{pmatrix}\]</span></p>
+<p>Then the length of <span class="math inline">\(\mathbf{v}\)</span> is <span class="math inline">\(|\mathbf{v}| = \sqrt{2^2 + 3^2 + 6^2} = 7\)</span>. So the unit vector <span class="math inline">\(\mathbf{u}\)</span> parallel to <span class="math inline">\(\mathbf{v}\)</span> is
+<span class="math display">\[
+\mathbf{u}=\frac{1}{7}\begin{pmatrix} 2\\ -3\\ 6\end{pmatrix}.
+\]</span></p>
+</div>
+</div>
+<div id="vector-products" class="section level2 hasAnchor" number="6.4">
+<h2><span class="header-section-number">6.4</span> Vector products<a href="vectors.html#vector-products" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We have seen how to add vectors and how to multiply vectors with a scalar. In the following, we see how to multiply two vectors with each other.</p>
+<div id="dot-product" class="section level3 hasAnchor" number="6.4.1">
+<h3><span class="header-section-number">6.4.1</span> Dot product<a href="vectors.html#dot-product" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The <em>dot product</em> (also called the <em>scalar product</em> or <em>inner product</em>) of two vectors <span class="math inline">\(\mathbf{u}\)</span> and <span class="math inline">\(\mathbf{v}\)</span>, denoted <span class="math inline">\(\mathbf{u}\cdot\mathbf{v}\)</span>, is defined to be the quantity
+<span class="math display">\[\begin{equation}
+\mathbf{u}\cdot\mathbf{v} = |\mathbf{u}||\mathbf{v}|\cos(\theta)
+{#eq:dotprod}
+\end{equation}\]</span>
+where <span class="math inline">\(\theta\)</span> is the angle between the vectors <span class="math inline">\(\mathbf{u}\)</span> and <span class="math inline">\(\mathbf{v}\)</span>. Note that the symmetry of the <span class="math inline">\(\cos\)</span> function means it does not matter which direction we measure the angle, i.e. clockwise or anticlockwise.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:dotproj"></span>
+<img src="figures/dotproj.png" alt="The projection of $\mathbf{v}$ onto $\mathbf{u}$." width="40%" />
+<p class="caption">
+Figure 6.6: The projection of <span class="math inline">\(\mathbf{v}\)</span> onto <span class="math inline">\(\mathbf{u}\)</span>.
+</p>
+</div>
+<p>An immediate application of the scalar product is the projection of one vector onto another. Consider Figure <a href="vectors.html#fig:dotproj">6.6</a>, which shows the projection of the vector <span class="math inline">\(\mathbf{v}\)</span> onto the vector <span class="math inline">\(\mathbf{u}\)</span>. We drop a line from the tip of <span class="math inline">\(\mathbf{v}\)</span> running at right angles to the direction of the vector <span class="math inline">\(\mathbf{u}\)</span>. This is akin to thinking of the shadow that <span class="math inline">\(\mathbf{v}\)</span> would cast on the vector <span class="math inline">\(\mathbf{u}\)</span> if the Sun is shining at right angles to <span class="math inline">\(\mathbf{u}\)</span>. The length of the shadow is the projection of <span class="math inline">\(\mathbf{v}\)</span> onto <span class="math inline">\(\mathbf{u}\)</span>, or
+<span class="math display">\[|\mathbf{v}|\cos(\theta).\]</span>
+Since there was nothing special about choosing <span class="math inline">\(\mathbf{v}\)</span>, it is also true that the dot product is the projection of <span class="math inline">\(\mathbf{u}\)</span> onto <span class="math inline">\(\mathbf{v}\)</span>, that is
+<span class="math display">\[\begin{align*}
+    \mathbf{u} \cdot \mathbf{v} &amp;= |\mathbf{u}| \times \text{projection of $\mathbf{v}$ onto $\mathbf{u}$}\\
+    &amp;= |\mathbf{v}| \times \text{projection of $\mathbf{u}$ onto $\mathbf{v}$}.
+\end{align*}\]</span></p>
+<p>Note that if the dot product is <span class="math inline">\(\mathbf{u}\cdot\mathbf{v}=0\)</span> then either <span class="math inline">\(\cos(\frac{\pi}{2})=0\)</span> so that the two vectors are perpendicular, or one or both of <span class="math inline">\(\mathbf{u}\)</span> and <span class="math inline">\(\mathbf{v}\)</span> are the zero vector <span class="math inline">\(\mathbf{0}\)</span>. When the dot product is zero, we say that the two vectors are <em>orthogonal</em>.</p>
+<p>Some other properties of the dot product that follow from the definition are:</p>
+<ul>
+<li><span class="math inline">\(\mathbf{u} \cdot \mathbf{v} = \mathbf{v} \cdot \mathbf{u}\)</span>;</li>
+<li><span class="math inline">\((a\mathbf{u}) \cdot \mathbf{v} = \mathbf{u} \cdot (a\mathbf{v})= a(\mathbf{u} \cdot \mathbf{v})\)</span>;</li>
+<li><span class="math inline">\(\mathbf{u} \cdot (\mathbf{v} + \mathbf{w}) = \mathbf{u} \cdot \mathbf{v} + \mathbf{u} \cdot \mathbf{w}\)</span>;</li>
+<li><span class="math inline">\(\mathbf{u}\cdot\mathbf{u} = |\mathbf{u}|^2\)</span>.</li>
+</ul>
+<p>In Cartesian coordinates, the dot product of two vectors
+<span class="math display">\[\mathbf{u} = x\mathbf{i} + y\mathbf{j} + z\mathbf{k} \qquad\text{and}\qquad \mathbf{v} = a\mathbf{i} + b\mathbf{j} + c\mathbf{k}\]</span>
+can be calulated as
+<span class="math display">\[\begin{equation*}
+\mathbf{u}\cdot\mathbf{v} = (x\mathbf{i} + y\mathbf{j} + z\mathbf{k})\cdot(a\mathbf{i} + b\mathbf{j} + c\mathbf{k}) = xa + yb + zc.
+\end{equation*}\]</span></p>
+<p>To see this, consider the full product:
+<span class="math display">\[\begin{align*}
+\mathbf{u} \cdot \mathbf{v} &amp;= xa \mathbf{i} \cdot \mathbf{i} + xb \mathbf{i} \cdot \mathbf{j} + xc \mathbf{i} \cdot \mathbf{k} \\
+&amp;\phantom{={}} + ya \mathbf{j} \cdot \mathbf{i} + yb \mathbf{j} \cdot \mathbf{j} + yc \mathbf{j} \cdot \mathbf{k} \\
+&amp;\phantom{={}} + za \mathbf{k} \cdot \mathbf{i} + zb \mathbf{k} \cdot \mathbf{j} + zc \mathbf{k} \cdot \mathbf{k} \\
+&amp;= xa + yb + zc,
+\end{align*}\]</span>
+then noting that the unit vectors <span class="math inline">\(\mathbf{i}\)</span>, <span class="math inline">\(\mathbf{j}\)</span> and <span class="math inline">\(\mathbf{k}\)</span> have unit length and are perpendicular to one another, we first have by the property <span class="math inline">\(\mathbf{u}\cdot\mathbf{u}=|\mathbf{u}|^2\)</span> that
+<span class="math display">\[
+\mathbf{i}\cdot\mathbf{i} = \mathbf{j}\cdot\mathbf{j} =\mathbf{k}\cdot\mathbf{k}=1,
+\]</span>
+and secondly, by orthogonality each of the following products are zero
+<span class="math display">\[\begin{align*}
+\mathbf{i} \cdot \mathbf{j}&amp;,\; \mathbf{i} \cdot \mathbf{k}\\
+\mathbf{j} \cdot \mathbf{i}&amp;,\; \mathbf{j} \cdot \mathbf{k}\\
+\mathbf{k} \cdot \mathbf{i}&amp;,\; \mathbf{k} \cdot \mathbf{j}.
+\end{align*}\]</span></p>
+<!---
+### Cross product 
 
+
+## Geometry with vectors
+
+Vectors can make light work of some otherwise difficult geometrical calculations.
+--->
+
+</div>
 </div>
 </div>
             </section>

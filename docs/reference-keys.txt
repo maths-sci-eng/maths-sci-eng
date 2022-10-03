@@ -63,6 +63,8 @@ exm:vecadd
 fig:vecaddpara
 fig:scalarmult
 fig:coordvecs
+exm:unitvec
+fig:dotproj
 foundations
 numbers
 algebra
@@ -115,3 +117,5 @@ vectors
 vector-addition
 scalar-multiplication
 vectors-in-cartesian-coordinates
+vector-products
+dot-product
