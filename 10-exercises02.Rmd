@@ -47,7 +47,7 @@ These exercises cover the topics of Functions and Graphs.
     a. $\log(20)$
     a. $\log_{16}(100)$ - do this using your $\log_a(x)$ button and also using the change of base rule with your $\log$ or $\ln$ button.
 
-1. Calculate $2.586\times 3.182$ using logs: convert both values to logs, add, then convert back.
+1. Calculate $4321\times 9876$ using logs: convert both values to logs, add, then convert back.
 
 1. Simplify the following expression involving logarithms.
      $$\log_a(x^2)+3\log_a(x)-2\log_a(4x^2).$$
