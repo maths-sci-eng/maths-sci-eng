@@ -66,6 +66,13 @@ fig:coordvecs
 exm:unitvec
 eq:dotprod
 fig:dotproj
+exm:work
+thm:calcdot
+exm:dottriangle
+fig:crossprod
+exm:magnetic
+exm:crosstriangle
+fig:crosstriangle
 foundations
 numbers
 algebra
@@ -120,3 +127,4 @@ scalar-multiplication
 vectors-in-cartesian-coordinates
 vector-products
 dot-product
+cross-product

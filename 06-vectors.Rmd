@@ -11,6 +11,8 @@ knitr::include_graphics("figures/vector.png")
 ```
 
 
+Next we develop the mathematics of vectors. They are invaluable tools in science and engineering and in particular they can make light work of some otherwise difficult geometric calculations.
+
 ## Vector addition
 
 Geometrically, to add two vectors together we can place the tail of one vector at the head of the other and take the vector that goes from the starting point to the finish point.
@@ -167,9 +169,28 @@ An immediate application of the scalar product is the projection of one vector o
 $$|\mathbf{v}|\cos(\theta).$$
 Since there was nothing special about choosing $\mathbf{v}$, it is also true that the dot product is the projection of $\mathbf{u}$ onto $\mathbf{v}$, that is
 \begin{align*}
-	\mathbf{u} \cdot \mathbf{v} &= |\mathbf{u}| \times \text{projection of $\mathbf{v}$ onto $\mathbf{u}$}\\
-	&= |\mathbf{v}| \times \text{projection of $\mathbf{u}$ onto $\mathbf{v}$}.
+\mathbf{u} \cdot \mathbf{v} &= |\mathbf{u}| \times \text{projection of $\mathbf{v}$ onto $\mathbf{u}$}\\
+&= |\mathbf{v}| \times \text{projection of $\mathbf{u}$ onto $\mathbf{v}$}.
 \end{align*}
+
+
+::: {.example #work name="Work"}
+An application of the dot product in physics is to the concept of *work*. We want to consider how much work is required to push a block over a certain distance $x$. By calculation or measurement, we can determine the force $F$ required to push the block. Then, by definition, the work done by the force is
+$$W = Fx.$$
+This is sufficient if the force acts in the same direction as the motion of the block. If, however, this is not the case (maybe the block is constrained to move on a rail), then it is the component of the force in the direction of motion that is important.
+
+Suppose $\mathbf{F}$ is the force vector and $\mathbf{x}$ is the displacement vector of the block. Let $\theta$ be the angle between the two vectors. Then the component of $\mathbf{F}$ in the $\mathbf{x}$ direction is precisely the projection of $\mathbf{F}$ onto $\mathbf{x}$ (as described in Figure \@ref(fig:dotproj)). This is equal to
+$$
+|\mathbf{F}|\cos(\theta).
+$$
+So the total work done will be the product of this quantity with the magnitude of the displacement vector, that is
+\begin{align*}
+W &= |\mathbf{F}|\cos(\theta) \times |\mathbf{x}| \\
+&= |\mathbf{F}||\mathbf{x}|\cos(\theta) \\
+&= \mathbf{F}\cdot\mathbf{x},
+\end{align*}
+i.e. the dot product of $\mathbf{F}$ and $\mathbf{x}$.
+:::
 
 Note that if the dot product is $\mathbf{u}\cdot\mathbf{v}=0$ then either $\cos(\frac{\pi}{2})=0$ so that the two vectors are perpendicular, or one or both of $\mathbf{u}$ and $\mathbf{v}$ are the zero vector $\mathbf{0}$. When the dot product is zero, we say that the two vectors are *orthogonal*.
 
@@ -180,12 +201,15 @@ Some other properties of the dot product that follow from the definition are:
 * $\mathbf{u} \cdot (\mathbf{v} + \mathbf{w}) = \mathbf{u} \cdot \mathbf{v} + \mathbf{u} \cdot \mathbf{w}$;
 * $\mathbf{u}\cdot\mathbf{u} = |\mathbf{u}|^2$.
 
+
+::: {.theorem #calcdot name="Calculating the dot product"}
 In Cartesian coordinates, the dot product of two vectors
 $$\mathbf{u} = x\mathbf{i} + y\mathbf{j} + z\mathbf{k} \qquad\text{and}\qquad \mathbf{v} = a\mathbf{i} + b\mathbf{j} + c\mathbf{k}$$
 can be calulated as
 \begin{equation*}
 \mathbf{u}\cdot\mathbf{v} = (x\mathbf{i} + y\mathbf{j} + z\mathbf{k})\cdot(a\mathbf{i} + b\mathbf{j} + c\mathbf{k}) = xa + yb + zc.
 \end{equation*}
+:::
 
 To see this, consider the full product:
 \begin{align*}
@@ -206,11 +230,133 @@ and secondly, by orthogonality each of the following products are zero
 \end{align*}
 
 
-<!---
+::: {.example #dottriangle name="Geometry"}
+Consider a triangle in three-dimensional space whose vertices are given by the points
+$$
+A = (2,4,-1),\quad B = (0,3,1), \quad C = (-3,1,5).
+$$
+We compute the side lengths and angles for the triangle $ABC$ above.
+First note that
+$$
+\overrightarrow{AB} = \begin{pmatrix} 0\\ 3\\ 1\end{pmatrix} - \begin{pmatrix} 2\\ 4\\ -1\end{pmatrix}
+= \begin{pmatrix} -2\\ -1\\ 2\end{pmatrix}
+$$
+and similarly
+$$
+\overrightarrow{BC} = \begin{pmatrix} -3\\ -2\\ 4\end{pmatrix} \quad\text{and}\quad
+\overrightarrow{CA} = \begin{pmatrix} 5\\ 3\\ -6\end{pmatrix}.
+$$
+From this, we can immediately calculate the length of the sides, namely
+\begin{align*}
+AB &= |\overrightarrow{AB}| = \sqrt{(-2)^2 + (-1)^2 + 2^2} = 3, \\
+BC &= |\overrightarrow{BC}| = \sqrt{(-3)^2 + (-2)^2 + 4^2} = \sqrt{29}, \\
+CA &= |\overrightarrow{CA}| = \sqrt{5^2 + 3^2 + (-6)^2} = \sqrt{70}.
+\end{align*}
+The angles can then be computed using the dot product. For instance, the angle $\theta_A$ at the vertex $A$ can be computed via
+$$
+\cos(\theta_A) = \frac{\overrightarrow{AB}\cdot\overrightarrow{AC}}{AB\times AC}
+= -\frac{\overrightarrow{AB}\cdot\overrightarrow{CA}}{AB\times CA},
+$$
+thus
+$$
+\cos(\theta_A) = -\frac{-2\times 5 - 1\times 3 + 2\times(-6)}{3\sqrt{70}}
+= \frac{25}{3\sqrt{70}} = \frac{25\sqrt{70}}{3\times 70} = \frac{5\sqrt{70}}{42}.
+$$
+Similarly, we calculate
+$$
+\cos(\theta_B) = \frac{\overrightarrow{BA}\cdot\overrightarrow{BC}}{BA\times BC} = -\frac{16}{87}\sqrt{29}.
+$$
+and
+$$
+\cos(\theta_C) = \frac{\overrightarrow{CA}\cdot\overrightarrow{CB}}{CA\times CB} = \frac{9}{406}\sqrt{29}\sqrt{70}.
+$$
+:::
+
+
 ### Cross product 
 
+Let $\mathbf{u}$ and $\mathbf{v}$ be vectors in a three-dimensional space and let $\theta$ be the angle between the vectors. Note there are potentially two choices for the angle between two vectors: both $\theta$ and $2\pi - \theta$. Unlike the case of the dot product, we need to be clear about our choice of angle $\theta$. We choose the angle $\theta$ such that $0 \le \theta < \pi$. The *cross product* (or *vector product*) $\mathbf{u}\times\mathbf{v}$ of two vectors $\mathbf{u}$ and $\mathbf{v}$ in three-dimensional space is defined to be the (unique) vector of length
+$$
+|\mathbf{u}||\mathbf{v}|\sin(\theta)
+$$
+that is orthogonal to both the vectors $\mathbf{u}$ and $\mathbf{v}$, such that $\mathbf{u}, \mathbf{v}$ and $\mathbf{u}\times\mathbf{v}$ form a *right-handed system*.
 
-## Geometry with vectors
+The last part of the definition needs some explanation. There are always two possible directions that are perpendicular to $\mathbf{u}$ and to $\mathbf{v}$, one being the opposite of the other. When we say that a set of three vectors $\{\mathbf{u}, \mathbf{v}, \mathbf{w}\}$ forms a right-handed system, we mean that if take our right hand and point our thumb in the direction of $\mathbf{u}$ and our index finger in the direction of $\mathbf{v}$, then our  middle finger points (roughly) in the direction of $\mathbf{w}$. From Figure \@ref(fig:crossprod) we see that $\{\mathbf{u}, \mathbf{v}, \mathbf{u}\times\mathbf{v}\}$ form a right-handed system.
 
-Vectors can make light work of some otherwise difficult geometrical calculations.
---->
+```{r crossprod, fig.cap = "The cross product of $\\mathbf{u}$ and $\\mathbf{v}$.", fig.alt = "The cross product of $\\mathbf{u}$ and $\\mathbf{v}$.", out.width="40%"}
+knitr::include_graphics("figures/crossprod.png")
+```
+
+The cross product has the following properties:
+
+* $\mathbf{u}\times\mathbf{v} = -(\mathbf{v} \times \mathbf{u})$;
+* $\mathbf{u}\times\mathbf{v} = \mathbf{0}$ if and only if $\mathbf{u}$ and $\mathbf{v}$ are parallel, or $\mathbf{u} = \mathbf{0}$ or $\mathbf{v} = \mathbf{0}$;
+* $|\mathbf{u}\times\mathbf{v}| = |\mathbf{u}||\mathbf{v}|$ if and only if $\mathbf{u}$ and $\mathbf{v}$ are orthogonal;
+* $(a\mathbf{u})\times\mathbf{v} = \mathbf{u}\times(a\mathbf{v}) = a(\mathbf{u}\times\mathbf{v})$;
+* $\mathbf{u}\times(\mathbf{v}+\mathbf{w}) = \mathbf{u}\times\mathbf{v} + \mathbf{u}\times\mathbf{w}$.
+
+It follows that:
+$$
+\begin{array}{rclrclrcl}
+	\mathbf{i}\times\mathbf{j} &=& \mathbf{k}, \qquad & \mathbf{j}\times\mathbf{k} &=& \mathbf{i}, \qquad & \mathbf{k}\times\mathbf{i} &=& \mathbf{j},\\
+	\mathbf{j}\times\mathbf{i} &=& -\mathbf{k}, \qquad & \mathbf{k}\times\mathbf{j} &=& -\mathbf{i}, \qquad & \mathbf{i}\times\mathbf{k} &=& -\mathbf{j},\\
+	\mathbf{i}\times\mathbf{i} &=& \mathbf{0}, \qquad & \mathbf{j}\times\mathbf{j} &=& \mathbf{0}, \qquad & \mathbf{k}\times\mathbf{k} &=& \mathbf{0}.
+\end{array}
+$$
+
+Then we can compute the cross product of
+$$
+\mathbf{u} = u_1\mathbf{i} + u_2\mathbf{j} + u_3\mathbf{k} \qquad\text{and}\qquad \mathbf{v} = v_1\mathbf{i} + v_2\mathbf{j} + v_3\mathbf{k},
+$$
+as
+$$
+\mathbf{u} \times \mathbf{v} =  (u_2v_3 - u_3v_2)\mathbf{i} + (u_3v_1 - u_1v_3)\mathbf{j} + (u_1v_2 - u_2v_1)\mathbf{k}.
+$$
+
+An easy way to remember this is to compute the determinant:
+$$
+\mathbf{u}\times\mathbf{v} = \begin{vmatrix}  \mathbf{i} & \mathbf{j} & \mathbf{k}\\ u_1 & u_2 & u_3\\ v_1 & v_2 & v_3\end{vmatrix}.
+$$
+
+
+
+::: {.example #magnetic name="Magnetic fields"}
+The vector product occurs in many equations in physics. For instance, consider a charged particle moving through a magnetic field. Let the charge on the particle be $q$ Coulombs, let its velocity vector be $\mathbf{v}$ metres per second and let the magnetic field be $\mathbf{B}$ Teslas. Then the force $\mathbf{F}$ Newtons experienced by the particle is
+$$
+\textbf{F} = q\mathbf{v}\times\textbf{B}.
+$$
+This formula expresses mathematically the fact that the force experienced by the particle is perpendicular to its direction of motion and to the magnetic field.
+:::
+
+::: {.example #crosstriangle name="Triangle area"}
+What is the area of the triangle with vertices
+$$
+A = (2,4,-1), \qquad B = (0,3,1), \qquad C = (-3,1,5)?
+$$
+Note that this is the same triangle that we considered in Example \@ref{exm:dottriangle}, where we considered the lengths of the sides and the angles at the vertices.
+
+```{r crosstriangle, fig.cap = "Computing the area of a triangle via the vector product.", fig.alt = "Computing the area of a triangle via the vector product.", out.width="40%"}
+knitr::include_graphics("figures/crosstriangle.png")
+```   
+
+The area of a triangle is half its base times its height. In view of the diagram in Figure \@ref(fig:crosstriangle), the base is $|\overrightarrow{AB}|$ and the height is $|\overrightarrow{AC}| \sin(\theta_A)$, so the area of the triangle is
+$$
+\frac{1}{2} |\overrightarrow{AB}||\overrightarrow{AC}| \sin(\theta_A).
+$$
+This quantity can be computed in terms of the vector product as
+$$
+\frac{1}{2} |\overrightarrow{AB}\times\overrightarrow{AC}|.
+$$
+Using the determinant method for computing the vector product, we obtain
+\begin{align*}
+\overrightarrow{AB}\times\overrightarrow{AC}
+= \begin{vmatrix}  \mathbf{i} & \mathbf{j} & \mathbf{k}\\ -2 & -1 & 2\\ -5 & -3 & 6\end{vmatrix}
+= (-6 + 6)\mathbf{i} - (-12 + 10)\mathbf{j} + (6 - 5)\mathbf{k}
+= 2\mathbf{j} + \mathbf{k}.
+\end{align*}
+Thus,
+$$
+|\overrightarrow{AB}\times\overrightarrow{AC}| = \sqrt{2^2 + 1^2} = \sqrt{5},
+$$
+and we deduce that the area of the triangle $ABC$ is equal to $\frac{\sqrt{5}}{2}$.
+:::

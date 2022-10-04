@@ -23,7 +23,7 @@
 <meta name="author" content="Dr Mark Callaway" />
 
 
-<meta name="date" content="2022-10-03" />
+<meta name="date" content="2022-10-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -144,6 +144,7 @@
 <li class="chapter" data-level="6.4" data-path="vectors.html"><a href="vectors.html#vector-products"><i class="fa fa-check"></i><b>6.4</b> Vector products</a>
 <ul>
 <li class="chapter" data-level="6.4.1" data-path="vectors.html"><a href="vectors.html#dot-product"><i class="fa fa-check"></i><b>6.4.1</b> Dot product</a></li>
+<li class="chapter" data-level="6.4.2" data-path="vectors.html"><a href="vectors.html#cross-product"><i class="fa fa-check"></i><b>6.4.2</b> Cross product</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
@@ -182,6 +183,7 @@
 Figure 6.1: The vector <span class="math inline">\(\mathbf{v} = \overrightarrow{AB}\)</span> is the vector from <span class="math inline">\(A\)</span> to <span class="math inline">\(B\)</span>.
 </p>
 </div>
+<p>Next we develop the mathematics of vectors. They are invaluable tools in science and engineering and in particular they can make light work of some otherwise difficult geometric calculations.</p>
 <div id="vector-addition" class="section level2 hasAnchor" number="6.1">
 <h2><span class="header-section-number">6.1</span> Vector addition<a href="vectors.html#vector-addition" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Geometrically, to add two vectors together we can place the tail of one vector at the head of the other and take the vector that goes from the starting point to the finish point.</p>
@@ -334,9 +336,25 @@ Figure 6.6: The projection of <span class="math inline">\(\mathbf{v}\)</span> on
 <span class="math display">\[|\mathbf{v}|\cos(\theta).\]</span>
 Since there was nothing special about choosing <span class="math inline">\(\mathbf{v}\)</span>, it is also true that the dot product is the projection of <span class="math inline">\(\mathbf{u}\)</span> onto <span class="math inline">\(\mathbf{v}\)</span>, that is
 <span class="math display">\[\begin{align*}
-    \mathbf{u} \cdot \mathbf{v} &amp;= |\mathbf{u}| \times \text{projection of $\mathbf{v}$ onto $\mathbf{u}$}\\
-    &amp;= |\mathbf{v}| \times \text{projection of $\mathbf{u}$ onto $\mathbf{v}$}.
+\mathbf{u} \cdot \mathbf{v} &amp;= |\mathbf{u}| \times \text{projection of $\mathbf{v}$ onto $\mathbf{u}$}\\
+&amp;= |\mathbf{v}| \times \text{projection of $\mathbf{u}$ onto $\mathbf{v}$}.
 \end{align*}\]</span></p>
+<div class="example">
+<p><span id="exm:work" class="example"><strong>Example 6.3  (Work) </strong></span>An application of the dot product in physics is to the concept of <em>work</em>. We want to consider how much work is required to push a block over a certain distance <span class="math inline">\(x\)</span>. By calculation or measurement, we can determine the force <span class="math inline">\(F\)</span> required to push the block. Then, by definition, the work done by the force is
+<span class="math display">\[W = Fx.\]</span>
+This is sufficient if the force acts in the same direction as the motion of the block. If, however, this is not the case (maybe the block is constrained to move on a rail), then it is the component of the force in the direction of motion that is important.</p>
+<p>Suppose <span class="math inline">\(\mathbf{F}\)</span> is the force vector and <span class="math inline">\(\mathbf{x}\)</span> is the displacement vector of the block. Let <span class="math inline">\(\theta\)</span> be the angle between the two vectors. Then the component of <span class="math inline">\(\mathbf{F}\)</span> in the <span class="math inline">\(\mathbf{x}\)</span> direction is precisely the projection of <span class="math inline">\(\mathbf{F}\)</span> onto <span class="math inline">\(\mathbf{x}\)</span> (as described in Figure <a href="vectors.html#fig:dotproj">6.6</a>). This is equal to
+<span class="math display">\[
+|\mathbf{F}|\cos(\theta).
+\]</span>
+So the total work done will be the product of this quantity with the magnitude of the displacement vector, that is
+<span class="math display">\[\begin{align*}
+W &amp;= |\mathbf{F}|\cos(\theta) \times |\mathbf{x}| \\
+&amp;= |\mathbf{F}||\mathbf{x}|\cos(\theta) \\
+&amp;= \mathbf{F}\cdot\mathbf{x},
+\end{align*}\]</span>
+i.e. the dot product of <span class="math inline">\(\mathbf{F}\)</span> and <span class="math inline">\(\mathbf{x}\)</span>.</p>
+</div>
 <p>Note that if the dot product is <span class="math inline">\(\mathbf{u}\cdot\mathbf{v}=0\)</span> then either <span class="math inline">\(\cos(\frac{\pi}{2})=0\)</span> so that the two vectors are perpendicular, or one or both of <span class="math inline">\(\mathbf{u}\)</span> and <span class="math inline">\(\mathbf{v}\)</span> are the zero vector <span class="math inline">\(\mathbf{0}\)</span>. When the dot product is zero, we say that the two vectors are <em>orthogonal</em>.</p>
 <p>Some other properties of the dot product that follow from the definition are:</p>
 <ul>
@@ -345,12 +363,14 @@ Since there was nothing special about choosing <span class="math inline">\(\math
 <li><span class="math inline">\(\mathbf{u} \cdot (\mathbf{v} + \mathbf{w}) = \mathbf{u} \cdot \mathbf{v} + \mathbf{u} \cdot \mathbf{w}\)</span>;</li>
 <li><span class="math inline">\(\mathbf{u}\cdot\mathbf{u} = |\mathbf{u}|^2\)</span>.</li>
 </ul>
-<p>In Cartesian coordinates, the dot product of two vectors
+<div class="theorem">
+<p><span id="thm:calcdot" class="theorem"><strong>Theorem 6.1  (Calculating the dot product) </strong></span>In Cartesian coordinates, the dot product of two vectors
 <span class="math display">\[\mathbf{u} = x\mathbf{i} + y\mathbf{j} + z\mathbf{k} \qquad\text{and}\qquad \mathbf{v} = a\mathbf{i} + b\mathbf{j} + c\mathbf{k}\]</span>
 can be calulated as
 <span class="math display">\[\begin{equation*}
 \mathbf{u}\cdot\mathbf{v} = (x\mathbf{i} + y\mathbf{j} + z\mathbf{k})\cdot(a\mathbf{i} + b\mathbf{j} + c\mathbf{k}) = xa + yb + zc.
 \end{equation*}\]</span></p>
+</div>
 <p>To see this, consider the full product:
 <span class="math display">\[\begin{align*}
 \mathbf{u} \cdot \mathbf{v} &amp;= xa \mathbf{i} \cdot \mathbf{i} + xb \mathbf{i} \cdot \mathbf{j} + xc \mathbf{i} \cdot \mathbf{k} \\
@@ -368,14 +388,130 @@ and secondly, by orthogonality each of the following products are zero
 \mathbf{j} \cdot \mathbf{i}&amp;,\; \mathbf{j} \cdot \mathbf{k}\\
 \mathbf{k} \cdot \mathbf{i}&amp;,\; \mathbf{k} \cdot \mathbf{j}.
 \end{align*}\]</span></p>
-<!---
-### Cross product 
-
-
-## Geometry with vectors
-
-Vectors can make light work of some otherwise difficult geometrical calculations.
---->
+<div class="example">
+<p><span id="exm:dottriangle" class="example"><strong>Example 6.4  (Geometry) </strong></span>Consider a triangle in three-dimensional space whose vertices are given by the points
+<span class="math display">\[
+A = (2,4,-1),\quad B = (0,3,1), \quad C = (-3,1,5).
+\]</span>
+We compute the side lengths and angles for the triangle <span class="math inline">\(ABC\)</span> above.
+First note that
+<span class="math display">\[
+\overrightarrow{AB} = \begin{pmatrix} 0\\ 3\\ 1\end{pmatrix} - \begin{pmatrix} 2\\ 4\\ -1\end{pmatrix}
+= \begin{pmatrix} -2\\ -1\\ 2\end{pmatrix}
+\]</span>
+and similarly
+<span class="math display">\[
+\overrightarrow{BC} = \begin{pmatrix} -3\\ -2\\ 4\end{pmatrix} \quad\text{and}\quad
+\overrightarrow{CA} = \begin{pmatrix} 5\\ 3\\ -6\end{pmatrix}.
+\]</span>
+From this, we can immediately calculate the length of the sides, namely
+<span class="math display">\[\begin{align*}
+AB &amp;= |\overrightarrow{AB}| = \sqrt{(-2)^2 + (-1)^2 + 2^2} = 3, \\
+BC &amp;= |\overrightarrow{BC}| = \sqrt{(-3)^2 + (-2)^2 + 4^2} = \sqrt{29}, \\
+CA &amp;= |\overrightarrow{CA}| = \sqrt{5^2 + 3^2 + (-6)^2} = \sqrt{70}.
+\end{align*}\]</span>
+The angles can then be computed using the dot product. For instance, the angle <span class="math inline">\(\theta_A\)</span> at the vertex <span class="math inline">\(A\)</span> can be computed via
+<span class="math display">\[
+\cos(\theta_A) = \frac{\overrightarrow{AB}\cdot\overrightarrow{AC}}{AB\times AC}
+= -\frac{\overrightarrow{AB}\cdot\overrightarrow{CA}}{AB\times CA},
+\]</span>
+thus
+<span class="math display">\[
+\cos(\theta_A) = -\frac{-2\times 5 - 1\times 3 + 2\times(-6)}{3\sqrt{70}}
+= \frac{25}{3\sqrt{70}} = \frac{25\sqrt{70}}{3\times 70} = \frac{5\sqrt{70}}{42}.
+\]</span>
+Similarly, we calculate
+<span class="math display">\[
+\cos(\theta_B) = \frac{\overrightarrow{BA}\cdot\overrightarrow{BC}}{BA\times BC} = -\frac{16}{87}\sqrt{29}.
+\]</span>
+and
+<span class="math display">\[
+\cos(\theta_C) = \frac{\overrightarrow{CA}\cdot\overrightarrow{CB}}{CA\times CB} = \frac{9}{406}\sqrt{29}\sqrt{70}.
+\]</span></p>
+</div>
+</div>
+<div id="cross-product" class="section level3 hasAnchor" number="6.4.2">
+<h3><span class="header-section-number">6.4.2</span> Cross product<a href="vectors.html#cross-product" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Let <span class="math inline">\(\mathbf{u}\)</span> and <span class="math inline">\(\mathbf{v}\)</span> be vectors in a three-dimensional space and let <span class="math inline">\(\theta\)</span> be the angle between the vectors. Note there are potentially two choices for the angle between two vectors: both <span class="math inline">\(\theta\)</span> and <span class="math inline">\(2\pi - \theta\)</span>. Unlike the case of the dot product, we need to be clear about our choice of angle <span class="math inline">\(\theta\)</span>. We choose the angle <span class="math inline">\(\theta\)</span> such that <span class="math inline">\(0 \le \theta &lt; \pi\)</span>. The <em>cross product</em> (or <em>vector product</em>) <span class="math inline">\(\mathbf{u}\times\mathbf{v}\)</span> of two vectors <span class="math inline">\(\mathbf{u}\)</span> and <span class="math inline">\(\mathbf{v}\)</span> in three-dimensional space is defined to be the (unique) vector of length
+<span class="math display">\[
+|\mathbf{u}||\mathbf{v}|\sin(\theta)
+\]</span>
+that is orthogonal to both the vectors <span class="math inline">\(\mathbf{u}\)</span> and <span class="math inline">\(\mathbf{v}\)</span>, such that <span class="math inline">\(\mathbf{u}, \mathbf{v}\)</span> and <span class="math inline">\(\mathbf{u}\times\mathbf{v}\)</span> form a <em>right-handed system</em>.</p>
+<p>The last part of the definition needs some explanation. There are always two possible directions that are perpendicular to <span class="math inline">\(\mathbf{u}\)</span> and to <span class="math inline">\(\mathbf{v}\)</span>, one being the opposite of the other. When we say that a set of three vectors <span class="math inline">\(\{\mathbf{u}, \mathbf{v}, \mathbf{w}\}\)</span> forms a right-handed system, we mean that if take our right hand and point our thumb in the direction of <span class="math inline">\(\mathbf{u}\)</span> and our index finger in the direction of <span class="math inline">\(\mathbf{v}\)</span>, then our middle finger points (roughly) in the direction of <span class="math inline">\(\mathbf{w}\)</span>. From Figure <a href="vectors.html#fig:crossprod">6.7</a> we see that <span class="math inline">\(\{\mathbf{u}, \mathbf{v}, \mathbf{u}\times\mathbf{v}\}\)</span> form a right-handed system.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:crossprod"></span>
+<img src="figures/crossprod.png" alt="The cross product of $\mathbf{u}$ and $\mathbf{v}$." width="40%" />
+<p class="caption">
+Figure 6.7: The cross product of <span class="math inline">\(\mathbf{u}\)</span> and <span class="math inline">\(\mathbf{v}\)</span>.
+</p>
+</div>
+<p>The cross product has the following properties:</p>
+<ul>
+<li><span class="math inline">\(\mathbf{u}\times\mathbf{v} = -(\mathbf{v} \times \mathbf{u})\)</span>;</li>
+<li><span class="math inline">\(\mathbf{u}\times\mathbf{v} = \mathbf{0}\)</span> if and only if <span class="math inline">\(\mathbf{u}\)</span> and <span class="math inline">\(\mathbf{v}\)</span> are parallel, or <span class="math inline">\(\mathbf{u} = \mathbf{0}\)</span> or <span class="math inline">\(\mathbf{v} = \mathbf{0}\)</span>;</li>
+<li><span class="math inline">\(|\mathbf{u}\times\mathbf{v}| = |\mathbf{u}||\mathbf{v}|\)</span> if and only if <span class="math inline">\(\mathbf{u}\)</span> and <span class="math inline">\(\mathbf{v}\)</span> are orthogonal;</li>
+<li><span class="math inline">\((a\mathbf{u})\times\mathbf{v} = \mathbf{u}\times(a\mathbf{v}) = a(\mathbf{u}\times\mathbf{v})\)</span>;</li>
+<li><span class="math inline">\(\mathbf{u}\times(\mathbf{v}+\mathbf{w}) = \mathbf{u}\times\mathbf{v} + \mathbf{u}\times\mathbf{w}\)</span>.</li>
+</ul>
+<p>It follows that:
+<span class="math display">\[
+\begin{array}{rclrclrcl}
+    \mathbf{i}\times\mathbf{j} &amp;=&amp; \mathbf{k}, \qquad &amp; \mathbf{j}\times\mathbf{k} &amp;=&amp; \mathbf{i}, \qquad &amp; \mathbf{k}\times\mathbf{i} &amp;=&amp; \mathbf{j},\\
+    \mathbf{j}\times\mathbf{i} &amp;=&amp; -\mathbf{k}, \qquad &amp; \mathbf{k}\times\mathbf{j} &amp;=&amp; -\mathbf{i}, \qquad &amp; \mathbf{i}\times\mathbf{k} &amp;=&amp; -\mathbf{j},\\
+    \mathbf{i}\times\mathbf{i} &amp;=&amp; \mathbf{0}, \qquad &amp; \mathbf{j}\times\mathbf{j} &amp;=&amp; \mathbf{0}, \qquad &amp; \mathbf{k}\times\mathbf{k} &amp;=&amp; \mathbf{0}.
+\end{array}
+\]</span></p>
+<p>Then we can compute the cross product of
+<span class="math display">\[
+\mathbf{u} = u_1\mathbf{i} + u_2\mathbf{j} + u_3\mathbf{k} \qquad\text{and}\qquad \mathbf{v} = v_1\mathbf{i} + v_2\mathbf{j} + v_3\mathbf{k},
+\]</span>
+as
+<span class="math display">\[
+\mathbf{u} \times \mathbf{v} =  (u_2v_3 - u_3v_2)\mathbf{i} + (u_3v_1 - u_1v_3)\mathbf{j} + (u_1v_2 - u_2v_1)\mathbf{k}.
+\]</span></p>
+<p>An easy way to remember this is to compute the determinant:
+<span class="math display">\[
+\mathbf{u}\times\mathbf{v} = \begin{vmatrix}  \mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k}\\ u_1 &amp; u_2 &amp; u_3\\ v_1 &amp; v_2 &amp; v_3\end{vmatrix}.
+\]</span></p>
+<div class="example">
+<p><span id="exm:magnetic" class="example"><strong>Example 6.5  (Magnetic fields) </strong></span>The vector product occurs in many equations in physics. For instance, consider a charged particle moving through a magnetic field. Let the charge on the particle be <span class="math inline">\(q\)</span> Coulombs, let its velocity vector be <span class="math inline">\(\mathbf{v}\)</span> metres per second and let the magnetic field be <span class="math inline">\(\mathbf{B}\)</span> Teslas. Then the force <span class="math inline">\(\mathbf{F}\)</span> Newtons experienced by the particle is
+<span class="math display">\[
+\textbf{F} = q\mathbf{v}\times\textbf{B}.
+\]</span>
+This formula expresses mathematically the fact that the force experienced by the particle is perpendicular to its direction of motion and to the magnetic field.</p>
+</div>
+<div class="example">
+<p><span id="exm:crosstriangle" class="example"><strong>Example 6.6  (Triangle area) </strong></span>What is the area of the triangle with vertices
+<span class="math display">\[
+A = (2,4,-1), \qquad B = (0,3,1), \qquad C = (-3,1,5)?
+\]</span>
+Note that this is the same triangle that we considered in Example @ref{exm:dottriangle}, where we considered the lengths of the sides and the angles at the vertices.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:crosstriangle"></span>
+<img src="figures/crosstriangle.png" alt="Computing the area of a triangle via the vector product." width="40%" />
+<p class="caption">
+Figure 6.8: Computing the area of a triangle via the vector product.
+</p>
+</div>
+<p>The area of a triangle is half its base times its height. In view of the diagram in Figure <a href="vectors.html#fig:crosstriangle">6.8</a>, the base is <span class="math inline">\(|\overrightarrow{AB}|\)</span> and the height is <span class="math inline">\(|\overrightarrow{AC}| \sin(\theta_A)\)</span>, so the area of the triangle is
+<span class="math display">\[
+\frac{1}{2} |\overrightarrow{AB}||\overrightarrow{AC}| \sin(\theta_A).
+\]</span>
+This quantity can be computed in terms of the vector product as
+<span class="math display">\[
+\frac{1}{2} |\overrightarrow{AB}\times\overrightarrow{AC}|.
+\]</span>
+Using the determinant method for computing the vector product, we obtain
+<span class="math display">\[\begin{align*}
+\overrightarrow{AB}\times\overrightarrow{AC}
+= \begin{vmatrix}  \mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k}\\ -2 &amp; -1 &amp; 2\\ -5 &amp; -3 &amp; 6\end{vmatrix}
+= (-6 + 6)\mathbf{i} - (-12 + 10)\mathbf{j} + (6 - 5)\mathbf{k}
+= 2\mathbf{j} + \mathbf{k}.
+\end{align*}\]</span>
+Thus,
+<span class="math display">\[
+|\overrightarrow{AB}\times\overrightarrow{AC}| = \sqrt{2^2 + 1^2} = \sqrt{5},
+\]</span>
+and we deduce that the area of the triangle <span class="math inline">\(ABC\)</span> is equal to <span class="math inline">\(\frac{\sqrt{5}}{2}\)</span>.</p>
+</div>
 
 </div>
 </div>
