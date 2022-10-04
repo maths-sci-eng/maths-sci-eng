@@ -304,7 +304,7 @@ a^x&=b^{\log_b (a^x)} \quad \text{(note that $b^{\log_b y}=y$)} \\
 &=b^{x\log_b (a)}\\
 &=b^{kx},\quad \text{where }k=\log_b(a).
 \end{align*}
-The "natural" choice of base for mathematical use is $b=e$ and hence we usually only consider exponential functions in the form $e^{kx}$ where $k=\log_b(a)$.
+The "natural" choice of base for mathematical use is $b=e$ and hence we usually only consider exponential functions in the form $e^{kx}$ where $k=\ln(a)$.
 
 ### Logarthmic plots
 
