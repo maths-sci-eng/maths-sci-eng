@@ -1,6 +1,7 @@
 # Vectors
 
 In physics, we distiguish between *scalar* quantities and *vector* quantities:
+
 * Scalars are defined by a single numeric value. Examples include distance, speed, time, temperature, pressure, mass and energy.
 * Vectors have associated both a numeric value and a direction. Examples include displacement, velocity, acceleration, force, and momentum.
 
@@ -167,12 +168,10 @@ knitr::include_graphics("figures/dotproj.png")
 ```
 An immediate application of the scalar product is the projection of one vector onto another. Consider Figure \@ref(fig:dotproj), which shows the projection of the vector $\mathbf{v}$ onto the vector $\mathbf{u}$. We drop a line from the tip of $\mathbf{v}$ running at right angles to the direction of the vector $\mathbf{u}$. This is akin to thinking of the shadow that $\mathbf{v}$ would cast on the vector $\mathbf{u}$ if the Sun is shining at right angles to $\mathbf{u}$. The length of the shadow is the projection of $\mathbf{v}$ onto $\mathbf{u}$, or
 $$|\mathbf{v}|\cos(\theta).$$
-Since there was nothing special about choosing $\mathbf{v}$, it is also true that the dot product is the projection of $\mathbf{u}$ onto $\mathbf{v}$, that is
-\begin{align*}
-\mathbf{u} \cdot \mathbf{v} &= |\mathbf{u}| \times \text{projection of $\mathbf{v}$ onto $\mathbf{u}$}\\
-&= |\mathbf{v}| \times \text{projection of $\mathbf{u}$ onto $\mathbf{v}$}.
-\end{align*}
-
+We have:
+$$\mathbf{u} \cdot \mathbf{v} &= |\mathbf{u}| \times \text{projection of $\mathbf{v}$ onto $\mathbf{u}$}$$
+Since there was nothing special about choosing the projection onto $\mathbf{v}$ -- we could have chosen the projection onto $\mathbf{u}$ -- it is also true that:
+$$\mathbf{u} \cdot \mathbf{v}= |\mathbf{v}| \times \text{projection of $\mathbf{u}$ onto $\mathbf{v}$}.$$
 
 ::: {.example #work name="Work"}
 An application of the dot product in physics is to the concept of *work*. We want to consider how much work is required to push a block over a certain distance $x$. By calculation or measurement, we can determine the force $F$ required to push the block. Then, by definition, the work done by the force is

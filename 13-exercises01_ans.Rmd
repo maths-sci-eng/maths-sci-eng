@@ -1,0 +1,389 @@
+# Exercise Set 1 Answers {.unlisted .unnumbered}
+
+These exercises cover the topics of Algebra, Equations and Inequalities.
+
+1.  Simplify each of the following (*Hint*: use the rules of exponents where needed).
+    a.  $x = 3pq+5pr=2qr+qp-6rp$
+    b.  $y = 5l^2mn+2nl^2m-3mln^2+l^2nm+4n^2ml-nm^2$
+    c.  $z = \frac{(s^\frac{1}{3})^\frac{3}{4}\times (t^\frac{1}{4})^{-1}}{(t^\frac{1}{2}\times (s^{-\frac{1}{4}})^{-1})}$
+
+    Answers:
+
+    a.  We collect the so-called "like term" (if there are any):
+    \begin{align*}
+    Y_1 &= 3pq + 5pr - 2qr + qp -6rp = 3pq +qp +5pr - 6rp - 2qr \\
+    &= 4pq - pr - 2qr \quad\text{    we add and/or subtract "like terms"} 
+    \end{align*}
+
+    b. We collect the so-called "like term" (if there are any):
+    \begin{align}
+    Y_2 &= 5l^2 mn + 2nl^2m - 3mln^2 + l^2nm + 4n^2ml - nm^2\\
+    &= 5l^2 mn + 2nl^2m + l^2nm - 3mln^2 + 4n^2ml - nm^2\\
+    &= 8l^2 mn + n^2lm - nm^2 \quad\text{ we add and/or subtract "like terms"}
+    \end{align}
+
+    c. We first complete the calculation in both the numerator and the
+    denominator using the laws & rules of indices:
+    \begin{align}
+    Y_3 &=
+    \frac{(s^\frac{1}{3})^\frac{3}{4} \times (t^\frac{1}{4})^{-1}}{(t^\frac{1}{2})^4 \times (s^{-\frac{1}{4}})^{-1}}=\frac{s^{\tfrac{1}{3}\times\frac{3}{4}}\times t^{-\frac{1}{4}}}{t^{\frac{1}{2} \times 4}\times s^{\frac{1}{4}}}\\
+    &= \frac{s^\frac{1}{4}\times t^{-\frac{1}{4}}}{t^2 \times s^\frac{1}{4}}\quad \text{we treat the powers of the same base together using laws of indices}\\
+    &= s^{\frac{1}{4}-\frac{1}{4}} \times t^{-\frac{1}{4}-2} = 1 \times t^{-\frac{9}{4}} = \frac{1}{t^\frac{9}{4}}
+    \end{align}
+
+    It is best to write your final answer with positive exponents only.
+
+2.  Expand the brackets in each of the following and simplify the expression.
+
+    a.  $-4x(2x-y)(3x+2y)$
+    b.  $(a-2b)(2a-3b)(3a-4b)$
+    c.  $-\{-2[x-3(y-4)]-5(z+6)\}$
+    d.  $(v^3-v^2-2)(1-3v+2v^2)$
+
+    Answers:
+
+    a. We have three factors. First we multiply $-4x$ by $2x-y$, then we multiply the outcome by $(3x + 2y)$.
+    \begin{align*}
+    -4x(2x-y)(3x+2y) &= (-8x^2 + 4xy)(3x+2y)\\
+    & = -24x^3 - 4x^2y + 8xy^2.
+    \end{align*}
+
+    b. Again, we have three factors, we repeat the same process (make sure you simplify the outcome in each step, i.e. add/subtract like-terms):
+    \begin{align*}
+    (a-2b)(2a-3b)(3a-4b) &= (2a^2 - 3ab - 4ab + 6b^2)(3a - 4b)\\
+    &= (2a^2 - 7ab + 6b^2)(3a - 4b)\\
+    &= 6a^3 - 8a^2 b - 21a^2b + 28ab^2 + 18b^2a - 24b^3\\
+    &= 6a^3 - 29a^2b + 46b^2a - 24b^3
+    \end{align*}
+
+    c. We calculate the inner brackets first, then we remove the brackets. Lastly, we add/subtract like terms:
+    \begin{align*}
+    -\{ -2[x - 3(y-4)]- 5(z+6)\} &= - \{-2[x - 3y + 12] - 5(z+6)\}\\
+    &= - (-2x + 6y - 24 -5z -30)\\
+    &= -(-2x + 6y -5z -54)\\
+    &= 2x - 6y + 5z +54
+    \end{align*}
+
+    d.
+    \begin{align*}
+    (v^3 - v^2 - 2)(1 - 3v + 2v^2) &= v^3 - 3v^4 + 2v^5 - v^2 + 3v^3 - 2v^4 - 2 + 6v - 4v^2\\
+    &= 2v^5 - 5v^4 + 4v^3 - 5v^2 + 6v - 2
+    \end{align*}
+
+3.  Simplify each of the following.
+
+    a.  $\frac{p}{q^3}\div\frac{p^3}{q}$
+    b.  $\frac{a^2b}{2c}\times\frac{ac^2}{2b}\div\frac{b^2c}{2a}$
+    c.  $\frac{8x^{-3}\times 3x^2}{6x^{-4}}$
+    d.  $\frac{3x}{3x^2+6x}$
+
+    Answers:
+    a.
+    $$
+    \frac{p}{q^3} \times \frac{q}{p^3} = \frac{pq}{q^3 p^3} = \frac{1}{p^2 q^2}
+    $$
+
+    b. We first multiply the first two fractions, then we divide the outcome by the third
+    \begin{align*}
+    \left(\frac{a^2 b}{2c} \times \frac{ac^2}{2b}\right)\div \frac{b^2c}{2a} &= \frac{a^3 b c^2}{4cb}\div \frac{b^2 c}{2a}\\
+    &= \frac{a^3 b c^2}{4cb}\times \frac{2a}{b^2c}\\
+    &= \frac{2a^4 b c^2}{4b^3 c^2} = \frac{a^4}{2b^2}
+    \end{align*}
+
+    c. 
+    \begin{align*}
+    \frac{8x^{-3} \times 3x^2}{6x^{-4}} &= \frac{24x^{-3+2}}{6x^{-4}}\\
+    &= 4x^{-1+4}\\
+    &= 4x^3
+    \end{align*}
+
+    d. 
+    $$
+    \frac{3x}{3x^2 + 6x} = \frac{3x}{3x(x+2)} = \frac{1}{x+2}
+    $$
+
+4.  Factorise the following expressions.
+
+    a.  $18x^2y-12xy^2$
+    b.  $x^3+4x^2y-3xy^2-12y^3$
+    c.  $25x^2-4y^2$
+    d.  $3x^2-14x+8$
+    e.  $x^2+10x+25$
+
+    Answers:
+
+    a. We look for the common factors between the two terms, in this case $6xy$
+    $$
+    18x^2y - 12xy^2 = 6xy(3x-2y)
+    $$
+
+    b. This expression has 4 terms, we divide them into 2 groups each of 2 terms, then factorise these groups and use the difference of two squares to factorise the term with squares
+    \begin{align*}
+    x^3 + 4x^2y - 3xy^2 - 12y^3 &= x^2(x+4y) - 3y^2(x+4y)\\
+    &= (x+4y)(x^2-3y^2)\\
+    &= (x+4y)(x-\sqrt{3}y)(x+\sqrt{3}y)
+    \end{align*}
+    
+    c. This is another application of the difference between two squares identity $a^2 - b^2 = (a-b)(a+b)$
+    $$
+    25x^2 - 4y^2 = (5x+2y)(5x-2y)
+    $$
+    d. We are looking for two factors of $3\times 8 = 24$ with summation equals to -14. These factors are $-12$ and $-2$
+    \begin{align*}
+    3x^2 - 14x + 8 &= 3x^2 - 12x - 2x + 8\\
+    &= 3x(x-4) - 2(x-4) = (x-4)(3x-2)
+    \end{align*}
+    
+    e. Again, we are looking for two factors of 25 with summation equal to 10. Thus, these factors are 5 and 5
+    $$
+    x^2 + 10x + 25 = (x+5)(x+5) = (x+5)^2
+    $$
+
+4.  The characteristic equation of a perfect gas is given by $P V = mRT$
+    where $m$ is the mass, $P$ is the pressure, $V$ is the volume, $T$
+    is the temperature and $R$ is the universal gas constant. Make
+    temperature the subject of the formula.
+
+**Answer:**
+
+    $$ PV = mRT$$
+    Divide both sides by $mR$, then
+    $$ T = \frac{PV}{mR}$$
+
+5.  The airflow over a turbine blade causes drag $D$, which is given by
+    $D= \frac{\rho C v^2 A}{2}$, where $\rho$ is fluid density, $C$ is
+    the drag coefficient, $v$ is fluid velocity and $A$ is the frontal
+    area of the blade. Make the frontal area the subject of the formula.
+
+**Answer:**
+
+    First multiply both sides by 2, then divide both sides of the outcome by $\rho C v^2$
+    
+    \begin{align*}
+    D &= \frac{\rho C v^2 A}{2}\\
+    2D &= \rho C v^2 A\\
+    A &= \frac{2D}{\rho C v^2}
+    \end{align*}
+    
+
+
+
+6.  Make $b$ the subject of the following formula.
+    $$W=\frac{t\sqrt{a+b^2}}{2\pi}$$
+
+**Answer:**
+
+    First, multiply both sides by $2\pi$ and divide both sides by $t$, then square both sides and make $b^2$ the subject
+
+    \begin{align*}
+    W &= \frac{t\sqrt{a + b^2}}{2\pi}\\
+    \frac{2\pi}{t} &= \sqrt{a+b^2}\\
+    \left(\frac{2\pi}{t}\right)^2 &= a + b^2\\
+    b^2 &= \frac{4\pi^2}{t^2} - a
+    \end{align*}
+
+    Now it is necessary to take the square root of both sides, recalling that there is both a positive and a negative root:
+    $$
+    b = \pm \sqrt{\frac{4\pi^2}{t^2} - a}
+    $$
+
+
+7.  Solve the following quadratic equations by factorisation.
+
+    a.  $x^2-28x-60=0$
+    b.  $p^2=8p-15$
+    c.  $-2y^2(3+y^2)=(2y^2+2y-3)(-y^2+y-4)-2$
+
+    Answers:
+    
+    a. Factorise by inspection into the form $(x+)(x+b)$ where $ab = -60$ and $a + b = -28$
+    
+    \begin{align*}
+    x^2-28x-60 &= 0\\
+    (x-30)(x+2) & = 0\\
+    \Rightarrow  x=30, -2
+    \end{align*}
+    
+    b. First, put into quadratic form $ax^2 + bx + c = 0$ and then factorise by inspection
+    
+    \begin{align*}
+    p^2 = 8p - 18\\
+    p^2 - 8p + 15 &= 0\\
+    (p-3)(p-5) &= 0\\
+    \Rightarrow p = 3,5
+    \end{align*}
+    
+    c.Multiply out and group powers of $y$. Third and fourth powers cancel in this question.Then factorise by inspection, in this case into one term of the form $(3y+a)$ and one of the form $(y+b)$
+    
+    \begin{align*}
+    -2y^2(3+y^2) &= (2y^2 + 2y - 3)(-y^2 + y -4) -2\\
+    -6y^2 - 2y^4 &= -2y^4 + 2y^3 - 8y^2 - 2y^3 + 2y^2 - 8y = 3y^2 - 3y + 12 -2\\
+    3y^2 - 11y + 10 &= 0\\
+    (3y-5)(y-2)&=0\\
+    \Rightarrow y = 2,5
+    \end{align*}    
+        
+8.  Solve the following quadratic equations, giving results correct to 2 d.p.
+
+    a.  $4x^2+x-3=0$
+    b.  $x^2+x=5$
+    c.  $x+\frac{1}{x}=5$
+    
+    Answers:
+
+    These questions require the application of the quadratic formula: for a quadratic which can be put into the form $ax^2 + bx + c = 0$,
+    $$
+    x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+    $$
+
+    a. $4x^2 + x - 3$
+    
+    $$
+    x = \frac{-1 \pm \sqrt{1^2 - 4\times 4 \times (-3)}}{8}\\
+    x = 3.38, -3.63
+    $$
+    b. First, rearrange $x^2 + x = 5$ as $x^2 + x - 5 =0$, then apply the quadratic formula
+    $$
+    x = \frac{-1 \pm \sqrt{1^2 - 4\times 1 \times (-5)}}{2}\\
+    x = 1.79, -2.79
+    $$
+    c. First, rearrange $x + \frac{1}{x} = 5$ into $x^2 + 1 - 5 = 0$ and then apply the quadratic formula.
+    $$
+    x = \frac{5 \pm \sqrt{(-5)^2 - 4\times 1 \times 1}}{2}\\
+    x = 4.79, 0.21
+    $$
+    
+    
+9.  Solve the following sets of simultaneous equations.
+
+    a.  $3x+4y=7$, $5x+6y=11$
+    b.  $2x+y=7$, $x^2-xy=6$
+    c.  $x + y=2$, $x^2-xy+y^2 = 1$
+
+    Answers:
+
+    a. Because these simultaneous equations are linear in $x$ and $y$, they can be solved by multiplying the equations and adding or subtracting them to cancel one of $x$ or $y$. Here, they can be solved by multiplying the left equation by 5 and the right equation by 3, then subtracting to cancel the $x$ term:
+    $$
+    3x+4y = 7,\quad 5x + 6y = 11\\
+    15 x + 20y = 35,\quad 15x + 18y = 33\\
+    \text{subtracting the right equaltion from the left:}\\
+    2y = 2 \Rightarrow y=1,x=1
+    $$
+    It will be seen that this is equivalent to Gaussian elimination of matrices. This could also have been solved via direct substitution (e.g., $x = (7-4y)/3$), as the following are.
+
+    b. 
+    $$ 2x + y = 7,\quad x^2 - xy = 6\\
+    \Rightarrow y=7-2x \. \text{substitute into right hand equation}\\
+    x^2 - x(7-2x) = 6\\
+    x^2 - 7x + 2x^2 = 6\\
+    3x^2 - 7x - 6 = 0
+    $$
+    which can now be factorised by inspection to obtain the two solutions for $x$
+    $$
+    (3x+2)(x-3) = 0\\
+    \Rightarrow x = -\frac{2}{3},x = 3
+    $$
+    The value for $y$ must be calculated for both cases of $x$. It is simplest to use $y = 7 - 2x$. The solutions are:
+    $$
+    x = -\frac{2}{3},y=\frac{25}{3},\quad\text{and  }\, x = 3, y = 1
+    $$
+
+    c. As before, substitute one of $x$ or $y$ using the linear equation
+    $$
+    x+y = 2, \quad x^2 - xy + y^2 = 1\\
+    \Rightarrow x = 2-y,\quad (2-y)^2 - (2-y)y + y^2 = 1\\
+    4 - 4y^2 + y^2 - 2y + y^2 + y^2 = 1\\
+    y^2 + 2y - 3 = 0\\
+    (y+3)(y-1) = 0\\
+    y=1, -3
+    $$
+    and again, we must give $x$ for both cases. The two solutions are
+    $$
+    x=1,y=1\quad\text{and }x =5,y=-3
+    $$
+
+10. Solve the following inequalities.
+
+    a.  $7-3x>x-5$
+    b.  $x^2\ge 4$
+    c.  $x^2-x-6<0$
+    d.  $x^2-3x-12\le 2x+2$
+    e.  $\frac{2}{2x-1} > \frac{3}{3x+1}$
+    f.  $\frac{2x}{x-5}\le 3$
+    g.  $x^3-9x^2<0$
+
+
+    Answers:
+    a.
+    \begin{align*}
+    7-3x  &> x-5\\
+    13  &> 4x\\
+    x  &< \frac{13}{4}
+    \end{align*}
+
+    
+    b. Here, we must include both the positive and the negative solution to the square root:
+    \begin{align*}
+    x^2 &\geq 4\\
+    \pm x &\geq 2\\
+    x\geq 2 & x\leq -2
+    \end{align*}
+    It is often worth sketching the graph and examining the inequality to determine where the inequality is satisfied.
+    
+    c.
+    $$
+    x^2 - x - 6 < 0 \\
+    (x+2)(x-3) < 0
+    $$
+    The graph of $x^2$ will form a $\cup$ shape, so the parts below the axis are between the crossing points of $x = -2$ and $x=3$. So the inequality is satisfied for
+    $$
+    -2<x<3
+    $$
+    Note the use of strict inequalities $x<3$ and $x>-2$ because the inequality is $<0$ (as opposed to $\leq$).
+
+    d. Group terms to form a quadratic, find the solutions and determine whether the interval between them or outside of them satisfied the inequality:
+    \begin{align*}
+    x ^2 - 3x - 12 &\leq 2x + 2\\
+    x^2 - 5x - 14 &\leq 0\\
+    (x-7)(x+2)&\leq 0
+    \end{align*}
+    And the part of the curve below the axis is the range $-2\leq x \leq 7$
+  
+e. Do not multiply through by a variable, since at times the term will be negative and necessitate a flip of the inequality. Instead, subtract one side from both sides:
+
+    \begin{align*}
+    \frac{2}{2x-1} &> \frac{3}{3x+1}\\
+    \frac{2}{2x-2} - \frac{3}{3x+1} &> 0\\
+    \frac{2(3x+1) - 3(2x-1)}{(2x-1)(3x+1)} &> 0\\
+    \frac{5}{(2x-1)(3x+1)} &> 0
+    \end{align*}
+
+    In order for the inequality to hold, either both terms in the denominator are positive or both are negative.
+    $$
+    \text{positve case: }2x-1>0,\quad 3x+1 > 0\\
+    x > \frac{1}{2} \text{ and } x > \frac{1}{3}\\
+    x > \frac{1}{2}\\
+    \text{negative case: }2x-2 < 0, \quad 3x+1 < 0\\
+    x<\frac{1}{2} \text{ and } x < \frac{1}{3}\\
+    x < \frac{1}{3}
+    $$
+    So the final solution is $x > \frac{1}{2}$ and $x < \frac{1}{3}$.
+
+    f.
+    \begin{align*}
+    \frac{2x}{x-5} &\leq 3 \\
+    \frac{2x}{x-5} - 3 &\leq 0\\
+    \frac{2x - 3(x-5)}{x-5} & \leq 0\\
+    \frac{15-x}{x-5}&\leq 0
+    \end{align*}
+
+    Which will ony old if one of the numerator or denominator is negative. So the inequality is solved by $x\geq 15$ and $x\leq 5$.
+
+    g.
+    Here, a cubic is presented, but a factor of $x^2$ can be taken out
+    \begin{align*}
+    x^3 - 9x^2 &< 0 \\
+    x^2(x-9) &< 0\\
+    \end{align*}
+    The $x^2$ factor is always positive, so the whole inequality holds when $x-9$ is negative. Hence, $x<9$
+

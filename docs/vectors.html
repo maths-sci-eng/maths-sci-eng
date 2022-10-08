@@ -23,7 +23,7 @@
 <meta name="author" content="Dr Mark Callaway" />
 
 
-<meta name="date" content="2022-10-05" />
+<meta name="date" content="2022-10-08" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -175,9 +175,11 @@
             <section class="normal" id="section-">
 <div id="vectors" class="section level1 hasAnchor" number="6">
 <h1><span class="header-section-number">Chapter 6</span> Vectors<a href="vectors.html#vectors" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>In physics, we distiguish between <em>scalar</em> quantities and <em>vector</em> quantities:
-* Scalars are defined by a single numeric value. Examples include distance, speed, time, temperature, pressure, mass and energy.
-* Vectors have associated both a numeric value and a direction. Examples include displacement, velocity, acceleration, force, and momentum.</p>
+<p>In physics, we distiguish between <em>scalar</em> quantities and <em>vector</em> quantities:</p>
+<ul>
+<li>Scalars are defined by a single numeric value. Examples include distance, speed, time, temperature, pressure, mass and energy.</li>
+<li>Vectors have associated both a numeric value and a direction. Examples include displacement, velocity, acceleration, force, and momentum.</li>
+</ul>
 <p>We depict vectors by arrows whose length is proportional to the magnitude of the quantity in question and whose direction is that of the action of the quantity. In symbols, we will use bold typeface to indicate a vector, such as <span class="math inline">\(\mathbf{v}\)</span>, and we will denote a vector from point <span class="math inline">\(A\)</span> to <span class="math inline">\(B\)</span> by <span class="math inline">\(\overrightarrow{AB}\)</span>. See figure <a href="vectors.html#fig:vector">6.1</a>.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:vector"></span>
 <img src="figures/vector.png" alt="A vector $\mathbf{v}$ between points $A$ and $B$." width="40%" />
@@ -336,11 +338,10 @@ Figure 6.6: The projection of <span class="math inline">\(\mathbf{v}\)</span> on
 </div>
 <p>An immediate application of the scalar product is the projection of one vector onto another. Consider Figure <a href="vectors.html#fig:dotproj">6.6</a>, which shows the projection of the vector <span class="math inline">\(\mathbf{v}\)</span> onto the vector <span class="math inline">\(\mathbf{u}\)</span>. We drop a line from the tip of <span class="math inline">\(\mathbf{v}\)</span> running at right angles to the direction of the vector <span class="math inline">\(\mathbf{u}\)</span>. This is akin to thinking of the shadow that <span class="math inline">\(\mathbf{v}\)</span> would cast on the vector <span class="math inline">\(\mathbf{u}\)</span> if the Sun is shining at right angles to <span class="math inline">\(\mathbf{u}\)</span>. The length of the shadow is the projection of <span class="math inline">\(\mathbf{v}\)</span> onto <span class="math inline">\(\mathbf{u}\)</span>, or
 <span class="math display">\[|\mathbf{v}|\cos(\theta).\]</span>
-Since there was nothing special about choosing <span class="math inline">\(\mathbf{v}\)</span>, it is also true that the dot product is the projection of <span class="math inline">\(\mathbf{u}\)</span> onto <span class="math inline">\(\mathbf{v}\)</span>, that is
-<span class="math display">\[\begin{align*}
-\mathbf{u} \cdot \mathbf{v} &amp;= |\mathbf{u}| \times \text{projection of $\mathbf{v}$ onto $\mathbf{u}$}\\
-&amp;= |\mathbf{v}| \times \text{projection of $\mathbf{u}$ onto $\mathbf{v}$}.
-\end{align*}\]</span></p>
+We have:
+<span class="math display">\[\mathbf{u} \cdot \mathbf{v} &amp;= |\mathbf{u}| \times \text{projection of $\mathbf{v}$ onto $\mathbf{u}$}\]</span>
+Since there was nothing special about choosing the projection onto <span class="math inline">\(\mathbf{v}\)</span> – we could have chosen the projection onto <span class="math inline">\(\mathbf{u}\)</span> – it is also true that:
+<span class="math display">\[\mathbf{u} \cdot \mathbf{v}= |\mathbf{v}| \times \text{projection of $\mathbf{u}$ onto $\mathbf{v}$}.\]</span></p>
 <div class="example">
 <p><span id="exm:work" class="example"><strong>Example 6.3  (Work) </strong></span>An application of the dot product in physics is to the concept of <em>work</em>. We want to consider how much work is required to push a block over a certain distance <span class="math inline">\(x\)</span>. By calculation or measurement, we can determine the force <span class="math inline">\(F\)</span> required to push the block. Then, by definition, the work done by the force is
 <span class="math display">\[W = Fx.\]</span>
