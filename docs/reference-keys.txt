@@ -73,6 +73,7 @@ fig:crossprod
 exm:magnetic
 exm:crosstriangle
 fig:crosstriangle
+fig:complexsketch
 foundations
 numbers
 algebra
