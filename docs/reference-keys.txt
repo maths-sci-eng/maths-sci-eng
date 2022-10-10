@@ -73,6 +73,12 @@ fig:crossprod
 exm:magnetic
 exm:crosstriangle
 fig:crosstriangle
+fig:sim-lines
+exm:gaus1
+exm:3dsystem
+def:REF
+exm:zerorow
+exm:rectechelon
 fig:complexsketch
 foundations
 numbers
@@ -129,3 +135,8 @@ vectors-in-cartesian-coordinates
 vector-products
 dot-product
 cross-product
+linear
+lines-and-planes
+solving-linear-systems---gaussian-elimination
+echelon-form
+matrices

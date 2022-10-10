@@ -2,7 +2,7 @@
 
 A function $f$ can be thought of as a machine that takes an input value $x$ and returns an output value $y$. The output value $y$ corresponding to the input $x$ is also denoted by $f(x)$ (read "$f$ of $x$"). We most commonly encounter functions whose input is a real number and output is a real number, but there are many other types of functions in mathematics. We are familiar with plotting such functions on a graph, where we draw the coordinates $(x,f(x))$, or $(x,y)$, against perpendicular axes -- this is known as the *Cartesian coordinate system*. In this section we shall take a look at some useful functions, their graphs, and some of their other interesting properties.
 
-## Lines
+## Lines {#lines}
 Consider the set of coordinates $(x,y)$ that satisfy the equation
 $$ax+by+c=0$$
 for some fixed values $a,b$ and $c$. When $b\neq0$, solving the equation gives $y=-\dfrac{a}{b}x-\dfrac{c}{b}$, which is of the form

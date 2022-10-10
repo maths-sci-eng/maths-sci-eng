@@ -23,7 +23,7 @@
 <meta name="author" content="Dr Mark Callaway" />
 
 
-<meta name="date" content="2022-10-09" />
+<meta name="date" content="2022-10-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -147,12 +147,19 @@
 <li class="chapter" data-level="6.4.2" data-path="vectors.html"><a href="vectors.html#cross-product"><i class="fa fa-check"></i><b>6.4.2</b> Cross product</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
-<li class="chapter" data-level="" data-path="notation.html"><a href="notation.html"><i class="fa fa-check"></i>Notation</a></li>
+<li class="chapter" data-level="7" data-path="linear.html"><a href="linear.html"><i class="fa fa-check"></i><b>7</b> Systems of Linear Equations</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="linear.html"><a href="linear.html#lines-and-planes"><i class="fa fa-check"></i><b>7.1</b> Lines and planes</a></li>
+<li class="chapter" data-level="7.2" data-path="linear.html"><a href="linear.html#solving-linear-systems---gaussian-elimination"><i class="fa fa-check"></i><b>7.2</b> Solving linear systems - Gaussian elimination</a></li>
+<li class="chapter" data-level="7.3" data-path="linear.html"><a href="linear.html#echelon-form"><i class="fa fa-check"></i><b>7.3</b> Echelon Form</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="matrices.html"><a href="matrices.html"><i class="fa fa-check"></i><b>8</b> Matrices</a></li>
 <li class="chapter" data-level="" data-path="exercise-set-1.html"><a href="exercise-set-1.html"><i class="fa fa-check"></i>Exercise Set 1</a></li>
 <li class="chapter" data-level="" data-path="exercise-set-2.html"><a href="exercise-set-2.html"><i class="fa fa-check"></i>Exercise Set 2</a></li>
 <li class="chapter" data-level="" data-path="exercise-set-4.html"><a href="exercise-set-4.html"><i class="fa fa-check"></i>Exercise Set 4</a></li>
 <li class="chapter" data-level="" data-path="exercise-set-5.html"><a href="exercise-set-5.html"><i class="fa fa-check"></i>Exercise Set 5</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="chapter" data-level="" data-path="notation.html"><a href="notation.html"><i class="fa fa-check"></i>Notation</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -201,7 +208,7 @@ y-y_1=m(x-x_1).
 m=\frac{y_2-y_1}{x_2-x_1}
 \]</span>
 but there is a problem if <span class="math inline">\(x_2=x_1\)</span> and we have an “infinite” gradient – since <span class="math inline">\(x_1=x_2\)</span> this, of course, corresponds to a vertical line, which we can write as the equation <span class="math inline">\(x=x_1\)</span>.</p>
-<p>The form <span class="math inline">\(ax+by+c=0\)</span> is a general way to express any line in the plane and includes both vertical and non-vertical lines. The <span class="math inline">\(y=mx+d\)</span> form is useful when thinking about non-vertical lines as we can easily identify the gradient and intercept. In section <a href="#linear"><strong>??</strong></a> we will be using the more general form for solving simultaneous linear equations.</p>
+<p>The form <span class="math inline">\(ax+by+c=0\)</span> is a general way to express any line in the plane and includes both vertical and non-vertical lines. The <span class="math inline">\(y=mx+d\)</span> form is useful when thinking about non-vertical lines as we can easily identify the gradient and intercept. In section <a href="linear.html#linear">7</a> we will be using the more general form for solving simultaneous linear equations.</p>
 <div id="parallel-lines" class="section level3 hasAnchor" number="3.1.1">
 <h3><span class="header-section-number">3.1.1</span> Parallel lines<a href="functions-and-graphs.html#parallel-lines" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>A line makes an angle <span class="math inline">\(\theta\)</span> from the positive <span class="math inline">\(x\)</span>-axis, the <em>angle of inclination</em>. This is related to the gradient <span class="math inline">\(m\)</span> by
