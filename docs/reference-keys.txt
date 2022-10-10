@@ -135,7 +135,7 @@ vectors-in-cartesian-coordinates
 vector-products
 dot-product
 cross-product
-linear
+systems-of-linear-equations
 lines-and-planes
 solving-linear-systems---gaussian-elimination
 echelon-form

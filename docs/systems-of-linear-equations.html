@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 7 Systems of Linear Equations | Mathematics for Scientists and Engineers</title>
+  <meta name="description" content="Mathematics Lecture Notes for UoE Penryn Science and Engineering Disciplines." />
+  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 7 Systems of Linear Equations | Mathematics for Scientists and Engineers" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Mathematics Lecture Notes for UoE Penryn Science and Engineering Disciplines." />
+  <meta name="github-repo" content="maths-sci-eng/maths-sci-eng.github.io" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 7 Systems of Linear Equations | Mathematics for Scientists and Engineers" />
+  
+  <meta name="twitter:description" content="Mathematics Lecture Notes for UoE Penryn Science and Engineering Disciplines." />
+  
+
+<meta name="author" content="Dr Mark Callaway" />
+
+
+<meta name="date" content="2022-10-10" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="vectors.html"/>
+<link rel="next" href="matrices.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Mathematics for Scientists and Engineers</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="1" data-path="foundations.html"><a href="foundations.html"><i class="fa fa-check"></i><b>1</b> Foundations</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="foundations.html"><a href="foundations.html#numbers"><i class="fa fa-check"></i><b>1.1</b> Numbers</a></li>
+<li class="chapter" data-level="1.2" data-path="foundations.html"><a href="foundations.html#algebra"><i class="fa fa-check"></i><b>1.2</b> Algebra</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="foundations.html"><a href="foundations.html#exponents"><i class="fa fa-check"></i><b>1.2.1</b> Rules of Exponents</a></li>
+<li class="chapter" data-level="1.2.2" data-path="foundations.html"><a href="foundations.html#brackets"><i class="fa fa-check"></i><b>1.2.2</b> Brackets</a></li>
+<li class="chapter" data-level="1.2.3" data-path="foundations.html"><a href="foundations.html#simplifiying-expressions"><i class="fa fa-check"></i><b>1.2.3</b> Simplifiying Expressions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="equations-and-inequalities.html"><a href="equations-and-inequalities.html"><i class="fa fa-check"></i><b>2</b> Equations and Inequalities</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="equations-and-inequalities.html"><a href="equations-and-inequalities.html#equations"><i class="fa fa-check"></i><b>2.1</b> Equations</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="equations-and-inequalities.html"><a href="equations-and-inequalities.html#formulas"><i class="fa fa-check"></i><b>2.1.1</b> Formulas</a></li>
+<li class="chapter" data-level="2.1.2" data-path="equations-and-inequalities.html"><a href="equations-and-inequalities.html#conditional-equations"><i class="fa fa-check"></i><b>2.1.2</b> Conditional equations</a></li>
+<li class="chapter" data-level="2.1.3" data-path="equations-and-inequalities.html"><a href="equations-and-inequalities.html#quad-eqs"><i class="fa fa-check"></i><b>2.1.3</b> Quadratic equations</a></li>
+<li class="chapter" data-level="2.1.4" data-path="equations-and-inequalities.html"><a href="equations-and-inequalities.html#simultaneous-equations"><i class="fa fa-check"></i><b>2.1.4</b> Simultaneous equations</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="equations-and-inequalities.html"><a href="equations-and-inequalities.html#inequalities"><i class="fa fa-check"></i><b>2.2</b> Inequalities</a></li>
+<li class="chapter" data-level="2.3" data-path="equations-and-inequalities.html"><a href="equations-and-inequalities.html#common-mistakes"><i class="fa fa-check"></i><b>2.3</b> Common mistakes!</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="functions-and-graphs.html"><a href="functions-and-graphs.html"><i class="fa fa-check"></i><b>3</b> Functions and Graphs</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="functions-and-graphs.html"><a href="functions-and-graphs.html#lines"><i class="fa fa-check"></i><b>3.1</b> Lines</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="functions-and-graphs.html"><a href="functions-and-graphs.html#parallel-lines"><i class="fa fa-check"></i><b>3.1.1</b> Parallel lines</a></li>
+<li class="chapter" data-level="3.1.2" data-path="functions-and-graphs.html"><a href="functions-and-graphs.html#perpendicular-lines"><i class="fa fa-check"></i><b>3.1.2</b> Perpendicular lines</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="functions-and-graphs.html"><a href="functions-and-graphs.html#polynomials"><i class="fa fa-check"></i><b>3.2</b> Polynomials</a></li>
+<li class="chapter" data-level="3.3" data-path="functions-and-graphs.html"><a href="functions-and-graphs.html#rational-functions"><i class="fa fa-check"></i><b>3.3</b> Rational functions</a></li>
+<li class="chapter" data-level="3.4" data-path="functions-and-graphs.html"><a href="functions-and-graphs.html#root-functions"><i class="fa fa-check"></i><b>3.4</b> Root functions</a></li>
+<li class="chapter" data-level="3.5" data-path="functions-and-graphs.html"><a href="functions-and-graphs.html#trigonometric-functions"><i class="fa fa-check"></i><b>3.5</b> Trigonometric functions</a></li>
+<li class="chapter" data-level="3.6" data-path="functions-and-graphs.html"><a href="functions-and-graphs.html#exponentials-and-logarithms"><i class="fa fa-check"></i><b>3.6</b> Exponentials and logarithms</a>
+<ul>
+<li class="chapter" data-level="3.6.1" data-path="functions-and-graphs.html"><a href="functions-and-graphs.html#logarthmic-plots"><i class="fa fa-check"></i><b>3.6.1</b> Logarthmic plots</a></li>
+</ul></li>
+<li class="chapter" data-level="3.7" data-path="functions-and-graphs.html"><a href="functions-and-graphs.html#hyperbolic-functions"><i class="fa fa-check"></i><b>3.7</b> Hyperbolic functions</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="trigonometry.html"><a href="trigonometry.html"><i class="fa fa-check"></i><b>4</b> Trigonometry</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="trigonometry.html"><a href="trigonometry.html#pythagoras"><i class="fa fa-check"></i><b>4.1</b> Pythagoras</a></li>
+<li class="chapter" data-level="4.2" data-path="trigonometry.html"><a href="trigonometry.html#degrees-and-radians"><i class="fa fa-check"></i><b>4.2</b> Degrees and radians</a></li>
+<li class="chapter" data-level="4.3" data-path="trigonometry.html"><a href="trigonometry.html#trigonometric-ratios"><i class="fa fa-check"></i><b>4.3</b> Trigonometric ratios</a></li>
+<li class="chapter" data-level="4.4" data-path="trigonometry.html"><a href="trigonometry.html#sine-and-cosine-rules"><i class="fa fa-check"></i><b>4.4</b> Sine and cosine rules</a></li>
+<li class="chapter" data-level="4.5" data-path="trigonometry.html"><a href="trigonometry.html#trigonometric-waveforms"><i class="fa fa-check"></i><b>4.5</b> Trigonometric waveforms</a></li>
+<li class="chapter" data-level="4.6" data-path="trigonometry.html"><a href="trigonometry.html#trigonometric-identities"><i class="fa fa-check"></i><b>4.6</b> Trigonometric identities</a>
+<ul>
+<li class="chapter" data-level="4.6.1" data-path="trigonometry.html"><a href="trigonometry.html#pythagorean-identities"><i class="fa fa-check"></i><b>4.6.1</b> Pythagorean identities</a></li>
+<li class="chapter" data-level="4.6.2" data-path="trigonometry.html"><a href="trigonometry.html#compound-angle-formulae"><i class="fa fa-check"></i><b>4.6.2</b> Compound angle formulae</a></li>
+<li class="chapter" data-level="4.6.3" data-path="trigonometry.html"><a href="trigonometry.html#double-angle-formulae"><i class="fa fa-check"></i><b>4.6.3</b> Double angle formulae</a></li>
+<li class="chapter" data-level="4.6.4" data-path="trigonometry.html"><a href="trigonometry.html#product-to-sum-formulae"><i class="fa fa-check"></i><b>4.6.4</b> Product to sum formulae</a></li>
+<li class="chapter" data-level="4.6.5" data-path="trigonometry.html"><a href="trigonometry.html#sum-to-product-formulae"><i class="fa fa-check"></i><b>4.6.5</b> Sum to product formulae</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="complex.html"><a href="complex.html"><i class="fa fa-check"></i><b>5</b> Complex Numbers</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="complex.html"><a href="complex.html#i-and-complex-numbers"><i class="fa fa-check"></i><b>5.1</b> <span class="math inline">\(i\)</span> and complex numbers</a></li>
+<li class="chapter" data-level="5.2" data-path="complex.html"><a href="complex.html#complex-arithmetic"><i class="fa fa-check"></i><b>5.2</b> Complex arithmetic</a></li>
+<li class="chapter" data-level="5.3" data-path="complex.html"><a href="complex.html#the-argument-polar-and-exponential-form-for-complex-numbers"><i class="fa fa-check"></i><b>5.3</b> The argument, polar and exponential form for complex numbers</a></li>
+<li class="chapter" data-level="5.4" data-path="complex.html"><a href="complex.html#roots-of-complex-numbers"><i class="fa fa-check"></i><b>5.4</b> Roots of complex numbers</a></li>
+<li class="chapter" data-level="5.5" data-path="complex.html"><a href="complex.html#eitheta-and-trigonometric-identities"><i class="fa fa-check"></i><b>5.5</b> <span class="math inline">\(e^{i\theta}\)</span> and trigonometric identities</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="vectors.html"><a href="vectors.html"><i class="fa fa-check"></i><b>6</b> Vectors</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="vectors.html"><a href="vectors.html#vector-addition"><i class="fa fa-check"></i><b>6.1</b> Vector addition</a></li>
+<li class="chapter" data-level="6.2" data-path="vectors.html"><a href="vectors.html#scalar-multiplication"><i class="fa fa-check"></i><b>6.2</b> Scalar multiplication</a></li>
+<li class="chapter" data-level="6.3" data-path="vectors.html"><a href="vectors.html#vectors-in-cartesian-coordinates"><i class="fa fa-check"></i><b>6.3</b> Vectors in Cartesian coordinates</a></li>
+<li class="chapter" data-level="6.4" data-path="vectors.html"><a href="vectors.html#vector-products"><i class="fa fa-check"></i><b>6.4</b> Vector products</a>
+<ul>
+<li class="chapter" data-level="6.4.1" data-path="vectors.html"><a href="vectors.html#dot-product"><i class="fa fa-check"></i><b>6.4.1</b> Dot product</a></li>
+<li class="chapter" data-level="6.4.2" data-path="vectors.html"><a href="vectors.html#cross-product"><i class="fa fa-check"></i><b>6.4.2</b> Cross product</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="systems-of-linear-equations.html"><a href="systems-of-linear-equations.html"><i class="fa fa-check"></i><b>7</b> Systems of Linear Equations</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="systems-of-linear-equations.html"><a href="systems-of-linear-equations.html#lines-and-planes"><i class="fa fa-check"></i><b>7.1</b> Lines and planes</a></li>
+<li class="chapter" data-level="7.2" data-path="systems-of-linear-equations.html"><a href="systems-of-linear-equations.html#solving-linear-systems---gaussian-elimination"><i class="fa fa-check"></i><b>7.2</b> Solving linear systems - Gaussian elimination</a></li>
+<li class="chapter" data-level="7.3" data-path="systems-of-linear-equations.html"><a href="systems-of-linear-equations.html#echelon-form"><i class="fa fa-check"></i><b>7.3</b> Echelon Form</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="matrices.html"><a href="matrices.html"><i class="fa fa-check"></i><b>8</b> Matrices</a></li>
+<li class="chapter" data-level="" data-path="exercise-set-1.html"><a href="exercise-set-1.html"><i class="fa fa-check"></i>Exercise Set 1</a></li>
+<li class="chapter" data-level="" data-path="exercise-set-2.html"><a href="exercise-set-2.html"><i class="fa fa-check"></i>Exercise Set 2</a></li>
+<li class="chapter" data-level="" data-path="exercise-set-4.html"><a href="exercise-set-4.html"><i class="fa fa-check"></i>Exercise Set 4</a></li>
+<li class="chapter" data-level="" data-path="exercise-set-5.html"><a href="exercise-set-5.html"><i class="fa fa-check"></i>Exercise Set 5</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="chapter" data-level="" data-path="notation.html"><a href="notation.html"><i class="fa fa-check"></i>Notation</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Mathematics for Scientists and Engineers</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="systems-of-linear-equations" class="section level1 hasAnchor" number="7">
+<h1><span class="header-section-number">Chapter 7</span> Systems of Linear Equations<a href="systems-of-linear-equations.html#systems-of-linear-equations" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>So-called <em>linear equations</em> arise often in mathematical problems in science and engineering. In this chapter we will see a very useful method for solving simultaneous linear equations, known as <em>Gaussian elimination</em>. We’ll start by understanding the geometric nature of linear equations.</p>
+<div id="lines-and-planes" class="section level2 hasAnchor" number="7.1">
+<h2><span class="header-section-number">7.1</span> Lines and planes<a href="systems-of-linear-equations.html#lines-and-planes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>A linear equation is one of the form
+<span class="math display">\[a_1x_1+a_2x_2+\dotsb+a_nx_n=b\]</span>
+where the <span class="math inline">\(x_i\)</span>’s are variables, the <span class="math inline">\(a_i\)</span>’s are coefficients, <span class="math inline">\(b\)</span> is a constant and <span class="math inline">\(n\)</span> is the number of variables in the equation. For <span class="math inline">\(n=2\)</span>, we have an equation of the form
+<span class="math display">\[a_1x_1+a_2x_2=b\]</span>
+which we know to be the equation of a line in the Cartesian plane (see section <a href="functions-and-graphs.html#lines">3.1</a>, where we used the notation <span class="math inline">\(ax+by=c\)</span>). Suppose we have a pair of such equations. Then we could conveniently write them as
+<span class="math display">\[\begin{align*}
+a_{11}x_1+a_{12}x_2&amp;=b_1\\
+a_{21}x_1+a_{22}x_2&amp;=b_2
+\end{align*}\]</span>
+where now the first subscipt <span class="math inline">\(i\)</span> on the <span class="math inline">\(a_{ij}\)</span>’s and <span class="math inline">\(b_i\)</span>’s denotes the equation it belongs to and the second subscipt <span class="math inline">\(j\)</span> denotes the variable it belongs to. If we need to solve these equations to find the values of <span class="math inline">\(x_1\)</span> and <span class="math inline">\(x_2\)</span> that satisfy both equations simultaneously, then we call this a <em>system of linear simultaneous equations</em>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:sim-lines"></span>
+<iframe src="https://www.desmos.com/calculator/inagw05txf" width="672" height="400px" data-external="1">
+</iframe>
+<p class="caption">
+Figure 7.1: The two intersecting lines from example (exm:gaus1).
+</p>
+</div>
+<p>Geometrically, a solution to the equations corresponds to those coordinates <span class="math inline">\((x_1,x_2)\)</span> where the lines meet – these are values of <span class="math inline">\(x_1\)</span> and <span class="math inline">\(x_2\)</span> that satisfy both equations <em>simultaneously</em> – see figure (fig:sim-lines). We therefore have three different scenarios for the solutions of such equations.</p>
+<ol style="list-style-type: decimal">
+<li>Most of the time, two lines in the plane will cross at exactly one point, hence we have just <strong>one solution</strong> (one pair of coordinates <span class="math inline">\((x_1,x_2)\)</span>).</li>
+<li>It is possible that both lines are parallel to one another, with different axis intercepts. In this case, the lines never meet – there are <strong>no solutions</strong>.</li>
+<li>Finally, it is possible that the two equations actually describe the same line. In this case, any pair of coordinates <span class="math inline">\((x_1,x_2)\)</span> that lies on the (common) line is a solution – there are <strong>infinitely many solutions</strong>.</li>
+</ol>
+<p>This idea extends to having more equations. For example, if we have a system of three equations in two variables:
+<span class="math display">\[\begin{align*}
+a_{11}x_1+a_{12}x_2&amp;=b_1\\
+a_{21}x_1+a_{22}x_2&amp;=b_2\\
+a_{31}x_1+a_{32}x_2&amp;=b_3
+\end{align*}\]</span></p>
+<p>Then it is possible that:</p>
+<ol style="list-style-type: decimal">
+<li>All three lines will cross at exactly one point, hence we have just <strong>one solution</strong>.</li>
+<li>The three lines don’t cross at a common point – there are <strong>no solutions</strong>. This is the most probable scenario in this set-up: whilst any two of the lines might cross at a point, we need all three to cross at the same point in order for there to be a solution to the simultaneous equations.</li>
+<li>Finally, it is possible that the three equations actually describe the same line and again there are <strong>infinitely many solutions</strong>.</li>
+</ol>
+<p>When there are more equations than variables, the system is sometimes called <em>overdetermined</em>, since then we usually have scenario 2 above where trying to satsify the contraints impossed by the three equations is not possible. On the other hand, a system with less equations is sometimes called “underdetermined”, since in these cases we usually have an infinite number of solutions. For example, if we had a system with just one equation in two variables
+<span class="math display">\[\begin{align*}
+a_{11}x_1+a_{12}x_2&amp;=b_1\\
+\end{align*}\]</span>
+then all points <span class="math inline">\((x_1,x_2)\)</span> lying on this line are solutions.</p>
+<p>We can extend these ideas to higher dimensional systems, i.e. a higher number of variables. For example, if we have three equations in three variables</p>
+<p><span class="math display">\[\begin{align*}
+a_{11}x_1+a_{12}x_2+a_{13}x_3&amp;=b_1\\
+a_{21}x_1+a_{22}x_2+a_{23}x_3&amp;=b_2\\
+a_{31}x_1+a_{32}x_2+a_{33}x_3&amp;=b_3
+\end{align*}\]</span></p>
+<p>then each equation describes a <em>plane</em> in 3-dimensional Cartesian coordinates. Now we have:</p>
+<ol style="list-style-type: decimal">
+<li>A unique solution <span class="math inline">\((x_1,x_2,x_3)\)</span> if all three planes cross at a single point – the most likely scenario.</li>
+<li>No solutions if none of the planes cross at a common point – think about all the ways this could happen, there are more ways than in two dimensions!</li>
+<li>Infinetely many solutions if all three planes intersect along a line or all are the same plane – again, think about the ways this could happen!</li>
+</ol>
+<p>You should also think about the meaning of overdetermined and underdetermined systems in 3-dimensions and how they look geometrically. We can of course extend these ideas to as many variables and equations as we wish: a linear equation in <span class="math inline">\(n\)</span> variables represents a <em>hyperplane</em> in <span class="math inline">\(n\)</span>-dimensional space, which is a subspace with dimension <span class="math inline">\(n-1\)</span>, but is impossible for us to directly visualise things in dimensions greater than 3!</p>
+</div>
+<div id="solving-linear-systems---gaussian-elimination" class="section level2 hasAnchor" number="7.2">
+<h2><span class="header-section-number">7.2</span> Solving linear systems - Gaussian elimination<a href="systems-of-linear-equations.html#solving-linear-systems---gaussian-elimination" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>There are a number of different approaches to solving linear equations. They all ultimately amount to the same thing, but some methods are more straighforward or computationally efficient depending on the situation. In example <a href="equations-and-inequalities.html#exm:simul-lin">2.4</a> we use rearrangement and substitution to solve
+<span class="math display">\[\begin{align*}
+3x_1+2x_2&amp;=5\\
+x_1-4x_2&amp;=1.
+\end{align*}\]</span></p>
+<p>Now we will instead add and subtract multiples of each equation to reduce them to the solution.</p>
+<div class="example">
+<p><span id="exm:gaus1" class="example"><strong>Example 7.1  </strong></span>Solve
+<span class="math display">\[\begin{align*}
+3x_1+2x_2&amp;=5\\
+x_1-4x_2&amp;=1.
+\end{align*}\]</span></p>
+<p>First, lets swap the order of the equations so that the coefficient of <span class="math inline">\(x_1\)</span> in the first equation is <span class="math inline">\(1\)</span>
+<span class="math display">\[\begin{align*}
+x_1-4x_2&amp;=1\\
+3x_1+2x_2&amp;=5.
+\end{align*}\]</span>
+Next, we subtract 3 times the first equation from the second to eliminate <span class="math inline">\(x_1\)</span> from the second equation. The second equation becomes
+<span class="math display">\[\begin{align*}
+3x_1+2x_2-3(x_1-4x_2)&amp;=5-3\times 1\\
+14x_2&amp;=2
+\end{align*}\]</span>
+so we have the equivalent system
+<span class="math display">\[\begin{align*}
+x_1-4x_2&amp;=1\\
+14x_2&amp;=2.
+\end{align*}\]</span>
+Now divide the second equation by 14
+<span class="math display">\[\begin{align*}
+x_1-4x_2&amp;=1\\
+x_2&amp;=\frac{1}{7}.
+\end{align*}\]</span>
+Add 4 times the second equation to the first to eliminate <span class="math inline">\(x_2\)</span> from the first equation
+<span class="math display">\[\begin{align*}
+x_1-4x_2+4x_2&amp;=1+\frac{4}{7}\\
+x_2&amp;=\frac{1}{7}.
+\end{align*}\]</span>
+and hence we have the solution
+<span class="math display">\[\begin{align*}
+x_1&amp;=\frac{11}{7}\\
+x_2&amp;=\frac{1}{7}.
+\end{align*}\]</span></p>
+</div>
+<p>Note that in the above example, it is the coefficients <span class="math inline">\(a_{ij}\)</span> and <span class="math inline">\(b_i\)</span> that we are manipulating – the <span class="math inline">\(x_j\)</span>’s just came along for the ride. So, let’s simplify things by just writing down the coefficients in the system of equations in a table as follows:
+<span class="math display">\[\left(\begin{array}{rr|r}
+3&amp;2\\
+1&amp;-4
+\end{array}
+\right).
+\]</span>
+This is called the <em>matrix of coefficients</em>. We also need to keep track of the right-hand side of the equation, so we add this as another column separated by a vertical line:
+<span class="math display">\[\left(\begin{array}{rr|r}
+3&amp;2&amp;5\\
+1&amp;-4&amp;1
+\end{array}
+\right).
+\]</span>
+We call this the <em>augmented matrix</em>. Now in solving the system of equations, we simply add/subtract multiples of rows of this augmented matrix. Labelling each row as <span class="math inline">\(R_1\)</span> and <span class="math inline">\(R_2\)</span> we perform the following operations:</p>
+<ol style="list-style-type: decimal">
+<li><p>swap rows 1 and 2: <span class="math inline">\(R_1\leftrightarrow R_2\)</span>
+<span class="math display">\[\left(\begin{array}{rr|r}
+1&amp;-4&amp;1\\
+3&amp;2&amp;5
+\end{array}
+\right).
+\]</span></p></li>
+<li><p>subtract 3 times row 1 from row 2: <span class="math inline">\(R_2 \to R_2-3R_1\)</span>
+<span class="math display">\[\left(\begin{array}{rr|r}
+1&amp;-4&amp;1\\
+0&amp;14&amp;2
+\end{array}
+\right).
+\]</span></p></li>
+<li><p>divide row 2 by 14: <span class="math inline">\(R_2\to \frac{1}{14}R_2\)</span>
+<span class="math display">\[\left(\begin{array}{rr|r}
+1&amp;-4&amp;1\\
+0&amp;1&amp;\frac{1}{7}
+\end{array}
+\right).
+\]</span></p></li>
+<li><p>add 4 times the second row to the first: <span class="math inline">\(R_1 \to R_1+4 R_2\)</span>
+<span class="math display">\[\left(\begin{array}{rr|r}
+1&amp;0&amp;\frac{11}{7}\\
+0&amp;1&amp;\frac{1}{7}
+\end{array}
+\right)
+\]</span></p></li>
+</ol>
+<p>This represents
+<span class="math display">\[\begin{align*}
+1\times x_1 + 0 \times x_2 &amp;=x_1= \frac{11}{7}\\
+0\times x_1 + 1 \times x_2 &amp;=x_2= \frac{1}{7}\\
+\end{align*}\]</span>
+that is, we can just read off the solutions in the right-most column. This method is known as Gaussian<a href="#fn9" class="footnote-ref" id="fnref9"><sup>9</sup></a> elimination and provides a systematic way to solve simultaneous linear equations. Note that each step in the above process is reversible. For instance, the operation
+<span class="math display">\[R_1 \to R_1 + 4R_2\]</span>
+can be reversed by performing
+<span class="math display">\[R_1 \to R_1 - 4R_2.\]</span>
+This means that the final set of equations produced by Gaussian elimination is equivalent to the original set of equations and therefore has the same set of solutions.</p>
+<p>No matter the number of variables or equations, the aim is to reduce the coefficient matrix to a diagonal of <span class="math inline">\(1\)</span>’s (or as close as possible, we’ll clarify this shortly) and <span class="math inline">\(0\)</span>’s everywhere else, like so
+<span class="math display">\[\left(\begin{array}{rrrr|r}
+1&amp;0&amp;\dotsb&amp;0&amp;\omega_1\\
+0&amp;1&amp;\dotsb&amp;0&amp;\omega_2\\
+\vdots&amp;&amp;\ddots&amp;\vdots&amp;\vdots\\
+0&amp;0&amp;\dotsb&amp;1&amp;\omega_n
+\end{array}
+\right),
+\]</span>
+then read off the solutions as <span class="math inline">\(x_1=\omega_1, x_2=\omega_2,\dotsc, x_n=\omega_n\)</span> from the right hand column.</p>
+<p>The following <em>elementary row operations (EROs)</em> comprise all operations required for Gaussian elimination:</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(R_i \to R_i + \alpha R_k\)</span>, where <span class="math inline">\(k \neq i\)</span> and <span class="math inline">\(\alpha \neq 0\)</span> is some scalar;</li>
+<li><span class="math inline">\(R_i \to \alpha R_i\)</span>, where <span class="math inline">\(\alpha \neq 0\)</span> is some scalar;</li>
+<li><span class="math inline">\(R_i \leftrightarrow R_k\)</span>, where <span class="math inline">\(k\neq i\)</span>, denotes the swapping of the <span class="math inline">\(i\)</span>-th and <span class="math inline">\(k\)</span>-th rows.</li>
+</ol>
+<p>We now present a sketch of the full Gaussian elimination procedure using these EROs. First, note that we call the first non-zero entry (reading from left to right) in any row of a matrix the <em>leading entry</em>. A leading entry will always be used as a <em>pivot</em>, where a pivot is an element used to zero-out the other entries in the same column as the pivot.</p>
+<ol style="list-style-type: decimal">
+<li>select the leading entry in the top row as a pivot;</li>
+<li>perform EROs to eliminate the entries below the pivot;</li>
+<li>move down to the next row and continue the process;</li>
+<li>having reached the bottom row, work back up again, that is:</li>
+<li>select the bottom right entry in the matrix of coefficients as the pivot;</li>
+<li>perform EROs to eliminate the entries above the pivot;</li>
+<li>move to the row above and continue the process;</li>
+<li>having reached the top row, stop and read off the solutions.</li>
+</ol>
+<p>Let’s have a look at another example applying these steps, this time in 3-dimensions.</p>
+<div class="example">
+<p><span id="exm:3dsystem" class="example"><strong>Example 7.2  </strong></span>Solve the system of equations
+<span class="math display">\[\begin{align*}
+x+y+z&amp;=3,\\
+2x+3y+z&amp;=10, \\
+3x-y+2z&amp;=-2.
+\end{align*}\]</span></p>
+<p>We start by writing down the augmented matrix:</p>
+<p><span class="math display">\[
+\left(\begin{array}{rrr|r}
+1 &amp; 1 &amp; 1 &amp; 3 \\
+2 &amp; 3 &amp; 1 &amp; 10 \\
+3 &amp; -1 &amp; 2 &amp; -2
+\end{array}\right).
+\]</span>
+We select the top-left hand entry of the augmented matrix as a <em>pivot</em>. We eliminate the entries in the same column that lie below the pivot, that is
+<span class="math display">\[\require{enclose}
+\begin{array}{l}
+\phantom{\enclose{circle}{1}}\quad \\
+R_2 \to R_2 - 2R_1\colon \quad\\
+R_3 \to R_3 - 3R_1\colon \quad
+\end{array}
+\left(\begin{array}{crr|r}
+\enclose{circle}{1} &amp; 1  &amp; 1  &amp; 3 \\
+0           &amp; 1  &amp; -1 &amp; 4 \\
+0           &amp; -4 &amp; -1 &amp; -11
+\end{array}\right).
+\]</span>
+Then we select the first non-zero entry in the second row as our pivot and eliminate the entry below it, to obtain
+<span class="math display">\[
+\begin{array}{l}
+\quad \\
+\phantom{\enclose{circle}{1}} \quad\\
+R_3 \to R_3 + 4R_2\colon \quad
+\end{array}
+\left(\begin{array}{rcr|r}
+1 &amp; 1           &amp; 1  &amp; 3 \\
+0 &amp; \enclose{circle}{1} &amp; -1 &amp; 4 \\
+0 &amp; 0           &amp; -5 &amp; 5
+\end{array}\right).
+\]</span>
+Next perform
+<span class="math display">\[
+\begin{array}{l}
+\quad \\
+\quad\\
+R_3 \to -\frac{1}{5}R_3\colon \quad
+\end{array}
+\left(
+\begin{array}{rrr|r}
+1 &amp; 1 &amp; 1 &amp; 3, \\
+0 &amp; 1 &amp; -1&amp; 4, \\
+0 &amp; 0 &amp;  1&amp; -1.
+\end{array}\right).
+\]</span>
+We continue, similarly to the steps above, by eliminating the entries above the pivot in the bottom row.
+<span class="math display">\[
+\begin{array}{l}
+R_1 \to R_1 - R_3\colon \quad \\
+R_2 \to R_2 + R_3\colon \quad \\
+\phantom{\enclose{circle}{1}}\quad
+\end{array}
+\left(\begin{array}{rrc|r}
+1 &amp; 1 &amp; 0           &amp; 4 \\
+0 &amp; 1 &amp; 0           &amp; 3 \\
+0 &amp; 0 &amp; \enclose{circle}{1} &amp;-1
+\end{array}\right).
+\]</span>
+Finally, we eliminate the second column using the <span class="math inline">\(1\)</span> in the second row as a pivot, that is
+<span class="math display">\[
+\begin{array}{l}
+R_1 \to R_1 - R_2\colon \quad \\
+\phantom{\enclose{circle}{1}}\quad \\
+\quad
+\end{array}
+\left(\begin{array}{rcr|r}
+1 &amp; 0           &amp; 0 &amp; 1 \\
+0 &amp; \enclose{circle}{1} &amp; 0 &amp; 3 \\
+0 &amp; 0           &amp; 1 &amp; -1
+\end{array}\right).
+\]</span>
+We read off the solution <span class="math inline">\((x,y,z) = (1,3,-1)\)</span>.</p>
+</div>
+</div>
+<div id="echelon-form" class="section level2 hasAnchor" number="7.3">
+<h2><span class="header-section-number">7.3</span> Echelon Form<a href="systems-of-linear-equations.html#echelon-form" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Recall that in general there may be one, none or infinitely many solutions to a system of linear equations. We now see what happens in Guassian elimination in these scenarios. When following the proceedure of Gaussian elimination we reduce the coefficient matrix to make the leading entry in each row equal to 1 and then clear all the values (make them zero) above and below this entry. This results in a coefficient matrix in what is known as <em>reduced echelon form</em>. This allows us to easily read off the solutions. Here is a formal definition of the reduced echelon form.</p>
+<div class="definition">
+<p><span id="def:REF" class="definition"><strong>Definition 7.1  (Reduced Echelon Form) </strong></span>A matrix is said to be in <em>reduced echelon form (REF)</em> if
+1. all the rows consisting entirely of zeros lie below all non-zero rows (note, there need not be any zero or non-zero rows);
+1. each leading entry in a row lies at least one place to the right of all leading entries in any previous rows;
+1. every leading entry is <span class="math inline">\(1\)</span>;
+1. each leading entry is the only non-zero entry in its column.</p>
+</div>
+<p>The following are some examples of possible reduced echelon forms for <span class="math inline">\(3\times 3\)</span> coefficient matrices.</p>
+<p><span class="math display">\[
+\left(\begin{array}{rrr|r}
+1 &amp; 0 &amp; 0 &amp; \omega_1 \\
+0 &amp; 1 &amp; 0 &amp; \omega_2 \\
+0 &amp; 0 &amp; 1 &amp; \omega_3
+\end{array}\right),\qquad
+\left(\begin{array}{rrr|r}
+1 &amp; 0 &amp; 2 &amp; \omega_1 \\
+0 &amp; 1 &amp; 0 &amp; \omega_2 \\
+0 &amp; 0 &amp; 0 &amp; \omega_3
+\end{array}\right),\qquad
+\left(\begin{array}{rrr|r}
+1 &amp; 0 &amp; 0 &amp; \omega_1 \\
+0 &amp; 0 &amp; 1 &amp; \omega_2 \\
+0 &amp; 0 &amp; 0 &amp; \omega_3
+\end{array}\right).
+\]</span></p>
+<p>The previous examples were all square coefficient matrices (the same number of equations as variables). It is also possible that we have rectangular coefficient matrices. Here are some possible echelon forms.</p>
+<p><span class="math display">\[
+\left(\begin{array}{rrr|r}
+1 &amp; 0 &amp; 0 &amp; \omega_1 \\
+0 &amp; 1 &amp; 0 &amp; \omega_2 \\
+0 &amp; 0 &amp; 1 &amp; \omega_3 \\
+0 &amp; 0 &amp; 0 &amp; \omega_4
+\end{array}\right),\qquad
+\left(\begin{array}{rrrr|r}
+1 &amp; 0 &amp; 2 &amp; -4&amp;\omega_1 \\
+0 &amp; 1 &amp; 0 &amp; 1 &amp; \omega_2 \\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; \omega_3
+\end{array}\right),\qquad
+\left(\begin{array}{rrrr|r}
+1 &amp; 3 &amp; 0 &amp; 0 &amp; \omega_1 \\
+0 &amp; 0 &amp; 1 &amp; 0 &amp; \omega_2 \\
+0 &amp; 0 &amp; 0 &amp; 1 &amp; \omega_3
+\end{array}\right).
+\]</span></p>
+<p>Note that the reduced echelon form resuts in a “staircase” of <span class="math inline">\(1\)</span>’s appearing either on or above the diagonal, with all entries below the staircase being zero. We can only take one step down any column, but might take multiple steps right along a row.</p>
+<p>So far, we have only seen examples like the first matrix above, where we have a diagonal of <span class="math inline">\(1\)</span>’s. Since in this case we simply read off the solutions, it is easy to see that such forms result in a unique solution. We now give some examples and interpretations for other echelon forms. In the following <span class="math inline">\(\alpha_i\)</span> and <span class="math inline">\(\omega_i\)</span> can be any value.</p>
+<div class="example">
+<p><span id="exm:zerorow" class="example"><strong>Example 7.3  (Zero coefficient row) </strong></span><span class="math display">\[
+\left(\begin{array}{rcr|r}
+1 &amp; 0 &amp; \alpha &amp; \omega_1 \\
+0 &amp; 1 &amp; 0 &amp; \omega_2 \\
+0 &amp; 0 &amp; 0 &amp; \omega_3
+\end{array}\right),\qquad
+\]</span>
+If <span class="math inline">\(\omega_3=0\)</span> the equations read
+<span class="math display">\[\begin{align*}
+x_1+\alpha x_3&amp;=\omega_1\\
+x_2&amp;=\omega_2\\
+0&amp;=0
+\end{align*}\]</span>
+In effect, we only have two equations. There is no constraint on <span class="math inline">\(x_3\)</span> and we call this a <em>free variable</em>. We can <em>parameterise</em> the solution by setting <span class="math inline">\(x_3=\beta\)</span> where <span class="math inline">\(\beta\)</span> can take any values – there are infinitely many solutions. So the solution is all points
+<span class="math display">\[(\omega_1-\alpha\beta,\omega_2,\beta).\]</span>
+Geometrically, this is a line in 3-dimensional Cartesian coordinates which is drawn by varying <span class="math inline">\(\beta\)</span>.</p>
+<p>On the other hand, if <span class="math inline">\(\omega_3\neq 0\)</span>, then in the bottom row we have the equation
+<span class="math display">\[0=\omega_3\]</span>
+which is not possible. In this case, there are no solutions to the system of equations. We sometimes say that the set of equations is <em>inconsistent</em>.</p>
+</div>
+<div class="example">
+<p><span id="exm:rectechelon" class="example"><strong>Example 7.4  (A rectangular reduced echelon form) </strong></span><span class="math display">\[
+\left(\begin{array}{rrrrr|r}
+1 &amp; 0 &amp; \alpha_1 &amp; 0 &amp; \alpha_2 &amp; \omega_1 \\
+0 &amp; 1 &amp; \alpha_3 &amp; 0 &amp; \alpha_4 &amp; \omega_2 \\
+0 &amp; 0 &amp; 0        &amp; 1 &amp; \alpha_5 &amp; \omega_3
+\end{array}\right).
+\]</span></p>
+<p>In this case, we have the solutions
+<span class="math display">\[\begin{align*}
+x_1 &amp; = \omega_1 - \alpha_1x_3 - \alpha_2x_5\\
+x_2 &amp; = \omega_2 - \alpha_3x_3 -\alpha_4 x_5\\
+x_4 &amp; = \omega_3 - \alpha_5x_5
+\end{align*}\]</span>
+where <span class="math inline">\(x_3\)</span> and <span class="math inline">\(x_5\)</span> are free variables, and hence we can set them as parameterise <span class="math inline">\(x_3=\beta\)</span>, <span class="math inline">\(x_4=\gamma\)</span>. Since we have 2 parameters, this describes a plane in 5-dimensional space. The solution is all points
+<span class="math display">\[(\omega_1 - \alpha_1\beta - \alpha_2\gamma, \omega_2 - \alpha_3\beta -\alpha_4\gamma, \beta, \omega_3 - \alpha_5\gamma, \gamma).\]</span></p>
+</div>
+
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="9">
+<li id="fn9"><p>The method is named after Carl Friedrich Gauss (1777–1855) born in Braunschweig in the Holy Roman Empire, in what is now Germany. Gauss worked at the University of Gottingen.<a href="systems-of-linear-equations.html#fnref9" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="vectors.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="matrices.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": null,
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/maths-sci-eng/maths-sci-eng.github.io/edit/master/07-gaussian.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["maths-notes.pdf", "maths-notes.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
