@@ -1,0 +1,1 @@
+If $\det(A)=0$ and there is a solution to $A\mathbf{x}=\mathbf{b}$, can we say anything about the uniqueness of the solutions?

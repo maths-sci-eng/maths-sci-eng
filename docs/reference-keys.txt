@@ -79,6 +79,11 @@ exm:3dsystem
 def:REF
 exm:zerorow
 exm:rectechelon
+def:lincomb
+fig:2dspan
+exm:determinants2x2
+exm:determinants3x3
+thm:det0
 fig:complexsketch
 foundations
 numbers
@@ -140,3 +145,6 @@ lines-and-planes
 solving-linear-systems---gaussian-elimination
 echelon-form
 matrices
+solving-linear-systems-revisited
+determinants
+linear-transformations

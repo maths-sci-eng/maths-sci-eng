@@ -29,7 +29,7 @@ We often use Greek letters for mathematical symbols.
 | $R$ | $\rho$, $\varrho$ | Rho |
 | $\Sigma$ | $\sigma$ | Sigma |
 | $T$ | $\tau$ | Tau |
-| $Upsilon$ | $\upsilon$ | Upsilon |
+| $\Upsilon$ | $\upsilon$ | Upsilon |
 | $\Phi$ | $\phi$, $\varphi$ | Phi |
 | $X$ | $\chi$ | Chi |
 | $\Psi$ | $\psi$ | Psi |

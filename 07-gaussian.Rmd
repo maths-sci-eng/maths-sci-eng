@@ -386,7 +386,7 @@ x_1 & = \omega_1 - \alpha_1x_3 - \alpha_2x_5\\
 x_2 & = \omega_2 - \alpha_3x_3 -\alpha_4 x_5\\
 x_4 & = \omega_3 - \alpha_5x_5
 \end{align*}
-where $x_3$ and $x_5$ are free variables, and hence we can set them as parameterise $x_3=\beta$, $x_4=\gamma$. Since we have 2 parameters, this describes a plane in 5-dimensional space. The solution is all points
+where $x_3$ and $x_5$ are free variables, and hence we can set them as parameterise $x_3=\beta$, $x_4=\gamma$. More generally, any column that does not have a leading entry will correspond to a free variable. Since we have 2 parameters, this describes a plane in 5-dimensional space. The solution is all points
 $$(\omega_1 - \alpha_1\beta - \alpha_2\gamma, \omega_2 - \alpha_3\beta -\alpha_4\gamma, \beta, \omega_3 - \alpha_5\gamma, \gamma).$$
 :::
 

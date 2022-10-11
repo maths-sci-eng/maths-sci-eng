@@ -1,0 +1,23 @@
+, fig.cap = "Any vector $\\mathbf{u}$ in the plane can be written as a linear combination of the vectors $\\mathbf{v}_1$ and $\\mathbf{v}_2$, that is $\\mathbf{u}=\\alpha_1\\mathbf{v}_1+\\alpha_2\\mathbf{v}_2$. Drag the vector $\\mathbf{u}$ to any point in the plane to see this decomposition. This means that $\\mathbf{v}_1$ and $\\mathbf{v}_2$ span the entire plane. You can also drag the vectors $\\mathbf{v}_1$ and $\\mathbf{v}_2$ and so long as these point in "independent directions" they still span the plane; if they lie along the same direction, then they only span a line.", fig.alt = "Geogebra applet demonstrating the concept of span."
+
+
+
+## Matrix Inverse
+
+In analogy to solving a 1-dimensional linear equation
+$$ax=b$$
+by dividing through by $a$, that is
+$$x=\frac{b}{a}\quad \text{ or }\quad x=a^{-1}b$$
+can we solve an $n$-dimensional system of linear equations in a similar way? That is, can we "divide" by a matrix?
+
+It turns out the situation is more complicated in higher dimensions and we cannot simply define
+$A^{-1}$ as a matrix whose elements are $1/a{ij}$.
+
+But, we can sometimes find a matrix that we call the *inverse* of $A$ and denote as $A^{-1} having the property
+$$x=A^{-1}b.$$
+First of all, the inverse only makes sense when $A$ is a square matrix.
+
+Secondly, in analogy to not being able to solve $0x=b$ as we cannot divide by zero, the inverse exists if and only if $\det(A)\neq 0$.
+
+
+

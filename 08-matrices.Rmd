@@ -1,2 +1,175 @@
 # Matrices
 
+A matrix $A$ is a two-dimensional array of numbers. We say that $A$ is an $m \times n$ matrix if it has $m$ rows and $n$ columns, for some natural numbers $m$ and $n$. We use the notation
+$$
+A = (a_{ij})_{m \times n}, \qquad \text{or more simply} \qquad A = (a_{ij}),
+$$
+to indicate that the entry in row $i$ and column $j$ of $A$ is $a_{ij}$. We refer to $a_{ij}$ as the $i$--$j$ entry of the matrix $A$.
+
+## Solving linear systems revisited
+
+In the previous chapter, given a set of $m$ linear equations with $n$ variables 
+
+\begin{align*}
+a_{11}x_1+a_{12}x_2+\dotsb+a_{1n}x_n&=b_1\\
+a_{21}x_1+a_{22}x_2+\dotsb+a_{2n}x_n&=b_2\\
+\vdots\qquad&=\,\vdots\\
+a_{m1}x_1+a_{m2}x_2+\dotsb+a_{mn}x_n&=b_m
+\end{align*}
+
+we introduced the coefficient matrix
+
+$$
+A=
+\begin{pmatrix}
+a_{11}&a_{12}&\dotsb&a_{1n}\\
+a_{21}&a_{22}&\dotsb&a_{2n}\\
+\vdots&\vdots&\dotsb&\vdots\\
+a_{m1}&a_{n2}&\dotsb&a_{mn}
+\end{pmatrix}.
+$$
+
+We will now write the variables and r.h.s. as vectors of length $n$ and $m$ respectively
+$$
+\mathbf{x} = \begin{pmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{pmatrix}
+\qquad\text{and}\qquad
+\mathbf{b} = \begin{pmatrix} b_1 \\ b_2 \\ \vdots \\ b_m \end{pmatrix}.
+$$
+
+Next, we define the operation of multiplying a vector $\mathbf{x}$ of length $n$ by an $m\times n$ matrix $A$. The result is a vector of length $m$ whose first entry is the sum of the element-wise products of the first row of $A$ with the vector $\mathbf{x}$, the second entry is the sum of the element-wise products of the second row of $A$ with the vector $\mathbf{x}$ and so on:
+
+$$
+A\mathbf{x}=\begin{pmatrix}
+a_{11}&a_{12}&\dotsb&a_{1n}\\
+a_{21}&a_{22}&\dotsb&a_{2n}\\
+\vdots&\vdots&\dotsb&\vdots\\
+a_{n1}&a_{n2}&\dotsb&a_{nn}
+\end{pmatrix}
+\begin{pmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{pmatrix}
+=
+\begin{pmatrix}
+a_{11}x_1+a_{12}x_2+\dotsb+a_{1n}x_n\\
+a_{21}x_1+a_{22}x_2+\dotsb+a_{2n}x_n\\
+\vdots\\
+a_{m1}x_1+a_{m2}x_2+\dotsb+a_{mn}x_n
+\end{pmatrix}
+$$
+Hence we can express the system of equations more compactly as
+$$A\mathbf{x}=\mathbf{b}$$
+where each row of the expanded equation corresponds to one of the linear equations. In the previous chapter we saw that solving such a system corresponds to finding the intersection points of the hyperplanes defined by these rows. We will call this the *row picture* of linear equations. However, there is another way to interpret $A\mathbf{x}=\mathbf{b}$ in terms of column vectors. We must first introduce some new definitions.
+
+::: {.definition #lincomb name="Linear combinations"}
+Consider a list of vectors
+$$\mathbf{v}_1, \mathbf{v}_2,\dotsc,\mathbf{v}_n.$$
+
+* A *linear combination* of a list of vectors is a sum of the form
+    $$
+    \alpha_1\mathbf{v}_1+\alpha_2\mathbf{v}_2 + \dotsb + \alpha_n\mathbf{v}_n
+    $$
+    for some scalar coefficients $\alpha_i$.
+
+* A list of vectors is called *linearly independent* if we cannot write one of the vectors as a linear combination of the others, such as
+    $$
+    \mathbf{v}_i=\alpha_1\mathbf{v}_1+\alpha_2\mathbf{v}_2+\dotsb+\alpha_{i-1}\mathbf{v}_{i-1}+\alpha_{i+1}\mathbf{v}_{i+1}+\dotsb+\alpha_n\mathbf{v}_n
+    $$
+    (none of the vectors depends on the others).
+
+* The *span* of a list of vectors is all of the possible linear combinations. If we can reach any vector in the space by taking some linear combination then we say the vectors *span* the space.
+:::
+
+An intuitive way to think about linearly independent vectors is that they all point in "independent" directions. An intuitive way to think about the span is as all the points we can reach in the space by only walking in the directions of the list of vectors. Figure \@ref(fig:2dspan) demonstrates the concepts of linear combinations and span in 2-dimensions.
+
+
+```{r 2dspan, fig.cap = "Any vector $\\mathbf{u}$ in the plane can be written as a linear combination of the vectors $\\mathbf{v}_1$ and $\\mathbf{v}_2$, that is $\\mathbf{u}=\\alpha_1\\mathbf{v}_1+\\alpha_2\\mathbf{v}_2$. Drag the vector $\\mathbf{u}$ to any point in the plane to see this decomposition. This means that $\\mathbf{v}_1$ and $\\mathbf{v}_2$ span the entire plane. You can also drag the vectors $\\mathbf{v}_1$ and $\\mathbf{v}_2$ and so long as these point in \"independent directions\" they still span the plane; if they lie along the same direction, then they only span a line.[[Open plot in browser.]](https://www.geogebra.org/calculator/qeyeahkb)", fig.alt = "Geogebra applet demonstrating the concept of span."}
+knitr::include_url("https://www.geogebra.org/calculator/qeyeahkb")
+```
+
+
+If we consider each column of the matrix $A$ as a vector $\mathbf{a}_i$ of length $m$, then the multiplication $A\mathbf{x}$ can also be written as
+\begin{align*}
+A\mathbf{x}&=x_1\mathbf{a}_1 + x_2\mathbf{a}_2 + \dotsb + x_n\mathbf{a}_n\\
+&=x_1
+\begin{pmatrix} a_{11} \\ a_{21} \\ \vdots \\ a_{m1} \end{pmatrix}
++
+x_2
+\begin{pmatrix} a_{12} \\ a_{22} \\ \vdots \\ a_{m2} \end{pmatrix}
++
+\dotsb
++
+x_n
+\begin{pmatrix} a_{1n} \\ a_{2n} \\ \vdots \\ a_{mn} \end{pmatrix}\\
+&=
+\begin{pmatrix}
+a_{11}x_1+a_{12}x_2+\dotsb+a_{1n}x_n\\
+a_{21}x_1+a_{22}x_2+\dotsb+a_{2n}x_n\\
+\vdots\\
+a_{m1}x_1+a_{m2}x_2+\dotsb+a_{mn}x_n
+\end{pmatrix}.
+\end{align*}
+That is, $A\mathbf{x}$ is the *linear combination* of the columns $\mathbf{a}_i$ with coefficients $x_i$. We will call this the *column picture* of matrix equations. As we shall come to see, this different point of view is very powerful in understanding the nature of linear equations.
+
+Finding a solution to $A\mathbf{x}=\mathbf{b}$ can now be interpreted as answering the question: can we find a linear combination of the column vectors of $A$ that sum to give the vector $\mathbf{b}$? Or in other words: is the vector $\mathbf{b}$ in the span of the columns of $A$?
+
+The question of unique solutions or infinitely many solutions becomes: is there one way or infinitely many ways to take a linear combination of the columns of $A$ to reach the vector $\mathbf{b}$? Or in other words: are the columns of $A$ linearly independent?
+
+These questions can once again be answered from inspecting the REF of the augmented matrix. In the statements below we shall refer to the coefficient matrix part of the REF as the l.h.s. and the final augmented column as the r.h.s. 
+
+1. If there is a row of zeros in the l.h.s. but a non-zero value in the corresponding row of the r.h.s., then there are **no solutions** ($\mathbf{b}$ is not in the span of the columns of $A$).
+1. If all zero rows in the l.h.s. have a zero in the corresponding row of the r.h.s, together with every column in the l.h.s. containing a leading entry, then there is a **unique solution** ($\mathbf{b}$ is in the span of the columns of $A$ together with the columns being linearly independent).
+1. If all zero rows in the l.h.s. have a zero in the corresponding row of the r.h.s, but not every column in the l.h.s. contains a leading entry, then there are **infinitely many solutions** ($\mathbf{b}$ is in the span of the columns of $A$ but the columns are linearly dependent).
+
+A list of vectors that both span the space and are linearly independent are called a *basis*. A basis can be used as a coordinate system. We generally use the *standard basis* consisting of the unit vectors $\mathbf{i}, \mathbf{j}$ and $\mathbf{k}$. The coordinates of a vector $\mathbf{v}$ in this basis are the values $\alpha_i$ in the linear combination $\mathbf{v}=\alpha_1\mathbf{i} + \alpha_2\mathbf{j} + \alpha_3\mathbf{k}$. If we had a different basis $\mathbf{p}, \mathbf{q}, \mathbf{r}$ then we could also express $\mathbf{v}$ as $\mathbf{v}=\beta_1\mathbf{p}+\beta_2\mathbf{q}+\beta_3\mathbf{r}$ and specify points using $\beta_1,\beta_2$ and $\beta_3$ as coordinates.
+
+
+## Determinants
+
+When we have a square coefficient matrix $A$, we can find out if there exists a unique solution to $A\mathbf{x}=\mathbf{b}$ for any possible vector $\mathbf{b}$ by computing a scalar quantity associated to $A$ known as the *determinant*.
+
+For a $2\times 2$ matrix
+$$
+A = \begin{pmatrix} a & b\\ c & d\end{pmatrix}
+$$
+we define the determinant of $A$, written as $\det(A)$ or $|A|$, as
+$$
+\det(A) = \begin{vmatrix} a & b\\ c & d\end{vmatrix} = ad - bc.
+$$
+
+::: {.example #determinants2x2 name="2x2 determinants"}
+For instance, we have
+\begin{align*}
+\begin{vmatrix} 1 & 5\\ 6 & 2\end{vmatrix} &= 1\times 2 - 5\times 6 = -28,\\
+\begin{vmatrix} 2 & -5\\ 7 & 3\end{vmatrix} &= 2\times 3 - (-5\times 7) = 41,\\
+\begin{vmatrix} a & \frac{b}{2}\\ \frac{b}{2} & c\end{vmatrix} & = ac - \frac{b^2}{4} = -\frac{1}{4}(b^2 - 4ac).
+\end{align*}
+:::
+
+Higher-order determinants are defined recursively in terms of lower-order determinants. For instance, for a $3\times 3$ matrix, we define
+
+$$
+\begin{vmatrix} a & b & c\\ d & e & f\\ g & h & i\end{vmatrix}
+= a\begin{vmatrix} e & f\\ h & i\end{vmatrix}
+- b\begin{vmatrix} d & f\\ g & i\end{vmatrix}
++ c\begin{vmatrix} d & e\\ g & h\end{vmatrix}.
+$$
+
+Note that the expression above contains three terms, each of which is the product of two factors: an entry of the matrix multiplied by a $2\times 2$ determinant. Each $2\times 2$ determinant is formed by crossing out the row and column containing the other factor. Also note the $-$ sign in the second term.
+
+::: {.example #determinants3x3 name="A 3x3 determinant"}
+Compute the determinant of the matrix $A = \left(\begin{smallmatrix} 1 & 2 & 3\\ 4 & 5 & 6\\ 7 & 8 & 9\end{smallmatrix}\right)$. 
+\begin{align*}
+\det(A) = \begin{vmatrix}  1 & 2 & 3\\ 4 & 5 & 6\\ 7 & 8 & 9\end{vmatrix}
+&= 1\begin{vmatrix} 5 & 6\\ 8 & 9\end{vmatrix}
+- 2\begin{vmatrix} 4 & 6\\ 7 & 9\end{vmatrix}
++ 3\begin{vmatrix} 4 & 5\\ 7 & 8\end{vmatrix} \\
+&= 1\left(5\times 9-6\times 8\right) - 2\left(4\times 9 - 6\times 7\right) + 3(4\times 8 - 5\times 7)\\
+&= -3 - 2(-6)+3(-3)\\
+&=0
+\end{align*}
+:::
+
+::: {.theorem #det0 name="Unique solutions"}
+Let $A$ be a square matrix. There is a unique solution to $A\mathbf{x}=\mathbf{b}$ for any vector $\mathbf{b}$ if and only if $\det(A)\neq 0$.
+:::
+
+This gives us a useful test if we want to know if there are unique solutions for any vector $\mathbf{b}$. Note however that even if $\det(A)=0$ there could be solutions for a particular vector $\mathbf{b}$ -- we would have to perform Guassian elimination to check.
+
