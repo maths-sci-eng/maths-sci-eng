@@ -14,13 +14,34 @@ These exercises cover the topics of Functions and Graphs.
 
     Answers:
     a. Expanding: $y=-\frac{1}{2}x-\frac{1}{2}$ which we recognise as a line with gradient $-\frac{1}{2}$ and y intercept $-\frac{1}{2}$. Solving for $y=0$ gives the x intercept as $(-1,0)$.
+```{r, out.width="50%"}
+knitr::include_graphics("figures/-0.5x-0.5.png")
+```
+
     a. This is a parabola shifted up by 2 units.
+```{r, out.width="50%"}
+knitr::include_graphics("figures/x2+2.png")
+```
+
     a. This is an "upside down" parabola, shifted up by two units.
-    a. Completing the square: $y=(x - \frac{1}{2})^2 - \frac{5}{4}$
-        Since the squared term is always non-negative, it is smallest when it is zero at $x=\frac{1}{2}$. This is the position of the minimum, and at this point $y=-\frac{5}{4}$.
-        Factorising: $(x-\frac{1+\sqrt{5}}{2})(x-\frac{1-\sqrt{5}}{2})$, so the curve crosses the x axis at $x=\frac{1+\sqrt{5}}{2}$ and $x=\frac{1-\sqrt{5}}{2}$. Since the coefficient of $x^2$ is positive, the parabola opens upwards.
+```{r, out.width="50%"}
+knitr::include_graphics("figures/-2x2+2.png")
+```
+
+    a. Completing the square $y=(x-\frac{1}{2})^2-\frac{5}{4}$. Since the squared term is always non-negative, it is smallest when it is zero at $x=\frac{1}{2}$. This is the position of the minimum, and at this point $y=-\frac{5}{4}$. Factorising: $(x-\frac{1+\sqrt{5}}{2})(x-\frac{1-\sqrt{5}}{2})$, so the curve crosses the x axis at $x=\frac{1+\sqrt{5}}{2}$ and $x=\frac{1-\sqrt{5}}{2}$. Since the coefficient of $x^2$ is positive, the parabola opens upwards.
+```{r, out.width="50%"}
+knitr::include_graphics("figures/x2-x-1.png")
+```
+
     a. This is an exponential $a^x$ with $a>1$. All exponential functions cross the y axis at $a^0=1$ and the do not cross the $x$ axis.
+```{r, out.width="50%"}
+knitr::include_graphics("figures/3x.png")
+```
+
     a. This is a rational function with a vertical asymptote at $x=0$. It is small and positive for large positive values of $x$ and it is small and negative for large negative values of $x$: the line $y=0$ is a horizontal asymptote.
+```{r, out.width="50%"}
+knitr::include_graphics("figures/1x.png")
+```
 
 1. Sketch the following graphs (with $x$ in radians):
     a. $y=\sin(x)$
@@ -29,11 +50,25 @@ These exercises cover the topics of Functions and Graphs.
     a. $y=\sin^2(x)$
 
     Answers:
+    a. You should be familiar with this graph and the location of maxima, minima and axis intercepts.
+```{r, out.width="50%"}
+knitr::include_graphics("figures/sinx.png")
+```
 
-    a. You should be familiar with this graph.
     a. Note that $\sin(x+\frac{\pi}{2})=\cos(x)$.
-    a. This is double the angular frequency.
+```{r, out.width="50%"}
+knitr::include_graphics("figures/cosx.png")
+```
+
+    a. This is double the angular frequency of the usual sine function.
+```{r, out.width="50%"}
+knitr::include_graphics("figures/sin2x.png")
+```
+
     a. Note that all the y values are non-negative.
+```{r, out.width="50%"}
+knitr::include_graphics("figures/sinx2.png")
+```
 
 1. If we had the graph of a function $f(x)$, describe what would change qualitatively for the graph of $f(a\times x)$ where $a$ is a constant. Consider the cases:
     a. $a>1$
@@ -43,7 +78,7 @@ These exercises cover the topics of Functions and Graphs.
 
     Answers:
 
-    a. For $a>1$, the graph is `squeezed' along the x axis, with the value at $x=0$ remaining unchanged.
+    a. For $a>1$, the graph is "squeezed" along the x axis, with the value at $x=0$ remaining unchanged.
     b. For $0 < a <1$, the graph is expanded along the x axis, again with the value at $x=0$ unchanged.
     c. For $-1 < a <0$, the graph is again expanded, along the x axis, but the minus sign in $a$ also means that the graph is reflected in the y axis.
     d. For $a<-1$, the graph is squeezed horizontally and reflected in the y axis.
@@ -53,7 +88,6 @@ These exercises cover the topics of Functions and Graphs.
     a. $b<0$
 
     Answers:
-
     a. For $b>0$, the $f(x+b)$ is the graph of $f(x)$ translated to the left by distance $b$
     b. For $b<0$, the whole graph is translated to the right by distance $b$
 
@@ -83,7 +117,7 @@ These exercises cover the topics of Functions and Graphs.
     b. $x = \log_{101}(101) =\log_{101}(101^1)=1$
     c. $x = \ln(e) =\log_e(e^1)= 1$
     d. $x = log_{56}(1) =\log_{56}(56^0)=0$
-    e. $10^x = 100000=10^5$ \Rightarrow x = 5$
+    e. $10^x = 100000=10^5 \Rightarrow x = 5$
     f. $2^x = 128=2^7$ \Rightarrow x = 7$ the powers of 2 are useful to know
     g. $3^{\log_3(x)} = 3^4 \Rightarrow x = 3^4 = 3^2 \times 3^2 = 81$
     h. $\log_x(125) = 3 \Rightarrow x^3 = 125 \Rightarrow x = 5$
@@ -177,7 +211,7 @@ $$
 \begin{align}
 \cosh^2(x) - \sinh^2(x) &=(\cosh(x) + \sinh{x})(\cosh(x) - \sinh(x))\\
 &=\left(\frac{e^x + e^{-x} + e^x - e^{-x}}{2}\right)\left(\frac{e^x + e^{-x} - e^x + e^{-x}}{2}\right)\\
-&=e^x e^{-x}
+&=e^x e^{-x}\\
 &= 1 \text{ as required}
 \end{align}
 $$
