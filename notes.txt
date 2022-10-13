@@ -23,3 +23,14 @@ Secondly, in analogy to not being able to solve $0x=b$ as we cannot divide by ze
 
 
 
+counting paths in networks
+
+computer graphics
+
+discrete predator prey model
+
+population migration
+
+
+3 views of linear equations summary
+
