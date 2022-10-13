@@ -206,7 +206,7 @@ It's graph looks rather different to sine and cosine.
 knitr::include_url("https://www.desmos.com/calculator/ncqey1cfus")
 ```
 
-Like sine and cosine it is periodic with period $2\pi$. It is undefined at $x=\frac{\pi}{2}$ (and repeatedly every $2\pi$) since at this value $\cos(\frac{\pi}{2})=0$ so we have division by zero. Close to these points, where we are dividing by a very small value of $\cos$, it takes arbitrarily large positive and negative values and we have a vertical asymptote.
+Like sine and cosine it is periodic, with period $\pi$. It is undefined at $x=\frac{\pi}{2}$ (and repeatedly every $2\pi$) since at this value $\cos(\frac{\pi}{2})=0$ so we have division by zero. Close to these points, where we are dividing by a very small value of $\cos$, it takes arbitrarily large positive and negative values and we have a vertical asymptote.
 
 Close to these points, the value of $\cos(x)$ in the denominator of \@ref(eq:tan) is very small, whilst the value of $\sin(x)$ is close to $1$ or $-1$, which results in very large positive or negative values of $\tan(x)$ and we have vertical asymptotes at these points.
 

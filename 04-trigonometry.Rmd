@@ -180,6 +180,16 @@ knitr::include_graphics("figures/sinusoid.png")
 knitr::include_url("https://www.desmos.com/calculator/l0f1omebm2")
 ```
 
+A useful formula for combining $\sin$ and $\cos$ waves is:
+
+$$a\cos(\theta)+b\sin(\theta)=R\cos(\theta-\phi)$$
+
+where:
+
+$R=\sqrt{a^2+b^2}$
+
+$\phi=\tan^{-1}(b/a)$
+
 ## Trigonometric identities
 
 Recall that there are a number of useful relationships between the trigonometric functions. Here are some key ones.

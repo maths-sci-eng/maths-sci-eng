@@ -27,16 +27,21 @@ An observer is standing at a point $M$ which is $30$m from the base of a tower. 
 
 1. The small hand of a clock is 75% the length of the long hand. Calculate the distance between the ends of the hands at 5 o'clock.
 
-1. A student $1.8$m tall is standing $24$m away from a tree and using a eye level instrument to measure the angle of elevation. The angle measured to the top of the tree is $12^\circ 34'$, calculate the height of the tree. (Degrees can be further broken down in to *minutes* denoted $x'$ and *seconds* denoted $x''$, with 1' being $1/60$ of a degree and $1''$ being $1/60$ of a minute. To use a calculator you will first need to convert to a decimal.)
+1. A student $1.8$m tall is standing $24$m away from a tree and using a eye level instrument to measure the angle of elevation. The angle measured to the top of the tree is $12^\circ 34'$, calculate the height of the tree. (Degrees can be further subdivided in to *minutes* denoted $x'$ and *seconds* denoted $x''$, with $1'$ being $1/60$ of a degree and $1''$ being $1/60$ of a minute. To use a calculator you will first need to convert minutes and seconds to decimals.)
 
 1.  The angles of elevation of a navigation balloon that is flying in between two points on the ground $A$ and $B$ are $48^\circ$ and $62^\circ$ respectively. If $A$ and $B$ are $0.3$km apart, calculate the height of the balloon. 
 
 1.  The figure below shows a tetrahedron with an equilateral triangle of side 2m forming the base and isosceles triangles of equal side 3m forming the slanting 
 faces. Calculate:
 
-    a. The height of the tetrahedron;
+    a. The height of the tetrahedron $ND$;
     b. The angle that edge $DA$ makes with the plane $ABC$;
     c. The angle between the planes $ACD$ and $ACB$.
+
+```{r tetra, out.width="30%"}
+knitr::include_graphics("figures/tetra.png")
+```
+
 
 1. Write the following in the form $R\cos(\omega t\pm \beta)$.
     a. $-2\sin(\omega t) + 5\cos(\omega t)$

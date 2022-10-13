@@ -1,0 +1,28 @@
+Exercise Set 6 {-}
+
+
+
+
+
+1. Electrical Networks. Consider the circuit diagram below.
+
+```{r}
+knitr::include_graphics("figures/circuit.png")
+```
+
+The voltage drop across a resistor is (by Ohm's law) $V=IR$ where $V$ is in volts, the current $I$ is in amps and the resistance $R$ is in ohms.
+Kirchhoff's junction law: the sum of currents flowing into a junction is equal to the sum of currents flowing out of that junction.
+Kirchoff's Voltage law: The sum of the voltage drops in one direction around a loop equals the sum of the voltage sources in the same direction around the loop.
+Using these laws it is possible to derive the following set of linear equations for the currents $I_1, I_2, I_3$:
+
+\begin{align*}
+11I_1-3I_2&=30\\
+-3I_1+6I_2-I_3&=5\\
+-I_2+3I_3&=-25.
+\end{align*}
+
+Determine the currents.
+
+1. Balancing Chemical equations. In the combustion of propane gas, propane (C_3H_8) combines with oxygen (O_2) to form carbon dioxide (CO_2) and water (H_2O) according to the equation
+$$x_1 \text{C_3H_8} + x_2 \text{O_2}\to x_3\text{CO_2}+x_4\text{H_2O}.$$
+To balance this equation, we must find natural numbers $x_1, x_2, x_3,x_4$ such that the total numbers of C, H and O atoms are equal on both sides. Formulate this as a set of linear equations and solve using Guassian elimination.
