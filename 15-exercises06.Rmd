@@ -70,10 +70,10 @@ To balance this equation, we must find natural numbers $x_1, x_2, x_3, x_4$ such
 
     Determine the currents. (Extra challenge: derive the equations!).
 
-1. *Network analysis*. The diagram below represents traffic flow in a one-way road network, with each one-way road indicated by arrows and the meeting points of arrows are road junctions.
+1. *Network analysis*. The diagram below represents the traffic flow in a one-way road network. Each directed edge represents a one-way road and is labelled with the flow through that road. The nodes represent road junctions.
 
     ```{r, out.width="30%"}
     knitr::include_graphics("figures/flownetwork.png")
     ```
 
-    By considering the flow in and out of each junction and the total flow in and out of the network, formulate a system of linear equations and solve them by Gaussian elimination. You will find there is a "free variable", but the requirement for non-negative flows puts some restrictions on the variables. In particular, what are the restrictions on $x_1$ and $x_5$?
+    By considering the flow in and out of each node and the total flow in and out of the network, formulate a system of linear equations for the unknown flows $x_1,\dotsc,x_5$ and solve them by Gaussian elimination. You will find there is a "free variable", but the requirement for non-negative flows puts some restrictions on the variables. In particular, what are the restrictions on $x_1$ and $x_5$?
