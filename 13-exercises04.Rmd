@@ -1,5 +1,7 @@
 # Exercise Set 4 {-}
 
+These exercises cover the topic of Complex Numbers.
+
 1. Let $u=2+3i$ and $v=5+8i$. Determine the following.
     a. $u+v$
     a. $u-v$
