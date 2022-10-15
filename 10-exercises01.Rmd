@@ -1,6 +1,5 @@
 # Exercise Set 1 {-}
 
-
 These exercises cover the topics of Algebra, Equations and Inequalities.  
 
 1. Simplify each of the following (*Hint*: use the rules of exponents where needed).

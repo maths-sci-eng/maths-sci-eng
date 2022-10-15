@@ -1,0 +1,297 @@
+# Exercise Set 5 Answers {.unlisted .unnumbered}
+
+These exercises cover the topic of vectors.
+
+Note that the questions are independent of one another, so the definition of a vector $\mathbf{a}$ in one question does not carry over to another question with a vector called $\mathbf{a}$.
+
+1. The points $A$, $B$ and $C$ have position vectors
+    \begin{align*}
+    \mathbf{a}&=5\mathbf{i}-6\mathbf{j}+4\mathbf{k}\\
+    \mathbf{b}&=2\mathbf{i}+5\mathbf{j}-3\mathbf{k}\\
+    \mathbf{c}&=-\mathbf{i}+4\mathbf{k}.
+    \end{align*}
+    Find:
+    a. $5\mathbf{a}-2\mathbf{b}-3\mathbf{c}$
+    a. $\overrightarrow{AC}+\overrightarrow{AB}$
+    a. $\mathbf{a}\cdot\mathbf{b}$
+    a. The angle between $\mathbf{a}$ and $\mathbf{b}$
+    a. $\mathbf{a}\times\mathbf{c}$
+
+    Answers:
+
+    a. $5\mathbf{a}-2\mathbf{b}-3\mathbf{c}=24\mathbf{i}-40\mathbf{j}+14\mathbf{k}$
+    a. $\overrightarrow{AC}=\mathbf{c}-\mathbf{a}=-6\mathbf{i}+6\mathbf{j}$
+
+        $\overrightarrow{AB}=\mathbf{b}-\mathbf{a}=-3\mathbf{i}+11\mathbf{j}-7\mathbf{k}$
+
+        $\overrightarrow{AC}+\overrightarrow{AB}=-9\mathbf{i}+17\mathbf{j}-7\mathbf{k}$
+
+    a. $\mathbf{a}\cdot \mathbf{b}=(5\times 2)+ (-6\times5)+(4\times -3)=-32$
+    a. $|\mathbf{a}|=\sqrt{77}$
+
+        $|\mathbf{b}|=\sqrt{38}$
+
+        $\cos(\theta)=\frac{\mathbf{a}\cdot \mathbf{b}}{|\mathbf{a}||\mathbf{b}|}=\frac{-32}{\sqrt{77}\sqrt{38}}=-0.5916$
+
+        $\theta=\cos^{-1}(-0.5916)=126.3^\circ$
+
+    a. \begin{align*}
+    \mathbf{a}\times \mathbf{c}&=\begin{vmatrix}
+    \mathbf{i}&\mathbf{j}&\mathbf{k}\\
+    5&-6&4\\
+    -1&0&4
+    \end{vmatrix}\\
+    &=
+    \mathbf{i}\begin{vmatrix}
+    -6&4\\
+    0&4
+    \end{vmatrix}
+    -\mathbf{j}\begin{vmatrix}
+    5&4\\
+    -1&4
+    \end{vmatrix}
+    +\mathbf{k}\begin{vmatrix}
+    5&-6\\
+    -1&0
+    \end{vmatrix}\\
+    &=\mathbf{i}(-24-0)-\mathbf{j}(20-(-4))+\mathbf{k}(0-6)\\
+    &=-24\mathbf{i}-24\mathbf{j}-6\mathbf{k}
+    \end{align*}
+
+1. Let $\mathbf{p}$ and $\mathbf{q}$ be vectors.
+    a. What is the vector $\mathbf{r}$ joining the points whose position vectors are $\mathbf{p}$ and $2\mathbf{q}$?
+    a. What is the vector $\mathbf{s}$ joing the points whose position vectors are $\mathbf{2q}$ and $-6\mathbf{p}+14\mathbf{q}$?
+    a. What do you notice about $\mathbf{r}$ and $\mathbf{s}$?
+    a. What does this tell you about the points whose position vectors are $\mathbf{p}$, $2\mathbf{q}$ and $-6\mathbf{p}+14{q}$?
+
+    Answers:
+
+    a. $\mathbf{r}=2\mathbf{q}-\mathbf{p}$
+    a. $\mathbf{s}=(-6\mathbf{p}+14\mathbf{q})-2\mathbf{q}=12\mathbf{q}-6\mathbf{p}$
+    a. They are parallel: $\mathbf{s}=6\mathbf{r}$ so they have the same direction.
+    a. The points are collinear, i.e. all lie in a straight line.
+
+1. Let $\mathbf{u}=5\mathbf{i}+2\mathbf{j}$ and $\mathbf{v}=3\mathbf{i}-\mathbf{j}-3\mathbf{k}$. Find $(4\mathbf{u}-6\mathbf{v})\cdot(2\mathbf{u}+3\mathbf{v})$.
+
+    Answers:
+
+    $(2\mathbf{i}+14\mathbf{j}+\mathbf{k})\cdot(19\mathbf{i}+\mathbf{j}-9\mathbf{k})=38+14-162=-110.$
+
+1. Given that the position vectors of the points $A$, $B$, and $C$ are $\mathbf{a}$, $\mathbf{b}$ and $\mathbf{c}$, write down the position vectors of the midpoints of the lines $BC$ and $CA$.
+
+    Answers:
+
+    $\overline{BC}=\mathbf{c}-\mathbf{b}$
+
+    $\overline{OE}=\mathbf{b}+\frac{1}{2}(\mathbf{c}-\mathbf{b})=\frac{1}{2}\mathbf{c}-\frac{1}{2}\mathbf{b}$
+
+    $\overline{CA}=\mathbf{a}-\mathbf{c}$
+
+    $\overline{OF}=\mathbf{c}+\frac{1}{2}(\mathbf{a}-\mathbf{c})=\frac{1}{2}\mathbf{a}-\frac{1}{2}\mathbf{c}$
+
+1. Prove that the vector joining the midpoints of two sides of a triangle is parallel to the third side and half of its length.
+
+    Answers:
+
+    We need to set up some labels for the points of the triangle. Let these have position vectors $\mathbf{A}, \mathbf{B}, \mathbf{C}$. The vectors defining the sides of the triangle are
+
+    $\mathbf{a}=\overline{BC}=\mathbf{C}-\mathbf{B}$
+
+    $\mathbf{b}=\overline{CA}=\mathbf{A}-\mathbf{C}$
+    
+    $\mathbf{c}=\overline{AB}=\mathbf{B}-\mathbf{A}$
+
+    The midpoint of side $CA$ is
+
+    $\mathbf{C}+\frac{1}{2}\mathbf{b}=\mathbf{C}+\frac{1}{2}\mathbf{A}-\frac{1}{2}\mathbf{C}=\frac{1}{2}\mathbf{C}+\frac{1}{2}\mathbf{A}$
+
+    The midpoint of side $AB$ is
+    
+    $\mathbf{A}+\frac{1}{2}\mathbf{c}=\mathbf{A}+\frac{1}{2}\mathbf{B}-\frac{1}{2}\mathbf{A}=\frac{1}{2}\mathbf{A}+\frac{1}{2}\mathbf{B}$
+    
+    The vector between these midpoints is
+    
+    $$(\frac{1}{2}\mathbf{C}+\frac{1}{2}\mathbf{A})-(\frac{1}{2}\mathbf{A}+\frac{1}{2}\mathbf{B})=\frac{1}{2}\mathbf{C}-\frac{1}{2}\mathbf{B}$$
+    
+    which is half of the vector $\mathbf{a}=\overline{BC}$, as required.
+
+1. Show that the vectors
+    \begin{align*}
+    \mathbf{a}&=8\mathbf{i}+2\mathbf{j}-3\mathbf{k}\\
+    \mathbf{b}&=3\mathbf{i}-6\mathbf{j}+4\mathbf{k}
+    \end{align*}
+    are perpendicular to one another (Hint: use the dot product).
+
+    Answers:
+
+    Using the dot product:
+
+    $\mathbf{a}\cdot\mathbf{b}=(8\times 3)+(2\times-6)+(-3\times 4)=24-12-12=0$
+
+    and since this is zero and the vectors $\mathbf{a}$ and $\mathbf{b}$ are non-zero, these are perpendicular vectors.
+
+1. A block of mass $m=1\,\text{kg}$ is sliding down a frictionless slope under gravity. The slope is at an angle of $45^\circ$ to the horizontal. Recall that the force on the block is given by Newton's second law: $\mathbf{F}=m\mathbf{g}$ where $\mathbf{g}=-9.8\mathbf{k}\,\text{ms}^{-2}$ is the gravitational acceleration. Resolve the force vector in the directions parallel and perpendicular to the slope. (Hint: you need to project the force vector onto unit vectors that are parallel and perpendicular to the slope.)
+
+    Answers:
+
+    We can simplify this to a two dimensional problem by aligning the coordinate axes sensibly. Let's align the axes so that the $y$ axis is perpendicular to the slope and the slope is increasing in the $x$ direction, then we just need the $\mathbf{i}$ and $\mathbf{k}$ directions. The unit vector parallel to the (increasing) slope is $\mathbf{u}=\frac{1}{\sqrt{2}}\mathbf{i}+\frac{1}{\sqrt{2}}\mathbf{k}$ and the unit vector perpendicular to the slope is $\mathbf{v}=-\frac{1}{\sqrt{2}}\mathbf{i}+\frac{1}{\sqrt{2}}\mathbf{k}$.
+
+    The force vector is $\mathbf{F}=m\mathbf{g}=-9.8\mathbf{k}$. First projecting onto the parallel vector:
+
+    $\mathbf{F}\cdot \mathbf{u}=(0\times \frac{1}{\sqrt{2}})+ (-9.8 \times \frac{1}{\sqrt{2}})=-6.9$.
+
+    and then onto the perpendicular vector:
+
+    $\mathbf{F}\cdot \mathbf{v}=(0\times -\frac{1}{\sqrt{2}})+ (-9.8 \times \frac{1}{\sqrt{2}})=-6.9$.
+
+    Hence we have
+
+    $\mathbf{F}=-6.9\mathbf{u}-6.9\mathbf{v}$.
+
+1. Let
+    $$\mathbf{a}=\begin{pmatrix}
+    2\\
+    -1\\
+    3
+    \end{pmatrix}
+    ,\qquad
+    \mathbf{b}=\begin{pmatrix}
+    5\\
+    1\\
+    -4
+    \end{pmatrix}.
+    $$
+    Show that $(\mathbf{a}-\mathbf{b})\times(\mathbf{a}+\mathbf{b})=2\mathbf{a}\times\mathbf{b}$.
+
+    Answers:
+
+    $\mathbf{a}-\mathbf{b}=-3\mathbf{i}-2\mathbf{j}+7\mathbf{k}$
+
+    $\mathbf{a}+\mathbf{b}=7\mathbf{i}-\mathbf{k}$
+
+
+    \begin{align*}
+    (\mathbf{a}-\mathbf{b})\times(\mathbf{a}+\mathbf{b})&=
+    \begin{vmatrix}
+    \mathbf{i}&\mathbf{j}&\mathbf{k}\\
+    -3&-2&7\\
+    7&0&-1
+    \end{vmatrix}\\
+    &=
+    \mathbf{i}\begin{vmatrix}
+    -2&7\\
+    0&-1
+    \end{vmatrix}
+    -\mathbf{j}\begin{vmatrix}
+    -3&7\\
+    7&-1
+    \end{vmatrix}
+    +\mathbf{k}\begin{vmatrix}
+    -3&-2\\
+    7&0
+    \end{vmatrix}\\
+    &=\mathbf{i}(2-0)-\mathbf{j}(3-49)+\mathbf{k}(0-(-14))\\
+    &=2\mathbf{i}+46\mathbf{j}+14\mathbf{k}
+    \end{align*}
+
+    \begin{align*}
+    2\mathbf{a}\times\mathbf{b}&=
+    \begin{vmatrix}
+    \mathbf{i}&\mathbf{j}&\mathbf{k}\\
+    4&-2&6\\
+    5&1&-4
+    \end{vmatrix}\\
+    &=
+    \mathbf{i}\begin{vmatrix}
+    -2&6\\
+    1&-4
+    \end{vmatrix}
+    -\mathbf{j}\begin{vmatrix}
+    4&6\\
+    5&-4
+    \end{vmatrix}
+    +\mathbf{k}\begin{vmatrix}
+    4&-2\\
+    5&1
+    \end{vmatrix}\\
+    &=\mathbf{i}(8-6)-\mathbf{j}(-16-30)+\mathbf{k}(4-(-10))\\
+    &=2\mathbf{i}+46\mathbf{j}+14\mathbf{k}
+    \end{align*}
+
+    Hence $(\mathbf{a}-\mathbf{b})\times(\mathbf{a}+\mathbf{b})=2\mathbf{a}\times\mathbf{b}$
+
+1. Show that
+    $$(\mathbf{a}+\mathbf{b})\cdot((\mathbf{b}+\mathbf{c})\times (\mathbf{c}+\mathbf{a}))=2\mathbf{a}\cdot(\mathbf{b}\times\mathbf{c}).$$
+    The quantity $\mathbf{a}\cdot(\mathbf{b}\times\mathbf{c})$ is known as the [scalar triple product](https://en.wikipedia.org/wiki/Triple_product#Scalar_triple_product): its geometric interpretation is the volume of the parallelepiped defined by the three vectors.
+
+    Answers:
+
+    \begin{align*}
+    (\mathbf{a}+\mathbf{b})\cdot((\mathbf{b}+\mathbf{c})\times (\mathbf{c}+\mathbf{a}))&=(\mathbf{a}+\mathbf{b})\cdot(\mathbf{b}\times\mathbf{c}+\mathbf{b}\times\mathbf{a}+\mathbf{c}\times\mathbf{c}+\mathbf{c}\times\mathbf{a})\\
+    &=(\mathbf{a}+\mathbf{b})\cdot(\mathbf{b}\times\mathbf{c}+\mathbf{b}\times\mathbf{a}+\mathbf{c}\times\mathbf{a})\\
+    &=\mathbf{a}\cdot(\mathbf{b}\times\mathbf{c})+(\mathbf{a}\cdot(\mathbf{b}\times\mathbf{a})+\mathbf{a}\cdot(\mathbf{c}\times\mathbf{a})+\mathbf{b}\cdot(\mathbf{b}\times\mathbf{c})+(\mathbf{b}\cdot(\mathbf{b}\times\mathbf{a})+\mathbf{b}\cdot(\mathbf{c}\times\mathbf{a})\\
+    &=\mathbf{a}\cdot(\mathbf{b}\times\mathbf{c})+\mathbf{b}\cdot(\mathbf{c}\times\mathbf{a})\\
+    &=\mathbf{a}\cdot(\mathbf{b}\times\mathbf{c})+\mathbf{a}\cdot(\mathbf{b}\times\mathbf{c})\\
+    &=2\mathbf{a}\cdot(\mathbf{b}\times\mathbf{c})
+    \end{align*}
+
+1. Let
+    $$\mathbf{a}=\begin{pmatrix}
+    \alpha\\
+    0\\
+    -1
+    \end{pmatrix}
+    ,\qquad
+    \mathbf{b}=\begin{pmatrix}
+    3\\
+    2\\
+    5
+    \end{pmatrix}
+    ,\qquad
+    \mathbf{c}=\begin{pmatrix}
+    2\\
+    -1\\
+    4
+    \end{pmatrix}.
+    $$
+    Find the values of $\alpha$ for which $\mathbf{a}\times\mathbf{b}$ is perpendicular to $\mathbf{a}\times\mathbf{c}$.
+
+    Answers:
+
+    We find:
+
+    $\mathbf{a}\times\mathbf{b}=2\mathbf{i}-(5\alpha+3)\mathbf{j}+2\alpha\mathbf{k}$
+
+    and
+
+    $\mathbf{a}\times\mathbf{c}=-\mathbf{i}-(4\alpha+2)\mathbf{j}+\alpha\mathbf{k}$.
+
+    Then for perpendicularity we solve $(\mathbf{a}\times\mathbf{b})\cdot(\mathbf{a}\times\mathbf{c})=0$. We have
+
+    $$
+    (\mathbf{a}\times\mathbf{b})\cdot(\mathbf{a}\times\mathbf{c})=(9\alpha+2)(\alpha+1)
+    $$
+
+    Hence
+    $$\alpha=-\frac{2}{9},\quad\text{or}\quad \alpha={-1}.$$
+
+1. The *torque* is the rotational equivalent of linear force. It is given by the product of the magnitude of the force and the perpendicular distance of the line of action of a force from the axis of rotation. We can calculate torque using the cross product:
+$$\boldsymbol\tau = \mathbf{r}\times \mathbf{F}$$
+where $\boldsymbol\tau$ is the torque vector, $\mathbf{r}$ is the position vector (from the axis of rotation to the point where the force is applied) and $\mathbf{F}$ is the force vector.
+
+    Find the torque about the point $\mathbf{i}+2\mathbf{j}-\mathbf{k}$ of a force $\mathbf{F}=3\mathbf{i}+\mathbf{k}$ acting on a particle at position $2\mathbf{i}-\mathbf{j}+3\mathbf{k}$.
+
+    Answers:
+
+    $\mathbf{r}=(2\mathbf{i}-\mathbf{j}+3\mathbf{k})-(\mathbf{i}+2\mathbf{j}-\mathbf{k})=\mathbf{i}-3\mathbf{j}+4\mathbf{k}$
+
+    Then
+    \begin{align*}
+    \mathbf{r}\times \mathbf{F}&=
+    \begin{vmatrix}
+    \mathbf{i}&\mathbf{j}&\mathbf{k}\\
+    1&-3&4\\
+    3&0&1
+    \end{vmatrix}\\
+    &=-3\mathbf{i}+11\mathbf{j}+9\mathbf{k}.
+    \end{align*}

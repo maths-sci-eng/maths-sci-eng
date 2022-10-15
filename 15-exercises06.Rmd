@@ -1,5 +1,7 @@
 # Exercise Set 6 {-}
 
+These exercises cover solving linear equations by Gaussian elimination.
+
 1. Use Gaussian elimination (elementary row operations) to determine whether or not the following systems of equations have solutions, and, when they do, to find *all solutions*. In the cases where there is more than one solution, find the general solution and also give one particular solution. (Tip: Choosing the elementary row operations carefully can minimise the use of fractions).
 	
     a. $$\begin{align*}

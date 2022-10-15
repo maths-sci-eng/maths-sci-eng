@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 8 Matrices | Mathematics for Scientists and Engineers</title>
+  <title>Exercise Set 5 Answers | Mathematics for Scientists and Engineers</title>
   <meta name="description" content="Mathematics Lecture Notes for UoE Penryn Science and Engineering Disciplines." />
   <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 8 Matrices | Mathematics for Scientists and Engineers" />
+  <meta property="og:title" content="Exercise Set 5 Answers | Mathematics for Scientists and Engineers" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="Mathematics Lecture Notes for UoE Penryn Science and Engineering Disciplines." />
   <meta name="github-repo" content="maths-sci-eng/maths-sci-eng.github.io" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 8 Matrices | Mathematics for Scientists and Engineers" />
+  <meta name="twitter:title" content="Exercise Set 5 Answers | Mathematics for Scientists and Engineers" />
   
   <meta name="twitter:description" content="Mathematics Lecture Notes for UoE Penryn Science and Engineering Disciplines." />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="systems-of-linear-equations.html"/>
-<link rel="next" href="linear-transformations.html"/>
+<link rel="prev" href="exercise-set-4-answers.html"/>
+
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -187,168 +187,261 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="matrices" class="section level1 hasAnchor" number="8">
-<h1><span class="header-section-number">Chapter 8</span> Matrices<a href="matrices.html#matrices" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>A matrix <span class="math inline">\(A\)</span> is a two-dimensional array of numbers. We say that <span class="math inline">\(A\)</span> is an <span class="math inline">\(m \times n\)</span> matrix if it has <span class="math inline">\(m\)</span> rows and <span class="math inline">\(n\)</span> columns, for some natural numbers <span class="math inline">\(m\)</span> and <span class="math inline">\(n\)</span>. We use the notation
-<span class="math display">\[
-A = (a_{ij})_{m \times n}, \qquad \text{or more simply} \qquad A = (a_{ij}),
-\]</span>
-to indicate that the entry in row <span class="math inline">\(i\)</span> and column <span class="math inline">\(j\)</span> of <span class="math inline">\(A\)</span> is <span class="math inline">\(a_{ij}\)</span>. We refer to <span class="math inline">\(a_{ij}\)</span> as the <span class="math inline">\(i\)</span>–<span class="math inline">\(j\)</span> entry of the matrix <span class="math inline">\(A\)</span>.</p>
-<div id="solving-linear-systems-revisited" class="section level2 hasAnchor" number="8.1">
-<h2><span class="header-section-number">8.1</span> Solving linear systems revisited<a href="matrices.html#solving-linear-systems-revisited" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>In the previous chapter, given a set of <span class="math inline">\(m\)</span> linear equations with <span class="math inline">\(n\)</span> variables</p>
-<p><span class="math display">\[\begin{align*}
-a_{11}x_1+a_{12}x_2+\dotsb+a_{1n}x_n&amp;=b_1\\
-a_{21}x_1+a_{22}x_2+\dotsb+a_{2n}x_n&amp;=b_2\\
-\vdots\qquad&amp;=\,\vdots\\
-a_{m1}x_1+a_{m2}x_2+\dotsb+a_{mn}x_n&amp;=b_m
-\end{align*}\]</span></p>
-<p>we introduced the coefficient matrix</p>
-<p><span class="math display">\[
-A=
-\begin{pmatrix}
-a_{11}&amp;a_{12}&amp;\dotsb&amp;a_{1n}\\
-a_{21}&amp;a_{22}&amp;\dotsb&amp;a_{2n}\\
-\vdots&amp;\vdots&amp;\dotsb&amp;\vdots\\
-a_{m1}&amp;a_{n2}&amp;\dotsb&amp;a_{mn}
-\end{pmatrix}.
-\]</span></p>
-<p>We will now write the variables and r.h.s. as vectors of length <span class="math inline">\(n\)</span> and <span class="math inline">\(m\)</span> respectively
-<span class="math display">\[
-\mathbf{x} = \begin{pmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{pmatrix}
-\qquad\text{and}\qquad
-\mathbf{b} = \begin{pmatrix} b_1 \\ b_2 \\ \vdots \\ b_m \end{pmatrix}.
-\]</span></p>
-<p>Next, we define the operation of multiplying a vector <span class="math inline">\(\mathbf{x}\)</span> of length <span class="math inline">\(n\)</span> by an <span class="math inline">\(m\times n\)</span> matrix <span class="math inline">\(A\)</span>. The result is a vector of length <span class="math inline">\(m\)</span> whose first entry is the sum of the element-wise products of the first row of <span class="math inline">\(A\)</span> with the vector <span class="math inline">\(\mathbf{x}\)</span>, the second entry is the sum of the element-wise products of the second row of <span class="math inline">\(A\)</span> with the vector <span class="math inline">\(\mathbf{x}\)</span> and so on:</p>
-<p><span class="math display">\[
-A\mathbf{x}=\begin{pmatrix}
-a_{11}&amp;a_{12}&amp;\dotsb&amp;a_{1n}\\
-a_{21}&amp;a_{22}&amp;\dotsb&amp;a_{2n}\\
-\vdots&amp;\vdots&amp;\dotsb&amp;\vdots\\
-a_{n1}&amp;a_{n2}&amp;\dotsb&amp;a_{nn}
-\end{pmatrix}
-\begin{pmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{pmatrix}
-=
-\begin{pmatrix}
-a_{11}x_1+a_{12}x_2+\dotsb+a_{1n}x_n\\
-a_{21}x_1+a_{22}x_2+\dotsb+a_{2n}x_n\\
-\vdots\\
-a_{m1}x_1+a_{m2}x_2+\dotsb+a_{mn}x_n
-\end{pmatrix}
-\]</span>
-Hence we can express the system of equations more compactly as
-<span class="math display">\[A\mathbf{x}=\mathbf{b}\]</span>
-where each row of the expanded equation corresponds to one of the linear equations. In the previous chapter we saw that solving such a system corresponds to finding the intersection points of the hyperplanes defined by these rows. We will call this the <em>row picture</em> of linear equations. However, there is another way to interpret <span class="math inline">\(A\mathbf{x}=\mathbf{b}\)</span> in terms of column vectors. We must first introduce some new definitions.</p>
-<div class="definition">
-<p><span id="def:lincomb" class="definition"><strong>Definition 8.1  (Linear combinations) </strong></span>Consider a list of vectors
-<span class="math display">\[\mathbf{v}_1, \mathbf{v}_2,\dotsc,\mathbf{v}_n.\]</span></p>
-<ul>
-<li><p>A <em>linear combination</em> of a list of vectors is a sum of the form
-<span class="math display">\[
-  \alpha_1\mathbf{v}_1+\alpha_2\mathbf{v}_2 + \dotsb + \alpha_n\mathbf{v}_n
-  \]</span>
-for some scalar coefficients <span class="math inline">\(\alpha_i\)</span>.</p></li>
-<li><p>A list of vectors is called <em>linearly independent</em> if we cannot write one of the vectors as a linear combination of the others, such as
-<span class="math display">\[
-  \mathbf{v}_i=\alpha_1\mathbf{v}_1+\alpha_2\mathbf{v}_2+\dotsb+\alpha_{i-1}\mathbf{v}_{i-1}+\alpha_{i+1}\mathbf{v}_{i+1}+\dotsb+\alpha_n\mathbf{v}_n
-  \]</span>
-(none of the vectors depends on the others).</p></li>
-<li><p>The <em>span</em> of a list of vectors is all of the possible linear combinations. If we can reach any vector in the space by taking some linear combination then we say the vectors <em>span</em> the space.</p></li>
-</ul>
-</div>
-<p>An intuitive way to think about linearly independent vectors is that they all point in “independent” directions. An intuitive way to think about the span is as all the points we can reach in the space by only walking in the directions of the list of vectors. Figure <a href="matrices.html#fig:2dspan">8.1</a> demonstrates the concepts of linear combinations and span in 2-dimensions.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:2dspan"></span>
-<iframe src="https://www.geogebra.org/calculator/qeyeahkb" width="672" height="400px" data-external="1">
-</iframe>
-<p class="caption">
-Figure 8.1: Any vector <span class="math inline">\(\mathbf{u}\)</span> in the plane can be written as a linear combination of the vectors <span class="math inline">\(\mathbf{v}_1\)</span> and <span class="math inline">\(\mathbf{v}_2\)</span>, that is <span class="math inline">\(\mathbf{u}=\alpha_1\mathbf{v}_1+\alpha_2\mathbf{v}_2\)</span>. Drag the vector <span class="math inline">\(\mathbf{u}\)</span> to any point in the plane to see this decomposition. This means that <span class="math inline">\(\mathbf{v}_1\)</span> and <span class="math inline">\(\mathbf{v}_2\)</span> span the entire plane. You can also drag the vectors <span class="math inline">\(\mathbf{v}_1\)</span> and <span class="math inline">\(\mathbf{v}_2\)</span> and so long as these point in “independent directions” they still span the plane; if they lie along the same direction, then they only span a line.<a href="https://www.geogebra.org/calculator/qeyeahkb">[Open plot in browser.]</a>
-</p>
-</div>
-<p>If we consider each column of the matrix <span class="math inline">\(A\)</span> as a vector <span class="math inline">\(\mathbf{a}_i\)</span> of length <span class="math inline">\(m\)</span>, then the multiplication <span class="math inline">\(A\mathbf{x}\)</span> can also be written as
-<span class="math display">\[\begin{align*}
-A\mathbf{x}&amp;=x_1\mathbf{a}_1 + x_2\mathbf{a}_2 + \dotsb + x_n\mathbf{a}_n\\
-&amp;=x_1
-\begin{pmatrix} a_{11} \\ a_{21} \\ \vdots \\ a_{m1} \end{pmatrix}
-+
-x_2
-\begin{pmatrix} a_{12} \\ a_{22} \\ \vdots \\ a_{m2} \end{pmatrix}
-+
-\dotsb
-+
-x_n
-\begin{pmatrix} a_{1n} \\ a_{2n} \\ \vdots \\ a_{mn} \end{pmatrix}\\
-&amp;=
-\begin{pmatrix}
-a_{11}x_1+a_{12}x_2+\dotsb+a_{1n}x_n\\
-a_{21}x_1+a_{22}x_2+\dotsb+a_{2n}x_n\\
-\vdots\\
-a_{m1}x_1+a_{m2}x_2+\dotsb+a_{mn}x_n
-\end{pmatrix}.
-\end{align*}\]</span>
-That is, <span class="math inline">\(A\mathbf{x}\)</span> is the <em>linear combination</em> of the columns <span class="math inline">\(\mathbf{a}_i\)</span> with coefficients <span class="math inline">\(x_i\)</span>. We will call this the <em>column picture</em> of matrix equations. As we shall come to see, this different point of view is very powerful in understanding the nature of linear equations.</p>
-<p>Finding a solution to <span class="math inline">\(A\mathbf{x}=\mathbf{b}\)</span> can now be interpreted as answering the question: can we find a linear combination of the column vectors of <span class="math inline">\(A\)</span> that sum to give the vector <span class="math inline">\(\mathbf{b}\)</span>? Or in other words: is the vector <span class="math inline">\(\mathbf{b}\)</span> in the span of the columns of <span class="math inline">\(A\)</span>?</p>
-<p>The question of unique solutions or infinitely many solutions becomes: is there one way or infinitely many ways to take a linear combination of the columns of <span class="math inline">\(A\)</span> to reach the vector <span class="math inline">\(\mathbf{b}\)</span>? Or in other words: are the columns of <span class="math inline">\(A\)</span> linearly independent?</p>
-<p>These questions can once again be answered from inspecting the REF of the augmented matrix. In the statements below we shall refer to the coefficient matrix part of the REF as the l.h.s. and the final augmented column as the r.h.s.</p>
+<div id="exercise-set-5-answers" class="section level1 unlisted unnumbered hasAnchor">
+<h1>Exercise Set 5 Answers<a href="exercise-set-5-answers.html#exercise-set-5-answers" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>These exercises cover the topic of vectors.</p>
+<p>Note that the questions are independent of one another, so the definition of a vector <span class="math inline">\(\mathbf{a}\)</span> in one question does not carry over to another question with a vector called <span class="math inline">\(\mathbf{a}\)</span>.</p>
 <ol style="list-style-type: decimal">
-<li>If there is a row of zeros in the l.h.s. but a non-zero value in the corresponding row of the r.h.s., then there are <strong>no solutions</strong> (<span class="math inline">\(\mathbf{b}\)</span> is not in the span of the columns of <span class="math inline">\(A\)</span>).</li>
-<li>If all zero rows in the l.h.s. have a zero in the corresponding row of the r.h.s, together with every column in the l.h.s. containing a leading entry, then there is a <strong>unique solution</strong> (<span class="math inline">\(\mathbf{b}\)</span> is in the span of the columns of <span class="math inline">\(A\)</span> together with the columns being linearly independent).</li>
-<li>If all zero rows in the l.h.s. have a zero in the corresponding row of the r.h.s, but not every column in the l.h.s. contains a leading entry, then there are <strong>infinitely many solutions</strong> (<span class="math inline">\(\mathbf{b}\)</span> is in the span of the columns of <span class="math inline">\(A\)</span> but the columns are linearly dependent).</li>
+<li><p>The points <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span> and <span class="math inline">\(C\)</span> have position vectors
+<span class="math display">\[\begin{align*}
+\mathbf{a}&amp;=5\mathbf{i}-6\mathbf{j}+4\mathbf{k}\\
+\mathbf{b}&amp;=2\mathbf{i}+5\mathbf{j}-3\mathbf{k}\\
+\mathbf{c}&amp;=-\mathbf{i}+4\mathbf{k}.
+\end{align*}\]</span>
+Find:</p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(5\mathbf{a}-2\mathbf{b}-3\mathbf{c}\)</span></li>
+<li><span class="math inline">\(\overrightarrow{AC}+\overrightarrow{AB}\)</span></li>
+<li><span class="math inline">\(\mathbf{a}\cdot\mathbf{b}\)</span></li>
+<li>The angle between <span class="math inline">\(\mathbf{a}\)</span> and <span class="math inline">\(\mathbf{b}\)</span></li>
+<li><span class="math inline">\(\mathbf{a}\times\mathbf{c}\)</span></li>
 </ol>
-<p>A list of vectors that both span the space and are linearly independent are called a <em>basis</em>. A basis can be used as a coordinate system. We generally use the <em>standard basis</em> consisting of the unit vectors <span class="math inline">\(\mathbf{i}, \mathbf{j}\)</span> and <span class="math inline">\(\mathbf{k}\)</span>. The coordinates of a vector <span class="math inline">\(\mathbf{v}\)</span> in this basis are the values <span class="math inline">\(\alpha_i\)</span> in the linear combination <span class="math inline">\(\mathbf{v}=\alpha_1\mathbf{i} + \alpha_2\mathbf{j} + \alpha_3\mathbf{k}\)</span>. If we had a different basis <span class="math inline">\(\mathbf{p}, \mathbf{q}, \mathbf{r}\)</span> then we could also express <span class="math inline">\(\mathbf{v}\)</span> as <span class="math inline">\(\mathbf{v}=\beta_1\mathbf{p}+\beta_2\mathbf{q}+\beta_3\mathbf{r}\)</span> and specify points using <span class="math inline">\(\beta_1,\beta_2\)</span> and <span class="math inline">\(\beta_3\)</span> as coordinates.</p>
-</div>
-<div id="determinants" class="section level2 hasAnchor" number="8.2">
-<h2><span class="header-section-number">8.2</span> Determinants<a href="matrices.html#determinants" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>When we have a square coefficient matrix <span class="math inline">\(A\)</span>, we can find out if there exists a unique solution to <span class="math inline">\(A\mathbf{x}=\mathbf{b}\)</span> for any possible vector <span class="math inline">\(\mathbf{b}\)</span> by computing a scalar quantity associated to <span class="math inline">\(A\)</span> known as the <em>determinant</em>.</p>
-<p>For a <span class="math inline">\(2\times 2\)</span> matrix
-<span class="math display">\[
-A = \begin{pmatrix} a &amp; b\\ c &amp; d\end{pmatrix}
+<p>Answers:</p>
+<ol style="list-style-type: lower-alpha">
+<li><p><span class="math inline">\(5\mathbf{a}-2\mathbf{b}-3\mathbf{c}=24\mathbf{i}-40\mathbf{j}+14\mathbf{k}\)</span></p></li>
+<li><p><span class="math inline">\(\overrightarrow{AC}=\mathbf{c}-\mathbf{a}=-6\mathbf{i}+6\mathbf{j}\)</span></p>
+<p><span class="math inline">\(\overrightarrow{AB}=\mathbf{b}-\mathbf{a}=-3\mathbf{i}+11\mathbf{j}-7\mathbf{k}\)</span></p>
+<p><span class="math inline">\(\overrightarrow{AC}+\overrightarrow{AB}=-9\mathbf{i}+17\mathbf{j}-7\mathbf{k}\)</span></p></li>
+<li><p><span class="math inline">\(\mathbf{a}\cdot \mathbf{b}=(5\times 2)+ (-6\times5)+(4\times -3)=-32\)</span></p></li>
+<li><p><span class="math inline">\(|\mathbf{a}|=\sqrt{77}\)</span></p>
+<p><span class="math inline">\(|\mathbf{b}|=\sqrt{38}\)</span></p>
+<p><span class="math inline">\(\cos(\theta)=\frac{\mathbf{a}\cdot \mathbf{b}}{|\mathbf{a}||\mathbf{b}|}=\frac{-32}{\sqrt{77}\sqrt{38}}=-0.5916\)</span></p>
+<p><span class="math inline">\(\theta=\cos^{-1}(-0.5916)=126.3^\circ\)</span></p></li>
+<li><p><span class="math display">\[\begin{align*}
+\mathbf{a}\times \mathbf{c}&amp;=\begin{vmatrix}
+\mathbf{i}&amp;\mathbf{j}&amp;\mathbf{k}\\
+5&amp;-6&amp;4\\
+-1&amp;0&amp;4
+\end{vmatrix}\\
+&amp;=
+\mathbf{i}\begin{vmatrix}
+-6&amp;4\\
+0&amp;4
+\end{vmatrix}
+-\mathbf{j}\begin{vmatrix}
+5&amp;4\\
+-1&amp;4
+\end{vmatrix}
++\mathbf{k}\begin{vmatrix}
+5&amp;-6\\
+-1&amp;0
+\end{vmatrix}\\
+&amp;=\mathbf{i}(-24-0)-\mathbf{j}(20-(-4))+\mathbf{k}(0-6)\\
+&amp;=-24\mathbf{i}-24\mathbf{j}-6\mathbf{k}
+\end{align*}\]</span></p></li>
+</ol></li>
+<li><p>Let <span class="math inline">\(\mathbf{p}\)</span> and <span class="math inline">\(\mathbf{q}\)</span> be vectors.</p>
+<ol style="list-style-type: lower-alpha">
+<li>What is the vector <span class="math inline">\(\mathbf{r}\)</span> joining the points whose position vectors are <span class="math inline">\(\mathbf{p}\)</span> and <span class="math inline">\(2\mathbf{q}\)</span>?</li>
+<li>What is the vector <span class="math inline">\(\mathbf{s}\)</span> joing the points whose position vectors are <span class="math inline">\(\mathbf{2q}\)</span> and <span class="math inline">\(-6\mathbf{p}+14\mathbf{q}\)</span>?</li>
+<li>What do you notice about <span class="math inline">\(\mathbf{r}\)</span> and <span class="math inline">\(\mathbf{s}\)</span>?</li>
+<li>What does this tell you about the points whose position vectors are <span class="math inline">\(\mathbf{p}\)</span>, <span class="math inline">\(2\mathbf{q}\)</span> and <span class="math inline">\(-6\mathbf{p}+14{q}\)</span>?</li>
+</ol>
+<p>Answers:</p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(\mathbf{r}=2\mathbf{q}-\mathbf{p}\)</span></li>
+<li><span class="math inline">\(\mathbf{s}=(-6\mathbf{p}+14\mathbf{q})-2\mathbf{q}=12\mathbf{q}-6\mathbf{p}\)</span></li>
+<li>They are parallel: <span class="math inline">\(\mathbf{s}=6\mathbf{r}\)</span> so they have the same direction.</li>
+<li>The points are collinear, i.e. all lie in a straight line.</li>
+</ol></li>
+<li><p>Let <span class="math inline">\(\mathbf{u}=5\mathbf{i}+2\mathbf{j}\)</span> and <span class="math inline">\(\mathbf{v}=3\mathbf{i}-\mathbf{j}-3\mathbf{k}\)</span>. Find <span class="math inline">\((4\mathbf{u}-6\mathbf{v})\cdot(2\mathbf{u}+3\mathbf{v})\)</span>.</p>
+<p>Answers:</p>
+<p><span class="math inline">\((2\mathbf{i}+14\mathbf{j}+\mathbf{k})\cdot(19\mathbf{i}+\mathbf{j}-9\mathbf{k})=38+14-162=-110.\)</span></p></li>
+<li><p>Given that the position vectors of the points <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, and <span class="math inline">\(C\)</span> are <span class="math inline">\(\mathbf{a}\)</span>, <span class="math inline">\(\mathbf{b}\)</span> and <span class="math inline">\(\mathbf{c}\)</span>, write down the position vectors of the midpoints of the lines <span class="math inline">\(BC\)</span> and <span class="math inline">\(CA\)</span>.</p>
+<p>Answers:</p>
+<p><span class="math inline">\(\overline{BC}=\mathbf{c}-\mathbf{b}\)</span></p>
+<p><span class="math inline">\(\overline{OE}=\mathbf{b}+\frac{1}{2}(\mathbf{c}-\mathbf{b})=\frac{1}{2}\mathbf{c}-\frac{1}{2}\mathbf{b}\)</span></p>
+<p><span class="math inline">\(\overline{CA}=\mathbf{a}-\mathbf{c}\)</span></p>
+<p><span class="math inline">\(\overline{OF}=\mathbf{c}+\frac{1}{2}(\mathbf{a}-\mathbf{c})=\frac{1}{2}\mathbf{a}-\frac{1}{2}\mathbf{c}\)</span></p></li>
+<li><p>Prove that the vector joining the midpoints of two sides of a triangle is parallel to the third side and half of its length.</p>
+<p>Answers:</p>
+<p>We need to set up some labels for the points of the triangle. Let these have position vectors <span class="math inline">\(\mathbf{A}, \mathbf{B}, \mathbf{C}\)</span>. The vectors defining the sides of the triangle are</p>
+<p><span class="math inline">\(\mathbf{a}=\overline{BC}=\mathbf{C}-\mathbf{B}\)</span></p>
+<p><span class="math inline">\(\mathbf{b}=\overline{CA}=\mathbf{A}-\mathbf{C}\)</span></p>
+<p><span class="math inline">\(\mathbf{c}=\overline{AB}=\mathbf{B}-\mathbf{A}\)</span></p>
+<p>The midpoint of side <span class="math inline">\(CA\)</span> is</p>
+<p><span class="math inline">\(\mathbf{C}+\frac{1}{2}\mathbf{b}=\mathbf{C}+\frac{1}{2}\mathbf{A}-\frac{1}{2}\mathbf{C}=\frac{1}{2}\mathbf{C}+\frac{1}{2}\mathbf{A}\)</span></p>
+<p>The midpoint of side <span class="math inline">\(AB\)</span> is</p>
+<p><span class="math inline">\(\mathbf{A}+\frac{1}{2}\mathbf{c}=\mathbf{A}+\frac{1}{2}\mathbf{B}-\frac{1}{2}\mathbf{A}=\frac{1}{2}\mathbf{A}+\frac{1}{2}\mathbf{B}\)</span></p>
+<p>The vector between these midpoints is</p>
+<p><span class="math display">\[(\frac{1}{2}\mathbf{C}+\frac{1}{2}\mathbf{A})-(\frac{1}{2}\mathbf{A}+\frac{1}{2}\mathbf{B})=\frac{1}{2}\mathbf{C}-\frac{1}{2}\mathbf{B}\]</span></p>
+<p>which is half of the vector <span class="math inline">\(\mathbf{a}=\overline{BC}\)</span>, as required.</p></li>
+<li><p>Show that the vectors
+<span class="math display">\[\begin{align*}
+\mathbf{a}&amp;=8\mathbf{i}+2\mathbf{j}-3\mathbf{k}\\
+\mathbf{b}&amp;=3\mathbf{i}-6\mathbf{j}+4\mathbf{k}
+\end{align*}\]</span>
+are perpendicular to one another (Hint: use the dot product).</p>
+<p>Answers:</p>
+<p>Using the dot product:</p>
+<p><span class="math inline">\(\mathbf{a}\cdot\mathbf{b}=(8\times 3)+(2\times-6)+(-3\times 4)=24-12-12=0\)</span></p>
+<p>and since this is zero and the vectors <span class="math inline">\(\mathbf{a}\)</span> and <span class="math inline">\(\mathbf{b}\)</span> are non-zero, these are perpendicular vectors.</p></li>
+<li><p>A block of mass <span class="math inline">\(m=1\,\text{kg}\)</span> is sliding down a frictionless slope under gravity. The slope is at an angle of <span class="math inline">\(45^\circ\)</span> to the horizontal. Recall that the force on the block is given by Newton’s second law: <span class="math inline">\(\mathbf{F}=m\mathbf{g}\)</span> where <span class="math inline">\(\mathbf{g}=-9.8\mathbf{k}\,\text{ms}^{-2}\)</span> is the gravitational acceleration. Resolve the force vector in the directions parallel and perpendicular to the slope. (Hint: you need to project the force vector onto unit vectors that are parallel and perpendicular to the slope.)</p>
+<p>Answers:</p>
+<p>We can simplify this to a two dimensional problem by aligning the coordinate axes sensibly. Let’s align the axes so that the <span class="math inline">\(y\)</span> axis is perpendicular to the slope and the slope is increasing in the <span class="math inline">\(x\)</span> direction, then we just need the <span class="math inline">\(\mathbf{i}\)</span> and <span class="math inline">\(\mathbf{k}\)</span> directions. The unit vector parallel to the (increasing) slope is <span class="math inline">\(\mathbf{u}=\frac{1}{\sqrt{2}}\mathbf{i}+\frac{1}{\sqrt{2}}\mathbf{k}\)</span> and the unit vector perpendicular to the slope is <span class="math inline">\(\mathbf{v}=-\frac{1}{\sqrt{2}}\mathbf{i}+\frac{1}{\sqrt{2}}\mathbf{k}\)</span>.</p>
+<p>The force vector is <span class="math inline">\(\mathbf{F}=m\mathbf{g}=-9.8\mathbf{k}\)</span>. First projecting onto the parallel vector:</p>
+<p><span class="math inline">\(\mathbf{F}\cdot \mathbf{u}=(0\times \frac{1}{\sqrt{2}})+ (-9.8 \times \frac{1}{\sqrt{2}})=-6.9\)</span>.</p>
+<p>and then onto the perpendicular vector:</p>
+<p><span class="math inline">\(\mathbf{F}\cdot \mathbf{v}=(0\times -\frac{1}{\sqrt{2}})+ (-9.8 \times \frac{1}{\sqrt{2}})=-6.9\)</span>.</p>
+<p>Hence we have</p>
+<p><span class="math inline">\(\mathbf{F}=-6.9\mathbf{u}-6.9\mathbf{v}\)</span>.</p></li>
+<li><p>Let
+<span class="math display">\[\mathbf{a}=\begin{pmatrix}
+2\\
+-1\\
+3
+\end{pmatrix}
+,\qquad
+\mathbf{b}=\begin{pmatrix}
+5\\
+1\\
+-4
+\end{pmatrix}.
 \]</span>
-we define the determinant of <span class="math inline">\(A\)</span>, written as <span class="math inline">\(\det(A)\)</span> or <span class="math inline">\(|A|\)</span>, as
-<span class="math display">\[
-\det(A) = \begin{vmatrix} a &amp; b\\ c &amp; d\end{vmatrix} = ad - bc.
-\]</span></p>
-<div class="example">
-<p><span id="exm:determinants2x2" class="example"><strong>Example 8.1  (2x2 determinants) </strong></span>For instance, we have
-<span class="math display">\[\begin{align*}
-\begin{vmatrix} 1 &amp; 5\\ 6 &amp; 2\end{vmatrix} &amp;= 1\times 2 - 5\times 6 = -28,\\
-\begin{vmatrix} 2 &amp; -5\\ 7 &amp; 3\end{vmatrix} &amp;= 2\times 3 - (-5\times 7) = 41,\\
-\begin{vmatrix} a &amp; \frac{b}{2}\\ \frac{b}{2} &amp; c\end{vmatrix} &amp; = ac - \frac{b^2}{4} = -\frac{1}{4}(b^2 - 4ac).
+Show that <span class="math inline">\((\mathbf{a}-\mathbf{b})\times(\mathbf{a}+\mathbf{b})=2\mathbf{a}\times\mathbf{b}\)</span>.</p>
+<p>Answers:</p>
+<p><span class="math inline">\(\mathbf{a}-\mathbf{b}=-3\mathbf{i}-2\mathbf{j}+7\mathbf{k}\)</span></p>
+<p><span class="math inline">\(\mathbf{a}+\mathbf{b}=7\mathbf{i}-\mathbf{k}\)</span></p>
+<p><span class="math display">\[\begin{align*}
+(\mathbf{a}-\mathbf{b})\times(\mathbf{a}+\mathbf{b})&amp;=
+\begin{vmatrix}
+\mathbf{i}&amp;\mathbf{j}&amp;\mathbf{k}\\
+-3&amp;-2&amp;7\\
+7&amp;0&amp;-1
+\end{vmatrix}\\
+&amp;=
+\mathbf{i}\begin{vmatrix}
+-2&amp;7\\
+0&amp;-1
+\end{vmatrix}
+-\mathbf{j}\begin{vmatrix}
+-3&amp;7\\
+7&amp;-1
+\end{vmatrix}
++\mathbf{k}\begin{vmatrix}
+-3&amp;-2\\
+7&amp;0
+\end{vmatrix}\\
+&amp;=\mathbf{i}(2-0)-\mathbf{j}(3-49)+\mathbf{k}(0-(-14))\\
+&amp;=2\mathbf{i}+46\mathbf{j}+14\mathbf{k}
 \end{align*}\]</span></p>
-</div>
-<p>Higher-order determinants are defined recursively in terms of lower-order determinants. For instance, for a <span class="math inline">\(3\times 3\)</span> matrix, we define</p>
+<p><span class="math display">\[\begin{align*}
+2\mathbf{a}\times\mathbf{b}&amp;=
+\begin{vmatrix}
+\mathbf{i}&amp;\mathbf{j}&amp;\mathbf{k}\\
+4&amp;-2&amp;6\\
+5&amp;1&amp;-4
+\end{vmatrix}\\
+&amp;=
+\mathbf{i}\begin{vmatrix}
+-2&amp;6\\
+1&amp;-4
+\end{vmatrix}
+-\mathbf{j}\begin{vmatrix}
+4&amp;6\\
+5&amp;-4
+\end{vmatrix}
++\mathbf{k}\begin{vmatrix}
+4&amp;-2\\
+5&amp;1
+\end{vmatrix}\\
+&amp;=\mathbf{i}(8-6)-\mathbf{j}(-16-30)+\mathbf{k}(4-(-10))\\
+&amp;=2\mathbf{i}+46\mathbf{j}+14\mathbf{k}
+\end{align*}\]</span></p>
+<p>Hence <span class="math inline">\((\mathbf{a}-\mathbf{b})\times(\mathbf{a}+\mathbf{b})=2\mathbf{a}\times\mathbf{b}\)</span></p></li>
+<li><p>Show that
+<span class="math display">\[(\mathbf{a}+\mathbf{b})\cdot((\mathbf{b}+\mathbf{c})\times (\mathbf{c}+\mathbf{a}))=2\mathbf{a}\cdot(\mathbf{b}\times\mathbf{c}).\]</span>
+The quantity <span class="math inline">\(\mathbf{a}\cdot(\mathbf{b}\times\mathbf{c})\)</span> is known as the <a href="https://en.wikipedia.org/wiki/Triple_product#Scalar_triple_product">scalar triple product</a>: its geometric interpretation is the volume of the parallelepiped defined by the three vectors.</p>
+<p>Answers:</p>
+<p><span class="math display">\[\begin{align*}
+(\mathbf{a}+\mathbf{b})\cdot((\mathbf{b}+\mathbf{c})\times (\mathbf{c}+\mathbf{a}))&amp;=(\mathbf{a}+\mathbf{b})\cdot(\mathbf{b}\times\mathbf{c}+\mathbf{b}\times\mathbf{a}+\mathbf{c}\times\mathbf{c}+\mathbf{c}\times\mathbf{a})\\
+&amp;=(\mathbf{a}+\mathbf{b})\cdot(\mathbf{b}\times\mathbf{c}+\mathbf{b}\times\mathbf{a}+\mathbf{c}\times\mathbf{a})\\
+&amp;=\mathbf{a}\cdot(\mathbf{b}\times\mathbf{c})+(\mathbf{a}\cdot(\mathbf{b}\times\mathbf{a})+\mathbf{a}\cdot(\mathbf{c}\times\mathbf{a})+\mathbf{b}\cdot(\mathbf{b}\times\mathbf{c})+(\mathbf{b}\cdot(\mathbf{b}\times\mathbf{a})+\mathbf{b}\cdot(\mathbf{c}\times\mathbf{a})\\
+&amp;=\mathbf{a}\cdot(\mathbf{b}\times\mathbf{c})+\mathbf{b}\cdot(\mathbf{c}\times\mathbf{a})\\
+&amp;=\mathbf{a}\cdot(\mathbf{b}\times\mathbf{c})+\mathbf{a}\cdot(\mathbf{b}\times\mathbf{c})\\
+&amp;=2\mathbf{a}\cdot(\mathbf{b}\times\mathbf{c})
+\end{align*}\]</span></p></li>
+<li><p>Let
+<span class="math display">\[\mathbf{a}=\begin{pmatrix}
+\alpha\\
+0\\
+-1
+\end{pmatrix}
+,\qquad
+\mathbf{b}=\begin{pmatrix}
+3\\
+2\\
+5
+\end{pmatrix}
+,\qquad
+\mathbf{c}=\begin{pmatrix}
+2\\
+-1\\
+4
+\end{pmatrix}.
+\]</span>
+Find the values of <span class="math inline">\(\alpha\)</span> for which <span class="math inline">\(\mathbf{a}\times\mathbf{b}\)</span> is perpendicular to <span class="math inline">\(\mathbf{a}\times\mathbf{c}\)</span>.</p>
+<p>Answers:</p>
+<p>We find:</p>
+<p><span class="math inline">\(\mathbf{a}\times\mathbf{b}=2\mathbf{i}-(5\alpha+3)\mathbf{j}+2\alpha\mathbf{k}\)</span></p>
+<p>and</p>
+<p><span class="math inline">\(\mathbf{a}\times\mathbf{c}=-\mathbf{i}-(4\alpha+2)\mathbf{j}+\alpha\mathbf{k}\)</span>.</p>
+<p>Then for perpendicularity we solve <span class="math inline">\((\mathbf{a}\times\mathbf{b})\cdot(\mathbf{a}\times\mathbf{c})=0\)</span>. We have</p>
 <p><span class="math display">\[
-\begin{vmatrix} a &amp; b &amp; c\\ d &amp; e &amp; f\\ g &amp; h &amp; i\end{vmatrix}
-= a\begin{vmatrix} e &amp; f\\ h &amp; i\end{vmatrix}
-- b\begin{vmatrix} d &amp; f\\ g &amp; i\end{vmatrix}
-+ c\begin{vmatrix} d &amp; e\\ g &amp; h\end{vmatrix}.
+(\mathbf{a}\times\mathbf{b})\cdot(\mathbf{a}\times\mathbf{c})=(9\alpha+2)(\alpha+1)
 \]</span></p>
-<p>Note that the expression above contains three terms, each of which is the product of two factors: an entry of the matrix multiplied by a <span class="math inline">\(2\times 2\)</span> determinant. Each <span class="math inline">\(2\times 2\)</span> determinant is formed by crossing out the row and column containing the other factor. Also note the <span class="math inline">\(-\)</span> sign in the second term.</p>
-<div class="example">
-<p><span id="exm:determinants3x3" class="example"><strong>Example 8.2  (A 3x3 determinant) </strong></span>Compute the determinant of the matrix <span class="math inline">\(A = \left(\begin{smallmatrix} 1 &amp; 2 &amp; 3\\ 4 &amp; 5 &amp; 6\\ 7 &amp; 8 &amp; 9\end{smallmatrix}\right)\)</span>.
+<p>Hence
+<span class="math display">\[\alpha=-\frac{2}{9},\quad\text{or}\quad \alpha={-1}.\]</span></p></li>
+<li><p>The <em>torque</em> is the rotational equivalent of linear force. It is given by the product of the magnitude of the force and the perpendicular distance of the line of action of a force from the axis of rotation. We can calculate torque using the cross product:
+<span class="math display">\[\boldsymbol\tau = \mathbf{r}\times \mathbf{F}\]</span>
+where <span class="math inline">\(\boldsymbol\tau\)</span> is the torque vector, <span class="math inline">\(\mathbf{r}\)</span> is the position vector (from the axis of rotation to the point where the force is applied) and <span class="math inline">\(\mathbf{F}\)</span> is the force vector.</p>
+<p>Find the torque about the point <span class="math inline">\(\mathbf{i}+2\mathbf{j}-\mathbf{k}\)</span> of a force <span class="math inline">\(\mathbf{F}=3\mathbf{i}+\mathbf{k}\)</span> acting on a particle at position <span class="math inline">\(2\mathbf{i}-\mathbf{j}+3\mathbf{k}\)</span>.</p>
+<p>Answers:</p>
+<p><span class="math inline">\(\mathbf{r}=(2\mathbf{i}-\mathbf{j}+3\mathbf{k})-(\mathbf{i}+2\mathbf{j}-\mathbf{k})=\mathbf{i}-3\mathbf{j}+4\mathbf{k}\)</span></p>
+<p>Then
 <span class="math display">\[\begin{align*}
-\det(A) = \begin{vmatrix}  1 &amp; 2 &amp; 3\\ 4 &amp; 5 &amp; 6\\ 7 &amp; 8 &amp; 9\end{vmatrix}
-&amp;= 1\begin{vmatrix} 5 &amp; 6\\ 8 &amp; 9\end{vmatrix}
-- 2\begin{vmatrix} 4 &amp; 6\\ 7 &amp; 9\end{vmatrix}
-+ 3\begin{vmatrix} 4 &amp; 5\\ 7 &amp; 8\end{vmatrix} \\
-&amp;= 1\left(5\times 9-6\times 8\right) - 2\left(4\times 9 - 6\times 7\right) + 3(4\times 8 - 5\times 7)\\
-&amp;= -3 - 2(-6)+3(-3)\\
-&amp;=0
-\end{align*}\]</span></p>
-</div>
-<div class="theorem">
-<p><span id="thm:det0" class="theorem"><strong>Theorem 8.1  (Unique solutions) </strong></span>Let <span class="math inline">\(A\)</span> be a square matrix. There is a unique solution to <span class="math inline">\(A\mathbf{x}=\mathbf{b}\)</span> for any vector <span class="math inline">\(\mathbf{b}\)</span> if and only if <span class="math inline">\(\det(A)\neq 0\)</span>.</p>
-</div>
-<p>This gives us a useful test if we want to know if there are unique solutions for any vector <span class="math inline">\(\mathbf{b}\)</span>. Note however that even if <span class="math inline">\(\det(A)=0\)</span> there could be solutions for a particular vector <span class="math inline">\(\mathbf{b}\)</span> – we would have to perform Guassian elimination to check.</p>
+\mathbf{r}\times \mathbf{F}&amp;=
+\begin{vmatrix}
+\mathbf{i}&amp;\mathbf{j}&amp;\mathbf{k}\\
+1&amp;-3&amp;4\\
+3&amp;0&amp;1
+\end{vmatrix}\\
+&amp;=-3\mathbf{i}+11\mathbf{j}+9\mathbf{k}.
+\end{align*}\]</span></p></li>
+</ol>
 
 </div>
-</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             </section>
 
           </div>
         </div>
       </div>
-<a href="systems-of-linear-equations.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="linear-transformations.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="exercise-set-4-answers.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -369,7 +462,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/maths-sci-eng/maths-sci-eng.github.io/edit/master/08-matrices.Rmd",
+"link": "https://github.com/maths-sci-eng/maths-sci-eng.github.io/edit/master/21-exercises05_ans.Rmd",
 "text": "Edit"
 },
 "history": {

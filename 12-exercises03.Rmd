@@ -1,5 +1,7 @@
 # Exercise Set 3 {-}
 
+These exercises cover the topic of Trigonometry.
+
 Tip: always start by drawing a labelled diagram in trigonometry questions.
 
 1. Consider the smaller of the two angles between the hour hand and minute hand of a clock. Write the angles at the following times in both degrees and radians (in terms of $\pi$).
