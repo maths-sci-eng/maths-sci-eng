@@ -1,3 +1,6 @@
+bookdown::render_book("index.Rmd", "bookdown::gitbook")
+
+
 , fig.cap = "Any vector $\\mathbf{u}$ in the plane can be written as a linear combination of the vectors $\\mathbf{v}_1$ and $\\mathbf{v}_2$, that is $\\mathbf{u}=\\alpha_1\\mathbf{v}_1+\\alpha_2\\mathbf{v}_2$. Drag the vector $\\mathbf{u}$ to any point in the plane to see this decomposition. This means that $\\mathbf{v}_1$ and $\\mathbf{v}_2$ span the entire plane. You can also drag the vectors $\\mathbf{v}_1$ and $\\mathbf{v}_2$ and so long as these point in "independent directions" they still span the plane; if they lie along the same direction, then they only span a line.", fig.alt = "Geogebra applet demonstrating the concept of span."
 
 $y=(x-\frac{1}{2})^2-\frac{5}{4}$. Since the squared term is always non-negative, it is smallest when it is zero at $x=\frac{1}{2}$. This is the position of the minimum, and at this point $y=-\frac{5}{4}$. Factorising: $(x-\frac{1+\sqrt{5}}{2})(x-\frac{1-\sqrt{5}}{2})$, so the curve crosses the x axis at $x=\frac{1+\sqrt{5}}{2}$ and $x=\frac{1-\sqrt{5}}{2}$. Since the coefficient of $x^2$ is positive, the parabola opens upwards.
