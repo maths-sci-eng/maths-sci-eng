@@ -1,0 +1,11 @@
+# Exercise Set 7 {-}
+
+non-commutative matrices
+
+verify 2x2 matrix inverse formula works in general
+
+
+path counting
+
+computer graphics
+

@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 10 Eigenvalues and Eigenvectors | Mathematics for Scientists and Engineers</title>
+  <meta name="description" content="Mathematics Lecture Notes for UoE Penryn Science and Engineering Disciplines." />
+  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 10 Eigenvalues and Eigenvectors | Mathematics for Scientists and Engineers" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Mathematics Lecture Notes for UoE Penryn Science and Engineering Disciplines." />
+  <meta name="github-repo" content="maths-sci-eng/maths-sci-eng.github.io" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 10 Eigenvalues and Eigenvectors | Mathematics for Scientists and Engineers" />
+  
+  <meta name="twitter:description" content="Mathematics Lecture Notes for UoE Penryn Science and Engineering Disciplines." />
+  
+
+<meta name="author" content="Dr Mark Callaway" />
+
+
+<meta name="date" content="2022-10-21" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="linear-transformations.html"/>
+<link rel="next" href="exercise-set-2.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Mathematics for Scientists and Engineers</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="1" data-path="foundations.html"><a href="foundations.html"><i class="fa fa-check"></i><b>1</b> Foundations</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="foundations.html"><a href="foundations.html#numbers"><i class="fa fa-check"></i><b>1.1</b> Numbers</a></li>
+<li class="chapter" data-level="1.2" data-path="foundations.html"><a href="foundations.html#algebra"><i class="fa fa-check"></i><b>1.2</b> Algebra</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="foundations.html"><a href="foundations.html#exponents"><i class="fa fa-check"></i><b>1.2.1</b> Rules of Exponents</a></li>
+<li class="chapter" data-level="1.2.2" data-path="foundations.html"><a href="foundations.html#brackets"><i class="fa fa-check"></i><b>1.2.2</b> Brackets</a></li>
+<li class="chapter" data-level="1.2.3" data-path="foundations.html"><a href="foundations.html#simplifiying-expressions"><i class="fa fa-check"></i><b>1.2.3</b> Simplifiying Expressions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="equations-and-inequalities.html"><a href="equations-and-inequalities.html"><i class="fa fa-check"></i><b>2</b> Equations and Inequalities</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="equations-and-inequalities.html"><a href="equations-and-inequalities.html#equations"><i class="fa fa-check"></i><b>2.1</b> Equations</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="equations-and-inequalities.html"><a href="equations-and-inequalities.html#formulas"><i class="fa fa-check"></i><b>2.1.1</b> Formulas</a></li>
+<li class="chapter" data-level="2.1.2" data-path="equations-and-inequalities.html"><a href="equations-and-inequalities.html#conditional-equations"><i class="fa fa-check"></i><b>2.1.2</b> Conditional equations</a></li>
+<li class="chapter" data-level="2.1.3" data-path="equations-and-inequalities.html"><a href="equations-and-inequalities.html#quad-eqs"><i class="fa fa-check"></i><b>2.1.3</b> Quadratic equations</a></li>
+<li class="chapter" data-level="2.1.4" data-path="equations-and-inequalities.html"><a href="equations-and-inequalities.html#simultaneous-equations"><i class="fa fa-check"></i><b>2.1.4</b> Simultaneous equations</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="equations-and-inequalities.html"><a href="equations-and-inequalities.html#inequalities"><i class="fa fa-check"></i><b>2.2</b> Inequalities</a></li>
+<li class="chapter" data-level="2.3" data-path="equations-and-inequalities.html"><a href="equations-and-inequalities.html#common-mistakes"><i class="fa fa-check"></i><b>2.3</b> Common mistakes!</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="functions-and-graphs.html"><a href="functions-and-graphs.html"><i class="fa fa-check"></i><b>3</b> Functions and Graphs</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="functions-and-graphs.html"><a href="functions-and-graphs.html#lines"><i class="fa fa-check"></i><b>3.1</b> Lines</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="functions-and-graphs.html"><a href="functions-and-graphs.html#parallel-lines"><i class="fa fa-check"></i><b>3.1.1</b> Parallel lines</a></li>
+<li class="chapter" data-level="3.1.2" data-path="functions-and-graphs.html"><a href="functions-and-graphs.html#perpendicular-lines"><i class="fa fa-check"></i><b>3.1.2</b> Perpendicular lines</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="functions-and-graphs.html"><a href="functions-and-graphs.html#polynomials"><i class="fa fa-check"></i><b>3.2</b> Polynomials</a></li>
+<li class="chapter" data-level="3.3" data-path="functions-and-graphs.html"><a href="functions-and-graphs.html#rational-functions"><i class="fa fa-check"></i><b>3.3</b> Rational functions</a></li>
+<li class="chapter" data-level="3.4" data-path="functions-and-graphs.html"><a href="functions-and-graphs.html#root-functions"><i class="fa fa-check"></i><b>3.4</b> Root functions</a></li>
+<li class="chapter" data-level="3.5" data-path="functions-and-graphs.html"><a href="functions-and-graphs.html#trigonometric-functions"><i class="fa fa-check"></i><b>3.5</b> Trigonometric functions</a></li>
+<li class="chapter" data-level="3.6" data-path="functions-and-graphs.html"><a href="functions-and-graphs.html#exponentials-and-logarithms"><i class="fa fa-check"></i><b>3.6</b> Exponentials and logarithms</a>
+<ul>
+<li class="chapter" data-level="3.6.1" data-path="functions-and-graphs.html"><a href="functions-and-graphs.html#logarthmic-plots"><i class="fa fa-check"></i><b>3.6.1</b> Logarthmic plots</a></li>
+</ul></li>
+<li class="chapter" data-level="3.7" data-path="functions-and-graphs.html"><a href="functions-and-graphs.html#hyperbolic-functions"><i class="fa fa-check"></i><b>3.7</b> Hyperbolic functions</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="trigonometry.html"><a href="trigonometry.html"><i class="fa fa-check"></i><b>4</b> Trigonometry</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="trigonometry.html"><a href="trigonometry.html#pythagoras"><i class="fa fa-check"></i><b>4.1</b> Pythagoras</a></li>
+<li class="chapter" data-level="4.2" data-path="trigonometry.html"><a href="trigonometry.html#degrees-and-radians"><i class="fa fa-check"></i><b>4.2</b> Degrees and radians</a></li>
+<li class="chapter" data-level="4.3" data-path="trigonometry.html"><a href="trigonometry.html#trigonometric-ratios"><i class="fa fa-check"></i><b>4.3</b> Trigonometric ratios</a></li>
+<li class="chapter" data-level="4.4" data-path="trigonometry.html"><a href="trigonometry.html#sine-and-cosine-rules"><i class="fa fa-check"></i><b>4.4</b> Sine and cosine rules</a></li>
+<li class="chapter" data-level="4.5" data-path="trigonometry.html"><a href="trigonometry.html#trigonometric-waveforms"><i class="fa fa-check"></i><b>4.5</b> Trigonometric waveforms</a></li>
+<li class="chapter" data-level="4.6" data-path="trigonometry.html"><a href="trigonometry.html#trigonometric-identities"><i class="fa fa-check"></i><b>4.6</b> Trigonometric identities</a>
+<ul>
+<li class="chapter" data-level="4.6.1" data-path="trigonometry.html"><a href="trigonometry.html#pythagorean-identities"><i class="fa fa-check"></i><b>4.6.1</b> Pythagorean identities</a></li>
+<li class="chapter" data-level="4.6.2" data-path="trigonometry.html"><a href="trigonometry.html#compound-angle-formulae"><i class="fa fa-check"></i><b>4.6.2</b> Compound angle formulae</a></li>
+<li class="chapter" data-level="4.6.3" data-path="trigonometry.html"><a href="trigonometry.html#double-angle-formulae"><i class="fa fa-check"></i><b>4.6.3</b> Double angle formulae</a></li>
+<li class="chapter" data-level="4.6.4" data-path="trigonometry.html"><a href="trigonometry.html#product-to-sum-formulae"><i class="fa fa-check"></i><b>4.6.4</b> Product to sum formulae</a></li>
+<li class="chapter" data-level="4.6.5" data-path="trigonometry.html"><a href="trigonometry.html#sum-to-product-formulae"><i class="fa fa-check"></i><b>4.6.5</b> Sum to product formulae</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="complex.html"><a href="complex.html"><i class="fa fa-check"></i><b>5</b> Complex Numbers</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="complex.html"><a href="complex.html#i-and-complex-numbers"><i class="fa fa-check"></i><b>5.1</b> <span class="math inline">\(i\)</span> and complex numbers</a></li>
+<li class="chapter" data-level="5.2" data-path="complex.html"><a href="complex.html#complex-arithmetic"><i class="fa fa-check"></i><b>5.2</b> Complex arithmetic</a></li>
+<li class="chapter" data-level="5.3" data-path="complex.html"><a href="complex.html#the-argument-polar-and-exponential-form-for-complex-numbers"><i class="fa fa-check"></i><b>5.3</b> The argument, polar and exponential form for complex numbers</a></li>
+<li class="chapter" data-level="5.4" data-path="complex.html"><a href="complex.html#roots-of-complex-numbers"><i class="fa fa-check"></i><b>5.4</b> Roots of complex numbers</a></li>
+<li class="chapter" data-level="5.5" data-path="complex.html"><a href="complex.html#eitheta-and-trigonometric-identities"><i class="fa fa-check"></i><b>5.5</b> <span class="math inline">\(e^{i\theta}\)</span> and trigonometric identities</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="vectors.html"><a href="vectors.html"><i class="fa fa-check"></i><b>6</b> Vectors</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="vectors.html"><a href="vectors.html#vector-addition"><i class="fa fa-check"></i><b>6.1</b> Vector addition</a></li>
+<li class="chapter" data-level="6.2" data-path="vectors.html"><a href="vectors.html#scalar-multiplication"><i class="fa fa-check"></i><b>6.2</b> Scalar multiplication</a></li>
+<li class="chapter" data-level="6.3" data-path="vectors.html"><a href="vectors.html#vectors-in-cartesian-coordinates"><i class="fa fa-check"></i><b>6.3</b> Vectors in Cartesian coordinates</a></li>
+<li class="chapter" data-level="6.4" data-path="vectors.html"><a href="vectors.html#vector-products"><i class="fa fa-check"></i><b>6.4</b> Vector products</a>
+<ul>
+<li class="chapter" data-level="6.4.1" data-path="vectors.html"><a href="vectors.html#dot-product"><i class="fa fa-check"></i><b>6.4.1</b> Dot product</a></li>
+<li class="chapter" data-level="6.4.2" data-path="vectors.html"><a href="vectors.html#cross-product"><i class="fa fa-check"></i><b>6.4.2</b> Cross product</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="systems-of-linear-equations.html"><a href="systems-of-linear-equations.html"><i class="fa fa-check"></i><b>7</b> Systems of Linear Equations</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="systems-of-linear-equations.html"><a href="systems-of-linear-equations.html#lines-and-planes"><i class="fa fa-check"></i><b>7.1</b> Lines and planes</a></li>
+<li class="chapter" data-level="7.2" data-path="systems-of-linear-equations.html"><a href="systems-of-linear-equations.html#solving-linear-systems---gaussian-elimination"><i class="fa fa-check"></i><b>7.2</b> Solving linear systems - Gaussian elimination</a></li>
+<li class="chapter" data-level="7.3" data-path="systems-of-linear-equations.html"><a href="systems-of-linear-equations.html#echelon-form"><i class="fa fa-check"></i><b>7.3</b> Echelon Form</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="matrices.html"><a href="matrices.html"><i class="fa fa-check"></i><b>8</b> Matrices</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="matrices.html"><a href="matrices.html#linear_revisited"><i class="fa fa-check"></i><b>8.1</b> Solving linear systems revisited</a></li>
+<li class="chapter" data-level="8.2" data-path="matrices.html"><a href="matrices.html#determinants"><i class="fa fa-check"></i><b>8.2</b> Determinants</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="linear-transformations.html"><a href="linear-transformations.html"><i class="fa fa-check"></i><b>9</b> Linear Transformations</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="linear-transformations.html"><a href="linear-transformations.html#matrix-algebra"><i class="fa fa-check"></i><b>9.1</b> Matrix Algebra</a>
+<ul>
+<li class="chapter" data-level="9.1.1" data-path="linear-transformations.html"><a href="linear-transformations.html#addition-and-subtraction"><i class="fa fa-check"></i><b>9.1.1</b> Addition and Subtraction</a></li>
+<li class="chapter" data-level="9.1.2" data-path="linear-transformations.html"><a href="linear-transformations.html#multiplication-by-a-scalar"><i class="fa fa-check"></i><b>9.1.2</b> Multiplication by a scalar</a></li>
+<li class="chapter" data-level="9.1.3" data-path="linear-transformations.html"><a href="linear-transformations.html#matrix-multiplication"><i class="fa fa-check"></i><b>9.1.3</b> Matrix multiplication</a></li>
+<li class="chapter" data-level="9.1.4" data-path="linear-transformations.html"><a href="linear-transformations.html#functional-interpretations"><i class="fa fa-check"></i><b>9.1.4</b> Functional interpretations</a></li>
+<li class="chapter" data-level="9.1.5" data-path="linear-transformations.html"><a href="linear-transformations.html#two-special-matrices"><i class="fa fa-check"></i><b>9.1.5</b> Two special matrices</a></li>
+<li class="chapter" data-level="9.1.6" data-path="linear-transformations.html"><a href="linear-transformations.html#some-further-properties"><i class="fa fa-check"></i><b>9.1.6</b> Some further properties</a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="linear-transformations.html"><a href="linear-transformations.html#matrix-inverse"><i class="fa fa-check"></i><b>9.2</b> Matrix inverse</a>
+<ul>
+<li class="chapter" data-level="9.2.1" data-path="linear-transformations.html"><a href="linear-transformations.html#finding-the-inverse-of-a-2times-2-matrix"><i class="fa fa-check"></i><b>9.2.1</b> Finding the inverse of a <span class="math inline">\(2\times 2\)</span> matrix</a></li>
+<li class="chapter" data-level="9.2.2" data-path="linear-transformations.html"><a href="linear-transformations.html#finding-the-inverse-of-an-ntimes-n-matrix"><i class="fa fa-check"></i><b>9.2.2</b> Finding the inverse of an <span class="math inline">\(n\times n\)</span> matrix</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="eigenvalues-and-eigenvectors.html"><a href="eigenvalues-and-eigenvectors.html"><i class="fa fa-check"></i><b>10</b> Eigenvalues and Eigenvectors</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="eigenvalues-and-eigenvectors.html"><a href="eigenvalues-and-eigenvectors.html#matrix-diagonalisation"><i class="fa fa-check"></i><b>10.1</b> Matrix Diagonalisation</a></li>
+<li class="chapter" data-level="10.2" data-path="eigenvalues-and-eigenvectors.html"><a href="eigenvalues-and-eigenvectors.html#finding-eigenvalues-and-eigenvectors"><i class="fa fa-check"></i><b>10.2</b> Finding Eigenvalues and Eigenvectors</a></li>
+<li class="chapter" data-level="10.3" data-path="eigenvalues-and-eigenvectors.html"><a href="eigenvalues-and-eigenvectors.html#finding-eigenvectors"><i class="fa fa-check"></i><b>10.3</b> Finding Eigenvectors</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="exercise-set-2.html"><a href="exercise-set-2.html"><i class="fa fa-check"></i>Exercise Set 2</a></li>
+<li class="chapter" data-level="" data-path="exercise-set-3.html"><a href="exercise-set-3.html"><i class="fa fa-check"></i>Exercise Set 3</a></li>
+<li class="chapter" data-level="" data-path="exercise-set-4.html"><a href="exercise-set-4.html"><i class="fa fa-check"></i>Exercise Set 4</a></li>
+<li class="chapter" data-level="" data-path="exercise-set-5.html"><a href="exercise-set-5.html"><i class="fa fa-check"></i>Exercise Set 5</a></li>
+<li class="chapter" data-level="" data-path="exercise-set-6.html"><a href="exercise-set-6.html"><i class="fa fa-check"></i>Exercise Set 6</a></li>
+<li class="chapter" data-level="" data-path="notation.html"><a href="notation.html"><i class="fa fa-check"></i>Notation</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="chapter" data-level="" data-path="exercise-set-7.html"><a href="exercise-set-7.html"><i class="fa fa-check"></i>Exercise Set 7</a></li>
+<li class="chapter" data-level="" data-path="exercise-set-1.html"><a href="exercise-set-1.html"><i class="fa fa-check"></i>Exercise Set 1</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Mathematics for Scientists and Engineers</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="eigenvalues-and-eigenvectors" class="section level1 hasAnchor" number="10">
+<h1><span class="header-section-number">Chapter 10</span> Eigenvalues and Eigenvectors<a href="eigenvalues-and-eigenvectors.html#eigenvalues-and-eigenvectors" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Some linear transformations have “natural directions” associated with them.</p>
+<div class="example">
+<p><span id="exm:eigen1" class="example"><strong>Example 10.1  </strong></span>Let
+<span class="math display">\[
+A = \begin{pmatrix} 1 &amp; 1 \\ 2 &amp; 0 \end{pmatrix},
+\]</span>
+We can see that
+<span class="math display">\[
+A \begin{pmatrix} 1 \\ 1 \end{pmatrix}
+= \begin{pmatrix} 1 &amp; 1 \\ 2 &amp; 0 \end{pmatrix} \begin{pmatrix} 1 \\ 1 \end{pmatrix}
+= \begin{pmatrix} 2 \\ 2 \end{pmatrix}.
+\]</span>
+Thus, it follows that
+<span class="math display">\[
+A\mathbf{u}_1 = 2 \mathbf{u}_1, \qquad \text{where }\quad\mathbf{u}_1 = \begin{pmatrix} 1 \\ 1 \end{pmatrix}.
+\]</span>
+Moreover, we have
+<span class="math display">\[
+A \begin{pmatrix} 1 \\ -2 \end{pmatrix}
+= \begin{pmatrix} 1 &amp; 1 \\ 2 &amp; 0 \end{pmatrix} \begin{pmatrix} 1 \\ -2 \end{pmatrix}
+= \begin{pmatrix} -1 \\2\end{pmatrix},
+\]</span>
+and so
+<span class="math display">\[
+A\mathbf{u}_2 = -\mathbf{u}_2, \qquad \text{where }\quad \mathbf{u}_2 = \begin{pmatrix} 1 \\ -2 \end{pmatrix}.$
+\]</span></p>
+</div>
+<p>The above example shows that there are vectors associated to a matrix, which, when multiplied with the matrix from the left, are only scaled by a factor. This motivates the following definition.</p>
+<div class="definition">
+<p><span id="def:eigen" class="definition"><strong>Definition 10.1  (Eigenvalues and Eigenvectors) </strong></span>Let <span class="math inline">\(A\)</span> be an <span class="math inline">\(n\times n\)</span> matrix. Then a non-zero vector <span class="math inline">\(\mathbf{x}\)</span> is said to be an <em>eigenvector</em> of <span class="math inline">\(A\)</span> if there exists a scalar <span class="math inline">\(\lambda\)</span> such that
+<span class="math display">\[
+A\mathbf{x} = \lambda \mathbf{x}
+\]</span>
+The scalar <span class="math inline">\(\lambda\)</span> is called the <em>eigenvalue</em> associated to <span class="math inline">\(\mathbf{x}\)</span>.</p>
+</div>
+<div class="example">
+<p><span id="exm:eigen2" class="example"><strong>Example 10.2  </strong></span>In Example <a href="eigenvalues-and-eigenvectors.html#exm:eigen1">10.1</a>, we have that <span class="math inline">\(\mathbf{u}_1 = \begin{smallmatrix}1\\1\end{smallmatrix}\)</span> is an eigenvector associated with an eigenvalue <span class="math inline">\(\lambda_1 = 2\)</span>, and that <span class="math inline">\(\mathbf{u}_2 = \begin{smallmatrix}1\\-2\end{smallmatrix}\)</span> is an eigenvector associated with an eigenvalue <span class="math inline">\(\lambda_2 = -1\)</span>.</p>
+<p>We claim that any vector may be written as a linear combination of <span class="math inline">\(\mathbf{u}_1\)</span> and <span class="math inline">\(\mathbf{u}_2\)</span>. That is, for all <span class="math inline">\(\mathbf{v}\)</span>, there exist scalars <span class="math inline">\(x_1, x_2\)</span> such that
+<span class="math display">\[
+x_1 \mathbf{u}_1 + x_2 \mathbf{u}_2 = \mathbf{v}.
+\]</span>
+Write <span class="math inline">\(\mathbf{x} = \begin{smallmatrix}x_1, x_2\end{smallmatrix}\)</span>, then we may write the above equation as <span class="math inline">\(B \mathbf{x} = \mathbf{v}\)</span>, where <span class="math inline">\(B = (\mathbf{u}_1 \ \mathbf{u}_2)\)</span>, i.e. the columns of the matrix <span class="math inline">\(B\)</span> are <span class="math inline">\(\mathbf{u}_1\)</span> and <span class="math inline">\(\mathbf{u}_2\)</span>. Note that
+<span class="math display">\[
+\det(B) = \begin{vmatrix} 1 &amp; 1 \\ 1 &amp; -2 \end{vmatrix} = -2 -1 = -3,
+\]</span>
+which is non-zero, hence the matrix is invertible, and so the equation <span class="math inline">\(B \mathbf{x} = \mathbf{v}\)</span> has the (unique) solution <span class="math inline">\(\mathbf{x} = B^{-1} \mathbf{v}\)</span>. The matrix <span class="math inline">\(B\)</span> being invertible is equivalent to saying that <span class="math inline">\(\mathbf{u}_1\)</span> and <span class="math inline">\(\mathbf{u}_2\)</span> are <em>linearly independent</em>.</p>
+<p>Having shown that any vector <span class="math inline">\(\mathbf{v}\)</span> may be written as a (unique) linear combination of <span class="math inline">\(\mathbf{u}_1\)</span> and <span class="math inline">\(\mathbf{u}_2\)</span>, we apply <span class="math inline">\(A\)</span> to both sides of and deduce
+<span class="math display">\[\begin{align*}
+A\mathbf{v} &amp;= A(x_1 \mathbf{u}_1 + x_2 \mathbf{u}_2)\\
+&amp;= x_1 A\mathbf{u}_1 + x_2 A\mathbf{u}_2\\
+&amp;= \lambda _1 x_1 \mathbf{u}_1 + \lambda_2 x_2 \mathbf{u}_2,
+\end{align*}\]</span>
+where we use the facts <span class="math inline">\(A\mathbf{u}_1 = \lambda_1 \mathbf{u}_1\)</span> and <span class="math inline">\(A\mathbf{u}_2 = \lambda_2 \mathbf{u}_2\)</span> for the last equality. Hence if we write a vector <span class="math inline">\(\mathbf{v}\)</span> in terms of the eigenvectors <span class="math inline">\(\mathbf{u}_1\)</span> and <span class="math inline">\(\mathbf{u}_2\)</span>, it is simple to calculate the result of multiplying by the matrix <span class="math inline">\(A\)</span>: we simply multiply these components by their eigenvalues. That is, we just strech/compress by a factor <span class="math inline">\(\lambda_i\)</span> in the <span class="math inline">\(\mathbf{u}_i\)</span> direction (and reverse direction if <span class="math inline">\(\lambda_i\)</span> is negative).</p>
+</div>
+<div id="matrix-diagonalisation" class="section level2 hasAnchor" number="10.1">
+<h2><span class="header-section-number">10.1</span> Matrix Diagonalisation<a href="eigenvalues-and-eigenvectors.html#matrix-diagonalisation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="definition">
+<p><span id="def:diag" class="definition"><strong>Definition 10.2  (Diagonal Matrix) </strong></span>A square matrix is said to be a <em>diagonal matrix</em> if its non-diagonal entries are zero. That is, a matrix of the form</p>
+<p><span class="math display">\[
+D = \begin{pmatrix}
+\lambda_1 &amp; 0 &amp; 0 &amp; \dotsb &amp; 0\\
+0 &amp; \lambda_2 &amp; 0 &amp;\dotsb &amp; 0\\
+\vdots &amp; &amp;\ddots &amp; &amp; \vdots\\
+0&amp; &amp; \dotsb &amp; &amp; \lambda_n\\
+\end{pmatrix}
+\]</span></p>
+<p>for any scalars <span class="math inline">\(\lambda_1,\dotsc,\lambda_n\)</span>.</p>
+</div>
+<pre><code>Consider the diagonal matrix
+$$
+    D = \begin{pmatrix} \lambda_1 &amp; 0 \\ 0 &amp; \lambda_2 \end{pmatrix}
+    = \begin{pmatrix} 2 &amp; 0 \\ 0 &amp; -1 \end{pmatrix},
+$$</code></pre>
+<p>Note that this acts very simply on a vector <span class="math inline">\(\mathbf{x}=\begin{smallmatrix}x_1\\x_2\end{smallmatrix}\)</span>:</p>
+<p><span class="math display">\[D\mathbf{x}=
+\begin{pmatrix} \lambda_1 &amp; 0 \\ 0 &amp; \lambda_2 \end{pmatrix}
+\begin{pmatrix}x_1\\x_2\end{pmatrix}
+=\begin{pmatrix}
+\lambda_1 x_1\\
+\lambda_2 x_2
+\end{pmatrix}
+=
+2 x_1\\
+-x_2
+\end{pmatrix}
+\]</span>
+it simply multiplies each element of the vector by a value on the diagonal. This is reminiscent of the action of <span class="math inline">\(A\)</span> on</p>
+<p>We’ll now look at an example to understand the meaning of the term “diagonalising a matrix”.</p>
+<div class="example">
+<p><span id="exm:diagonal" class="example"><strong>Example 10.3  </strong></span>Suppose that we write a vector <span class="math inline">\(\mathbf{v} = x_1 \mathbf{u}_1 + x_2 \mathbf{u}_2\)</span> in terms of the eigenvectors <span class="math inline">\(\mathbf{u}_1\)</span> and <span class="math inline">\(\mathbf{u}_2\)</span> from example (exm:eigen2). We say that <span class="math inline">\(\mathbf{v}\)</span> has the <em>coordinate vector</em>
+<span class="math display">\[\mathbf{x}_{\mathcal{P}}=\begin{pmatrix}x_1\\x_2\end{pmatrix}\]</span>
+with respect to the vectors<a href="#fn13" class="footnote-ref" id="fnref13"><sup>13</sup></a> <span class="math inline">\(\mathcal{P}=(\mathbf{u}_1,\mathbf{u}_2)\)</span> – these vectors take the place of the usual vectors <span class="math inline">\(\mathcal{E}=(\mathbf{e}_1,\mathbf{e}_2)\)</span> (although note that the vectors in <span class="math inline">\(\mathcal{P}\)</span> are not unit vectors). We may write <span class="math inline">\(\mathbf{v}\)</span> as
+<span class="math display">\[
+        \mathbf{v} = P \mathbf{x}_\mathcal{P},
+    \]</span>
+where <span class="math inline">\(P = (\mathbf{u}_1 \mathbf{u}_2)\)</span> is the matrix whose columns are the vectors <span class="math inline">\(\mathbf{u}_1\)</span> and <span class="math inline">\(\mathbf{u}_2\)</span>.
+Consider an exemplar vector
+<span class="math display">\[
+        \mathbf{v} = 5 \mathbf{u}_1 - 3 \mathbf{u}_2= 2 \mathbf{e}_1 + 11 \mathbf{e}_2
+    \]</span>
+Then <span class="math inline">\(\mathbf{v}\)</span> has co-ordinate vector <span class="math inline">\(\mathbf{x}_\mathcal{P}=(5,-3)\)</span> and
+<span class="math display">\[
+        \mathbf{v} = P \begin{pmatrix} 5 \\ -3 \end{pmatrix}
+        = \begin{pmatrix} 1 &amp; 1 \\ 1 &amp; -2 \end{pmatrix} \begin{pmatrix} 5 \\ -3 \end{pmatrix}
+        = \begin{pmatrix} 2\\ 11\end{pmatrix}
+    \]</span></p>
+<p>We have seen that <span class="math inline">\(A\)</span> acts very simply in these coordinates:
+<span class="math display">\[
+A\mathbf{v}=\lambda _1 x_1 \mathbf{u}_1 + \lambda_2 x_2 \mathbf{u}_2
+\]</span>
+and writing this result as a coordinate vector in <span class="math inline">\(\mathbf{u}_1\)</span>, <span class="math inline">\(\mathbf{u}_2\)</span> we would have
+<span class="math display">\[
+(A\mathbf{v})_\mathcal{P}=
+\begin{pmatrix}
+\lambda_1 x_1\\
+\lambda_2 x_2
+\end{pmatrix}
+\]</span>
+In fact, <span class="math inline">\(A\)</span> acts like a diagonal matrix in the coordinates <span class="math inline">\(\mathcal{P}\)</span>. If we defined
+<span class="math display">\[D=\begin{pmatrix} \lambda_1 &amp; 0 \\ 0 &amp; \lambda_2 \end{pmatrix}\]</span>
+then note that <span class="math inline">\(D\)</span> acts on the coordinate vector as
+<span class="math display">\[D\mathbf{x}_\mathcal{P}=
+\begin{pmatrix} \lambda_1 &amp; 0 \\
+0 &amp; \lambda_2
+\end{pmatrix}
+\begin{pmatrix}
+x_1\\
+x_2
+\end{pmatrix}
+=\begin{pmatrix}
+\lambda_1 x_1\\
+\lambda_2 x_2
+\end{pmatrix}
+\]</span></p>
+<p>Since the matrix <span class="math inline">\(P\)</span> converts between coordinates <span class="math inline">\(\mathcal{P}\)</span> and standard coordinates <span class="math inline">\(\mathcal{E}\)</span>, that is <span class="math inline">\(\mathbf{v}=P\mathbf{x}_\mathcal{P}\)</span>, we can see that <span class="math inline">\(P^{-1}\)</span> converts in the other direction <span class="math inline">\(\mathbf{x}_\mathcal{P}=P^{-1}\mathbf{v}\)</span>. We can use this to write <span class="math inline">\(A\)</span> as</p>
+<p><span class="math display">\[A=P^{-1}DP.\]</span></p>
+<p>This decomposes <span class="math inline">\(A\mathbf{v}\)</span> into three operations <span class="math inline">\(P^{-1}DP\mathbf{v}\)</span>:</p>
+<ol style="list-style-type: decimal">
+<li>Apply <span class="math inline">\(P\)</span> to convert <span class="math inline">\(\mathbf{v}\)</span> to <span class="math inline">\(P\mathbf{v}=\mathbf{x}_\mathcal{P}\)</span>;</li>
+<li>Now apply the diagonal matrix <span class="math inline">\(D\)</span> to <span class="math inline">\(\mathbf{x}_\mathcal{P}\)</span>, which simply multiplies each component by the eigenvalue <span class="math inline">\(\lambda_i\)</span>;</li>
+<li>Finally, convert back to standard coordinates by applying <span class="math inline">\(P^{-1}\)</span> to give the result <span class="math inline">\(A\mathbf{v}\)</span>.</li>
+</ol>
+<p>We call the matrix <span class="math inline">\(D\)</span> the <em>diagonalisation</em> of the matrix <span class="math inline">\(A\)</span>. Note that <span class="math inline">\(D\)</span> can be obtained by applying <span class="math inline">\(P\)</span> to the left and <span class="math inline">\(P^{-1}\)</span> to the right of the above equation (using <span class="math inline">\(PP^{-1}=P^{-1}P=I\)</span>) to obtain:</p>
+<p><span class="math display">\[D=PAP^{-1}.\]</span></p>
+</div>
+<p>Let <span class="math inline">\(A\)</span> be a matrix with <span class="math inline">\(n\)</span> eigenvectors <span class="math inline">\(\mathbf{u}_1, \dots, \mathbf{u}_n\)</span> with corresponding eigenvalues <span class="math inline">\(\lambda_1, \dotsc, \lambda_n\)</span>. If the matrix <span class="math inline">\(P=(\mathbf{u}_1 \dotsb \mathbf{u}_n)\)</span> is invertible (in other words, the eigenvectors are linearly independent) then
+<span class="math display">\[
+D = P^{-1}A P,
+\]</span>
+where <span class="math inline">\(D\)</span> is the diagonal matrix whose <span class="math inline">\(i\)</span>-th diagonal entry is <span class="math inline">\(\lambda_i\)</span>.
+We say that <span class="math inline">\(A\)</span> is <em>diagonalisable</em>.</p>
+<p>It is worth noting here that it is <strong>not</strong> always possible to diagonalise a matrix. We shall see an example later.</p>
+</div>
+<div id="finding-eigenvalues-and-eigenvectors" class="section level2 hasAnchor" number="10.2">
+<h2><span class="header-section-number">10.2</span> Finding Eigenvalues and Eigenvectors<a href="eigenvalues-and-eigenvectors.html#finding-eigenvalues-and-eigenvectors" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Suppose <span class="math inline">\(\mathbf{v}\)</span> is an eigenvector of a matrix <span class="math inline">\(A\)</span> with associated eigenvalue <span class="math inline">\(\lambda\)</span>. This means that <span class="math inline">\(\mathbf{v}\)</span> is a non-zero vector such that <span class="math inline">\(A\mathbf{v} = \lambda \mathbf{v}\)</span>. Equally,
+<span class="math display">\[\arraycolsep1.5pt\begin{array}{rrcl}
+&amp; \lambda \mathbf{v} - A \mathbf{v} &amp;=&amp; \mathbf{0} \\
+\Longleftrightarrow\qquad &amp; \lambda I_n \mathbf{v} - A\mathbf{v} &amp;=&amp; \mathbf{0} \\
+\Longleftrightarrow\qquad &amp; (\lambda I_n-A) \mathbf{v} &amp;=&amp; \mathbf{0}.
+\end{array}\]</span>
+Setting <span class="math inline">\(B_{\lambda} = \lambda I_n - A\)</span>, we have that <span class="math inline">\(\lambda\)</span> is an eigenvalue of <span class="math inline">\(A\)</span> if, and only if, <span class="math inline">\(B_{\lambda}\mathbf{v} = \mathbf{0}\)</span> has a non-zero solution <span class="math inline">\(\mathbf{v}\)</span>. Recall that for a general square matrix <span class="math inline">\(M\)</span>, the matrix–vector system <span class="math inline">\(M \mathbf{v} = \mathbf{b}\)</span> has a unique solution for <span class="math inline">\(\mathbf{v}\)</span> if, and only if, <span class="math inline">\(\det(M) \neq 0\)</span>. Note the system <span class="math inline">\(B_{\lambda} \mathbf{v} = \mathbf{0}\)</span> always has at least one solution, namely <span class="math inline">\(\mathbf{v} = \mathbf{0}\)</span>, so the system has a non-zero solution if, and only if, it has more than one solution, which is equivalent to <span class="math inline">\(\det(B_{\lambda}) = 0\)</span>. We use this fact to find eigenvalues, as shown in the following example.</p>
+<div class="example">
+<p><span id="exm:eigenvals" class="example"><strong>Example 10.4  (Finding Eigenvalues) </strong></span>Let
+<span class="math display">\[
+A = \begin{pmatrix} 1 &amp; 1 \\ 2 &amp; 0 \end{pmatrix}.
+\]</span>
+Then the matrix <span class="math inline">\(B_{\lambda} = \lambda I_{2} - A\)</span> is given as
+<span class="math display">\[
+B_{\lambda} = \begin{pmatrix} \lambda - 1 &amp; -1 \\ -2 &amp; \lambda \end{pmatrix}.
+\]</span>
+Then we have
+<span class="math display">\[\begin{align*}
+\det(B_{\lambda}) &amp;= \lambda(\lambda-1) - 2 \\
+&amp;= \lambda^2 - \lambda - 2 \\
+&amp;= (\lambda - 2)(\lambda + 1).
+\end{align*}\]</span>
+Thus, <span class="math inline">\(\lambda\)</span> is an eigenvalue of <span class="math inline">\(A\)</span> if and only if
+<span class="math display">\[
+0 = (\lambda - 2)(\lambda + 1),
+\]</span>
+and equivalently if and only if <span class="math inline">\(\lambda = 2\)</span> or <span class="math inline">\(\lambda = -1\)</span>. Hence, the eigenvalues of <span class="math inline">\(A\)</span> are
+<span class="math display">\[
+\lambda_1 = 2 \qquad\text{and}\qquad \lambda_2 = -1.
+\]</span>
+</p>
+</div>
+<p>Note, that in the above example <span class="math inline">\(\det(B_\lambda)\)</span> is a polynomial of degree 2 in the variable <span class="math inline">\(\lambda\)</span>. We can generalise this observation.</p>
+<div class="definition">
+<p><span id="def:label" class="definition"><strong>Definition 10.3  (definition name) </strong></span>Let <span class="math inline">\(A \in \R^{n\times n}\)</span>. Then the function
+<span class="math display">\[
+p_A(\lambda)=\det(\lambda I_n - A)
+\]</span>
+is a polynomial of degree <span class="math inline">\(n\)</span> in the variable <span class="math inline">\(\lambda\)</span>. We call this polynomial <span class="math inline">\(p_A\)</span> the <em>characteristic polynomial</em> of <span class="math inline">\(A\)</span>.</p>
+</div>
+<p>So in general, we can find the eigenvalues of a square matrix <span class="math inline">\(A\)</span> by finding the roots of the characteristic polynomial <span class="math inline">\(p_A\)</span>, which is obtained from computing the determinant <span class="math inline">\(\det(\lambda I_n - A)\)</span>.</p>
+</div>
+<div id="finding-eigenvectors" class="section level2 hasAnchor" number="10.3">
+<h2><span class="header-section-number">10.3</span> Finding Eigenvectors<a href="eigenvalues-and-eigenvectors.html#finding-eigenvectors" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>::: {.example #eigenvecs name=“Finding Eigenvectors”}
+Let again
+<span class="math display">\[
+A = \begin{pmatrix} 1 &amp; 1 \\ 2 &amp; 0 \end{pmatrix}.
+\]</span>
+We know from above that <span class="math inline">\(\lambda_1 = 2\)</span> and <span class="math inline">\(\lambda_2 = -1\)</span> are the eigenvalues of <span class="math inline">\(A\)</span>. We first find an eigenvector corresponding to <span class="math inline">\(\lambda_1\)</span>. Any non-zero solution <span class="math inline">\(\mathbf{v} = \begin{smallmatrix}v_1\\v_2\end{smallmatrix}\)</span> of the equation <span class="math inline">\(B_2 \mathbf{v} = \mathbf{0}\)</span> is such an eigenvector.
+For <span class="math inline">\(\lambda = \lambda_1 = 2\)</span>, we have
+<span class="math display">\[
+B_2 = \begin{pmatrix} 1 &amp; -1 \\ -2 &amp; 2 \end{pmatrix}.
+\]</span>
+We solve <span class="math inline">\(B_2 \mathbf{v} = \mathbf{0}\)</span> via Gaussian elimination. The augmented matrix for <span class="math inline">\(B_2 \mathbf{v} = \mathbf{0}\)</span> is given by
+<span class="math display">\[
+\left(\begin{array}{rr|r}
+1  &amp; -1 &amp; 0 \\
+-2 &amp;  2 &amp; 0
+\end{array}\right).
+\]</span>
+We perform the ERO <span class="math inline">\(R_2 \to R_2 + 2R_1\)</span> to obtain
+<span class="math display">\[
+\left(\begin{array}{rr|r}
+1 &amp; -1 &amp; 0 \\
+0 &amp; 0  &amp; 0  
+\end{array}\right).
+\]</span>
+From this, we see that <span class="math inline">\(v_2\)</span> is arbitrary, say <span class="math inline">\(v_2 = \alpha\)</span>, and <span class="math inline">\(v_1 = v_2 = \alpha\)</span>. So, the eigenvectors corresponding to the eigenvalue <span class="math inline">\(\lambda_1 = 2\)</span> are given by the set
+<span class="math display">\[
+\alpha \begin{pmatrix} 1 \\ 1 \end{pmatrix}
+\]</span>
+for any non-zero value of <span class="math inline">\(\alpha\)</span>. By a similar process, we find an eigenvector corresponding to <span class="math inline">\(\lambda_2 = -1\)</span>. Any non-zero solution <span class="math inline">\(\mathbf{v} = \begin{smallmatrix}v_1\\v_2\end{smallmatrix}\)</span> of the equation <span class="math inline">\(B_{-1} \mathbf{v} = \mathbf{0}\)</span> is such an eigenvector. We have
+<span class="math display">\[
+B_{-1} = \begin{pmatrix} -2 &amp; -1 \\ -2 &amp; -1\end{pmatrix},
+\]</span>
+and again solve <span class="math inline">\(B_{-1} \mathbf{v} = \mathbf{0}\)</span> via Gaussian elimination to give the eigenvectors corresponding to <span class="math inline">\(\lambda_2 = -1\)</span> as
+<span class="math display">\[
+\beta \begin{pmatrix} 1 \\ -2\end{pmatrix}
+\]</span>
+for any non-zero value of <span class="math inline">\(\beta\)</span>.</p>
+<p>Note that there are infinitely many eigenvectors corresponding to an eigenvalue, because if a non-zero vector <span class="math inline">\(\mathbf{v}\)</span> satisfies <span class="math inline">\(B_{\lambda} \mathbf{v} = \mathbf{0}\)</span>, then any multiple of <span class="math inline">\(\mathbf{v}\)</span>, i.e. <span class="math inline">\(\mu\mathbf{v}\)</span> for any <span class="math inline">\(\mu \neq 0\)</span> satisfies the equation, too, as we have <span class="math inline">\(B_{\lambda} (\mu\mathbf{v}) = \mu (B_{\lambda}{\mathbf{v}}) = \mu\mathbf{0} = \mathbf{0}\)</span>.</p>
+<p>In order to obtain specific eigenvectors, we simply need to set <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span> to some value, for which we usually simply take <span class="math inline">\(\alpha=1\)</span> and <span class="math inline">\(\beta=1\)</span>. Hence two suitable eigenvectors of <span class="math inline">\(A\)</span> are
+<span class="math display">\[
+\mathbf{u}=\begin{pmatrix} 1 \\ 1 \end{pmatrix} \quad\text{ and }\quad \mathbf{v}=\begin{pmatrix} 1 \\ -2\end{pmatrix}
+\]</span></p>
+<p>With the following example, we demonstrate how to find the eigenvalues and eigenvectors for a <span class="math inline">\(3\times 3\)</span> matrix.</p>
+<div class="example">
+<p><span id="exm:3by3eig" class="example"><strong>Example 10.5  </strong></span>Let <span class="math inline">\(A\)</span> be given by
+<span class="math display">\[
+A = \begin{pmatrix} 1 &amp; 0 &amp; -1 \\ 1 &amp; 2 &amp; 1 \\ 2 &amp; 2 &amp; 3 \end{pmatrix}.
+\]</span>
+Then <span class="math inline">\(A\)</span> has characteristic polynomial
+<span class="math display">\[\begin{align*}
+p_A(\lambda) &amp;= \det(\lambda I_3 - A) \\
+&amp;= \begin{vmatrix} \lambda - 1 &amp; 0 &amp; 1 \\ -1 &amp; \lambda - 2 &amp; -1 \\ -2 &amp; -2 &amp; \lambda - 3 \end{vmatrix}.
+\end{align*}\]</span>
+We have:
+<span class="math display">\[\begin{align*}
+p_A(\lambda)
+&amp;= (\lambda - 1) \begin{vmatrix} \lambda -2 &amp; -1 \\ -2 &amp; \lambda -3 \end{vmatrix}
++ \begin{vmatrix} -1 &amp; \lambda -2 \\ -2 &amp; -2 \end{vmatrix}\\
+&amp;= (\lambda - 1)\big( (\lambda - 2)(\lambda - 3) - 2 \big) + (2 + 2(\lambda - 2)) \\
+&amp;= (\lambda - 1)(\lambda^2 - 5 \lambda + 4) + 2(\lambda - 1) \\
+&amp;= (\lambda - 1)(\lambda^2 - 5 \lambda + 6) \\
+&amp;= (\lambda - 1)(\lambda - 2)(\lambda - 3).
+\end{align*}\]</span>
+Therefore, we find that <span class="math inline">\(A\)</span> has eigenvalues <span class="math inline">\(\lambda_1 = 1\)</span>, <span class="math inline">\(\lambda_2 = 2\)</span> and <span class="math inline">\(\lambda_3 = 3\)</span>.</p>
+<p>It remains to find the eigenvectors of <span class="math inline">\(A\)</span>. Recall that, for each eigenvalue <span class="math inline">\(\lambda\)</span>, this is equivalent to finding all non-zero solutions <span class="math inline">\(\mathbf{v} = (v_1,v_2,v_3)\)</span> to the equation <span class="math inline">\(B_{\lambda} \mathbf{v} = \mathbf{0}\)</span>, where <span class="math inline">\(B_{\lambda} = \lambda I_3 - A\)</span>. Here, we have
+<span class="math display">\[
+B_{\lambda} = \begin{pmatrix} \lambda - 1 &amp; 0 &amp; 1 \\ -1 &amp; \lambda - 2 &amp; -1 \\ -2 &amp; -2 &amp; \lambda - 3 \end{pmatrix}.
+\]</span></p>
+<ol style="list-style-type: decimal">
+<li><p>We find the eigenvectors for the eigenvalue <span class="math inline">\(\lambda_1 = 1\)</span>.
+For <span class="math inline">\(\lambda = \lambda_1 = 1\)</span>, we have
+<span class="math display">\[
+B_{1} = \begin{pmatrix} 0 &amp; 0 &amp; 1 \\ -1 &amp; -1 &amp; -1 \\ -2 &amp; -2 &amp; -2 \end{pmatrix},
+\]</span>
+which is (automatically) the augmented matrix representing <span class="math inline">\(B_{1} \mathbf{v} = \mathbf{0}\)</span> where we omit the solution vector. We perform a Gaussian elimination. First, we apply EROs <span class="math inline">\(R_3 \to R_3 - 2 R_2\)</span> and <span class="math inline">\(R_2 \to -R_2\)</span> to obtain
+<span class="math display">\[
+\begin{pmatrix}
+0 &amp; 0 &amp; 1 \\
+1 &amp; 1 &amp; 1 \\
+0 &amp; 0 &amp; 0
+\end{pmatrix},
+\]</span>
+and then we apply <span class="math inline">\(R_1 \leftrightarrow R_2\)</span> to have
+<span class="math display">\[
+\begin{pmatrix}
+1 &amp; 1 &amp; 1 \\
+0 &amp; 0 &amp; 1 \\
+0 &amp; 0 &amp; 0
+\end{pmatrix},
+\]</span>
+and finally <span class="math inline">\(R_1 \to R_1 - R_2\)</span> to arrive at
+<span class="math display">\[
+\begin{pmatrix}
+1 &amp; 1 &amp; 0 \\
+0 &amp; 0 &amp; 1 \\
+0 &amp; 0 &amp; 0
+\end{pmatrix}.
+\]</span>
+From this we see that <span class="math inline">\(v_2\)</span> can be chosen arbitrary, say <span class="math inline">\(v_2 = \alpha\)</span>. Then, in view of <span class="math inline">\(v_1 = -v_2\)</span> and <span class="math inline">\(v_3 = 0\)</span>, we have the set of eigenvectors corresponding to the eigenvalue <span class="math inline">\(\lambda_1 = 1\)</span> given as
+<span class="math display">\[
+\alpha \begin{pmatrix} -1 \\ 1 \\ 0 \end{pmatrix}
+\]</span>
+For instance, taking <span class="math inline">\(\alpha = 1\)</span>, gives a specific eigenvector
+<span class="math display">\[
+\mathbf{v}_1 = \begin{pmatrix} -1 \\ 1 \\ 0 \end{pmatrix}.
+\]</span></p></li>
+<li><p>We find the eigenvectors for the eigenvalue <span class="math inline">\(\lambda_2 = 2\)</span>.
+For <span class="math inline">\(\lambda = \lambda_2 = 2\)</span>, we have
+<span class="math display">\[
+B_{2} = \begin{pmatrix} 1 &amp; 0 &amp; 1 \\ -1 &amp; 0 &amp; -1 \\ -2 &amp; -2 &amp; -1 \end{pmatrix}.
+\]</span>
+As above, we use Gaussian elimination to find non-zero solutions <span class="math inline">\(\mathbf{v}\)</span> to the equation <span class="math inline">\(B_{2} \mathbf{v} = \mathbf{0}\)</span>. This gives the set of eigenvectors
+<span class="math display">\[
+\beta \begin{pmatrix} -2 \\ 1 \\ 2 \end{pmatrix}
+\]</span>
+For instance, taking <span class="math inline">\(\beta = 1\)</span>, we find the specific eigenvector
+<span class="math display">\[
+\mathbf{v}_2 = \begin{pmatrix} -2 \\ 1 \\ 2 \end{pmatrix}.
+\]</span></p></li>
+<li><p>We find the eigenvectors for the eigenvalue <span class="math inline">\(\lambda_3 = 3\)</span>.
+For <span class="math inline">\(\lambda = \lambda_3 = 4\)</span>, we have
+<span class="math display">\[
+B_{3} = \begin{pmatrix} 2 &amp; 0 &amp; 1 \\ -1 &amp; 1 &amp; -1 \\ -2 &amp; -2 &amp; 0 \end{pmatrix}.
+\]</span>
+As above, we use Gaussian elimination to find non-zero solutions <span class="math inline">\(\mathbf{v}\)</span> to the equation <span class="math inline">\(B_{3} \mathbf{v} = \mathbf{0}\)</span>. This gives the set of eigenvectors
+<span class="math display">\[
+\gamma \begin{pmatrix} -1 \\ 1 \\ 2 \end{pmatrix}.
+\]</span>
+For instance, taking <span class="math inline">\(\gamma = -1\)</span>, we find the specific eigenvector
+<span class="math display">\[
+\mathbf{v}_3 = (1,-1,-2).
+\]</span></p></li>
+</ol>
+</div>
+<p>complex eigenvectors</p>
+<p>Also possible to begin with matrices and vectors with complex entries, but we won’t consider these here.</p>
+<p>not diagonalisable</p>
+
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="13">
+<li id="fn13"><p>Technically, <span class="math inline">\(\mathcal{P}\)</span> is what is known as a <em>basis</em> – a list of vectors that are linearly independent and span the space and hence can act as a coordinate system.<a href="eigenvalues-and-eigenvectors.html#fnref13" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="linear-transformations.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="exercise-set-2.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": null,
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/maths-sci-eng/maths-sci-eng.github.io/edit/master/10-eigen.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["maths-notes.pdf", "maths-notes.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
