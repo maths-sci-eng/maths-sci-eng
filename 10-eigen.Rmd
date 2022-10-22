@@ -25,7 +25,7 @@ A \begin{pmatrix} 1 \\ -2 \end{pmatrix}
 $$
 and so
 $$
-A\mathbf{u}_2 = -\mathbf{u}_2, \qquad \text{where }\quad \mathbf{u}_2 = \begin{pmatrix} 1 \\ -2 \end{pmatrix}.$
+A\mathbf{u}_2 = -\mathbf{u}_2, \qquad \text{where }\quad \mathbf{u}_2 = \begin{pmatrix} 1 \\ -2 \end{pmatrix}.
 $$
 :::
 
@@ -33,22 +33,22 @@ $$
 The above example shows that there are vectors associated to a matrix, which, when multiplied with the matrix from the left, are only scaled by a factor. This motivates the following definition.
 
 ::: {.definition #eigen name="Eigenvalues and Eigenvectors"}
-Let $A$ be an $n\times n$ matrix. Then a non-zero vector $\mathbf{x}$ is said to be an *eigenvector* of $A$ if there exists a scalar $\lambda$ such that
+Let $A$ be an $n\times n$ matrix. Then a non-zero vector $\mathbf{u}$ is said to be an *eigenvector* of $A$ if there exists a scalar $\lambda$ such that
 $$
-A\mathbf{x} = \lambda \mathbf{x}
+A\mathbf{u} = \lambda \mathbf{u}
 $$
-The scalar $\lambda$ is called the *eigenvalue* associated to $\mathbf{x}$.
+The scalar $\lambda$ is called the *eigenvalue* associated to $\mathbf{u}$.
 :::
 
 
 ::: {.example #eigen2}
-In Example \@ref(exm:eigen1), we have that $\mathbf{u}_1 = \begin{smallmatrix}1\\1\end{smallmatrix}$ is an eigenvector associated with an eigenvalue $\lambda_1 = 2$, and that $\mathbf{u}_2 = \begin{smallmatrix}1\\-2\end{smallmatrix}$ is an eigenvector associated with an eigenvalue $\lambda_2 = -1$.
+In Example \@ref(exm:eigen1), we have that $\mathbf{u}_1 = \left(\begin{smallmatrix}1\\1\end{smallmatrix}\right)$ is an eigenvector associated with an eigenvalue $\lambda_1 = 2$, and that $\mathbf{u}_2 = \left(\begin{smallmatrix}1\\-2\end{smallmatrix}\right)$ is an eigenvector associated with an eigenvalue $\lambda_2 = -1$.
 
 We claim that any vector may be written as a linear combination of $\mathbf{u}_1$ and $\mathbf{u}_2$. That is, for all $\mathbf{v}$, there exist scalars $x_1, x_2$ such that
 $$
 x_1 \mathbf{u}_1 + x_2 \mathbf{u}_2 = \mathbf{v}.
 $$
-Write $\mathbf{x} = \begin{smallmatrix}x_1, x_2\end{smallmatrix}$, then we may write the above equation as $B \mathbf{x} = \mathbf{v}$, where $B = (\mathbf{u}_1 \ \mathbf{u}_2)$, i.e. the columns of the matrix $B$ are $\mathbf{u}_1$ and $\mathbf{u}_2$. Note that
+Write $\mathbf{x} = \left(\begin{smallmatrix}x_1\\ x_2\end{smallmatrix}\right)$, then we may write the above equation as $B \mathbf{x} = \mathbf{v}$, where $B = (\mathbf{u}_1 \ \mathbf{u}_2)$, i.e. the columns of the matrix $B$ are $\mathbf{u}_1$ and $\mathbf{u}_2$. Note that
 $$
 \det(B) = \begin{vmatrix} 1 & 1 \\ 1 & -2 \end{vmatrix} = -2 -1 = -3,
 $$
@@ -81,16 +81,16 @@ $$
 for any scalars $\lambda_1,\dotsc,\lambda_n$.
 :::
 
+Consider the diagonal matrix
+$$
+D = \begin{pmatrix} \lambda_1 & 0 \\ 0 & \lambda_2 \end{pmatrix}
+= \begin{pmatrix} 2 & 0 \\ 0 & -1 \end{pmatrix},
+$$
 
-	Consider the diagonal matrix
-	$$
-		D = \begin{pmatrix} \lambda_1 & 0 \\ 0 & \lambda_2 \end{pmatrix}
-		= \begin{pmatrix} 2 & 0 \\ 0 & -1 \end{pmatrix},
-	$$
+Note that this acts very simply on a vector $\mathbf{x}=\left(\begin{smallmatrix}x_1\\x_2\end{smallmatrix}\right)$:
 
-Note that this acts very simply on a vector $\mathbf{x}=\begin{smallmatrix}x_1\\x_2\end{smallmatrix}$:
-
-$$D\mathbf{x}=
+$$
+D\mathbf{x}=
 \begin{pmatrix} \lambda_1 & 0 \\ 0 & \lambda_2 \end{pmatrix}
 \begin{pmatrix}x_1\\x_2\end{pmatrix}
 =\begin{pmatrix}
@@ -98,10 +98,12 @@ $$D\mathbf{x}=
 \lambda_2 x_2
 \end{pmatrix}
 =
+\begin{pmatrix}
 2 x_1\\
 -x_2
 \end{pmatrix}
 $$
+
 it simply multiplies each element of the vector by a value on the diagonal. This is reminiscent of the action of $A$ on 
 
 We'll now look at an example to understand the meaning of the term "diagonalising a matrix".
@@ -109,11 +111,11 @@ We'll now look at an example to understand the meaning of the term "diagonalisin
 ::: {.example #diagonal}
 Suppose that we write a vector $\mathbf{v} = x_1 \mathbf{u}_1 + x_2 \mathbf{u}_2$ in terms of the eigenvectors $\mathbf{u}_1$ and $\mathbf{u}_2$ from example \ref@(exm:eigen2). We say that $\mathbf{v}$ has the *coordinate vector*
 $$\mathbf{x}_{\mathcal{P}}=\begin{pmatrix}x_1\\x_2\end{pmatrix}$$
-with respect to the vectors^[Technically, $\mathcal{P}$ is what is known as a *basis* -- a list of vectors that are linearly independent and span the space and hence can act as a coordinate system.] $\mathcal{P}=(\mathbf{u}_1,\mathbf{u}_2)$ -- these vectors take the place of the usual vectors $\mathcal{E}=(\mathbf{e}_1,\mathbf{e}_2)$ (although note that the vectors in $\mathcal{P}$ are not unit vectors). We may write $\mathbf{v}$ as
+with respect to the vectors^[Technically, $\mathcal{P}$ is what is known as a *basis* -- a list of vectors that are linearly independent and span the space and hence can act as a coordinate system.] $\mathcal{P}=[\mathbf{u}_1,\mathbf{u}_2]$ -- these vectors take the place of the usual vectors $\mathcal{E}=[\mathbf{e}_1,\mathbf{e}_2]$ (although note that the vectors in $\mathcal{P}$ are not unit vectors here). We may write $\mathbf{v}$ as
 	$$
 		\mathbf{v} = P \mathbf{x}_\mathcal{P},
 	$$
-	where $P = (\mathbf{u}_1 \mathbf{u}_2)$ is the matrix whose columns are the vectors $\mathbf{u}_1$ and $\mathbf{u}_2$.
+	where $P = (\mathbf{u}_1\; \mathbf{u}_2)$ is the matrix whose columns are the vectors $\mathbf{u}_1$ and $\mathbf{u}_2$.
 	Consider an exemplar vector
 	$$
 		\mathbf{v} = 5 \mathbf{u}_1 - 3 \mathbf{u}_2= 2 \mathbf{e}_1 + 11 \mathbf{e}_2
@@ -129,7 +131,7 @@ We have seen that $A$ acts very simply in these coordinates:
 $$
 A\mathbf{v}=\lambda _1 x_1 \mathbf{u}_1 + \lambda_2 x_2 \mathbf{u}_2
 $$
-and writing this result as a coordinate vector in $\mathbf{u}_1$, $\mathbf{u}_2$ we would have
+and writing this result as a coordinate vector with respect to $\mathcal{P}$ we would have
 $$
 (A\mathbf{v})_\mathcal{P}=
 \begin{pmatrix}
@@ -137,7 +139,7 @@ $$
 \lambda_2 x_2
 \end{pmatrix}
 $$
-In fact, $A$ acts like a diagonal matrix in the coordinates $\mathcal{P}$. If we defined
+We can see that $A$ acts like a diagonal matrix in the coordinates $\mathcal{P}$. If we defined
 $$D=\begin{pmatrix} \lambda_1 & 0 \\ 0 & \lambda_2 \end{pmatrix}$$
 then note that $D$ acts on the coordinate vector as
 $$D\mathbf{x}_\mathcal{P}=
@@ -156,7 +158,7 @@ $$
 
 Since the matrix $P$ converts between coordinates $\mathcal{P}$ and standard coordinates $\mathcal{E}$, that is $\mathbf{v}=P\mathbf{x}_\mathcal{P}$, we can see that $P^{-1}$ converts in the other direction $\mathbf{x}_\mathcal{P}=P^{-1}\mathbf{v}$. We can use this to write $A$ as
 
-$$A=P^{-1}DP.$$
+$$A=PDP^{-1}.$$
 
 This decomposes $A\mathbf{v}$ into three operations $P^{-1}DP\mathbf{v}$:
 
@@ -166,31 +168,32 @@ This decomposes $A\mathbf{v}$ into three operations $P^{-1}DP\mathbf{v}$:
 
 We call the matrix $D$ the *diagonalisation* of the matrix $A$. Note that $D$ can be obtained by applying $P$ to the left and $P^{-1}$ to the right of the above equation (using $PP^{-1}=P^{-1}P=I$) to obtain:
 
-$$D=PAP^{-1}.$$
+$$D=P^{-1}AP.$$
 :::
 
 
-
-Let $A$ be a matrix with $n$ eigenvectors $\mathbf{u}_1, \dots, \mathbf{u}_n$ with corresponding eigenvalues $\lambda_1, \dotsc, \lambda_n$. If the matrix $P=(\mathbf{u}_1 \dotsb \mathbf{u}_n)$ is invertible (in other words, the eigenvectors are linearly independent) then
+::: {.theorem #diagonalisation name="Diagonalisation"}
+Let $A$ be an $n\times n$ matrix with $n$ eigenvectors $\mathbf{u}_1, \dots, \mathbf{u}_n$ with corresponding eigenvalues $\lambda_1, \dotsc, \lambda_n$. If the matrix $P=(\mathbf{u}_1 \dotsb \mathbf{u}_n)$ is invertible (in other words, the eigenvectors are linearly independent) then
 $$
 D = P^{-1}A P,
 $$
 where $D$ is the diagonal matrix whose $i$-th diagonal entry is $\lambda_i$.
 We say that $A$ is *diagonalisable*.
+:::
 
 It is worth noting here that it is **not** always possible to diagonalise a matrix. We shall see an example later.
 
 
-## Finding Eigenvalues and Eigenvectors
+## Finding Eigenvalues
 
 
-Suppose $\mathbf{v}$ is an eigenvector of a matrix $A$ with associated eigenvalue $\lambda$. This means that $\mathbf{v}$ is a non-zero vector such that $A\mathbf{v} = \lambda \mathbf{v}$. Equally,
-$$\arraycolsep1.5pt\begin{array}{rrcl}
-& \lambda \mathbf{v} - A \mathbf{v} &=& \mathbf{0} \\
-\Longleftrightarrow\qquad & \lambda I_n \mathbf{v} - A\mathbf{v} &=& \mathbf{0} \\
-\Longleftrightarrow\qquad & (\lambda I_n-A) \mathbf{v} &=& \mathbf{0}.
+Suppose $\mathbf{u}$ is an eigenvector of a matrix $A$ with associated eigenvalue $\lambda$. This means that $\mathbf{u}$ is a non-zero vector such that $A\mathbf{u} = \lambda \mathbf{u}$. Equally,
+$$\begin{array}{rrcl}
+& \lambda \mathbf{u} - A \mathbf{u} &=& \mathbf{0} \\
+\Longleftrightarrow\qquad & \lambda I_n \mathbf{u} - A\mathbf{u} &=& \mathbf{0} \\
+\Longleftrightarrow\qquad & (\lambda I_n-A) \mathbf{u} &=& \mathbf{0}.
 \end{array}$$
-Setting $B_{\lambda} = \lambda I_n - A$, we have that $\lambda$ is an eigenvalue of $A$ if, and only if, $B_{\lambda}\mathbf{v} = \mathbf{0}$ has a non-zero solution $\mathbf{v}$. Recall that for a general square matrix $M$, the matrix--vector system $M \mathbf{v} = \mathbf{b}$ has a unique solution for $\mathbf{v}$ if, and only if, $\det(M) \neq 0$. Note the system $B_{\lambda} \mathbf{v} = \mathbf{0}$ always has at least one solution, namely $\mathbf{v} = \mathbf{0}$, so the system has a non-zero solution if, and only if, it has more than one solution, which is equivalent to $\det(B_{\lambda}) = 0$. We use this fact to find eigenvalues, as shown in the following example.
+Setting $B_{\lambda} = \lambda I_n - A$, we have that $\lambda$ is an eigenvalue of $A$ if, and only if, $B_{\lambda}\mathbf{u} = \mathbf{0}$ has a non-zero solution $\mathbf{u}$. Recall that for a general square matrix $M$, the matrix--vector system $M \mathbf{v} = \mathbf{b}$ has a unique solution for $\mathbf{v}$ if, and only if, $\det(M) \neq 0$. Note the system $B_{\lambda} \mathbf{v} = \mathbf{0}$ always has at least one solution, namely $\mathbf{v} = \mathbf{0}$, so the system has a non-zero solution if, and only if, it has more than one solution, which is equivalent to $\det(B_{\lambda}) = 0$. We use this fact to find eigenvalues, as shown in the following example.
 
 
 ::: {.example #eigenvals name="Finding Eigenvalues"}
@@ -222,8 +225,8 @@ $$
 
 Note, that in the above example $\det(B_\lambda)$ is a polynomial of degree 2 in the variable $\lambda$. We can generalise this observation.
 
-::: {.definition #label name="definition name"}
-Let $A \in \R^{n\times n}$. Then the function
+::: {.definition #charpoly name="Characteristic Polynomial"}
+Let $A$ be an $n\times n$ matrix. Then the function
 $$
 p_A(\lambda)=\det(\lambda I_n - A)
 $$
@@ -262,7 +265,7 @@ From this, we see that $v_2$ is arbitrary, say $v_2 = \alpha$, and $v_1 = v_2 = 
 $$
 \alpha \begin{pmatrix} 1 \\ 1 \end{pmatrix}
 $$
-for any non-zero value of $\alpha$.	By a similar process, we find an eigenvector corresponding to $\lambda_2 = -1$. Any non-zero solution $\mathbf{v} = \begin{smallmatrix}v_1\\v_2\end{smallmatrix}$ of the equation $B_{-1} \mathbf{v} = \mathbf{0}$ is such an eigenvector. We have
+for any non-zero value of $\alpha$.	By a similar process, we find an eigenvector corresponding to $\lambda_2 = -1$. Any non-zero solution $\mathbf{v} = \left(\begin{smallmatrix}v_1\\v_2\end{smallmatrix}\right)$ of the equation $B_{-1} \mathbf{v} = \mathbf{0}$ is such an eigenvector. We have
 $$
 B_{-1} = \begin{pmatrix} -2 & -1 \\ -2 & -1\end{pmatrix},
 $$
@@ -274,11 +277,11 @@ for any non-zero value of $\beta$.
 
 Note that there are infinitely many eigenvectors corresponding to an eigenvalue, because if a non-zero vector $\mathbf{v}$ satisfies $B_{\lambda} \mathbf{v} = \mathbf{0}$, then any multiple of $\mathbf{v}$, i.e.\ $\mu\mathbf{v}$ for any $\mu \neq 0$ satisfies the equation, too, as we have $B_{\lambda} (\mu\mathbf{v}) = \mu (B_{\lambda}{\mathbf{v}}) = \mu\mathbf{0} = \mathbf{0}$.
 
-In order to obtain specific eigenvectors, we simply need to set $\alpha$ and $\beta$ to some value, for which we usually simply take $\alpha=1$ and $\beta=1$. Hence two suitable eigenvectors of $A$ are 
+In order to obtain specific eigenvectors, we simply need to set $\alpha$ and $\beta$ to some non-zero value, for which we usually simply take $\alpha=1$ and $\beta=1$. Hence two suitable eigenvectors of $A$ are 
 $$
-\mathbf{u}=\begin{pmatrix} 1 \\ 1 \end{pmatrix} \quad\text{ and }\quad \mathbf{v}=\begin{pmatrix} 1 \\ -2\end{pmatrix}
+\mathbf{u}_1=\begin{pmatrix} 1 \\ 1 \end{pmatrix} \quad\text{ and }\quad \mathbf{u}_2=\begin{pmatrix} 1 \\ -2\end{pmatrix}
 $$
-
+:::
 
 With the following example, we demonstrate how to find the eigenvalues and eigenvectors for a $3\times 3$ matrix.
 
@@ -345,7 +348,7 @@ $$
     $$
     For instance, taking $\alpha = 1$, gives a specific eigenvector
     $$
-    \mathbf{v}_1 = \begin{pmatrix} -1 \\ 1 \\ 0 \end{pmatrix}.
+    \mathbf{u}_1 = \begin{pmatrix} -1 \\ 1 \\ 0 \end{pmatrix}.
     $$
 
 1. We find the eigenvectors for the eigenvalue $\lambda_2 = 2$.
@@ -359,7 +362,7 @@ $$
     $$
     For instance, taking $\beta = 1$, we find the specific eigenvector
     $$
-    \mathbf{v}_2 = \begin{pmatrix} -2 \\ 1 \\ 2 \end{pmatrix}.
+    \mathbf{u}_2 = \begin{pmatrix} -2 \\ 1 \\ 2 \end{pmatrix}.
     $$
 
 1. We find the eigenvectors for the eigenvalue $\lambda_3 = 3$.
@@ -373,7 +376,7 @@ $$
     $$
     For instance, taking $\gamma = -1$, we find the specific eigenvector
     $$
-    \mathbf{v}_3 = (1,-1,-2).
+    \mathbf{u}_3 = (1,-1,-2).
     $$
 :::
 
@@ -384,6 +387,6 @@ Also possible to begin with matrices and vectors with complex entries, but we wo
 
 not diagonalisable
 
-
+powers of matrices
 
 
