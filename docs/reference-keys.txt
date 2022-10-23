@@ -106,6 +106,9 @@ exm:eigenvals
 def:charpoly
 exm:eigenvecs
 exm:3by3eig
+exm:complexeig
+exm:nondiag
+exm:diagmatpower
 fig:complexsketch
 foundations
 numbers
@@ -167,7 +170,7 @@ lines-and-planes
 solving-linear-systems---gaussian-elimination
 echelon-form
 matrices
-linear_revisited
+linearrevisited
 determinants
 linear-transformations
 matrix-algebra
@@ -184,3 +187,4 @@ eigenvalues-and-eigenvectors
 matrix-diagonalisation
 finding-eigenvalues
 finding-eigenvectors
+powers-of-diagonalisable-matrices

@@ -112,20 +112,20 @@ We'll now look at an example to understand the meaning of the term "diagonalisin
 Suppose that we write a vector $\mathbf{v} = x_1 \mathbf{u}_1 + x_2 \mathbf{u}_2$ in terms of the eigenvectors $\mathbf{u}_1$ and $\mathbf{u}_2$ from example \ref@(exm:eigen2). We say that $\mathbf{v}$ has the *coordinate vector*
 $$\mathbf{x}_{\mathcal{P}}=\begin{pmatrix}x_1\\x_2\end{pmatrix}$$
 with respect to the vectors^[Technically, $\mathcal{P}$ is what is known as a *basis* -- a list of vectors that are linearly independent and span the space and hence can act as a coordinate system.] $\mathcal{P}=[\mathbf{u}_1,\mathbf{u}_2]$ -- these vectors take the place of the usual vectors $\mathcal{E}=[\mathbf{e}_1,\mathbf{e}_2]$ (although note that the vectors in $\mathcal{P}$ are not unit vectors here). We may write $\mathbf{v}$ as
-	$$
-		\mathbf{v} = P \mathbf{x}_\mathcal{P},
-	$$
-	where $P = (\mathbf{u}_1\; \mathbf{u}_2)$ is the matrix whose columns are the vectors $\mathbf{u}_1$ and $\mathbf{u}_2$.
-	Consider an exemplar vector
-	$$
-		\mathbf{v} = 5 \mathbf{u}_1 - 3 \mathbf{u}_2= 2 \mathbf{e}_1 + 11 \mathbf{e}_2
-	$$
-	Then $\mathbf{v}$ has co-ordinate vector $\mathbf{x}_\mathcal{P}=(5,-3)$ and
-	$$
-		\mathbf{v} = P \begin{pmatrix} 5 \\ -3 \end{pmatrix}
-		= \begin{pmatrix} 1 & 1 \\ 1 & -2 \end{pmatrix} \begin{pmatrix} 5 \\ -3 \end{pmatrix}
-		= \begin{pmatrix} 2\\ 11\end{pmatrix}
-	$$
+$$
+\mathbf{v} = P \mathbf{x}_\mathcal{P},
+$$
+where $P = (\mathbf{u}_1\; \mathbf{u}_2)$ is the matrix whose columns are the vectors $\mathbf{u}_1$ and $\mathbf{u}_2$.
+Consider an exemplar vector
+$$
+\mathbf{v} = 5 \mathbf{u}_1 - 3 \mathbf{u}_2= 2 \mathbf{e}_1 + 11 \mathbf{e}_2
+$$
+Then $\mathbf{v}$ has co-ordinate vector $\mathbf{x}_\mathcal{P}=(5,-3)$ and
+$$
+\mathbf{v} = P \begin{pmatrix} 5 \\ -3 \end{pmatrix}
+= \begin{pmatrix} 1 & 1 \\ 1 & -2 \end{pmatrix} \begin{pmatrix} 5 \\ -3 \end{pmatrix}
+= \begin{pmatrix} 2\\ 11\end{pmatrix}
+$$
 
 We have seen that $A$ acts very simply in these coordinates:
 $$
@@ -160,15 +160,17 @@ Since the matrix $P$ converts between coordinates $\mathcal{P}$ and standard coo
 
 $$A=PDP^{-1}.$$
 
-This decomposes $A\mathbf{v}$ into three operations $P^{-1}DP\mathbf{v}$:
+This decomposes $A\mathbf{v}$ into three operations $PDP^{-1}\mathbf{v}$:
 
-1. Apply $P$ to convert $\mathbf{v}$ to $P\mathbf{v}=\mathbf{x}_\mathcal{P}$;
+1. Apply $P^{-1}$ to convert $\mathbf{v}$ to $P^{-1}\mathbf{v}=\mathbf{x}_\mathcal{P}$;
 1. Now apply the diagonal matrix $D$ to $\mathbf{x}_\mathcal{P}$, which simply multiplies each component by the eigenvalue $\lambda_i$;
-1. Finally, convert back to standard coordinates by applying $P^{-1}$ to give the result $A\mathbf{v}$.
+1. Finally, convert back to standard coordinates by applying $P$ to give the result $A\mathbf{v}$.
 
-We call the matrix $D$ the *diagonalisation* of the matrix $A$. Note that $D$ can be obtained by applying $P$ to the left and $P^{-1}$ to the right of the above equation (using $PP^{-1}=P^{-1}P=I$) to obtain:
+We call the matrix $D$ the *diagonalisation* of the matrix $A$. Note that $D$ can be obtained by applying $P^{-1}$ to the left and $P$ to the right of the above equation to obtain:
 
-$$D=P^{-1}AP.$$
+$$P^{-1}AP=P^{-1}PDP^{-1}P=D.$$
+
+(using $P^{-1}P=I$).
 :::
 
 
@@ -242,7 +244,7 @@ Let again
 $$
 A = \begin{pmatrix} 1 & 1 \\ 2 & 0 \end{pmatrix}.
 $$
-We know from above that $\lambda_1 = 2$ and $\lambda_2 = -1$ are the eigenvalues of $A$. We first find an eigenvector corresponding to $\lambda_1$. Any non-zero solution $\mathbf{v} = \begin{smallmatrix}v_1\\v_2\end{smallmatrix}$ of the equation $B_2 \mathbf{v} = \mathbf{0}$ is such an eigenvector.
+We know from above that $\lambda_1 = 2$ and $\lambda_2 = -1$ are the eigenvalues of $A$. We first find an eigenvector corresponding to $\lambda_1$. Any non-zero solution $\mathbf{v} = \left(\begin{smallmatrix}v_1\\v_2\end{smallmatrix}\right)$ of the equation $B_2 \mathbf{v} = \mathbf{0}$ is such an eigenvector.
 For $\lambda = \lambda_1 = 2$, we have
 $$
 B_2 = \begin{pmatrix} 1 & -1 \\ -2 & 2 \end{pmatrix}.
@@ -381,12 +383,234 @@ $$
 :::
 
 
-complex eigenvectors
+It also makes sense to consider vectors and matrices with complex number entries. These arise in applications such as analysis of electronic circuits and in quantum mechanics. We won't consider such situations here, but we will now see that even if we start with vectors and matrices with real entries, complex number eigenvalues and eigenvectors with complex entries can still arise. We can immediately see that this could be possible, since the eigenvalues are calculated as roots of the characteristic polynomial and we know that real polynomials can have complex roots.
 
-Also possible to begin with matrices and vectors with complex entries, but we won't consider these here.
+::: {.example #complexeig name="Complex Eigenvalues and Eigenvectors"}
+Consider the matrix
 
-not diagonalisable
+$$
+A=
+\begin{pmatrix}
+0&-1\\
+1&0
+\end{pmatrix}
+$$
 
-powers of matrices
+The matrix $A$ has the effect of rotating vectors in the plane anticlockwise by $\pi/2$ (it is matrix $R_{\pi/2}$ from example \ref@(exm:rotmat)), so we can see geometrically that it can't have any real eigenvectors, since these would correspond to fixed directions in the plane that are scaled by an eigenvalue.
+
+The characteristic polynomial is
+
+$$p_A(\lambda)=\lambda^2+1$$
+
+which has solutions $\lambda_1=i$ and $\lambda_2=-i$. We can also find the eigenvectors in the usual way by solving $(A-\lambda I)\mathbf{v}=0$. For $\lambda_1$
+$$
+(A-iI)=
+\begin{pmatrix}
+-i&-1\\
+1&-i
+\end{pmatrix}
+$$
+and performing $R_1\to iR_1$
+$$
+\begin{pmatrix}
+1&-i\\
+1&-i
+\end{pmatrix}
+$$
+we find that the corresponding eigenvectors are $\alpha\left(\begin{smallmatrix}1\\-i\end{smallmatrix}\right)$ and taking $\alpha=1$,
+
+$$
+\mathbf{u}_1=
+\begin{pmatrix}
+1\\
+-i
+\end{pmatrix}
+$$
+
+Similarly, we find an eigenvector for $\lambda_2$:
+$$
+\mathbf{u}_2=
+\begin{pmatrix}
+1\\
+i
+\end{pmatrix}
+$$
+
+Let
+$$
+P=\begin{pmatrix}
+1&1\\
+-i&i
+\end{pmatrix}
+$$
+then
+$$
+P^{-1}=
+\frac{1}{2i}
+\begin{pmatrix}
+i&-1\\
+i&1
+\end{pmatrix}
+=
+\frac{1}{2}
+\begin{pmatrix}
+1&i\\
+1&-i
+\end{pmatrix}
+$$
+and letting
+$$
+D=
+\begin{pmatrix}
+i&0\\
+0&-i
+\end{pmatrix}
+$$
+we may write
+$$
+A=PDP^{-1}.
+$$
+Although $P^{-1}$, $D$ and $P$ all contain complex numbers, their product leaves only real numbers and we get back to the real matrix $A$ (check that $PDP^{-1}$ does indeed equal $A$).
+:::
+
+Complex roots of real polynomials always come in complex conjugate pairs and so we will have complex conjugate eigenvalue pairs and corresponding complex conjugate eigenvector pairs. To see this, if $p_B(\lambda)=\lambda^n+a_{n-1}\lambda^{n-1}+\dotsb+a_1\lambda+a_0$ is a (real) characteristic polynomial of a real $n\times n$ matrix $B$ and $\lambda$ is a complex root, then taking the complex conjugate
+\begin{align*}
+0=p_B(\lambda)=\overline{p_B(\lambda)}&=\overline{\lambda^n}+\overline{a_{n-1}\lambda^{n-1}}+\dotsb+\overline{a_1\lambda}+\overline{a_0}\\
+&=\overline{\lambda}^n+a_{n-1}\overline{\lambda}^{n-1}+\dotsb+a_1\overline{\lambda}+{a_0}
+\end{align*}
+(using that the coefficients $a_j$ are real) shows that $\overline{\lambda}$ is also a root. Let $\mathbf{u}$ be an eigenvector corresponding to $\lambda$. Then,
+$$
+B\overline{\mathbf{u}}=\overline{B}\overline{\mathbf{u}}=\overline{B\mathbf{u}}=\overline{\lambda \mathbf{u}}=\overline{\lambda}\overline{\mathbf{u}}
+$$
+(using that $B$ is real in the first step) i.e. the vector $\overline{\mathbf{u}}$ is an eigenvector with eigenvalue $\overline{\lambda}$.
 
 
+As we mentioned earlier, not all matrices are diagonalisable. Here is an example.
+
+::: {.example #nondiag name="A non-diagonalisable matrix"}
+Consider the matrix
+$$
+A=\begin{pmatrix}
+3&1\\
+0&3
+\end{pmatrix}.
+$$
+The characteristic polynomial of $A$ is
+$$
+p_A(x)=\det(\lambda I-A)=
+\begin{vmatrix}
+\lambda-3&-1\\
+0&\lambda-3
+\end{vmatrix}
+=(\lambda-3)^2
+$$
+so the only eigenvalue of $A$ is $3$. Now
+$$
+A-3I=
+\begin{pmatrix}
+0&1\\
+0&0
+\end{pmatrix}
+$$
+so the eigenvectors are
+$$
+\alpha
+\begin{pmatrix}
+1\\
+0
+\end{pmatrix}
+$$
+So we do not have 2 linearly independent eigenvectors since all eigenvectors are multiples of $\mathbf{u}=\left(\begin{smallmatrix}1\\0\end{smallmatrix}\right)$. Therefore, we cannot diagonalise this matrix.
+:::
+
+We briefly mention that there are other useful matrix decompositions to diagonalisation that *always* work. The generalisation of diagonalisation is the *Jordan Normal Form*, which is an important theoretical tool. Another key technique is the *Singular Value Decomposition* which is important in numerical applications of matrices and in data science (see *Principal Component Analysis*).
+
+
+## Powers of diagonalisable matrices
+
+One of the most important applications of diagaonalisation is in computing powers of matrices. If a matrix $A$ is diagonalisable, we can write it as
+
+$$A=PDP^{-1}$$
+
+Now if we want to cmopute $A^2$, we have
+$$A^2=PDP^{-1}PDP^{-1}=PD^2P^{-1}$$
+where we used $P^{-1}P=I$. Now, more generally
+$$
+A^n=PDP^{-1}PDP^{-1}\dotsb PDP^{-1}=PD^nP^{-1}
+$$
+for any natural number $n$. By the rules of matrix multiplication, the $n$-th power of the diagonal matrix
+$$
+D=
+\begin{pmatrix}
+\lambda_1&&0\\
+&\ddots&\\
+0&&\lambda_m
+\end{pmatrix}
+$$
+is simply
+$$
+D^n
+=
+\begin{pmatrix}
+\lambda_1^n&&0\\
+&\ddots&\\
+0&&\lambda_m^n
+\end{pmatrix}.
+$$
+This gives us an efficient way to compute $A^n$.
+
+::: {.example #diagmatpower name="Powers of a diagonalisable matrix"}
+Consider the matrix
+$$
+A=
+\begin{pmatrix}
+8&-6\\
+3&-1
+\end{pmatrix}.
+$$
+
+We find
+
+$$A=PDP^{-1}=
+\begin{pmatrix}
+1&2\\
+1&1
+\end{pmatrix}
+\begin{pmatrix}
+2&0\\
+0&5
+\end{pmatrix}
+\begin{pmatrix}
+-1& 2\\
+1& -1
+\end{pmatrix}.$$
+
+Now using
+
+$$
+A^n=PD^nP^{-1}
+$$
+we have
+$$
+A^n=
+\begin{pmatrix}
+1&2\\
+1&1
+\end{pmatrix}
+\begin{pmatrix}
+2^n&0\\
+0&5^n
+\end{pmatrix}
+\begin{pmatrix}
+-1& 2\\
+1& -1
+\end{pmatrix}
+=
+\begin{pmatrix}
+-2^n+2\times 5^n& 2^{n+1}-2\times 5^n\\
+-2^{n}+5^n& 2^{n+1}-5^n
+\end{pmatrix}.
+$$
+
+We now have a nice expression that works for any $n$ and this is much easier than trying to calculate $A^n$ directly.
+:::

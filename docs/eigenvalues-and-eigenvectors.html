@@ -23,7 +23,7 @@
 <meta name="author" content="Dr Mark Callaway" />
 
 
-<meta name="date" content="2022-10-22" />
+<meta name="date" content="2022-10-23" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -155,7 +155,7 @@
 </ul></li>
 <li class="chapter" data-level="8" data-path="matrices.html"><a href="matrices.html"><i class="fa fa-check"></i><b>8</b> Matrices</a>
 <ul>
-<li class="chapter" data-level="8.1" data-path="matrices.html"><a href="matrices.html#linear_revisited"><i class="fa fa-check"></i><b>8.1</b> Solving linear systems revisited</a></li>
+<li class="chapter" data-level="8.1" data-path="matrices.html"><a href="matrices.html#linearrevisited"><i class="fa fa-check"></i><b>8.1</b> Solving linear systems revisited</a></li>
 <li class="chapter" data-level="8.2" data-path="matrices.html"><a href="matrices.html#determinants"><i class="fa fa-check"></i><b>8.2</b> Determinants</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="linear-transformations.html"><a href="linear-transformations.html"><i class="fa fa-check"></i><b>9</b> Linear Transformations</a>
@@ -180,6 +180,7 @@
 <li class="chapter" data-level="10.1" data-path="eigenvalues-and-eigenvectors.html"><a href="eigenvalues-and-eigenvectors.html#matrix-diagonalisation"><i class="fa fa-check"></i><b>10.1</b> Matrix Diagonalisation</a></li>
 <li class="chapter" data-level="10.2" data-path="eigenvalues-and-eigenvectors.html"><a href="eigenvalues-and-eigenvectors.html#finding-eigenvalues"><i class="fa fa-check"></i><b>10.2</b> Finding Eigenvalues</a></li>
 <li class="chapter" data-level="10.3" data-path="eigenvalues-and-eigenvectors.html"><a href="eigenvalues-and-eigenvectors.html#finding-eigenvectors"><i class="fa fa-check"></i><b>10.3</b> Finding Eigenvectors</a></li>
+<li class="chapter" data-level="10.4" data-path="eigenvalues-and-eigenvectors.html"><a href="eigenvalues-and-eigenvectors.html#powers-of-diagonalisable-matrices"><i class="fa fa-check"></i><b>10.4</b> Powers of diagonalisable matrices</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="exercise-set-2.html"><a href="exercise-set-2.html"><i class="fa fa-check"></i>Exercise Set 2</a></li>
 <li class="chapter" data-level="" data-path="exercise-set-3.html"><a href="exercise-set-3.html"><i class="fa fa-check"></i>Exercise Set 3</a></li>
@@ -307,19 +308,19 @@ D\mathbf{x}=
 <span class="math display">\[\mathbf{x}_{\mathcal{P}}=\begin{pmatrix}x_1\\x_2\end{pmatrix}\]</span>
 with respect to the vectors<a href="#fn13" class="footnote-ref" id="fnref13"><sup>13</sup></a> <span class="math inline">\(\mathcal{P}=[\mathbf{u}_1,\mathbf{u}_2]\)</span> – these vectors take the place of the usual vectors <span class="math inline">\(\mathcal{E}=[\mathbf{e}_1,\mathbf{e}_2]\)</span> (although note that the vectors in <span class="math inline">\(\mathcal{P}\)</span> are not unit vectors here). We may write <span class="math inline">\(\mathbf{v}\)</span> as
 <span class="math display">\[
-        \mathbf{v} = P \mathbf{x}_\mathcal{P},
-    \]</span>
+\mathbf{v} = P \mathbf{x}_\mathcal{P},
+\]</span>
 where <span class="math inline">\(P = (\mathbf{u}_1\; \mathbf{u}_2)\)</span> is the matrix whose columns are the vectors <span class="math inline">\(\mathbf{u}_1\)</span> and <span class="math inline">\(\mathbf{u}_2\)</span>.
 Consider an exemplar vector
 <span class="math display">\[
-        \mathbf{v} = 5 \mathbf{u}_1 - 3 \mathbf{u}_2= 2 \mathbf{e}_1 + 11 \mathbf{e}_2
-    \]</span>
+\mathbf{v} = 5 \mathbf{u}_1 - 3 \mathbf{u}_2= 2 \mathbf{e}_1 + 11 \mathbf{e}_2
+\]</span>
 Then <span class="math inline">\(\mathbf{v}\)</span> has co-ordinate vector <span class="math inline">\(\mathbf{x}_\mathcal{P}=(5,-3)\)</span> and
 <span class="math display">\[
-        \mathbf{v} = P \begin{pmatrix} 5 \\ -3 \end{pmatrix}
-        = \begin{pmatrix} 1 &amp; 1 \\ 1 &amp; -2 \end{pmatrix} \begin{pmatrix} 5 \\ -3 \end{pmatrix}
-        = \begin{pmatrix} 2\\ 11\end{pmatrix}
-    \]</span></p>
+\mathbf{v} = P \begin{pmatrix} 5 \\ -3 \end{pmatrix}
+= \begin{pmatrix} 1 &amp; 1 \\ 1 &amp; -2 \end{pmatrix} \begin{pmatrix} 5 \\ -3 \end{pmatrix}
+= \begin{pmatrix} 2\\ 11\end{pmatrix}
+\]</span></p>
 <p>We have seen that <span class="math inline">\(A\)</span> acts very simply in these coordinates:
 <span class="math display">\[
 A\mathbf{v}=\lambda _1 x_1 \mathbf{u}_1 + \lambda_2 x_2 \mathbf{u}_2
@@ -350,14 +351,15 @@ x_2
 \]</span></p>
 <p>Since the matrix <span class="math inline">\(P\)</span> converts between coordinates <span class="math inline">\(\mathcal{P}\)</span> and standard coordinates <span class="math inline">\(\mathcal{E}\)</span>, that is <span class="math inline">\(\mathbf{v}=P\mathbf{x}_\mathcal{P}\)</span>, we can see that <span class="math inline">\(P^{-1}\)</span> converts in the other direction <span class="math inline">\(\mathbf{x}_\mathcal{P}=P^{-1}\mathbf{v}\)</span>. We can use this to write <span class="math inline">\(A\)</span> as</p>
 <p><span class="math display">\[A=PDP^{-1}.\]</span></p>
-<p>This decomposes <span class="math inline">\(A\mathbf{v}\)</span> into three operations <span class="math inline">\(P^{-1}DP\mathbf{v}\)</span>:</p>
+<p>This decomposes <span class="math inline">\(A\mathbf{v}\)</span> into three operations <span class="math inline">\(PDP^{-1}\mathbf{v}\)</span>:</p>
 <ol style="list-style-type: decimal">
-<li>Apply <span class="math inline">\(P\)</span> to convert <span class="math inline">\(\mathbf{v}\)</span> to <span class="math inline">\(P\mathbf{v}=\mathbf{x}_\mathcal{P}\)</span>;</li>
+<li>Apply <span class="math inline">\(P^{-1}\)</span> to convert <span class="math inline">\(\mathbf{v}\)</span> to <span class="math inline">\(P^{-1}\mathbf{v}=\mathbf{x}_\mathcal{P}\)</span>;</li>
 <li>Now apply the diagonal matrix <span class="math inline">\(D\)</span> to <span class="math inline">\(\mathbf{x}_\mathcal{P}\)</span>, which simply multiplies each component by the eigenvalue <span class="math inline">\(\lambda_i\)</span>;</li>
-<li>Finally, convert back to standard coordinates by applying <span class="math inline">\(P^{-1}\)</span> to give the result <span class="math inline">\(A\mathbf{v}\)</span>.</li>
+<li>Finally, convert back to standard coordinates by applying <span class="math inline">\(P\)</span> to give the result <span class="math inline">\(A\mathbf{v}\)</span>.</li>
 </ol>
-<p>We call the matrix <span class="math inline">\(D\)</span> the <em>diagonalisation</em> of the matrix <span class="math inline">\(A\)</span>. Note that <span class="math inline">\(D\)</span> can be obtained by applying <span class="math inline">\(P\)</span> to the left and <span class="math inline">\(P^{-1}\)</span> to the right of the above equation (using <span class="math inline">\(PP^{-1}=P^{-1}P=I\)</span>) to obtain:</p>
-<p><span class="math display">\[D=P^{-1}AP.\]</span></p>
+<p>We call the matrix <span class="math inline">\(D\)</span> the <em>diagonalisation</em> of the matrix <span class="math inline">\(A\)</span>. Note that <span class="math inline">\(D\)</span> can be obtained by applying <span class="math inline">\(P^{-1}\)</span> to the left and <span class="math inline">\(P\)</span> to the right of the above equation to obtain:</p>
+<p><span class="math display">\[P^{-1}AP=P^{-1}PDP^{-1}P=D.\]</span></p>
+<p>(using <span class="math inline">\(P^{-1}P=I\)</span>).</p>
 </div>
 <div class="theorem">
 <p><span id="thm:diagonalisation" class="theorem"><strong>Theorem 10.1  (Diagonalisation) </strong></span>Let <span class="math inline">\(A\)</span> be an <span class="math inline">\(n\times n\)</span> matrix with <span class="math inline">\(n\)</span> eigenvectors <span class="math inline">\(\mathbf{u}_1, \dots, \mathbf{u}_n\)</span> with corresponding eigenvalues <span class="math inline">\(\lambda_1, \dotsc, \lambda_n\)</span>. If the matrix <span class="math inline">\(P=(\mathbf{u}_1 \dotsb \mathbf{u}_n)\)</span> is invertible (in other words, the eigenvectors are linearly independent) then
@@ -420,7 +422,7 @@ is a polynomial of degree <span class="math inline">\(n\)</span> in the variable
 <span class="math display">\[
 A = \begin{pmatrix} 1 &amp; 1 \\ 2 &amp; 0 \end{pmatrix}.
 \]</span>
-We know from above that <span class="math inline">\(\lambda_1 = 2\)</span> and <span class="math inline">\(\lambda_2 = -1\)</span> are the eigenvalues of <span class="math inline">\(A\)</span>. We first find an eigenvector corresponding to <span class="math inline">\(\lambda_1\)</span>. Any non-zero solution <span class="math inline">\(\mathbf{v} = \begin{smallmatrix}v_1\\v_2\end{smallmatrix}\)</span> of the equation <span class="math inline">\(B_2 \mathbf{v} = \mathbf{0}\)</span> is such an eigenvector.
+We know from above that <span class="math inline">\(\lambda_1 = 2\)</span> and <span class="math inline">\(\lambda_2 = -1\)</span> are the eigenvalues of <span class="math inline">\(A\)</span>. We first find an eigenvector corresponding to <span class="math inline">\(\lambda_1\)</span>. Any non-zero solution <span class="math inline">\(\mathbf{v} = \left(\begin{smallmatrix}v_1\\v_2\end{smallmatrix}\right)\)</span> of the equation <span class="math inline">\(B_2 \mathbf{v} = \mathbf{0}\)</span> is such an eigenvector.
 For <span class="math inline">\(\lambda = \lambda_1 = 2\)</span>, we have
 <span class="math display">\[
 B_2 = \begin{pmatrix} 1 &amp; -1 \\ -2 &amp; 2 \end{pmatrix}.
@@ -550,10 +552,214 @@ For instance, taking <span class="math inline">\(\gamma = -1\)</span>, we find t
 \]</span></p></li>
 </ol>
 </div>
-<p>complex eigenvectors</p>
-<p>Also possible to begin with matrices and vectors with complex entries, but we won’t consider these here.</p>
-<p>not diagonalisable</p>
-<p>powers of matrices</p>
+<p>It also makes sense to consider vectors and matrices with complex number entries. These arise in applications such as analysis of electronic circuits and in quantum mechanics. We won’t consider such situations here, but we will now see that even if we start with vectors and matrices with real entries, complex number eigenvalues and eigenvectors with complex entries can still arise. We can immediately see that this could be possible, since the eigenvalues are calculated as roots of the characteristic polynomial and we know that real polynomials can have complex roots.</p>
+<div class="example">
+<p><span id="exm:complexeig" class="example"><strong>Example 10.7  (Complex Eigenvalues and Eigenvectors) </strong></span>Consider the matrix</p>
+<p><span class="math display">\[
+A=
+\begin{pmatrix}
+0&amp;-1\\
+1&amp;0
+\end{pmatrix}
+\]</span></p>
+<p>The matrix <span class="math inline">\(A\)</span> has the effect of rotating vectors in the plane anticlockwise by <span class="math inline">\(\pi/2\)</span> (it is matrix <span class="math inline">\(R_{\pi/2}\)</span> from example (exm:rotmat)), so we can see geometrically that it can’t have any real eigenvectors, since these would correspond to fixed directions in the plane that are scaled by an eigenvalue.</p>
+<p>The characteristic polynomial is</p>
+<p><span class="math display">\[p_A(\lambda)=\lambda^2+1\]</span></p>
+<p>which has solutions <span class="math inline">\(\lambda_1=i\)</span> and <span class="math inline">\(\lambda_2=-i\)</span>. We can also find the eigenvectors in the usual way by solving <span class="math inline">\((A-\lambda I)\mathbf{v}=0\)</span>. For <span class="math inline">\(\lambda_1\)</span>
+<span class="math display">\[
+(A-iI)=
+\begin{pmatrix}
+-i&amp;-1\\
+1&amp;-i
+\end{pmatrix}
+\]</span>
+and performing <span class="math inline">\(R_1\to iR_1\)</span>
+<span class="math display">\[
+\begin{pmatrix}
+1&amp;-i\\
+1&amp;-i
+\end{pmatrix}
+\]</span>
+we find that the corresponding eigenvectors are <span class="math inline">\(\alpha\left(\begin{smallmatrix}1\\-i\end{smallmatrix}\right)\)</span> and taking <span class="math inline">\(\alpha=1\)</span>,</p>
+<p><span class="math display">\[
+\mathbf{u}_1=
+\begin{pmatrix}
+1\\
+-i
+\end{pmatrix}
+\]</span></p>
+<p>Similarly, we find an eigenvector for <span class="math inline">\(\lambda_2\)</span>:
+<span class="math display">\[
+\mathbf{u}_2=
+\begin{pmatrix}
+1\\
+i
+\end{pmatrix}
+\]</span></p>
+<p>Let
+<span class="math display">\[
+P=\begin{pmatrix}
+1&amp;1\\
+-i&amp;i
+\end{pmatrix}
+\]</span>
+then
+<span class="math display">\[
+P^{-1}=
+\frac{1}{2i}
+\begin{pmatrix}
+i&amp;-1\\
+i&amp;1
+\end{pmatrix}
+=
+\frac{1}{2}
+\begin{pmatrix}
+1&amp;i\\
+1&amp;-i
+\end{pmatrix}
+\]</span>
+and letting
+<span class="math display">\[
+D=
+\begin{pmatrix}
+i&amp;0\\
+0&amp;-i
+\end{pmatrix}
+\]</span>
+we may write
+<span class="math display">\[
+A=PDP^{-1}.
+\]</span>
+Although <span class="math inline">\(P^{-1}\)</span>, <span class="math inline">\(D\)</span> and <span class="math inline">\(P\)</span> all contain complex numbers, their product leaves only real numbers and we get back to the real matrix <span class="math inline">\(A\)</span> (check that <span class="math inline">\(PDP^{-1}\)</span> does indeed equal <span class="math inline">\(A\)</span>).</p>
+</div>
+<p>Complex roots of real polynomials always come in complex conjugate pairs and so we will have complex conjugate eigenvalue pairs and corresponding complex conjugate eigenvector pairs. To see this, if <span class="math inline">\(p_B(\lambda)=\lambda^n+a_{n-1}\lambda^{n-1}+\dotsb+a_1\lambda+a_0\)</span> is a (real) characteristic polynomial of a real <span class="math inline">\(n\times n\)</span> matrix <span class="math inline">\(B\)</span> and <span class="math inline">\(\lambda\)</span> is a complex root, then taking the complex conjugate
+<span class="math display">\[\begin{align*}
+0=p_B(\lambda)=\overline{p_B(\lambda)}&amp;=\overline{\lambda^n}+\overline{a_{n-1}\lambda^{n-1}}+\dotsb+\overline{a_1\lambda}+\overline{a_0}\\
+&amp;=\overline{\lambda}^n+a_{n-1}\overline{\lambda}^{n-1}+\dotsb+a_1\overline{\lambda}+{a_0}
+\end{align*}\]</span>
+(using that the coefficients <span class="math inline">\(a_j\)</span> are real) shows that <span class="math inline">\(\overline{\lambda}\)</span> is also a root. Let <span class="math inline">\(\mathbf{u}\)</span> be an eigenvector corresponding to <span class="math inline">\(\lambda\)</span>. Then,
+<span class="math display">\[
+B\overline{\mathbf{u}}=\overline{B}\overline{\mathbf{u}}=\overline{B\mathbf{u}}=\overline{\lambda \mathbf{u}}=\overline{\lambda}\overline{\mathbf{u}}
+\]</span>
+(using that <span class="math inline">\(B\)</span> is real in the first step) i.e. the vector <span class="math inline">\(\overline{\mathbf{u}}\)</span> is an eigenvector with eigenvalue <span class="math inline">\(\overline{\lambda}\)</span>.</p>
+<p>As we mentioned earlier, not all matrices are diagonalisable. Here is an example.</p>
+<div class="example">
+<p><span id="exm:nondiag" class="example"><strong>Example 10.8  (A non-diagonalisable matrix) </strong></span>Consider the matrix
+<span class="math display">\[
+A=\begin{pmatrix}
+3&amp;1\\
+0&amp;3
+\end{pmatrix}.
+\]</span>
+The characteristic polynomial of <span class="math inline">\(A\)</span> is
+<span class="math display">\[
+p_A(x)=\det(\lambda I-A)=
+\begin{vmatrix}
+\lambda-3&amp;-1\\
+0&amp;\lambda-3
+\end{vmatrix}
+=(\lambda-3)^2
+\]</span>
+so the only eigenvalue of <span class="math inline">\(A\)</span> is <span class="math inline">\(3\)</span>. Now
+<span class="math display">\[
+A-3I=
+\begin{pmatrix}
+0&amp;1\\
+0&amp;0
+\end{pmatrix}
+\]</span>
+so the eigenvectors are
+<span class="math display">\[
+\alpha
+\begin{pmatrix}
+1\\
+0
+\end{pmatrix}
+\]</span>
+So we do not have 2 linearly independent eigenvectors since all eigenvectors are multiples of <span class="math inline">\(\mathbf{u}=\left(\begin{smallmatrix}1\\0\end{smallmatrix}\right)\)</span>. Therefore, we cannot diagonalise this matrix.</p>
+</div>
+<p>We briefly mention that there are other useful matrix decompositions to diagonalisation that <em>always</em> work. The generalisation of diagonalisation is the <em>Jordan Normal Form</em>, which is an important theoretical tool. Another key technique is the <em>Singular Value Decomposition</em> which is important in numerical applications of matrices and in data science (see <em>Principal Component Analysis</em>).</p>
+</div>
+<div id="powers-of-diagonalisable-matrices" class="section level2 hasAnchor" number="10.4">
+<h2><span class="header-section-number">10.4</span> Powers of diagonalisable matrices<a href="eigenvalues-and-eigenvectors.html#powers-of-diagonalisable-matrices" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>One of the most important applications of diagaonalisation is in computing powers of matrices. If a matrix <span class="math inline">\(A\)</span> is diagonalisable, we can write it as</p>
+<p><span class="math display">\[A=PDP^{-1}\]</span></p>
+<p>Now if we want to cmopute <span class="math inline">\(A^2\)</span>, we have
+<span class="math display">\[A^2=PDP^{-1}PDP^{-1}=PD^2P^{-1}\]</span>
+where we used <span class="math inline">\(P^{-1}P=I\)</span>. Now, more generally
+<span class="math display">\[
+A^n=PDP^{-1}PDP^{-1}\dotsb PDP^{-1}=PD^nP^{-1}
+\]</span>
+for any natural number <span class="math inline">\(n\)</span>. By the rules of matrix multiplication, the <span class="math inline">\(n\)</span>-th power of the diagonal matrix
+<span class="math display">\[
+D=
+\begin{pmatrix}
+\lambda_1&amp;&amp;0\\
+&amp;\ddots&amp;\\
+0&amp;&amp;\lambda_m
+\end{pmatrix}
+\]</span>
+is simply
+<span class="math display">\[
+D^n
+=
+\begin{pmatrix}
+\lambda_1^n&amp;&amp;0\\
+&amp;\ddots&amp;\\
+0&amp;&amp;\lambda_m^n
+\end{pmatrix}.
+\]</span>
+This gives us an efficient way to compute <span class="math inline">\(A^n\)</span>.</p>
+<div class="example">
+<p><span id="exm:diagmatpower" class="example"><strong>Example 10.9  (Powers of a diagonalisable matrix) </strong></span>Consider the matrix
+<span class="math display">\[
+A=
+\begin{pmatrix}
+8&amp;-6\\
+3&amp;-1
+\end{pmatrix}.
+\]</span></p>
+<p>We find</p>
+<p><span class="math display">\[A=PDP^{-1}=
+\begin{pmatrix}
+1&amp;2\\
+1&amp;1
+\end{pmatrix}
+\begin{pmatrix}
+2&amp;0\\
+0&amp;5
+\end{pmatrix}
+\begin{pmatrix}
+-1&amp; 2\\
+1&amp; -1
+\end{pmatrix}.\]</span></p>
+<p>Now using</p>
+<p><span class="math display">\[
+A^n=PD^nP^{-1}
+\]</span>
+we have
+<span class="math display">\[
+A^n=
+\begin{pmatrix}
+1&amp;2\\
+1&amp;1
+\end{pmatrix}
+\begin{pmatrix}
+2^n&amp;0\\
+0&amp;5^n
+\end{pmatrix}
+\begin{pmatrix}
+-1&amp; 2\\
+1&amp; -1
+\end{pmatrix}
+=
+\begin{pmatrix}
+-2^n+2\times 5^n&amp; 2^{n+1}-2\times 5^n\\
+-2^{n}+5^n&amp; 2^{n+1}-5^n
+\end{pmatrix}.
+\]</span></p>
+<p>We now have a nice expression that works for any <span class="math inline">\(n\)</span> and this is much easier than trying to calculate <span class="math inline">\(A^n\)</span> directly.</p>
+</div>
 
 </div>
 </div>
