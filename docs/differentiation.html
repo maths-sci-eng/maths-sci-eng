@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 11 Differentiation | Mathematics for Scientists and Engineers</title>
+  <meta name="description" content="Mathematics Lecture Notes for UoE Penryn Science and Engineering Disciplines." />
+  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 11 Differentiation | Mathematics for Scientists and Engineers" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Mathematics Lecture Notes for UoE Penryn Science and Engineering Disciplines." />
+  <meta name="github-repo" content="maths-sci-eng/maths-sci-eng.github.io" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 11 Differentiation | Mathematics for Scientists and Engineers" />
+  
+  <meta name="twitter:description" content="Mathematics Lecture Notes for UoE Penryn Science and Engineering Disciplines." />
+  
+
+<meta name="author" content="Dr Mark Callaway" />
+
+
+<meta name="date" content="2022-10-23" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="eigenvalues-and-eigenvectors.html"/>
+<link rel="next" href="applications-of-differentiation.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Mathematics for Scientists and Engineers</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="1" data-path="foundations.html"><a href="foundations.html"><i class="fa fa-check"></i><b>1</b> Foundations</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="foundations.html"><a href="foundations.html#numbers"><i class="fa fa-check"></i><b>1.1</b> Numbers</a></li>
+<li class="chapter" data-level="1.2" data-path="foundations.html"><a href="foundations.html#algebra"><i class="fa fa-check"></i><b>1.2</b> Algebra</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="foundations.html"><a href="foundations.html#exponents"><i class="fa fa-check"></i><b>1.2.1</b> Rules of Exponents</a></li>
+<li class="chapter" data-level="1.2.2" data-path="foundations.html"><a href="foundations.html#brackets"><i class="fa fa-check"></i><b>1.2.2</b> Brackets</a></li>
+<li class="chapter" data-level="1.2.3" data-path="foundations.html"><a href="foundations.html#simplifiying-expressions"><i class="fa fa-check"></i><b>1.2.3</b> Simplifiying Expressions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="equations-and-inequalities.html"><a href="equations-and-inequalities.html"><i class="fa fa-check"></i><b>2</b> Equations and Inequalities</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="equations-and-inequalities.html"><a href="equations-and-inequalities.html#equations"><i class="fa fa-check"></i><b>2.1</b> Equations</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="equations-and-inequalities.html"><a href="equations-and-inequalities.html#formulas"><i class="fa fa-check"></i><b>2.1.1</b> Formulas</a></li>
+<li class="chapter" data-level="2.1.2" data-path="equations-and-inequalities.html"><a href="equations-and-inequalities.html#conditional-equations"><i class="fa fa-check"></i><b>2.1.2</b> Conditional equations</a></li>
+<li class="chapter" data-level="2.1.3" data-path="equations-and-inequalities.html"><a href="equations-and-inequalities.html#quad-eqs"><i class="fa fa-check"></i><b>2.1.3</b> Quadratic equations</a></li>
+<li class="chapter" data-level="2.1.4" data-path="equations-and-inequalities.html"><a href="equations-and-inequalities.html#simultaneous-equations"><i class="fa fa-check"></i><b>2.1.4</b> Simultaneous equations</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="equations-and-inequalities.html"><a href="equations-and-inequalities.html#inequalities"><i class="fa fa-check"></i><b>2.2</b> Inequalities</a></li>
+<li class="chapter" data-level="2.3" data-path="equations-and-inequalities.html"><a href="equations-and-inequalities.html#common-mistakes"><i class="fa fa-check"></i><b>2.3</b> Common mistakes!</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="functions-and-graphs.html"><a href="functions-and-graphs.html"><i class="fa fa-check"></i><b>3</b> Functions and Graphs</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="functions-and-graphs.html"><a href="functions-and-graphs.html#lines"><i class="fa fa-check"></i><b>3.1</b> Lines</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="functions-and-graphs.html"><a href="functions-and-graphs.html#parallel-lines"><i class="fa fa-check"></i><b>3.1.1</b> Parallel lines</a></li>
+<li class="chapter" data-level="3.1.2" data-path="functions-and-graphs.html"><a href="functions-and-graphs.html#perpendicular-lines"><i class="fa fa-check"></i><b>3.1.2</b> Perpendicular lines</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="functions-and-graphs.html"><a href="functions-and-graphs.html#polynomials"><i class="fa fa-check"></i><b>3.2</b> Polynomials</a></li>
+<li class="chapter" data-level="3.3" data-path="functions-and-graphs.html"><a href="functions-and-graphs.html#rational-functions"><i class="fa fa-check"></i><b>3.3</b> Rational functions</a></li>
+<li class="chapter" data-level="3.4" data-path="functions-and-graphs.html"><a href="functions-and-graphs.html#root-functions"><i class="fa fa-check"></i><b>3.4</b> Root functions</a></li>
+<li class="chapter" data-level="3.5" data-path="functions-and-graphs.html"><a href="functions-and-graphs.html#trigonometric-functions"><i class="fa fa-check"></i><b>3.5</b> Trigonometric functions</a></li>
+<li class="chapter" data-level="3.6" data-path="functions-and-graphs.html"><a href="functions-and-graphs.html#exponentials-and-logarithms"><i class="fa fa-check"></i><b>3.6</b> Exponentials and logarithms</a>
+<ul>
+<li class="chapter" data-level="3.6.1" data-path="functions-and-graphs.html"><a href="functions-and-graphs.html#logarthmic-plots"><i class="fa fa-check"></i><b>3.6.1</b> Logarthmic plots</a></li>
+</ul></li>
+<li class="chapter" data-level="3.7" data-path="functions-and-graphs.html"><a href="functions-and-graphs.html#hyperbolic-functions"><i class="fa fa-check"></i><b>3.7</b> Hyperbolic functions</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="trigonometry.html"><a href="trigonometry.html"><i class="fa fa-check"></i><b>4</b> Trigonometry</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="trigonometry.html"><a href="trigonometry.html#pythagoras"><i class="fa fa-check"></i><b>4.1</b> Pythagoras</a></li>
+<li class="chapter" data-level="4.2" data-path="trigonometry.html"><a href="trigonometry.html#degrees-and-radians"><i class="fa fa-check"></i><b>4.2</b> Degrees and radians</a></li>
+<li class="chapter" data-level="4.3" data-path="trigonometry.html"><a href="trigonometry.html#trigonometric-ratios"><i class="fa fa-check"></i><b>4.3</b> Trigonometric ratios</a></li>
+<li class="chapter" data-level="4.4" data-path="trigonometry.html"><a href="trigonometry.html#sine-and-cosine-rules"><i class="fa fa-check"></i><b>4.4</b> Sine and cosine rules</a></li>
+<li class="chapter" data-level="4.5" data-path="trigonometry.html"><a href="trigonometry.html#trigonometric-waveforms"><i class="fa fa-check"></i><b>4.5</b> Trigonometric waveforms</a></li>
+<li class="chapter" data-level="4.6" data-path="trigonometry.html"><a href="trigonometry.html#trigonometric-identities"><i class="fa fa-check"></i><b>4.6</b> Trigonometric identities</a>
+<ul>
+<li class="chapter" data-level="4.6.1" data-path="trigonometry.html"><a href="trigonometry.html#pythagorean-identities"><i class="fa fa-check"></i><b>4.6.1</b> Pythagorean identities</a></li>
+<li class="chapter" data-level="4.6.2" data-path="trigonometry.html"><a href="trigonometry.html#compound-angle-formulae"><i class="fa fa-check"></i><b>4.6.2</b> Compound angle formulae</a></li>
+<li class="chapter" data-level="4.6.3" data-path="trigonometry.html"><a href="trigonometry.html#double-angle-formulae"><i class="fa fa-check"></i><b>4.6.3</b> Double angle formulae</a></li>
+<li class="chapter" data-level="4.6.4" data-path="trigonometry.html"><a href="trigonometry.html#product-to-sum-formulae"><i class="fa fa-check"></i><b>4.6.4</b> Product to sum formulae</a></li>
+<li class="chapter" data-level="4.6.5" data-path="trigonometry.html"><a href="trigonometry.html#sum-to-product-formulae"><i class="fa fa-check"></i><b>4.6.5</b> Sum to product formulae</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="complex.html"><a href="complex.html"><i class="fa fa-check"></i><b>5</b> Complex Numbers</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="complex.html"><a href="complex.html#i-and-complex-numbers"><i class="fa fa-check"></i><b>5.1</b> <span class="math inline">\(i\)</span> and complex numbers</a></li>
+<li class="chapter" data-level="5.2" data-path="complex.html"><a href="complex.html#complex-arithmetic"><i class="fa fa-check"></i><b>5.2</b> Complex arithmetic</a></li>
+<li class="chapter" data-level="5.3" data-path="complex.html"><a href="complex.html#the-argument-polar-and-exponential-form-for-complex-numbers"><i class="fa fa-check"></i><b>5.3</b> The argument, polar and exponential form for complex numbers</a></li>
+<li class="chapter" data-level="5.4" data-path="complex.html"><a href="complex.html#roots-of-complex-numbers"><i class="fa fa-check"></i><b>5.4</b> Roots of complex numbers</a></li>
+<li class="chapter" data-level="5.5" data-path="complex.html"><a href="complex.html#eitheta-and-trigonometric-identities"><i class="fa fa-check"></i><b>5.5</b> <span class="math inline">\(e^{i\theta}\)</span> and trigonometric identities</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="vectors.html"><a href="vectors.html"><i class="fa fa-check"></i><b>6</b> Vectors</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="vectors.html"><a href="vectors.html#vector-addition"><i class="fa fa-check"></i><b>6.1</b> Vector addition</a></li>
+<li class="chapter" data-level="6.2" data-path="vectors.html"><a href="vectors.html#scalar-multiplication"><i class="fa fa-check"></i><b>6.2</b> Scalar multiplication</a></li>
+<li class="chapter" data-level="6.3" data-path="vectors.html"><a href="vectors.html#vectors-in-cartesian-coordinates"><i class="fa fa-check"></i><b>6.3</b> Vectors in Cartesian coordinates</a></li>
+<li class="chapter" data-level="6.4" data-path="vectors.html"><a href="vectors.html#vector-products"><i class="fa fa-check"></i><b>6.4</b> Vector products</a>
+<ul>
+<li class="chapter" data-level="6.4.1" data-path="vectors.html"><a href="vectors.html#dot-product"><i class="fa fa-check"></i><b>6.4.1</b> Dot product</a></li>
+<li class="chapter" data-level="6.4.2" data-path="vectors.html"><a href="vectors.html#cross-product"><i class="fa fa-check"></i><b>6.4.2</b> Cross product</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="systems-of-linear-equations.html"><a href="systems-of-linear-equations.html"><i class="fa fa-check"></i><b>7</b> Systems of Linear Equations</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="systems-of-linear-equations.html"><a href="systems-of-linear-equations.html#lines-and-planes"><i class="fa fa-check"></i><b>7.1</b> Lines and planes</a></li>
+<li class="chapter" data-level="7.2" data-path="systems-of-linear-equations.html"><a href="systems-of-linear-equations.html#solving-linear-systems---gaussian-elimination"><i class="fa fa-check"></i><b>7.2</b> Solving linear systems - Gaussian elimination</a></li>
+<li class="chapter" data-level="7.3" data-path="systems-of-linear-equations.html"><a href="systems-of-linear-equations.html#echelon-form"><i class="fa fa-check"></i><b>7.3</b> Echelon Form</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="matrices.html"><a href="matrices.html"><i class="fa fa-check"></i><b>8</b> Matrices</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="matrices.html"><a href="matrices.html#linearrevisited"><i class="fa fa-check"></i><b>8.1</b> Solving linear systems revisited</a></li>
+<li class="chapter" data-level="8.2" data-path="matrices.html"><a href="matrices.html#determinants"><i class="fa fa-check"></i><b>8.2</b> Determinants</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="linear-transformations.html"><a href="linear-transformations.html"><i class="fa fa-check"></i><b>9</b> Linear Transformations</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="linear-transformations.html"><a href="linear-transformations.html#matrix-algebra"><i class="fa fa-check"></i><b>9.1</b> Matrix Algebra</a>
+<ul>
+<li class="chapter" data-level="9.1.1" data-path="linear-transformations.html"><a href="linear-transformations.html#addition-and-subtraction"><i class="fa fa-check"></i><b>9.1.1</b> Addition and Subtraction</a></li>
+<li class="chapter" data-level="9.1.2" data-path="linear-transformations.html"><a href="linear-transformations.html#multiplication-by-a-scalar"><i class="fa fa-check"></i><b>9.1.2</b> Multiplication by a scalar</a></li>
+<li class="chapter" data-level="9.1.3" data-path="linear-transformations.html"><a href="linear-transformations.html#matrix-multiplication"><i class="fa fa-check"></i><b>9.1.3</b> Matrix multiplication</a></li>
+<li class="chapter" data-level="9.1.4" data-path="linear-transformations.html"><a href="linear-transformations.html#functional-interpretations"><i class="fa fa-check"></i><b>9.1.4</b> Functional interpretations</a></li>
+<li class="chapter" data-level="9.1.5" data-path="linear-transformations.html"><a href="linear-transformations.html#two-special-matrices"><i class="fa fa-check"></i><b>9.1.5</b> Two special matrices</a></li>
+<li class="chapter" data-level="9.1.6" data-path="linear-transformations.html"><a href="linear-transformations.html#some-further-properties"><i class="fa fa-check"></i><b>9.1.6</b> Some further properties</a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="linear-transformations.html"><a href="linear-transformations.html#matrix-inverse"><i class="fa fa-check"></i><b>9.2</b> Matrix inverse</a>
+<ul>
+<li class="chapter" data-level="9.2.1" data-path="linear-transformations.html"><a href="linear-transformations.html#finding-the-inverse-of-a-2times-2-matrix"><i class="fa fa-check"></i><b>9.2.1</b> Finding the inverse of a <span class="math inline">\(2\times 2\)</span> matrix</a></li>
+<li class="chapter" data-level="9.2.2" data-path="linear-transformations.html"><a href="linear-transformations.html#finding-the-inverse-of-an-ntimes-n-matrix"><i class="fa fa-check"></i><b>9.2.2</b> Finding the inverse of an <span class="math inline">\(n\times n\)</span> matrix</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="eigenvalues-and-eigenvectors.html"><a href="eigenvalues-and-eigenvectors.html"><i class="fa fa-check"></i><b>10</b> Eigenvalues and Eigenvectors</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="eigenvalues-and-eigenvectors.html"><a href="eigenvalues-and-eigenvectors.html#matrix-diagonalisation"><i class="fa fa-check"></i><b>10.1</b> Matrix Diagonalisation</a></li>
+<li class="chapter" data-level="10.2" data-path="eigenvalues-and-eigenvectors.html"><a href="eigenvalues-and-eigenvectors.html#finding-eigenvalues"><i class="fa fa-check"></i><b>10.2</b> Finding Eigenvalues</a></li>
+<li class="chapter" data-level="10.3" data-path="eigenvalues-and-eigenvectors.html"><a href="eigenvalues-and-eigenvectors.html#finding-eigenvectors"><i class="fa fa-check"></i><b>10.3</b> Finding Eigenvectors</a></li>
+<li class="chapter" data-level="10.4" data-path="eigenvalues-and-eigenvectors.html"><a href="eigenvalues-and-eigenvectors.html#powers-of-diagonalisable-matrices"><i class="fa fa-check"></i><b>10.4</b> Powers of diagonalisable matrices</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="differentiation.html"><a href="differentiation.html"><i class="fa fa-check"></i><b>11</b> Differentiation</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="differentiation.html"><a href="differentiation.html#concept"><i class="fa fa-check"></i><b>11.1</b> Concept</a></li>
+<li class="chapter" data-level="11.2" data-path="differentiation.html"><a href="differentiation.html#standard-derivatives"><i class="fa fa-check"></i><b>11.2</b> Standard derivatives</a></li>
+<li class="chapter" data-level="11.3" data-path="differentiation.html"><a href="differentiation.html#rules"><i class="fa fa-check"></i><b>11.3</b> Rules</a></li>
+<li class="chapter" data-level="11.4" data-path="differentiation.html"><a href="differentiation.html#higher-order-derivatives"><i class="fa fa-check"></i><b>11.4</b> Higher order derivatives</a></li>
+<li class="chapter" data-level="11.5" data-path="differentiation.html"><a href="differentiation.html#further-techniques"><i class="fa fa-check"></i><b>11.5</b> Further Techniques</a>
+<ul>
+<li class="chapter" data-level="11.5.1" data-path="differentiation.html"><a href="differentiation.html#implicit-differentiation"><i class="fa fa-check"></i><b>11.5.1</b> Implicit Differentiation</a></li>
+<li class="chapter" data-level="11.5.2" data-path="differentiation.html"><a href="differentiation.html#logarithmic-differentiation"><i class="fa fa-check"></i><b>11.5.2</b> Logarithmic Differentiation</a></li>
+<li class="chapter" data-level="11.5.3" data-path="differentiation.html"><a href="differentiation.html#parametric-differentiation"><i class="fa fa-check"></i><b>11.5.3</b> Parametric Differentiation</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="applications-of-differentiation.html"><a href="applications-of-differentiation.html"><i class="fa fa-check"></i><b>12</b> Applications of Differentiation</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="applications-of-differentiation.html"><a href="applications-of-differentiation.html#maxima-and-minima"><i class="fa fa-check"></i><b>12.1</b> Maxima and Minima</a></li>
+<li class="chapter" data-level="12.2" data-path="applications-of-differentiation.html"><a href="applications-of-differentiation.html#points-of-inflection"><i class="fa fa-check"></i><b>12.2</b> Points of Inflection</a></li>
+<li class="chapter" data-level="12.3" data-path="applications-of-differentiation.html"><a href="applications-of-differentiation.html#higher-order-derivative-test"><i class="fa fa-check"></i><b>12.3</b> Higher Order Derivative Test</a></li>
+<li class="chapter" data-level="12.4" data-path="applications-of-differentiation.html"><a href="applications-of-differentiation.html#graph-sketching"><i class="fa fa-check"></i><b>12.4</b> Graph Sketching</a></li>
+<li class="chapter" data-level="12.5" data-path="applications-of-differentiation.html"><a href="applications-of-differentiation.html#optimisation"><i class="fa fa-check"></i><b>12.5</b> Optimisation</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="notation.html"><a href="notation.html"><i class="fa fa-check"></i>Notation</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="chapter" data-level="" data-path="exercise-set-1.html"><a href="exercise-set-1.html"><i class="fa fa-check"></i>Exercise Set 1</a></li>
+<li class="chapter" data-level="" data-path="exercise-set-2.html"><a href="exercise-set-2.html"><i class="fa fa-check"></i>Exercise Set 2</a></li>
+<li class="chapter" data-level="" data-path="exercise-set-3.html"><a href="exercise-set-3.html"><i class="fa fa-check"></i>Exercise Set 3</a></li>
+<li class="chapter" data-level="" data-path="exercise-set-4.html"><a href="exercise-set-4.html"><i class="fa fa-check"></i>Exercise Set 4</a></li>
+<li class="chapter" data-level="" data-path="exercise-set-5.html"><a href="exercise-set-5.html"><i class="fa fa-check"></i>Exercise Set 5</a></li>
+<li class="chapter" data-level="" data-path="exercise-set-6.html"><a href="exercise-set-6.html"><i class="fa fa-check"></i>Exercise Set 6</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Mathematics for Scientists and Engineers</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="differentiation" class="section level1 hasAnchor" number="11">
+<h1><span class="header-section-number">Chapter 11</span> Differentiation<a href="differentiation.html#differentiation" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="concept" class="section level2 hasAnchor" number="11.1">
+<h2><span class="header-section-number">11.1</span> Concept<a href="differentiation.html#concept" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Differentiation is the mathematical tool to answer questions about <em>rates of change</em>.</p>
+<p>The derivative of a real function <span class="math inline">\(f\)</span> at a point <span class="math inline">\((x,f(x))\)</span> is the slope of the tangent line at that point.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:tangentline"></span>
+<img src="figures/vector.png" alt="The tangent line to a graph."  />
+<p class="caption">
+Figure 11.1: The tangent line to a graph.
+</p>
+</div>
+<p>To find this gradient, we start by approximating the tangent line by taking a secant line through the point <span class="math inline">\((x,f(x))\)</span> and a point <span class="math inline">\((x+h,f(x+h))\)</span> with <span class="math inline">\(h\)</span> a small number.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:secantline"></span>
+<img src="figures/vector.png" alt="A secant line through $(x,f(x))$ and a point $(x+h,f(x+h))$."  />
+<p class="caption">
+Figure 11.2: A secant line through <span class="math inline">\((x,f(x))\)</span> and a point <span class="math inline">\((x+h,f(x+h))\)</span>.
+</p>
+</div>
+<p>Now if we take <span class="math inline">\(h\to 0\)</span>, that is <span class="math inline">\(h\)</span> becomes vanishingly small, the second point approaches <span class="math inline">\((x,f(x))\)</span>. Then the gradient of the secant line converges to the gradient of the tangent line.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:secantconverge"></span>
+<img src="figures/vector.png" alt="Convergence to the tanget line."  />
+<p class="caption">
+Figure 11.3: Convergence to the tanget line.
+</p>
+</div>
+<p>The gradient of the secant line is:
+<span class="math display">\[
+\frac{\Delta y}{\Delta x}=\frac{f(x+h)-f(x)}{h}.
+\]</span></p>
+<p>The mathematical term for taking <span class="math inline">\(h\to 0\)</span> is taking the <em>limit</em> as <span class="math inline">\(h\)</span> tends to <span class="math inline">\(0\)</span>, written</p>
+<p><span class="math display">\[
+\lim\limits_{h\to 0}\frac{f(x+h)-f(x)}{h}.
+\]</span></p>
+<p>The idea here is to consider what happens to this mathematical expression as <span class="math inline">\(h\)</span> becomes infinitesimally small. We call this gradient of the tangent line the <em>derivative of <span class="math inline">\(f\)</span> at <span class="math inline">\(x\)</span></em>. We use the following notations for the derivative:</p>
+<p><span class="math display">\[f&#39;(x)\quad\text{ or }\quad \frac{df}{dx} \]</span></p>
+<p>Here we present some examples of finding derivatives from first principles, i.e. by using the limit definition of the derivative.</p>
+<div class="example">
+<p><span id="exm:deriv1stprinc" class="example"><strong>Example 11.1  (Derivatives from first principles) </strong></span>The first two examples are applied to straight lines, whose tangents are the same as the lines themselves, hence we should get the same gradient from the derivative.</p>
+<ol style="list-style-type: decimal">
+<li><p>Consider a constant function <span class="math inline">\(f(x)=c\)</span> (the graph of which is a straight horizontal line). We know that the gradient of this line is zero. Let’s try applying the definition.
+<span class="math display">\[\begin{align*}
+f&#39;(x)&amp;=\lim\limits_{h\to 0}\frac{f(x+h)-f(x)}{h}\\
+&amp;=\lim\limits_{h\to 0}\frac{c-c}{h}\quad\text{applying the definition of $f$}\\
+&amp;=\lim\limits_{h\to 0}\frac{0}{h}\\
+&amp;=\lim\limits_{h\to 0}0\quad\text{note this expression is now independent of the value of $h$, hence...}\\
+&amp;=0
+\end{align*}\]</span>
+in agreement with our geometical understanding.</p></li>
+<li><p>Consider a straight line of the form <span class="math inline">\(f(x)=mx+c\)</span>. Using the definition of the derivative
+<span class="math display">\[\begin{align*}
+f&#39;(x)&amp;=\lim\limits_{h\to 0}\frac{f(x+h)-f(x)}{h}\\
+&amp;=\lim\limits_{h\to 0}\frac{[m(x+h)+c]-[mx+c]}{h}\quad\text{applying the definition of $f$}\\
+&amp;=\lim\limits_{h\to 0}\frac{mh}{h}\\
+&amp;=\lim\limits_{h\to 0}m\quad\text{note this expression is now independent of the value of $h$, hence...}\\
+&amp;=m.
+\end{align*}\]</span>
+again in agreement with our geometical understanding.</p></li>
+<li><p>Consider <span class="math inline">\(f(x)=x^2\)</span>.
+<span class="math display">\[\begin{align*}
+f&#39;(x)&amp;=\lim\limits_{h\to 0}\frac{f(x+h)-f(x)}{h}\\
+&amp;=\lim\limits_{h\to 0}\frac{(x+h)^2-x^2}{h}\quad\text{applying the definition of $f$}\\
+&amp;=\lim\limits_{h\to 0}\frac{x^2+2xh+h^2-x^2}{h}\quad\text{expanding brackets}\\
+&amp;=\lim\limits_{h\to 0}2x+h\quad\text{by simplifying}\\
+&amp;=2x\quad\text{since $h$ becomes vanishingly small.}
+\end{align*}\]</span></p></li>
+</ol>
+</div>
+<p>It would be hard work if we always had to apply the definition to find the derivatives of functions. Thankfully, others have already done the hard work and we have some rules for derivatives of standard functions, together with some rules for derivatives of combinations of functions (including sums, products and compositions). This allows us to compute the derivatives of a wide variety of expressions we might encounter.</p>
+</div>
+<div id="standard-derivatives" class="section level2 hasAnchor" number="11.2">
+<h2><span class="header-section-number">11.2</span> Standard derivatives<a href="differentiation.html#standard-derivatives" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><span class="math display">\[\begin{align*}
+&amp;\frac{d}{dx}x^a=ax^{a-1}\qquad \text{for any $a\in\mathbb{R}$}\\
+&amp;\\
+&amp;\frac{d}{dx}\ln(x)=\frac{1}{x}\\
+&amp;\frac{d}{dx}e^{x}=e^{x}\\
+&amp;\\
+&amp;\frac{d}{dx}\sin(x)=\cos(x)\\
+&amp;\frac{d}{dx}\cos(x)=-\sin(x)\\
+&amp;\frac{d}{dx}\tan(x)=\sec^2(x)\\
+&amp;\\
+&amp;\frac{d}{dx}\sinh(x)=\cosh(x)\\
+&amp;\frac{d}{dx}\cosh(x)=\sinh(x)
+\end{align*}\]</span></p>
+</div>
+<div id="rules" class="section level2 hasAnchor" number="11.3">
+<h2><span class="header-section-number">11.3</span> Rules<a href="differentiation.html#rules" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>Sum Rule</strong></p>
+<p><span class="math display">\[
+(f+g)&#39;(x)=f&#39;(x)+g&#39;(x)
+\]</span></p>
+<div class="example">
+<p><span id="exm:sumrule" class="example"><strong>Example 11.2  </strong></span>Find the derivative of
+<span class="math display">\[h(x)=x^3+\sin(x).\]</span>
+Let <span class="math inline">\(f(x)=x^3\)</span>, <span class="math inline">\(g(x)=\sin(x)\)</span>. Then
+<span class="math display">\[h(x)=(f+g)(x)=x^3+\sin(x)\]</span>
+and
+<span class="math display">\[h&#39;(x)=(f+g)&#39;(x)=f&#39;(x)+g&#39;(x)=3x^2+\cos(x).\]</span></p>
+</div>
+<p><strong>Product Rule</strong></p>
+<p><span class="math display">\[
+(f\cdot g)&#39;(x)=f&#39;(x)\cdot g(x)+f(x)\cdot g&#39;(x)
+\]</span></p>
+<div class="example">
+<p><span id="exm:prodrule" class="example"><strong>Example 11.3  </strong></span>Find the derivative of
+<span class="math display">\[h(x)=x^3\sin(x)\]</span>
+Let <span class="math inline">\(f(x)=x^3\)</span>, <span class="math inline">\(g(x)=\sin(x)\)</span>. Then
+<span class="math display">\[h(x)=(f\cdot g)(x)=x^3\sin(x)\]</span>
+and
+<span class="math display">\[h&#39;(x)=(f\cdot g)&#39;(x)=f&#39;(x)g(x)+f(x)g&#39;(x)=3x^2\sin(x)+x^3\cos(x).\]</span></p>
+</div>
+<p>In particular (exercise), for any constant <span class="math inline">\(a\)</span> we have: <span class="math inline">\((af(x))&#39;=af&#39;(x)\)</span>.</p>
+<p><strong>Quotient Rule</strong></p>
+<p><span class="math display">\[
+\left(\dfrac{f}{g}\right)&#39;(x)=\frac{g(x)\cdot f&#39;(x)-f(x)\cdot g&#39;(x)}{[g(x)]^2}
+\]</span></p>
+<div class="example">
+<p><span id="exm:quorule" class="example"><strong>Example 11.4  </strong></span>Find the derivative of
+<span class="math display">\[h(x)=\frac{x^3}{\sin(x)}.\]</span>
+Let <span class="math inline">\(f(x)=x^3\)</span>, <span class="math inline">\(g(x)=\sin(x)\)</span>. Then
+<span class="math display">\[h(x)=(\frac{f}{g})(x)=\frac{x^3}{\sin(x)}\]</span>
+and
+<span class="math display">\[h&#39;(x)=(\frac{f}{g})&#39;(x)=\frac{g(x)\cdot f&#39;(x)-f(x)\cdot g&#39;(x)}{[g(x)]^2}=\frac{3x^2\sin(x)-x^3\cos(x)}{\sin^2(x)}.\]</span></p>
+</div>
+<p><strong>Chain Rule</strong></p>
+<p><span class="math display">\[
+\left(f\circ g\right)&#39;(x)=f&#39;(g(x))\cdot g&#39;(x)
+\]</span></p>
+<p>(where <span class="math inline">\(\left(f\circ g\right)(x)=f(g(x))\)</span> denotes function composition).</p>
+<div class="example">
+<p><span id="exm:chainrule" class="example"><strong>Example 11.5  </strong></span>Find the derivative of
+<span class="math display">\[h(x)=\sin(x^3)\]</span>
+Let <span class="math inline">\(f(x)=\sin(x)\)</span>, <span class="math inline">\(g(x)=x^3\)</span>. Then
+<span class="math display">\[h(x)=(f\circ g)(x)=\sin(x^3)\]</span>
+and
+<span class="math display">\[h&#39;(x)=(f\circ g)&#39;(x)=f&#39;(g(x))\cdot g&#39;(x)=\cos(x^3)(3x^2)=3x^2\cos(x^3).\]</span></p>
+</div>
+<p>The key to using these rules is in splitting your function <span class="math inline">\(h(x)\)</span> into the right combination of two or more simpler functions (<span class="math inline">\(f(x)\)</span> and <span class="math inline">\(g(x)\)</span> in the above examples) to make it easy to apply the rules.</p>
+</div>
+<div id="higher-order-derivatives" class="section level2 hasAnchor" number="11.4">
+<h2><span class="header-section-number">11.4</span> Higher order derivatives<a href="differentiation.html#higher-order-derivatives" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The derivative of a function <span class="math inline">\(f\)</span> is also a function, which we denote <span class="math inline">\(f&#39;\)</span>. We can also take the derivative of the function <span class="math inline">\(f&#39;\)</span>, yielding the function <span class="math inline">\((f&#39;)&#39;\)</span>, which is usually written as <span class="math inline">\(f&#39;&#39;\)</span>, and is called the <em>second derivative of <span class="math inline">\(f\)</span></em>. For example, with <span class="math inline">\(f(x)=x^3\)</span> we have <span class="math inline">\(f&#39;(x)=3x^2\)</span> and <span class="math inline">\(f&#39;&#39;(x)=6x\)</span>.</p>
+<p>There is no reason to stop at the second derivative, and we can define <span class="math inline">\(f&#39;&#39;&#39;=(f&#39;&#39;)&#39;\)</span>, <span class="math inline">\(f&#39;&#39;&#39;&#39;=(f&#39;&#39;&#39;)&#39;\)</span> etc. After a few derivatives of <span class="math inline">\(f\)</span> it is more convenient to use the notation:
+<span class="math display">\[\begin{align*}
+f^{(0)}&amp;=f\\
+f^{(1)}&amp;=f&#39;\\
+f^{(2)}&amp;=(f&#39;)&#39;=f&#39;&#39;\\
+f^{(3)}&amp;=(f&#39;&#39;)&#39;=f&#39;&#39;&#39;\\
+&amp;\phantom{..}\vdots\\
+f^{(n+1)}&amp;=(f^{(n)})&#39;
+\end{align*}\]</span>
+The functions <span class="math inline">\(f^{(n)}\)</span> for <span class="math inline">\(n\geq 2\)</span> are called <em>higher-order derivatives</em>.</p>
+<p>Derivatives may also be denoted using <em>Leibniz notation</em>:
+<span class="math display">\[
+\frac{df(x)}{dx}
+\]</span>
+This notation ties in with Leibniz’s intuitive notion of the derivative as the quotient of the “infinitely small difference <span class="math inline">\(df(x)=f(x+dx)-f(x)\)</span>”, by the “infinitely small number <span class="math inline">\(dx\)</span>”; but it is important to note that the derivative is defined as the limit, and the symbols <span class="math inline">\(df(x)\)</span> and <span class="math inline">\(dx\)</span> have no meaning of their own, and cannot be manipulated separately.</p>
+<p>Higher order derivatives are denoted
+<span class="math display">\[
+\frac{d^2f(x)}{dx^2},\frac{d^3f(x)}{dx^3},\dotsc,\frac{d^nf(x)}{dx^n},\dotsc
+\]</span></p>
+<p>Leibniz’s Formula allows us to easily compute higher order derivatives of products.</p>
+<p>The <span class="math inline">\(n^\text{th}\)</span> derivative of the product <span class="math inline">\((f\cdot g)(x)\)</span> is
+<span class="math display">\[
+(f\cdot g)^{(n)}(x)=\sum_{k=0}^{n}\binom{n}{k}f^{(k)}(x)\cdot g^{(n-k)}(x).
+\]</span></p>
+<p>Recall that the binomial coefficient is given by:
+<span class="math display">\[
+\binom{n}{k}=\frac{n!}{k!(n-k)!}.
+\]</span></p>
+</div>
+<div id="further-techniques" class="section level2 hasAnchor" number="11.5">
+<h2><span class="header-section-number">11.5</span> Further Techniques<a href="differentiation.html#further-techniques" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="implicit-differentiation" class="section level3 hasAnchor" number="11.5.1">
+<h3><span class="header-section-number">11.5.1</span> Implicit Differentiation<a href="differentiation.html#implicit-differentiation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Curves in the plane are often described by the set of all coordinates <span class="math inline">\((x,y)\)</span> satisfying an equation of the form <span class="math inline">\({F(x,y)=0}\)</span> for some function <span class="math inline">\(F\)</span> of two variables.</p>
+<p>For example, the unit circle is described by the equation <span class="math inline">\(F(x,y)=x^2+y^2-1=0\)</span>.</p>
+<p>As with the circle, we often cannot describe such a curve in the form of a graph of a function <span class="math inline">\(y=f(x)\)</span> (since it is multivalued for each <span class="math inline">\(x\)</span>). How do we differentiate such a curve?</p>
+<div class="example">
+<span id="exm:circlediff" class="example"><strong>Example 11.6  </strong></span>The unit circle <span class="math inline">\(x^2+y^2=1\)</span> has a well defined slope at every point except <span class="math inline">\((-1,0)\)</span> and <span class="math inline">\((1,0)\)</span> where there are vertical tangents. For the circle we can quite easily find functions that describe the differentiable parts of the curve:
+<span class="math display">\[\begin{align*}
+f_1(x)&amp;=\sqrt{1-x^2} &amp;-1&lt; x &lt; 1\\
+f_2(x)&amp;=-\sqrt{1-x^2} &amp;-1&lt; x &lt; 1
+\end{align*}\]</span>
+which describe the upper and lower halves of the circle, respectively.
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:circlediff"></span>
+<img src="figures/vector.png" alt="The unit circle in the plane."  />
+<p class="caption">
+Figure 11.4: Functions describing the upper an lower parts of the circle
+</p>
+</div>
+<p>Then to obtain the derivative at any point on the circle (except <span class="math inline">\((-1,0),(1,0)\)</span>), we can calculate the derivative of the relevant function <span class="math inline">\(f_1\)</span> or <span class="math inline">\(f_2\)</span>:
+<span class="math display">\[
+f_1&#39;(x)=\dfrac{-x}{(1-x^2)^\frac{1}{2}},\qquad f_2&#39;(x)=\dfrac{x}{(1-x^2)^\frac{1}{2}}.
+\]</span></p>
+</div>
+<p>For the circle we are able to write down differentiable functions with <em>explicit</em> formulae. In general, however, it will not be possible, or at least not easy, to find such functions.</p>
+<p>A function <span class="math inline">\(f\)</span> defined by the fact that it satisfies an equation <span class="math inline">\(F(x,f(x))=0\)</span> is called an <em>implicit function</em>; it is defined <em>implicitly</em>, rather than by an explicit formula.</p>
+<p>In general, the coordinates where <span class="math inline">\(F(x,y)=0\)</span> may not be describable by the graph of a differentiable function. Even where it is, there may be more than one function defined by the relation, as was the case with the circle. Furthermore, it may not be possible to write down <span class="math inline">\(f\)</span> as a nice formula as we did for the circle.</p>
+<p>If we <strong>assume</strong> that a function <span class="math inline">\(f\)</span> is a differentiable solution to the equation, then we can derive a formula for <span class="math inline">\(f&#39;\)</span> by the process of <em>implicit differentiation</em>. (We will only deal with simple cases here anyway and so need not be concerned with the technichal details, but in general we would need to turn to the <em>Implicit Function Theorem</em> to guarantee that all technichal assumptions are valid.)</p>
+<p>The process has two main steps:</p>
+<ol style="list-style-type: decimal">
+<li>Differentiate both sides of the equation with respect to <span class="math inline">\(x\)</span>, treating <span class="math inline">\(y\)</span> as a differentiable function of <span class="math inline">\(y(x)\)</span> and using the Chain Rule.</li>
+<li>Solve for <span class="math inline">\(y&#39;(x)\)</span>, giving a formula involving <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> that yields the derivative at any point <span class="math inline">\((x,y)\)</span> on the curve <span class="math inline">\(F(x,y)=0\)</span>.</li>
+</ol>
+<div class="example">
+<p><span id="exm:implicitdiff" class="example"><strong>Example 11.7  (Implicit differentiation) </strong></span>Consider the unit circle <span class="math inline">\(x^2+y^2=1\)</span>. We treat <span class="math inline">\(y=y(x)\)</span> as a differentiable function.
+<span class="math display">\[\begin{align*}
+\frac{d}{dx}(x^2+y^2)&amp;=\frac{d}{dx}(1)\\
+\frac{d}{dx}(x^2)+\frac{d}{dx}(y^2)&amp;=0\\
+2x+2y\frac{dy}{dx}&amp;=0\\
+\frac{dy}{dx}&amp;=-\frac{x}{y}
+\end{align*}\]</span>
+Where in the third line we have used the chain rule, by setting <span class="math inline">\(y=y(x)\)</span> so that
+<span class="math display">\[
+\frac{d}{dx}(y(x)^2)=2y(x)\dfrac{d}{dx}(y(x)).
+\]</span>
+Note that we have “infinite gradients” if <span class="math inline">\(y=0\)</span>, as we had already stated.</p>
+<p>Note that this agrees with our previous analysis: if <span class="math inline">\((a,b)\)</span> lies on the upper half of the circle then the slope at this point is given by
+<span class="math display">\[
+f_1&#39;(a)=\dfrac{-a}{(1-a^2)^\frac{1}{2}}
+\]</span>
+or using the above implicit derivative and the formula for <span class="math inline">\(f_1\)</span>
+<span class="math display">\[
+\frac{dy}{dx}=-\frac{a}{b}=-\frac{a}{f_1(a)}=-\frac{a}{\sqrt{1-a^2}}.
+\]</span>
+and similarly for a point on the lower half of the circle.</p>
+</div>
+</div>
+<div id="logarithmic-differentiation" class="section level3 hasAnchor" number="11.5.2">
+<h3><span class="header-section-number">11.5.2</span> Logarithmic Differentiation<a href="differentiation.html#logarithmic-differentiation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>By the chain rule, the derivative of <span class="math inline">\(\ln\circ f\)</span> is <span class="math inline">\(\dfrac{f&#39;}{f}\)</span>, and this will often be easier to compute than <span class="math inline">\(f&#39;\)</span> because logarithms turn products into sums, and powers into products. The derivative for <span class="math inline">\(f\)</span> can then be recovered by multiplying through by <span class="math inline">\(f\)</span>.</p>
+<p>This process is known as <em>logarithmic differentiation</em>.</p>
+<div class="example">
+<p><span id="exm:logdiff" class="example"><strong>Example 11.8  (Logarithmic differentiation) </strong></span>Find the derivative of
+<span class="math display">\[
+y=x^x.
+\]</span>
+First take the natural logarithm:
+<span class="math display">\[
+\ln(y)=x\ln(x),
+\]</span>
+then differentiate implicitly:
+<span class="math display">\[\begin{align*}
+\frac{d}{dx}(\ln(y))&amp;=\frac{d}{dx}(x\ln(x))\\
+\frac{1}{y}\frac{dy}{dx}&amp;=\frac{dx}{dx}\ln(x)+x\frac{d}{dx}\ln(x)\\
+\frac{1}{y}\frac{dy}{dx}&amp;=\ln(x)+x\frac{1}{x}\\
+\frac{dy}{dx}&amp;=y(\ln(x)+1)=x^x(\ln(x)+1).
+\end{align*}\]</span></p>
+<p><strong>Warning!</strong> The derivative of <span class="math inline">\(x^x\)</span> is <span class="math inline">\(x\cdot x^{x-1}\)</span>. We can’t treat variable exponents like constant exponents!</p>
+</div>
+</div>
+<div id="parametric-differentiation" class="section level3 hasAnchor" number="11.5.3">
+<h3><span class="header-section-number">11.5.3</span> Parametric Differentiation<a href="differentiation.html#parametric-differentiation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Curves in the plane may also be described <em>parametrically</em>. Given two functions <span class="math inline">\(u(t)\)</span> and <span class="math inline">\(v(t)\)</span>, the curve
+<span class="math display">\[
+\{(x,y): x=u(t), y=v(t)
+\]</span>
+is said to be represented <em>parametrically</em> by <span class="math inline">\(u\)</span> and <span class="math inline">\(v\)</span>, and the pair of functions <span class="math inline">\(u\)</span> and <span class="math inline">\(v\)</span> are called a parametric representation of the curve.</p>
+<p>We can think of such a curve as being the path traced out by a particle moving in the plane; at time <span class="math inline">\(t\)</span> the particle is at the position with coordinates <span class="math inline">\((u(t),v(t))\)</span>. A parametric curve is a function from the real numbers into the plane, given by <span class="math inline">\(F(t)=(u(t),y(t))\)</span>. Such curves will generally not be the graph of a function (due to being multivalued for a given <span class="math inline">\(x\)</span>-coordinate).</p>
+<p><code>{r parametriccurve, fig.cap = "The parametric curve given by $x(\\theta)=4\\sin(\\theta)+2\\sin(3\\theta)$ and $y(\\theta)=4\\cos(\\theta)+2\\cos(3\\theta).", fig.alt = "The parametric curve given by $x(\\theta)=4\\sin(\\theta)+2\\sin(3\\theta)$ and $y(\\theta)=4\\cos(\\theta)+2\\cos(3\\theta)." knitr::include_graphics(""figures/vector.png)</code></p>
+<p>How do we differentiate such a curve?</p>
+<p>Suppose that <span class="math inline">\({x=u(t)}\)</span>, <span class="math inline">\({y=v(t)}\)</span> is a parametric representation of a curve, and that <span class="math inline">\(u&#39;\neq 0\)</span> on some interval. Then on this interval the curve lies on the graph of a function <span class="math inline">\(f\)</span>, and at the point <span class="math inline">\(x=u(t)\)</span>
+<span class="math display">\[
+f&#39;(x)=\frac{v&#39;(t)}{u&#39;(t)}
+\]</span></p>
+<p>To see this, we have <span class="math inline">\({v(t)=f(x(t))}\)</span>, so differentiating with respect to <span class="math inline">\(t\)</span> and using the chain rule on the right hand side,
+<span class="math display">\[
+v&#39;(t)=f&#39;(x)u&#39;(t)
+\]</span>
+and since <span class="math inline">\(u&#39;(t)\neq 0\)</span>
+<span class="math display">\[
+f&#39;(x)=\frac{v&#39;(t)}{u&#39;(t)}.
+\]</span></p>
+<p>In Leibniz notation this is often written as:
+<span class="math display">\[
+\frac{dy}{dx}=\frac{\dfrac{dy}{dt}}{\dfrac{dx}{dt}}
+\]</span>
+and one can imagine “cancelling the <span class="math inline">\(dt\)</span>’s”.</p>
+<div class="example">
+<p><span id="exm:paradiff" class="example"><strong>Example 11.9  (Parametric differentiation) </strong></span>An ellipse <span class="math inline">\(\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1\)</span> can be represented parametrically by <span class="math inline">\({x=a\cos(\theta), y=b\sin(\theta)}\)</span>. The derivative at a point on the ellipse corresponding to parameter value <span class="math inline">\(\theta\)</span> is:
+<span class="math display">\[\begin{align*}
+\frac{dy}{dx}&amp;=\frac{dy/d\theta}{dx/d\theta}\\
+&amp;=-\frac{b\cos(\theta)}{a\sin(\theta)}\\
+&amp;=-\frac{b}{a}\cot(\theta).
+\end{align*}\]</span></p>
+</div>
+<p><strong>Second order parametric derivatives.</strong> Suppose that <span class="math inline">\(x=u(t)\)</span>, <span class="math inline">\(y=v(t)\)</span>, then
+<span class="math display">\[
+\frac{d^2y}{dx^2}=\frac{d}{dx}\left(\frac{dy}{dx}\right)=\frac{d}{dx}\left(\frac{\dfrac{dy}{dt}}{\dfrac{dx}{dt}}\right)
+\]</span>
+and we can compute this using the chain rule:
+<span class="math display">\[
+\frac{d^2y}{dx^2}=\frac{d}{dt}\left(\frac{dy}{dx}\right)\frac{dt}{dx}.
+\]</span>
+Alternatively, we could use the quotient rule, but this is more complicated:
+<span class="math display">\[
+\frac{d^2y}{dx^2}=\frac{\frac{dx}{dt}\frac{d^2y}{dt^2}-\frac{dy}{dt}\frac{d^2x}{dt^2}}{\left( \frac{dx}{dt}\right)^3}.
+\]</span></p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="eigenvalues-and-eigenvectors.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="applications-of-differentiation.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": null,
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/maths-sci-eng/maths-sci-eng.github.io/edit/master/11-differentiation.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["maths-notes.pdf", "maths-notes.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

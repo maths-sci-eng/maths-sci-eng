@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Exercise Set 1 | Mathematics for Scientists and Engineers</title>
+  <title>Chapter 12 Applications of Differentiation | Mathematics for Scientists and Engineers</title>
   <meta name="description" content="Mathematics Lecture Notes for UoE Penryn Science and Engineering Disciplines." />
   <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Exercise Set 1 | Mathematics for Scientists and Engineers" />
+  <meta property="og:title" content="Chapter 12 Applications of Differentiation | Mathematics for Scientists and Engineers" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="Mathematics Lecture Notes for UoE Penryn Science and Engineering Disciplines." />
   <meta name="github-repo" content="maths-sci-eng/maths-sci-eng.github.io" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Exercise Set 1 | Mathematics for Scientists and Engineers" />
+  <meta name="twitter:title" content="Chapter 12 Applications of Differentiation | Mathematics for Scientists and Engineers" />
   
   <meta name="twitter:description" content="Mathematics Lecture Notes for UoE Penryn Science and Engineering Disciplines." />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="references.html"/>
-<link rel="next" href="exercise-set-1-answers.html"/>
+<link rel="prev" href="differentiation.html"/>
+<link rel="next" href="blank1.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -231,80 +231,86 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="exercise-set-1" class="section level1 unnumbered hasAnchor">
-<h1>Exercise Set 1<a href="exercise-set-1.html#exercise-set-1" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>These exercises cover the topics of Algebra, Equations and Inequalities.</p>
+<div id="applications-of-differentiation" class="section level1 hasAnchor" number="12">
+<h1><span class="header-section-number">Chapter 12</span> Applications of Differentiation<a href="applications-of-differentiation.html#applications-of-differentiation" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="maxima-and-minima" class="section level2 hasAnchor" number="12.1">
+<h2><span class="header-section-number">12.1</span> Maxima and Minima<a href="applications-of-differentiation.html#maxima-and-minima" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>“…nothing at all takes place in the universe in which some rule of maximum or minimum does not appear…”</p>
+<p>Leonhard Euler</p>
+<p>We quite often need to find maximum and minimum points of a function in relation to optimisation or due to some physical principle, such as the minimisation of potential energy in physics.</p>
+<p>We distinguish between <em>local</em> maxima/minima and <em>global</em> maxima/minima. A global maximum is a “peak” in the graph of a function that is higher than or equal to any other value of the function, whilst a local maximum is a “peak” that is higher than or equal to any other value in the immediate region around the peak; we have similar definitions for a global and local minimum. If we are looking at maxima/minima where there are no points (globally/locally) that are equal in value, we add the word <em>strict</em> maximum/minimum. Differentiation can help us to find local maxima/minima.</p>
+<p>We first mention some basic relationships between functions and their derivatives. These are all intuitively obvious (their mathematical proofs follow from the <em>Mean Value Theorem</em>).</p>
 <ol style="list-style-type: decimal">
-<li><p>Simplify each of the following (<em>Hint</em>: use the rules of exponents where needed).</p>
-<ol style="list-style-type: lower-alpha">
-<li><span class="math inline">\(x = 3pq+5pr=2qr+qp-6rp\)</span></li>
-<li><span class="math inline">\(y = 5l^2mn+2nl^2m-3mln^2+l^2nm+4n^2ml-nm^2\)</span></li>
-<li><span class="math inline">\(z = \frac{(s^\frac{1}{3})^\frac{3}{4}\times (t^\frac{1}{4})^{-1}}{(t^\frac{1}{2}\times (s^{-\frac{1}{4}})^{-1})}\)</span></li>
-</ol></li>
-<li><p>Expand the brackets in each of the following and simplify the expression.</p>
-<ol style="list-style-type: lower-alpha">
-<li><span class="math inline">\(-4x(2x-y)(3x+2y)\)</span></li>
-<li><span class="math inline">\((a-2b)(2a-3b)(3a-4b)\)</span></li>
-<li><span class="math inline">\(-\{-2[x-3(y-4)]-5(z+6)\}\)</span></li>
-<li><span class="math inline">\((v^3-v^2-2)(1-3v+2v^2)\)</span></li>
-</ol></li>
-<li><p>Simplify each of the following.</p>
-<ol style="list-style-type: lower-alpha">
-<li><span class="math inline">\(\frac{p}{q^3}\div\frac{p^3}{q}\)</span></li>
-<li><span class="math inline">\(\frac{a^2b}{2c}\times\frac{ac^2}{2b}\div\frac{b^2c}{2a}\)</span></li>
-<li><span class="math inline">\(\frac{8x^{-3}\times 3x^2}{6x^{-4}}\)</span></li>
-<li><span class="math inline">\(\frac{3x}{3x^2+6x}\)</span></li>
-</ol></li>
-<li><p>Factorise the following expressions.</p>
-<ol style="list-style-type: lower-alpha">
-<li><span class="math inline">\(18x^2y-12xy^2\)</span></li>
-<li><span class="math inline">\(x^3+4x^2y-3xy^2-12y^3\)</span></li>
-<li><span class="math inline">\(25x^2-4y^2\)</span></li>
-<li><span class="math inline">\(3x^2-14x+8\)</span></li>
-<li><span class="math inline">\(x^2+10x+25\)</span></li>
-</ol></li>
-<li><p>The characteristic equation of a perfect gas is given by <span class="math inline">\(P V = mRT\)</span> where <span class="math inline">\(m\)</span> is the mass, <span class="math inline">\(P\)</span> is the pressure, <span class="math inline">\(V\)</span> is the volume, <span class="math inline">\(T\)</span> is the temperature and <span class="math inline">\(R\)</span> is the universal gas constant. Make temperature the subject of the formula.</p></li>
-<li><p>The airflow over a turbine blade causes drag <span class="math inline">\(D\)</span>, which is given by <span class="math inline">\(D= \frac{\rho C v^2 A}{2}\)</span>, where <span class="math inline">\(\rho\)</span> is fluid density, <span class="math inline">\(C\)</span> is the drag coefficient, <span class="math inline">\(v\)</span> is fluid velocity and <span class="math inline">\(A\)</span> is the frontal area of the blade. Make the frontal area the subject of the formula.</p></li>
-<li><p>Make <span class="math inline">\(b\)</span> the subject of the following formula.
-<span class="math display">\[W=\frac{t\sqrt{a+b^2}}{2\pi}\]</span></p></li>
-<li><p>Solve the following quadratic equations by factorisation.</p>
-<ol style="list-style-type: lower-alpha">
-<li><span class="math inline">\(x^2-28x-60=0\)</span></li>
-<li><span class="math inline">\(p^2=8p-15\)</span></li>
-<li><span class="math inline">\(-2y^2(3+y^2)=(2y^2+2y-3)(-y^2+y-4)-2\)</span></li>
-</ol></li>
-<li><p>Solve the following quadratic equations, giving results correct to 2 d.p.</p>
-<ol style="list-style-type: lower-alpha">
-<li><span class="math inline">\(4x^2+x-3=0\)</span></li>
-<li><span class="math inline">\(x^2+x=5\)</span></li>
-<li><span class="math inline">\(x+\frac{1}{x}=5\)</span></li>
-</ol></li>
-<li><p>Solve the following sets of simultaneous equations.</p>
-<ol style="list-style-type: lower-alpha">
-<li><span class="math inline">\(3x+4y=7\)</span>, <span class="math inline">\(5x+6y=11\)</span></li>
-<li><span class="math inline">\(2x+y=7\)</span>, <span class="math inline">\(x^2-xy=6\)</span></li>
-<li><span class="math inline">\(x + y=2\)</span>, <span class="math inline">\(x^2-xy+y^2 = 1\)</span></li>
-</ol></li>
-<li><p>Solve the following inequalities.</p>
-<ol style="list-style-type: lower-alpha">
-<li><span class="math inline">\(7-3x&gt;x-5\)</span></li>
-<li><span class="math inline">\(x^2\ge 4\)</span></li>
-<li><span class="math inline">\(x^2-x-6&lt;0\)</span></li>
-<li><span class="math inline">\(x^2-3x-12\le 2x+2\)</span></li>
-<li><span class="math inline">\(\frac{2}{2x-1} &gt; \frac{3}{3x+1}\)</span></li>
-<li><span class="math inline">\(\frac{2x}{x-5}\le 3\)</span></li>
-<li><span class="math inline">\(x^3-9x^2&lt;0\)</span></li>
-</ol></li>
+<li><p><em>Fermat’s Theorem</em>. If <span class="math inline">\(x=a\)</span> is a local maximum or local minimum point for <span class="math inline">\(f(x)\)</span>, then <span class="math inline">\(f&#39;(a)=0\)</span>. The converse to this theorem is not true, e.g. for <span class="math inline">\(f(x)=x^3\)</span>, we have <span class="math inline">\(f&#39;(0)=0\)</span>, but <span class="math inline">\(a=0\)</span> is clearly not a local maximum or minimum for <span class="math inline">\(f\)</span>. We use the term <em>critical point</em> or <em>stationary point</em> for a point <span class="math inline">\(a\)</span> at which the derivative <span class="math inline">\(f&#39;(a)=0\)</span>.</p></li>
+<li><p><em>Constant Function</em>. If <span class="math inline">\(f&#39;(x)=0\)</span> for all <span class="math inline">\(x\)</span> then <span class="math inline">\(f\)</span> is constant (that is, <span class="math inline">\(f(x)=c\)</span> for some constant <span class="math inline">\(c\)</span>).</p></li>
+<li><p><em>Constant Difference</em>. If <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> are such that <span class="math inline">\(f&#39;(x)=g&#39;(x)\)</span> for all <span class="math inline">\(x\)</span>, then there is some constant <span class="math inline">\(c\)</span> such that <span class="math inline">\(f=g+c\)</span> (geometrically this says that <span class="math inline">\(f\)</span> is a vertical translation of <span class="math inline">\(g\)</span>).</p></li>
+<li><p><em>Functions with Positive or Negative Derivatives.</em> If <span class="math inline">\(f&#39;(x)&gt;0\)</span> for all <span class="math inline">\(x\)</span>, then <span class="math inline">\(f\)</span> is strictly increasing. If <span class="math inline">\(f&#39;(x)&lt;0\)</span> for all <span class="math inline">\(x\)</span>, then <span class="math inline">\(f\)</span> is strictly decreasing. The converse is not true: consider again <span class="math inline">\(f(x)=x^3\)</span> which is strictly increasing but has <span class="math inline">\(f&#39;(0)=0\)</span>.</p></li>
 </ol>
+<p>Note that in order to have a local maximum or minimum at a point <span class="math inline">\(x=a\)</span> it is a requirement that <span class="math inline">\(f&#39;(a)=0\)</span>, but this is not a sufficient condition to gaurantee we have a maximum or minimum at <span class="math inline">\(a\)</span>. We can determine if a critical point is a local maximum or minimum using the so-called <em>second derivative test</em>.</p>
+<div class="theorem">
+<p><span id="thm:2ndderiv" class="theorem"><strong>Theorem 12.1  (Second Derivative Test for Maxima and Minima) </strong></span>Suppose <span class="math inline">\(f&#39;(a)=0\)</span> (i.e. <span class="math inline">\(a\)</span> is a critical point of <span class="math inline">\(f\)</span>).</p>
+<ol style="list-style-type: decimal">
+<li><p>If <span class="math inline">\(f&#39;&#39;(a)&gt;0\)</span>, then <span class="math inline">\(f\)</span> has a strict local minimum at <span class="math inline">\(a\)</span>,</p></li>
+<li><p>If <span class="math inline">\(f&#39;&#39;(a)&lt;0\)</span>, then <span class="math inline">\(f\)</span> has a strict local maximum at <span class="math inline">\(a\)</span>.</p></li>
+</ol>
+</div>
+<p>To understand this theorem, note that if <span class="math inline">\(f&#39;&#39;(a)&gt;0\)</span> then this says that <span class="math inline">\(f&#39;(x)\)</span> is strictly increasing near <span class="math inline">\(a\)</span> and we also know that <span class="math inline">\(f&#39;(x)\)</span> passes through <span class="math inline">\(0\)</span> at <span class="math inline">\(x=a\)</span>. This means <span class="math inline">\(f&#39;(a-\delta)&lt;0\)</span> and <span class="math inline">\(f&#39;(a+\delta)&gt;0\)</span> for an arbitrary small number <span class="math inline">\(\delta&gt;0\)</span>; that is, we have a negative gradient to the left of <span class="math inline">\(a\)</span> and a positive gradient to the right of <span class="math inline">\(a\)</span>, hence <span class="math inline">\(a\)</span> must be a local minimum of the function. A similar argument holds for <span class="math inline">\(f&#39;&#39;(a)&lt;0\)</span> and <span class="math inline">\(a\)</span> being a local maximum.</p>
+<p><strong>Warning!</strong> The function <span class="math inline">\(g(x)=x^4\)</span> has a strict global (and hence also local) minimum at <span class="math inline">\(0\)</span>, where <span class="math inline">\(g&#39;(0)=0\)</span> but we have <span class="math inline">\(g&#39;&#39;(0)=0\)</span>, hence the converse to the Second Derivative Test is not true.</p>
+</div>
+<div id="points-of-inflection" class="section level2 hasAnchor" number="12.2">
+<h2><span class="header-section-number">12.2</span> Points of Inflection<a href="applications-of-differentiation.html#points-of-inflection" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>An <em>inflection point</em> <span class="math inline">\(x=a\)</span> is a point where the tangent line to a graph of a function <span class="math inline">\(f\)</span> at <span class="math inline">\((a,f(a))\)</span> crosses the graph at <span class="math inline">\((a,f(a))\)</span>. This corresponds to a point where the graph changes from being convex to concave (or vice versa).</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:inflec"></span>
+<img src="figures/vector.png" alt="Inflection points"  />
+<p class="caption">
+Figure 12.1: Inflection points
+</p>
+</div>
+<p>It is necessary that the second derivative has different signs to the left and right of <span class="math inline">\(a\)</span> for it to be an inflection point, and hence <span class="math inline">\(f&#39;&#39;(a)=0\)</span>. But note that <span class="math inline">\(f&#39;&#39;(a)=0\)</span> alone is not sufficient for <span class="math inline">\(a\)</span> to be an inflection point (for example, <span class="math inline">\(f(x)=x^4\)</span> at <span class="math inline">\(x=0\)</span> has derivative <span class="math inline">\(f&#39;&#39;(0)=0\)</span>, but this is a minimum). Note that we do not need <span class="math inline">\(f&#39;(a)=0\)</span>, so a point of inflection is not necessarily a critical point. Having a nonzero third order derivative at a point <span class="math inline">\(a\)</span> where <span class="math inline">\(f&#39;&#39;(a)=0\)</span> ensures that the second derivative has different signs to the left and right of <span class="math inline">\(a\)</span>.</p>
+<div class="theorem">
+<p><span id="thm:3rdinflectest" class="theorem"><strong>Theorem 12.2  (Third Derivative Test for Inflection Points) </strong></span>If <span class="math inline">\(f&#39;&#39;(a)=0\)</span> and <span class="math inline">\(f&#39;&#39;&#39;(a)\neq 0\)</span> then <span class="math inline">\(a\)</span> is a point of inflection</p>
+</div>
+<p><strong>Warning!</strong> The function <span class="math inline">\(g(x)=x^5\)</span> has a point of inflection at <span class="math inline">\(0\)</span>, but with <span class="math inline">\(g&#39;&#39;(0)=0\)</span> and <span class="math inline">\(g&#39;&#39;&#39;(0)=0\)</span>. This demonstrates that the above criteria on the third derivative is sufficient but not necessary.</p>
+</div>
+<div id="higher-order-derivative-test" class="section level2 hasAnchor" number="12.3">
+<h2><span class="header-section-number">12.3</span> Higher Order Derivative Test<a href="applications-of-differentiation.html#higher-order-derivative-test" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We can generalise the above derivative tests to determine whether critical points are maxima, minima or inflection points based on higher order derivatives.</p>
+<div class="theorem">
+<p><span id="thm:hoderivtest" class="theorem"><strong>Theorem 12.3  (Higher Order Derivative Test) </strong></span>Let <span class="math inline">\(f\)</span> be a sufficiently differentiable function on an interval containing the point <span class="math inline">\(a\)</span>. If with <span class="math inline">\(n&gt;1\)</span> we have <span class="math inline">\(f^{(i)}(a)=0\)</span> for <span class="math inline">\(i=1,\dotsc,{n-1}\)</span> but <span class="math inline">\(f^{(n)}\neq 0\)</span>, then</p>
+<ol style="list-style-type: decimal">
+<li>If <span class="math inline">\(n\)</span> is even and <span class="math inline">\(f^{(n)}&lt;0\)</span>, then <span class="math inline">\(a\)</span> is a strict local maximum point</li>
+<li>If <span class="math inline">\(n\)</span> is even and <span class="math inline">\(f^{(n)}&gt;0\)</span>, then <span class="math inline">\(a\)</span> is a strict local minimum point</li>
+<li>If <span class="math inline">\(n\)</span> is odd and <span class="math inline">\(f^{(n)}&lt;0\)</span>, then <span class="math inline">\(a\)</span> is a strictly decreasing point and an inflection point</li>
+<li>If <span class="math inline">\(n\)</span> is odd and <span class="math inline">\(f^{(n)}&gt;0\)</span>, then <span class="math inline">\(a\)</span> is a strictly decreasing point and an inflection point</li>
+</ol>
+</div>
+<p>Note that the test can fail if the higher order derivatives at <span class="math inline">\(a\)</span> cease to exist before they become non-zero, or if the derivatives of <span class="math inline">\(f\)</span> at <span class="math inline">\(a\)</span> of all orders are zero i.e. <span class="math inline">\(f^{(i)}(a)=0\)</span> for all <span class="math inline">\(i\)</span>.</p>
+</div>
+<div id="graph-sketching" class="section level2 hasAnchor" number="12.4">
+<h2><span class="header-section-number">12.4</span> Graph Sketching<a href="applications-of-differentiation.html#graph-sketching" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We now have a lot of tools to help us understand the nature of a function and to sketch graphs. We can analyse a function <span class="math inline">\(f\)</span> by looking at:</p>
+<ol style="list-style-type: decimal">
+<li>the values <span class="math inline">\(x\)</span> where <span class="math inline">\(f(x)=0\)</span>, i.e. where the graph crosses the <span class="math inline">\(x\)</span>-axis</li>
+<li>the value of <span class="math inline">\(f(0)\)</span>, i.e. where the graph crosses the <span class="math inline">\(y\)</span>-axis</li>
+<li>the critical points of <span class="math inline">\(f\)</span> (possibly local maxima/minima, inflection points) and the value of <span class="math inline">\(f\)</span> at these critical points</li>
+<li>the sign of <span class="math inline">\(f&#39;\)</span></li>
+<li>the location and nature of any vertical asymptotes (considering left and right hand limits)</li>
+<li>the behaviour of <span class="math inline">\(\lim\limits_{x\to\pm\infty}f(x)\)</span> (possibly horizontal or oblique asymptotes)</li>
+<li>if the function is periodic</li>
+</ol>
+</div>
+<div id="optimisation" class="section level2 hasAnchor" number="12.5">
+<h2><span class="header-section-number">12.5</span> Optimisation<a href="applications-of-differentiation.html#optimisation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="references.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="exercise-set-1-answers.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="differentiation.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="blank1.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -325,7 +331,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/maths-sci-eng/maths-sci-eng.github.io/edit/master/20-exercises01.Rmd",
+"link": "https://github.com/maths-sci-eng/maths-sci-eng.github.io/edit/master/12-applications_diff.Rmd",
 "text": "Edit"
 },
 "history": {

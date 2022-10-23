@@ -1,4 +1,4 @@
-# Exercise Set 7 {-}
+# Exercise Set 7 {.unlisted .unnumbered}
 
 non-commutative matrices
 

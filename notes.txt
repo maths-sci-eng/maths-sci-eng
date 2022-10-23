@@ -37,3 +37,248 @@ population migration
 
 3 views of linear equations summary
 
+
+"...nothing at all takes place in the universe in which some rule of maximum or minimum does not appear..."
+
+Leonhard Euler
+
+
+
+We quite often need to find maximum and minimum points of a function in relation to optimisation or due to some physical principle, such as the minimisation of potential energy in physics.
+
+We distinguish between *local* maxima/minima and *global* maxima/minima. A global maximum is a "peak" in the graph of a function that is higher than or equal to any other value of the function, whilst a local maximum is a "peak" that is higher than or equal to any other value in the immediate region around the peak; we have similar definitions for a global and local minimum. If we are looking at maxima/minima where there are no points (globally/locally) that are equal in value, we add the word *strict* maximum/minimum. Differentiation can help us to find local maxima/minima.
+
+We first mention some basic relationships between functions and their derivatives. These are all intuitively obvious (their mathematical proofs follow from the *Mean Value Theorem*).
+
+
+1. *Fermat's Theorem*. If $x=a$ is a local maximum or local minimum point for $f(x)$, then $f'(a)=0$. The converse to this theorem is not true, e.g. for $f(x)=x^3$, we have $f'(0)=0$, but $a=0$ is clearly not a local maximum or minimum for $f$. We use the term *critical point* or *stationary point* for a point $a$ at which the derivative $f'(a)=0$.
+
+1. *Constant Function*. If $f'(x)=0$ for all $x$ then $f$ is constant (that is, $f(x)=c$ for some constant $c$).
+
+1. *Constant Difference*. If $f$ and $g$ are such that $f'(x)=g'(x)$ for all $x$, then there is some constant $c$ such that $f=g+c$ (geometrically this says that $f$ is a vertical translation of $g$).
+
+1. *Functions with Positive or Negative Derivatives.* If $f'(x)>0$ for all $x$, then $f$ is strictly increasing. If $f'(x)<0$ for all $x$, then $f$ is strictly decreasing. The converse is not true: consider again $f(x)=x^3$ which is strictly increasing but has $f'(0)=0$.
+
+Note that in order to have a local maximum or minimum at a point $x=a$ it is a requirement that $f'(a)=0$, but this is not a sufficient condition to gaurantee we have a maximum or minimum at $a$. We can determine if a critical point is a local maximum or minimum using the so-called *second derivative test*.
+
+::: {.theorem #2ndderiv name="Second Derivative Test for Maxima and Minima"}
+Suppose $f'(a)=0$ (i.e. $a$ is a critical point of $f$).
+
+1. If $f''(a)>0$, then $f$ has a strict local minimum at $a$,
+
+1. If $f''(a)<0$, then $f$ has a strict local maximum at $a$.
+
+:::
+
+To understand this theorem, note that if $f''(a)>0$ then this says that $f'(x)$ is strictly increasing near $a$ and we also know that $f'(x)$ passes through $0$ at $x=a$. This means $f'(a-\delta)<0$ and $f'(a+\delta)>0$ for an arbitrary small number $\delta>0$; that is, we have a negative gradient to the left of $a$ and a positive gradient to the right of $a$, hence $a$ must be a local minimum of the function. A similar argument holds for $f''(a)<0$ and $a$ being a local maximum.
+
+**Warning!** The function $g(x)=x^4$ has a strict global (and hence also local) minimum at $0$, where $g'(0)=0$ but we have $g''(0)=0$, hence the converse to the Second Derivative Test is not true.
+
+## Points of Inflection
+
+An *inflection point* $x=a$ is a point where the tangent line to a graph of a function $f$ at $(a,f(a))$ crosses the graph at $(a,f(a))$. This corresponds to a point where the graph changes from being convex to concave (or vice versa).
+
+```{r inflec, echo=FALSE, fig.cap = "Inflection points", fig.alt = "Inflection points"}
+knitr::include_graphics("figures/vector.png")
+```
+
+It is necessary that the second derivative has different signs to the left and right of $a$ for it to be an inflection point, and hence $f''(a)=0$. But note that $f''(a)=0$ alone is not sufficient for $a$ to be an inflection point (for example, $f(x)=x^4$ at $x=0$ has derivative $f''(0)=0$, but this is a minimum). Note that we do not need $f'(a)=0$, so a point of inflection is not necessarily a critical point. Having a nonzero third order derivative at a point $a$ where $f''(a)=0$ ensures that the second derivative has different signs to the left and right of $a$.
+
+::: {.theorem #3rdinflectest name="Third Derivative Test for Inflection Points"}
+If $f''(a)=0$ and $f'''(a)\neq 0$ then $a$ is a point of inflection
+:::
+
+**Warning!** The function $g(x)=x^5$ has a point of inflection at $0$, but with $g''(0)=0$ and $g'''(0)=0$. This demonstrates that the above criteria on the third derivative is sufficient but not necessary.
+
+
+## Higher Order Derivative Test
+
+We can generalise the above derivative tests to determine whether critical points are maxima, minima or inflection points based on higher order derivatives.
+
+::: {.theorem #hoderivtest name="Higher Order Derivative Test"}
+
+Let $f$ be a sufficiently differentiable function on an interval containing the point $a$. If with $n>1$ we have $f^{(i)}(a)=0$ for $i=1,\dotsc,{n-1}$ but $f^{(n)}\neq 0$, then
+
+1. If $n$ is even and $f^{(n)}<0$, then $a$ is a strict local maximum point
+1. If $n$ is even and $f^{(n)}>0$, then $a$ is a strict local minimum point
+1. If $n$ is odd and $f^{(n)}<0$, then $a$ is a strictly decreasing point and an inflection point
+1. If $n$ is odd and $f^{(n)}>0$, then $a$ is a strictly decreasing point and an inflection point
+
+:::
+
+Note that the test can fail if the higher order derivatives at $a$ cease to exist before they become non-zero, or if the derivatives of $f$ at $a$ of all orders are zero i.e. $f^{(i)}(a)=0$ for all $i$.
+
+
+## Graph Sketching
+
+We now have a lot of tools to help us understand the nature of a function and to sketch graphs. We can analyse a function $f$ by looking at:
+
+1. the values $x$ where $f(x)=0$, i.e. where the graph crosses the $x$-axis
+1. the value of $f(0)$, i.e. where the graph crosses the $y$-axis
+1. the critical points of $f$ (possibly local maxima/minima, inflection points) and the value of $f$ at these critical points
+1. the sign of $f'$
+1. the location and nature of any vertical asymptotes (considering left and right hand limits)
+1. the behaviour of $\lim\limits_{x\to\pm\infty}f(x)$ (possibly horizontal or oblique asymptotes)
+1. if the function is periodic
+
+
+
+
+-----------------------------
+
+
+## Further Techniques
+
+
+### Implicit Differentiation
+
+
+Curves in the plane are often described by the set of all coordinates $(x,y)$ satisfying an equation of the form ${F(x,y)=0}$ for some function $F$ of two variables.
+
+For example, the unit circle is described by the equation $F(x,y)=x^2+y^2-1=0$.
+
+As with the circle, we often cannot describe such a curve in the form of a graph of a function $y=f(x)$ (since it is multivalued for each $x$). How do we differentiate such a curve?
+
+::: {.example #circlediff}
+The unit circle $x^2+y^2=1$ has a well defined slope at every point except $(-1,0)$ and $(1,0)$ where there are vertical tangents. For the circle we can quite easily find functions that describe the differentiable parts of the curve:
+\begin{align*}
+f_1(x)&=\sqrt{1-x^2} &-1< x < 1\\
+f_2(x)&=-\sqrt{1-x^2} &-1< x < 1
+\end{align*}
+which describe the upper and lower halves of the circle, respectively.
+```{r circlediff, fig.cap = "Functions describing the upper an lower parts of the circle", fig.alt = "The unit circle in the plane."}
+knitr::include_graphics("figures/vector.png")
+```
+Then to obtain the derivative at any point on the circle (except $(-1,0),(1,0)$), we can calculate the derivative of the relevant function $f_1$ or $f_2$:
+$$
+f_1'(x)=\dfrac{-x}{(1-x^2)^\frac{1}{2}},\qquad f_2'(x)=\dfrac{x}{(1-x^2)^\frac{1}{2}}.
+$$
+:::
+
+For the circle we are able to write down differentiable functions with *explicit* formulae. In general, however, it will not be possible, or at least not easy, to find such functions.
+
+A function $f$ defined by the fact that it satisfies an equation $F(x,f(x))=0$ is called an *implicit function*; it is defined *implicitly*, rather than by an explicit formula.
+
+In general, the coordinates where $F(x,y)=0$ may not be describable by the graph of a differentiable function. Even where it is, there may be more than one function defined by the relation, as was the case with the circle. Furthermore, it may not be possible to write down $f$ as a nice formula as we did for the circle.
+
+If we **assume** that a function $f$ is a differentiable solution to the equation, then we can derive a formula for $f'$ by the process of *implicit differentiation*. (We will only deal with simple cases here anyway and so need not be concerned with the technichal details, but in general we would need to turn to the *Implicit Function Theorem* to guarantee that all technichal assumptions are valid.)
+
+The process has two main steps:
+
+1. Differentiate both sides of the equation with respect to $x$, treating $y$ as a differentiable function of $y(x)$ and using the Chain Rule.
+1. Solve for $y'(x)$, giving a formula involving $x$ and $y$ that yields the derivative at any point $(x,y)$ on the curve $F(x,y)=0$.
+
+::: {.example #implicitdiff name="Implicit differentiation"}
+Consider the unit circle $x^2+y^2=1$. We treat $y=y(x)$ as a differentiable function.
+\begin{align*}
+\frac{d}{dx}(x^2+y^2)&=\frac{d}{dx}(1)\\
+\frac{d}{dx}(x^2)+\frac{d}{dx}(y^2)&=0\\
+2x+2y\frac{dy}{dx}&=0\\
+\frac{dy}{dx}&=-\frac{x}{y}
+\end{align*}
+Where in the third line we have used the chain rule, by setting $y=y(x)$ so that
+$$
+\frac{d}{dx}(y(x)^2)=2y(x)\dfrac{d}{dx}(y(x)).
+$$
+Note that we have "infinite gradients" if $y=0$, as we had already stated.
+
+Note that this agrees with our previous analysis: if $(a,b)$ lies on the upper half of the circle then the slope at this point is given by
+$$
+f_1'(a)=\dfrac{-a}{(1-a^2)^\frac{1}{2}}
+$$
+or using the above implicit derivative and the formula for $f_1$
+$$
+\frac{dy}{dx}=-\frac{a}{b}=-\frac{a}{f_1(a)}=-\frac{a}{\sqrt{1-a^2}}.
+$$
+and similarly for a point on the lower half of the circle.
+:::
+
+
+
+### Logarithmic Differentiation
+
+By the chain rule, the derivative of $\ln\circ f$ is $\dfrac{f'}{f}$, and this will often be easier to compute than $f'$ because logarithms turn products into sums, and powers into products. The derivative for $f$ can then be recovered by multiplying through by $f$.
+
+This process is known as *logarithmic differentiation*.
+
+::: {.example #logdiff name="Logarithmic differentiation"}
+
+:::
+Find the derivative of
+$$
+y=x^x.
+$$
+First take the natural logarithm:
+$$
+\ln(y)=x\ln(x),
+$$
+then differentiate implicitly:
+\begin{align*}
+\frac{d}{dx}(\ln(y))&=\frac{d}{dx}(x\ln(x))\\
+\frac{1}{y}\frac{dy}{dx}&=\frac{dx}{dx}\ln(x)+x\frac{d}{dx}\ln(x)\\
+\frac{1}{y}\frac{dy}{dx}&=\ln(x)+x\frac{1}{x}\\
+\frac{dy}{dx}&=y(\ln(x)+1)=x^x(\ln(x)+1).
+\end{align*}
+
+**Warning!** The derivative of $x^x$ is \textbf{not} $x\cdot x^{x-1}$. We can't treat variable exponents like constant exponents!
+:::
+
+
+### Parametric Differentiation
+
+Curves in the plane may also be described *parametrically*. Given two functions $u(t)$ and $v(t)$, the curve
+$$
+\{(x,y): x=u(t), y=v(t)
+$$
+is said to be represented *parametrically* by $u$ and $v$, and the pair of functions $u$ and $v$ are called a parametric representation of the curve.
+
+We can think of such a curve as being the path traced out by a particle moving in the plane; at time $t$ the particle is at the position with coordinates $(u(t),v(t))$. A parametric curve is a function from the real numbers into the plane, given by $F(t)=(u(t),y(t))$. Such curves will generally not be the graph of a function (due to being multivalued for a given $x$-coordinate).
+
+```{r parametriccurve, fig.cap = "The parametric curve given by $x(\\theta)=4\\sin(\\theta)+2\\sin(3\\theta)$ and $y(\\theta)=4\\cos(\\theta)+2\\cos(3\\theta).", fig.alt = "The parametric curve given by $x(\\theta)=4\\sin(\\theta)+2\\sin(3\\theta)$ and $y(\\theta)=4\\cos(\\theta)+2\\cos(3\\theta)."
+knitr::include_graphics(""figures/vector.png)
+```
+
+How do we differentiate such a curve?
+
+Suppose that ${x=u(t)}$, ${y=v(t)}$ is a parametric representation of a curve, and that $u'\neq 0$ on some interval. Then on this interval the curve lies on the graph of a function $f$, and at the point $x=u(t)$
+$$
+f'(x)=\frac{v'(t)}{u'(t)}
+$$
+
+To see this, we have ${v(t)=f(x(t))}$, so differentiating with respect to $t$ and using the chain rule on the right hand side,
+$$
+v'(t)=f'(x)u'(t)
+$$
+and since $u'(t)\neq 0$
+$$
+f'(x)=\frac{v'(t)}{u'(t)}.
+$$
+
+In Leibniz notation this is often written as:
+$$
+\frac{dy}{dx}=\frac{\dfrac{dy}{dt}}{\dfrac{dx}{dt}}
+$$
+and one can imagine "cancelling the $dt$'s".
+
+::: {.example #paradiff name="Parametric differentiation"}
+
+An ellipse $\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1$ can be represented parametrically by ${x=a\cos(\theta), y=b\sin(\theta)}$. The derivative at a point on the ellipse corresponding to parameter value $\theta$ is:
+\begin{align*}
+\frac{dy}{dx}&=\frac{dy/d\theta}{dx/d\theta}\\
+&=-\frac{b\cos(\theta)}{a\sin(\theta)}\\
+&=-\frac{b}{a}\cot(\theta).
+\end{align*}
+:::
+
+**Second order parametric derivatives.** Suppose that $x=u(t)$, $y=v(t)$, then
+$$
+\frac{d^2y}{dx^2}=\frac{d}{dx}\left(\frac{dy}{dx}\right)=\frac{d}{dx}\left(\frac{\dfrac{dy}{dt}}{\dfrac{dx}{dt}}\right)
+$$
+and we can compute this using the chain rule:
+$$
+\frac{d^2y}{dx^2}=\frac{d}{dt}\left(\frac{dy}{dx}\right)\frac{dt}{dx}.
+$$
+Alternatively, we could use the quotient rule, but this is more complicated:
+$$
+\frac{d^2y}{dx^2}=\frac{\frac{dx}{dt}\frac{d^2y}{dt^2}-\frac{dy}{dt}\frac{d^2x}{dt^2}}{\left( \frac{dx}{dt}\right)^3}.
+$$

@@ -1,0 +1,15 @@
+show from the product rule
+
+from which it follows for a constant $c$:
+$$
+(cf)'(a)=cf'(a)
+$$
+
+derive a rule for sin(ax+b)
+
+then compute
+
+
+derive a rule for general e^kx, a^x and log_a
+
+then compute
