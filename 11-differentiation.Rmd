@@ -6,23 +6,17 @@ Differentiation is the mathematical tool to answer questions about *rates of cha
 
 The derivative of a real function $f$ at a point $(x,f(x))$ is the slope of the tangent line at that point.
 
-```{r tangentline, echo=FALSE, fig.cap = "The tangent line to a graph.", fig.alt = "The tangent line to a graph."}
-knitr::include_graphics("figures/vector.png")
+```{r tangentline, echo=FALSE, fig.cap = "The tangent line to a graph.", fig.alt = "The tangent line to a graph.", out.width="50%"}
+knitr::include_graphics("figures/tangent.png")
 ```
 
 To find this gradient, we start by approximating the tangent line by taking a secant line through the point $(x,f(x))$ and a point $(x+h,f(x+h))$ with $h$ a small number.
 
-```{r secantline, echo=FALSE, fig.cap = "A secant line through $(x,f(x))$ and a point $(x+h,f(x+h))$.", fig.alt = "A secant line through $(x,f(x))$ and a point $(x+h,f(x+h))$."}
-knitr::include_graphics("figures/vector.png")
+```{r secantline, echo=FALSE, fig.cap = "A secant line through $(x,f(x))$ and a point $(x+h,f(x+h))$.", fig.alt = "A secant line through $(x,f(x))$ and a point $(x+h,f(x+h))$.", out.width="50%"}
+knitr::include_graphics("figures/secant.png")
 ```
 
-Now if we take $h\to 0$, that is $h$ becomes vanishingly small, the second point approaches $(x,f(x))$. Then the gradient of the secant line converges to the gradient of the tangent line.
-
-```{r secantconverge, echo=FALSE, fig.cap = "Convergence to the tanget line.", fig.alt = "Convergence to the tanget line."}
-knitr::include_graphics("figures/vector.png")
-```
-
-The gradient of the secant line is:
+Now if we take $h\to 0$, that is $h$ becomes vanishingly small, the second point approaches $(x,f(x))$. Then the gradient of the secant line converges to the gradient of the tangent line. The gradient of the secant line is:
 $$
 \frac{\Delta y}{\Delta x}=\frac{f(x+h)-f(x)}{h}.
 $$
@@ -221,8 +215,8 @@ f_1(x)&=\sqrt{1-x^2} &-1< x < 1\\
 f_2(x)&=-\sqrt{1-x^2} &-1< x < 1
 \end{align*}
 which describe the upper and lower halves of the circle, respectively.
-```{r circlediff, fig.cap = "Functions describing the upper an lower parts of the circle", fig.alt = "The unit circle in the plane."}
-knitr::include_graphics("figures/vector.png")
+```{r circlediff, fig.cap = "Functions describing the upper an lower parts of the circle", fig.alt = "The unit circle in the plane.", out.width="50%"}
+knitr::include_graphics("figures/circle.png")
 ```
 Then to obtain the derivative at any point on the circle (except $(-1,0),(1,0)$), we can calculate the derivative of the relevant function $f_1$ or $f_2$:
 $$
@@ -305,8 +299,8 @@ is said to be represented *parametrically* by $u$ and $v$, and the pair of funct
 
 We can think of such a curve as being the path traced out by a particle moving in the plane; at time $t$ the particle is at the position with coordinates $(u(t),v(t))$. A parametric curve is a function from the real numbers into the plane, given by $F(t)=(u(t),y(t))$. Such curves will generally not be the graph of a function (due to being multivalued for a given $x$-coordinate).
 
-```{r parametriccurve, fig.cap = "The parametric curve given by $x(\\theta)=4\\sin(\\theta)+2\\sin(3\\theta)$ and $y(\\theta)=4\\cos(\\theta)+2\\cos(3\\theta).", fig.alt = "The parametric curve given by $x(\\theta)=4\\sin(\\theta)+2\\sin(3\\theta)$ and $y(\\theta)=4\\cos(\\theta)+2\\cos(3\\theta)."
-knitr::include_graphics(""figures/vector.png)
+```{r parametriccurve, fig.cap = "The parametric curve given by $x(\\theta)=4\\sin(\\theta)+2\\sin(3\\theta)$ and $y(\\theta)=4\\cos(\\theta)+2\\cos(3\\theta)$.", fig.alt = "The parametric curve given by $x(\\theta)=4\\sin(\\theta)+2\\sin(3\\theta)$ and $y(\\theta)=4\\cos(\\theta)+2\\cos(3\\theta)$.", out.width="50%"}
+knitr::include_graphics("figures/parametric.png")
 ```
 
 How do we differentiate such a curve?

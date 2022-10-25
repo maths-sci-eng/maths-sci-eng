@@ -111,7 +111,6 @@ exm:nondiag
 exm:diagmatpower
 fig:tangentline
 fig:secantline
-fig:secantconverge
 exm:deriv1stprinc
 exm:sumrule
 exm:prodrule
@@ -121,11 +120,13 @@ exm:circlediff
 fig:circlediff
 exm:implicitdiff
 exm:logdiff
+fig:parametriccurve
 exm:paradiff
 thm:2ndderiv
 fig:inflec
 thm:3rdinflectest
 thm:hoderivtest
+exm:optimise
 fig:complexsketch
 foundations
 numbers

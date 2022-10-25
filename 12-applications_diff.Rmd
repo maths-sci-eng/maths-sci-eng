@@ -43,8 +43,8 @@ To understand this theorem, note that if $f''(a)>0$ then this says that $f'(x)$ 
 
 An *inflection point* $x=a$ is a point where the tangent line to a graph of a function $f$ at $(a,f(a))$ crosses the graph at $(a,f(a))$. This corresponds to a point where the graph changes from being convex to concave (or vice versa).
 
-```{r inflec, echo=FALSE, fig.cap = "Inflection points", fig.alt = "Inflection points"}
-knitr::include_graphics("figures/vector.png")
+```{r inflec, echo=FALSE, fig.cap = "Inflection points", fig.alt = "Inflection points", out.width="50%"}
+knitr::include_graphics("figures/inflection.png")
 ```
 
 It is necessary that the second derivative has different signs to the left and right of $a$ for it to be an inflection point, and hence $f''(a)=0$. But note that $f''(a)=0$ alone is not sufficient for $a$ to be an inflection point (for example, $f(x)=x^4$ at $x=0$ has derivative $f''(0)=0$, but this is a minimum). Note that we do not need $f'(a)=0$, so a point of inflection is not necessarily a critical point. Having a nonzero third order derivative at a point $a$ where $f''(a)=0$ ensures that the second derivative has different signs to the left and right of $a$.
@@ -82,9 +82,60 @@ We now have a lot of tools to help us understand the nature of a function and to
 1. the value of $f(0)$, i.e. where the graph crosses the $y$-axis
 1. the critical points of $f$ (possibly local maxima/minima, inflection points) and the value of $f$ at these critical points
 1. the sign of $f'$
-1. the location and nature of any vertical asymptotes (considering left and right hand limits)
-1. the behaviour of $\lim\limits_{x\to\pm\infty}f(x)$ (possibly horizontal or oblique asymptotes)
+1. the location and nature of any vertical asymptotes
 1. if the function is periodic
 
 ## Optimisation
+
+Optimisation is the process of finding the "best" inputs, that maximise or minimise some objective function. For suitable objective functions we can use our derivative tests to find these inputs.
+
+Here we shall look at an example and give a general method for solving such problems.
+
+::: {.example #optimise name="A fencing problem"}
+A rectangular storage compound needs to be built on a building site. An existing wall is to be used as one side of the compound and the other 3 walls will be built with fencing. There is 100m of fencing available. What is the maximum storage area that can be built and what are the lengths of the sides?
+
+Let the side opposite the wall have length $y$ and the other two sides length $x$. The length of the fencing will be the perimeter of these three sides, hence
+
+$$2x+y=100 m$$
+
+We want to maximise the area, hence our objective function inputs
+
+$$A=x\times y.$$
+
+We use the first equation to find $y$ in terms of $x$:
+
+$$y=100-2x$$
+
+then
+
+$$A=x(100-2x)=100x-2x^2.$$
+
+To maximise, we need to find the solution for $\frac{dA}{dx}=0$:
+
+$$\frac{dA}{dx}=100-4x=0\quad\implies\quad x=25 m$$
+
+We check this is a maximum at $x=25$. We have
+
+$$\frac{d^2A}{dx^2}=-4$$
+
+which is indeed negative, hence we have a maximum at $x=25$. Substituting back into our equations for $y$ and $A$ we have:
+\begin{align*}
+x&=25m\\
+y&=50m\\
+A&=1250 m^2.
+\end{align*}
+:::
+
+
+**Methodology**
+
+1. Obtain an expression for the quantity that must be maximised or minimised;
+1. Ensure that the expression is in terms of just **one** unknown variable;
+1. Get the resulting expression into a form that can be differentiated;
+1. Differentiate the function and set equal to zero;
+1. Solve for the unknown variable, i.e. find the critical points;
+1. Find the second derivative of the function and check which critical points are maxima/minima;
+1. Substite the points back into the objective function (in terms of the one variable) to find the values at these points -- select the largest/smallest.
+
+
 

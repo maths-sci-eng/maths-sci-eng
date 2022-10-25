@@ -23,7 +23,7 @@
 <meta name="author" content="Dr Mark Callaway" />
 
 
-<meta name="date" content="2022-10-23" />
+<meta name="date" content="2022-10-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -238,26 +238,19 @@
 <p>Differentiation is the mathematical tool to answer questions about <em>rates of change</em>.</p>
 <p>The derivative of a real function <span class="math inline">\(f\)</span> at a point <span class="math inline">\((x,f(x))\)</span> is the slope of the tangent line at that point.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:tangentline"></span>
-<img src="figures/vector.png" alt="The tangent line to a graph."  />
+<img src="figures/tangent.png" alt="The tangent line to a graph." width="50%" />
 <p class="caption">
 Figure 11.1: The tangent line to a graph.
 </p>
 </div>
 <p>To find this gradient, we start by approximating the tangent line by taking a secant line through the point <span class="math inline">\((x,f(x))\)</span> and a point <span class="math inline">\((x+h,f(x+h))\)</span> with <span class="math inline">\(h\)</span> a small number.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:secantline"></span>
-<img src="figures/vector.png" alt="A secant line through $(x,f(x))$ and a point $(x+h,f(x+h))$."  />
+<img src="figures/secant.png" alt="A secant line through $(x,f(x))$ and a point $(x+h,f(x+h))$." width="50%" />
 <p class="caption">
 Figure 11.2: A secant line through <span class="math inline">\((x,f(x))\)</span> and a point <span class="math inline">\((x+h,f(x+h))\)</span>.
 </p>
 </div>
-<p>Now if we take <span class="math inline">\(h\to 0\)</span>, that is <span class="math inline">\(h\)</span> becomes vanishingly small, the second point approaches <span class="math inline">\((x,f(x))\)</span>. Then the gradient of the secant line converges to the gradient of the tangent line.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:secantconverge"></span>
-<img src="figures/vector.png" alt="Convergence to the tanget line."  />
-<p class="caption">
-Figure 11.3: Convergence to the tanget line.
-</p>
-</div>
-<p>The gradient of the secant line is:
+<p>Now if we take <span class="math inline">\(h\to 0\)</span>, that is <span class="math inline">\(h\)</span> becomes vanishingly small, the second point approaches <span class="math inline">\((x,f(x))\)</span>. Then the gradient of the secant line converges to the gradient of the tangent line. The gradient of the secant line is:
 <span class="math display">\[
 \frac{\Delta y}{\Delta x}=\frac{f(x+h)-f(x)}{h}.
 \]</span></p>
@@ -418,9 +411,9 @@ f_2(x)&amp;=-\sqrt{1-x^2} &amp;-1&lt; x &lt; 1
 \end{align*}\]</span>
 which describe the upper and lower halves of the circle, respectively.
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:circlediff"></span>
-<img src="figures/vector.png" alt="The unit circle in the plane."  />
+<img src="figures/circle.png" alt="The unit circle in the plane." width="50%" />
 <p class="caption">
-Figure 11.4: Functions describing the upper an lower parts of the circle
+Figure 11.3: Functions describing the upper an lower parts of the circle
 </p>
 </div>
 <p>Then to obtain the derivative at any point on the circle (except <span class="math inline">\((-1,0),(1,0)\)</span>), we can calculate the derivative of the relevant function <span class="math inline">\(f_1\)</span> or <span class="math inline">\(f_2\)</span>:
@@ -492,7 +485,12 @@ then differentiate implicitly:
 \]</span>
 is said to be represented <em>parametrically</em> by <span class="math inline">\(u\)</span> and <span class="math inline">\(v\)</span>, and the pair of functions <span class="math inline">\(u\)</span> and <span class="math inline">\(v\)</span> are called a parametric representation of the curve.</p>
 <p>We can think of such a curve as being the path traced out by a particle moving in the plane; at time <span class="math inline">\(t\)</span> the particle is at the position with coordinates <span class="math inline">\((u(t),v(t))\)</span>. A parametric curve is a function from the real numbers into the plane, given by <span class="math inline">\(F(t)=(u(t),y(t))\)</span>. Such curves will generally not be the graph of a function (due to being multivalued for a given <span class="math inline">\(x\)</span>-coordinate).</p>
-<p><code>{r parametriccurve, fig.cap = "The parametric curve given by $x(\\theta)=4\\sin(\\theta)+2\\sin(3\\theta)$ and $y(\\theta)=4\\cos(\\theta)+2\\cos(3\\theta).", fig.alt = "The parametric curve given by $x(\\theta)=4\\sin(\\theta)+2\\sin(3\\theta)$ and $y(\\theta)=4\\cos(\\theta)+2\\cos(3\\theta)." knitr::include_graphics(""figures/vector.png)</code></p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:parametriccurve"></span>
+<img src="figures/parametric.png" alt="The parametric curve given by $x(\theta)=4\sin(\theta)+2\sin(3\theta)$ and $y(\theta)=4\cos(\theta)+2\cos(3\theta)$." width="50%" />
+<p class="caption">
+Figure 11.4: The parametric curve given by <span class="math inline">\(x(\theta)=4\sin(\theta)+2\sin(3\theta)\)</span> and <span class="math inline">\(y(\theta)=4\cos(\theta)+2\cos(3\theta)\)</span>.
+</p>
+</div>
 <p>How do we differentiate such a curve?</p>
 <p>Suppose that <span class="math inline">\({x=u(t)}\)</span>, <span class="math inline">\({y=v(t)}\)</span> is a parametric representation of a curve, and that <span class="math inline">\(u&#39;\neq 0\)</span> on some interval. Then on this interval the curve lies on the graph of a function <span class="math inline">\(f\)</span>, and at the point <span class="math inline">\(x=u(t)\)</span>
 <span class="math display">\[

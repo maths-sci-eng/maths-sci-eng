@@ -23,7 +23,7 @@
 <meta name="author" content="Dr Mark Callaway" />
 
 
-<meta name="date" content="2022-10-23" />
+<meta name="date" content="2022-10-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -261,7 +261,7 @@
 <h2><span class="header-section-number">12.2</span> Points of Inflection<a href="applications-of-differentiation.html#points-of-inflection" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>An <em>inflection point</em> <span class="math inline">\(x=a\)</span> is a point where the tangent line to a graph of a function <span class="math inline">\(f\)</span> at <span class="math inline">\((a,f(a))\)</span> crosses the graph at <span class="math inline">\((a,f(a))\)</span>. This corresponds to a point where the graph changes from being convex to concave (or vice versa).</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:inflec"></span>
-<img src="figures/vector.png" alt="Inflection points"  />
+<img src="figures/inflection.png" alt="Inflection points" width="50%" />
 <p class="caption">
 Figure 12.1: Inflection points
 </p>
@@ -294,13 +294,45 @@ Figure 12.1: Inflection points
 <li>the value of <span class="math inline">\(f(0)\)</span>, i.e. where the graph crosses the <span class="math inline">\(y\)</span>-axis</li>
 <li>the critical points of <span class="math inline">\(f\)</span> (possibly local maxima/minima, inflection points) and the value of <span class="math inline">\(f\)</span> at these critical points</li>
 <li>the sign of <span class="math inline">\(f&#39;\)</span></li>
-<li>the location and nature of any vertical asymptotes (considering left and right hand limits)</li>
-<li>the behaviour of <span class="math inline">\(\lim\limits_{x\to\pm\infty}f(x)\)</span> (possibly horizontal or oblique asymptotes)</li>
+<li>the location and nature of any vertical asymptotes</li>
 <li>if the function is periodic</li>
 </ol>
 </div>
 <div id="optimisation" class="section level2 hasAnchor" number="12.5">
 <h2><span class="header-section-number">12.5</span> Optimisation<a href="applications-of-differentiation.html#optimisation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Optimisation is the process of finding the “best” inputs, that maximise or minimise some objective function. For suitable objective functions we can use our derivative tests to find these inputs.</p>
+<p>Here we shall look at an example and give a general method for solving such problems.</p>
+<div class="example">
+<p><span id="exm:optimise" class="example"><strong>Example 12.1  (A fencing problem) </strong></span>A rectangular storage compound needs to be built on a building site. An existing wall is to be used as one side of the compound and the other 3 walls will be built with fencing. There is 100m of fencing available. What is the maximum storage area that can be built and what are the lengths of the sides?</p>
+<p>Let the side opposite the wall have length <span class="math inline">\(y\)</span> and the other two sides length <span class="math inline">\(x\)</span>. The length of the fencing will be the perimeter of these three sides, hence</p>
+<p><span class="math display">\[2x+y=100 m\]</span></p>
+<p>We want to maximise the area, hence our objective function inputs</p>
+<p><span class="math display">\[A=x\times y.\]</span></p>
+<p>We use the first equation to find <span class="math inline">\(y\)</span> in terms of <span class="math inline">\(x\)</span>:</p>
+<p><span class="math display">\[y=100-2x\]</span></p>
+<p>then</p>
+<p><span class="math display">\[A=x(100-2x)=100x-2x^2.\]</span></p>
+<p>To maximise, we need to find the solution for <span class="math inline">\(\frac{dA}{dx}=0\)</span>:</p>
+<p><span class="math display">\[\frac{dA}{dx}=100-4x=0\quad\implies\quad x=25 m\]</span></p>
+<p>We check this is a maximum at <span class="math inline">\(x=25\)</span>. We have</p>
+<p><span class="math display">\[\frac{d^2A}{dx^2}=-4\]</span></p>
+<p>which is indeed negative, hence we have a maximum at <span class="math inline">\(x=25\)</span>. Substituting back into our equations for <span class="math inline">\(y\)</span> and <span class="math inline">\(A\)</span> we have:
+<span class="math display">\[\begin{align*}
+x&amp;=25m\\
+y&amp;=50m\\
+A&amp;=1250 m^2.
+\end{align*}\]</span></p>
+</div>
+<p><strong>Methodology</strong></p>
+<ol style="list-style-type: decimal">
+<li>Obtain an expression for the quantity that must be maximised or minimised;</li>
+<li>Ensure that the expression is in terms of just <strong>one</strong> unknown variable;</li>
+<li>Get the resulting expression into a form that can be differentiated;</li>
+<li>Differentiate the function and set equal to zero;</li>
+<li>Solve for the unknown variable, i.e. find the critical points;</li>
+<li>Find the second derivative of the function and check which critical points are maxima/minima;</li>
+<li>Substite the points back into the objective function (in terms of the one variable) to find the values at these points – select the largest/smallest.</li>
+</ol>
 
 </div>
 </div>
