@@ -1,0 +1,26 @@
+# Exercise Set 7 {.unlisted .unnumbered}
+
+
+1. Write down the $2\times 2$ matrix $R_\pi$ that rotates a vector anticlockwise by $\pi$. Apply this to a vector $\mathbf{v}=\begin{smallmatrix}v_1\\v_2\end{smallmatrix}$.
+
+1. Write down the $2\times 2$ matrix $M_x$ that reflects a vector in the $x$-axis. Similarly write down the $2\times 2$ matrix $M_y$ that reflects a vector in the $y$-axis. Multiply these two matrices to find the transformation that first reflects in the $x$-axis and then reflects in the $y$-axis. Compare this to the matrix $R_\pi$.
+
+1. 
+
+
+non-commutative matrices
+
+verify 2x2 matrix inverse formula works in general
+
+determinants
+
+
+path counting
+
+computer graphics
+
+1. A population of Wildebeest can be classified into two life stages: juvenile and adult. Each year $60\%$ of the juveniles survive to become adults, adults give birth on average to $0.5$ juvelines and $70\%$ of adults survive the year. If there are $200$ juveniles and $200$ adults in one year, what is the long term population of juveniles and adults? What is the long term ratio of juveniles to adults?
+
+    How about in the case when the adult survival rate increases to $80\%$? In this case also give the long term growth rate of the juvenile and adult populations. What happens in the case that the adult survival rate drops to $60\%$?
+
+    (Save some time and use a computer to find the eigenvalues and eigenvectors for this question!)

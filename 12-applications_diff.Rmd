@@ -98,7 +98,7 @@ Let the side opposite the wall have length $y$ and the other two sides length $x
 
 $$2x+y=100 m$$
 
-We want to maximise the area, hence our objective function inputs
+We want to maximise the area, hence our objective function is
 
 $$A=x\times y.$$
 
