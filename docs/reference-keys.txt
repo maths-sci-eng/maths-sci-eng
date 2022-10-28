@@ -127,6 +127,9 @@ fig:inflec
 thm:3rdinflectest
 thm:hoderivtest
 exm:optimise
+def:label
+fig:geomsq
+exm:infiniteseries
 fig:complexsketch
 foundations
 numbers
@@ -221,3 +224,9 @@ points-of-inflection
 higher-order-derivative-test
 graph-sketching
 optimisation
+sequences
+limits-of-sequences
+series
+sigma-notation
+infinite-series
+taylor-series

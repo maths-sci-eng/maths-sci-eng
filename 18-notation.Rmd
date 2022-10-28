@@ -5,6 +5,8 @@ A summary of notation used in these notes.
 
 "$A \implies B$" is read as "statement $A$ implies statement $B$".
 
+$\approx$ means approximately equal to.
+
 
 We often use Greek letters for mathematical symbols.
 

@@ -1,0 +1,140 @@
+# Series
+
+A *series* is the sum of the terms of a sequence.
+
+
+## Sigma Notation
+
+Given a sequence $a_1,a_2,a_3,\dotsc$ the sum of the first $n$ terms is written
+$$
+\sum_{k=1}^{n}a_k=a_1+a_2+\dotsb+a_n
+$$
+(read as "the sum of $a_k$ from $k=1$ to $n$"). Such a sum is called a *series*.
+
+Note that the summation index $k$ is a *dummy index* --- we can happily replace it with another label. We can also shift the starting value of the index, that is, we can *reindex* the series; this may be useful to give a simpler expression for the series. For example, we can equivalently write the above series as
+\begin{align*}
+\sum_{j=1}^{n}a_j,&&\sum_{k=0}^{n-1}a_{k+1},&&\sum_{p=100}^{n+99}a_{p-99},
+\end{align*}
+
+since these all sum the same values from the sequence.
+
+## Infinite Series
+
+Consider the sequence defined by $a_n=\dfrac{1}{2^n}$. What is the sum of all the terms of this sequence? That is, the sum
+$$
+\frac{1}{2}+\frac{1}{2^2}+\frac{1}{2^3}+\frac{1}{2^4}+\dotsb=\frac{1}{2}+\frac{1}{4}+\frac{1}{8}+\frac{1}{16}+\dotsb
+$$
+We can view the terms of the sequence geometrically as fractions of a square with total area one.
+
+```{r geomsq, echo=FALSE, fig.cap = "The series $\\sum_{n=1}^\\infty\\dfrac{1}{2^n}$ can be viewed as summing up parts of a square with total area one.", fig.alt = "A square that has been repeatedly divided in half.", out.width="50%"}
+knitr::include_graphics("figures/geomseriessq.png")
+```
+
+We are effectively summing up parts of the square, whereby we keep adding half of what is left. Since after an "infinite number" of terms we will have included all parts of the square, it looks like
+$$
+\frac{1}{2}+\frac{1}{2^2}+\frac{1}{2^3}+\frac{1}{2^4}+\dotsb=1.
+$$
+
+This example is a *geometric series*, which is a sum of a *geometric sequence*. Here we have first term $a=\frac{1}{2}$ and common ratio $r=\frac{1}{2}$. The sum of the first $n$ terms of a geometric series is (for $r\neq1$):
+$$
+S_n=\sum_{k=1}^{n}ar^{k-1}=\frac{a(1-r^n)}{1-r}
+$$
+so we have
+$$
+S_n=\frac{\dfrac{1}{2}\left(1-\dfrac{1}{2^n}\right)}{1-\dfrac{1}{2}}=\left(1-\dfrac{1}{2^n}\right).
+$$
+
+The sum of the first $n$ terms of a series is called the *$n^\text{th}$ partial sum* of the series. We define the sum of an infinite series to be the limit of the partial sums. In this example we have
+
+$$
+\lim\limits_{n\to\infty}S_n=\lim\limits_{n\to\infty}\left(1-\dfrac{1}{2^n}\right)=1.
+$$
+
+Infinite series can be convergent (sum to a finite value) or divergent (to $+\infty$ or $-\infty$, or oscillate).
+
+
+::: {.example #infiniteseries name="Some infinite series"}
+
+1. Consider the sum of the first $n$ natural numbers:
+    $$
+    T_n=\sum_{k=1}^{n}k=1+2+3+\dotsb +n
+    $$
+    This is an \emph{arithmetic series}, i.e. the sum of an arithmetic sequence. The partial sum can be written as the general formula
+    $$
+    T_n=\frac{n(n+1)}{2}.
+    $$
+    We have $\displaystyle\sum_{k=1}^\infty k=\lim\limits_{n\to\infty} T_n=\infty$,
+    and hence this infinite series diverges to infinity. Note that all arithmetic series diverge to $\pm\infty$ (why?).
+
+
+1. Let $a_n=(-1)^n$ and consider the infinite series $\sum_{n=1}^{\infty}a_n$. This is a geometric series with $a=-1$ and $r=-1$. We have the partial sums
+    \begin{align*}
+    S_1&=-1\\
+    S_2&=-1+1=0\\
+    S_3&=-1+1-1=-1
+    \end{align*}
+    with general formula
+    $$
+    S_n=
+    \begin{cases}
+    -1&\text{if $n$ is odd,}\\
+    0&\text{if $n$ is even.}
+    \end{cases}
+    $$
+    Hence $\lim\limits_{n\to\infty}S_n$ does not exist (it oscillates) and the infinite series diverges.
+
+1. We have seen an example of a convergent geometric series $\sum_{n=1}^\infty\frac{1}{2^n}=1$, a divergent geometric series $\sum_{n=1}^{\infty}(-1)^n$ which oscilates$. We can also have divergent series that diverge to $\pm\infty$. We'll now look at the general behaviour of a geometric series $\sum_{k=1}^{\infty}ar^{k-1}$. Recall that the partial sums are given by
+    $$
+    S_n=\sum_{k=1}^{n}ar^{k-1}=\frac{a(1-r^n)}{1-r}
+    $$
+    and note that the only term that depends on $n$ is $r^n$.
+    
+    If $-1< r <1$, then $r^n\to 0$ as $n\to infty$ and the sum will be convergent with
+    $$
+    S=\lim\limits_{n\to\infty}S_n=\frac{a}{1-r}
+    $$
+
+    If $r=1$ then the partial sums become $S_n=\sum_{k=1}^{n}a=na$, which clearly diverges to infinity.
+
+    If $r>1$, then $r^n$\to\infty$ and hence $S_n\to\infty$.
+
+    If $r=-1$, then we have a similar situation to the previous example with $S_n$ alternating between $+a$ and $-a$. The series oscillates (a type of divergence).
+
+    If $r<-1$ then we alternately add and subtract numbers which are getting bigger and bigger in absolute value, so the series oscillates between increasingly larger positive and negative values.
+
+
+1. The \textit{harmonic series}
+    $$
+    \sum_{n=1}^{\infty}\frac{1}{n}
+    $$
+    diverges to infinity, that is, $\lim\limits_{n\to\infty}\sum_{k=1}^{n}\frac{1}{k}=\infty$. To see this we collect together some terms
+    $$
+    \sum_{n=1}^{\infty}\frac{1}{n}=1+\frac{1}{2}+\left( \frac{1}{3}+\frac{1}{4}\right) +\left( \frac{1}{5}+\frac{1}{6}+\frac{1}{7}+\frac{1}{8}\right) +\dotsb
+    $$
+    and by comparing the terms in brackets with those in the following series, we can see that the harmonic series must be greater than this series
+    \begin{align*}
+    &1+\frac{1}{2}+\left( \frac{1}{4}+\frac{1}{4}\right) +\left( \frac{1}{8}+\frac{1}{8}+\frac{1}{8}+\frac{1}{8}\right) +\dotsb\\
+    &=1+\frac{1}{2}+\left( \frac{1}{2}\right) +\left(\frac{1}{2}\right) +\dotsb
+    \end{align*}
+    Since the second series clearly diverges to infinity, so must the harmonic series. It actually diverges incredibly slowly --- here are some of the partial sums:
+    $$
+    S_{10}\approx 2.93,\qquad S_{20}\approx 3.40,\qquad S_{1000}\approx 7.49,\qquad S_{100000}\approx 12.09
+    $$
+    This example shows in particular that even if the terms are shrinking towards zero the series need not converge --- the speed at which they shrink is also important. On the other hand, if the terms in a series *don't* shrink to zero then the series will obviously diverge!
+    
+1. Interestingly a series of the form
+    $$
+    \sum_{n=1}^{\infty}\frac{1}{n^p}
+    $$
+    where $p$ is a real constant diverges if $p\leq 1$ and converges if $p>1$, so the terms $\frac{1}{n}$ in the harmonic series are decreasing only just too slowly to give a convergent series.
+    In particular it can be shown that
+    $$
+    \sum_{n=1}^{\infty}\frac{1}{n^2}=\frac{\pi}{6}
+    $$
+    This curious result (what has a sum of fractions got to do with $\pi$???) was found by Leonhard Euler in 1734: see [The Basel Problem](https://en.wikipedia.org/wiki/Basel_problem). It is not easy to solve with the techniques considered in these notes and is best tackeled with more powerful mathematical tools, like *Fourier Series*.
+
+:::
+
+
+## Taylor Series
+

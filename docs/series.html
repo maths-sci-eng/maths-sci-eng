@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Exercise Set 4 | Mathematics for Scientists and Engineers</title>
+  <title>Chapter 14 Series | Mathematics for Scientists and Engineers</title>
   <meta name="description" content="Mathematics Lecture Notes for UoE Penryn Science and Engineering Disciplines." />
   <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Exercise Set 4 | Mathematics for Scientists and Engineers" />
+  <meta property="og:title" content="Chapter 14 Series | Mathematics for Scientists and Engineers" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="Mathematics Lecture Notes for UoE Penryn Science and Engineering Disciplines." />
   <meta name="github-repo" content="maths-sci-eng/maths-sci-eng.github.io" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Exercise Set 4 | Mathematics for Scientists and Engineers" />
+  <meta name="twitter:title" content="Chapter 14 Series | Mathematics for Scientists and Engineers" />
   
   <meta name="twitter:description" content="Mathematics Lecture Notes for UoE Penryn Science and Engineering Disciplines." />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="exercise-set-3-answers.html"/>
-<link rel="next" href="exercise-set-4-answers.html"/>
+<link rel="prev" href="sequences.html"/>
+<link rel="next" href="blank3.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -243,85 +243,136 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="exercise-set-4" class="section level1 unnumbered hasAnchor">
-<h1>Exercise Set 4<a href="exercise-set-4.html#exercise-set-4" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>These exercises cover the topic of Complex Numbers.</p>
+<div id="series" class="section level1 hasAnchor" number="14">
+<h1><span class="header-section-number">Chapter 14</span> Series<a href="series.html#series" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>A <em>series</em> is the sum of the terms of a sequence.</p>
+<div id="sigma-notation" class="section level2 hasAnchor" number="14.1">
+<h2><span class="header-section-number">14.1</span> Sigma Notation<a href="series.html#sigma-notation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Given a sequence <span class="math inline">\(a_1,a_2,a_3,\dotsc\)</span> the sum of the first <span class="math inline">\(n\)</span> terms is written
+<span class="math display">\[
+\sum_{k=1}^{n}a_k=a_1+a_2+\dotsb+a_n
+\]</span>
+(read as “the sum of <span class="math inline">\(a_k\)</span> from <span class="math inline">\(k=1\)</span> to <span class="math inline">\(n\)</span>”). Such a sum is called a <em>series</em>.</p>
+<p>Note that the summation index <span class="math inline">\(k\)</span> is a <em>dummy index</em> — we can happily replace it with another label. We can also shift the starting value of the index, that is, we can <em>reindex</em> the series; this may be useful to give a simpler expression for the series. For example, we can equivalently write the above series as
+<span class="math display">\[\begin{align*}
+\sum_{j=1}^{n}a_j,&amp;&amp;\sum_{k=0}^{n-1}a_{k+1},&amp;&amp;\sum_{p=100}^{n+99}a_{p-99},
+\end{align*}\]</span></p>
+<p>since these all sum the same values from the sequence.</p>
+</div>
+<div id="infinite-series" class="section level2 hasAnchor" number="14.2">
+<h2><span class="header-section-number">14.2</span> Infinite Series<a href="series.html#infinite-series" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Consider the sequence defined by <span class="math inline">\(a_n=\dfrac{1}{2^n}\)</span>. What is the sum of all the terms of this sequence? That is, the sum
+<span class="math display">\[
+\frac{1}{2}+\frac{1}{2^2}+\frac{1}{2^3}+\frac{1}{2^4}+\dotsb=\frac{1}{2}+\frac{1}{4}+\frac{1}{8}+\frac{1}{16}+\dotsb
+\]</span>
+We can view the terms of the sequence geometrically as fractions of a square with total area one.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:geomsq"></span>
+<img src="figures/geomseriessq.png" alt="A square that has been repeatedly divided in half." width="50%" />
+<p class="caption">
+Figure 14.1: The series <span class="math inline">\(\sum_{n=1}^\infty\dfrac{1}{2^n}\)</span> can be viewed as summing up parts of a square with total area one.
+</p>
+</div>
+<p>We are effectively summing up parts of the square, whereby we keep adding half of what is left. Since after an “infinite number” of terms we will have included all parts of the square, it looks like
+<span class="math display">\[
+\frac{1}{2}+\frac{1}{2^2}+\frac{1}{2^3}+\frac{1}{2^4}+\dotsb=1.
+\]</span></p>
+<p>This example is a <em>geometric series</em>, which is a sum of a <em>geometric sequence</em>. Here we have first term <span class="math inline">\(a=\frac{1}{2}\)</span> and common ratio <span class="math inline">\(r=\frac{1}{2}\)</span>. The sum of the first <span class="math inline">\(n\)</span> terms of a geometric series is (for <span class="math inline">\(r\neq1\)</span>):
+<span class="math display">\[
+S_n=\sum_{k=1}^{n}ar^{k-1}=\frac{a(1-r^n)}{1-r}
+\]</span>
+so we have
+<span class="math display">\[
+S_n=\frac{\dfrac{1}{2}\left(1-\dfrac{1}{2^n}\right)}{1-\dfrac{1}{2}}=\left(1-\dfrac{1}{2^n}\right).
+\]</span></p>
+<p>The sum of the first <span class="math inline">\(n\)</span> terms of a series is called the <em><span class="math inline">\(n^\text{th}\)</span> partial sum</em> of the series. We define the sum of an infinite series to be the limit of the partial sums. In this example we have</p>
+<p><span class="math display">\[
+\lim\limits_{n\to\infty}S_n=\lim\limits_{n\to\infty}\left(1-\dfrac{1}{2^n}\right)=1.
+\]</span></p>
+<p>Infinite series can be convergent (sum to a finite value) or divergent (to <span class="math inline">\(+\infty\)</span> or <span class="math inline">\(-\infty\)</span>, or oscillate).</p>
+<div class="example">
 <ol style="list-style-type: decimal">
-<li><p>Let <span class="math inline">\(u=2+3i\)</span> and <span class="math inline">\(v=5+8i\)</span>. Determine the following.</p>
-<ol style="list-style-type: lower-alpha">
-<li><span class="math inline">\(u+v\)</span></li>
-<li><span class="math inline">\(u-v\)</span></li>
-<li><span class="math inline">\(uv\)</span></li>
-<li><span class="math inline">\(vu\)</span></li>
-<li><span class="math inline">\(\frac{u}{v}\)</span></li>
-<li><span class="math inline">\(\frac{v}{u}\)</span></li>
-<li><span class="math inline">\(u^2\)</span></li>
-<li><span class="math inline">\(v^2\)</span></li>
-<li><span class="math inline">\(u^2+v^2\)</span></li>
-</ol></li>
-<li><p>State the complex conjugates of the following numbers. Also caclulate their modulus.</p>
-<ol style="list-style-type: lower-alpha">
-<li><span class="math inline">\(3-4i\)</span></li>
-<li><span class="math inline">\(2+2i\)</span></li>
-<li><span class="math inline">\(2+15i\)</span></li>
-<li><span class="math inline">\(3i\)</span></li>
-<li><span class="math inline">\(i\)</span></li>
-<li><span class="math inline">\(5\)</span></li>
-</ol></li>
-<li><p>Let <span class="math inline">\(z=3-i\)</span>. Find <span class="math inline">\(z^2+7z+13\)</span> in Cartesian form.</p></li>
-<li><p>Find the roots of the following quadratic equations.</p>
-<ol style="list-style-type: lower-alpha">
-<li><span class="math inline">\(z^2+2z+26=0\)</span></li>
-<li><span class="math inline">\(z^2-2z+3=0\)</span></li>
-<li><span class="math inline">\(3z^2-7z+13=0\)</span></li>
-</ol></li>
-<li><p>Express the following complex numbers in polar form and exponential form.</p>
-<ol style="list-style-type: lower-alpha">
-<li><span class="math inline">\(1+i\)</span></li>
-<li><span class="math inline">\(-1+i\)</span></li>
-<li><span class="math inline">\(\sqrt{3}-i\)</span></li>
-<li><span class="math inline">\(z_1=2-3i\)</span></li>
-<li><span class="math inline">\(z_2=3+4i\)</span></li>
-<li><span class="math inline">\(\frac{z_1-2}{z_2}\)</span></li>
-<li><span class="math inline">\(z_1z_2-\frac{z_1-z_2}{z_2}\)</span></li>
-<li><span class="math inline">\(w_1=-\sqrt{2}+\sqrt{2}i\)</span></li>
-<li><span class="math inline">\(w_2=-\frac{1}{2}+\frac{\sqrt{3}}{2}i\)</span></li>
-<li><span class="math inline">\(w_1w_2\)</span></li>
-<li><span class="math inline">\(\frac{w_1}{w_2}\)</span></li>
-</ol></li>
-<li><p>Express the following complex numbers in Cartesian form.</p>
-<ol style="list-style-type: lower-alpha">
-<li><span class="math inline">\(2e^{i\frac{\pi}{12}}\)</span></li>
-<li><span class="math inline">\(5e^{i 23^\circ}\)</span></li>
-<li><span class="math inline">\(2e^{i (-45^\circ)}\)</span></li>
-</ol></li>
-<li><p>Find the following roots and express them in Cartesian form.</p>
-<ol style="list-style-type: lower-alpha">
-<li><span class="math inline">\(1^\frac{1}{3}\)</span></li>
-<li><span class="math inline">\(1^\frac{1}{4}\)</span></li>
-<li>The cube roots of <span class="math inline">\(\sqrt{2}-\sqrt{2}i\)</span></li>
-<li>The square roots of <span class="math inline">\(3-4i\)</span></li>
-</ol></li>
-<li><p>Sketch the following complex numbers in the complex plane.</p>
-<ol style="list-style-type: lower-alpha">
-<li><span class="math inline">\(2+3i\)</span></li>
-<li><span class="math inline">\(-1-i\)</span></li>
-<li><span class="math inline">\(-1+i\)</span></li>
-<li><span class="math inline">\(-2i\)</span></li>
-<li><span class="math inline">\(-3\)</span></li>
-</ol></li>
-<li><p>What is <span class="math inline">\(i^i\)</span> in Cartesian form?</p></li>
-<li><p>Find all complex numbers <span class="math inline">\(z\)</span> such that <span class="math inline">\(\overline{z}=z^2\)</span>.</p></li>
+<li><span id="exm:infiniteseries" class="example"><strong>Example 14.1  (Some infinite series) </strong></span></li>
+<li><p>Consider the sum of the first <span class="math inline">\(n\)</span> natural numbers:
+<span class="math display">\[
+T_n=\sum_{k=1}^{n}k=1+2+3+\dotsb +n
+\]</span>
+This is an , i.e. the sum of an arithmetic sequence. The partial sum can be written as the general formula
+<span class="math display">\[
+T_n=\frac{n(n+1)}{2}.
+\]</span>
+We have <span class="math inline">\(\displaystyle\sum_{k=1}^\infty k=\lim\limits_{n\to\infty} T_n=\infty\)</span>,
+and hence this infinite series diverges to infinity. Note that all arithmetic series diverge to <span class="math inline">\(\pm\infty\)</span> (why?).</p></li>
+<li><p>Let <span class="math inline">\(a_n=(-1)^n\)</span> and consider the infinite series <span class="math inline">\(\sum_{n=1}^{\infty}a_n\)</span>. This is a geometric series with <span class="math inline">\(a=-1\)</span> and <span class="math inline">\(r=-1\)</span>. We have the partial sums
+<span class="math display">\[\begin{align*}
+S_1&amp;=-1\\
+S_2&amp;=-1+1=0\\
+S_3&amp;=-1+1-1=-1
+\end{align*}\]</span>
+with general formula
+<span class="math display">\[
+S_n=
+\begin{cases}
+-1&amp;\text{if $n$ is odd,}\\
+0&amp;\text{if $n$ is even.}
+\end{cases}
+\]</span>
+Hence <span class="math inline">\(\lim\limits_{n\to\infty}S_n\)</span> does not exist (it oscillates) and the infinite series diverges.</p></li>
+<li><p>We have seen an example of a convergent geometric series <span class="math inline">\(\sum_{n=1}^\infty\frac{1}{2^n}=1\)</span>, a divergent geometric series <span class="math inline">\(\sum_{n=1}^{\infty}(-1)^n\)</span> which oscilates$. We can also have divergent series that diverge to <span class="math inline">\(\pm\infty\)</span>. We’ll now look at the general behaviour of a geometric series <span class="math inline">\(\sum_{k=1}^{\infty}ar^{k-1}\)</span>. Recall that the partial sums are given by
+<span class="math display">\[
+S_n=\sum_{k=1}^{n}ar^{k-1}=\frac{a(1-r^n)}{1-r}
+\]</span>
+and note that the only term that depends on <span class="math inline">\(n\)</span> is <span class="math inline">\(r^n\)</span>.</p>
+<p>If <span class="math inline">\(-1&lt; r &lt;1\)</span>, then <span class="math inline">\(r^n\to 0\)</span> as <span class="math inline">\(n\to infty\)</span> and the sum will be convergent with
+<span class="math display">\[
+S=\lim\limits_{n\to\infty}S_n=\frac{a}{1-r}
+\]</span></p>
+<p>If <span class="math inline">\(r=1\)</span> then the partial sums become <span class="math inline">\(S_n=\sum_{k=1}^{n}a=na\)</span>, which clearly diverges to infinity.</p>
+<p>If <span class="math inline">\(r&gt;1\)</span>, then <span class="math inline">\(r^n\)</span>$ and hence <span class="math inline">\(S_n\to\infty\)</span>.</p>
+<p>If <span class="math inline">\(r=-1\)</span>, then we have a similar situation to the previous example with <span class="math inline">\(S_n\)</span> alternating between <span class="math inline">\(+a\)</span> and <span class="math inline">\(-a\)</span>. The series oscillates (a type of divergence).</p>
+<p>If <span class="math inline">\(r&lt;-1\)</span> then we alternately add and subtract numbers which are getting bigger and bigger in absolute value, so the series oscillates between increasingly larger positive and negative values.</p></li>
+<li><p>The
+<span class="math display">\[
+\sum_{n=1}^{\infty}\frac{1}{n}
+\]</span>
+diverges to infinity, that is, <span class="math inline">\(\lim\limits_{n\to\infty}\sum_{k=1}^{n}\frac{1}{k}=\infty\)</span>. To see this we collect together some terms
+<span class="math display">\[
+\sum_{n=1}^{\infty}\frac{1}{n}=1+\frac{1}{2}+\left( \frac{1}{3}+\frac{1}{4}\right) +\left( \frac{1}{5}+\frac{1}{6}+\frac{1}{7}+\frac{1}{8}\right) +\dotsb
+\]</span>
+and by comparing the terms in brackets with those in the following series, we can see that the harmonic series must be greater than this series
+<span class="math display">\[\begin{align*}
+&amp;1+\frac{1}{2}+\left( \frac{1}{4}+\frac{1}{4}\right) +\left( \frac{1}{8}+\frac{1}{8}+\frac{1}{8}+\frac{1}{8}\right) +\dotsb\\
+&amp;=1+\frac{1}{2}+\left( \frac{1}{2}\right) +\left(\frac{1}{2}\right) +\dotsb
+\end{align*}\]</span>
+Since the second series clearly diverges to infinity, so must the harmonic series. It actually diverges incredibly slowly — here are some of the partial sums:
+<span class="math display">\[
+S_{10}\approx 2.93,\qquad S_{20}\approx 3.40,\qquad S_{1000}\approx 7.49,\qquad S_{100000}\approx 12.09
+\]</span>
+This example shows in particular that even if the terms are shrinking towards zero the series need not converge — the speed at which they shrink is also important. On the other hand, if the terms in a series <em>don’t</em> shrink to zero then the series will obviously diverge!</p></li>
+<li><p>Interestingly a series of the form
+<span class="math display">\[
+\sum_{n=1}^{\infty}\frac{1}{n^p}
+\]</span>
+where <span class="math inline">\(p\)</span> is a real constant diverges if <span class="math inline">\(p\leq 1\)</span> and converges if <span class="math inline">\(p&gt;1\)</span>, so the terms <span class="math inline">\(\frac{1}{n}\)</span> in the harmonic series are decreasing only just too slowly to give a convergent series.
+In particular it can be shown that
+<span class="math display">\[
+\sum_{n=1}^{\infty}\frac{1}{n^2}=\frac{\pi}{6}
+\]</span>
+This curious result (what has a sum of fractions got to do with <span class="math inline">\(\pi\)</span>???) was found by Leonhard Euler in 1734: see <a href="https://en.wikipedia.org/wiki/Basel_problem">The Basel Problem</a>. It is not easy to solve with the techniques considered in these notes and is best tackeled with more powerful mathematical tools, like <em>Fourier Series</em>.</p></li>
 </ol>
+</div>
+</div>
+<div id="taylor-series" class="section level2 hasAnchor" number="14.3">
+<h2><span class="header-section-number">14.3</span> Taylor Series<a href="series.html#taylor-series" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="exercise-set-3-answers.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="exercise-set-4-answers.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="sequences.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="blank3.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -342,7 +393,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/maths-sci-eng/maths-sci-eng.github.io/edit/master/26-exercises04.Rmd",
+"link": "https://github.com/maths-sci-eng/maths-sci-eng.github.io/edit/master/14-series.Rmd",
 "text": "Edit"
 },
 "history": {
