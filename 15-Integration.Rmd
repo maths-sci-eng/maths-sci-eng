@@ -1,0 +1,27 @@
+# Integration {.unlisted .unnumbered}
+
+Integration is (almost) the reverse process of differentiation. Geometrically, differentiation corresponds to finding the gradient of a tangent line. Integration then corresponds to finding the area under a curve. The precise relationship between differentation and integration will be given later by the *Fundamental Theorem of Calculus*.
+
+Consider the following function
+$$f(x)=x^2+5.$$
+Its derivative is
+$$\frac{df(x)}{dx}=2x.$$
+If integration is the reverse process of differentation, then we might expect the integral of $2x$ to be $x^2+5$. However, note that the derivative of
+$$g(x)=x^2-3x$$
+is also
+$$\frac{dg(x)}{dx}=2x.$$
+Hence, it would be impossible to know if $f$ or $g$ was the original function. In fact, any function of the form
+$$2x+C$
+where $C$ is a constant would yield the same derivative. Therefore, the best we can do is to say the integral of $2x$ has the form $x^2+C$. More generally, the graphs of all functions of the form $f(x)+C$ for some particular function $f$ and various constants $C$ are just vertical translations of one another, so we can see they would indeed have the same gradient at any point $x$. We say that $f(x)+C$ is the *indefinite integral* of $\frac{df(x)}{dx}$.
+
+
+The operation of taking the indefinite integral of a function $f(x)$ is written
+$$\int f(x) dx$$
+which is read as "the integral of $f(x)$ with respect to $x$", where $\int$ denotes taking the integral and $dx$ specifies that we are integrating with respect to the variable $x$ (important as some functions might have more than one variable).
+
+Areas under curves
+
+
+
+
+

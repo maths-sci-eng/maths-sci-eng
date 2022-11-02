@@ -130,7 +130,13 @@ exm:optimise
 def:label
 fig:geomsq
 exm:infiniteseries
+fig:linearapprox
+exm:taylorpoly
+fig:taylorsin
+thm:label
 fig:complexsketch
+eq:vecwildebeest
+eq:asymp
 foundations
 numbers
 algebra
@@ -224,9 +230,11 @@ points-of-inflection
 higher-order-derivative-test
 graph-sketching
 optimisation
-sequences
 limits-of-sequences
-series
 sigma-notation
 infinite-series
+power-series
 taylor-series
+linearisation
+taylor-polynomials
+taylor-series-1

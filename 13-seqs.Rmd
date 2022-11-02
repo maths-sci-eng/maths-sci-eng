@@ -1,4 +1,5 @@
-# Sequences
+# Sequences {.unlisted .unnumbered}
+
 
 A *sequence* is an ordered list of objects (usually numbers, but also vectors, matrices or any other mathematical object). It may be finite or infinite. Some sequences of numbers:
 

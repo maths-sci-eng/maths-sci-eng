@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 13 Sequences | Mathematics for Scientists and Engineers</title>
+  <title>Sequences | Mathematics for Scientists and Engineers</title>
   <meta name="description" content="Mathematics Lecture Notes for UoE Penryn Science and Engineering Disciplines." />
   <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 13 Sequences | Mathematics for Scientists and Engineers" />
+  <meta property="og:title" content="Sequences | Mathematics for Scientists and Engineers" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="Mathematics Lecture Notes for UoE Penryn Science and Engineering Disciplines." />
   <meta name="github-repo" content="maths-sci-eng/maths-sci-eng.github.io" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 13 Sequences | Mathematics for Scientists and Engineers" />
+  <meta name="twitter:title" content="Sequences | Mathematics for Scientists and Engineers" />
   
   <meta name="twitter:description" content="Mathematics Lecture Notes for UoE Penryn Science and Engineering Disciplines." />
   
@@ -23,7 +23,7 @@
 <meta name="author" content="Dr Mark Callaway" />
 
 
-<meta name="date" content="2022-10-28" />
+<meta name="date" content="2022-11-02" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -203,16 +203,6 @@
 <li class="chapter" data-level="12.4" data-path="applications-of-differentiation.html"><a href="applications-of-differentiation.html#graph-sketching"><i class="fa fa-check"></i><b>12.4</b> Graph Sketching</a></li>
 <li class="chapter" data-level="12.5" data-path="applications-of-differentiation.html"><a href="applications-of-differentiation.html#optimisation"><i class="fa fa-check"></i><b>12.5</b> Optimisation</a></li>
 </ul></li>
-<li class="chapter" data-level="13" data-path="sequences.html"><a href="sequences.html"><i class="fa fa-check"></i><b>13</b> Sequences</a>
-<ul>
-<li class="chapter" data-level="13.1" data-path="sequences.html"><a href="sequences.html#limits-of-sequences"><i class="fa fa-check"></i><b>13.1</b> Limits of Sequences</a></li>
-</ul></li>
-<li class="chapter" data-level="14" data-path="series.html"><a href="series.html"><i class="fa fa-check"></i><b>14</b> Series</a>
-<ul>
-<li class="chapter" data-level="14.1" data-path="series.html"><a href="series.html#sigma-notation"><i class="fa fa-check"></i><b>14.1</b> Sigma Notation</a></li>
-<li class="chapter" data-level="14.2" data-path="series.html"><a href="series.html#infinite-series"><i class="fa fa-check"></i><b>14.2</b> Infinite Series</a></li>
-<li class="chapter" data-level="14.3" data-path="series.html"><a href="series.html#taylor-series"><i class="fa fa-check"></i><b>14.3</b> Taylor Series</a></li>
-</ul></li>
 <li class="chapter" data-level="" data-path="notation.html"><a href="notation.html"><i class="fa fa-check"></i>Notation</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="chapter" data-level="" data-path="exercise-set-1.html"><a href="exercise-set-1.html"><i class="fa fa-check"></i>Exercise Set 1</a></li>
@@ -243,8 +233,8 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="sequences" class="section level1 hasAnchor" number="13">
-<h1><span class="header-section-number">Chapter 13</span> Sequences<a href="sequences.html#sequences" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="sequences" class="section level1 unlisted unnumbered hasAnchor">
+<h1>Sequences<a href="sequences.html#sequences" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>A <em>sequence</em> is an ordered list of objects (usually numbers, but also vectors, matrices or any other mathematical object). It may be finite or infinite. Some sequences of numbers:</p>
 <ul>
 <li>A finite sequence: <span class="math inline">\(2, 4, 6, 8\)</span></li>
@@ -282,8 +272,8 @@ For example,
 <span class="math display">\[2, 1, \frac{1}{4}, \frac{1}{8},\dotsc\]</span>
 is given by the formula
 <span class="math display">\[a_n=2\times \left(\frac{1}{2}\right)^{n-1}.\]</span></p>
-<div id="limits-of-sequences" class="section level2 hasAnchor" number="13.1">
-<h2><span class="header-section-number">13.1</span> Limits of Sequences<a href="sequences.html#limits-of-sequences" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="limits-of-sequences" class="section level2 hasAnchor" number="12.6">
+<h2><span class="header-section-number">12.6</span> Limits of Sequences<a href="sequences.html#limits-of-sequences" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Consider the sequence defined by the following formula:
 <span class="math display">\[
 a_n=\frac{n}{n+1}.
@@ -320,7 +310,7 @@ a_n=(-1)^{n+1}
 has terms <span class="math inline">\(1,-1,1,-1,1,\dotsc\)</span> and does not converge to a single value; because it does not converge it <em>diverges</em>, but because it does not simply grow to <span class="math inline">\(+\infty\)</span> or <span class="math inline">\(-\infty\)</span> we say that it .</p>
 <p>The formal definition of a limit for a sequence is:</p>
 <div class="definition">
-<p><span id="def:label" class="definition"><strong>Definition 13.1  (definition name) </strong></span>Let <span class="math inline">\((a_n)_{n=1}^{\infty}\)</span> be a sequence of real numbers. We say that the sequence has <em>limit</em> <span class="math inline">\(L\)</span> if for every <span class="math inline">\(\varepsilon&gt;0\)</span> there exists a positive integer <span class="math inline">\(N\)</span> such that if <span class="math inline">\(n\geq N\)</span> then
+<p><span id="def:label" class="definition"><strong>Definition 12.1  (definition name) </strong></span>Let <span class="math inline">\((a_n)_{n=1}^{\infty}\)</span> be a sequence of real numbers. We say that the sequence has <em>limit</em> <span class="math inline">\(L\)</span> if for every <span class="math inline">\(\varepsilon&gt;0\)</span> there exists a positive integer <span class="math inline">\(N\)</span> such that if <span class="math inline">\(n\geq N\)</span> then
 <span class="math display">\[
     \left|a_n-L\right|&lt;\varepsilon.
 \]</span></p>
