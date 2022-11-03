@@ -134,6 +134,9 @@ fig:linearapprox
 exm:taylorpoly
 fig:taylorsin
 thm:label
+def:reimannint
+thm:FTC
+exm:definiteints
 fig:complexsketch
 eq:vecwildebeest
 eq:asymp
@@ -238,3 +241,6 @@ taylor-series
 linearisation
 taylor-polynomials
 taylor-series-1
+indefinite-integrals
+standard-integrals
+definite-integrals

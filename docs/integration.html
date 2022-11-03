@@ -23,7 +23,7 @@
 <meta name="author" content="Dr Mark Callaway" />
 
 
-<meta name="date" content="2022-11-02" />
+<meta name="date" content="2022-11-03" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -31,7 +31,7 @@
   
   
 <link rel="prev" href="series.html"/>
-<link rel="next" href="blank4.html"/>
+<link rel="next" href="further-integration-techniques.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -213,6 +213,7 @@
 <li class="chapter" data-level="" data-path="exercise-set-6.html"><a href="exercise-set-6.html"><i class="fa fa-check"></i>Exercise Set 6</a></li>
 <li class="chapter" data-level="" data-path="exercise-set-7.html"><a href="exercise-set-7.html"><i class="fa fa-check"></i>Exercise Set 7</a></li>
 <li class="chapter" data-level="" data-path="exercise-set-8.html"><a href="exercise-set-8.html"><i class="fa fa-check"></i>Exercise Set 8</a></li>
+<li class="chapter" data-level="" data-path="exercise-set-9.html"><a href="exercise-set-9.html"><i class="fa fa-check"></i>Exercise Set 9</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -235,23 +236,65 @@
             <section class="normal" id="section-">
 <div id="integration" class="section level1 unlisted unnumbered hasAnchor">
 <h1>Integration<a href="integration.html#integration" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Integration is (almost) the reverse process of differentiation. Geometrically, differentiation corresponds to finding the gradient of a tangent line. Integration then corresponds to finding the area under a curve. The precise relationship between differentation and integration will be given later by the <em>Fundamental Theorem of Calculus</em>.</p>
+<p><em>Integration</em> is (almost) the reverse process of differentiation. Geometrically, differentiation corresponds to finding the gradient of a tangent line, whilst integration corresponds to finding the area under a curve. The precise relationship between differentation and integration will be given later by the <em>Fundamental Theorem of Calculus</em>.</p>
+<div id="indefinite-integrals" class="section level2 hasAnchor" number="12.11">
+<h2><span class="header-section-number">12.11</span> Indefinite Integrals<a href="integration.html#indefinite-integrals" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Consider the following function
-<span class="math display">\[f(x)=x^2+5.\]</span>
+<span class="math display">\[F(x)=x^2.\]</span>
 Its derivative is
-<span class="math display">\[\frac{df(x)}{dx}=2x.\]</span>
-If integration is the reverse process of differentation, then we might expect the integral of <span class="math inline">\(2x\)</span> to be <span class="math inline">\(x^2+5\)</span>. However, note that the derivative of
-<span class="math display">\[g(x)=x^2-3x\]</span>
+<span class="math display">\[\frac{dF(x)}{dx}=2x.\]</span>
+If integration is the reverse process of differentation, then we might expect the integral of <span class="math inline">\(f(x)=2x\)</span> to be <span class="math inline">\(F(x)=x^2\)</span>. However, note that the derivative of
+<span class="math display">\[G(x)=x^2+3\]</span>
 is also
-<span class="math display">\[\frac{dg(x)}{dx}=2x.\]</span>
-Hence, it would be impossible to know if <span class="math inline">\(f\)</span> or <span class="math inline">\(g\)</span> was the original function. In fact, any function of the form
+<span class="math display">\[\frac{dG(x)}{dx}=2x=f(x).\]</span>
+Hence, it would be impossible to know if <span class="math inline">\(F\)</span> or <span class="math inline">\(G\)</span> was the original function. In fact, any function of the form
 $<span class="math inline">\(2x+C\)</span>
-where <span class="math inline">\(C\)</span> is a constant would yield the same derivative. Therefore, the best we can do is to say the integral of <span class="math inline">\(2x\)</span> has the form <span class="math inline">\(x^2+C\)</span>. More generally, the graphs of all functions of the form <span class="math inline">\(f(x)+C\)</span> for some particular function <span class="math inline">\(f\)</span> and various constants <span class="math inline">\(C\)</span> are just vertical translations of one another, so we can see they would indeed have the same gradient at any point <span class="math inline">\(x\)</span>. We say that <span class="math inline">\(f(x)+C\)</span> is the <em>indefinite integral</em> of <span class="math inline">\(\frac{df(x)}{dx}\)</span>.</p>
+where <span class="math inline">\(C\)</span> is a constant would yield the same derivative. Therefore, the best we can do is to say the integral of <span class="math inline">\(f(x)=2x\)</span> has the form <span class="math inline">\(x^2+C\)</span>.</p>
+<p>More generally, the graphs of all functions of the form <span class="math inline">\(F(x)+C\)</span> for some particular function <span class="math inline">\(F\)</span> and various constants <span class="math inline">\(C\)</span> are just vertical translations of one another, so we can see they would indeed have the same gradient at any point <span class="math inline">\(x\)</span>. If <span class="math inline">\(\frac{dF(x)}{dx}=f(x)\)</span> we say that “<span class="math inline">\(F(x)+C\)</span>” with <span class="math inline">\(C\)</span> an arbitrary constant is the <em>indefinite integral</em> of <span class="math inline">\(f(x)\)</span>.</p>
 <p>The operation of taking the indefinite integral of a function <span class="math inline">\(f(x)\)</span> is written
 <span class="math display">\[\int f(x) dx\]</span>
-which is read as “the integral of <span class="math inline">\(f(x)\)</span> with respect to <span class="math inline">\(x\)</span>”, where <span class="math inline">\(\int\)</span> denotes taking the integral and <span class="math inline">\(dx\)</span> specifies that we are integrating with respect to the variable <span class="math inline">\(x\)</span> (important as some functions might have more than one variable).</p>
-<p>Areas under curves</p>
+which is read as “the integral of <span class="math inline">\(f(x)\)</span> with respect to <span class="math inline">\(x\)</span>”, where <span class="math inline">\(\int\)</span> denotes taking the integral and <span class="math inline">\(dx\)</span> specifies that we are integrating with respect to the variable <span class="math inline">\(x\)</span> (we need to specify this as some functions might have more than one variable). In this context the function <span class="math inline">\(f(x)\)</span> being integrated is called the <em>integrand</em>. If we know a function <span class="math inline">\(F(x)\)</span> whose derivative is <span class="math inline">\(f(x)\)</span> then we can immediately find the indefinite integral as <span class="math inline">\(F(x)+C\)</span>. Such a function <span class="math inline">\(F\)</span> such that <span class="math inline">\(\frac{dF(x)}{dx}=f(x)\)</span> is called an <em>anti-derivative</em> of <span class="math inline">\(f\)</span>.</p>
+<div id="standard-integrals" class="section level3 hasAnchor" number="12.11.1">
+<h3><span class="header-section-number">12.11.1</span> Standard Integrals<a href="integration.html#standard-integrals" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>anti-derivatives</p>
+</div>
+</div>
+<div id="definite-integrals" class="section level2 hasAnchor" number="12.12">
+<h2><span class="header-section-number">12.12</span> Definite Integrals<a href="integration.html#definite-integrals" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Integration is defined by finding the area under the curve of a function. This is achieved by taking successively more accurate approximations, in a similar way to finding the gradient of a tangent line in differentation.</p>
+<p>To find the area under a curve <span class="math inline">\(f\)</span> between points <span class="math inline">\(x=a\)</span> and <span class="math inline">\(x=b\)</span>, we can draw rectangles of some “small” width and whose height is the value of the function at some point between the edges of the rectangle. Some of these rectangles will over-estimate the area under their part of the curve and others will under-estimate the area. This error is reduced by taking thinner and thinner rectangles (and hence using a greater number of rectangles). In the limit that the width tends to <span class="math inline">\(0\)</span>, we obtain the area under the curve <span class="math inline">\(f\)</span> between <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>. When the upper limit <span class="math inline">\(a\)</span> and lower limit <span class="math inline">\(b\)</span> are specified like this, we have the <em>definite integral</em> of <span class="math inline">\(f\)</span>.</p>
+<p>Note that if a curve crosses the <span class="math inline">\(x\)</span>-axis, then the “area under the curve” obtained from the definite integral is the area above the <span class="math inline">\(x\)</span>-axis minus the area below the <span class="math inline">\(x\)</span>-axis.</p>
+<p>The following is a formal definition of the integral, which is included for completeness, but can be ignored for now.</p>
+<div class="definition">
+<p><span id="def:reimannint" class="definition"><strong>Definition 12.2  (Reimann Integral) </strong></span>Consider a <em>partition</em> <span class="math inline">\(P_n\)</span> of the interval <span class="math inline">\(a\leq x\leq b\)</span> into <span class="math inline">\(n\)</span> equal width subintervals
+<span class="math display">\[x_i\leq x\leq x_j\]</span>
+for <span class="math inline">\(i=0,\dotsc,n\)</span> with <span class="math inline">\(x_0=a\)</span>, <span class="math inline">\(x_i=a+i\Delta x\)</span>, <span class="math inline">\(x_n=b\)</span> and width <span class="math inline">\(\Delta x=(b-a)/n\)</span>.</p>
+<p>For each subinterval choose a point <span class="math inline">\(c_i\)</span> such that <span class="math inline">\(x_i &lt; c_i &lt; x_j\)</span>. Then the integral is approximated by
+<span class="math display">\[\sum_{i=1}^{n-1}f(c_i)\Delta x.\]</span></p>
+<p>If the following limit exists independently of the choice of the points <span class="math inline">\(c_i\)</span>
+<span class="math display">\[\lim_\limits{n\to\infty}\sum_{i=1}^{n-1}f(c_i)\Delta x\]</span>
+then we call this the <em>integral</em> of <span class="math inline">\(f\)</span> between <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>, and denote it by
+<span class="math display">\[\int_{a}^{b}f(x)dx.\]</span></p>
+</div>
+<p>The key theorem of calculus that links differentiation and integration is known as the <em>Fundamental Theorem of Calculus</em>.</p>
+<div class="theorem">
+<p><span id="thm:FTC" class="theorem"><strong>Theorem 12.5  (Fundamental Theorem of Calculus (FTC)) </strong></span>Let the function <span class="math inline">\(f\)</span> be continuous on the interval from <span class="math inline">\(a\)</span> to <span class="math inline">\(b\)</span>. Then:</p>
+<ol style="list-style-type: decimal">
+<li><p>The function <span class="math inline">\(g\)</span> defined by
+<span class="math display">\[g(x)=\int_a^xf(x)dx\]</span>
+is continuous on the interval <span class="math inline">\(a\le x \le b\)</span> and differentiable on the interval <span class="math inline">\(a&lt; x &lt; b\)</span> with
+<span class="math display">\[\frac{dg(x)}{dx}=f(x).\]</span></p></li>
+<li><p>The definite integral of <span class="math inline">\(f\)</span> from <span class="math inline">\(a\)</span> to <span class="math inline">\(b\)</span> is given by
+<span class="math display">\[\int_a^bf(x)dx=F(b)-F(a)\]</span>
+where <span class="math inline">\(F\)</span> is any anti-derivative of <span class="math inline">\(f\)</span>.</p></li>
+</ol>
+</div>
+<p>To find the definite integral we can make use of part 2 of the FTC.</p>
+<div class="example">
+<p><span id="exm:definiteints" class="example"><strong>Example 12.4  (Definite Integrals) </strong></span>examples</p>
+</div>
 
+</div>
 </div>
             </section>
 
@@ -259,7 +302,7 @@ which is read as “the integral of <span class="math inline">\(f(x)\)</span> wi
         </div>
       </div>
 <a href="series.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="blank4.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="further-integration-techniques.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -280,7 +323,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/maths-sci-eng/maths-sci-eng.github.io/edit/master/15-Integration.Rmd",
+"link": "https://github.com/maths-sci-eng/maths-sci-eng.github.io/edit/master/15-integration.Rmd",
 "text": "Edit"
 },
 "history": {

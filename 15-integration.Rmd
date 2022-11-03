@@ -1,0 +1,85 @@
+# Integration {.unlisted .unnumbered}
+
+*Integration* is (almost) the reverse process of differentiation. Geometrically, differentiation corresponds to finding the gradient of a tangent line, whilst integration corresponds to finding the area under a curve. The precise relationship between differentation and integration will be given later by the *Fundamental Theorem of Calculus*.
+
+## Indefinite Integrals
+
+Consider the following function
+$$F(x)=x^2.$$
+Its derivative is
+$$\frac{dF(x)}{dx}=2x.$$
+If integration is the reverse process of differentation, then we might expect the integral of $f(x)=2x$ to be $F(x)=x^2$. However, note that the derivative of
+$$G(x)=x^2+3$$
+is also
+$$\frac{dG(x)}{dx}=2x=f(x).$$
+Hence, it would be impossible to know if $F$ or $G$ was the original function. In fact, any function of the form
+$$2x+C$
+where $C$ is a constant would yield the same derivative. Therefore, the best we can do is to say the integral of $f(x)=2x$ has the form $x^2+C$.
+
+More generally, the graphs of all functions of the form $F(x)+C$ for some particular function $F$ and various constants $C$ are just vertical translations of one another, so we can see they would indeed have the same gradient at any point $x$. If $\frac{dF(x)}{dx}=f(x)$ we say that "$F(x)+C$" with $C$ an arbitrary constant is the *indefinite integral* of $f(x)$.
+
+The operation of taking the indefinite integral of a function $f(x)$ is written
+$$\int f(x) dx$$
+which is read as "the integral of $f(x)$ with respect to $x$", where $\int$ denotes taking the integral and $dx$ specifies that we are integrating with respect to the variable $x$ (we need to specify this as some functions might have more than one variable). In this context the function $f(x)$ being integrated is called the *integrand*. If we know a function $F(x)$ whose derivative is $f(x)$ then we can immediately find the indefinite integral as $F(x)+C$. Such a function $F$ such that $\frac{dF(x)}{dx}=f(x)$ is called an *anti-derivative* of $f$.
+
+### Standard Integrals
+
+anti-derivatives
+
+
+
+
+## Definite Integrals
+
+Integration is defined by finding the area under the curve of a function. This is achieved by taking successively more accurate approximations, in a similar way to finding the gradient of a tangent line in differentation.
+
+To find the area under a curve $f$ between points $x=a$ and $x=b$, we can draw rectangles of some "small" width and whose height is the value of the function at some point between the edges of the rectangle. Some of these rectangles will over-estimate the area under their part of the curve and others will under-estimate the area. This error is reduced by taking thinner and thinner rectangles (and hence using a greater number of rectangles). In the limit that the width tends to $0$, we obtain the area under the curve $f$ between $a$ and $b$. When the upper limit $a$ and lower limit $b$ are specified like this, we have the *definite integral* of $f$.
+
+
+Note that if a curve crosses the $x$-axis, then the "area under the curve" obtained from the definite integral is the area above the $x$-axis minus the area below the $x$-axis.
+
+
+The following is a formal definition of the integral, which is included for completeness, but can be ignored for now.
+
+::: {.definition #reimannint name="Reimann Integral"}
+Consider a *partition* $P_n$ of the interval $a\leq x\leq b$ into $n$ equal width subintervals
+$$x_i\leq x\leq x_j$$
+for $i=0,\dotsc,n$ with $x_0=a$, $x_i=a+i\Delta x$, $x_n=b$ and width $\Delta x=(b-a)/n$.
+
+For each subinterval choose a point $c_i$ such that $x_i < c_i < x_j$. Then the integral is approximated by
+$$\sum_{i=1}^{n-1}f(c_i)\Delta x.$$
+
+If the following limit exists independently of the choice of the points $c_i$
+$$\lim_\limits{n\to\infty}\sum_{i=1}^{n-1}f(c_i)\Delta x$$
+then we call this the *integral* of $f$ between $a$ and $b$, and denote it by
+$$\int_{a}^{b}f(x)dx.$$
+:::
+
+
+
+
+The key theorem of calculus that links differentiation and integration is known as the *Fundamental Theorem of Calculus*. 
+
+::: {.theorem #FTC name="Fundamental Theorem of Calculus (FTC)"}
+Let the function $f$ be continuous on the interval from $a$ to $b$. Then:
+
+1.  The function $g$ defined by
+    $$g(x)=\int_a^xf(x)dx$$
+    is continuous on the interval $a\le x \le b$ and differentiable on the interval $a< x < b$ with
+    $$\frac{dg(x)}{dx}=f(x).$$
+
+1.  The definite integral of $f$ from $a$ to $b$ is given by
+    $$\int_a^bf(x)dx=F(b)-F(a)$$
+    where $F$ is any anti-derivative of $f$.
+:::
+
+To find the definite integral we can make use of part 2 of the FTC.
+
+::: {.example #definiteints name="Definite Integrals"}
+
+examples
+
+:::
+
+
+
