@@ -256,7 +256,44 @@ where <span class="math inline">\(C\)</span> is a constant would yield the same 
 which is read as “the integral of <span class="math inline">\(f(x)\)</span> with respect to <span class="math inline">\(x\)</span>”, where <span class="math inline">\(\int\)</span> denotes taking the integral and <span class="math inline">\(dx\)</span> specifies that we are integrating with respect to the variable <span class="math inline">\(x\)</span> (we need to specify this as some functions might have more than one variable). In this context the function <span class="math inline">\(f(x)\)</span> being integrated is called the <em>integrand</em>. If we know a function <span class="math inline">\(F(x)\)</span> whose derivative is <span class="math inline">\(f(x)\)</span> then we can immediately find the indefinite integral as <span class="math inline">\(F(x)+C\)</span>. Such a function <span class="math inline">\(F\)</span> such that <span class="math inline">\(\frac{dF(x)}{dx}=f(x)\)</span> is called an <em>anti-derivative</em> of <span class="math inline">\(f\)</span>.</p>
 <div id="standard-integrals" class="section level3 hasAnchor" number="12.11.1">
 <h3><span class="header-section-number">12.11.1</span> Standard Integrals<a href="integration.html#standard-integrals" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>anti-derivatives</p>
+<p>Some basic integrals obtained from differentiating well known functions</p>
+<p><span class="math display">\[\begin{eqnarray}
+&amp;&amp; \frac{d }{d x} \sin(x) = \cos(x)  \;   \to   \;
+\int \cos(x) d x = \sin(x) +C
+\nonumber \\
+&amp;&amp; \frac{d }{d x} \cos(x)     = -\sin(x)  \;   \to \;
+\int \sin(x) d x  = -\cos(x) +C    \nonumber \\
+&amp;&amp; \frac{d }{d x} \tan(x)  = \frac{1}{\cos^2(x)}
+\;   \to \;
+\int \frac{1}{\cos^2(x)} d x = \tan(x) +C  \nonumber
+\\
+&amp;&amp; \frac{d }{d x} \cot(x) = - \frac{1}{\sin^2(x)}
+\;   \to \;
+\int \frac{1}{\sin^2(x)} d x = - \cot(x) +C  \nonumber
+\\
+&amp;&amp; \frac{d }{d x} \frac{x^{n+1}}{n+1}  =  x^n \;
+\to \;
+\int x^n \; dx =  \frac{x^{n+1}}{n+1}  +C  \; \;     \nonumber \\
+&amp;&amp; \frac{d }{d x}     \sin^{-1}(x)   =
+\frac{1}{\sqrt{1-x^2} } \; \to \;
+\int \frac{1}{\sqrt{1-x^2} }  d x = \sin^{-1}(x) +C     \nonumber \\
+&amp;&amp; \frac{d }{d x} \tan^{-1}(x)  = \frac{1}{1+x^2}
+\; \to \;
+\int \frac{1}{1+x^2 } d x  = \tan^{-1}(x) +C     \nonumber \\
+&amp;&amp; \frac{d }{d x} e^x  = e^x  \;   \to   \; \int
+e^x  = e^x +C\nonumber \\
+&amp;&amp; \frac{d }{d x} \ln |x|  = \frac{1 }{x} \;
+\to \; \int \frac{1}{x}  d x  = \ln |x| +C
+\nonumber \\
+&amp;&amp; \frac{d }{d x} a^x = a^x \ln a \; \to \;
+\int a^x  d x  = \frac{a^x}{\ln a}  +C \nonumber \\
+&amp;&amp; \frac{d }{d x} \sinh(x) = \cosh(x) \; \to \;
+\int \cosh(x)  d x  = \sinh(x)  +C, \nonumber
+\\
+&amp;&amp; \frac{d }{d x} \cosh(x)  =
+\sinh(x) \; \to \; \int \sinh(x) d x  = \cosh(x)  +C, \nonumber
+\\
+\end{eqnarray}\]</span></p>
 </div>
 </div>
 <div id="definite-integrals" class="section level2 hasAnchor" number="12.12">
