@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Integration | Mathematics for Scientists and Engineers</title>
+  <title>Chapter 15 Integration | Mathematics for Scientists and Engineers</title>
   <meta name="description" content="Mathematics Lecture Notes for UoE Penryn Science and Engineering Disciplines." />
   <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Integration | Mathematics for Scientists and Engineers" />
+  <meta property="og:title" content="Chapter 15 Integration | Mathematics for Scientists and Engineers" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="Mathematics Lecture Notes for UoE Penryn Science and Engineering Disciplines." />
   <meta name="github-repo" content="maths-sci-eng/maths-sci-eng.github.io" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Integration | Mathematics for Scientists and Engineers" />
+  <meta name="twitter:title" content="Chapter 15 Integration | Mathematics for Scientists and Engineers" />
   
   <meta name="twitter:description" content="Mathematics Lecture Notes for UoE Penryn Science and Engineering Disciplines." />
   
@@ -23,7 +23,7 @@
 <meta name="author" content="Dr Mark Callaway" />
 
 
-<meta name="date" content="2022-11-04" />
+<meta name="date" content="2022-11-07" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -219,6 +219,15 @@
 <li class="chapter" data-level="14.4.3" data-path="series.html"><a href="series.html#taylor-series-1"><i class="fa fa-check"></i><b>14.4.3</b> Taylor Series</a></li>
 </ul></li>
 </ul></li>
+<li class="chapter" data-level="15" data-path="integration.html"><a href="integration.html"><i class="fa fa-check"></i><b>15</b> Integration</a>
+<ul>
+<li class="chapter" data-level="15.1" data-path="integration.html"><a href="integration.html#indefinite-integrals"><i class="fa fa-check"></i><b>15.1</b> Indefinite Integrals</a>
+<ul>
+<li class="chapter" data-level="15.1.1" data-path="integration.html"><a href="integration.html#standard-integrals"><i class="fa fa-check"></i><b>15.1.1</b> Standard Integrals</a></li>
+</ul></li>
+<li class="chapter" data-level="15.2" data-path="integration.html"><a href="integration.html#definite-integrals"><i class="fa fa-check"></i><b>15.2</b> Definite Integrals</a></li>
+<li class="chapter" data-level="15.3" data-path="integration.html"><a href="integration.html#integration-by-substitution"><i class="fa fa-check"></i><b>15.3</b> Integration by Substitution</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="notation.html"><a href="notation.html"><i class="fa fa-check"></i>Notation</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="chapter" data-level="" data-path="exercise-set-1.html"><a href="exercise-set-1.html"><i class="fa fa-check"></i>Exercise Set 1</a></li>
@@ -250,11 +259,11 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="integration" class="section level1 unlisted unnumbered hasAnchor">
-<h1>Integration<a href="integration.html#integration" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="integration" class="section level1 hasAnchor" number="15">
+<h1><span class="header-section-number">Chapter 15</span> Integration<a href="integration.html#integration" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p><em>Integration</em> is (almost) the reverse process of differentiation. Geometrically, differentiation corresponds to finding the gradient of a tangent line, whilst integration corresponds to finding the area under a curve. The precise relationship between differentation and integration will be given later by the <em>Fundamental Theorem of Calculus</em>.</p>
-<div id="indefinite-integrals" class="section level2 hasAnchor" number="14.5">
-<h2><span class="header-section-number">14.5</span> Indefinite Integrals<a href="integration.html#indefinite-integrals" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="indefinite-integrals" class="section level2 hasAnchor" number="15.1">
+<h2><span class="header-section-number">15.1</span> Indefinite Integrals<a href="integration.html#indefinite-integrals" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Consider the following function
 <span class="math display">\[F(x)=x^2.\]</span>
 Its derivative is
@@ -268,8 +277,8 @@ Hence, it would be impossible to know if <span class="math inline">\(F\)</span> 
 <p>The operation of taking the indefinite integral of a function <span class="math inline">\(f(x)\)</span> is written
 <span class="math display">\[\int f(x) dx\]</span>
 which is read as “the integral of <span class="math inline">\(f(x)\)</span> with respect to <span class="math inline">\(x\)</span>”, where <span class="math inline">\(\int\)</span> denotes taking the integral and <span class="math inline">\(dx\)</span> specifies that we are integrating with respect to the variable <span class="math inline">\(x\)</span> (we need to specify this as some functions might have more than one variable). In this context the function <span class="math inline">\(f(x)\)</span> being integrated is called the <em>integrand</em>. If we know a function <span class="math inline">\(F(x)\)</span> whose derivative is <span class="math inline">\(f(x)\)</span> then we can immediately find the indefinite integral as <span class="math inline">\(F(x)+C\)</span>. A function <span class="math inline">\(F\)</span> such that <span class="math inline">\(\frac{dF(x)}{dx}=f(x)\)</span> is called an <em>anti-derivative</em> of <span class="math inline">\(f\)</span>.</p>
-<div id="standard-integrals" class="section level3 hasAnchor" number="14.5.1">
-<h3><span class="header-section-number">14.5.1</span> Standard Integrals<a href="integration.html#standard-integrals" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="standard-integrals" class="section level3 hasAnchor" number="15.1.1">
+<h3><span class="header-section-number">15.1.1</span> Standard Integrals<a href="integration.html#standard-integrals" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Some basic integrals obtained from differentiating well known functions</p>
 <p><span class="math display">\[\begin{eqnarray}
 &amp;&amp; \frac{d }{d x} \sin(x) = \cos(x)  \;   \to   \;
@@ -310,14 +319,14 @@ e^x  = e^x +C\nonumber \\
 \end{eqnarray}\]</span></p>
 </div>
 </div>
-<div id="definite-integrals" class="section level2 hasAnchor" number="14.6">
-<h2><span class="header-section-number">14.6</span> Definite Integrals<a href="integration.html#definite-integrals" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="definite-integrals" class="section level2 hasAnchor" number="15.2">
+<h2><span class="header-section-number">15.2</span> Definite Integrals<a href="integration.html#definite-integrals" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Integration is defined by finding the area under the curve of a function. This is achieved by taking successively more accurate approximations, in a similar way to finding the gradient of a tangent line in differentation.</p>
 <p>To find the area under a curve <span class="math inline">\(f\)</span> between points <span class="math inline">\(x=a\)</span> and <span class="math inline">\(x=b\)</span>, we can draw rectangles of some “small” width and whose height is the value of the function at some point between the edges of the rectangle. Some of these rectangles will over-estimate the area under their part of the curve and others will under-estimate the area. This error is reduced by taking thinner and thinner rectangles (and hence using a greater number of rectangles). In the limit that the width tends to <span class="math inline">\(0\)</span>, we obtain the area under the curve <span class="math inline">\(f\)</span> between <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>. When the upper limit <span class="math inline">\(a\)</span> and lower limit <span class="math inline">\(b\)</span> are specified like this, we have the <em>definite integral</em> of <span class="math inline">\(f\)</span>.</p>
 <p>Note that if a curve crosses the <span class="math inline">\(x\)</span>-axis, then the “area under the curve” obtained from the definite integral is the area above the <span class="math inline">\(x\)</span>-axis minus the area below the <span class="math inline">\(x\)</span>-axis.</p>
 <p>The following is a formal definition of the integral, which is included for completeness, but can be ignored for now.</p>
 <div class="definition">
-<p><span id="def:reimannint" class="definition"><strong>Definition 14.1  (Reimann Integral) </strong></span>Consider a <em>partition</em> <span class="math inline">\(P_n\)</span> of the interval <span class="math inline">\(a\leq x\leq b\)</span> into <span class="math inline">\(n\)</span> equal width subintervals
+<p><span id="def:reimannint" class="definition"><strong>Definition 15.1  (Reimann Integral) </strong></span>Consider a <em>partition</em> <span class="math inline">\(P_n\)</span> of the interval <span class="math inline">\(a\leq x\leq b\)</span> into <span class="math inline">\(n\)</span> equal width subintervals
 <span class="math display">\[x_i\leq x\leq x_j\]</span>
 for <span class="math inline">\(i=0,\dotsc,n\)</span> with <span class="math inline">\(x_0=a\)</span>, <span class="math inline">\(x_i=a+i\Delta x\)</span>, <span class="math inline">\(x_n=b\)</span> and width <span class="math inline">\(\Delta x=(b-a)/n\)</span>.</p>
 <p>For each subinterval choose a point <span class="math inline">\(c_i\)</span> such that <span class="math inline">\(x_i &lt; c_i &lt; x_j\)</span>. Then the integral is approximated by
@@ -328,7 +337,7 @@ then we call this the <em>integral</em> of <span class="math inline">\(f\)</span
 <span class="math display">\[\int_{a}^{b}f(x)dx.\]</span></p>
 </div>
 <div class="theorem">
-<p><span id="thm:intprops" class="theorem"><strong>Theorem 14.2  (Some Properties of Definite Integrals) </strong></span><span class="math display">\[\begin{eqnarray}
+<p><span id="thm:intprops" class="theorem"><strong>Theorem 15.1  (Some Properties of Definite Integrals) </strong></span><span class="math display">\[\begin{eqnarray}
 &amp;&amp;\int_a^b [f(x)+g(x)] dx = \int_a^b f(x) dx + \int_a^b g(x)
 dx
 \nonumber \\
@@ -351,7 +360,7 @@ $f(x)= f(-x)$ (e.g. $\cos(x)$, $x^2$)}
 </div>
 <p>The key theorem of calculus that links differentiation and integration is known as the <em>Fundamental Theorem of Calculus</em>.</p>
 <div class="theorem">
-<p><span id="thm:FTC" class="theorem"><strong>Theorem 14.3  (Fundamental Theorem of Calculus (FTC)) </strong></span>Let the function <span class="math inline">\(f\)</span> be continuous on the interval from <span class="math inline">\(a\)</span> to <span class="math inline">\(b\)</span>. Then:</p>
+<p><span id="thm:FTC" class="theorem"><strong>Theorem 15.2  (Fundamental Theorem of Calculus (FTC)) </strong></span>Let the function <span class="math inline">\(f\)</span> be continuous on the interval from <span class="math inline">\(a\)</span> to <span class="math inline">\(b\)</span>. Then:</p>
 <ol style="list-style-type: decimal">
 <li><p>The function <span class="math inline">\(g\)</span> defined by
 <span class="math display">\[g(x)=\int_a^xf(x)dx\]</span>
@@ -362,10 +371,10 @@ is continuous on the interval <span class="math inline">\(a\le x \le b\)</span> 
 where <span class="math inline">\(F\)</span> is any anti-derivative of <span class="math inline">\(f\)</span>.</p></li>
 </ol>
 </div>
-<p>To find the definite integral we can make use of part 2 of the FTC <a href="integration.html#thm:FTC">14.3</a> together with the properties in <a href="integration.html#thm:intprops">14.2</a>.</p>
+<p>To find the definite integral we can make use of part 2 of the FTC <a href="integration.html#thm:FTC">15.2</a> together with the properties in <a href="integration.html#thm:intprops">15.1</a>.</p>
 <div class="example">
 <ol style="list-style-type: decimal">
-<li><span id="exm:definiteints" class="example"><strong>Example 14.3  (Definite Integrals) </strong></span></li>
+<li><span id="exm:definiteints" class="example"><strong>Example 15.1  (Definite Integrals) </strong></span></li>
 <li><p>Evaluate the definite integral
 <span class="math display">\[
 \int_0^3 f(x)  dx = \int_0^3 (x^3- 6x) dx,
@@ -403,10 +412,10 @@ Alternatively, using the properties of the integral and our list of standard int
 </ol>
 </div>
 </div>
-<div id="integration-by-substitution" class="section level2 hasAnchor" number="14.7">
-<h2><span class="header-section-number">14.7</span> Integration by Substitution<a href="integration.html#integration-by-substitution" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="integration-by-substitution" class="section level2 hasAnchor" number="15.3">
+<h2><span class="header-section-number">15.3</span> Integration by Substitution<a href="integration.html#integration-by-substitution" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div class="theorem">
-<p><span id="thm:intsubstitution" class="theorem"><strong>Theorem 14.4  (Integration by Substitution) </strong></span>If $ u=u(x)$ is a differentiable function and <span class="math inline">\(f\)</span> is continuous, then
+<p><span id="thm:intsubstitution" class="theorem"><strong>Theorem 15.3  (Integration by Substitution) </strong></span>If $ u=u(x)$ is a differentiable function and <span class="math inline">\(f\)</span> is continuous, then
 <span class="math display">\[
 \int f( u(x) ) \frac{du(x)}{dx} dx = \int f( u ) du \quad \text{indefinite integral}
 \]</span>
@@ -420,7 +429,7 @@ du= \frac{du(x)}{dx} dx, \;\;  d (c+x)=dx; \;\; d (x^2)=2x dx, \;\; d (\sin x)= 
 \]</span></p>
 <div class="example">
 <ol style="list-style-type: decimal">
-<li><span id="exm:subint" class="example"><strong>Example 14.4  (Integration by Substitution) </strong></span></li>
+<li><span id="exm:subint" class="example"><strong>Example 15.2  (Integration by Substitution) </strong></span></li>
 <li><p>Evaluate the indefinite integral
 <span class="math display">\[
 \int (3x+2)^4 dx

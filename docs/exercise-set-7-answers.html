@@ -23,7 +23,7 @@
 <meta name="author" content="Dr Mark Callaway" />
 
 
-<meta name="date" content="2022-11-04" />
+<meta name="date" content="2022-11-07" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -218,6 +218,15 @@
 <li class="chapter" data-level="14.4.2" data-path="series.html"><a href="series.html#taylor-polynomials"><i class="fa fa-check"></i><b>14.4.2</b> Taylor Polynomials</a></li>
 <li class="chapter" data-level="14.4.3" data-path="series.html"><a href="series.html#taylor-series-1"><i class="fa fa-check"></i><b>14.4.3</b> Taylor Series</a></li>
 </ul></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="integration.html"><a href="integration.html"><i class="fa fa-check"></i><b>15</b> Integration</a>
+<ul>
+<li class="chapter" data-level="15.1" data-path="integration.html"><a href="integration.html#indefinite-integrals"><i class="fa fa-check"></i><b>15.1</b> Indefinite Integrals</a>
+<ul>
+<li class="chapter" data-level="15.1.1" data-path="integration.html"><a href="integration.html#standard-integrals"><i class="fa fa-check"></i><b>15.1.1</b> Standard Integrals</a></li>
+</ul></li>
+<li class="chapter" data-level="15.2" data-path="integration.html"><a href="integration.html#definite-integrals"><i class="fa fa-check"></i><b>15.2</b> Definite Integrals</a></li>
+<li class="chapter" data-level="15.3" data-path="integration.html"><a href="integration.html#integration-by-substitution"><i class="fa fa-check"></i><b>15.3</b> Integration by Substitution</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="notation.html"><a href="notation.html"><i class="fa fa-check"></i>Notation</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
@@ -1091,7 +1100,7 @@ and
 \begin{pmatrix}
 1\\
 -\frac{3}{5}
-\end{pmatrix}\tag{14.1}
+\end{pmatrix}\tag{15.1}
 \end{align}\]</span>
 or writing each population separately
 <span class="math display">\[
@@ -1100,20 +1109,20 @@ x_1(n)&amp;=\frac{1}{13}(3x_1(0)+5x_2(0))+\frac{1}{13}\left(-\frac{3}{10}\right)
 x_2(n)&amp;=\frac{2}{13}(3x_1(0)+5x_2(0))+\frac{1}{13}\left(-\frac{3}{10}\right)^n\left( -\frac{3}{5}\right)(10x_1(0)-5x_2(0)).
 \end{aligned}
 \]</span></p>
-<p>From <a href="exercise-set-7-answers.html#eq:vecwildebeest">(14.1)</a> we can see that in the long term the populations settle down to:
+<p>From <a href="exercise-set-7-answers.html#eq:vecwildebeest">(15.1)</a> we can see that in the long term the populations settle down to:
 <span class="math display" id="eq:asymp">\[\begin{equation}
 \lim\limits_{n\to\infty}\mathbf{x}(n)=\frac{1}{13}(3x_1(0)+5x_2(0))
 \begin{pmatrix}
 1\\
 2
-\end{pmatrix}\tag{14.2}
+\end{pmatrix}\tag{15.2}
 \end{equation}\]</span>
 that is,
 <span class="math display">\[\begin{align*}
 \lim\limits_{n\to\infty}x_1(n)&amp;=\frac{1}{13}(3x_1(0)+5x_2(0))\approx 123,\\
 \lim\limits_{n\to\infty}x_2(n)&amp;=\frac{2}{13}(3x_1(0)+5x_2(0))\approx 246.
 \end{align*}\]</span>
-From <a href="exercise-set-7-answers.html#eq:asymp">(14.2)</a> the long term ratio of juveniles to adults is
+From <a href="exercise-set-7-answers.html#eq:asymp">(15.2)</a> the long term ratio of juveniles to adults is
 <span class="math display">\[
 \lim\limits_{n\to\infty}\frac{x_1(n)}{x_2(n)}=\frac{1}{2}
 \]</span>

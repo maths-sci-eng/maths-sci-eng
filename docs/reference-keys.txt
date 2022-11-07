@@ -246,6 +246,7 @@ taylor-series
 linearisation
 taylor-polynomials
 taylor-series-1
+integration
 indefinite-integrals
 standard-integrals
 definite-integrals
