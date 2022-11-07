@@ -1,4 +1,4 @@
-# Integration {.unlisted .unnumbered}
+# Integration
 
 *Integration* is (almost) the reverse process of differentiation. Geometrically, differentiation corresponds to finding the gradient of a tangent line, whilst integration corresponds to finding the area under a curve. The precise relationship between differentation and integration will be given later by the *Fundamental Theorem of Calculus*.
 
@@ -12,15 +12,13 @@ If integration is the reverse process of differentation, then we might expect th
 $$G(x)=x^2+3$$
 is also
 $$\frac{dG(x)}{dx}=2x=f(x).$$
-Hence, it would be impossible to know if $F$ or $G$ was the original function. In fact, any function of the form
-$$2x+C$
-where $C$ is a constant would yield the same derivative. Therefore, the best we can do is to say the integral of $f(x)=2x$ has the form $x^2+C$.
+Hence, it would be impossible to know if $F$ or $G$ was the original function. In fact, any function of the form $2x+C$ where $C$ is a constant would yield the same derivative. Therefore, the best we can do is to say the integral of $f(x)=2x$ has the form $x^2+C$.
 
 More generally, the graphs of all functions of the form $F(x)+C$ for some particular function $F$ and various constants $C$ are just vertical translations of one another, so we can see they would indeed have the same gradient at any point $x$. If $\frac{dF(x)}{dx}=f(x)$ we say that "$F(x)+C$" with $C$ an arbitrary constant is the *indefinite integral* of $f(x)$.
 
 The operation of taking the indefinite integral of a function $f(x)$ is written
 $$\int f(x) dx$$
-which is read as "the integral of $f(x)$ with respect to $x$", where $\int$ denotes taking the integral and $dx$ specifies that we are integrating with respect to the variable $x$ (we need to specify this as some functions might have more than one variable). In this context the function $f(x)$ being integrated is called the *integrand*. If we know a function $F(x)$ whose derivative is $f(x)$ then we can immediately find the indefinite integral as $F(x)+C$. Such a function $F$ such that $\frac{dF(x)}{dx}=f(x)$ is called an *anti-derivative* of $f$.
+which is read as "the integral of $f(x)$ with respect to $x$", where $\int$ denotes taking the integral and $dx$ specifies that we are integrating with respect to the variable $x$ (we need to specify this as some functions might have more than one variable). In this context the function $f(x)$ being integrated is called the *integrand*. If we know a function $F(x)$ whose derivative is $f(x)$ then we can immediately find the indefinite integral as $F(x)+C$. A function $F$ such that $\frac{dF(x)}{dx}=f(x)$ is called an *anti-derivative* of $f$.
 
 ### Standard Integrals
 
@@ -91,6 +89,30 @@ then we call this the *integral* of $f$ between $a$ and $b$, and denote it by
 $$\int_{a}^{b}f(x)dx.$$
 :::
 
+::: {.theorem #intprops name="Some Properties of Definite Integrals"}
+
+\begin{eqnarray}
+&&\int_a^b [f(x)+g(x)] dx = \int_a^b f(x) dx + \int_a^b g(x)
+dx
+\nonumber \\
+&&\int_a^b \alpha f(x) dx = \alpha \int_a^b f(x) dx
+dx
+\nonumber \\
+&& \int_a^b f(x) dx = -\int_b^a f(x) dx   \nonumber \\
+&&\int_a^a f(x) dx = 0    \nonumber \\
+&& \int_a^b f(x) dx = \int_a^c f(x) dx + \int_c^b f(x) dx, \;
+\text{ for any $c$ such that $a<c<b$}    \nonumber \\
+&& \int_a^b f(x) dx \ge 0,\; \mbox{ if
+} \; f(x) >0, \; a \leq x \leq b
+ \nonumber \\
+ && \int_{-a}^a f(x) dx =2 \int_{0}^a f(x) dx ,\; \text{ if
+$f(x)= f(-x)$ (e.g. $\cos(x)$, $x^2$)}
+ \nonumber \\
+&& \int_{-a}^a f(x) dx = 0 ,\; \text{ if $f(x)= -f(x)$ (e.g. $\sin(x)$, $x^3$)}
+ \nonumber
+ \end{eqnarray}
+:::
+
 
 
 
@@ -109,13 +131,129 @@ Let the function $f$ be continuous on the interval from $a$ to $b$. Then:
     where $F$ is any anti-derivative of $f$.
 :::
 
-To find the definite integral we can make use of part 2 of the FTC.
+To find the definite integral we can make use of part 2 of the FTC \@ref(thm:FTC) together with the properties in \@ref(thm:intprops).
 
 ::: {.example #definiteints name="Definite Integrals"}
 
-examples
+1. Evaluate the definite integral
+    $$
+    \int_0^3 f(x)  dx = \int_0^3 (x^3- 6x) dx,
+    $$
+    First observe that:
+    $$
+    \frac{d}{d x} \left( \frac{1}{4}x^4-3 x^2 \right)=x^3- 6x=f(x).
+    $$
+    So an anti-derivative of $f(x)$ is $F(x)=\frac{1}{4}x^4-3 x^2$.  
+    The fundamental Theorem of Calculus then gives
+    $$
+    \begin{array}{ll}
+    \int_0^3 f(x)  dx =F(3) -F(0) \\ 
+    \\ & = \frac{1}{4} 3^4-3\,3^2 =\frac{3}{4} 27- 27= -\frac{27}{4}
+    \end{array}
+    $$
+    Alternatively, using the properties of the integral and our list of standard integrals
+    \begin{align*}
+    \int_0^3 (x^3- 6x) dx&=\int_0^3 x^3 dx -6\int_0^3 x dx\\
+    &=[\frac{x^4}{4}]_0^3-6[\frac{x^2}{2}]_0^3\\
+    &=[\frac{x^4}{4}-3x^2]_0^3\\
+    &=(\frac{81}{4}-27)-(0-0)\\
+    &=\frac{-27}{4}
+    \end{align*}
 
+1. Evaluate
+    $$
+    \int_0^\frac{\pi}{2} \cos(x) dx.
+    $$
+
+    We have:
+    \begin{align*}
+    \int_0^\frac{\pi}{2} \cos(x) dx&=[\sin(x)]_0^\frac{\pi}{2}\\
+    &=\sin\left(\frac{\pi}{2}\right)-\sin(0)\\
+    &=1
+    \end{align*}
 :::
 
 
+## Integration by Substitution
 
+
+::: {.theorem #intsubstitution name="Integration by Substitution"}
+If $ u=u(x)$ is a differentiable function and $f$ is continuous, then
+$$
+\int f( u(x) ) \frac{du(x)}{dx} dx = \int f( u ) du \quad \text{indefinite integral}
+$$
+$$
+\int_a^b f( u(x) ) \frac{du(x)}{dx} dx = \int_{u(a)}^{u(b)} f(u) du \quad \text{definite integral}.
+$$
+:::
+
+Here $d u$ acts as if it is a *differential*:
+ $$
+ du= \frac{du(x)}{dx} dx, \;\;  d (c+x)=dx; \;\; d (x^2)=2x dx, \;\; d (\sin x)= \cos x d x, ...,
+ $$
+
+
+
+::: {.example #subint name="Integration by Substitution"}
+
+1. Evaluate the indefinite integral
+    $$
+    \int (3x+2)^4 dx
+    $$
+    Introduce $u=3x+2$, then $du= \frac{du}{dx}\; dx = 3\; dx$, so $dx=\frac{1}{3} du$. Now we can write
+    \begin{align*}
+    \int (3x+2)^4 dx&= \int u^4 \frac{du}{3}\\
+    &=\frac{1}{3}\frac{u^5}{5}+C\\
+    &=\frac{1}{15}(3x+2)^5+C.
+    \end{align*}
+
+1. Evaluate the indefinite integral
+    $$\int \cos(5x) dx$$
+    Introduce $u=5x$, then $du = \frac{du}{dx}\; dx = 5\; dx$, so $dx = \frac{1}{5} du$.
+    Now we can write
+    \begin{align*}
+    \int \cos(5x) dx&=\int \cos(u)\frac{du}{5}\\
+    &=\frac{1}{5}\sin(u)+C\\
+    &=\frac{1}{5}\sin(5x)+C
+    \end{align*}
+
+1. Evaluate the indefinite integral
+    $$
+    \int 2 x \sqrt{1+x^2}  dx.
+    $$
+    Introduce $u=1+x^2$, then $d u = \frac{du}{dx}\; d x=2x \; dx$ and we can write
+    \begin{align*}
+    \int  \sqrt{(1+x^2)} (2x dx)&=\int  {u}^{1/2} du
+    &=\frac{2}{3} u^{3/2}+C\\
+    &= \frac{2}{3} (1+x^2)^{3/2}+C.
+    \end{align*}
+
+1. Evaluate  the indefinite integral
+    $$
+    \int  x^3 \cos (2+x^4)  dx.
+    $$
+    Introduce $u=2+x^4$, then $d u =\frac{du}{dx} \; d x=4x^3 \; dx$ and we can write
+    \begin{align*}
+    \int  \cos(2+x^4) \frac{1}{4} (4x^3 dx) &= \int \frac{1}{4} \cos(u) du
+    &=\frac{1}{4} \sin(u) +C \\
+    &= \frac{1}{4} \sin (2+x^4) +C.
+    $$
+
+
+1. Evaluate the definite integral
+    $$\int_1^2 \frac{-3}{2x} \; dx.$$
+    Introduce $u=2x$, then $du=\frac{du}{dx}\; dx = 2\; dx$ and we have (remembering to change the limits $a=1$ and $b=2$ to $u(a)=2$ and $u(b)=4$)
+    \begin{align*}
+    \int_1^2 \frac{-3}{2x} \; dx&=\frac{-3}{2}\int_2^4\frac{1}{u}\; du\\
+    &= [-\frac{3}{2}\ln(u)]_2^4\\
+    &=\frac{-3}{2}(\ln(4)-\ln(2))\\
+    &=\frac{-3}{2}\ln(4/2)\\
+    &=\frac{-3}{2}\ln(2)\\
+    &=-1.04 \text{to 2 d.p.}
+    \end{align*}
+
+    Or alternatively, rather than changing the limits we can substitute back in for $u$ and use the original limits:
+    $$
+    [-\frac{3}{2}\ln(2x)]_1^2=-\frac{3}{2}(\ln(4)-\ln(2))=\frac{-3}{2}\ln(2)=-1.04 \text{to 2 d.p.}
+$$
+:::
