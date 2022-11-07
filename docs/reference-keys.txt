@@ -135,8 +135,11 @@ exm:taylorpoly
 fig:taylorsin
 thm:label
 def:reimannint
+thm:intprops
 thm:FTC
 exm:definiteints
+thm:intsubstitution
+exm:subint
 fig:complexsketch
 eq:vecwildebeest
 eq:asymp
@@ -233,7 +236,9 @@ points-of-inflection
 higher-order-derivative-test
 graph-sketching
 optimisation
+sequences
 limits-of-sequences
+series
 sigma-notation
 infinite-series
 power-series
@@ -244,3 +249,6 @@ taylor-series-1
 indefinite-integrals
 standard-integrals
 definite-integrals
+integration-by-substitution
+substitution
+integration-by-parts

@@ -1,2 +1,6 @@
 # Further Integration Techniques {.unlisted .unnumbered}
 
+## Substitution
+
+## Integration by Parts
+

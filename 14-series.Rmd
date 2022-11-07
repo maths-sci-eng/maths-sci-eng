@@ -1,4 +1,4 @@
-# Series {.unlisted .unnumbered}
+# Series
 
 
 A *series* is the sum of the terms of a sequence.

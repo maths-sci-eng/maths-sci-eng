@@ -23,7 +23,7 @@
 <meta name="author" content="Dr Mark Callaway" />
 
 
-<meta name="date" content="2022-11-03" />
+<meta name="date" content="2022-11-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -202,6 +202,22 @@
 <li class="chapter" data-level="12.3" data-path="applications-of-differentiation.html"><a href="applications-of-differentiation.html#higher-order-derivative-test"><i class="fa fa-check"></i><b>12.3</b> Higher Order Derivative Test</a></li>
 <li class="chapter" data-level="12.4" data-path="applications-of-differentiation.html"><a href="applications-of-differentiation.html#graph-sketching"><i class="fa fa-check"></i><b>12.4</b> Graph Sketching</a></li>
 <li class="chapter" data-level="12.5" data-path="applications-of-differentiation.html"><a href="applications-of-differentiation.html#optimisation"><i class="fa fa-check"></i><b>12.5</b> Optimisation</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="sequences.html"><a href="sequences.html"><i class="fa fa-check"></i><b>13</b> Sequences</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="sequences.html"><a href="sequences.html#limits-of-sequences"><i class="fa fa-check"></i><b>13.1</b> Limits of Sequences</a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="series.html"><a href="series.html"><i class="fa fa-check"></i><b>14</b> Series</a>
+<ul>
+<li class="chapter" data-level="14.1" data-path="series.html"><a href="series.html#sigma-notation"><i class="fa fa-check"></i><b>14.1</b> Sigma Notation</a></li>
+<li class="chapter" data-level="14.2" data-path="series.html"><a href="series.html#infinite-series"><i class="fa fa-check"></i><b>14.2</b> Infinite Series</a></li>
+<li class="chapter" data-level="14.3" data-path="series.html"><a href="series.html#power-series"><i class="fa fa-check"></i><b>14.3</b> Power Series</a></li>
+<li class="chapter" data-level="14.4" data-path="series.html"><a href="series.html#taylor-series"><i class="fa fa-check"></i><b>14.4</b> Taylor Series</a>
+<ul>
+<li class="chapter" data-level="14.4.1" data-path="series.html"><a href="series.html#linearisation"><i class="fa fa-check"></i><b>14.4.1</b> Linearisation</a></li>
+<li class="chapter" data-level="14.4.2" data-path="series.html"><a href="series.html#taylor-polynomials"><i class="fa fa-check"></i><b>14.4.2</b> Taylor Polynomials</a></li>
+<li class="chapter" data-level="14.4.3" data-path="series.html"><a href="series.html#taylor-series-1"><i class="fa fa-check"></i><b>14.4.3</b> Taylor Series</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="notation.html"><a href="notation.html"><i class="fa fa-check"></i>Notation</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
@@ -1075,7 +1091,7 @@ and
 \begin{pmatrix}
 1\\
 -\frac{3}{5}
-\end{pmatrix}\tag{12.1}
+\end{pmatrix}\tag{14.1}
 \end{align}\]</span>
 or writing each population separately
 <span class="math display">\[
@@ -1084,20 +1100,20 @@ x_1(n)&amp;=\frac{1}{13}(3x_1(0)+5x_2(0))+\frac{1}{13}\left(-\frac{3}{10}\right)
 x_2(n)&amp;=\frac{2}{13}(3x_1(0)+5x_2(0))+\frac{1}{13}\left(-\frac{3}{10}\right)^n\left( -\frac{3}{5}\right)(10x_1(0)-5x_2(0)).
 \end{aligned}
 \]</span></p>
-<p>From <a href="exercise-set-7-answers.html#eq:vecwildebeest">(12.1)</a> we can see that in the long term the populations settle down to:
+<p>From <a href="exercise-set-7-answers.html#eq:vecwildebeest">(14.1)</a> we can see that in the long term the populations settle down to:
 <span class="math display" id="eq:asymp">\[\begin{equation}
 \lim\limits_{n\to\infty}\mathbf{x}(n)=\frac{1}{13}(3x_1(0)+5x_2(0))
 \begin{pmatrix}
 1\\
 2
-\end{pmatrix}\tag{12.2}
+\end{pmatrix}\tag{14.2}
 \end{equation}\]</span>
 that is,
 <span class="math display">\[\begin{align*}
 \lim\limits_{n\to\infty}x_1(n)&amp;=\frac{1}{13}(3x_1(0)+5x_2(0))\approx 123,\\
 \lim\limits_{n\to\infty}x_2(n)&amp;=\frac{2}{13}(3x_1(0)+5x_2(0))\approx 246.
 \end{align*}\]</span>
-From <a href="exercise-set-7-answers.html#eq:asymp">(12.2)</a> the long term ratio of juveniles to adults is
+From <a href="exercise-set-7-answers.html#eq:asymp">(14.2)</a> the long term ratio of juveniles to adults is
 <span class="math display">\[
 \lim\limits_{n\to\infty}\frac{x_1(n)}{x_2(n)}=\frac{1}{2}
 \]</span>
