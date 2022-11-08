@@ -4,17 +4,36 @@
 1. Write down the $2\times 2$ matrix $R_\pi$ that rotates a vector anticlockwise by $\pi$. Apply this to a vector $\mathbf{v}=\left(\begin{smallmatrix}v_1\\v_2\end{smallmatrix}\right)$.
 
     Answers:
-
+    The matrix $R_\theta$ for anticlockwise rotation by angle $\theta$ is
+    $$
+    R_\theta = \begin{pmatrix}\cos \theta & - \sin \theta \\ \sin\theta & \cos\theta\end{pmatrix}$$
+    So the matrix that rotates a vector anticlockwise by $\pi$ is
+    $$R_\pi = \begin{pmatrix}-1 & 0 \\ 0 & -1\end{pmatrix}$$
+    Applying this to a vector:
+    $$\begin{pmatrix}-1 & 0 \\ 0 & -1\end{pmatrix}\begin{pmatrix}v_1\\v_2\end{pmatrix} = \begin{pmatrix}-v_1\\-v_2\end{pmatrix}$$
 
 1. Write down the $2\times 2$ matrix $M_x$ that reflects a vector in the $x$-axis. Similarly write down the $2\times 2$ matrix $M_y$ that reflects a vector in the $y$-axis. Multiply these two matrices to find the transformation that first reflects in the $x$-axis and then reflects in the $y$-axis. Compare this to the matrix $R_\pi$.
 
     Answers:
 
+    $$M_x = \begin{pmatrix} 1 & 0 \\ 0 & -1\end{pmatrix}$$
+    $$M_y = \begin{pmatrix} -1 & 0 \\0 & 1\end{pmatrix}$$
+    $$M_xM_y = \begin{pmatrix} 1 & 0 \\ 0 & -1\end{pmatrix}\begin{pmatrix} -1 & 0 \\0 & 1\end{pmatrix} = \begin{pmatrix}-1 & 0 \\ 0 & -1\end{pmatrix} = R_\pi$$
 
 1. Note that $R^2_\theta=R_{2\theta}$ (why?). Use this to find the "double angle identity" for $\cos$ and $\sin$. Can you find other trigonometric identities using $R_\theta$?
 
     Answers:
 
+    $R^2_\theta=R_\theta R_\theta$, that is, apply $R_\theta$ twice: this is the same as rotating by $2\theta$.
+
+    $$R_{2\theta} = R_\theta^2 = R_\theta R_\theta\\
+    \begin{pmatrix}\cos (2\theta) & -\sin(2\theta) \\ \sin(2\theta) & \cos(2\theta)\end{pmatrix} = \begin{pmatrix}\cos \theta & - \sin \theta \\ \sin\theta & \cos\theta\end{pmatrix}\begin{pmatrix}\cos \theta & - \sin \theta \\ \sin\theta & \cos\theta\end{pmatrix}\\
+    \begin{pmatrix}\cos (2\theta) & -\sin(2\theta) \\ \sin(2\theta) & \cos(2\theta)\end{pmatrix} = \begin{pmatrix} \cos^2(\theta) - \sin^2(\theta) & -2\cos(\theta)\sin(\theta) \\ 2\cos(\theta)\sin(\theta) & \cos^2(\theta) - \sin^2(\theta)\end{pmatrix}$$
+    Where each entry gives the double angle formula for $\sin$ and $\cos$.
+    
+    The general sum and difference identities for $\sin$ and $\cos$ can be derived by noting that $R_{a+b} = R_a R_b$ and $R_{a-b} = R_a R_{-b}$.
+
+    Similarly, any identity for positive integer multiples $n\theta$ can be derived from $R_{n\theta}=R^n_{\theta}$.
 
 1. For each of the following pairs of matrices $A$ and $B$, find (when possible), $A+B$, $A-B$, $A^2$, $B^2$, $AB$, $BA$.
 
@@ -57,9 +76,21 @@
 
     Answers:
 
+    Two diagonal matrices will always commute:
+    $$
+    \begin{pmatrix}a & 0 & 0 \\ 0 & b & 0 \\ 0 & 0 & c\end{pmatrix}\begin{pmatrix}d & 0 & 0 \\ 0 & e & 0 \\ 0 & 0 & f\end{pmatrix} = \begin{pmatrix}d & 0 & 0 \\ 0 & e & 0 \\ 0 & 0 & f\end{pmatrix} \begin{pmatrix}a & 0 & 0 \\ 0 & b & 0 \\ 0 & 0 & c\end{pmatrix} = \begin{pmatrix}ad & 0 & 0 \\ 0 & be & 0 \\ 0 & 0 &cf\end{pmatrix}$$
+    but there are also non-diagonal matrices that commute.
+    
+    Two matrices that do not commute are
+    $$A = \begin{pmatrix}0 & 0 & a \\ 0 & 0 & 0 \\ 0 & 0 & 0\end{pmatrix}, \quad B = \begin{pmatrix}0 & 0 & 0 \\0 & 0 & 0\\b & 0 & 0\end{pmatrix}$$
+    $$AB = \begin{pmatrix}ab & 0 & 0\\ 0 & 0 & 0 \\  0 & 0 & 0 \end{pmatrix} \neq BA = \begin{pmatrix} 0 & 0 & 0 \\ 0 & 0 & 0 \\0 & 0 & ab\end{pmatrix}$$
+
 1. For any two numbers $a$ and $b$, if $ab=0$ then at least one of $a$ or $b$ must be $0$. Does an analagous result hold for matrices? That is, if $AB=0_{n\times m}$ must at least one of the matrices $A$ or $B$ be the zero matrix?
 
     Answers:
+
+    A similar result does not hold for matrices, neither $A$ nor $B$ must be zero if $AB=0_{n\times m}$. This occurs when the columns of $B$ are in the *null space* of $A$, that is to say, they are mapped to zero. For instance:
+    $$\begin{pmatrix} a & b & 0 \\ c & d & 0 \\ e & f & 0\end{pmatrix}\begin{pmatrix}0 & 0 \\ 0 & 0 \\g & h\end{pmatrix} = \begin{pmatrix} 0 & 0 \\ 0 & 0 \\ 0 & 0 \end{pmatrix}$$
 
 1. Determine whether the following matrices are *invertible* or *singular* by computing their determinants. If they are invertible, find the inverse.
     a. $\begin{pmatrix} 2 & 1 \\ 1 & 1 \end{pmatrix}$

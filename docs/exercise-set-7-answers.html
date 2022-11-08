@@ -263,11 +263,28 @@
 <h1>Exercise Set 7 Answers<a href="exercise-set-7-answers.html#exercise-set-7-answers" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <ol style="list-style-type: decimal">
 <li><p>Write down the <span class="math inline">\(2\times 2\)</span> matrix <span class="math inline">\(R_\pi\)</span> that rotates a vector anticlockwise by <span class="math inline">\(\pi\)</span>. Apply this to a vector <span class="math inline">\(\mathbf{v}=\left(\begin{smallmatrix}v_1\\v_2\end{smallmatrix}\right)\)</span>.</p>
-<p>Answers:</p></li>
+<p>Answers:
+The matrix <span class="math inline">\(R_\theta\)</span> for anticlockwise rotation by angle <span class="math inline">\(\theta\)</span> is
+<span class="math display">\[
+R_\theta = \begin{pmatrix}\cos \theta &amp; - \sin \theta \\ \sin\theta &amp; \cos\theta\end{pmatrix}\]</span>
+So the matrix that rotates a vector anticlockwise by <span class="math inline">\(\pi\)</span> is
+<span class="math display">\[R_\pi = \begin{pmatrix}-1 &amp; 0 \\ 0 &amp; -1\end{pmatrix}\]</span>
+Applying this to a vector:
+<span class="math display">\[\begin{pmatrix}-1 &amp; 0 \\ 0 &amp; -1\end{pmatrix}\begin{pmatrix}v_1\\v_2\end{pmatrix} = \begin{pmatrix}-v_1\\-v_2\end{pmatrix}\]</span></p></li>
 <li><p>Write down the <span class="math inline">\(2\times 2\)</span> matrix <span class="math inline">\(M_x\)</span> that reflects a vector in the <span class="math inline">\(x\)</span>-axis. Similarly write down the <span class="math inline">\(2\times 2\)</span> matrix <span class="math inline">\(M_y\)</span> that reflects a vector in the <span class="math inline">\(y\)</span>-axis. Multiply these two matrices to find the transformation that first reflects in the <span class="math inline">\(x\)</span>-axis and then reflects in the <span class="math inline">\(y\)</span>-axis. Compare this to the matrix <span class="math inline">\(R_\pi\)</span>.</p>
-<p>Answers:</p></li>
+<p>Answers:</p>
+<p><span class="math display">\[M_x = \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; -1\end{pmatrix}\]</span>
+<span class="math display">\[M_y = \begin{pmatrix} -1 &amp; 0 \\0 &amp; 1\end{pmatrix}\]</span>
+<span class="math display">\[M_xM_y = \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; -1\end{pmatrix}\begin{pmatrix} -1 &amp; 0 \\0 &amp; 1\end{pmatrix} = \begin{pmatrix}-1 &amp; 0 \\ 0 &amp; -1\end{pmatrix} = R_\pi\]</span></p></li>
 <li><p>Note that <span class="math inline">\(R^2_\theta=R_{2\theta}\)</span> (why?). Use this to find the “double angle identity” for <span class="math inline">\(\cos\)</span> and <span class="math inline">\(\sin\)</span>. Can you find other trigonometric identities using <span class="math inline">\(R_\theta\)</span>?</p>
-<p>Answers:</p></li>
+<p>Answers:</p>
+<p><span class="math inline">\(R^2_\theta=R_\theta R_\theta\)</span>, that is, apply <span class="math inline">\(R_\theta\)</span> twice: this is the same as rotating by <span class="math inline">\(2\theta\)</span>.</p>
+<p><span class="math display">\[R_{2\theta} = R_\theta^2 = R_\theta R_\theta\\
+\begin{pmatrix}\cos (2\theta) &amp; -\sin(2\theta) \\ \sin(2\theta) &amp; \cos(2\theta)\end{pmatrix} = \begin{pmatrix}\cos \theta &amp; - \sin \theta \\ \sin\theta &amp; \cos\theta\end{pmatrix}\begin{pmatrix}\cos \theta &amp; - \sin \theta \\ \sin\theta &amp; \cos\theta\end{pmatrix}\\
+\begin{pmatrix}\cos (2\theta) &amp; -\sin(2\theta) \\ \sin(2\theta) &amp; \cos(2\theta)\end{pmatrix} = \begin{pmatrix} \cos^2(\theta) - \sin^2(\theta) &amp; -2\cos(\theta)\sin(\theta) \\ 2\cos(\theta)\sin(\theta) &amp; \cos^2(\theta) - \sin^2(\theta)\end{pmatrix}\]</span>
+Where each entry gives the double angle formula for <span class="math inline">\(\sin\)</span> and <span class="math inline">\(\cos\)</span>.</p>
+<p>The general sum and difference identities for <span class="math inline">\(\sin\)</span> and <span class="math inline">\(\cos\)</span> can be derived by noting that <span class="math inline">\(R_{a+b} = R_a R_b\)</span> and <span class="math inline">\(R_{a-b} = R_a R_{-b}\)</span>.</p>
+<p>Similarly, any identity for positive integer multiples <span class="math inline">\(n\theta\)</span> can be derived from <span class="math inline">\(R_{n\theta}=R^n_{\theta}\)</span>.</p></li>
 <li><p>For each of the following pairs of matrices <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, find (when possible), <span class="math inline">\(A+B\)</span>, <span class="math inline">\(A-B\)</span>, <span class="math inline">\(A^2\)</span>, <span class="math inline">\(B^2\)</span>, <span class="math inline">\(AB\)</span>, <span class="math inline">\(BA\)</span>.</p>
 <ol style="list-style-type: lower-alpha">
 <li><span class="math inline">\(A = \begin{pmatrix} 2 &amp; 3 \\ 4 &amp; 1 \end{pmatrix}\qquad B = \begin{pmatrix} -1 &amp; 2 \\ -2 &amp; 0 \end{pmatrix}\)</span></li>
@@ -307,9 +324,18 @@ AB = \begin{pmatrix} 2 &amp; -1 &amp; 0\\ 2 &amp; 0 &amp; 2\\ 1 &amp; 1 &amp; 1\
 \end{align*}\]</span></li>
 </ol></li>
 <li><p>Find two <span class="math inline">\(3 \times 3\)</span> matrices <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> such that <span class="math inline">\(AB=BA\)</span>. Now find two <span class="math inline">\(3 \times 3\)</span> matrices such that <span class="math inline">\(AB\neq BA\)</span>.</p>
-<p>Answers:</p></li>
+<p>Answers:</p>
+<p>Two diagonal matrices will always commute:
+<span class="math display">\[
+\begin{pmatrix}a &amp; 0 &amp; 0 \\ 0 &amp; b &amp; 0 \\ 0 &amp; 0 &amp; c\end{pmatrix}\begin{pmatrix}d &amp; 0 &amp; 0 \\ 0 &amp; e &amp; 0 \\ 0 &amp; 0 &amp; f\end{pmatrix} = \begin{pmatrix}d &amp; 0 &amp; 0 \\ 0 &amp; e &amp; 0 \\ 0 &amp; 0 &amp; f\end{pmatrix} \begin{pmatrix}a &amp; 0 &amp; 0 \\ 0 &amp; b &amp; 0 \\ 0 &amp; 0 &amp; c\end{pmatrix} = \begin{pmatrix}ad &amp; 0 &amp; 0 \\ 0 &amp; be &amp; 0 \\ 0 &amp; 0 &amp;cf\end{pmatrix}\]</span>
+but there are also non-diagonal matrices that commute.</p>
+<p>Two matrices that do not commute are
+<span class="math display">\[A = \begin{pmatrix}0 &amp; 0 &amp; a \\ 0 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 0\end{pmatrix}, \quad B = \begin{pmatrix}0 &amp; 0 &amp; 0 \\0 &amp; 0 &amp; 0\\b &amp; 0 &amp; 0\end{pmatrix}\]</span>
+<span class="math display">\[AB = \begin{pmatrix}ab &amp; 0 &amp; 0\\ 0 &amp; 0 &amp; 0 \\  0 &amp; 0 &amp; 0 \end{pmatrix} \neq BA = \begin{pmatrix} 0 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 0 \\0 &amp; 0 &amp; ab\end{pmatrix}\]</span></p></li>
 <li><p>For any two numbers <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>, if <span class="math inline">\(ab=0\)</span> then at least one of <span class="math inline">\(a\)</span> or <span class="math inline">\(b\)</span> must be <span class="math inline">\(0\)</span>. Does an analagous result hold for matrices? That is, if <span class="math inline">\(AB=0_{n\times m}\)</span> must at least one of the matrices <span class="math inline">\(A\)</span> or <span class="math inline">\(B\)</span> be the zero matrix?</p>
-<p>Answers:</p></li>
+<p>Answers:</p>
+<p>A similar result does not hold for matrices, neither <span class="math inline">\(A\)</span> nor <span class="math inline">\(B\)</span> must be zero if <span class="math inline">\(AB=0_{n\times m}\)</span>. This occurs when the columns of <span class="math inline">\(B\)</span> are in the <em>null space</em> of <span class="math inline">\(A\)</span>, that is to say, they are mapped to zero. For instance:
+<span class="math display">\[\begin{pmatrix} a &amp; b &amp; 0 \\ c &amp; d &amp; 0 \\ e &amp; f &amp; 0\end{pmatrix}\begin{pmatrix}0 &amp; 0 \\ 0 &amp; 0 \\g &amp; h\end{pmatrix} = \begin{pmatrix} 0 &amp; 0 \\ 0 &amp; 0 \\ 0 &amp; 0 \end{pmatrix}\]</span></p></li>
 <li><p>Determine whether the following matrices are <em>invertible</em> or <em>singular</em> by computing their determinants. If they are invertible, find the inverse.</p>
 <ol style="list-style-type: lower-alpha">
 <li><span class="math inline">\(\begin{pmatrix} 2 &amp; 1 \\ 1 &amp; 1 \end{pmatrix}\)</span></li>
