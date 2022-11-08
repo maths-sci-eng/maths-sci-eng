@@ -23,7 +23,7 @@
 <meta name="author" content="Dr Mark Callaway" />
 
 
-<meta name="date" content="2022-11-07" />
+<meta name="date" content="2022-11-08" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -262,17 +262,76 @@
 <div id="exercise-set-8-1" class="section level1 unlisted unnumbered hasAnchor">
 <h1>Exercise Set 8<a href="exercise-set-8-1.html#exercise-set-8-1" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <ol style="list-style-type: decimal">
-<li><p>Find the first and second dervatives of the following expressions.</p>
+<li>Find the first and second dervatives of the following expressions.
 <ol style="list-style-type: lower-alpha">
-<li><span class="math inline">\(y=3x^5+2x-1\)</span></li>
-<li><span class="math inline">\(y=4x^{-1}\)</span></li>
-<li><span class="math inline">\(y=x^{\frac{1}{2}}+x^{\frac{1}{3}}\)</span></li>
-<li><span class="math inline">\(y=x^7+\sin(x)\)</span></li>
-<li><span class="math inline">\(y=e^x+5\)</span></li>
+<li><p><span class="math inline">\(y=3x^5+2x-1\)</span></p></li>
+<li><p><span class="math inline">\(y=4x^{-1}\)</span></p></li>
+<li><p><span class="math inline">\(y=x^{\frac{1}{2}}+x^{\frac{1}{3}}\)</span></p></li>
+<li><p><span class="math inline">\(y=x^7+\sin(x)\)</span></p></li>
+<li><p><span class="math inline">\(y=e^x+5\)</span></p></li>
+<li><p><span class="math display">\[\begin{align*}
+y &amp;= 3x^5 + 2x -1$\\
+\frac{dy}{dx} &amp;= 15x + 2\\
+\frac{d^2y}{dx^2} &amp;= 15\end{align*}\]</span></p></li>
 </ol></li>
-<li><p>Find the derivative of <span class="math inline">\((1+2x)(x-x^2)\)</span> in two ways: first, expand and find the derivative; second, use the product rule. Your answers should agree!</p></li>
-<li><p>Use the product rule to show that <span class="math inline">\((af)&#39;(x)=af&#39;(x)\)</span> for any differentiable function <span class="math inline">\(f\)</span> and number <span class="math inline">\(a\)</span>.</p></li>
-<li><p>Use the chain rule to show that <span class="math inline">\((f(ax+b))&#39;=af&#39;(ax+b)\)</span> for any differentiable function <span class="math inline">\(f\)</span> and numbers <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>.</p></li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>\begin{align*}
+y&amp;=4x^{-1}\
+&amp;= -4x^{-2}\
+&amp;= 8x^{-3}\end{align}$$</li>
+<li>$$<span class="math display">\[\begin{align*}
+   y &amp;= x^\frac{1}{2} + x^\frac{1}{3}\\
+   \frac{dy}{dx} &amp;= \frac{1}{2}x^{-\frac{1}{2}} + \frac{1}{3}x^{-\frac{2}{3}}\\
+   \frac{d^2y}{dx^2} &amp;= -\frac{1}{4}x^{-\frac{3}{2}} + -\frac{2}{9}x^{-\frac{5}{3}}
+   \end{align*}\]</span></li>
+<li><span class="math display">\[\begin{align*}
+   y &amp;= x^6 \sin(x)\\
+   \frac{dy}{dx} &amp;= 7x^6 + \cos (x)\\
+   \frac{d^2y}{dx^2} &amp;= 42x^5 - \sin(x)
+   \end{align*}\]</span></li>
+<li><span class="math display">\[\begin{align*}
+   y &amp;= e^x + 5\\
+   \frac{dy}{dx} &amp;= e^x\\
+   \frac{d^2y}{dx^2} &amp;= e^x
+   \end{align*}\]</span></li>
+</ol>
+<ol style="list-style-type: decimal">
+<li><p>Find the derivative of <span class="math inline">\((1+2x)(x-x^2)\)</span> in two ways: first, expand and find the derivative; second, use the product rule. Your answers should agree!</p>
+<p>Answer:</p>
+<p>Method 1, expand and find the derivative:
+<span class="math display">\[\begin{align*}
+y &amp;= (1+2x)(x-x^2)\\
+&amp;=x - x^2 + 2x^2 - 2x^3\\
+&amp;=-2x^3 + x^2 + x\\
+\frac{dy}{dx} &amp;= -6x^2 + 2x + 1
+\end{align*}\]</span></p>
+<p>Method 2, product rule. Let <span class="math inline">\(y=h(x) = f(x)g(x)\)</span> where <span class="math inline">\(f(x) = (1+2x)\)</span> and <span class="math inline">\(g(x) = (x-x^2)\)</span>
+<span class="math display">\[\begin{align*}
+y &amp;= (1+2x)(x-x^2)\\
+y&#39; &amp;= 2(x-x^2)+(1+2x)(1-2x)\\
+&amp;=-6x^2 + 2x + 1
+\end{align*}\]</span>
+And as expected, we have obtained the same answer with both methods.</p></li>
+<li><p>Use the product rule to show that <span class="math inline">\((af)&#39;(x)=af&#39;(x)\)</span> for any differentiable function <span class="math inline">\(f\)</span> and number <span class="math inline">\(a\)</span>.</p>
+<p>Answer:</p>
+<p>We wish to show that <span class="math inline">\((af)&#39;(x) = a f(x)\)</span>, or in Leibniz notation, <span class="math inline">\(\frac{d}{dx}af(x)=a \frac{d}{dx}f(x)\)</span>. This can be shown using product rule, where one of the functions is <span class="math inline">\(f(x)\)</span> and the other is simply the constant function <span class="math inline">\(g(x)=a\)</span>
+<span class="math display">\[\begin{align*}
+(gf)&#39;(x) &amp;= g(x)&#39; f(x) + g(x)f&#39;(x)\\
+&amp;= 0f(x)+g(x)f&#39;(x)\\
+&amp;=a f&#39;(x)
+\end{align*}\]</span>
+or in Leibniz notation
+<span class="math display">\[\begin{align*}
+\frac{d}{dx}(g(x)f(x))&amp;=\frac{d}{dx}(g(x))f(x)+g(x)\frac{d}{dx}f(x)\\
+&amp;=0f(x)+g(x)\frac{d}{dx}f(x)\\
+&amp;=a\frac{d}{dx}f(x)
+\end{align*}\]</span>
+using <span class="math inline">\(g&#39;(x)=\frac{d}{dx}g(x)=0\)</span> because the derivative of a constant function is zero.</p></li>
+<li><p>Use the chain rule to show that <span class="math inline">\((f(ax+b))&#39;=af&#39;(ax+b)\)</span> for any differentiable function <span class="math inline">\(f\)</span> and numbers <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>.</p>
+<p>Answer:</p>
+<p>To show <span class="math inline">\((f(ax+b))&#39; = a f&#39;(ax+b)\)</span>, we can recognise the derivative as an application of chain rule: <span class="math inline">\((f(g(x)))&#39; = g&#39;(x)f&#39;(g(x))\)</span>, where <span class="math inline">\(g(x) = ax+b\)</span>. Since <span class="math inline">\(g&#39;(x) = a\)</span>, we have that
+<span class="math display">\[(f(ax+b))&#39;= a (f&#39;(ax+b))\]</span></p></li>
 <li><p>Find the derivatives of the following functions (you may like to use the additional rules you have just derived in the previous two questions).</p>
 <ol style="list-style-type: lower-alpha">
 <li><span class="math inline">\(f(x)=\sqrt{2}\sin(x)\)</span></li>
@@ -281,6 +340,21 @@
 <li><span class="math inline">\(f(x)=\sin(5x+2)\)</span></li>
 <li><span class="math inline">\(f(x)=3e^{2x}\)</span></li>
 <li><span class="math inline">\(f(x)=3e^{2x+1}\)</span></li>
+</ol>
+<p>Answers:</p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math display">\[f(x)= \sqrt{2} \sin (x)\\
+f&#39;(x) = \sqrt{2} \cos (x)\]</span></li>
+<li><span class="math display">\[f(x) =  \ln (2) \ln(x)\\
+f&#39;(x) = \frac{\ln 2}{x}\]</span></li>
+<li><span class="math display">\[f(x) = \cos (3x)\\
+f&#39;(x) = -3 \sin (3x)\]</span></li>
+<li><span class="math display">\[f(x) = \sin (5x+2)\\
+f&#39;(x) = 5 \cos (5x+2)\]</span></li>
+<li><span class="math display">\[f(x) = 2e^{2x}\\
+f&#39;(x) = 6e^{2x}\]</span></li>
+<li><span class="math display">\[f(x) = 3e^{1x+1}\\
+f&#39;(x) = 6e^{2x+1}\]</span></li>
 </ol></li>
 <li><p>Find the derivatives of the following functions using the product rule.</p>
 <ol style="list-style-type: lower-alpha">
@@ -288,6 +362,18 @@
 <li><span class="math inline">\(f(x)=\sin(x)\cos(x)\)</span></li>
 <li><span class="math inline">\(f(x)=(x^3-x)e^x\)</span></li>
 <li><span class="math inline">\(f(x)=x\ln(x)\)</span></li>
+</ol>
+<p>Answers:</p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math display">\[f(x) = 3x^2 \sin (x)\\
+f&#39;(x) = 6x \sin(x) + 3x^2 \cos(x)\]</span></li>
+<li><span class="math display">\[ f(x) = \sin(x)\cos(x) \quad(=\frac{1}{2}\sin(2x))\\
+f&#39;(x) = \cos^2(x) - \sin^2(x) = \cos(2x)\]</span></li>
+<li><span class="math display">\[f(x) = (x^3 - x)e^x\\
+f&#39;(x) = (3x^2 - 1)e^x + (x^3 - x)e^x\\
+= (x^3 + 3x^2 - x - 1)e^x\]</span></li>
+<li><span class="math display">\[f(x) = x \ln (x)\\
+f&#39;(x) = \ln(x) + 1\]</span></li>
 </ol></li>
 <li><p>Find the derivatives of the following functions using the chain rule.</p>
 <ol style="list-style-type: lower-alpha">
@@ -295,6 +381,18 @@
 <li><span class="math inline">\(f(x)=\sin(\cos(x))\)</span></li>
 <li><span class="math inline">\(f(x)=e^{\sin(x)}\)</span></li>
 <li><span class="math inline">\(f(x)=\sin^{100}(x)\)</span></li>
+</ol>
+<p>Answers:</p>
+<p>These are all applications of chain rule for taking derivatives of functions of the from <span class="math inline">\(f(x) = h(g(x))\)</span></p>
+<ol style="list-style-type: lower-alpha">
+<li>This is a composition of two functions, <span class="math inline">\(h(x) = \cos(x)\)</span>, <span class="math inline">\(g(x) = x^2\)</span>
+<span class="math display">\[f&#39;(x) = -2x \sin(x^2)\]</span></li>
+<li>Taking the derivative of <span class="math inline">\(h(g(x))\)</span> where <span class="math inline">\(h(x) = \sin(x)\)</span> and <span class="math inline">\(g(x) = \cos(x)\)</span>
+<span class="math display">\[f&#39;(x) = -\sin(x)\cos(\cos(x))\]</span></li>
+<li><span class="math inline">\(f&#39;(x) = (h(g(x)))&#39;\)</span> where <span class="math inline">\(h(x) = e^x\)</span> and <span class="math inline">\(g(x) = \sin(x)\)</span>
+<span class="math display">\[f&#39;(x) = \cos(x)e^{\sin(x)}\]</span></li>
+<li>Here, <span class="math inline">\(h(x) = x^{100}\)</span> and <span class="math inline">\(g(x) = \sin(x)\)</span>
+<span class="math display">\[f&#39;(x) = 100\cos(x)\sin^{99}(x)\]</span></li>
 </ol></li>
 <li><p>Find the derivatives of the following functions using the quotient rule.</p>
 <ol style="list-style-type: lower-alpha">
@@ -303,6 +401,21 @@
 <li><span class="math inline">\(f(x)=\dfrac{x^3}{e^{3x}}\)</span></li>
 <li><span class="math inline">\(f(x)=\dfrac{x-\sqrt{x}}{x^2}\)</span></li>
 <li><span class="math inline">\(f(x)=\dfrac{\sin(x)}{\cos(x)}\)</span></li>
+</ol>
+<p>Answers:</p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(f(x) = \frac{1}{1+x^2}\)</span>. Applying quotient rule:
+<span class="math display">\[f&#39;(x) = \frac{-2x}{(1+x^2)^2}\]</span></li>
+<li><span class="math inline">\(f(x) = \frac{x^2}{1+x^2}\)</span>.
+<span class="math display">\[f&#39;(x) = \frac{2x(1+x^2) - x^2(2x)}{(1+x^2)^2} = \frac{2x}{(1+x^2)^2}\]</span></li>
+<li><span class="math inline">\(f(x) = \frac{x^3}{e^{3x}}\)</span>
+<span class="math display">\[f&#39;(x) = \frac{3x^2 \times e^{3x} - x^3\times 3e^{3x}}{e^{6x}} = \frac{3(x-1)x^2}{e^{3x}}\]</span></li>
+<li><span class="math inline">\(f(x) = \frac{x-x^{\frac{1}{2}}}{x^2}\)</span>
+<span class="math display">\[f&#39;(x) = \frac{(1-\frac{1}{2}x^{-\frac{1}{2}})\times x^2 - (x-x^\frac{1}{2})\times 2x}{x^4}\\
+= \frac{x^2 - \frac{1}{2}x^{\frac{3}{2}}  - 2x^2 + 2x^{\frac{3}{3}}}{x^4}\\
+=\frac{-x^2 + \frac{3}{2}x^{\frac{3}{2}}}{x^4} = -x^{-2} + \frac{3}{2}x^{-\frac{5}{2}}\]</span></li>
+<li><span class="math inline">\(f(x) = \frac{\sin(x)}{\cos{x}}\)</span>
+<span class="math display">\[f&#39;(x) = \frac{\cos^2(x) + \sin^2(x)}{\cos^2 (x)} = \frac{1}{\cos^2(x)} = \sec^2(x)\]</span></li>
 </ol></li>
 <li><p>Find the derivatives of the following functions.</p>
 <ol style="list-style-type: lower-alpha">
@@ -323,7 +436,7 @@ Then applying the chain rule to <span class="math inline">\(t\)</span> and <span
 <span class="math display">\[\frac{df(x)}{dx}=\frac{ds(t)}{dt}\left(\frac{dt(u)}{du}\frac{du(x)}{dx}\right)\]</span>
 so we have
 <span class="math display">\[\frac{df(x)}{dx}=2\sin(\sin(x))\times \cos(\sin(x))\times\cos(x).\]</span></p></li>
-<li><p>We could first turn the power into a product to obtain <span class="math inline">\(f(x)=2\ln(x)\)</span>, then the derivative Is
+<li><p>We could first turn the power into a product to obtain <span class="math inline">\(f(x)=2\ln(x)\)</span>, then the derivative is
 <span class="math display">\[\frac{df(x)}{dx}=2\frac{1}{x}.\]</span></p>
 <p>Alternatively, we could use the chain rule. Letting <span class="math inline">\(u(x)=x^2\)</span> we have
 <span class="math display">\[\begin{align*}
@@ -372,15 +485,64 @@ and
 <li>What is the initial velocity?</li>
 <li>What is the largest positive displacement?</li>
 <li>At what time does the particle return to the origin?</li>
+</ol>
+<p>Answers:</p>
+<ol style="list-style-type: lower-alpha">
+<li><p><span class="math display">\[\begin{align*} x &amp;= -t^3 + 5t^2 + t\\
+v &amp;= \frac{dx}{dt} = -3t^2 + 10t + 1\\
+a &amp;= \frac{dv}{dt} = \frac{d^2x}{dt^2} = -6t + 10
+\end{align*}\]</span></p></li>
+<li><p><span class="math inline">\(v(0) = 1\)</span></p></li>
+<li><p>To find the largest positive displacement, we must find the turning points of <span class="math inline">\(x\)</span>. These times are found by solving for <span class="math inline">\(v(t) = 0\)</span>
+<span class="math display">\[v = -3t^2 + 10t + 1 = 0\\
+\text{solved by } t = \frac{5}{3}\pm \frac{2\sqrt{7}}{3}\]</span>
+The solution <span class="math inline">\(\frac{5}{3}-\frac{2\sqrt{7}}{3}\)</span> is in negative time, and the shape of the dominant <span class="math inline">\(-t^3\)</span> term in <span class="math inline">\(x\)</span> suggests that the maximum will be at time <span class="math inline">\(\frac{5}{3}+\frac{2\sqrt{7}}{3}\)</span>, but it is prudent to check the second derivative of <span class="math inline">\(x\)</span>, <span class="math inline">\(a\)</span>.
+<span class="math display">\[a(\frac{5}{3}-\frac{2\sqrt{7}}{3}) = 4\sqrt{7}\\
+a(\frac{5}{3}+\frac{2\sqrt{7}}{3}) = -4\sqrt{7}\]</span>
+And hence the maximum displacement does indeed occur at time <span class="math inline">\(t=\frac{5}{3}+\frac{2\sqrt{7}}{3}\)</span>, and <span class="math inline">\(x(\frac{5}{3}+\frac{2\sqrt{7}}{3}) \approx 21.9\)</span></p></li>
+<li><p>To find when the particle returns to the origin, we must solve for <span class="math inline">\(x(t) = 0\)</span>.
+<span class="math display">\[-t^3 + 5t^2 + t = 0\\
+-t^2 + 5t + 1 = 0\\
+t = \frac{5 \pm \sqrt{29}}{2}\]</span>
+Where one solution is for a negative <span class="math inline">\(t\)</span>, so the particle returns to the origin at <span class="math inline">\(t = \frac{5 +\sqrt{29}}{2} \approx 5.19\)</span></p></li>
 </ol></li>
 <li><p>Find the points of inflection of the following functions.</p>
 <ol style="list-style-type: lower-alpha">
 <li><span class="math inline">\(f(x)=\dfrac{x^3}{3}-\dfrac{x^2}{2}-2x+5\)</span></li>
 <li><span class="math inline">\(f(x)=x+\sin(x)\)</span></li>
 </ol></li>
+</ol>
+<p>Answer:</p>
+<pre><code>a. To find points of inflection, we find the points at which the second derivative is zero and the third derivative is non-zero.
+$$f(x) = \frac{x^3}{3} - \frac{x^2}{2} - 2x + 5\\
+f&#39;(x) = x^2 - x - 2\\
+f&#39;(x) = 0 = x^2 - x- 2 = (x+1)(x-2)\\
+f&#39;&#39;(x) = 2x-1\\
+f&#39;&#39;&#39;(x)=2$$
+The second derivative is zero at $x=\frac{1}{2}$, and the second derivative also changes signs either side of this point. Alternatively we simply note that $f&#39;&#39;(x=\frac{1}{2}) = 0$ and $f&#39;&#39;&#39;(x=\frac{1}{2})\neq 0$, so it is an inflection point by the Third Derivative Test for Inflection Points.
+
+a. $$f(x) = \sin (x) + x\\
+f&#39;(x) = \cos(x)+1$$
+So there are stationary points at $x = \frac{\pi}{2} + 2\pi k$ for any integer $k$. $f&#39;&#39;(x) = -\sin(x)$, which is zero whenever $x = k\pi$ for integer $k$. The third derivative, $f&#39;&#39;&#39;(x) = -\cos(x)$ is non zero whenever $x \neq \frac{\pi}{2} + 2\pi k$. So the points of inflection, by the Third Derivative Test, are whenever $x=2\pi k$ for integer $k$. Note that half of these are also stationary points.</code></pre>
+<ol style="list-style-type: decimal">
 <li><p>A rectangular box with no lid is made from a thin sheet of metal. The base is <span class="math inline">\(2x\text{ mm}\)</span> long and <span class="math inline">\(x\text{ mm}\)</span> wide, and the volume is <span class="math inline">\(48000\text{ mm}^3\)</span>. Show that the area <span class="math inline">\(A\)</span> of metal used is given by
 <span class="math display">\[A=2x^2+144000x^{-1} \text{ mm}^2.\]</span>
-Find the value of <span class="math inline">\(x\)</span> for which the minimum area of metal is used along with the value of the minimum area.</p></li>
+Find the value of <span class="math inline">\(x\)</span> for which the minimum area of metal is used along with the value of the minimum area.</p>
+<p>Answer:</p>
+<p>The volume of the box is given by <span class="math inline">\(2x\times x \times h = 48000\text{ mm}^3\)</span>. We write the height in terms of volume and base area: <span class="math inline">\(h = \frac{48000}{2x^2}\)</span>
+The area of metal used is given by
+<span class="math display">\[A = 2x^2 + 2\times 2x\times \frac{48000}{x^2} + 2 \times x \times \frac{48000}{2x^2}\\
+=2x^2 + \frac{96000}{x} + \frac{48000}{x}\\
+= 2x^2 + \frac{144000}{x}\]</span>
+We wish to minimise the area of metal used to create the appropriate volume of box. This requires finding the minimum of the Area function.
+<span class="math display">\[A&#39; = 4x - \frac{144000}{x^2}\\
+A&#39; = 0 \Rightarrow 4x^3 = 144000\\
+\Rightarrow x = 33.019mm\]</span>
+We check this is a minimum by looking at the second derivative
+<span class="math display">\[A&#39;&#39;=4+\frac{288000}{x^3}$
+which is positive for any postive $x$ value, hence we do have a minimum by the second derivative test.
+The corresponding area is
+\]</span> A= 6541.63^3.$$</p></li>
 </ol>
 
 </div>
