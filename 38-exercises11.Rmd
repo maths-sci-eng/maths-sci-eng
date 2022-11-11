@@ -16,7 +16,7 @@
 
 1. Find the area between the curve and the $x$-axis of the function $f(x)=x^3-x$ and the lines $x=0$ and $x=2$.
 
-1. The velocity $v$ ($\text{ms^{-1}$) of a particle moving in a straight line at time $t$ ($\text{s}$) is given by:
+1. The velocity $v$ ($\text{ms^{-1}}$) of a particle moving in a straight line at time $t$ ($\text{s}$) is given by:
     $$v=6t^2-30t-36\quad t>0$$
     By integrating, find the distance travelled by the particle between $t=3$ and $t=5$ seconds.
 
@@ -24,7 +24,6 @@
     a. $\int (4x-3)^5 \; dx$
     a. $\int 4\sin(3x+2)\; dx$
     a. $\int_2^5 \frac{1}{1-2x} \; dx$
-    a. $\int_0^{\pi/4} 4\sin(3\theta)\cos(\theta)\; d\theta$
     a. $\int \frac{1}{\sqrt{5-3x)^3}}\; dx$
     a. $\int \frac{4x}{\sqrt{x^2+3)^3}}\; dx$
     a. $\int \frac{x}{\ln(x^2)} \; dx$
