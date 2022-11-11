@@ -48,7 +48,7 @@ Some basic integrals obtained from differentiating well known functions
 \; \to \;
 \int \frac{1}{1+x^2 } d x  = \tan^{-1}(x) +C     \nonumber \\
 && \frac{d }{d x} e^x  = e^x  \;   \to   \; \int
-e^x  = e^x +C\nonumber \\
+e^x dx = e^x +C\nonumber \\
 && \frac{d }{d x} \ln |x|  = \frac{1 }{x} \;
 \to \; \int \frac{1}{x}  d x  = \ln |x| +C
 \nonumber \\
