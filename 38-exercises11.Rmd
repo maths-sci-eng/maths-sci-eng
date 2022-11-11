@@ -1,4 +1,4 @@
-# Exercise Set 11 {.unlisted .unnumbered}
+# Exercise Set 11 {-}
 
 1. Determine the following indefinite integrals
     a. $\int 2x^7\; dx$
