@@ -6,29 +6,281 @@
     a. $\sin(x^2y^2)=x$
     a. $xy^2=y+e^{xy}$
 
+    Answers:
+
+    a. \begin{align*}
+        2xy+x^2\frac{dy}{dx}+3y^3+9xy^2\frac{dy}{dx}-1&=0\\
+        (x^2+9xy^2)\frac{dy}{dx}&=1-2xy-3y^3\\
+        \frac{dy}{dx}&=\frac{1-2xy-3y^3}{x^2+9xy^2}
+        \end{align*}
+
+    a. \begin{align*}
+        \cos(x^2y^2)\left(2xy^2+2x^2y\frac{dy}{dx}\right)&=1\\
+        \frac{dy}{dx}&=\frac{1-2xy^2\cos(x^2y^2)}{2x^2y\cos(x^2y^2)}
+        \end{align*}
+
+    a. \begin{align*}
+        \frac{d}{dx}(xy^2)&=\frac{d}{dx}(y+e^{xy})\\
+        2xy\frac{dy}{dx}+y^2&=\frac{dy}{dx}+\frac{d}{dx}e^{xy}\\
+        2xy\frac{dy}{dx}+y^2&=\frac{dy}{dx}+e^{xy}\frac{d}{dx}(xy)\\
+        2xy\frac{dy}{dx}+y^2&=\frac{dy}{dx}+e^{xy}\left(x\frac{dy}{dx}+y\right)\\
+        2xy\frac{dy}{dx}-xe^{xy}\frac{dy}{dx}-\frac{dy}{dx}&=ye^{xy}-y^2\\
+        \frac{dy}{dx}(2xy-xe^{xy}-1)&=ye^{xy}-y^2\\
+        \frac{dy}{dx}&=\frac{ye^{xy}-y^2}{(2xy-1-xe^{xy})}.
+        \end{align*}
+
 1. Consider the curve $x^2+3xy+y^2+2x-7=0$. Use implicit differentiation to find $\dfrac{dy}{dx}$ and hence compute the equation of the tangent at the point $(1,1)$.
 
+    Answers:
+
+    \begin{align*}
+    2x+3y+3x\frac{dy}{dx}+2\frac{dy}{dx}+2&=0\\
+    \frac{dy}{dx}&=-\frac{2x+3y+2}{3x+2}.\\
+    \end{align*}
+    At the point $(1,1)$
+    \begin{equation*}
+    \frac{dy}{dx}\Bigr|_{\substack{(1,1)}}=-\frac{2+3+2}{3+2}=-\frac{7}{5}
+    \end{equation*}
+    then the equation of the tangent line is
+    \begin{equation*}
+    y=1-\frac{7}{5}(x-1).
+    \end{equation*}
+
 1. Find the slope of the circle $x^2+y^2=25$ at the point $(-3,-4)$. Hence find the equations of the tangent and normal at that point.
+
+    Answers:
+    By implicit differentiation
+    $$2x+2y\frac{dy}{dx}=0$$
+    hence
+    $$\frac{dy}{dx}=-\frac{x}{y}$$
+    and at $(-3,-4)$
+    $$\frac{dy}{dx}=-\frac{3}{4}.$$
+
+    The equation of the tangent line is given by
+    $$y-(-4)=-\frac{3}{4}(x-(-3))$$
+    or
+    $$y=-\frac{3}{4}x-\frac{25}{4}.$$
+
+    The equation of the normal line is
+    $$y-(-4)=\frac{4}{3}(x-(-3))$$
+    or
+    $$y=\frac{4}{3}x.$$    
 
 1. Find $\dfrac{dy}{dx}$ and $\dfrac{d^2y}{dx^2}$ for the following by implicit differentiation.
     a. $y+\sin(y)=x$
     a. $x^2-xy+y^2=3$
+
+    Answers:
+
+    a. \begin{align*}
+        \frac{dy}{dx}+\cos(y)\frac{dy}{dx}&=1\\
+        \frac{dy}{dx}&=\frac{1}{1+\cos(y)}
+        \end{align*}
+    a. \begin{align*}
+        2x-y-x\frac{dy}{dx}+2y\frac{dy}{dx}&=0\\
+        (x-2y)\frac{dy}{dx}&=2x-y\\
+        \frac{dy}{dx}&=\frac{2x-y}{x-2y}
+        \end{align*}
+
 
 1. Find $\dfrac{dy}{dx}$ and $\dfrac{d^2y}{dx^2}$ for the following parametric equations.
     a. $y=\cos(2t)$ and $x=\sin(t)$
     a. $y=\dfrac{3+2t}{1+t}$ and $x=\dfrac{2-3t}{1+t}$
     a. $y=3\sin(\theta)-\sin^3(\theta)$ and $x=\cos^3(\theta)$
 
+    Answers:
+
+    a. \begin{align*}
+        \frac{dy}{dt}=-2\sin(2t)&&\frac{dx}{dt}=\cos(t)
+        \end{align*}
+        The first derivative is
+        \begin{align*}
+        \frac{dy}{dx}&=\frac{\dfrac{dy}{dt}}{\dfrac{dx}{dt}}\\
+        &=\frac{-2\sin(2t)}{\cos(t)}\\
+        &=\frac{-4\sin(t)\cos(t)}{\cos(t)}\\
+        &=-4\sin(t).
+        \end{align*}
+        The second derivative is (using the chain rule)
+        \begin{align*}
+        \frac{d^2y}{dx^2}&=\frac{d}{dt}\left(\frac{dy}{dx}\right)\frac{dt}{dx}\\
+        &=\frac{d}{dt}(-4\sin(t))\cdot \frac{1}{\cos(t)}\\
+        &=-4\cos(t)\cdot \frac{1}{\cos(t)}\\
+        &=-4.
+        \end{align*}
+
+    a. \begin{align*}
+        \frac{dy}{dt}=-\frac{1}{(1+t)^2}&&\frac{dx}{dt}=-\frac{5}{(1+t)^2}
+        \end{align*}
+        The first derivative is
+        \begin{align*}
+        \frac{dy}{dx}&=\frac{\dfrac{dy}{dt}}{\dfrac{dx}{dt}}\\
+        &=\frac{1}{(1+t)^2}\cdot \frac{(1+t)^2}{5}\\
+        =\frac{1}{5}
+        \end{align*}
+        then the second derivative
+        \begin{equation*}
+        \frac{d^2y}{dx^2}=0.
+        \end{equation*}
+
+    a. \begin{align*}
+        \frac{dy}{d\theta}=3\cos^3(\theta)&&\frac{dx}{d\theta}=-3\cos^2(\theta)\sin(\theta)
+        \end{align*}
+        The first derivative is
+        \begin{align*}
+        \frac{dy}{dx}&=\frac{\dfrac{dy}{d\theta}}{\dfrac{dx}{d\theta}}\\
+        &=\frac{3\cos^3(\theta)}{-3\cos^2(\theta)\sin(\theta)}\\
+        &=-\cot(t)
+        \end{align*}
+        and the second derivative
+        \begin{align*}
+        \frac{d^2y}{dx^2}&=\frac{d}{d\theta}\left(\frac{dy}{dx}\right)\frac{d\theta}{dx}\\
+        &=\frac{d}{d\theta}(-\cot(t))\cdot \frac{1}{-3\cos^2(\theta)\sin(\theta)}\\
+        &=\frac{1}{\sin^2(\theta)}\cdot \frac{1}{-3\cos^2(\theta)\sin(\theta)}\\
+        &=\frac{-1}{3\cos^2(\theta)\sin^3(\theta)},
+        \end{align*}
+        where we have used
+        \begin{align*}
+        \frac{d}{d\theta}(-\cot(t))&=\frac{d}{d\theta}\frac{-\cos(\theta)}{\sin(\theta)}\\
+        &=\frac{\sin(\theta)\sin(\theta)-(-\cos(\theta))\cos(\theta)}{\sin^2(\theta)}\\
+        &=\frac{1}{\sin^2(\theta)}.
+        \end{align*}
+
 1. Find the derivative of the following inverse functions by implicit differentiation.
     a. $y=\sin^{-1}(x)$
     a. $y=\cosh^{-1}(3x)$
     a. $y=\tan^{-1}(4x^2)$
 
+    Answers:
+
+    a. We have that
+        \begin{equation*}
+        \sin(y)=x
+        \end{equation*}
+        then by implicit differentiation
+        \begin{align*}
+        \cos(y)\dfrac{dy}{dx}=1\\
+        \dfrac{dy}{dx}=\dfrac{1}{\cos(y)}.
+        \end{align*}
+        Using the identity $\cos^2(y)+\sin^2(y)=1$
+        \begin{align*}
+        \cos(y)&=\sqrt{1-\sin^2(y)}\\
+        &=\sqrt{1-x^2}
+        \end{align*}
+        so,
+        \begin{equation*}
+        \dfrac{dy}{dx}=\dfrac{1}{\sqrt{1-x^2}}.
+        \end{equation*}
+
+    a. We have
+        \begin{equation*}
+        \cosh(y)=3x
+        \end{equation*}
+        then by implicit differentiation
+        \begin{align*}
+        \sinh(y)\dfrac{dy}{dx}&=3\\
+        \dfrac{dy}{dx}&=\dfrac{3}{\sinh(y)}.
+        \end{align*}
+
+        Since $\cosh^2(y)-\sinh^2(y)=1$
+        \begin{equation*}
+        \sinh(y)=\sqrt{\cosh^2(y)-1}=\sqrt{(3x)^2-1}.
+        \end{equation*}
+        So,
+        \begin{equation*}
+        \dfrac{dy}{dx}=\frac{3}{\sqrt{9x^2-1}}.
+        \end{equation*}
+
+
+    a. We have
+        \begin{equation*}
+        \tan(y)=4x^2.
+        \end{equation*}
+        By implicit differentiation,
+        \begin{align*}
+        \sec^2(y)\dfrac{dy}{dx}&=8x\\
+        \dfrac{dy}{dx}&=\dfrac{8x}{\sec^2(y)}
+        \end{align*}
+        Using
+        \begin{align*}
+        \cos^2(y)+\sin^2(y)&=1\\
+        1+\tan^2(y)&=\sec^2(y)
+        \end{align*}
+        we have $\sec^2(y)=1+(4x^2)^2$, and then
+        \begin{equation*}
+        \dfrac{dy}{dx}=\dfrac{8x}{1+16x^4}.
+        \end{equation*}
+
 1. Find $\dfrac{dy}{dx}$ for the following using logarithmic differentiation.
     a. $y=a^x$
     a. $y=\dfrac{(x-4)^7(2x+3)^2}{(4x+7)^3}$
+
+
+    Answers:
+
+    a. Taking logs and differentiating implicitly
+        \begin{align*}
+        \ln(y)=\ln(a^x)&=x\ln(a)\\
+        \frac{1}{y}\dfrac{dy}{dx}&=\ln(a)\\
+        \dfrac{dy}{dx}&=y\ln(a)\\
+        \dfrac{dy}{dx}&=a^x\ln(a).
+        \end{align*}
+    
+    a. Taking logs
+        \begin{align*}
+        \ln(y)&=\ln\left[\dfrac{(x-4)^7(2x+3)^2}{(4x+7)^3}\right]\\
+        &=\ln(x-4)^7+\ln(2x+3)^2-\ln(4x+7)^3\\
+        &=7\ln(x-4)+2\ln(2x+3)-3\ln(4x+7)
+        \end{align*}
+        Then differentiating
+        \begin{align*}
+        \frac{1}{y}\dfrac{dy}{dx}&=\frac{7}{x-4}+\frac{2}{2x+3}\cdot 2-\frac{3}{4x-7}\cdot 4\\
+        \dfrac{dy}{dx}&=\dfrac{(x-4)^7(2x+3)^2}{(4x+7)^3}\left[ \frac{7}{x-4}+\frac{4}{2x+3}-\frac{12}{4x-7}\right]
+        \end{align*}
+
 
 1. Find $\dfrac{dy}{dx}$ for the following.
     a. $y=x^x$
     a. $y=(\tanh(x))^x$
     a. $x^3+\sin(xy)=xy^2$
+
+    Answers:
+
+    a. First take the natural logarithm:
+        \begin{equation*}
+        \ln(y)=x\ln(x),
+        \end{equation*}
+        then differentiate implicitly:
+        \begin{align*}
+        \frac{d}{dx}(\ln(y))&=\frac{d}{dx}(x\ln(x))\\
+        \frac{1}{y}\frac{dy}{dx}&=\frac{dx}{dx}\ln(x)+x\frac{d}{dx}\ln(x)\\
+        \frac{1}{y}\frac{dy}{dx}&=\ln(x)+x\frac{1}{x}\\
+        \frac{dy}{dx}&=y(\ln(x)+1)=x^x(\ln(x)+1).
+        \end{align*}
+
+        **Important!** The derivative of $x^x$ is **not** $x\cdot x^{x-1}=x^x$. We can't treat variable exponents like constant exponents!
+
+    a. Taking logs
+        \begin{equation*}
+        \ln(y)=x\ln(\tanh(x)),
+        \end{equation*}
+        then differentiating
+        \begin{align*}
+        \frac{1}{y}\dfrac{dy}{dx}&=\ln(\tanh(x))+\frac{x}{\tanh(x)}\textrm{sech}^2(x)\\
+        &=\ln(\tanh(x))+\frac{x\cosh(x)}{\sinh(x)\cosh^2(x)}\\
+        &=\ln(\tanh(x))+\frac{x}{\sinh(x)\cosh(x)}\\
+        &=\ln(\tanh(x))+\frac{2x}{\sinh(2x)}.\\
+        \end{align*}
+        So,
+        \begin{equation*}
+        \dfrac{dy}{dx}=(\tanh(x))^x\left[ \ln(\tanh(x))+\frac{2x}{\sinh(2x)}\right].
+        \end{equation*}
+
+    a. By implicit differentiation and using the product rule
+        \begin{align*}
+        3x^2+\cos(xy)\left(y+x\dfrac{dy}{dx} \right)&=y^2+2xy\dfrac{dy}{dx}\\
+        3x^2+y\cos(xy)-y^2&=2xy\dfrac{dy}{dx}-x\cos(xy)\dfrac{dy}{dx}
+        \end{align*}
+        so,
+        \begin{equation*}
+        \dfrac{dy}{dx}=\frac{3x^2+y\cos(xy)-y^2}{2xy-x\cos(xy)}
+        \end{equation*}

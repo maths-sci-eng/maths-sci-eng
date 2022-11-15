@@ -246,7 +246,9 @@
 <li class="chapter" data-level="" data-path="exercise-set-8.html"><a href="exercise-set-8.html"><i class="fa fa-check"></i>Exercise Set 8</a></li>
 <li class="chapter" data-level="" data-path="exercise-set-9.html"><a href="exercise-set-9.html"><i class="fa fa-check"></i>Exercise Set 9</a></li>
 <li class="chapter" data-level="" data-path="exercise-set-10.html"><a href="exercise-set-10.html"><i class="fa fa-check"></i>Exercise Set 10</a></li>
+<li class="chapter" data-level="" data-path="exercise-set-10-1.html"><a href="exercise-set-10-1.html"><i class="fa fa-check"></i>Exercise Set 10</a></li>
 <li class="chapter" data-level="" data-path="exercise-set-11.html"><a href="exercise-set-11.html"><i class="fa fa-check"></i>Exercise Set 11</a></li>
+<li class="chapter" data-level="" data-path="exercise-set-11-1.html"><a href="exercise-set-11-1.html"><i class="fa fa-check"></i>Exercise Set 11</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -275,36 +277,268 @@
 <li><span class="math inline">\(x^2y+3xy^3-x=3\)</span></li>
 <li><span class="math inline">\(\sin(x^2y^2)=x\)</span></li>
 <li><span class="math inline">\(xy^2=y+e^{xy}\)</span></li>
+</ol>
+<p>Answers:</p>
+<ol style="list-style-type: lower-alpha">
+<li><p><span class="math display">\[\begin{align*}
+2xy+x^2\frac{dy}{dx}+3y^3+9xy^2\frac{dy}{dx}-1&amp;=0\\
+(x^2+9xy^2)\frac{dy}{dx}&amp;=1-2xy-3y^3\\
+\frac{dy}{dx}&amp;=\frac{1-2xy-3y^3}{x^2+9xy^2}
+\end{align*}\]</span></p></li>
+<li><p><span class="math display">\[\begin{align*}
+\cos(x^2y^2)\left(2xy^2+2x^2y\frac{dy}{dx}\right)&amp;=1\\
+\frac{dy}{dx}&amp;=\frac{1-2xy^2\cos(x^2y^2)}{2x^2y\cos(x^2y^2)}
+\end{align*}\]</span></p></li>
+<li><p><span class="math display">\[\begin{align*}
+\frac{d}{dx}(xy^2)&amp;=\frac{d}{dx}(y+e^{xy})\\
+2xy\frac{dy}{dx}+y^2&amp;=\frac{dy}{dx}+\frac{d}{dx}e^{xy}\\
+2xy\frac{dy}{dx}+y^2&amp;=\frac{dy}{dx}+e^{xy}\frac{d}{dx}(xy)\\
+2xy\frac{dy}{dx}+y^2&amp;=\frac{dy}{dx}+e^{xy}\left(x\frac{dy}{dx}+y\right)\\
+2xy\frac{dy}{dx}-xe^{xy}\frac{dy}{dx}-\frac{dy}{dx}&amp;=ye^{xy}-y^2\\
+\frac{dy}{dx}(2xy-xe^{xy}-1)&amp;=ye^{xy}-y^2\\
+\frac{dy}{dx}&amp;=\frac{ye^{xy}-y^2}{(2xy-1-xe^{xy})}.
+\end{align*}\]</span></p></li>
 </ol></li>
-<li><p>Consider the curve <span class="math inline">\(x^2+3xy+y^2+2x-7=0\)</span>. Use implicit differentiation to find <span class="math inline">\(\dfrac{dy}{dx}\)</span> and hence compute the equation of the tangent at the point <span class="math inline">\((1,1)\)</span>.</p></li>
-<li><p>Find the slope of the circle <span class="math inline">\(x^2+y^2=25\)</span> at the point <span class="math inline">\((-3,-4)\)</span>. Hence find the equations of the tangent and normal at that point.</p></li>
+<li><p>Consider the curve <span class="math inline">\(x^2+3xy+y^2+2x-7=0\)</span>. Use implicit differentiation to find <span class="math inline">\(\dfrac{dy}{dx}\)</span> and hence compute the equation of the tangent at the point <span class="math inline">\((1,1)\)</span>.</p>
+<p>Answers:</p>
+<p><span class="math display">\[\begin{align*}
+2x+3y+3x\frac{dy}{dx}+2\frac{dy}{dx}+2&amp;=0\\
+\frac{dy}{dx}&amp;=-\frac{2x+3y+2}{3x+2}.\\
+\end{align*}\]</span>
+At the point <span class="math inline">\((1,1)\)</span>
+<span class="math display">\[\begin{equation*}
+\frac{dy}{dx}\Bigr|_{\substack{(1,1)}}=-\frac{2+3+2}{3+2}=-\frac{7}{5}
+\end{equation*}\]</span>
+then the equation of the tangent line is
+<span class="math display">\[\begin{equation*}
+y=1-\frac{7}{5}(x-1).
+\end{equation*}\]</span></p></li>
+<li><p>Find the slope of the circle <span class="math inline">\(x^2+y^2=25\)</span> at the point <span class="math inline">\((-3,-4)\)</span>. Hence find the equations of the tangent and normal at that point.</p>
+<p>Answers:
+By implicit differentiation
+<span class="math display">\[2x+2y\frac{dy}{dx}=0\]</span>
+hence
+<span class="math display">\[\frac{dy}{dx}=-\frac{x}{y}\]</span>
+and at <span class="math inline">\((-3,-4)\)</span>
+<span class="math display">\[\frac{dy}{dx}=-\frac{3}{4}.\]</span></p>
+<p>The equation of the tangent line is given by
+<span class="math display">\[y-(-4)=-\frac{3}{4}(x-(-3))\]</span>
+or
+<span class="math display">\[y=-\frac{3}{4}x-\frac{25}{4}.\]</span></p>
+<p>The equation of the normal line is
+<span class="math display">\[y-(-4)=\frac{4}{3}(x-(-3))\]</span>
+or
+<span class="math display">\[y=\frac{4}{3}x.\]</span></p></li>
 <li><p>Find <span class="math inline">\(\dfrac{dy}{dx}\)</span> and <span class="math inline">\(\dfrac{d^2y}{dx^2}\)</span> for the following by implicit differentiation.</p>
 <ol style="list-style-type: lower-alpha">
 <li><span class="math inline">\(y+\sin(y)=x\)</span></li>
 <li><span class="math inline">\(x^2-xy+y^2=3\)</span></li>
+</ol>
+<p>Answers:</p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math display">\[\begin{align*}
+\frac{dy}{dx}+\cos(y)\frac{dy}{dx}&amp;=1\\
+\frac{dy}{dx}&amp;=\frac{1}{1+\cos(y)}
+\end{align*}\]</span></li>
+<li><span class="math display">\[\begin{align*}
+2x-y-x\frac{dy}{dx}+2y\frac{dy}{dx}&amp;=0\\
+(x-2y)\frac{dy}{dx}&amp;=2x-y\\
+\frac{dy}{dx}&amp;=\frac{2x-y}{x-2y}
+\end{align*}\]</span></li>
 </ol></li>
 <li><p>Find <span class="math inline">\(\dfrac{dy}{dx}\)</span> and <span class="math inline">\(\dfrac{d^2y}{dx^2}\)</span> for the following parametric equations.</p>
 <ol style="list-style-type: lower-alpha">
 <li><span class="math inline">\(y=\cos(2t)\)</span> and <span class="math inline">\(x=\sin(t)\)</span></li>
 <li><span class="math inline">\(y=\dfrac{3+2t}{1+t}\)</span> and <span class="math inline">\(x=\dfrac{2-3t}{1+t}\)</span></li>
 <li><span class="math inline">\(y=3\sin(\theta)-\sin^3(\theta)\)</span> and <span class="math inline">\(x=\cos^3(\theta)\)</span></li>
+</ol>
+<p>Answers:</p>
+<ol style="list-style-type: lower-alpha">
+<li><p><span class="math display">\[\begin{align*}
+\frac{dy}{dt}=-2\sin(2t)&amp;&amp;\frac{dx}{dt}=\cos(t)
+\end{align*}\]</span>
+The first derivative is
+<span class="math display">\[\begin{align*}
+\frac{dy}{dx}&amp;=\frac{\dfrac{dy}{dt}}{\dfrac{dx}{dt}}\\
+&amp;=\frac{-2\sin(2t)}{\cos(t)}\\
+&amp;=\frac{-4\sin(t)\cos(t)}{\cos(t)}\\
+&amp;=-4\sin(t).
+\end{align*}\]</span>
+The second derivative is (using the chain rule)
+<span class="math display">\[\begin{align*}
+\frac{d^2y}{dx^2}&amp;=\frac{d}{dt}\left(\frac{dy}{dx}\right)\frac{dt}{dx}\\
+&amp;=\frac{d}{dt}(-4\sin(t))\cdot \frac{1}{\cos(t)}\\
+&amp;=-4\cos(t)\cdot \frac{1}{\cos(t)}\\
+&amp;=-4.
+\end{align*}\]</span></p></li>
+<li><p><span class="math display">\[\begin{align*}
+\frac{dy}{dt}=-\frac{1}{(1+t)^2}&amp;&amp;\frac{dx}{dt}=-\frac{5}{(1+t)^2}
+\end{align*}\]</span>
+The first derivative is
+<span class="math display">\[\begin{align*}
+\frac{dy}{dx}&amp;=\frac{\dfrac{dy}{dt}}{\dfrac{dx}{dt}}\\
+&amp;=\frac{1}{(1+t)^2}\cdot \frac{(1+t)^2}{5}\\
+=\frac{1}{5}
+\end{align*}\]</span>
+then the second derivative
+<span class="math display">\[\begin{equation*}
+\frac{d^2y}{dx^2}=0.
+\end{equation*}\]</span></p></li>
+<li><p><span class="math display">\[\begin{align*}
+\frac{dy}{d\theta}=3\cos^3(\theta)&amp;&amp;\frac{dx}{d\theta}=-3\cos^2(\theta)\sin(\theta)
+\end{align*}\]</span>
+The first derivative is
+<span class="math display">\[\begin{align*}
+\frac{dy}{dx}&amp;=\frac{\dfrac{dy}{d\theta}}{\dfrac{dx}{d\theta}}\\
+&amp;=\frac{3\cos^3(\theta)}{-3\cos^2(\theta)\sin(\theta)}\\
+&amp;=-\cot(t)
+\end{align*}\]</span>
+and the second derivative
+<span class="math display">\[\begin{align*}
+\frac{d^2y}{dx^2}&amp;=\frac{d}{d\theta}\left(\frac{dy}{dx}\right)\frac{d\theta}{dx}\\
+&amp;=\frac{d}{d\theta}(-\cot(t))\cdot \frac{1}{-3\cos^2(\theta)\sin(\theta)}\\
+&amp;=\frac{1}{\sin^2(\theta)}\cdot \frac{1}{-3\cos^2(\theta)\sin(\theta)}\\
+&amp;=\frac{-1}{3\cos^2(\theta)\sin^3(\theta)},
+\end{align*}\]</span>
+where we have used
+<span class="math display">\[\begin{align*}
+\frac{d}{d\theta}(-\cot(t))&amp;=\frac{d}{d\theta}\frac{-\cos(\theta)}{\sin(\theta)}\\
+&amp;=\frac{\sin(\theta)\sin(\theta)-(-\cos(\theta))\cos(\theta)}{\sin^2(\theta)}\\
+&amp;=\frac{1}{\sin^2(\theta)}.
+\end{align*}\]</span></p></li>
 </ol></li>
 <li><p>Find the derivative of the following inverse functions by implicit differentiation.</p>
 <ol style="list-style-type: lower-alpha">
 <li><span class="math inline">\(y=\sin^{-1}(x)\)</span></li>
 <li><span class="math inline">\(y=\cosh^{-1}(3x)\)</span></li>
 <li><span class="math inline">\(y=\tan^{-1}(4x^2)\)</span></li>
+</ol>
+<p>Answers:</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>We have that
+<span class="math display">\[\begin{equation*}
+\sin(y)=x
+\end{equation*}\]</span>
+then by implicit differentiation
+<span class="math display">\[\begin{align*}
+\cos(y)\dfrac{dy}{dx}=1\\
+\dfrac{dy}{dx}=\dfrac{1}{\cos(y)}.
+\end{align*}\]</span>
+Using the identity <span class="math inline">\(\cos^2(y)+\sin^2(y)=1\)</span>
+<span class="math display">\[\begin{align*}
+\cos(y)&amp;=\sqrt{1-\sin^2(y)}\\
+&amp;=\sqrt{1-x^2}
+\end{align*}\]</span>
+so,
+<span class="math display">\[\begin{equation*}
+\dfrac{dy}{dx}=\dfrac{1}{\sqrt{1-x^2}}.
+\end{equation*}\]</span></p></li>
+<li><p>We have
+<span class="math display">\[\begin{equation*}
+\cosh(y)=3x
+\end{equation*}\]</span>
+then by implicit differentiation
+<span class="math display">\[\begin{align*}
+\sinh(y)\dfrac{dy}{dx}&amp;=3\\
+\dfrac{dy}{dx}&amp;=\dfrac{3}{\sinh(y)}.
+\end{align*}\]</span></p>
+<p>Since <span class="math inline">\(\cosh^2(y)-\sinh^2(y)=1\)</span>
+<span class="math display">\[\begin{equation*}
+\sinh(y)=\sqrt{\cosh^2(y)-1}=\sqrt{(3x)^2-1}.
+\end{equation*}\]</span>
+So,
+<span class="math display">\[\begin{equation*}
+\dfrac{dy}{dx}=\frac{3}{\sqrt{9x^2-1}}.
+\end{equation*}\]</span></p></li>
+<li><p>We have
+<span class="math display">\[\begin{equation*}
+\tan(y)=4x^2.
+\end{equation*}\]</span>
+By implicit differentiation,
+<span class="math display">\[\begin{align*}
+\sec^2(y)\dfrac{dy}{dx}&amp;=8x\\
+\dfrac{dy}{dx}&amp;=\dfrac{8x}{\sec^2(y)}
+\end{align*}\]</span>
+Using
+<span class="math display">\[\begin{align*}
+\cos^2(y)+\sin^2(y)&amp;=1\\
+1+\tan^2(y)&amp;=\sec^2(y)
+\end{align*}\]</span>
+we have <span class="math inline">\(\sec^2(y)=1+(4x^2)^2\)</span>, and then
+<span class="math display">\[\begin{equation*}
+\dfrac{dy}{dx}=\dfrac{8x}{1+16x^4}.
+\end{equation*}\]</span></p></li>
 </ol></li>
 <li><p>Find <span class="math inline">\(\dfrac{dy}{dx}\)</span> for the following using logarithmic differentiation.</p>
 <ol style="list-style-type: lower-alpha">
 <li><span class="math inline">\(y=a^x\)</span></li>
 <li><span class="math inline">\(y=\dfrac{(x-4)^7(2x+3)^2}{(4x+7)^3}\)</span></li>
+</ol>
+<p>Answers:</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Taking logs and differentiating implicitly
+<span class="math display">\[\begin{align*}
+\ln(y)=\ln(a^x)&amp;=x\ln(a)\\
+\frac{1}{y}\dfrac{dy}{dx}&amp;=\ln(a)\\
+\dfrac{dy}{dx}&amp;=y\ln(a)\\
+\dfrac{dy}{dx}&amp;=a^x\ln(a).
+\end{align*}\]</span></p></li>
+<li><p>Taking logs
+<span class="math display">\[\begin{align*}
+\ln(y)&amp;=\ln\left[\dfrac{(x-4)^7(2x+3)^2}{(4x+7)^3}\right]\\
+&amp;=\ln(x-4)^7+\ln(2x+3)^2-\ln(4x+7)^3\\
+&amp;=7\ln(x-4)+2\ln(2x+3)-3\ln(4x+7)
+\end{align*}\]</span>
+Then differentiating
+<span class="math display">\[\begin{align*}
+\frac{1}{y}\dfrac{dy}{dx}&amp;=\frac{7}{x-4}+\frac{2}{2x+3}\cdot 2-\frac{3}{4x-7}\cdot 4\\
+\dfrac{dy}{dx}&amp;=\dfrac{(x-4)^7(2x+3)^2}{(4x+7)^3}\left[ \frac{7}{x-4}+\frac{4}{2x+3}-\frac{12}{4x-7}\right]
+\end{align*}\]</span></p></li>
 </ol></li>
 <li><p>Find <span class="math inline">\(\dfrac{dy}{dx}\)</span> for the following.</p>
 <ol style="list-style-type: lower-alpha">
 <li><span class="math inline">\(y=x^x\)</span></li>
 <li><span class="math inline">\(y=(\tanh(x))^x\)</span></li>
 <li><span class="math inline">\(x^3+\sin(xy)=xy^2\)</span></li>
+</ol>
+<p>Answers:</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>First take the natural logarithm:
+<span class="math display">\[\begin{equation*}
+\ln(y)=x\ln(x),
+\end{equation*}\]</span>
+then differentiate implicitly:
+<span class="math display">\[\begin{align*}
+\frac{d}{dx}(\ln(y))&amp;=\frac{d}{dx}(x\ln(x))\\
+\frac{1}{y}\frac{dy}{dx}&amp;=\frac{dx}{dx}\ln(x)+x\frac{d}{dx}\ln(x)\\
+\frac{1}{y}\frac{dy}{dx}&amp;=\ln(x)+x\frac{1}{x}\\
+\frac{dy}{dx}&amp;=y(\ln(x)+1)=x^x(\ln(x)+1).
+\end{align*}\]</span></p>
+<p><strong>Important!</strong> The derivative of <span class="math inline">\(x^x\)</span> is <strong>not</strong> <span class="math inline">\(x\cdot x^{x-1}=x^x\)</span>. We can’t treat variable exponents like constant exponents!</p></li>
+<li><p>Taking logs
+<span class="math display">\[\begin{equation*}
+\ln(y)=x\ln(\tanh(x)),
+\end{equation*}\]</span>
+then differentiating
+<span class="math display">\[\begin{align*}
+\frac{1}{y}\dfrac{dy}{dx}&amp;=\ln(\tanh(x))+\frac{x}{\tanh(x)}\textrm{sech}^2(x)\\
+&amp;=\ln(\tanh(x))+\frac{x\cosh(x)}{\sinh(x)\cosh^2(x)}\\
+&amp;=\ln(\tanh(x))+\frac{x}{\sinh(x)\cosh(x)}\\
+&amp;=\ln(\tanh(x))+\frac{2x}{\sinh(2x)}.\\
+\end{align*}\]</span>
+So,
+<span class="math display">\[\begin{equation*}
+\dfrac{dy}{dx}=(\tanh(x))^x\left[ \ln(\tanh(x))+\frac{2x}{\sinh(2x)}\right].
+\end{equation*}\]</span></p></li>
+<li><p>By implicit differentiation and using the product rule
+<span class="math display">\[\begin{align*}
+3x^2+\cos(xy)\left(y+x\dfrac{dy}{dx} \right)&amp;=y^2+2xy\dfrac{dy}{dx}\\
+3x^2+y\cos(xy)-y^2&amp;=2xy\dfrac{dy}{dx}-x\cos(xy)\dfrac{dy}{dx}
+\end{align*}\]</span>
+so,
+<span class="math display">\[\begin{equation*}
+\dfrac{dy}{dx}=\frac{3x^2+y\cos(xy)-y^2}{2xy-x\cos(xy)}
+\end{equation*}\]</span></p></li>
 </ol></li>
 </ol>
 
