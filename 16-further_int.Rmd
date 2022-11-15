@@ -1,6 +1,203 @@
-# Further Integration Techniques {.unlisted .unnumbered}
+# Further Integration Techniques
 
-## Substitution
+## Integrals of trigonometric and hyperbolic functions
+
+Here we make extensive use of trigonometric and hyperbolic identities to transform the integrand into a more manageable form.
+
+::: {.example #trig name="Integrals using identities"}
+
+1. Evaluate the definite integral
+    \begin{align*}
+    \int_0^{\pi} \sin^2(x)  dx &=\int_0^{\pi} \frac{1}{2} \left( 1 - \cos(2x) \right)  dx\\
+    &= \frac{1}{2} \left[ x - \frac{1}{2}\sin(2x) \right]_0^{\pi}\\
+    &= \frac{\pi}{2}\\
+    \end{align*}
+    where we have used $\cos(2\theta) = 1 - 2 \sin^2(\theta)$.
+
+1. Evaluate the indefinite integral
+    \begin{align*}
+    \int \sinh(3x)\cosh(3x) dx &= \int \frac{1}{2}\sinh(6x) dx\\
+    &=\frac{1}{12}\cosh(6x) + C
+    \end{align*}
+    where we have used $\sinh(2x)=2\sinh(x)\cosh(x)$.
+
+1. Evaluate  the indefinite integral
+    \begin{align*}
+    \int  (\sin^2 (x))^2  dx & = \int_0^{\pi} \frac{1}{4} \left( 1 - \cos(2x) \right)^2  dx \\
+    & =\int_0^{\pi} \frac{1}{4} \left( 1 - 2\cos(2x) +\cos^2(2x)
+    \right)  dx \\
+    & =\int_0^{\pi} \frac{1}{4} \left[  1 - 2\cos(2x) +
+    \frac{1}{2} \left( 1 - \cos(4x) \right) \right]  dx\\
+    & = \frac{1}{4} \left[ \frac{3}{2} x -\sin(2x) + \frac{1}{8}
+    \sin(4x) \right]  +C
+    \end{align*}
+    where we have used $\cos(2\theta)=2\cos^2(\theta)-1$.
+
+1. Evaluate the indefinite integral
+    \begin{align*}
+    \int  (\sin4x \cos 5x )  dx & = \int \frac{1}{2} \left[ \sin (-x) +\sin 9x \right]  dx \\
+    & =\frac{1}{2} \left( \cos(x)  - \frac{1}{9} \cos 9x \right) +C
+    \end{align*}
+    where we have used $\sin(\theta)\cos(\phi)=\frac{1}{2}(\sin(\theta-\phi)+\sin(\theta+\phi))$.
+
+1. Evaluate the indefinite integral
+    \begin{equation*}
+    \int \frac{\sqrt{9-x^2}}{x^2}  dx\\
+    \end{equation*}
+    Making the substitution $x=3\sin(\theta), \;\; -\frac{\pi}{2} \leq \theta \leq \frac{\pi}{2}$,
+    \begin{align*}
+    \int \frac{\sqrt{9-x^2}}{x^2}  dx & =\int  \frac{\sqrt{9-(3\sin(\theta))^2} }{(3\sin(\theta))^2} d(3\sin(\theta)) \\
+    & = \int  \frac{3\cos(\theta)  }{9\sin^2(\theta) }(3\cos(\theta)) d\theta\\
+    &= \int  \frac{\cos^2(\theta)  }{\sin^2(\theta) } d \theta \\
+    & =  \int  \frac{1- \sin^2(\theta)  }{\sin^2(\theta) } d \theta\\
+    & = \int \left(  \frac{1 }{\sin^2(\theta) } -1 \right) d \theta\\
+    & =  -\cot(\theta)-\theta+C.
+    \end{align*}
+:::
+
+## Integrals of rational functions using partial fractions
+
+Recall that a function of the form
+$$f(x)=\frac{p(x)}{q(x)}$$
+where $p$ and $q$ are polynomials is known as a *rational function*.
+
+If $q(x)$ is a polynomial of degree $m$ and $p(x)$ is a polynomial of degree $n < m$ then we can often write a rational function as
+$$
+\frac{p(x)}{q(x)}=\frac{c_1}{x-\alpha_1}+\dotsb + \frac{c_n}{x-\alpha_n}
+$$
+where $\alpha_i$ are the distinct roots of $q$. We can find the coefficients $c_1$ by multiplying through by $q(x)$ and equating coefficients of powers of $x$ to obtain a system of linear equations for the $c_i$.
+
+We know that
+$$
+\frac{d}{dx} \ln (x-\alpha) = \frac{1}{x-\alpha}
+$$
+and by using this fact repeatedly, we can then integrate any rational function of this form --- but the answer depends on the details (because $\ln(z)$ is only defined for positive $z$).
+
+Other cases:
+
+* If $p$ has degree greater than $q$, then we can first apply polynomial long division to obtain
+$$\frac{p(x)}{q(x)}=s(x)+\frac{r(x)}{q(x)}$$
+where the degree of $r$ will be strictly less that the degree of $q$, and we can then perform partial fractions on the remainder term $\frac{r}{q}$.
+
+* If $q(x)$ contains an irreducible quadratic factor --- factors of the form $x^2+bx+c$ that cannot be factorised into a product of linear factors $(x-\alpha)(x-\beta)$ with integer coefficients --- then the numerator in the partial fractions will be a linear polynomial. For example,
+$$\frac{x^2+1}{(x+2)(x-1)(x^2+x+1)}=\frac{c_1}{(x+2)}+\frac{c_2}{x-1}+\frac{bx+c}{x^2+x+1}.$$
+
+* If $q(x)$ contains repeated roots --- factors of the form $(x-\alpha)^t$ --- then the first $t$ powers of $(x-\alpha)$ will appear as denominators (although possibly with a zero numerator). For example,
+$$\frac{p(x)}{(x-\alpha)^t}=\frac{c_1}{x-\alpha}+\frac{c_2}{(x-\alpha)^2}\dotsb + \frac{c_t}{(x-\alpha)^t}.$$
+
+::: {.example #partfrac name="Integration by partial fractions"}
+
+1. Evaluate  the indefinite integral
+    $$
+    I=\int  \frac{2x^2 -x + 4} { x(x^2+4) } dx
+    $$
+    we have
+    $$
+    \left[ \frac{2x^2 -x + 4} { x(x^2+4)}=\frac{A} { x}+\frac{Bx+C} {(x^2+4)}, A=1, B=1, C=-1 \right] \\
+    $$
+    then
+    \begin{align*}
+    I= \int \left[ \frac{1} {x}  + \frac{x-1} {x^2 +4 } \right] \\
+    & =\int  \frac{dx} {x} +  \int  \frac{x} {x^2 +4 } dx -\int  \frac{1} {x^2 +4 } dx \\
+    & = \ln |x| +\frac{1}{2} \ln (x^2 +4) - \frac{1}{2} \tan^{-1}(x/2)+C
+    \end{align*}
+
+1. Evaluate the indefinite integral (the degree of the numerator is not less than the degree of the denominator)
+    $$
+    I=\int  \frac{4x^2 -3x + 2} { 4x^2 -4x +3 } dx
+    $$
+    We have
+    $$\frac{4x^2 -3x + 2} { 4x^2 -4x +3 }=1+\frac{x-1} { 4x^2 -4x +3 }; 4x^2 -4x +3=( 2x -1)^2 +2$$
+    Hence
+    \begin{align*}
+    I  & =\int \left[ 1+ \frac{x-1} {(2x-1)^2+2 } \right]dx \\
+    &= x+ \int \left[ \frac{ (1/2)(2x-1)-(1/2) } {(2x-1)^2+2 } \right] (1/2) d(2x-1) \\
+    &= x+\int  \left(\frac{1}{4}  \frac{(2x-1)} {(2x-1)^2+2 } - \frac{1}{4}  \frac{1} {(2x-1)^2+2 } \right)  d(2x-1)\\
+    &=x+  \frac{1}{8}  \ln[(2x-1)^2+2] -  \frac{1}{4 \sqrt{2}}\tan^{-1} \frac{2x-1}{ \sqrt{2}} +C
+    \end{align*}
+:::
 
 ## Integration by Parts
 
+According to the product rule from differentiation: If $u(x)$ and $v(x)$ are
+differentiable functions, then
+$$
+\frac{d (u(x)v(x))}{dx}=u(x) \frac{d v(x)}{dx}+v(x) \frac{d u(x)}{dx}.
+$$
+
+From the Fundamental Theorem of Calculus \@ref(thm:FTC) it follows that
+$$
+\int \frac{d}{dx} \left( u(x)v(x) \right) dx = u(x)v(x)= \int \left[u(x) \frac{d v(x)}{dx}+v(x) \frac{d u(x)}{dx}\right] dx,
+$$
+or
+$$
+u(x)v(x)=  \int u(x) \frac{d v(x)}{dx} dx + \int  v(x) \frac{d u(x)}{dx} dx.
+$$
+Rearranging gives:
+$$
+\int u(x) \frac{d v(x)}{dx} dx= u(x)v(x) - \int  v(x) \frac{d u(x)}{dx} dx.
+$$
+This is the formula for *integration by parts*:
+$$
+\int u \; dv = uv - \int  v \; d u.
+$$
+
+::: {.example #byparts name="Integration by parts"}
+
+1. Evaluate the indefinite integral
+    $$
+    \int \ln x \; dx,
+    $$
+    where we take
+    $$
+    u=\ln x, \;\; v=x
+    $$
+    \begin{align*}
+    uv - \int  v \; d u &= x \ln x - \int x  d \ln x \\
+    & =  x \ln x - \int x \left( \frac{1}{x}  \; d x \right) \\
+    & =  x \ln x - \int  \; d x \\
+    & =  x \ln x - x +C
+    \end{align*}
+
+1. Evaluate the indefinite integral
+    $$
+    \int x^2 e^x \; dx,
+    $$
+    where we take
+    $$
+    u=x^2, \;\; v=e^x, \;\;  dv=d e^x= e^x \; dx
+    $$
+
+    \begin{align*}
+    uv - \int  v \; d u&= x^2 e^x - \int e^x  d x^2\\
+    &=   x^2 e^x - \int e^x  (2x d x) 
+    \end{align*}
+    We need to use integration by parts again by taking
+    $$
+    u=x, \;\; v=e^x, \;\;  dv=d e^x= e^x \; dx
+    $$
+    \begin{align*}
+    x^2 e^x -  \left( 2 \int x  d e^x \right)& =   x^2 e^x - \left( 2 x e^x - 2 \int e^x d x \right)
+    \\
+    & =   x^2 e^x - \left( 2 x e^x - 2 e^x  +C
+    \right) 
+    \end{align*}
+
+1. Evaluate  the indefinite integral
+    $$
+    I=\int e^x  \sin(x) \;   dx,
+    $$
+    where we take $u=e^x, v=-\cos(x), dv= d (-\cos(x))=\sin(x) dx$
+
+    \begin{align*}
+    I=uv - \int  v \; d u &= - e^x \cos(x)  + \int \cos(x) e^x  d x  \; \;  \\
+    & = - e^x \cos(x)  + \left( \int e^x d \sin(x) \right) \\
+    & = - e^x \cos(x)  + \left( \sin(x)  e^x -  \int  \sin  x d e^x\right)  \\
+    & = - e^x \cos(x)  + \sin(x)  e^x - I 
+    \end{align*}
+    Solving for $I$:
+    \begin{align*}
+    I=\frac{1}{2}(- e^x \cos(x)  +  \sin(x)  e^x) + C 
+    \end{align*}
+
+:::

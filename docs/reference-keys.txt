@@ -140,6 +140,9 @@ thm:FTC
 exm:definiteints
 thm:intsubstitution
 exm:subint
+exm:trig
+exm:partfrac
+exm:byparts
 fig:complexsketch
 eq:vecwildebeest
 eq:asymp
@@ -251,5 +254,7 @@ indefinite-integrals
 standard-integrals
 definite-integrals
 integration-by-substitution
-substitution
+further-integration-techniques
+integrals-of-trigonometric-and-hyperbolic-functions
+integrals-of-rational-functions-using-partial-fractions
 integration-by-parts
