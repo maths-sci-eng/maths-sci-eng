@@ -1,0 +1,239 @@
+# Probability Fundamentals
+
+Uncertainty is an integral component of our everyday lives, and we are always making decisions in the face of it e.g.
+
+* Will it rain today?
+* Should I take out life insurance?
+* Should I buy a lottery ticket?
+* Should I buy ten lottery tickets?
+
+
+**Probability** is the branch of mathematics that seeks to study uncertainty in a systematic way. We measure the likelihood of something happening on a scale from 0 to 1.
+
+Probability theory is fundamental in its own right, but also as a pre-requisite for the study of **statistics**, where we aim to explain real data and make predictions by fitting probability models.
+
+
+## Sample space and events
+
+Fundamental to the study of probability is the idea of a *stochastic experiment*.
+
+::: {.definition #stochexp name="Stochastic Experiment"}
+A *stochastic experiment* is a phenomenon or process with multiple possible outcomes, which are uncertain until the experiment has been run.
+
+In contrast, a *deterministic* experiment is one that produces the same outcome each time it is run.
+:::
+
+The collection of all possible outcomes is known as the *sample space*. Mathematically, it is a *set* $S$ -- this can be thought of as a box containing a collection of objects, but where we do not consider duplicate objects. We denote this set and the objects it contains, known as the *elements* of the set, as a pair of braces containing the elements $\{\dotsb\}$. For example:
+
+* Tossing a coin: $S=\{H,T\}$
+* The number of days it rains in a week: $S=\{0,1,2,3,4,5,6,7\}$
+* Number of cars that pass a given point on a motorway in one minute: $S=\{0,1,2,3,\dotsc\}$
+* The sum of the values on two dice, that is all of the values in the following table.
+
+    |$+$  |**1**|**2**|**3**|**4**|**5**|**6**|
+    |-----|-----|-----|-----|-----|-----|-----|
+    |**1**|2    |3    |4    |5    |6    |7    |
+    |**2**|3    |4    |5    |6    |7    |8    |
+    |**3**|4    |5    |6    |7    |8    |9    |
+    |**4**|5    |6    |7    |8    |9    |10   |
+    |**5**|6    |7    |8    |9    |10   |11   |
+    |**6**|7    |8    |9    |10   |11   |12   |
+
+    Note that many of the 36 outcomes in this table are repetitions -- we only record the 11 unique possibilities in the sample space: $S=\{2,3,4,5,6,7,8,9,10,11,12\}$
+
+
+An *event* $A$ is a particular collection of outcomes from a stochastic experiment. Mathematically, it is a *subset* of $S$. That is, a set consisting of some (possibly all or none) of the elements of $S$. We write this as $A\subset S$. For example:
+
+* The event of obtaining a heads in a coin toss: $A=\{H\}$
+* It rains an odd number of days in the week: $A=\{1,3,5,7\}$
+* More than 5 cars pass by on the motorway: $A=\{6,7,8,\dotsc\}$
+* The sum of the value on two dice is greater than 1: $A=S$
+
+It is sometimes the case that an event does not correspond to any elements of the sample space. For example, the event that it rains 8 days in a week. In this case the event set is empty. Although this was a silly example, it is in general useful to have a particular notation for this: the set with no elements $\{\;\}$ is called the *empty set* and is denoted by $\emptyset$.
+
+We sometimes need to consider combinations of events occuring at the same time. For example,
+
+* More than 5 cars **and** less than 10 cars pass by on the motorway: The events $A=\{6,7,8,\dotsc\}$ and $B=\{0,1,2,3,4,5,6,7,8,9\}$, resulting in the event $C=\{6,7,8,9\}$
+* The sum of two dice rolls is an odd number **or** it is less than or equal to 4: The events $A=\{3,5,7,9,11\}$ and $B=\{2,3,4\}$, resulting in the event $C=\{2,3,4,5,7,9,11\}$
+
+Taking the outcomes that only occur in both $A$ **and** $B$ is known as taking the *intersection* of the two sets, denoted
+$$C=A\cap B.$$
+
+Combining all of the outcomes in $A$ **or**^[in mathematics the word *or* used in the inclusive sense, rather than the *exclusive* sense, which is sometimes abreviated as *xor*.] $B$ is known as taking the *union* of the two sets, denoted
+$$C=A\cup B$$.
+
+The *complement* of an event $A$ is **the event that $A$ does not occur**, denoted $A^c$. For example, if we have the event that it rains on an odd number of days in the week $A=\{1,3,5,7\}$, then the complement of $A$ is $A^c=\{0,2,4,6\}$.
+
+If $A\cap B=\emptyset$ (they have no outcomes in common) then we say that events $A$ and $B$ are **mutually exclusive**: they cannot occur at the same time. In set language, we say the sets are *disjoint*.
+
+## Counting
+
+Many basic results in probability come from a consideration of counting the number of possible outcomes, that is, the number of elements $N$ in the set $S$. For example, if we have a fair 6-sided die, then with six possible equally likely outcomes the probability of getting a six, the event $A=\{6\}$, is simply $\dfrac{1}{6}$. We write the probability of this event as
+
+$$P(A)=\frac{1}{6}.$$
+
+When we have $N$ equally likely outcomes, the probability of any particular outcome $A=\{a\}$ where $a$ is an element of the sample space $S$ is simply
+$$P(A)=\frac{1}{N}.$$
+More generally, if the event $A=\{a_1,\dotsc,a_k\}$ consists of $k$ equally likely outcomes, we have
+$$P(A)=\frac{k}{N}.$$
+
+For example, what is the probability of rolling greater than or equal to a $3$? We have $A=\{3,4,5,6\}$, so $P(A)=\frac{4}{6}=\frac{2}{3}$.
+
+Note these definitions only make sense if our sample space $S$ is *finite*. We'll look at more general definitions of probability later.
+
+For now, we look at some further methods for counting a finite number of outcomes. In particular, we look at the situation of a finite sequence of stochastic experiments.
+
+##  Permutations and Combinations
+
+In *compound experiments* we have a number of stages in sequence, for example throwing a die three times.
+
+The *multiplication principle* says that in a compound experiment with $r$ stages, with $n_1$ possible outcomes in stage 1, $n_2$ possible outcomes in stage 2 for each particular outcome in stage 1, $n_3$ possible outcomes in stage 3 for each particular outcome in stage 2, and so on, then the total number of outcomes is
+$$n_1 \times n_2\times \dotsb \times n_r.$$
+
+For example in throwing a die 3 times we have 6 possible outcomes in each throw, so the total number of outcomes is $6\times 6\times 6=6^3=216$. Hence the probability of any given sequence of length three consisting of the numbers 1 to 6, the event $A=\{(a_1,a_2,a_3)\} for some particular values of the $a_i$ from $1,\dotsc,6$, is $P(A)=\dfrac{1}{216}$.
+
+The multiplication principle holds in problems of *sampling with replacement*. For example, if we draw a card from a standard deck of 52 (well shuffled) playing cards three times in a row, putting the card back into the deck after each draw and re-shuffling, then the chance of getting the ace of spades three times $A=\{(\text{A}\spadesuit,\text{A}\spadesuit,\text{A}\spadesuit)\}$ is $P(A)=\dfrac{1}{52^3}$.
+
+In problems where we have *sampling without replacement*, the number of possible outcomes changes at each stage. For example, the number of ways 3 runners can be placed at the finish are: any one of the 3 could come first, leaving 2 possibilities for second and 1 possibility for third, that is
+$$3\times 2\times 1=6$$
+We call this the *factorial* of 3, denoted $3!$. It is more generally defined for a number $n$ as
+$$n!=n\times(n-1)\times(n-2)\times\dotsb\times 2\times 1.$$
+
+### Permutations
+
+In a race of 8 runners, the number of possibilities for first, second and third are:
+$$8\times 7\times 6 = 336.$$
+We can calculate this in a neat way as
+$$\frac{8\times 7\times 6\times 5\times 4\times 3\times 2\times 1}{5\times 4\times 3\times 2\times 1}=\frac{8!}{5!}=336.$$
+
+If all the runners are equally likely to win, then the probability of a particular outcome for first, second and third is simply $\frac{1}{336}$.
+
+A *permutation* of $r$ objects from $n$ is an ordered arrangement of $r$ of the $n$ objects. The number of permutations is:
+$${}_n P_r = \frac{n!}{(n-r)!}.$$
+
+
+### Combinations
+
+In a lottery, 6 distinct numbers are drawn from the numbers 1-59. How many different outcomes are there? In this case we do not care about the order of each number. If we did care about the order then we are looking at the *permutations* and the answer would be
+$$\frac{59!}{(59-6)!}=\frac{59!}{(53)!}.$$
+
+However, since we do not care about the order we consider the $6!$ different orderings of each outcome to be the same, hence we need to divide through by this number of arrangements to obtain
+
+$$\frac{59!}{6!(59-6)!}=\frac{59!}{6!53!}=45\,057\,474.$$
+
+Since each outcome is equally likely, the probability of a winning ticket is $\dfrac{1}{45\,057\,474}$.
+
+A *combination* of $r$ objects from $n$ is an unordered arrangement of $r$ of the $n$ objects. The number of combinations is
+$${}_n C_r ={{n}\choose{r}}=\frac{n!}{(n-r)!}$$
+usually read as "$n$ choose $r$".
+
+
+## Probabilities
+
+We have already looked at how to find probabilities when we have equally likely outcomes. We now look at the rules of probability in more generality.
+
+The probability $P$ is a function that associates every possible event $A$ to a value $P(A)$ in the range $0\leq P(A) \leq 1$, such that
+
+1. $P(A)\geq 0$ for all events $A$
+2. $P(S)=1$
+3. $P(A\cup B)=P(A)+P(B)$ when $A$ and $B$ are *mutually exclusive*.
+
+The term "mutually exclusive" means that $A$ and $B$ cannot take place at the same time. In terms of sets we have
+$$A\cap B=\emptyset.$$
+
+Since $A\cap A^c=\emptyset$ together with $A\cup A^c=S$ we have
+$$1=P(S)=P(A\cup A^c)=P(A)+P(A^c)$$
+and hence
+$$P(A)=1-P(A^c).$$
+(Note in particular that this implies $P(\emptyset)=0$, why?) This is useful because sometimes it is easier to calculate $P(A^c)$ instead calculating $P(A)$ directly.
+
+To simplify notation, we sometimes just write the outcomes of an event directly in the argument of $P$. For example, we could write the probability of getting a head from a coin toss as $P(H)$ or of getting the sequence $HTT$ in 3 tosses as $P(HTT)$.
+
+## Conditional Probability
+
+Given that the outcome of a dice roll is greater than 3, what is the probability it is even number?
+
+Let $A$ be the event the roll is even, so $A=\{2,4,6\}$ and let $B$ be the event that the roll is greater than 3, so $B=\{4,5,6\}$. Given that $B$ has happened, for $A$ to also happen we need an element from $A\cap B=\{4,6\}$. So, out of the 3 possibilities following event $B$ there are 2 which give event $A$. Hence the probability is $\frac{2}{3}$.
+
+This is an example of a *conditional probability*: given that ("conditional on") some event $B$ happens, what is the probability of event $A$? This is written as $P(A|B)$. It is defined by:
+$$P(A|B)=\frac{P(A\cap B)}{P(B)}.$$
+
+In our example above, we had
+$$P(A|B)=\frac{P(A\cap B)}{P(B)}=\frac{2/6}{3/6}=\frac{2}{3}.$$
+
+Conditional probabilities can also be useful to find $P(A \cap B)$.
+
+::: {.example #ballsinbags}
+There are 20 balls in a bag: 6 reds, 10 greens and 4 blues.
+
+1. What is the probability that the first ball drawn will be red? Call this event $B$. Each ball is equally likely, so $P(B)=\frac{6}{20}=\frac{3}{10}$.
+2. If the first ball is red, what is the probability the second ball drawn will be blue? Let the event that the second ball is blue be called $A$. Now we have to account for the fact that the first ball was red. We have 19 balls remaining, including all 4 blues, hence $P(A|B)=\frac{4}{19}$.
+3. What is the probability that the first ball is red and the second ball is blue? This is hard to calculate directly, but we can instead use the answers to 1. and 2. to get
+$$P(A\cap B)=P(A|B)P(A)=\frac{4}{19}\times \frac{6}{20}=\frac{6}{95}.$$
+:::
+
+## Independence
+
+Two events $A$ and $B$ are *independent* if
+$$P(A\cap B)=P(A)P(B)$$
+or equivalently (from the deifinition of conditional probability) if
+$$P(A|B)=P(A).$$
+
+We have already seen many examples of independent events. For example, in tossing a coin twice, the sample space is $S=\{TT,TH,HT,HH\}$. The event that the first toss is a heads $A=\{HH,HT\}$ has $P(A)=\frac{2}{4}=\frac{1}{2}$ and the event the second toss is a heads $B=\{TH, HH\}$ also has $P(B)=\frac{1}{2}$. These events are independent -- intuitively, the outcome of the first toss has no influence on the outcome of the second toss. Mathematically we have:
+$$P(A\cap B)=P(HH)=\frac{1}{4}$$
+since there are 4 equally likely outcomes from tossing a coin twice, and
+$$P(A)P(B)=\frac{1}{2}\times\frac{1}{2}=\frac{1}{4}.$$
+
+
+## Law of Total Probability
+
+A sequence of sets $B_1,B_2,\dotsc,B_n$ is said to form a *partition* of $S$ if for all $i\neq j$ we have
+$$B_i\cap B_j = \emptyset$$
+(no two sets have any elements in common)
+and
+$$B_1\cup B_2\cup \dotsb\cup B_n=S$
+(taking all the sets together, they include all of the outcomes in $S$).
+
+::: {.theorem #totalprob name="Law of Total Probability"}
+Let $B_1,B_2,\dotsc,B_n$ be a partition of $S$ and let $A$ be an event. Then
+$$P(A)=P(A|B_1)P(B_1)+P(A|B_2)P(B_2)+\dotsb + P(A|B_n)P(B_n).$$
+:::
+
+
+::: {.example #diseasetotalprob name="Disease Prevalence: part 1"}
+A certain disease occurs in 0.02% of the population. A test to discover the disease gives a positive reaction for 92% of the people suffering from the disease, but also for 3% of people not having it. What is the probability that a randomly selected person has a positive test?
+
+Denote a positive test as $+$, having the disease as $D$ and not having the disease as $ND$. We want to find $P(+)$. We can find this from the law of total probability, since $D$ and $ND$ form a partition of the sample space:
+\begin{align*}
+P(+)&=P(+|D)P(D)+P(+|ND)P(ND)\\
+&=0.92\times 0.0002 + 0.03\times(1-0.0002)\\
+&=0.031834.
+\end{align*}
+:::
+
+
+## Bayes' Theorem
+
+::: {.theorem #bayes name="Bayes' Theorem"}
+For any two events $A$ and $B$, we have
+$$P(B|A)=\frac{P(A|B)P(B)}{P(A)}.$$
+:::
+
+::: {.example #disease name ="Disease Prevalence: part 2"}
+A certain disease occurs in 0.02% of the population. A test to discover the disease gives a positive reaction for 92% of the people suffering from the disease, but also for 3% of people not having it. If a randomly selected person has a positive test, what is the probability that they have the disease?
+
+Denoting a positive test as $+$, having the disease as $D$ and not having the disease as $ND$, from the question we have:
+\begin{align*}
+P(D)&=0.0002\\
+P(+|D)&=0.92\\
+P(+|ND)&=0.03.
+\end{align*}
+We want to calculate $P(D|+)$. From Bayes' theorem this is
+$$P(D|+)=\frac{P(+|D)P(D)}{P(+)}.$$
+We have all the ingredients, where we found $P(+)$ in the earlier example on the law of total probability.
+
+Hence
+$$P(D|+)=\frac{0.92\times 0.0002}{0.031834}=0.0058\text{ to 2 s.f.}$$
+So when getting a positive test, there is less than a 1% chance of actually having the disease. This is largely due to the rarity of the disease. 
+:::
+
