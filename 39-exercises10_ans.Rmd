@@ -1,0 +1,229 @@
+# Exercise Set 10 Answers {.unlisted .unnumbered}
+
+1. Write the series
+    \begin{equation*}
+    \frac{1}{1\cdot 2}+\frac{1}{2\cdot 3}+\frac{1}{3\cdot 4}+\frac{1}{4\cdot 5}+\frac{1}{5\cdot 6}
+    \end{equation*}
+    using Sigma notation in the forms $\displaystyle\sum_{k=1}^{n}(\dots)$ and $\displaystyle\sum_{l=0}^{m}(\dots)$.
+
+    Answers:
+
+    $$\sum_{k=1}^{5}\frac{1}{k(k+1)}$$
+    $$\sum_{l=0}^{4}\frac{1}{(l+1)(l+2)}$$
+
+1. Evaluate $\displaystyle\sum_{n=1}^{10}\frac{2}{3^n}$ and $\displaystyle\sum_{n=0}^{9}\frac{2}{3^n}$ using the formula for the $n^{\text{th}}$ partial sum of a geometric series.
+
+    Answers:
+
+    a. The geometric series $\displaystyle\sum_{n=1}^{10}\dfrac{2}{3^n}$ has first term $a=\dfrac{2}{3^1}=\dfrac{2}{3}$ and second term $ar=\dfrac{2}{3^2}$ and therefore the common ratio is $r=\dfrac{ar}{a}=\dfrac{1}{3}$. Since the sum is for $n=1$ to $n=10$, it is the sum of the first $10$ terms,
+        $$
+        S_{10}=\frac{a(1-r^{10})}{1-r}=\frac{2\left (1-\dfrac{1}{3^{10}}\right)}{3\left (1-\dfrac{1}{3}\right )}=1-\dfrac{1}{3^{10}}.
+        $$
+
+    a. The geometric series $\displaystyle\sum_{n=0}^{9}\frac{2}{3^n}$ has first term $a=\dfrac{2}{3^0}=2$ and second term $ar=\dfrac{2}{3^1}$, and therefore the common ratio is $r=\dfrac{ar}{a}=\dfrac{1}{3}$. Since the sum is for $n=0$ to $n=9$, it is the sum of the first $10$ terms,
+        $$
+        S_{10}=\dfrac{a(1-r^{10})}{1-r}=\dfrac{2\left(1-\dfrac{1}{3^{10}}\right)}{\left(1-\dfrac{1}{3}\right)}=3\left(1-\dfrac{1}{3^{10}}\right).
+        $$
+
+
+1. Do the following geometric series converge or diverge? If they converge, find their sum.
+    a. $\displaystyle\sum_{n=1}^{\infty}\frac{2}{3^n}$
+    a. $\displaystyle\sum_{n=1}^{\infty}(-1)^{n-1}\frac{1}{2^{n-1}}$
+    a. $\displaystyle\sum_{n=1}^{\infty}\left( \dfrac{\pi}{2}\right)^n$
+
+    Answers:
+
+    a. We already know that the first term is $a=\dfrac{2}{3}$ and the common ratio is $r=\dfrac{1}{3}$. Since $|r|<1$, the geometric series converges, with sum
+        $$
+        \sum_{n=1}^{\infty}\frac{2}{3^n}=\frac{a}{1-r}=\frac{\frac{2}{3}}{1-\frac{1}{3}}=1.
+        $$
+
+    a. The first term of the series is $a=1$ and the common ratio is $r=-\dfrac{1}{2}$. Since $|r|<1$ the series converges, and the sum is
+        $$
+        \sum_{n=1}^{\infty}(-1)^{n-1}\frac{1}{2^{n-1}}=\frac{1}{1+\frac{1}{2}}=\frac{2}{3}.
+        $$
+
+    a. The first term of the series is $a=\dfrac{\pi}{2}$, and the common ratio is also $r=\dfrac{\pi}{2}$. Since $|r|>1$, the series diverges.
+
+
+1. Find the $3^{\text{rd}}$ degree Taylor polynomials of the following functions.
+    a. $f(x)=2x^3-x^2+4x+5$ at $a=0$
+    a. $f(x)=\dfrac{1}{1+x}$ at $a=0$. 
+    a. $f(x)=\sqrt{x}$ at $a=1$
+
+    Answers:
+    a. The $3^{\text{rd}}$ degree polynomial of this polynomial at $a=0$ will simply be equal to the polynomial itself. For completeness, we still derive the Taylor series to demonstrate this
+    \begin{align}
+    f(x)&=2x^3 - x^2 + 4x + 5       & f(0)&=5\\
+    f'(x)&= 6x^2 - 2x + 4           & f'(0)&=4\\
+    f''(x)&= 12x - 2                & f''(0) &= -2\\
+    f'''(x) &= 12                   & f'''(0) &= 12
+    \end{align}
+    Substituting these into the Taylor series about $x=0$
+    $$
+    f(x) = \sum_{n=0}^\infty \frac{f^{(n)}(a)}{n!}x\\
+    f(x) = f(0) + \frac{f'(0)}{1}x + \frac{f''(0)}{2}x^2 + \frac{f'''(0)}{6}x^3\\
+    f(x) = 5 + 4x - x^2 + 2 x^3
+     $$
+    since the Taylor series terminates after the $x^3$ term. The original polynomial has been recovered.
+    a. We start by finding the first 3 derivatives.
+    $$ \begin{align}
+    f(x) &= \frac{1}{x+1}        & f(0) &= 1\\
+    f'(x) &= \frac{-1}{(x+1)^2}     & f'(0) &= -1\\
+    f''(x) & = \frac{2}{(x+1)^3}    & f''(0) &= 2\\
+    f'''(x) &= \frac{-6}{(x+1)^4}   & f'''(0) &= -6
+    \end{align}
+    $$
+    Substituting these terms into the Taylor series expansion about $x=0$, up to the $3^\text{rd}$ degree term.:
+    $$f(x) = \sum_{n=0}^\infty \frac{f^{(n)}(a)}{n!}x\\
+    f(x) = 1 - x + x^2 - x^3 + \cdots
+    $$
+    Having just included the first few terms.
+    
+    a. Note that it is not possible to take the Taylor series about $x=0$ because the derivative of $\sqrt{x}$ does not exist at $0$. Taking the expansion about $x=1$.
+    $$
+    \begin{align}
+    f(x) &= \sqrt{x} = x^\frac{1}{2}    & f(1) &= 1\\
+    f'(x) &= \frac{1}{2}x^{-\frac{1}{2}}        & f'(1) &= \frac{1}{2}\\
+    f''(x) & = -\frac{1}{4}x^{-\frac{3}{2}}       & f''(1) &= -\frac{1}{4}\\
+    f'''(x) &=  \frac{3}{8}x^{-\frac{5}{2}}       & f'''(1) &= \frac{3}{8}
+    \end{align}
+    $$
+    Substituting these into the first few terms of the Taylor series about $x=a$
+    $$
+    f(x-1) = \sum_{n=0}^\infty \frac{f^{(n)}(1)}{n!}(x-1)^n\\
+    f(x-1) = 1 + \frac{1}{2}(x-1) -\frac{1}{4}\frac{(x-1)^2}{2!} + \frac{3}{8}\frac{(x-1)^3}{3!} + \cdots\\
+    f(x-1) = 1 + \frac{1}{2}(x-1) - \frac{(x-1)^2}{8} + \frac{(x-1)^3}{16} + \cdots$$
+  
+1. Derive the Taylor series for $e^x$ at $a=0$ (this converges for all $x$).
+
+    Answers:
+
+    Let $f(x)=e^x$.
+    \begin{align*}
+    f(x)&=e^x       & f(0)&=1\\
+    f'(x)&=e^x      & f'(0)&=1\\
+    f^{(n)}(x)&=e^x & f^{(n)}(0)&=1
+    \end{align*}
+    The $n^{\text{th}}$ degree Taylor polynomial is
+    $$
+    P_{n,0}(x)=1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+\dotsb+\frac{x^n}{n!}
+    $$
+    and the Taylor series is
+    $$
+    \sum_{n=0}^{\infty}\frac{x^n}{n!}.
+    $$
+
+1. Derive the Taylor series for $\sin(x+a)$ at $a=\dfrac{\pi}{2}$ (this converges for all $x$).
+
+    Answers:
+
+    The derivatives at $\dfrac{\pi}{2}$ form a periodic sequence of period $4$
+    \begin{align*}
+    f(x)&=\sin(x)       & f\left(\frac{\pi}{2}\right)&=1\\
+    f^{(1)}(x)&=\cos(x)      & f^{(1)}\left(\frac{\pi}{2}\right)&=0\\
+    f^{(2)}(x)&=-\sin(x)     & f^{(2)}\left(\frac{\pi}{2}\right)&=-1\\
+    f^{(3)}(x)&=-\cos(x)     & f^{(3)}\left(\frac{\pi}{2}\right)&=0\\
+    f^{(4)}(x)&=\sin(x) & f^{(4)}\left(\frac{\pi}{2}\right)&=1
+    \end{align*}
+
+    and the Taylor series is
+    $$
+    \sum_{n=0}^{\infty}(-1)^{n}\frac{x^{2n}}{(2n)!}
+    $$
+    which we recognise as the Taylor series for $\cos$ about $0$, which should be unsurprising since $\sin\left(x+\frac{\pi}{2}\right)=\cos(x)$.
+
+
+1. From the Taylor series of $f(x)=\ln(x+1)$ at zero (this converges for $-1 < x \le 1$), show that:
+    $$
+    \sum_{n=1}^{\infty}\frac{(-1)^{n+1}}{n}=\ln(2).
+    $$
+
+    Answers:
+
+    Since we are told that the Taylor series equals $f(x)$ for $-1 < x\le 1$ and $f(1)=\ln(2)$, we have
+    $$
+    \sum_{n=1}^{\infty}(-1)^{n+1}\frac{1}{n}=\ln(2).
+    $$
+
+
+1. The Taylor series for $\tan^{-1}$ at zero is
+    $$\tan^{-1}(x) = \sum_{n=0}^\infty \frac{(-1)^n x^{2n+1}}{2n+1}$$
+    which converges for $|x|\leq 1$. Use this to approximate $\pi$ (you could do this in MATLAB/Python using a for loop to easily experiment with the number of terms in the sum).
+
+
+    Answer:
+
+    We have that $\tan^{-1}(1)=\frac{\pi}{4}$, so can find $\pi$ as $4\tan^{-1}(1)=4\sum_{n=0}^\infty \frac{(-1)^n}{2n+1}$. We can get an approximation by summing over the first $N$ terms of this infinite series.
+
+    ```{verbatim}
+        MATLAB Code:
+        %this is not the most efficient solution but shows a simple method using a for loop
+        %set number of terms in approximation
+        N = 4;
+        x = 1; %set point about which Taylor series is taken
+        sigma_nthterm = 0 %initialise the summation
+        for n = 0:N     %loop over the first N terms
+            nth_term = ((-1)^n * x^(2*x+1))/(2*n+1); %calculate the nth term
+            sigma_nthterm = sigma_nthterm + nth_term;  %add this to the summation
+        end
+
+        pi_approx = sigma_nthterm*4 %calculate the approximation for pi, since tan^{-1}(1) = pi/4
+    ```
+     For N=1000 we get $\pi\approx 3.1426... $
+    
+1. Prove Euler's formula for complex numbers using the Taylor series for $e^x$, $\cos(x)$ and $\sin(x)$ at $0$, .
+ 
+    Answer:
+    First, recall the Taylor series for $e^x$
+    $$
+    e_x = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \frac{x^4}{4!} + \cdots
+    $$
+    And now let $x = i\theta$. The odd terms will become imaginary, while the even powers will have changing signs with $i^2$:
+    
+    \begin{align}
+    e^{i\theta} &= 1 + i\theta + \frac{i^2 \theta^2}{2!} + \frac{i^3 \theta^3}{3!} + \frac{i^4 \theta^4}{4!} + \cdots \\
+    &= 1 + i\theta - \frac{\theta^2}{2!} - i\frac{\theta^3}{3!} + \frac{\theta^4}{4!} + \cdots
+    \end{align}
+    
+    Now, group every second term together to identify the Tarlor series of $\cos(x)$ and $i\sin(x)$.
+    
+    $$
+    e^x = \left(1 - \frac{\theta^2}{2!} + \frac{\theta^4}{4!} + \cdots \right) + i\left(\theta - \frac{\theta^3}{3!} + \frac{x^5}{5!} + \cdots\right)\\
+    e^x = \cos(\theta) + i \sin(\theta)
+    $$
+    
+    
+ 
+1. Find the Taylor series for $\cos(x)$ at zero by differentiating the Taylor series for $\sin(x)$ at zero term by term (we can differentiate any power series term by term for values of $x$ where the series converges).
+
+    Answers:
+    Taking the derivative of the power series, and noting that $\frac{n}{n!} = \frac{1}{(n-1)!}$
+    $$
+    \sin(x) = x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} + \cdots\\
+    \frac{d}{dx}\sin (x)= 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \frac{x^6}{6!} + \cdots = \cos(x)
+    $$
+    
+    
+    
+    
+1. Find the Taylor series of $\dfrac{1}{1-x}$ at $a=0$ (this converges for $|x|<1$). Hence find the Taylor series of $\dfrac{1}{(1-x)^2}$ at $a=0$. 
+
+    Answers:
+
+    \begin{align*}
+    f(x)&=(1-x)^{-1}            & f(0)&=1\\
+    f^{(1)}(x)&=(1-x)^{-2}      & f^{(1)}(0)&=1\\
+    f^{(2)}(x)&=2(1-x)^{-3}     & f^{(2)}(0)&=2\\
+    f^{(3)}(x)&=6(1-x)^{-4}     & f^{(3)}(0)&=6=3!\\
+    f^{(4)}(x)&=24(1-x)^{-5}     & f^{(4)}(0)&=24=4!
+    \end{align*}
+    so the Taylor Series is
+    \begin{equation*}
+    \sum_{n=0}^{\infty}x^n.
+    \end{equation*}
+
+    Now to find the Taylor series of $\frac{1}{(1-x)^2}$ at $0$, we note that $\frac{d}{dx}\frac{1}{(1-x)}=\frac{1}{(1-x)^2}$, hence we can obtain the Taylor series by differentiating the series for $\frac{1}{(1-x)}$ term by term, obtaining:
+    \begin{equation*}
+    \sum_{n=1}^{\infty}nx^{n-1}.
+    \end{equation*}

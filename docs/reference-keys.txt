@@ -143,6 +143,11 @@ exm:subint
 exm:trig
 exm:partfrac
 exm:byparts
+def:stochexp
+exm:ballsinbags
+thm:totalprob
+exm:diseasetotalprob
+thm:bayes
 fig:complexsketch
 eq:vecwildebeest
 eq:asymp
@@ -258,3 +263,14 @@ further-integration-techniques
 integrals-of-trigonometric-and-hyperbolic-functions
 integrals-of-rational-functions-using-partial-fractions
 integration-by-parts
+probability-fundamentals
+sample-space-and-events
+counting
+permutations-and-combinations
+permutations
+combinations
+probabilities
+conditional-probability
+independence
+law-of-total-probability
+bayes-theorem
