@@ -23,7 +23,7 @@
 <meta name="author" content="Dr Mark Callaway" />
 
 
-<meta name="date" content="2022-11-17" />
+<meta name="date" content="2022-11-18" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -262,6 +262,8 @@
 <li class="chapter" data-level="" data-path="exercise-set-9.html"><a href="exercise-set-9.html"><i class="fa fa-check"></i>Exercise Set 9</a></li>
 <li class="chapter" data-level="" data-path="exercise-set-10.html"><a href="exercise-set-10.html"><i class="fa fa-check"></i>Exercise Set 10</a></li>
 <li class="chapter" data-level="" data-path="exercise-set-11.html"><a href="exercise-set-11.html"><i class="fa fa-check"></i>Exercise Set 11</a></li>
+<li class="chapter" data-level="" data-path="exercise-set-12.html"><a href="exercise-set-12.html"><i class="fa fa-check"></i>Exercise Set 12</a></li>
+<li class="chapter" data-level="" data-path="exercise-set-14.html"><a href="exercise-set-14.html"><i class="fa fa-check"></i>Exercise Set 14</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -284,8 +286,7 @@
             <section class="normal" id="section-">
 <div id="probability-fundamentals" class="section level1 hasAnchor" number="17">
 <h1><span class="header-section-number">Chapter 17</span> Probability Fundamentals<a href="probability-fundamentals.html#probability-fundamentals" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Uncertainty is an integral component of our everyday lives, and we are
-always making decisions in the face of it e.g.</p>
+<p>Uncertainty is an integral component of our everyday lives, and we are always making decisions in the face of it e.g.</p>
 <ul>
 <li>Will it rain today?</li>
 <li>Should I take out life insurance?</li>
@@ -439,7 +440,7 @@ We can calculate this in a neat way as
 <p><span class="math display">\[\frac{59!}{6!(59-6)!}=\frac{59!}{6!53!}=45\,057\,474.\]</span></p>
 <p>Since each outcome is equally likely, the probability of a winning ticket is <span class="math inline">\(\dfrac{1}{45\,057\,474}\)</span>.</p>
 <p>A <em>combination</em> of <span class="math inline">\(r\)</span> objects from <span class="math inline">\(n\)</span> is an unordered arrangement of <span class="math inline">\(r\)</span> of the <span class="math inline">\(n\)</span> objects. The number of combinations is
-<span class="math display">\[{}_n C_r ={{n}\choose{r}}=\frac{n!}{(n-r)!}\]</span>
+<span class="math display">\[{}_n C_r ={{n}\choose{r}}=\frac{n!}{r!(n-r)!}\]</span>
 usually read as “<span class="math inline">\(n\)</span> choose <span class="math inline">\(r\)</span>”.</p>
 </div>
 </div>
@@ -497,7 +498,7 @@ since there are 4 equally likely outcomes from tossing a coin twice, and
 <span class="math display">\[B_i\cap B_j = \emptyset\]</span>
 (no two sets have any elements in common)
 and
-$<span class="math inline">\(B_1\cup B_2\cup \dotsb\cup B_n=S\)</span>
+<span class="math display">\[B_1\cup B_2\cup \dotsb\cup B_n=S\]</span>
 (taking all the sets together, they include all of the outcomes in <span class="math inline">\(S\)</span>).</p>
 <div class="theorem">
 <p><span id="thm:totalprob" class="theorem"><strong>Theorem 17.1  (Law of Total Probability) </strong></span>Let <span class="math inline">\(B_1,B_2,\dotsc,B_n\)</span> be a partition of <span class="math inline">\(S\)</span> and let <span class="math inline">\(A\)</span> be an event. Then
@@ -519,8 +520,8 @@ P(+)&amp;=P(+|D)P(D)+P(+|ND)P(ND)\\
 <p><span id="thm:bayes" class="theorem"><strong>Theorem 17.2  (Bayes' Theorem) </strong></span>For any two events <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, we have
 <span class="math display">\[P(B|A)=\frac{P(A|B)P(B)}{P(A)}.\]</span></p>
 </div>
-<p>::: {.example #disease name =“Disease Prevalence: part 2”}
-A certain disease occurs in 0.02% of the population. A test to discover the disease gives a positive reaction for 92% of the people suffering from the disease, but also for 3% of people not having it. If a randomly selected person has a positive test, what is the probability that they have the disease?</p>
+<div class="example">
+<p><span id="exm:disease" class="example"><strong>Example 17.3  (Disease Prevalence: part 2) </strong></span>A certain disease occurs in 0.02% of the population. A test to discover the disease gives a positive reaction for 92% of the people suffering from the disease, but also for 3% of people not having it. If a randomly selected person has a positive test, what is the probability that they have the disease?</p>
 <p>Denoting a positive test as <span class="math inline">\(+\)</span>, having the disease as <span class="math inline">\(D\)</span> and not having the disease as <span class="math inline">\(ND\)</span>, from the question we have:
 <span class="math display">\[\begin{align*}
 P(D)&amp;=0.0002\\
@@ -532,8 +533,8 @@ We want to calculate <span class="math inline">\(P(D|+)\)</span>. From Bayes’ 
 We have all the ingredients, where we found <span class="math inline">\(P(+)\)</span> in the earlier example on the law of total probability.</p>
 <p>Hence
 <span class="math display">\[P(D|+)=\frac{0.92\times 0.0002}{0.031834}=0.0058\text{ to 2 s.f.}\]</span>
-So when getting a positive test, there is less than a 1% chance of actually having the disease. This is largely due to the rarity of the disease.
-:::</p>
+So when getting a positive test, there is less than a 1% chance of actually having the disease. This is largely due to the rarity of the disease.</p>
+</div>
 
 </div>
 </div>

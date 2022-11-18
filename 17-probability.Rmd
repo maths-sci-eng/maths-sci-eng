@@ -124,7 +124,7 @@ $$\frac{59!}{6!(59-6)!}=\frac{59!}{6!53!}=45\,057\,474.$$
 Since each outcome is equally likely, the probability of a winning ticket is $\dfrac{1}{45\,057\,474}$.
 
 A *combination* of $r$ objects from $n$ is an unordered arrangement of $r$ of the $n$ objects. The number of combinations is
-$${}_n C_r ={{n}\choose{r}}=\frac{n!}{(n-r)!}$$
+$${}_n C_r ={{n}\choose{r}}=\frac{n!}{r!(n-r)!}$$
 usually read as "$n$ choose $r$".
 
 
@@ -191,7 +191,7 @@ A sequence of sets $B_1,B_2,\dotsc,B_n$ is said to form a *partition* of $S$ if 
 $$B_i\cap B_j = \emptyset$$
 (no two sets have any elements in common)
 and
-$$B_1\cup B_2\cup \dotsb\cup B_n=S$
+$$B_1\cup B_2\cup \dotsb\cup B_n=S$$
 (taking all the sets together, they include all of the outcomes in $S$).
 
 ::: {.theorem #totalprob name="Law of Total Probability"}
@@ -219,7 +219,7 @@ For any two events $A$ and $B$, we have
 $$P(B|A)=\frac{P(A|B)P(B)}{P(A)}.$$
 :::
 
-::: {.example #disease name ="Disease Prevalence: part 2"}
+::: {.example #disease name="Disease Prevalence: part 2"}
 A certain disease occurs in 0.02% of the population. A test to discover the disease gives a positive reaction for 92% of the people suffering from the disease, but also for 3% of people not having it. If a randomly selected person has a positive test, what is the probability that they have the disease?
 
 Denoting a positive test as $+$, having the disease as $D$ and not having the disease as $ND$, from the question we have:

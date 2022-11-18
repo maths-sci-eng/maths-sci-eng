@@ -1,0 +1,26 @@
+# Exercise Set 12 {-}
+
+1. Determine the following integrals by making use of trigonometric or hyperbolic identities.
+    a. $\displaystyle \int_0^{\pi/4}4\sin(3\theta)\cos(\theta)d\theta$
+    a. $\displaystyle \int \left( \cos\left(\frac{x}{2}\right) - \sin\left(\frac{x}{2}\right)\right)^2 \, dx$
+    a. $\displaystyle \int \sin^3(x)\, dx$
+    a. $\displaystyle \int \frac{ \cos(2x)} { \cos^2(x) \sin^2(x)} \, dx$
+    a. $\displaystyle \int \cos(x) \sin(2x) \, dx$
+    a. $\displaystyle \int \tan(2x) \,dx$
+    a. $\displaystyle \int \sinh^3(x) \cosh^2(x)$
+
+1. Determine the following integrals using the method of partial fractions.
+    a. $\displaystyle \int \frac{1}{x^2+x-6} \, dx$
+    a. $\displaystyle \int \frac{-12u-13}{(2u+1)(u-3)} \, du$
+    a. $\displaystyle \int \frac{4x^2+13x-4}{2x^2+5x-3}\, dx$
+    a. $\displaystyle \int \frac{x^3}{x^2-1}\, dx$
+    a. $\displaystyle \int \frac{x^5-2x^2}{x^2-1} \, dx$
+    a. $\displaystyle \int \frac{z+1}{(z-1)^2} \, dz$
+    a. $\displaystyle \int \frac{5y^2}{(y^2+1)(2y-1)} \, dy$
+
+1. Determine the following integrals using the method of integration by parts.
+    a. $\displaystyle \int x \cos(x) \,dx$
+    a. $\displaystyle \int t^2 e^{t} \, dt$
+    a. $\displaystyle \int e^{x}\sin(x) \, dx$
+    a. $\displaystyle \int (x+1)^2 e^{-2x} \, dx$
+    a. $\displaystyle \int \sin^{-1}(x) \, dx $.

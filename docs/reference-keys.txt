@@ -148,9 +148,11 @@ exm:ballsinbags
 thm:totalprob
 exm:diseasetotalprob
 thm:bayes
+exm:disease
 fig:complexsketch
 eq:vecwildebeest
 eq:asymp
+exm:randomcoin
 foundations
 numbers
 algebra
@@ -274,3 +276,4 @@ conditional-probability
 independence
 law-of-total-probability
 bayes-theorem
+random-variables

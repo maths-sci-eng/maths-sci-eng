@@ -1,8 +1,0 @@
-# Exercise Set 13 {.unlisted .unnumbered}
-
-
-
-
-1. Derive Bayes' Theorem from the definition of conditional probability.
-
-1. A test is 99% effective at detecting drug use in active users and 99% effective at finding negative results for non-drug users. At a given time, 0.1% of the population are active drug users. What is the probability that a randomly selected individual who tests positive is actually a drug user?

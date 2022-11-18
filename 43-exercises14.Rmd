@@ -1,0 +1,41 @@
+# Exercise Set 14 {-}
+
+1. Consider the experiment of multiplying the score on two fair dice.
+    a. What is the sample space?
+    a. What is the event of obtaining an odd number, and what is its probability?
+    a. What is the event of obtaining a number that is square and odd?
+    a. What is the event of obtaining a number that is square or odd?
+
+1. Consider the experiment of tossing a fair coin three times. Find the following probabilities:
+    a. obtaining 2 heads
+    a. obtaining at least 1 head
+    a. obtaining at least 1 head and at least 1 tail
+
+1. How many ways are there of arranging the letters in the word MATHS?
+
+1. How many four letter arrangements are there of letters from the word UNCOPYRIGHTABLE?
+
+1. In a meal deal you can choose any 3 items from: sandwich, wrap, pasta, sushi, crisps, drink, chocolate. How many different meal deals are there?
+
+1. How many arrangements of he word MISSISSIPPI are there? How many of these contain the "word" SSSS?
+
+1. You roll ten fair dice. Assume that the scores of each of the ten dice are independent. What are the the probabilities that
+    a. you roll exactly two sixes?
+    a. you roll no sixes?
+    a. you roll at least two sixes?
+
+1. A poker hand consists of 5 cards from a standard 52 card deck. How many diferent poker hands are there? How many poker hands are there of each of the following types?
+    a. *four-of-a-kind*: four cards of one value, the other being another value, for instance $5\spadesuit\,5\heartsuit\,5\diamondsuit\,5\clubsuit\,7\clubsuit$
+    a. *two-pairs*: two cards of the same value, another two cards of a second value, and the last card being of a third value, for instance $Q\heartsuit\, Q\clubsuit\, 8\spadesuit\,8\clubsuit\,9\diamondsuit$
+    a. *straight*: five cards of sequential rank, but not all of the same suit, for instance, $A\spadesuit\,2\heartsuit\,3\spadesuit\,4\clubsuit\,5\diamondsuit$
+
+1. A box contains 7 rock samples; 4 have an independent property set A and the other 3 have a property set B. We withdraw two rock samples one at a time without replacement. Find the probabilities:
+    a. the samples have different property sets
+    a. at least one rock sample has property set A
+    a. if a third sample is drawn from the box, the probability of all the samples having property set B.
+
+1. Derive Bayes' Theorem from the definition of conditional probability.
+
+1. A test is 99% effective at detecting drug use in active users and 99% effective at finding negative results for non-drug users. At a given time, 0.1% of the population are active drug users. What is the probability that a randomly selected individual who tests positive is actually a drug user?
+
+1. A product tester employed by the Gizmo Corporation tests the company's gizmos. A gizmo has 3% probability of being defective. The tester's test registers a defective gizmo as being defective with 95% probability, but it registers a non-defective gizmo as being defective with 2% probability. The tester performs a test on a gizmo drawn at random. Their test indicates the gizmo is defective.What is the probability that it really is defective?
