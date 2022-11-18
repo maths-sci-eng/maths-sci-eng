@@ -7,19 +7,49 @@
     a. $\int 3e^t + \frac{2}{t} \; d t$
     a. $\int x^\frac{1}{2} \; dx$
 
+    Answers:
+    a. $\int 2x^7 \; dx = \frac{1}{4}x^8 + c$
+    a. $\int 5x^2 + 2x-1\; dx = \frac{5}{3}x^3 + x^2 - x + c$
+    a. $\int \sin(\theta)+\cos(\theta) \; d\theta = -\cos(\theta) + \sin(\theta) + c$
+    a. $\int 3e^t + \frac{2}{t} \; dt = 3e^t + 2\ln(t) + c$
+    a. $\int x^\frac{1}{2} \; dx = \frac{2}{3}x^{\frac{3}{2}} + c$
+    
 1. Determine the following definite integrals
     a. $\int_0^2 x^2-2x\; dx$
     a. $\int_4^{16} \frac{2}{\sqrt{x}} \; dx$
     a. $\int_{-r}^r \frac{mx^2}{2r}\: dx$
     a. $\int_{-\frac{\pi}{2}}^\frac{\pi}{2}\cos(x)\; dx$
     a. $\int_{\ln(2)}^{\ln(3)} e^x\; dx$
+    
+    Answers:
+    a. $\int_0^2 x^2-2x\; dx = \left[\frac{x^3}{3} - x^2\right]_0^2 = \left(\frac{2^3}{3} - 2^2\right) - 0 = -\frac{4}{3}$
+    a. $\int_4^{16} \frac{2}{\sqrt{x}} \; dx = \int_4^16 2x^{-\frac{1}{2}}\;dx = \left[4x^{\frac{1}{2}}\right]_4^16 = 16 - 8 = 8$
+    a. Note that the limit, $r$, appears inside the integral, but it is just a constant. It is explicitly taken out of the integral here
+    $\int_{-r}^r \frac{mx^2}{2r}\:dx = \frac{m}{2r}\int_{-r}^r x^2 \: dx = \frac{m}{2r}\left[\frac{1}{3}x^3\right]_{-r}^r = \frac{m}{2r}\left(\frac{r^3}{3} + \frac{r^3}{3}\right) = \frac{mr^2}{3}$
+    a. $\int_{-\frac{\pi}{2}}^\frac{\pi}{2}\cos(x)\; dx = \left[\sin(x)\right]_{-\frac{\pi}{2}}^\frac{\pi}{2} = \sin(\pi/2) - \sin(\pi/2) = 2$
+    a. $\int_{\ln(2)}^{\ln(3)} e^x\; dx = \left[e^x\right]_{\ln(2)}^{\ln(3)} = e^{\ln(3)} - e^{\ln(2)} = 3-2 = 1$
+    
 
 1. Find the area between the curve and the $x$-axis of the function $f(x)=x^3-x$ and the lines $x=0$ and $x=2$.
+
+    Answer:
+
+    We are looking for the area enclosed by the function and the $x$-axis, but we cannot simply take the definite integral from $0$ to $2$ as the function is negative at some points on this interval.
+
+    The roots of $f(x)=x^3-x=x(x+1)(x-1)$ are $-1,0,1$ and these are where the function changes sign. We can plug in values between the roots to see where $f(x)$ is positive and where it is negative. Since we are interested in the interval from $0$ to $2$ we check $f(0.5)=-3.75$ and $f(2)=6$. So the area will be given by
+    $$A=\int_0^1 -f(x)\, dx + \int_1^2 f(x)\, dx.$$
+    Hence
+    $$A=\left[-\frac{1}{4}x^4 + \frac{1}{2}x^2\right]_0^1 + \left[\frac{1}{4}x^4 - \frac{1}{2}x^2\right]_1^2 = (\frac{1}{4}-0) + (2 - (-1/4)) = \frac{5}{2}.$$
 
 1. The velocity $v$ ($\text{ms}^{-1}$) of a particle moving in a straight line at time $t$ ($\text{s}$) is given by:
     $$v=6t^2-30t-36\quad t>0$$
     By integrating, find the distance travelled by the particle between $t=3$ and $t=5$ seconds.
 
+    Answer:
+
+    $$\int_3^5 6t^2 - 30t - 36\: dt = \left[2t^3 - 15t^2 - 36t\right]_3^5 = -116$$
+    Since we are looking for a distance, we take the absolute value: $116\text{m}$.
+    
 1. Find the following integrals using a suitable substitution.
     a. $\int (4x-3)^5 \; dx$
     a. $\int 4\sin(3x+2)\; dx$
@@ -27,15 +57,85 @@
     a. $\int \frac{1}{\sqrt{(5-3x)^3}}\; dx$
     a. $\int \frac{4x}{\sqrt{(x^2+3)^3}}\; dx$
     a. $\int 2xe^{x^2-5}\; dx$
-    a. $\int \frac{\sqrt{x}}{\sqrt{x}}\; dx$
+    a. $\int \frac{\sin(\sqrt{x})}{\sqrt{x}}\; dx$
     a. $\int \cos(\theta)\sin(\theta)\; d\theta$
     a. $\int \frac{\cos(x)}{1+\sin(x)}\; dx$
 
+    Answers:
+
+    a. $\int (4x-3)^5\:dx$. Let $u=4x-3$, so $\frac{du}{dx}=4 \Rightarrow dx = \frac{1}{4}du$
+    $$
+    \int (4x-3)^5\;dx = \int u^5 \frac{1}{4}du =\frac{u^6}{24} +c = \frac{(4x-3)^6}{24} + c$$
+    a. $\int 4\sin(3x+2)\;dx$. Let $u=3x+2$, so $\frac{du}{dx} = 3 \Rightarrow dx = \frac{1}{3}du$,
+    $$
+    \int 4\sin(3x+2)\;dx = \frac{4}{3}\int\sin(u)\:du = -\frac{4}{3}\cos(u) + c = -\frac{4}{3}\cos(3x+2) + c
+    $$
+    a. $\int_2^5\frac{1}{1-2x}\:dx$. Let $u=1-2x$, so $\frac{du}{dx} = -2 \Rightarrow dx = -\frac{1}{2}du$. This is a definite integral, so the limits must also be given in terms of u:
+    \begin{align*}
+    \int_{x=2}^{x=5} \frac{1}{1-2x}\:dx &= -\frac{1}{2}\int_{u=-3}^{u=5}\frac{du}{u} = -\frac{1}{2}\left[\ln(u)\right]_{-3}^{-9}\\
+    &= -\frac{1}{2}(\ln(-9) - \ln(-3)) = -\frac{1}{2}\ln\left(\frac{-9}{-3}\right) = -\frac{1}{2}\ln(3)
+    \end{align*}
+    a. $\int\frac{1}{\sqrt{(5-3x)^3}}\:dx$. Let $u=5-3x$, so $\frac{du}{dx} = -3 \Rightarrow dx = -\frac{du}{3}$
+    $$
+    \int\frac{1}{\sqrt{(5-3x)^3}}\:dx = \int u^{-\frac{3}{2}}\:du = \frac{2}{3}u^{-\frac{1}{2}} + c = \frac{2}{3}(5-3x)^{-\frac{1}{2}} + c
+    $$
+    a. $\int\frac{4x}{\sqrt{(x^2 + 3)^3}}\:dx$. Let $u=x^2 +3$, so $\frac{du}{dx} = 2x \Rightarrow dx = \frac{du}{2x}$. Here, the $4x$ term remains in the denominator after substituting, but will be cancelled out once $dx$ is substituted.
+    $$
+    \int\frac{4x}{\sqrt{(x^2 + 3)^3}}\:dx = \int\frac{4x}{u^{\frac{3}{2}}}\frac{du}{2x} = \int 2u^{-\frac{3}{2}} = -4u^{-\frac{1}{2}} + c = -4(x^2+3)^{-\frac{1}{2}} + c
+    $$
+    This could also have been solved by reverse chain rule (think about how the answer would be differentiated, and see that the integral was of the form $g'(x)f(g(x))$.
+    a. $\int 2x e^{x^2-5}\:dx$. Let $u=x^2 - 5$ so $\frac{du}{dx} = 2x \Rightarrow dx = \frac{du}{2x}$. Again, the remaining term in $x$ is removed after substituting for $u$ without needed to take a square root.
+    $$
+    \int 2x e^u \frac{du}{2x} = \int e^u \: du = e^u + c = e^{x^2 -5} + c
+    $$
+    Which could have been solved by identifying reverse chain rule.
+    a. $\int \frac{\sin(\sqrt{x})}{\sqrt{x}} dx$. Let $u= \sqrt{x}$ so $\frac{du}{dx} = \frac{1}{2\sqrt{x}} \Rightarrow \frac{1}{\sqrt{x}}dx = 2du$.
+    $$\int \frac{\sin(\sqrt{x})}{\sqrt{x}} dx=2\int \sin(u) du = -2\cos(u)+c=-2\sin(\sqrt{x})+c.$$
+
+    a. $\int \cos(\theta)\sin(\theta)\: d\theta$. Let $u= \sin(\theta)$ so $\frac{du}{d\theta} = \cos(\theta) \Rightarrow d\theta = \frac{du}{\cos(\theta)}$.
+    $$
+    \int \cos(\theta)\sin(\theta)\: d\theta = \int \cos(\theta)u\frac{du}{\cos(\theta)} = \int u\: du = \frac{1}{2}u^2 + c = \frac{1}{2}\sin^2(\theta) + c
+    $$
+    a. $\int \frac{\cos(x)}{1+\sin(x)}\:dx$. Let $u=1+\sin(x)$ so $\frac{du}{dx} = \cos(x) \Rightarrow dx = \frac{du}{\cos(x)}$
+    $$
+    \int \frac{\cos(x)}{1+\sin(x)}\:dx = \int \frac{1}{u}\:du = \ln(u)+c = \ln(1+\sin(x)) + c$$
+    
 1. The *Root Mean Square* (RMS) value of a signal over the interval $a$ to $b$ is defined as
     $$\left(\frac{1}{b-a}\int_{a}^{b} (f(x))^2 \; dx\right)^\frac{1}{2}$$
     Find the RMS of the voltage signal
     $$V(t)=3\sin(2t)+5\cos(4t)$$
     between $a=0$ and $b=2\pi$.
+
+    Answer:
+
+    Firstly, multiply out the square term inside the integral, so
+    \begin{align*}
+    v(t)^2 &= (3\sin(2t) + 5\cos(4t))(3\sin(2t) + 5\cos(4t))\\
+    &= 9\sin^2(2t) + 30\sin(2t)\cos(4t) + 25\cos^2(4t)
+    \end{align*}
+    So the individual terms in the integral, with constants taken outside of the integral, are
+    $$
+    \int_0^{2\pi} (v(t))^2\:dt = 9\int_0^{2\pi} \sin^2(2t)\:dt + 30\int_0^{2\pi} \sin(2t)\cos(4t)\:dt + 25 \int_0^{2\pi}\cos^2(4t)\:dt
+    $$
+    We evaluate each of the terms separately:
+    $$
+    9\int_0^{2\pi} \sin^2(2t)\:dt = 9\int_0^{2\pi}\frac{1-\cos(4t)}{2}\:dt$$
+    having used the cosine double-angle formula: $\cos(2\theta) = 1- 2\sin^2(\theta)$.
+    $$
+    \frac{9}{2}\left[t - \frac{1}{4}\sin(4t)\right]_0^{2\pi} = \frac{9}{2}(2\pi - 0) = 9\pi$$
+    For the second term, we again need a trigonometric identity, in this case the product to sum formula $\sin(\theta)\cos(\phi) = \frac{1}{2}(\sin(\theta + \phi) + \sin(\theta - \phi))$:
+    $$
+    30\int_0^{2\pi} \sin(2t)\cos(4t)\: dt = \frac{30}{2}\int_0^{2\pi} = \sin(6t) + \sin(-2t)\:dt = 15\int_0^{2\pi}\sin(6t) - \sin(2t)\:dt \\= 15\left[-\frac{1}{6}\cos(6t) + \frac{1}{2}\cos(2t)\right]_0^{2\pi} = 0
+    $$
+    And finally, using $\cos^2(4t) = \frac{1}{2}(\cos(8t)+1)$:
+    $$
+    25\int_0^{2\pi}\cos^2(4t)\: dt = \frac{25}{2}\int_0^{2\pi}\cos(8t) + 1\:dt \\= \frac{25}{2}\left[\frac{1}{8}\sin(8t) + t\right]_0^{2\pi} = 25\pi
+    $$
+    Putting these three terms together:
+    $$
+    \int_0^{2\pi}(v(t))^2\:dt = 34\pi\\
+    \left(\frac{1}{2\pi - 0}\int_0^{2\pi}(v(t))^2\:dt\right)^{\frac{1}{2}} = \left(\frac{34\pi}{2\pi}\right)^\frac{1}{2} = \sqrt{17}
+    $$
 
 1. The *volume of revolution* of a curve is defined as
     $$\int_a^b \pi (f(x))^2 \; dx$$
@@ -43,4 +143,25 @@
     $$f(x)=e^{-2x}$$
     between $a=1$ and $b=2$.
 
+    Answer:
+
+    If $f(x) = e^{-2x}$ then $(f(x))^2 = e^{-4x}$. So the voume of revolution of the curve $f(x)$ between $a=1$ and $b=2$ is
+    $$
+    \int_1^2 \pi e^{-4x}\;dx = \pi\left[-\frac{1}{4}e^{-4x}\right]_1^2 = \pi\left(\frac{-e^{-8}}{4} - \frac{-e^{-4}}{4}\right) =0.0141 \text{ to 3d.p.}
+    $$
+
 1. The points $(1,1)$ and $(2,8)$ on the curve $y=x^3$ are joined by a straight line. Calculate the area between the line and the curve.
+
+    Answer:
+
+    The area between two curves described by funtions $f_1(x)$ and $f_2(x)$ is the area between the function $(f_1(x) - f_2(x))$ and the $x$-axis. First, find the equation of the line between the points $(1,1)$ and $(2,8)$:
+    $$
+    f_1(x) = 7x - 6, \quad \text{since the gradient is } \frac{8-1}{2-1}.
+    $$
+    So the area between the line $y=f_1(x)$ and the line $y=f_2(x) = x^3$ is
+    \begin{align*}
+    \int_1^2 (f_1(x)-f_2(x))\;dx &= \int_1^2 7x-6-x^3\;dx\\
+    &= \left[\frac{7}{2}x^2 - 6x - \frac{1}{4}x^4\right]_1^2\\
+    &= (14-12-4)-(\frac{7}{2} - 6 -\frac{1}{4})\\
+    &= \frac{3}{4}
+    \end{align*}
