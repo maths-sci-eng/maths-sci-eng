@@ -1,0 +1,303 @@
+# Discrete Random Variables
+
+A *random variable* is a numerical valued function defined on the sample space.
+
+::: {.example #rv name="Random Variables"}
+ A coin with probability $p$ of getting a head is tossed three times.
+
+There are 8 possible outcomes from the experiment. Let $X$ be a random variable counting the number of heads.
+
+|**Sample**|**Probability**|$X$|
+|---|---|---|
+|TTT|$(1-p)^3$|0|
+|TTH|$p(1-p)^2$|1|
+|THT|$p(1-p)^2$|1|
+|HTT|$p(1-p)^2$|1|
+|THH|$p^2(1-p)$|2|
+|HTH|$p^2(1-p)$|2|
+|HHT|$p^2(1-p)$|2|
+|HHH|$p^3$|3|
+
+:::
+
+The convention is to denote a random variable using upper case letters and lower-case letters to denote a value that the random variable takes e.g. here we have $X=x$ with $x = 0, 1, 2, 3$.
+
+A random variable is said to be *discrete* if its range of values is finite or countably infinite (i.e. it must be possible to list all the values in a, possibly infinite, sequence).
+
+In the coin toss example, we could write a function to map the probabilities of observing $x$ heads from three tosses as:
+$$
+P(X = x) = {3 \choose x} p^x (1 - p)^{3 - x}\quad\mbox{for}~x = 0, 1, 2, 3.
+$$
+
+The function $P(X = x)$ is known as a *probability distribution*. In the discrete case, it is also called a *probability mass function*. Some authors use the notation $p_X(x)$ or $f_X(x)$. We will tend to use the former for discrete random variables and the latter for *continuous* random variables (more on that later).
+
+By the laws of probability, we always have
+$$
+P(X = x) \geq 0
+$$
+and
+$$
+\sum_{x} P(X = x) = 1.
+$$
+Where the notation $\displaystyle \sum_x$ means to sum over all possible values of $x$.
+
+
+## Bernoulli trials
+
+Possibly the simplest example of a random variable is when an outcome can only take one of two values e.g.
+
+* success / failure,
+* survival / death,
+* defective / non-defective.
+
+Note that these outcomes are not numerical, but typically we can assign numerical values to them, for example we could let
+$$
+X = \begin{cases}
+1 & \text{if success,}\\
+0 & \text{if failure.}
+\end{cases}
+$$
+
+If we assume that the **probability of success** is given by a value $0\le p\le 1$, then the **probability mass function** is:
+$$
+p_X(x) = P(X = x) = p^x (1 - p)^{1 - x} \qquad \mbox{for}~x = 0, 1.
+$$ 
+The experiment is known as a *Bernoulli trial*, after [Jacob Bernoulli (1654--1705)](https://en.wikipedia.org/wiki/Jacob_Bernoulli).
+
+We write $X \sim \mbox{Bern}(p)$ to say that the random variable $X$ has a Bernoulli probability distribution with parameter $p$.
+
+## Binomial Distribution
+
+Often we may have an experiment which consists of a fixed number $n$ of **independent** Bernoulli trials. Let $X$ denote the number of successes.
+
+In this case there are $2^n$ possible outcomes and $X$ is defined in the range $0, \dots, n$. There will be ${n \choose x}$ of the $2^n$ possible outcomes corresponding to a value $X = x$, which will occur with probability $p^x(1-p)^{n - x}$,
+
+A *binomial random variable*, $X \sim \mbox{Bin}(n, p)$, is the number of successes from a fixed number ($n$) of Bernoulli trials.
+A binomial random variable $X$ therefore has probability mass function:
+$$
+p_X(x) = P(X = x) = {n \choose x} p^x (1 - p)^{n - x} \quad \mbox{for}~x = 0, \dots, n~\mbox{ and }~0 \leq p \leq 1.
+$$
+
+The coin tossing example we saw earlier is a case of a binomial random variable, with p.m.f.
+\begin{eqnarray*}
+p_X(x) = {3 \choose x} p^x (1 - p)^{3 - x} \\
+\mbox{for}~x = 0, 1, 2, 3.
+\end{eqnarray*}
+
+So for a fair coin ($p = 0.5$):
+\begin{eqnarray*}
+p_X(0) &=& 0.125\\
+p_X(1) &=& 0.375\\
+p_X(2) &=& 0.375\\
+p_X(3) &=& 0.125
+\end{eqnarray*}
+and note that as expected $\sum_{x = 0}^3 p_X(x) = 1$.
+
+
+## Cumulative Distribution Functions
+
+Another useful quantity is called the *cumulative distribution function* and for discrete random variables is defined as:
+$$
+P(X \leq x) = \sum_{k \leq x} P(X = k).
+$$
+So for a fair coin ($p = 0.5$):
+
+**Probability mass function**:
+\begin{eqnarray*}
+p_X(0) &=& 0.125\\
+p_X(1) &=& 0.375\\
+p_X(2) &=& 0.375\\
+p_X(3) &=& 0.125.
+\end{eqnarray*}
+
+**Cumulative distribution function**:
+\begin{eqnarray*}
+P(X \leq 0) &=& 0.125\\
+P(X \leq 1) &=& 0.5\\
+P(X \leq 2) &=& 0.875\\
+P(X \leq 3) &=& 1.
+\end{eqnarray*}
+
+::: {.example #cumulative name="Cumulative distributions"}
+If 1% of a product is defective, then in a random sample of 200 items, what is the probability that less than 2 are defective?
+
+We can consider that the sampling scheme is approximately equivalent to a sequence of independent Bernoulli trials. Here "success" is defined as "having a defect" and has probability $p = 0.01$. Let $X$ be the number of defective items. Hence,
+\begin{eqnarray*}
+P(X < 2) &=& P(X = 0) + P(X = 1)\\
+&=& {200 \choose 0} \cdot 0.01^0 \cdot 0.99^{200} + {200 \choose 1} \cdot 0.01^1 \cdot 0.99^{199}\\
+&=& 0.40 \text{ to 2 s.f.}
+\end{eqnarray*}
+:::
+
+
+## Poisson distribution
+The Poisson distribution is named after [Simeon Denis Poisson (1781--1840)](https://en.wikipedia.org/wiki/Sim\%C3\%A9on_Denis_Poisson). The Poisson distribution has been used to model (according to Wikipedia):
+
+* the number of goals in a football match,
+* the number of children in a family,
+* the number of patients arriving in an hour in A & E,
+* the number of soldiers killed in a year by horse-kicks in a corps of the Prussian cavalry.
+
+Roughly speaking, a Poisson distribution is appropriate when recording the number of events occuring in a given unit time if these events are independent and occur at a constant rate.
+
+A discrete random variable $X$ follows a *Poisson* distribution with rate $\lambda$ if it has probability mass function:
+\begin{eqnarray*}
+P(X = x) &=& \frac{\lambda^x e^{-\lambda}}{x!}\\
+&& \mbox{for}~x = 0, 1, 2, \dots\\
+&& \mbox{and}~\lambda > 0.
+\end{eqnarray*}
+
+We write $X\sim Po(\lambda)$ to denote $X$ being a random variable with a Poisson distribution with parameter $\lambda$.
+
+::: {.example #poisson name="Poisson distribution"}
+
+Births occur in a hospital at an average rate of 1.8 births per hour. 
+
+1. What is the probability that 5 births will occur in any given hour?
+1. What is the probability that no births will occur in any given hour?
+1. What is the probability that at least two births will occur in any given hour?
+
+Let $X$ be the number of births in any given hour. Here $X \sim Po(1.8)$ and
+
+1. $P(X = 5) = \frac{1.8^5 e^{-1.8}}{5!} = 0.0260\text{ to 3 s.f.}.$
+1. $P(X = 0) = e^{-1.8} = 0.165\text{ to 3 s.f.}.$
+1. $P(X \geq 2) = 1 - P(X < 2) = 1 - e^{-1.8} - 1.8 e^{-1.8} = 0.537\text{ to 3 s.f.}.$
+:::
+
+In some instances, we can use the Poisson distribution to approximate the binomial distribution.
+
+::: {.example #binomapprox name="Poisson approximation of binomial"}
+A manufacturer sells screws in boxes of 100. On average, 0.5% of screws produced at the factory are defective. Find the probability that no more than one screw in a randomly selected box is defective.
+
+In this case, we can model the number of defective screws in a box, $X$, as a binomial random variable with parameters $n = 100$ and $p = 0.005$. So the answer is:
+\begin{eqnarray*}
+P(X \leq 1) = p_X(0) + p_X(1) &=& {100 \choose 0} 0.995^{100} + {100 \choose 1}0.005(0.995)^{99}\\
+&=& 0.91 \text{ to 2 s.f.}
+\end{eqnarray*}
+
+However, a binomial distribution can be well-approximated by a Poisson distribution with rate $\lambda = np$ if $n$ is "large" and "$np$" is fairly small. Here $n = 100$ and $np = 0.5$, and so we could approximate the above result as:
+\begin{eqnarray*}
+P(X \leq 1) &\approx& e^{-0.5} + 0.5e^{-0.5}\\
+&=& 0.91 \text{ to 2 s.f.}
+\end{eqnarray*}
+:::
+
+Rule-of-thumb: $np < 10$, $n \geq 20$, $p \leq 0.05$
+
+
+## Expectation and Variance
+
+
+### Expectation
+
+Given a discrete random variable $X$, we define its *expected value* (or *expectation*) as:
+$$
+\operatorname{E}(X) = \sum_x xp_X(x).
+$$
+The expectation of $X$ corresponds to the approximate average value of $X$ obtained from a repeated series of independent experiments.
+
+For example, if $X$ is the amount of money you win in a gambling game, then if $\operatorname{E}(X) = 0$, in the long-term you would expect to break even. (In reality, a casino would ensure $\operatorname{E}(X) < 0$.)
+
+We sometimes refer to $\operatorname{E}(X)$ as the *mean* of $X$.
+
+::: {.example #expectation name="Expectation"}
+Find the expected score from a single roll of a fair die.
+\begin{eqnarray*}
+\operatorname{E}(X) &=& \sum_{x = 1}^6 x p_X(x)\\
+&=& \left(1 \times \frac{1}{6}\right) + \left(2 \times \frac{1}{6}\right) + \dots + \left(6 \times \frac{1}{6}\right)\\
+&=& 3.5
+\end{eqnarray*}
+:::
+
+We can apply functions to a random variable, which then define a new random variable. We can then also find the expectation of these new random variables as in the following example.
+
+::: {.example #expfunction name="Expectation of functions"}
+Let $X$ be the score from a single roll of a fair die. Find the expected value of the random variable $Y = X^2$.
+
+We note that $Y$ can take values $\{1, 4, 9, 16, 25, 36\}$, each with probability $\frac{1}{6}$. Therefore
+\begin{eqnarray*}
+\operatorname{E}(Y) &=& \left(1 \times \frac{1}{6}\right) + \left(4 \times \frac{1}{6}\right) + \dots + \left(36 \times \frac{1}{6}\right)\\
+&=& \sum_{x = 1}^6 x^2 p_X(x)\\
+&=& 15.2\text{ to 3 s.f.}
+\end{eqnarray*}
+:::
+
+In general, if $g(\cdot)$ is a function defined on the range of a discrete random variable $X$, then $g(X)$ is also a random variable, and it follows that
+$$
+\operatorname{E}[g(X)] = \sum_{x} g(x) p_X(x)
+$$
+
+**Some useful properties of the expectation:**
+
+* Let $a$ and $b$ be constants, and let $g(X)$ and $h(X)$ be functions defined on the range of a random variable $X$. Then,
+    $$
+    \operatorname{E}\left[ag(X) + bh(X)\right] = a\operatorname{E}[g(X)] + b\operatorname{E}[h(X)]
+    $$
+
+* The expected value of a constant, $a$, is itself i.e.
+    $$
+        \operatorname{E}(a) = a.
+    $$   
+
+### Variance and Standard Deviation
+
+The *variance* is the expected squared deviation of a random variable from its mean.
+$$
+\operatorname{var}(X) = \operatorname{E}\left[(X - \mu)^2\right]
+$$
+where $\mu = \operatorname{E}(X)$ is the mean of $X$.
+
+Informally it measures how spread out a set of random numbers are expected to be from their mean, such that random variables with higher variances are harder to predict than those with smaller variances.
+
+A useful alternative form for the variance is given as
+$$
+\operatorname{var}(X) = \operatorname{E}\left(X^2\right) - \operatorname{E}^2(X).
+$$
+This can be derived by considering that
+\begin{align*}
+\operatorname{var}(X) &= \operatorname{E}\left[(X - \mu)^2\right]\\
+&= \operatorname{E}\left(X^2 - 2X\mu + \mu^2\right)\\
+&= \operatorname{E}\left(X^2\right) - 2\mu \operatorname{E}(X) + \operatorname{E}(\mu^2)\\
+&= \operatorname{E}\left(X^2\right) - 2\mu^2 + \mu^2\\
+&= \operatorname{E}\left(X^2\right) - \mu^2.
+\end{align*}
+
+Another important quantity is the *standard deviation*
+$$
+\sigma = \operatorname{sd}(X) = \sqrt{\operatorname{var}(X)}.
+$$
+This effectively re-scales the variance to be on the same scale as the data (having the same units rather than the units squared).
+
+::: {.example #variance name="Variance"}
+Find the variance of the score, $X$, from a single roll of a fair die.
+
+If we use the alternative form for the variance, then from earlier results we have:
+$$
+\operatorname{var}(X) = \operatorname{E}(X^2) -\operatorname{E}^2(X) = 15.17 - 3.5^2 = 2.917\text{ to 4 s.f.}.
+$$
+The standard deviation is
+$$
+\operatorname{sd}(X) = \sqrt{2.917} = 1.708\text{ to 4 s.f.}.
+$$
+:::
+
+
+**A useful property of the variance:**
+
+
+* For $a$ and $b$ constants:
+    $$
+        \operatorname{var}(aX + b) = a^2\operatorname{var}(X)
+    $$
+
+## Summary of Discrete Distributions
+
+Here we list (without proof) the expectation and variance of the discrete probability distributions we have considered above.
+
+
+|**Distribution**|**Probability Density Function**|**Expectation**|**Variance**|
+|---|---|---|---|
+|Bernoulli $X\sim\operatorname{Bern}(p)$|$p_X(x)=p^x(1-p)^{1-x}$; $x=0,1$; $0 \le p \le 1$.| $\operatorname{E}(x)=p$ | $\operatorname{var}(X)p(1-p)$ |
+|Binomial $X\sim\operatorname{Bin}(n,p)$|$p_X(x)={n \choose x} p^x (1-p)^{n-x}$; $n=1,2,\dotsc$; $0 \le p \le 1$; $x=0,1,2\dotsc,n$ |$\operatorname{E}(X)=np$ | $\operatorname{var}(X)=np(1-p)$ |
+|Poisson $X\sim\operatorname{Po}(\lambda)$|$p_X(x)=\dfrac{\lambda^xe^{-\lambda}}{x!}$; $x=0,1,2,\dotsc$; $\lambda>0$|$\operatorname{E}(X)=\lambda$ | $\operatorname{var}(X)=\lambda$|
+

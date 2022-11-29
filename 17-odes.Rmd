@@ -1,0 +1,403 @@
+# Differential Equations
+
+A *differential equation* (DE) is an equation containing an unknown function and one or more of its derivatives. Here we stick to Ordinary Differential Equations (ODEs) which are DEs of only one independent variable^[In contrast to *partial* differential equations (PDEs) which involve derivatives of multiple independent variables.].
+
+Here are some classic examples:
+
+* Falling under constant gravity
+$$
+m \frac{d^2h}{dt^2} (t) = -mg
+$$
+
+* Newton's Law of Cooling
+$$
+\frac{dT_{in}}{dt} = c (T_{out} - T_{in})
+$$
+
+* Cash in the bank (with interest rate $r$)
+$$
+\frac{dc}{dt} = r c
+$$
+
+* Mass on the end of a spring (Newton's law + Hooke's law)
+$$
+m \frac{d^2 x}{dt^2} = -k x
+$$
+
+Many physical laws are formulated in terms of differential equations: we know how the rate of change of some quantity is related to the value of that quantity, then to find the function that describes the system, we need to solve the differential equation.
+
+We classify differential equations according to their structure and corresponding solution methods. It is useful to first identify the class so we can decide which solution method to apply. Here are some basic classes:
+
+* The **order** of a differential equation is the highest order derivative that occurs in the equation.
+* A **linear ordinary differential equation** of order $n$ may be written as:
+$$
+p_0(x) \frac{d^n y}{d x^n} +p_1(x) \frac{d^{n-1} y}{d x^{n-1}}
++p_2(x) \frac{d^{n-2} y}{d x^{n-2}}+\ldots + p_n(x) y(x)=r(x);
+$$
+$y$ is the dependent variable, $x$ is the independent variable.
+* A **nonlinear differential equation**: An equation that cannot be put in the above form.
+* A **homogeneous**  differential equation: $r(x)=0$.
+* An **inhomogeneous**  differential equation: $r(x) \ne 0.$
+
+
+What is the solution of an ODE? 
+
+**General solution**: the general solution of an $n^\text{th}$ order ODE contains $n$ arbitrary constants (a solution effectively needs us to integrate $n$ times).
+
+**Particular  solution**: A particular solution is obtained from a general solution by assigning particular values of the arbitrary constants. If $n$ *boundary conditions* are specified, the $n$ arbitrary constants can be determined.
+
+
+## Linear or Nonlinear ODEs
+
+Let's take a look at a couple of examples.
+
+The differential equation
+$$
+ \frac{ d^2 y}{d x^2} +4 x \frac{ d y}{d x}+ 2y= \cos(x)
+$$
+is (i) linear, (ii) second order and (iii) inhomogeneous.
+
+Linearity is determined solely by the way that the dependent variable $y$ and its derivative occur in the equation.
+
+The differential equation
+$$
+ \frac{ d^2 y}{d x^2} + \sin(y) = 0
+$$
+is second order and nonlinear because of the term $\sin(y)$.
+
+
+## Separable First Order ODEs
+
+This is a key approach to solving differential equations. A separable
+differential equation takes the form:
+$$
+\frac{dy}{dx} = \frac{f(x)}{g(y)}, \;\; \mbox{or} \;\; g(y)\; dy =  f(x)
+\, dx.
+$$
+The general solution of such separable ODEs are obtained by integration:
+$$
+\int {g(y)}\, dy  = \int f(x) \, dx.
+$$
+The constant of integration gives the one arbitrary constant required for the general solution. If a condition is specified, use it to determine the value of the constant to get the particular solution.
+
+::: {.example #separable name="Separable First Order ODEs"}
+
+Solve the differential equation
+$$
+\frac{dy}{dx} = \frac{1-y^2}{y(1-x)}
+$$
+Separating the terms $x$, $dx$ and $y$, $dy$ gives
+$$
+\frac{y}{1-y^2} dy = \frac{1}{1-x} dx
+$$
+so that
+$$
+\int \frac{ y \; dy}{(1-y^2)}= \int \frac{dx}{(1-x)} \mbox{ or } \int - \frac{1}{2}\frac{d(1-y^2)}{1-y^2}= -\int \frac{d(1-x)}{(1-x)}
+$$
+Integrating the above equation, we obtain an equation defining $y$ as an implicit function of $x$:
+$$
+\ln |1-y^2|= 2 \ln |1-x| -C,
+$$
+i.e.
+$$
+\ln \frac{|1-x|^2}{|1-y^2|}= C, \;\;
+\frac{|1-x|^2}{|1-y^2|}=e^C=k^2, \;\; k^2 \ne 0
+$$
+Clearing the fractions and eliminating the absolute values gives:
+$$
+(1-x)^2 = \lambda  (1-y^2),  \;\; \lambda= \pm k^2 \ne 0; \;\;
+\frac{(x-1)^2}{\lambda}+y^2=1
+$$
+where $\lambda$ takes on any real value, except for $0$. If $\lambda > 0$, the solution curves are all ellipses; If $\lambda < 0$, the solution curves are all hyperbolas.
+
+For example, the particular solution passing through the point $(x=0, y=0)$, we then have $\lambda=1$ giving
+$$
+(x-1)^2+y^2=1.
+$$
+:::
+
+
+## Linear first order ODEs
+Linear first order inhomogeneous ODEs can be written in the form
+$$
+\frac{dy}{dx} + p(x) y = r(x).
+$$
+To solve these equations we use the **integrating factor** method. We multiply the ODE by the integrating factor
+$$
+u (x) = \exp \left(\int p \, dx\right).
+$$
+Then 
+\begin{align*}
+\frac{d}{dx}( u(x) y(x) ) & = \frac{du}{dx} y(x) + u(x) \frac{dy}{dx}\\
+& = p(x) u(x) y(x) + u(x) \left(r(x) - p(x) y(x) \right)\\
+&= u(x) r(x).
+\end{align*}
+It follows that
+$$
+u(x)y(x) = \int u(x) r(x) \, dx +C\,.
+$$
+
+This means that
+$$
+y(x) = \left[\int \left( e^{\int p(x) \, dx} \right) r(x) \, dx
++C \; \right] e^{-\int p(x) \, dx}.
+$$
+is the general solution of the linear first order inhomogeneous ODE
+$$
+\frac{dy}{dx} + p(x) y = r(x).
+$$
+
+::: {.example #intfact name="Integrating Factor"}
+
+Find the solution of the differential equation
+$$
+\frac{dy}{dx} - \frac{ 2x}{1 +x^2 }y=1
+$$
+and the initial condition $y(0) = 1$.
+
+The integrating factor $u(x)$ is
+$$
+\exp \left( - \int \frac{ 2x}{1 +x^2 } \, dx \right)=\exp \left( - \ln (1 +x^2)\right)=\frac{1}{\exp(\ln(1+x^2))} = \frac{1}{1 +x^2 }.
+$$
+
+Multiplying the equation by this factor
+$$
+\frac{ 1}{1 +x^2 } \frac{dy}{dx} - \frac{ 2x}{(1 +x^2)^2 }y=\frac{d}{d x } \left( \frac{ y}{1 +x^2 } \right) =\frac{ 1}{1 +x^2 }.
+$$
+Integrating
+$$
+\left( \frac{ y}{1 +x^2 } \right) = \int \frac{ 1}{1 +x^2 } \; dx= \tan^{-1} x+C.
+$$
+When $x=0, y=1$ so that
+$$
+C = 1, \;\; \mbox{and  } y(x)= (1 +x^2 )(\tan^{-1} x+1).
+$$
+:::
+
+
+## Linear Second Order ODEs
+
+A general second order linear differential equation has the form
+$$
+\frac{d^2 y}{dx^2} + p(x) \frac{dy}{dx} + q(x) y = r(x).
+$$
+where $p(x)$ and $q(x)$ are coefficient functions. When $p(x)$ and $q(x)$ are constants $p$ and $q$ then the equation is said to have constant coefficients
+$$
+\frac{d^2 y}{dx^2} +  p\frac{dy}{dx} + q y = r(x).
+$$
+When $r(x)=0$, the equation is said to be homogeneous
+$$
+\frac{d^2 y}{dx^2} + p(x) \frac{dy}{dx} + q(x) y = 0.
+$$
+
+We will only study equations with constant coefficients here, and begin with the homogeneous case since this is used in the solution of the inhomogeneous case.
+
+### Homogeneous equation with constant coefficients
+
+The standard form is
+$$
+\frac{d^2 y}{dx^2} + p \frac{dy}{dx} + q  y = 0,
+$$
+where $p$ and $q$ are constants. Consider $y=e^{mx}$ as a possible solution. Substitution yields
+$$
+\left(m^2+ pm + q \right)e^{mx}=0, \;\;  \implies \;\; \left(m^2+ pm +
+q \right)=0 \text{ (since $e^{mx}$ is never zero)},
+$$
+which is called the *auxiliary equation* or *characteristic equation*.
+
+The two roots $m_1, m_2$ are are given by the quadratic formula
+$$
+m_1, m_2= \frac{ -p \pm \sqrt{p^2- 4q} }{2}.
+$$
+
+There are three possible cases.
+
+**Distinct real roots when $(p^2- 4q)>0$.** In this case, we get the two linearly independent solutions
+$$
+y_1= e^{m_1 x}, \;\; y_2= e^{m_2 x}
+$$
+and the general solution is
+$$
+y(x)= C_1 e^{m_1 x} +C_2  e^{m_2 x}.
+$$
+
+**Distinct complex roots when $(p^2- 4q)<0$.** In this case,
+$$
+m_1=a+ib=\frac{ -p + i\sqrt{|p^2- 4q}| }{2}; \;\; m_2=a-ib=\frac{
+-p - i\sqrt{|p^2- 4q}| }{2}
+$$
+we get the two linearly independent solutions
+$$
+y_1= e^{(a+ib) x}=e^{a x}( \cos(bx) +i \sin(bx)) , \;\; y_2= e^{(a-ib) x}=e^{a x}( \cos(bx) -i \sin(bx)) , \;\;
+$$
+and the general solution is
+$$
+y(x)=e^{a x}\left[  C_1( \cos(bx) +i \sin(bx))+ C_2( \cos(bx) -i
+\sin(bx)) \right]=e^{ax}\left(  c_1 \cos(bx) +c_2 \sin(bx) \right)
+$$
+where $c_1=C_1+C_2; \;\; c_2=i(C_1-C_2)$.
+
+**Equal real roots when $(p^2- 4q)=0$.** In this case ($m_1=m_2=m=-p/2$), we get the two linearly independent solutions
+$$
+y_1= e^{m x}, \;\; y_2= x e^{m x}
+$$
+and the general solution is
+$$
+y(x)= C_1 e^{m x} +C_2 x e^{m x}
+$$
+
+Given sufficient information, we can fix the constants in the general solution to obtain a particular solution. There are two situations: having the values of $y$ and $y'$ at a particular value of $x$, or having the value of $y$ at different values of $x$.
+
+**Initial-value  problems.** This consists of finding a solution of $y$ that satisfies initial conditions of the form
+$$
+y(a)=A, \;\; y'(a)=B,
+$$
+where $A$ and $B$ are given constants.
+
+**Boundary-value problems.** This consists of finding a solution of $y$ that satisfies boundary conditions of the form
+$$
+y(a)=A, \;\; y(b)=B,
+$$
+where $A$ and $B$ are given constants.
+
+::: {.example #initval name="Initial Conditions"}
+Solve the initial-value problem:
+$$
+y''+ y=0 \;;\; y(0)=2 \;;\; y'(0)=3
+$$
+The auxiliary equation is ,
+$$
+m^2+1=0
+$$
+whose roots are $m_1=i, m_2=-i$. The general solution is
+$$
+y(x)=c_1 \cos(x) + c_2 \sin(x)
+$$
+$$
+y'(x)= -c_1 \sin(x) + c_2 \cos(x)
+$$
+This yields
+$$
+y(0)=c_1=2, \;\;  y'(0)=c_2=3.
+$$
+Therefore, the  solution of the initial value problem is
+$$
+y(x)=2 \cos(x) +3 \sin(x).
+$$
+:::
+
+
+### Inhomogeneous equation with constant coefficients
+
+The standard form is
+$$
+\frac{d^2 y}{dx^2} + p \frac{dy}{dx} + q  y = r(x),
+$$
+where $r(x) \ne 0$ and $p$ and $q$ are constants.
+
+**The First step** is to solve the equivalent homogeneous problem,
+the so-called *Complementary Equation*,
+$$
+\frac{d^2 y}{dx^2} + p \frac{dy}{dx} + q  y = 0,
+$$
+obtained by setting $r(x)=0$. Since this equation is linear and homogeneous, if we find two independent solutions, $y_1(x)$
+and $y_2(x)$, the *Complementary Function* is
+$$
+y_c = C_1 y_1+ C_2 y_2.
+$$
+
+
+**The Second step** is to find a *Particular Integral*, $y_p$. This is basically a matter of trial and error, but the following guidelines are helpful.
+
+1. If $r(x)$ is a polynomial of degree $m$, try
+    $$
+    y = a_n x^m + a_{n-1} x^{m-1} + \cdots +a_0
+    $$
+    and substitute in to the ODE. Equate the powers of $x$ in the
+    result with $r(x)$ to determine the coefficients. (This is
+    sometimes called the *method of undetermined coefficients*.)
+
+2. If $r(x)$ contains $h e^{\lambda x}$, try for the P.I.
+    $$
+    y= a e^{\lambda x}.
+    $$
+    Again substitute into the ODE and equate both sides to determine
+    $a$.
+
+3. If $r(x) = C \cos(\lambda x) + D \sin(\lambda x)$, try $y = a\cos(\lambda x) + b\sin (\lambda x)$, substitute in and equate coefficients of $\cos \lambda x$ and $\sin(\lambda x)$ to determine $a$ and $b$.
+
+4. If $r(x)$ is any combination of the above, find P.I.'s for each piece separately, and add to find the full P.I.
+
+5. If $r(x) = h e^{\lambda x}$ and $e^{\lambda x}$ happens to be a part of the C.F., try $a x e^{\lambda x}$ instead of $a e^{\lambda x}$.
+    If $r(x) = he^{\lambda x}$ is a double root of the homogeneous problem, try $a x^2 e^{\lambda x}$.
+    Similarly,  if $r(x)= \exp(px) [C \cos(qx) + D \sin(qx)]$ happens to be part of the C.F., try $y = x e^{px} (a \cos(qx) + b \sin(qx))$ for the P.I.
+
+
+**The third step.** The general solution of the inhomogeneous equation is written as
+$$
+y(x)=y_p +y_c
+$$
+Since the complementary function has two arbitrary constants if the equation is of second order, this general solution has the correct number of arbitrary constants.
+
+::: {.example #inhom name="Inhomogeneous equations"}
+
+1. Solve
+    $$
+    y''+ 4 y= e^{3x}.
+    $$
+    The auxiliary equation is
+    $$
+    m^2+4=0,
+    $$
+    whose roots are $m_1=2i, m_2=-2i$. The solution of the complementary equation is
+    $$
+    y_c=c_1 \cos(2x) + c_2 \sin(2x).
+    $$
+    For a particular integral (solution), we try $y_p= a e^{3x}$ (the method of undetermined coefficients)
+    $$
+    9 a e^{3x} + 4 a e^{3x} = e^{3 x}, \;\; \to \;\; a =1/13,
+    $$
+    leading to the general solution
+    $$
+    y=y_p+ y_c= \frac{1}{13} e^{3 x} + c_1 \cos(2x) + c_2 \sin(2x).
+    $$
+
+1. Solve
+$$
+y''+  y= \sin(x).
+$$
+The auxiliary equation is
+$$
+m^2+1=0,
+$$
+whose roots are $m_1=i, m_2=-i$. The solution of the complementary
+equation is
+$$
+y_c=c_1 \cos(x) + c_2 \sin(x).
+$$
+For a particular integral (solution), we try
+$$
+y_p=x( a \cos(x) + b \sin(x)).
+$$
+Then
+$$\
+y_p'= a \cos(x) + b \sin(x) + x( -a \sin(x) + b \cos(x))
+$$
+$$
+y_p''= -2a \sin(x) + 2b \cos(x)  -a x \cos(x) - b x \sin(x)
+$$
+Substitution in the equation gives
+$$
+\left( -2a \sin(x) + 2b \cos(x)  -a x \cos(x) - b x \sin(x) \right) +
+\left( a x \cos(x) + b x \sin(x) \right)= \sin(x),
+$$
+$$
+-2a \sin(x) + 2b \cos(x)  = \sin(x); \;\; \to \;\; a= -1/2; b=0; \;\;
+y_p= -\frac{x}{2} \cos(x).
+$$
+The general solution is
+$$
+y=y_p+ y_c=  c_1 \cos(x) + c_2 \sin(x)  -\frac{x}{2} \cos(x).
+$$
+
+:::

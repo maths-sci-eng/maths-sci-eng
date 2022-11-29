@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 14 Series | Mathematics for Scientists and Engineers</title>
+  <title>Chapter 17 Differential Equations | Mathematics for Scientists and Engineers</title>
   <meta name="description" content="Mathematics Lecture Notes for UoE Penryn Science and Engineering Disciplines." />
   <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 14 Series | Mathematics for Scientists and Engineers" />
+  <meta property="og:title" content="Chapter 17 Differential Equations | Mathematics for Scientists and Engineers" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="Mathematics Lecture Notes for UoE Penryn Science and Engineering Disciplines." />
   <meta name="github-repo" content="maths-sci-eng/maths-sci-eng.github.io" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 14 Series | Mathematics for Scientists and Engineers" />
+  <meta name="twitter:title" content="Chapter 17 Differential Equations | Mathematics for Scientists and Engineers" />
   
   <meta name="twitter:description" content="Mathematics Lecture Notes for UoE Penryn Science and Engineering Disciplines." />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="sequences.html"/>
-<link rel="next" href="integration.html"/>
+<link rel="prev" href="further-integration-techniques.html"/>
+<link rel="next" href="probability-fundamentals.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -308,331 +308,382 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="series" class="section level1 hasAnchor" number="14">
-<h1><span class="header-section-number">Chapter 14</span> Series<a href="series.html#series" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>A <em>series</em> is the sum of the terms of a sequence.</p>
-<div id="sigma-notation" class="section level2 hasAnchor" number="14.1">
-<h2><span class="header-section-number">14.1</span> Sigma Notation<a href="series.html#sigma-notation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Given a sequence <span class="math inline">\(a_1,a_2,a_3,\dotsc\)</span> the sum of the first <span class="math inline">\(n\)</span> terms is written
+<div id="differential-equations" class="section level1 hasAnchor" number="17">
+<h1><span class="header-section-number">Chapter 17</span> Differential Equations<a href="differential-equations.html#differential-equations" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>A <em>differential equation</em> (DE) is an equation containing an unknown function and one or more of its derivatives. Here we stick to Ordinary Differential Equations (ODEs) which are DEs of only one independent variable<a href="#fn14" class="footnote-ref" id="fnref14"><sup>14</sup></a>.</p>
+<p>Here are some classic examples:</p>
+<ul>
+<li><p>Falling under constant gravity
 <span class="math display">\[
-\sum_{k=1}^{n}a_k=a_1+a_2+\dotsb+a_n
+m \frac{d^2h}{dt^2} (t) = -mg
+\]</span></p></li>
+<li><p>Newton’s Law of Cooling
+<span class="math display">\[
+\frac{dT_{in}}{dt} = c (T_{out} - T_{in})
+\]</span></p></li>
+<li><p>Cash in the bank (with interest rate <span class="math inline">\(r\)</span>)
+<span class="math display">\[
+\frac{dc}{dt} = r c
+\]</span></p></li>
+<li><p>Mass on the end of a spring (Newton’s law + Hooke’s law)
+<span class="math display">\[
+m \frac{d^2 x}{dt^2} = -k x
+\]</span></p></li>
+</ul>
+<p>Many physical laws are formulated in terms of differential equations: we know how the rate of change of some quantity is related to the value of that quantity, then to find the function that describes the system, we need to solve the differential equation.</p>
+<p>We classify differential equations according to their structure and corresponding solution methods. It is useful to first identify the class so we can decide which solution method to apply. Here are some basic classes:</p>
+<ul>
+<li>The <strong>order</strong> of a differential equation is the highest order derivative that occurs in the equation.</li>
+<li>A <strong>linear ordinary differential equation</strong> of order <span class="math inline">\(n\)</span> may be written as:
+<span class="math display">\[
+p_0(x) \frac{d^n y}{d x^n} +p_1(x) \frac{d^{n-1} y}{d x^{n-1}}
++p_2(x) \frac{d^{n-2} y}{d x^{n-2}}+\ldots + p_n(x) y(x)=r(x);
 \]</span>
-(read as “the sum of <span class="math inline">\(a_k\)</span> from <span class="math inline">\(k=1\)</span> to <span class="math inline">\(n\)</span>”). Such a sum is called a <em>series</em>.</p>
-<p>Note that the summation index <span class="math inline">\(k\)</span> is a <em>dummy index</em> — we can happily replace it with another label. We can also shift the starting value of the index, that is, we can <em>reindex</em> the series; this may be useful to give a simpler expression for the series. For example, we can equivalently write the above series as
+<span class="math inline">\(y\)</span> is the dependent variable, <span class="math inline">\(x\)</span> is the independent variable.</li>
+<li>A <strong>nonlinear differential equation</strong>: An equation that cannot be put in the above form.</li>
+<li>A <strong>homogeneous</strong> differential equation: <span class="math inline">\(r(x)=0\)</span>.</li>
+<li>An <strong>inhomogeneous</strong> differential equation: <span class="math inline">\(r(x) \ne 0.\)</span></li>
+</ul>
+<p>What is the solution of an ODE?</p>
+<p><strong>General solution</strong>: the general solution of an <span class="math inline">\(n^\text{th}\)</span> order ODE contains <span class="math inline">\(n\)</span> arbitrary constants (a solution effectively needs us to integrate <span class="math inline">\(n\)</span> times).</p>
+<p><strong>Particular solution</strong>: A particular solution is obtained from a general solution by assigning particular values of the arbitrary constants. If <span class="math inline">\(n\)</span> <em>boundary conditions</em> are specified, the <span class="math inline">\(n\)</span> arbitrary constants can be determined.</p>
+<div id="linear-or-nonlinear-odes" class="section level2 hasAnchor" number="17.1">
+<h2><span class="header-section-number">17.1</span> Linear or Nonlinear ODEs<a href="differential-equations.html#linear-or-nonlinear-odes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Let’s take a look at a couple of examples.</p>
+<p>The differential equation
+<span class="math display">\[
+\frac{ d^2 y}{d x^2} +4 x \frac{ d y}{d x}+ 2y= \cos(x)
+\]</span>
+is (i) linear, (ii) second order and (iii) inhomogeneous.</p>
+<p>Linearity is determined solely by the way that the dependent variable <span class="math inline">\(y\)</span> and its derivative occur in the equation.</p>
+<p>The differential equation
+<span class="math display">\[
+\frac{ d^2 y}{d x^2} + \sin(y) = 0
+\]</span>
+is second order and nonlinear because of the term <span class="math inline">\(\sin(y)\)</span>.</p>
+</div>
+<div id="separable-first-order-odes" class="section level2 hasAnchor" number="17.2">
+<h2><span class="header-section-number">17.2</span> Separable First Order ODEs<a href="differential-equations.html#separable-first-order-odes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>This is a key approach to solving differential equations. A separable
+differential equation takes the form:
+<span class="math display">\[
+\frac{dy}{dx} = \frac{f(x)}{g(y)}, \;\; \mbox{or} \;\; g(y)\; dy =  f(x)
+\, dx.
+\]</span>
+The general solution of such separable ODEs are obtained by integration:
+<span class="math display">\[
+\int {g(y)}\, dy  = \int f(x) \, dx.
+\]</span>
+The constant of integration gives the one arbitrary constant required for the general solution. If a condition is specified, use it to determine the value of the constant to get the particular solution.</p>
+<div class="example">
+<p><span id="exm:separable" class="example"><strong>Example 17.1  (Separable First Order ODEs) </strong></span>Solve the differential equation
+<span class="math display">\[
+\frac{dy}{dx} = \frac{1-y^2}{y(1-x)}
+\]</span>
+Separating the terms <span class="math inline">\(x\)</span>, <span class="math inline">\(dx\)</span> and <span class="math inline">\(y\)</span>, <span class="math inline">\(dy\)</span> gives
+<span class="math display">\[
+\frac{y}{1-y^2} dy = \frac{1}{1-x} dx
+\]</span>
+so that
+<span class="math display">\[
+\int \frac{ y \; dy}{(1-y^2)}= \int \frac{dx}{(1-x)} \mbox{ or } \int - \frac{1}{2}\frac{d(1-y^2)}{1-y^2}= -\int \frac{d(1-x)}{(1-x)}
+\]</span>
+Integrating the above equation, we obtain an equation defining <span class="math inline">\(y\)</span> as an implicit function of <span class="math inline">\(x\)</span>:
+<span class="math display">\[
+\ln |1-y^2|= 2 \ln |1-x| -C,
+\]</span>
+i.e.
+<span class="math display">\[
+\ln \frac{|1-x|^2}{|1-y^2|}= C, \;\;
+\frac{|1-x|^2}{|1-y^2|}=e^C=k^2, \;\; k^2 \ne 0
+\]</span>
+Clearing the fractions and eliminating the absolute values gives:
+<span class="math display">\[
+(1-x)^2 = \lambda  (1-y^2),  \;\; \lambda= \pm k^2 \ne 0; \;\;
+\frac{(x-1)^2}{\lambda}+y^2=1
+\]</span>
+where <span class="math inline">\(\lambda\)</span> takes on any real value, except for <span class="math inline">\(0\)</span>. If <span class="math inline">\(\lambda &gt; 0\)</span>, the solution curves are all ellipses; If <span class="math inline">\(\lambda &lt; 0\)</span>, the solution curves are all hyperbolas.</p>
+<p>For example, the particular solution passing through the point <span class="math inline">\((x=0, y=0)\)</span>, we then have <span class="math inline">\(\lambda=1\)</span> giving
+<span class="math display">\[
+(x-1)^2+y^2=1.
+\]</span></p>
+</div>
+</div>
+<div id="linear-first-order-odes" class="section level2 hasAnchor" number="17.3">
+<h2><span class="header-section-number">17.3</span> Linear first order ODEs<a href="differential-equations.html#linear-first-order-odes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Linear first order inhomogeneous ODEs can be written in the form
+<span class="math display">\[
+\frac{dy}{dx} + p(x) y = r(x).
+\]</span>
+To solve these equations we use the <strong>integrating factor</strong> method. We multiply the ODE by the integrating factor
+<span class="math display">\[
+u (x) = \exp \left(\int p \, dx\right).
+\]</span>
+Then
 <span class="math display">\[\begin{align*}
-\sum_{j=1}^{n}a_j,&amp;&amp;\sum_{k=0}^{n-1}a_{k+1},&amp;&amp;\sum_{p=100}^{n+99}a_{p-99},
-\end{align*}\]</span></p>
-<p>since these all sum the same values from the sequence.</p>
-<p>We are quite often interested in summing the terms of a given sequence. The sum of the first <span class="math inline">\(n\)</span> terms of an arithmetic sequence is:
+\frac{d}{dx}( u(x) y(x) ) &amp; = \frac{du}{dx} y(x) + u(x) \frac{dy}{dx}\\
+&amp; = p(x) u(x) y(x) + u(x) \left(r(x) - p(x) y(x) \right)\\
+&amp;= u(x) r(x).
+\end{align*}\]</span>
+It follows that
 <span class="math display">\[
-\sum_{k=1}^{n}a_k=\frac{n}{2}\left(2a+(n-1)d\right)
-\]</span>
-and the sum of the first <span class="math inline">\(n\)</span> terms is:
+u(x)y(x) = \int u(x) r(x) \, dx +C\,.
+\]</span></p>
+<p>This means that
 <span class="math display">\[
-\sum_{k=1}^{n}a_k=\frac{a(1-r^n)}{1-r}
+y(x) = \left[\int \left( e^{\int p(x) \, dx} \right) r(x) \, dx
++C \; \right] e^{-\int p(x) \, dx}.
 \]</span>
-for <span class="math inline">\(r\neq1\)</span>, and
+is the general solution of the linear first order inhomogeneous ODE
 <span class="math display">\[
-\sum_{k=1}^{n}a_k=na
+\frac{dy}{dx} + p(x) y = r(x).
+\]</span></p>
+<div class="example">
+<p><span id="exm:intfact" class="example"><strong>Example 17.2  (Integrating Factor) </strong></span>Find the solution of the differential equation
+<span class="math display">\[
+\frac{dy}{dx} - \frac{ 2x}{1 +x^2 }y=1
 \]</span>
-for <span class="math inline">\(r=1\)</span>.</p>
+and the initial condition <span class="math inline">\(y(0) = 1\)</span>.</p>
+<p>The integrating factor <span class="math inline">\(u(x)\)</span> is
+<span class="math display">\[
+\exp \left( - \int \frac{ 2x}{1 +x^2 } \, dx \right)=\exp \left( - \ln (1 +x^2)\right)=\frac{1}{\exp(\ln(1+x^2))} = \frac{1}{1 +x^2 }.
+\]</span></p>
+<p>Multiplying the equation by this factor
+<span class="math display">\[
+\frac{ 1}{1 +x^2 } \frac{dy}{dx} - \frac{ 2x}{(1 +x^2)^2 }y=\frac{d}{d x } \left( \frac{ y}{1 +x^2 } \right) =\frac{ 1}{1 +x^2 }.
+\]</span>
+Integrating
+<span class="math display">\[
+\left( \frac{ y}{1 +x^2 } \right) = \int \frac{ 1}{1 +x^2 } \; dx= \tan^{-1} x+C.
+\]</span>
+When <span class="math inline">\(x=0, y=1\)</span> so that
+<span class="math display">\[
+C = 1, \;\; \mbox{and  } y(x)= (1 +x^2 )(\tan^{-1} x+1).
+\]</span></p>
 </div>
-<div id="infinite-series" class="section level2 hasAnchor" number="14.2">
-<h2><span class="header-section-number">14.2</span> Infinite Series<a href="series.html#infinite-series" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Consider the sequence defined by <span class="math inline">\(a_n=\dfrac{1}{2^n}\)</span>. What is the sum of all the terms of this sequence? That is, the sum
-<span class="math display">\[
-\frac{1}{2}+\frac{1}{2^2}+\frac{1}{2^3}+\frac{1}{2^4}+\dotsb=\frac{1}{2}+\frac{1}{4}+\frac{1}{8}+\frac{1}{16}+\dotsb
-\]</span>
-We can view the terms of the sequence geometrically as fractions of a square with total area one.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:geomsq"></span>
-<img src="figures/geomseriessq.png" alt="A square that has been repeatedly divided in half." width="50%" />
-<p class="caption">
-Figure 14.1: The series <span class="math inline">\(\sum_{n=1}^\infty\dfrac{1}{2^n}\)</span> can be viewed as summing up parts of a square with total area one.
-</p>
 </div>
-<p>We are effectively summing up parts of the square, whereby we keep adding half of what is left. Since after an “infinite number” of terms we will have included all parts of the square, it looks like
+<div id="linear-second-order-odes" class="section level2 hasAnchor" number="17.4">
+<h2><span class="header-section-number">17.4</span> Linear Second Order ODEs<a href="differential-equations.html#linear-second-order-odes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>A general second order linear differential equation has the form
 <span class="math display">\[
-\frac{1}{2}+\frac{1}{2^2}+\frac{1}{2^3}+\frac{1}{2^4}+\dotsb=1.
-\]</span></p>
-<p>This example is a <em>geometric series</em>, which is a sum of a <em>geometric sequence</em>. Here we have first term <span class="math inline">\(a=\frac{1}{2}\)</span> and common ratio <span class="math inline">\(r=\frac{1}{2}\)</span>. The sum of the first <span class="math inline">\(n\)</span> terms of a geometric series is (for <span class="math inline">\(r\neq1\)</span>):
-<span class="math display">\[
-S_n=\sum_{k=1}^{n}ar^{k-1}=\frac{a(1-r^n)}{1-r}
+\frac{d^2 y}{dx^2} + p(x) \frac{dy}{dx} + q(x) y = r(x).
 \]</span>
-so we have
+where <span class="math inline">\(p(x)\)</span> and <span class="math inline">\(q(x)\)</span> are coefficient functions. When <span class="math inline">\(p(x)\)</span> and <span class="math inline">\(q(x)\)</span> are constants <span class="math inline">\(p\)</span> and <span class="math inline">\(q\)</span> then the equation is said to have constant coefficients
 <span class="math display">\[
-S_n=\frac{\dfrac{1}{2}\left(1-\dfrac{1}{2^n}\right)}{1-\dfrac{1}{2}}=\left(1-\dfrac{1}{2^n}\right).
+\frac{d^2 y}{dx^2} +  p\frac{dy}{dx} + q y = r(x).
+\]</span>
+When <span class="math inline">\(r(x)=0\)</span>, the equation is said to be homogeneous
+<span class="math display">\[
+\frac{d^2 y}{dx^2} + p(x) \frac{dy}{dx} + q(x) y = 0.
 \]</span></p>
-<p>The sum of the first <span class="math inline">\(n\)</span> terms of a series is called the <em><span class="math inline">\(n^\text{th}\)</span> partial sum</em> of the series. We define the sum of an infinite series to be the limit of the partial sums. In this example we have</p>
-<p><span class="math display">\[
-\lim\limits_{n\to\infty}S_n=\lim\limits_{n\to\infty}\left(1-\dfrac{1}{2^n}\right)=1.
+<p>We will only study equations with constant coefficients here, and begin with the homogeneous case since this is used in the solution of the inhomogeneous case.</p>
+<div id="homogeneous-equation-with-constant-coefficients" class="section level3 hasAnchor" number="17.4.1">
+<h3><span class="header-section-number">17.4.1</span> Homogeneous equation with constant coefficients<a href="differential-equations.html#homogeneous-equation-with-constant-coefficients" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The standard form is
+<span class="math display">\[
+\frac{d^2 y}{dx^2} + p \frac{dy}{dx} + q  y = 0,
+\]</span>
+where <span class="math inline">\(p\)</span> and <span class="math inline">\(q\)</span> are constants. Consider <span class="math inline">\(y=e^{mx}\)</span> as a possible solution. Substitution yields
+<span class="math display">\[
+\left(m^2+ pm + q \right)e^{mx}=0, \;\;  \implies \;\; \left(m^2+ pm +
+q \right)=0 \text{ (since $e^{mx}$ is never zero)},
+\]</span>
+which is called the <em>auxiliary equation</em> or <em>characteristic equation</em>.</p>
+<p>The two roots <span class="math inline">\(m_1, m_2\)</span> are are given by the quadratic formula
+<span class="math display">\[
+m_1, m_2= \frac{ -p \pm \sqrt{p^2- 4q} }{2}.
 \]</span></p>
-<p>Infinite series can be convergent (sum to a finite value) or divergent (to <span class="math inline">\(+\infty\)</span> or <span class="math inline">\(-\infty\)</span>, or oscillate).</p>
+<p>There are three possible cases.</p>
+<p><strong>Distinct real roots when <span class="math inline">\((p^2- 4q)&gt;0\)</span>.</strong> In this case, we get the two linearly independent solutions
+<span class="math display">\[
+y_1= e^{m_1 x}, \;\; y_2= e^{m_2 x}
+\]</span>
+and the general solution is
+<span class="math display">\[
+y(x)= C_1 e^{m_1 x} +C_2  e^{m_2 x}.
+\]</span></p>
+<p><strong>Distinct complex roots when <span class="math inline">\((p^2- 4q)&lt;0\)</span>.</strong> In this case,
+<span class="math display">\[
+m_1=a+ib=\frac{ -p + i\sqrt{|p^2- 4q}| }{2}; \;\; m_2=a-ib=\frac{
+-p - i\sqrt{|p^2- 4q}| }{2}
+\]</span>
+we get the two linearly independent solutions
+<span class="math display">\[
+y_1= e^{(a+ib) x}=e^{a x}( \cos(bx) +i \sin(bx)) , \;\; y_2= e^{(a-ib) x}=e^{a x}( \cos(bx) -i \sin(bx)) , \;\;
+\]</span>
+and the general solution is
+<span class="math display">\[
+y(x)=e^{a x}\left[  C_1( \cos(bx) +i \sin(bx))+ C_2( \cos(bx) -i
+\sin(bx)) \right]=e^{ax}\left(  c_1 \cos(bx) +c_2 \sin(bx) \right)
+\]</span>
+where <span class="math inline">\(c_1=C_1+C_2; \;\; c_2=i(C_1-C_2)\)</span>.</p>
+<p><strong>Equal real roots when <span class="math inline">\((p^2- 4q)=0\)</span>.</strong> In this case (<span class="math inline">\(m_1=m_2=m=-p/2\)</span>), we get the two linearly independent solutions
+<span class="math display">\[
+y_1= e^{m x}, \;\; y_2= x e^{m x}
+\]</span>
+and the general solution is
+<span class="math display">\[
+y(x)= C_1 e^{m x} +C_2 x e^{m x}
+\]</span></p>
+<p>Given sufficient information, we can fix the constants in the general solution to obtain a particular solution. There are two situations: having the values of <span class="math inline">\(y\)</span> and <span class="math inline">\(y&#39;\)</span> at a particular value of <span class="math inline">\(x\)</span>, or having the value of <span class="math inline">\(y\)</span> at different values of <span class="math inline">\(x\)</span>.</p>
+<p><strong>Initial-value problems.</strong> This consists of finding a solution of <span class="math inline">\(y\)</span> that satisfies initial conditions of the form
+<span class="math display">\[
+y(a)=A, \;\; y&#39;(a)=B,
+\]</span>
+where <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are given constants.</p>
+<p><strong>Boundary-value problems.</strong> This consists of finding a solution of <span class="math inline">\(y\)</span> that satisfies boundary conditions of the form
+<span class="math display">\[
+y(a)=A, \;\; y(b)=B,
+\]</span>
+where <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are given constants.</p>
+<div class="example">
+<p><span id="exm:initval" class="example"><strong>Example 17.3  (Initial Conditions) </strong></span>Solve the initial-value problem:
+<span class="math display">\[
+y&#39;&#39;+ y=0 \;;\; y(0)=2 \;;\; y&#39;(0)=3
+\]</span>
+The auxiliary equation is ,
+<span class="math display">\[
+m^2+1=0
+\]</span>
+whose roots are <span class="math inline">\(m_1=i, m_2=-i\)</span>. The general solution is
+<span class="math display">\[
+y(x)=c_1 \cos(x) + c_2 \sin(x)
+\]</span>
+<span class="math display">\[
+y&#39;(x)= -c_1 \sin(x) + c_2 \cos(x)
+\]</span>
+This yields
+<span class="math display">\[
+y(0)=c_1=2, \;\;  y&#39;(0)=c_2=3.
+\]</span>
+Therefore, the solution of the initial value problem is
+<span class="math display">\[
+y(x)=2 \cos(x) +3 \sin(x).
+\]</span></p>
+</div>
+</div>
+<div id="inhomogeneous-equation-with-constant-coefficients" class="section level3 hasAnchor" number="17.4.2">
+<h3><span class="header-section-number">17.4.2</span> Inhomogeneous equation with constant coefficients<a href="differential-equations.html#inhomogeneous-equation-with-constant-coefficients" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The standard form is
+<span class="math display">\[
+\frac{d^2 y}{dx^2} + p \frac{dy}{dx} + q  y = r(x),
+\]</span>
+where <span class="math inline">\(r(x) \ne 0\)</span> and <span class="math inline">\(p\)</span> and <span class="math inline">\(q\)</span> are constants.</p>
+<p><strong>The First step</strong> is to solve the equivalent homogeneous problem,
+the so-called <em>Complementary Equation</em>,
+<span class="math display">\[
+\frac{d^2 y}{dx^2} + p \frac{dy}{dx} + q  y = 0,
+\]</span>
+obtained by setting <span class="math inline">\(r(x)=0\)</span>. Since this equation is linear and homogeneous, if we find two independent solutions, <span class="math inline">\(y_1(x)\)</span>
+and <span class="math inline">\(y_2(x)\)</span>, the <em>Complementary Function</em> is
+<span class="math display">\[
+y_c = C_1 y_1+ C_2 y_2.
+\]</span></p>
+<p><strong>The Second step</strong> is to find a <em>Particular Integral</em>, <span class="math inline">\(y_p\)</span>. This is basically a matter of trial and error, but the following guidelines are helpful.</p>
+<ol style="list-style-type: decimal">
+<li><p>If <span class="math inline">\(r(x)\)</span> is a polynomial of degree <span class="math inline">\(m\)</span>, try
+<span class="math display">\[
+y = a_n x^m + a_{n-1} x^{m-1} + \cdots +a_0
+\]</span>
+and substitute in to the ODE. Equate the powers of <span class="math inline">\(x\)</span> in the
+result with <span class="math inline">\(r(x)\)</span> to determine the coefficients. (This is
+sometimes called the <em>method of undetermined coefficients</em>.)</p></li>
+<li><p>If <span class="math inline">\(r(x)\)</span> contains <span class="math inline">\(h e^{\lambda x}\)</span>, try for the P.I.
+<span class="math display">\[
+y= a e^{\lambda x}.
+\]</span>
+Again substitute into the ODE and equate both sides to determine
+<span class="math inline">\(a\)</span>.</p></li>
+<li><p>If <span class="math inline">\(r(x) = C \cos(\lambda x) + D \sin(\lambda x)\)</span>, try <span class="math inline">\(y = a\cos(\lambda x) + b\sin (\lambda x)\)</span>, substitute in and equate coefficients of <span class="math inline">\(\cos \lambda x\)</span> and <span class="math inline">\(\sin(\lambda x)\)</span> to determine <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>.</p></li>
+<li><p>If <span class="math inline">\(r(x)\)</span> is any combination of the above, find P.I.’s for each piece separately, and add to find the full P.I.</p></li>
+<li><p>If <span class="math inline">\(r(x) = h e^{\lambda x}\)</span> and <span class="math inline">\(e^{\lambda x}\)</span> happens to be a part of the C.F., try <span class="math inline">\(a x e^{\lambda x}\)</span> instead of <span class="math inline">\(a e^{\lambda x}\)</span>.
+If <span class="math inline">\(r(x) = he^{\lambda x}\)</span> is a double root of the homogeneous problem, try <span class="math inline">\(a x^2 e^{\lambda x}\)</span>.
+Similarly, if <span class="math inline">\(r(x)= \exp(px) [C \cos(qx) + D \sin(qx)]\)</span> happens to be part of the C.F., try <span class="math inline">\(y = x e^{px} (a \cos(qx) + b \sin(qx))\)</span> for the P.I.</p></li>
+</ol>
+<p><strong>The third step.</strong> The general solution of the inhomogeneous equation is written as
+<span class="math display">\[
+y(x)=y_p +y_c
+\]</span>
+Since the complementary function has two arbitrary constants if the equation is of second order, this general solution has the correct number of arbitrary constants.</p>
 <div class="example">
 <ol style="list-style-type: decimal">
-<li><span id="exm:infiniteseries" class="example"><strong>Example 14.1  (Some infinite series) </strong></span></li>
-<li><p>Consider the sum of the first <span class="math inline">\(n\)</span> natural numbers:
+<li><span id="exm:inhom" class="example"><strong>Example 17.4  (Inhomogeneous equations) </strong></span></li>
+<li><p>Solve
 <span class="math display">\[
-T_n=\sum_{k=1}^{n}k=1+2+3+\dotsb +n
+y&#39;&#39;+ 4 y= e^{3x}.
 \]</span>
-This is an , i.e. the sum of an arithmetic sequence. The partial sum can be written as the general formula
+The auxiliary equation is
 <span class="math display">\[
-T_n=\frac{n(n+1)}{2}.
+m^2+4=0,
 \]</span>
-We have <span class="math inline">\(\displaystyle\sum_{k=1}^\infty k=\lim\limits_{n\to\infty} T_n=\infty\)</span>,
-and hence this infinite series diverges to infinity. Note that all arithmetic series diverge to <span class="math inline">\(\pm\infty\)</span> (why?).</p></li>
-<li><p>Let <span class="math inline">\(a_n=(-1)^n\)</span> and consider the infinite series <span class="math inline">\(\sum_{n=1}^{\infty}a_n\)</span>. This is a geometric series with <span class="math inline">\(a=-1\)</span> and <span class="math inline">\(r=-1\)</span>. We have the partial sums
-<span class="math display">\[\begin{align*}
-S_1&amp;=-1\\
-S_2&amp;=-1+1=0\\
-S_3&amp;=-1+1-1=-1
-\end{align*}\]</span>
-with general formula
+whose roots are <span class="math inline">\(m_1=2i, m_2=-2i\)</span>. The solution of the complementary equation is
 <span class="math display">\[
-S_n=
-\begin{cases}
--1&amp;\text{if $n$ is odd,}\\
-0&amp;\text{if $n$ is even.}
-\end{cases}
+y_c=c_1 \cos(2x) + c_2 \sin(2x).
 \]</span>
-Hence <span class="math inline">\(\lim\limits_{n\to\infty}S_n\)</span> does not exist (it oscillates) and the infinite series diverges.</p></li>
-<li><p>We have seen an example of a convergent geometric series <span class="math inline">\(\sum_{n=1}^\infty\frac{1}{2^n}=1\)</span>, a divergent geometric series <span class="math inline">\(\sum_{n=1}^{\infty}(-1)^n\)</span> which oscilates$. We can also have divergent series that diverge to <span class="math inline">\(\pm\infty\)</span>. We’ll now look at the general behaviour of a geometric series <span class="math inline">\(\sum_{k=1}^{\infty}ar^{k-1}\)</span>. Recall that the partial sums are given by
+For a particular integral (solution), we try <span class="math inline">\(y_p= a e^{3x}\)</span> (the method of undetermined coefficients)
 <span class="math display">\[
-S_n=\sum_{k=1}^{n}ar^{k-1}=\frac{a(1-r^n)}{1-r}
+9 a e^{3x} + 4 a e^{3x} = e^{3 x}, \;\; \to \;\; a =1/13,
 \]</span>
-and note that the only term that depends on <span class="math inline">\(n\)</span> is <span class="math inline">\(r^n\)</span>.</p>
-<p>If <span class="math inline">\(-1&lt; r &lt;1\)</span>, then <span class="math inline">\(r^n\to 0\)</span> as <span class="math inline">\(n\to infty\)</span> and the sum will be convergent with
+leading to the general solution
 <span class="math display">\[
-S=\lim\limits_{n\to\infty}S_n=\frac{a}{1-r}
-\]</span></p>
-<p>If <span class="math inline">\(r=1\)</span> then the partial sums become <span class="math inline">\(S_n=\sum_{k=1}^{n}a=na\)</span>, which clearly diverges to infinity.</p>
-<p>If <span class="math inline">\(r&gt;1\)</span>, then <span class="math inline">\(r^n\)</span>$ and hence <span class="math inline">\(S_n\to\infty\)</span>.</p>
-<p>If <span class="math inline">\(r=-1\)</span>, then we have a similar situation to the previous example with <span class="math inline">\(S_n\)</span> alternating between <span class="math inline">\(+a\)</span> and <span class="math inline">\(-a\)</span>. The series oscillates (a type of divergence).</p>
-<p>If <span class="math inline">\(r&lt;-1\)</span> then we alternately add and subtract numbers which are getting bigger and bigger in absolute value, so the series oscillates between increasingly larger positive and negative values.</p></li>
-<li><p>The
+y=y_p+ y_c= \frac{1}{13} e^{3 x} + c_1 \cos(2x) + c_2 \sin(2x).
+\]</span></p></li>
+<li><p>Solve
 <span class="math display">\[
-\sum_{n=1}^{\infty}\frac{1}{n}
+y&#39;&#39;+  y= \sin(x).
 \]</span>
-diverges to infinity, that is, <span class="math inline">\(\lim\limits_{n\to\infty}\sum_{k=1}^{n}\frac{1}{k}=\infty\)</span>. To see this we collect together some terms
+The auxiliary equation is
 <span class="math display">\[
-\sum_{n=1}^{\infty}\frac{1}{n}=1+\frac{1}{2}+\left( \frac{1}{3}+\frac{1}{4}\right) +\left( \frac{1}{5}+\frac{1}{6}+\frac{1}{7}+\frac{1}{8}\right) +\dotsb
+m^2+1=0,
 \]</span>
-and by comparing the terms in brackets with those in the following series, we can see that the harmonic series must be greater than this series
-<span class="math display">\[\begin{align*}
-&amp;1+\frac{1}{2}+\left( \frac{1}{4}+\frac{1}{4}\right) +\left( \frac{1}{8}+\frac{1}{8}+\frac{1}{8}+\frac{1}{8}\right) +\dotsb\\
-&amp;=1+\frac{1}{2}+\left( \frac{1}{2}\right) +\left(\frac{1}{2}\right) +\dotsb
-\end{align*}\]</span>
-Since the second series clearly diverges to infinity, so must the harmonic series. It actually diverges incredibly slowly — here are some of the partial sums:
+whose roots are <span class="math inline">\(m_1=i, m_2=-i\)</span>. The solution of the complementary
+equation is
 <span class="math display">\[
-S_{10}\approx 2.93,\qquad S_{20}\approx 3.40,\qquad S_{1000}\approx 7.49,\qquad S_{100000}\approx 12.09
+y_c=c_1 \cos(x) + c_2 \sin(x).
 \]</span>
-This example shows in particular that even if the terms are shrinking towards zero the series need not converge — the speed at which they shrink is also important. On the other hand, if the terms in a series <em>don’t</em> shrink to zero then the series will obviously diverge!</p></li>
-<li><p>Interestingly a series of the form
+For a particular integral (solution), we try
 <span class="math display">\[
-\sum_{n=1}^{\infty}\frac{1}{n^p}
+y_p=x( a \cos(x) + b \sin(x)).
 \]</span>
-where <span class="math inline">\(p\)</span> is a real constant diverges if <span class="math inline">\(p\leq 1\)</span> and converges if <span class="math inline">\(p&gt;1\)</span>, so the terms <span class="math inline">\(\frac{1}{n}\)</span> in the harmonic series are decreasing only just too slowly to give a convergent series.
-In particular it can be shown that
+Then
+<span class="math display">\[\
+y_p&#39;= a \cos(x) + b \sin(x) + x( -a \sin(x) + b \cos(x))
+\]</span>
 <span class="math display">\[
-\sum_{n=1}^{\infty}\frac{1}{n^2}=\frac{\pi}{6}
+y_p&#39;&#39;= -2a \sin(x) + 2b \cos(x)  -a x \cos(x) - b x \sin(x)
 \]</span>
-This curious result was found by Leonhard Euler in 1734: see <a href="https://en.wikipedia.org/wiki/Basel_problem">The Basel Problem</a>. It is not easy to solve with the techniques considered in these notes and is best tackled with more powerful mathematical tools, like <em>Fourier Series</em>.</p></li>
+Substitution in the equation gives
+<span class="math display">\[
+\left( -2a \sin(x) + 2b \cos(x)  -a x \cos(x) - b x \sin(x) \right) +
+\left( a x \cos(x) + b x \sin(x) \right)= \sin(x),
+\]</span>
+<span class="math display">\[
+-2a \sin(x) + 2b \cos(x)  = \sin(x); \;\; \to \;\; a= -1/2; b=0; \;\;
+y_p= -\frac{x}{2} \cos(x).
+\]</span>
+The general solution is
+<span class="math display">\[
+y=y_p+ y_c=  c_1 \cos(x) + c_2 \sin(x)  -\frac{x}{2} \cos(x).
+\]</span></p></li>
 </ol>
 </div>
-</div>
-<div id="power-series" class="section level2 hasAnchor" number="14.3">
-<h2><span class="header-section-number">14.3</span> Power Series<a href="series.html#power-series" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Let <span class="math inline">\(t\)</span> be a fixed real number. A <em>power series</em> is a series of the form
-<span class="math display">\[
-\sum_{n=0}^{\infty}a_n(x-t)^n
-\]</span>
-where <span class="math inline">\((a_n)_{n=0}^{\infty}\)</span> is a sequence and <span class="math inline">\(x\)</span> is a real number.
-Power series can be thought of as “polynomials with infinite degree”, but technically they are not polynomials, which must have finite degree.</p>
-<p>Consider the power series
-<span class="math display">\[
-\sum_{n=0}^{\infty}\frac{x^n}{n+1}=1+\frac{x}{2}+\frac{x^2}{3}+\frac{x^3}{4}+\dotsb
-\]</span>
-For <span class="math inline">\(x=-1\)</span> this gives the alternating harmonic series, which converges. For <span class="math inline">\(x=1\)</span> this gives the harmonic series, which diverges. So convergence of a power series can depend on the value of <span class="math inline">\(x\)</span>.</p>
-<p>The binomial series is another example of a power series
-<span class="math display">\[
-(1+x)^\alpha=1+\alpha x+\frac{\alpha(\alpha-1)}{2!}x^2+\frac{\alpha(\alpha-1)(\alpha-2)}{3!}x^3+\dotsb
-\]</span>
-which converges for any real value of <span class="math inline">\(\alpha\)</span> as long as <span class="math inline">\(|x|&lt;1\)</span>.</p>
-</div>
-<div id="taylor-series" class="section level2 hasAnchor" number="14.4">
-<h2><span class="header-section-number">14.4</span> Taylor Series<a href="series.html#taylor-series" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="linearisation" class="section level3 hasAnchor" number="14.4.1">
-<h3><span class="header-section-number">14.4.1</span> Linearisation<a href="series.html#linearisation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>It is often useful to approximate a complicated function by something that is easier to work with.</p>
-<p>The simplest way to do this at a differentiable point <span class="math inline">\(a\)</span> of a function <span class="math inline">\(f\)</span> is to approximate the values of the function <span class="math inline">\(f\)</span> near <span class="math inline">\(a\)</span> by the tangent line
-<span class="math display">\[
-y=f(a)+f&#39;(a)(x-a).
-\]</span>
-In this context, we call the tangent line the of <span class="math inline">\(f\)</span> at <span class="math inline">\(a\)</span>, and write it as the function
-<span class="math display">\[
-L_a(x)=f(a)+f&#39;(a)(x-a).
-\]</span></p>
-At values of <span class="math inline">\(x\)</span> sufficiently close to <span class="math inline">\(a\)</span>, <span class="math inline">\(L_a(x)\)</span> gives a good approximation to <span class="math inline">\(f(x)\)</span>. We can see this should be true since the derivative is obtained as a limit of the slope of secant lines passing through nearby points and since this limit converges, if we zoom in on the graph of <span class="math inline">\(f\)</span> at <span class="math inline">\((a,f(a))\)</span> it should look more and more like a straight line, i.e. it is approximately linear.
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:linearapprox"></span>
-<img src="figures/linearmontage.png" alt="Three figures showing progressive zooming in on the tangent line at $(a,f(a))$." width="100%" />
-<p class="caption">
-Figure 14.2: Zooming in on the tangent line at <span class="math inline">\((a,f(a))\)</span>.
-</p>
-</div>
-<p>More mathematically we have
-<span class="math display">\[
-\lim\limits_{x\to a}\frac{f(x)-L_a(x)}{(x-a)}=\lim\limits_{x\to a}\frac{f(x)-f(a)}{x-a}-f&#39;(a)=0
-\]</span>
-where the second equality uses the definition of the derivative.</p>
-<p>This says that as <span class="math inline">\(x\)</span> approaches <span class="math inline">\(a\)</span> not only does the difference <span class="math inline">\(f(x)-L_a(x)\)</span> become small, but it becomes small faster than <span class="math inline">\(x-a\)</span>.</p>
-<p>Whether or not the linearisation is a good enough approximation depends on the application, and in particular how wide a range of <span class="math inline">\(x\)</span> values we are interested in near the point.</p>
-<p>Next we look at a better (but necessarily more complicated) way of obtaining a local approximation to a differentiable function by using polynomials.</p>
-</div>
-<div id="taylor-polynomials" class="section level3 hasAnchor" number="14.4.2">
-<h3><span class="header-section-number">14.4.2</span> Taylor Polynomials<a href="series.html#taylor-polynomials" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Consider a general polynomial function
-<span class="math display">\[
-p(x)=a_0+a_1 x+\dotsb +a_n x^n.
-\]</span>
-The coefficients <span class="math inline">\(a_k\)</span> can be expressed in terms of the value of <span class="math inline">\(p\)</span> and its derivatives at <span class="math inline">\(0\)</span> as follows
-<span class="math display">\[\begin{align*}
-p(x)&amp;=a_0+a_1 x+\dotsb +a_n x^n &amp; p(0)&amp;=a_0\\
-p&#39;(x)&amp;=a_1+2a_2x+\dotsb +n a_n x^{n-1}&amp; p&#39;(0)&amp;=a_1\\
-p&#39;&#39;(x)&amp;=2a_2+6a_3 x+\dotsb +n(n-1)a_n x^{n-2}&amp;p&#39;&#39;(0)&amp;=2a_2
-\end{align*}\]</span>
-and in general
-<span class="math display">\[
-p^{(k)}(0)=k!a_k\qquad\text{or}\qquad a_k=\frac{p^{(k)}(0)}{k!}
-\]</span>
-for <span class="math inline">\(0\leq k \leq n\)</span>, with the definitions <span class="math inline">\(p^{(0)}=p\)</span> and <span class="math inline">\(0!=1\)</span>.</p>
-<p>We could perform a similar analysis (exercise) for a polynomial in <span class="math inline">\((x-a)\)</span>
-<span class="math display">\[
-p(x)=a_0+a_1(x-a)+\dotsb +a_n (x-a)^n
-\]</span>
-and arrive at
-<span class="math display">\[
-a_k=\frac{p^{(k)}(a)}{k!}.
-\]</span></p>
-<p>Suppose that <span class="math inline">\(f\)</span> is any function such that the derivatives <span class="math inline">\(f^{(1)}(a),\dotsc, f^{(n)}(a)\)</span> all exist. Then letting
-<span class="math display">\[
-a_k=\frac{f^{(k)}(a)}{k!}
-\]</span>
-we define the <em>Taylor Polynomial of degree <span class="math inline">\(n\)</span> for <span class="math inline">\(f\)</span> at <span class="math inline">\(a\)</span></em> as
-<span class="math display">\[
-P_{n,a}(x)=a_0+a_1(x-a)+\dotsb +a_n (x-a)^n.
-\]</span></p>
-<p>The Taylor Polynomial <span class="math inline">\(P_{n,a}\)</span> has been defined so that it has the same <span class="math inline">\(k^\text{th}\)</span> derivative as <span class="math inline">\(f\)</span> at <span class="math inline">\(a\)</span>:
-<span class="math display">\[
-P_{n,a}^{(k)}(a)=f^{(k)}(a)\qquad\text{for all }0\leq k\leq n
-\]</span>
-(Exercise: check this) and in fact is clearly the unique polynomial with degree <span class="math inline">\(\leq n\)</span> with this property. Also note that the first degree Taylor Polynomial <span class="math inline">\(P_{1,a}\)</span> is the same as the linearisation <span class="math inline">\(L_a\)</span>.</p>
-<p>We now want to show that a Taylor Polynomial can provide a good approximation to a function and in particular that the higher the degree of the polynomial the better the approximation.</p>
-<div class="example">
-<p><span id="exm:taylorpoly" class="example"><strong>Example 14.2  (Taylor Polynomial) </strong></span>We find the <span class="math inline">\(n^\text{th}\)</span> degree Taylor Polynomial of <span class="math inline">\(\sin\)</span> at <span class="math inline">\(0\)</span>. The first few derivatives at <span class="math inline">\(0\)</span> are:
-<span class="math display">\[\begin{align*}
-\sin(0)&amp;=0\\
-\sin^{(1)}(0)&amp;=\cos(0)=1\\
-\sin^{(2)}(0)&amp;=-\sin(0)=0\\
-\sin^{(3)}(0)&amp;=-\cos(0)=-1\\
-\sin^{(4)}(0)&amp;=\sin(0)=0
-\end{align*}\]</span>
-and we can see that higher order derivatives will cycle through <span class="math inline">\(0,1,0,-1\)</span>. The coefficients <span class="math inline">\(a_k=\dfrac{\sin^{(k)}(a)}{k!}\)</span> are therefore: <span class="math inline">\(0,1,0,-\frac{1}{3!},0,\frac{1}{5!},\dotsc\)</span>, so there are no even powers of <span class="math inline">\(x\)</span>. We can list just odd numbers by considering <span class="math inline">\(2n+1\)</span> for any natural number <span class="math inline">\(n\)</span>. Then the Taylor Polynomial <span class="math inline">\(P_{2n+1,0}\)</span> of degree <span class="math inline">\({2n+1}\)</span> for <span class="math inline">\(\sin\)</span> at <span class="math inline">\(0\)</span> is:
-<span class="math display">\[
-P_{2n+1,0}(x)=x-\frac{x^3}{3!}+\frac{x^5}{5!}-\frac{x^7}{7!}+\dotsc+(-1)^n\frac{x^{2n+1}}{(2n+1)!}
-\]</span></p>
-By plotting the first few Taylor polynomials of <span class="math inline">\(\sin\)</span> at <span class="math inline">\(0\)</span>, it appears that adding more terms provides a better approximation of <span class="math inline">\(\sin\)</span>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:taylorsin"></span>
-<iframe src="https://www.desmos.com/calculator/znq0rrfiqr" width="672" height="400px" data-external="1">
-</iframe>
-<p class="caption">
-Figure 14.3: First few Taylor polynomials of <span class="math inline">\(\sin(x)\)</span> at <span class="math inline">\(0\)</span>
-</p>
-</div>
-<p>As another example, consider the <span class="math inline">\(n^\text{th}\)</span> degree Taylor Polynomial of <span class="math inline">\(e^x\)</span> at <span class="math inline">\(0\)</span>:
-<span class="math display">\[
-P_{n,0}=1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+\dotsb+\frac{x^n}{n!}
-\]</span></p>
-<p>If we plot <span class="math inline">\(P_{n,0}\)</span> for the first few <span class="math inline">\(n\)</span> it does indeed appear that <span class="math inline">\(P_{n,0}(x)\)</span> is closer to <span class="math inline">\(e^x\)</span> at zero for higher values of <span class="math inline">\(n\)</span>.</p>
-</div>
-<p>We will now make this idea more precise.</p>
-<div class="theorem">
-<p><span id="thm:label" class="theorem"><strong>Theorem 14.1  (theorem name) </strong></span>Let <span class="math inline">\(P_{n,a}\)</span> be the Taylor polynomial of degree <span class="math inline">\(n\)</span> of a function <span class="math inline">\(f\)</span> at a point <span class="math inline">\(a\)</span>. Then
-<span class="math display">\[
-\lim\limits_{x\to a}\frac{f(x)-P_{n,a}(x)}{(x-a)^n}=0,
-\]</span>
-that is, <span class="math inline">\(P_{n,a}\)</span> is equal to <span class="math inline">\(f\)</span> up to order <span class="math inline">\(n\)</span> at <span class="math inline">\(a\)</span>. Moreover, <span class="math inline">\(P_{n,a}\)</span> the unique polynomial of degree <span class="math inline">\(n\)</span> with this property.</p>
-</div>
-<p>This says that <span class="math inline">\(P_{n,a}\)</span> is the unique degree <span class="math inline">\(n\)</span> polynomial that best approximates <span class="math inline">\(f\)</span> at <span class="math inline">\(a\)</span>, in the sense that as <span class="math inline">\(x\to a\)</span> the difference between <span class="math inline">\(f\)</span> and <span class="math inline">\(P_{n,a}\)</span> tends to zero relatively quickly (faster than <span class="math inline">\((x-a)^n\)</span>, which goes to zero faster for increasing values of <span class="math inline">\(n\)</span>). So, the higher the degree of the Taylor Polynomial the faster the values converge to the original function at the point <span class="math inline">\(a\)</span>.</p>
-</div>
-<div id="taylor-series-1" class="section level3 hasAnchor" number="14.4.3">
-<h3><span class="header-section-number">14.4.3</span> Taylor Series<a href="series.html#taylor-series-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>So far we have considered approximating functions by Taylor polynomials, that is, for a function <span class="math inline">\(f\)</span> we defined the <span class="math inline">\(n^\text{th}\)</span> degree Taylor polynomial
-<span class="math display">\[
-P_{n,a}(x)=\sum_{k=0}^{n}\frac{f^{(k)}(a)}{k!}(x-a)^k.
-\]</span></p>
-<p>We saw that taking higher degree Taylor polynomials can give better approximations of a function. Now, what if we let <span class="math inline">\(n\to\infty\)</span>? That is, if we consider the power series
-<span class="math display">\[
-\sum_{k=0}^{\infty}\frac{f^{(k)}(a)}{k!}(x-a)^k=\lim\limits_{n\to\infty}P_{n,a}(x).
-\]</span>
-We might expect that in the limit we in fact get
-<span class="math display">\[
-\displaystyle\sum_{k=0}^{\infty}\frac{f^{(k)}(a)}{k!}(x-a)^k=f(x).
-\]</span>
-Is this the case? The short answer is: not always, but it does for “everyday” functions at least on some interval around <span class="math inline">\(a\)</span> (such as trigonometric functions, hyperbolic functions, roots, exponentials and logarithms).</p>
-<p>We call a power series of the form
-<span class="math display">\[
-\sum_{k=0}^{\infty}\frac{f^{(k)}(a)}{k!}(x-a)^k
-\]</span>
-the <em>Taylor series for <span class="math inline">\(f\)</span> at <span class="math inline">\(a\)</span></em>. When a Taylor series is formulated at the point <span class="math inline">\(a=0\)</span>, it is often referred to as a <em>Maclaurin series</em>.</p>
-<p>A Taylor series is a type of power series. In the previous section we saw that a power series might only converge for certain values of <span class="math inline">\(x\)</span>. Generally, the Taylor series of a functino will either converge to the function for all values of <span class="math inline">\(x\)</span> or within some interval. Here we list some commonly used Taylor series derived at <span class="math inline">\(a=0\)</span>, which you should familiarise yourself with. The Validity column states the interval around <span class="math inline">\(0\)</span> for which the Taylor series is equal to the original function.</p>
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Series</th>
-<th>Validity</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><span class="math inline">\(\frac{1}{1-x}=1+x+x^2+x^3+\dotsb=\sum_{n=0}^{\infty}x^n\)</span></td>
-<td><span class="math inline">\(-1&lt; x &lt; 1\)</span></td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(e^x=1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+\dotsb = \sum_{n=0}^{\infty}\frac{x^n}{n!}\)</span></td>
-<td><span class="math inline">\(-\infty\leq x \leq \infty\)</span></td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(\cos(x)=1-\frac{x^2}{2!}+\frac{x^4}{4!}-\dotsb= \sum_{n=0}^{\infty}(-1)^n\frac{x^{2n}}{(2n)!}\)</span></td>
-<td><span class="math inline">\(-\infty\leq x \leq \infty\)</span></td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(\sin(x)=x-\frac{x^3}{3!}+\frac{x^5}{5!}-\dotsb=\sum_{n=0}^{\infty}(-1)^n\frac{x^{2n+1}}{(2n+1)!}\)</span></td>
-<td><span class="math inline">\(-\infty\leq x \leq \infty\)</span></td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(\ln(x+1)=x-\frac{x^2}{2!}+\frac{x^3}{3!}-\dotsb= \sum_{n=1}^{\infty}(-1)^{n+1}\frac{x^{n}}{n!}\)</span></td>
-<td><span class="math inline">\(-1&lt; x \leq 1\)</span></td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(\tan^{-1}(x)=x-\frac{x^3}{3}+\frac{x^5}{5}-\dotsb= \sum_{n=0}^{\infty}(-1)^n\frac{x^{2n+1}}{2n+1}\)</span></td>
-<td><span class="math inline">\(-1\leq x \leq 1\)</span></td>
-</tr>
-</tbody>
-</table>
 
 </div>
 </div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="14">
+<li id="fn14"><p>In contrast to <em>partial</em> differential equations (PDEs) which involve derivatives of multiple independent variables.<a href="differential-equations.html#fnref14" class="footnote-back">↩︎</a></p></li>
+</ol>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="sequences.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="integration.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="further-integration-techniques.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="probability-fundamentals.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -653,7 +704,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/maths-sci-eng/maths-sci-eng.github.io/edit/master/14-series.Rmd",
+"link": "https://github.com/maths-sci-eng/maths-sci-eng.github.io/edit/master/17-odes.Rmd",
 "text": "Edit"
 },
 "history": {
