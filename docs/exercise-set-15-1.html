@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 16 Further Integration Techniques | Mathematics for Scientists and Engineers</title>
+  <title>Exercise Set 15 | Mathematics for Scientists and Engineers</title>
   <meta name="description" content="Mathematics Lecture Notes for UoE Penryn Science and Engineering Disciplines." />
   <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 16 Further Integration Techniques | Mathematics for Scientists and Engineers" />
+  <meta property="og:title" content="Exercise Set 15 | Mathematics for Scientists and Engineers" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="Mathematics Lecture Notes for UoE Penryn Science and Engineering Disciplines." />
   <meta name="github-repo" content="maths-sci-eng/maths-sci-eng.github.io" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 16 Further Integration Techniques | Mathematics for Scientists and Engineers" />
+  <meta name="twitter:title" content="Exercise Set 15 | Mathematics for Scientists and Engineers" />
   
   <meta name="twitter:description" content="Mathematics Lecture Notes for UoE Penryn Science and Engineering Disciplines." />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="integration.html"/>
-<link rel="next" href="differential-equations.html"/>
+<link rel="prev" href="notation.html"/>
+<link rel="next" href="references.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -310,207 +310,145 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="further-integration-techniques" class="section level1 hasAnchor" number="16">
-<h1><span class="header-section-number">Chapter 16</span> Further Integration Techniques<a href="further-integration-techniques.html#further-integration-techniques" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="integrals-of-trigonometric-and-hyperbolic-functions" class="section level2 hasAnchor" number="16.1">
-<h2><span class="header-section-number">16.1</span> Integrals of trigonometric and hyperbolic functions<a href="further-integration-techniques.html#integrals-of-trigonometric-and-hyperbolic-functions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Here we make extensive use of trigonometric and hyperbolic identities to transform the integrand into a more manageable form.</p>
-<div class="example">
+<div id="exercise-set-15-1" class="section level1 unlisted unnumbered hasAnchor">
+<h1>Exercise Set 15<a href="exercise-set-15-1.html#exercise-set-15-1" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <ol style="list-style-type: decimal">
-<li><span id="exm:trig" class="example"><strong>Example 16.1  (Integrals using identities) </strong></span></li>
-<li><p>Evaluate the definite integral
-<span class="math display">\[\begin{align*}
-\int_0^{\pi} \sin^2(x)  dx &amp;=\int_0^{\pi} \frac{1}{2} \left( 1 - \cos(2x) \right)  dx\\
-&amp;= \frac{1}{2} \left[ x - \frac{1}{2}\sin(2x) \right]_0^{\pi}\\
-&amp;= \frac{\pi}{2}\\
-\end{align*}\]</span>
-where we have used <span class="math inline">\(\cos(2\theta) = 1 - 2 \sin^2(\theta)\)</span>.</p></li>
-<li><p>Evaluate the indefinite integral
-<span class="math display">\[\begin{align*}
-\int \sinh(3x)\cosh(3x) dx &amp;= \int \frac{1}{2}\sinh(6x) dx\\
-&amp;=\frac{1}{12}\cosh(6x) + C
-\end{align*}\]</span>
-where we have used <span class="math inline">\(\sinh(2x)=2\sinh(x)\cosh(x)\)</span>.</p></li>
-<li><p>Evaluate the indefinite integral
-<span class="math display">\[\begin{align*}
-\int  (\sin^2 (x))^2  dx &amp; = \int_0^{\pi} \frac{1}{4} \left( 1 - \cos(2x) \right)^2  dx \\
-&amp; =\int_0^{\pi} \frac{1}{4} \left( 1 - 2\cos(2x) +\cos^2(2x)
-\right)  dx \\
-&amp; =\int_0^{\pi} \frac{1}{4} \left[  1 - 2\cos(2x) +
-\frac{1}{2} \left( 1 - \cos(4x) \right) \right]  dx\\
-&amp; = \frac{1}{4} \left[ \frac{3}{2} x -\sin(2x) + \frac{1}{8}
-\sin(4x) \right]  +C
-\end{align*}\]</span>
-where we have used <span class="math inline">\(\cos(2\theta)=2\cos^2(\theta)-1\)</span>.</p></li>
-<li><p>Evaluate the indefinite integral
-<span class="math display">\[\begin{align*}
-\int  (\sin4x \cos 5x )  dx &amp; = \int \frac{1}{2} \left[ \sin (-x) +\sin 9x \right]  dx \\
-&amp; =\frac{1}{2} \left( \cos(x)  - \frac{1}{9} \cos 9x \right) +C
-\end{align*}\]</span>
-where we have used <span class="math inline">\(\sin(\theta)\cos(\phi)=\frac{1}{2}(\sin(\theta-\phi)+\sin(\theta+\phi))\)</span>.</p></li>
-<li><p>Evaluate the indefinite integral
-<span class="math display">\[\begin{equation*}
-\int \frac{\sqrt{9-x^2}}{x^2}  dx\\
-\end{equation*}\]</span>
-Making the substitution <span class="math inline">\(x=3\sin(\theta), \;\; -\frac{\pi}{2} \leq \theta \leq \frac{\pi}{2}\)</span>,
-<span class="math display">\[\begin{align*}
-\int \frac{\sqrt{9-x^2}}{x^2}  dx &amp; =\int  \frac{\sqrt{9-(3\sin(\theta))^2} }{(3\sin(\theta))^2} d(3\sin(\theta)) \\
-&amp; = \int  \frac{3\cos(\theta)  }{9\sin^2(\theta) }(3\cos(\theta)) d\theta\\
-&amp;= \int  \frac{\cos^2(\theta)  }{\sin^2(\theta) } d \theta \\
-&amp; =  \int  \frac{1- \sin^2(\theta)  }{\sin^2(\theta) } d \theta\\
-&amp; = \int \left(  \frac{1 }{\sin^2(\theta) } -1 \right) d \theta\\
-&amp; =  -\cot(\theta)-\theta+C.
-\end{align*}\]</span></p></li>
+<li>You throw five fair dice and count the number of sixes you get. Let
+<span class="math inline">\(X\)</span> be the number of sixes.
+Tabulate <span class="math inline">\(P(X=x)\)</span> for <span class="math inline">\(x=0, 1,\dots,5\)</span>.</li>
 </ol>
-</div>
-</div>
-<div id="integrals-of-rational-functions-using-partial-fractions" class="section level2 hasAnchor" number="16.2">
-<h2><span class="header-section-number">16.2</span> Integrals of rational functions using partial fractions<a href="further-integration-techniques.html#integrals-of-rational-functions-using-partial-fractions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Recall that a function of the form
-<span class="math display">\[f(x)=\frac{p(x)}{q(x)}\]</span>
-where <span class="math inline">\(p\)</span> and <span class="math inline">\(q\)</span> are polynomials is known as a <em>rational function</em>.</p>
-<p>If <span class="math inline">\(q(x)\)</span> is a polynomial of degree <span class="math inline">\(m\)</span> and <span class="math inline">\(p(x)\)</span> is a polynomial of degree <span class="math inline">\(n &lt; m\)</span> then we can often write a rational function as
-<span class="math display">\[
-\frac{p(x)}{q(x)}=\frac{c_1}{x-\alpha_1}+\dotsb + \frac{c_n}{x-\alpha_n}
-\]</span>
-where <span class="math inline">\(\alpha_i\)</span> are the distinct roots of <span class="math inline">\(q\)</span>. We can find the coefficients <span class="math inline">\(c_1\)</span> by multiplying through by <span class="math inline">\(q(x)\)</span> and equating coefficients of powers of <span class="math inline">\(x\)</span> to obtain a system of linear equations for the <span class="math inline">\(c_i\)</span>.</p>
-<p>We know that
-<span class="math display">\[
-\frac{d}{dx} \ln (x-\alpha) = \frac{1}{x-\alpha}
-\]</span>
-and by using this fact repeatedly, we can then integrate any rational function of this form — but the answer depends on the details (because <span class="math inline">\(\ln(z)\)</span> is only defined for positive <span class="math inline">\(z\)</span>).</p>
-<p>Other cases:</p>
-<ul>
-<li><p>If <span class="math inline">\(p\)</span> has degree greater than <span class="math inline">\(q\)</span>, then we can first apply polynomial long division to obtain
-<span class="math display">\[\frac{p(x)}{q(x)}=s(x)+\frac{r(x)}{q(x)}\]</span>
-where the degree of <span class="math inline">\(r\)</span> will be strictly less that the degree of <span class="math inline">\(q\)</span>, and we can then perform partial fractions on the remainder term <span class="math inline">\(\frac{r}{q}\)</span>.</p></li>
-<li><p>If <span class="math inline">\(q(x)\)</span> contains an irreducible quadratic factor — factors of the form <span class="math inline">\(x^2+bx+c\)</span> that cannot be factorised into a product of linear factors <span class="math inline">\((x-\alpha)(x-\beta)\)</span> with integer coefficients — then the numerator in the partial fractions will be a linear polynomial. For example,
-<span class="math display">\[\frac{x^2+1}{(x+2)(x-1)(x^2+x+1)}=\frac{c_1}{(x+2)}+\frac{c_2}{x-1}+\frac{bx+c}{x^2+x+1}.\]</span></p></li>
-<li><p>If <span class="math inline">\(q(x)\)</span> contains repeated roots — factors of the form <span class="math inline">\((x-\alpha)^t\)</span> — then the first <span class="math inline">\(t\)</span> powers of <span class="math inline">\((x-\alpha)\)</span> will appear as denominators (although possibly with a zero numerator). For example,
-<span class="math display">\[\frac{p(x)}{(x-\alpha)^t}=\frac{c_1}{x-\alpha}+\frac{c_2}{(x-\alpha)^2}\dotsb + \frac{c_t}{(x-\alpha)^t}.\]</span></p></li>
-</ul>
-<div class="example">
+<p>&lt;!–&gt;
+Answers:</p>
+<pre><code>Here $X$ is a binomial random variable with $n = 5$ and $p = \frac{1}{6}$. Hence we have p.m.f.
+$$
+P(X = x) = {n \choose x}p^x(1-p)^{n - x} \qquad \mbox{for}~x = 0, 1, 2, \dots, 5.
+$$
+This gives (to 3 s.f.):
+|$X$|$P(X = x)$|
+|---|---|
+|0|0.402|
+|1|0.402|
+|2|0.161|
+|3|0.0322|
+|4|0.00322|
+|5|0.000129|</code></pre>
+<p>&lt;–&gt;</p>
 <ol style="list-style-type: decimal">
-<li><span id="exm:partfrac" class="example"><strong>Example 16.2  (Integration by partial fractions) </strong></span></li>
-<li><p>Evaluate the indefinite integral
-<span class="math display">\[
-I=\int  \frac{2x^2 -x + 4} { x(x^2+4) } dx
-\]</span>
-we have
-<span class="math display">\[
-\left[ \frac{2x^2 -x + 4} { x(x^2+4)}=\frac{A} { x}+\frac{Bx+C} {(x^2+4)}, A=1, B=1, C=-1 \right] \\
-\]</span>
-then
-<span class="math display">\[\begin{align*}
-I= \int \left[ \frac{1} {x}  + \frac{x-1} {x^2 +4 } \right] \\
-&amp; =\int  \frac{dx} {x} +  \int  \frac{x} {x^2 +4 } dx -\int  \frac{1} {x^2 +4 } dx \\
-&amp; = \ln |x| +\frac{1}{2} \ln (x^2 +4) - \frac{1}{2} \tan^{-1}(x/2)+C
-\end{align*}\]</span></p></li>
-<li><p>Evaluate the indefinite integral (the degree of the numerator is not less than the degree of the denominator)
-<span class="math display">\[
-I=\int  \frac{4x^2 -3x + 2} { 4x^2 -4x +3 } dx
-\]</span>
-We have
-<span class="math display">\[\frac{4x^2 -3x + 2} { 4x^2 -4x +3 }=1+\frac{x-1} { 4x^2 -4x +3 }; 4x^2 -4x +3=( 2x -1)^2 +2\]</span>
-Hence
-<span class="math display">\[\begin{align*}
-I  &amp; =\int \left[ 1+ \frac{x-1} {(2x-1)^2+2 } \right]dx \\
-&amp;= x+ \int \left[ \frac{ (1/2)(2x-1)-(1/2) } {(2x-1)^2+2 } \right] (1/2) d(2x-1) \\
-&amp;= x+\int  \left(\frac{1}{4}  \frac{(2x-1)} {(2x-1)^2+2 } - \frac{1}{4}  \frac{1} {(2x-1)^2+2 } \right)  d(2x-1)\\
-&amp;=x+  \frac{1}{8}  \ln[(2x-1)^2+2] -  \frac{1}{4 \sqrt{2}}\tan^{-1} \frac{2x-1}{ \sqrt{2}} +C
-\end{align*}\]</span></p></li>
+<li>A random variable <span class="math inline">\(X\)</span> has Poisson distribution with rate parameter <span class="math inline">\(\lambda=2\)</span>. Find:
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(P(X \le 2)\)</span></li>
+<li><span class="math inline">\(P(X=3)\)</span></li>
+<li><span class="math inline">\(P(X \ge 4)\)</span></li>
+</ol></li>
 </ol>
-</div>
-</div>
-<div id="integration-by-parts" class="section level2 hasAnchor" number="16.3">
-<h2><span class="header-section-number">16.3</span> Integration by Parts<a href="further-integration-techniques.html#integration-by-parts" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>According to the product rule from differentiation: If <span class="math inline">\(u(x)\)</span> and <span class="math inline">\(v(x)\)</span> are
-differentiable functions, then
-<span class="math display">\[
-\frac{d (u(x)v(x))}{dx}=u(x) \frac{d v(x)}{dx}+v(x) \frac{d u(x)}{dx}.
-\]</span></p>
-<p>From the Fundamental Theorem of Calculus <a href="integration.html#thm:FTC">15.2</a> it follows that
-<span class="math display">\[
-\int \frac{d}{dx} \left( u(x)v(x) \right) dx = u(x)v(x)= \int \left[u(x) \frac{d v(x)}{dx}+v(x) \frac{d u(x)}{dx}\right] dx,
-\]</span>
-or
-<span class="math display">\[
-u(x)v(x)=  \int u(x) \frac{d v(x)}{dx} dx + \int  v(x) \frac{d u(x)}{dx} dx.
-\]</span>
-Rearranging gives:
-<span class="math display">\[
-\int u(x) \frac{d v(x)}{dx} dx= u(x)v(x) - \int  v(x) \frac{d u(x)}{dx} dx.
-\]</span>
-This is the formula for <em>integration by parts</em>:
-<span class="math display">\[
-\int u \; dv = uv - \int  v \; d u.
-\]</span></p>
-<div class="example">
-<ol style="list-style-type: decimal">
-<li><span id="exm:byparts" class="example"><strong>Example 16.3  (Integration by parts) </strong></span></li>
-<li><p>Evaluate the indefinite integral
-<span class="math display">\[
-\int \ln x \; dx,
-\]</span>
-where we take
-<span class="math display">\[
-u=\ln x, \;\; v=x
-\]</span>
-<span class="math display">\[\begin{align*}
-uv - \int  v \; d u &amp;= x \ln x - \int x  d \ln x \\
-&amp; =  x \ln x - \int x \left( \frac{1}{x}  \; d x \right) \\
-&amp; =  x \ln x - \int  \; d x \\
-&amp; =  x \ln x - x +C
-\end{align*}\]</span></p></li>
-<li><p>Evaluate the indefinite integral
-<span class="math display">\[
-\int x^2 e^x \; dx,
-\]</span>
-where we take
-<span class="math display">\[
-u=x^2, \;\; v=e^x, \;\;  dv=d e^x= e^x \; dx
-\]</span></p>
-<p><span class="math display">\[\begin{align*}
-uv - \int  v \; d u&amp;= x^2 e^x - \int e^x  d x^2\\
-&amp;=   x^2 e^x - \int e^x  (2x d x)
-\end{align*}\]</span>
-We need to use integration by parts again by taking
-<span class="math display">\[
-u=x, \;\; v=e^x, \;\;  dv=d e^x= e^x \; dx
-\]</span>
-<span class="math display">\[\begin{align*}
-x^2 e^x -  \left( 2 \int x  d e^x \right)&amp; =   x^2 e^x - \left( 2 x e^x - 2 \int e^x d x \right)
-\\
-&amp; =   x^2 e^x - \left( 2 x e^x - 2 e^x  +C
-\right)
-\end{align*}\]</span></p></li>
-<li><p>Evaluate the indefinite integral
-<span class="math display">\[
-I=\int e^x  \sin(x) \;   dx,
-\]</span>
-where we take <span class="math inline">\(u=e^x, v=-\cos(x), dv= d (-\cos(x))=\sin(x) dx\)</span></p>
-<p><span class="math display">\[\begin{align*}
-I=uv - \int  v \; d u &amp;= - e^x \cos(x)  + \int \cos(x) e^x  d x  \; \;  \\
-&amp; = - e^x \cos(x)  + \left( \int e^x d \sin(x) \right) \\
-&amp; = - e^x \cos(x)  + \left( \sin(x)  e^x -  \int  \sin  x d e^x\right)  \\
-&amp; = - e^x \cos(x)  + \sin(x)  e^x - I
-\end{align*}\]</span>
-Solving for <span class="math inline">\(I\)</span>:
-<span class="math display">\[\begin{align*}
-I=\frac{1}{2}(- e^x \cos(x)  +  \sin(x)  e^x) + C
-\end{align*}\]</span></p></li>
-</ol>
-</div>
+<p>&lt;!–&gt;
+Answers:</p>
+<pre><code>Here $X$ is a Poisson random variable with rate $\lambda = 2$ and p.m.f.
+$$
+P(X = x) = \frac{2^x e^{-2}}{x!} \qquad \mbox{for}~x = 0, 1, 2, \dots
+$$
 
-</div>
+a. $P(X \le 2) = e^{-2} + 2 \times e^{-2} + \frac{4 \times e^{-2}}{2} = 0.677\text{ to 3 s.f.}$
+a. $P(X=3) = \frac{2^3 e^{-2}}{3!} = \frac{8 \times e^{-2}}{6} = 0.180\text{ to 3 s.f.}$
+a. $P(X \ge 4) = 1 - P(X &lt; 4) = 1 - \left(e^{-2} + 2 \times e^{-2} + \frac{4 \times e^{-2}}{2} + \frac{8 \times e^{-2}}{6}\right) = 1 - 0.857 = 0.143\text{ to 3 s.f.}$</code></pre>
+<p>&lt;–&gt;</p>
+<ol style="list-style-type: decimal">
+<li>A discrete random variable <span class="math inline">\(X\)</span> takes values in the set <span class="math inline">\(\{1,2,3,4\}\)</span>
+and has <span class="math inline">\(P(X=x)=x/10\)</span> for each <span class="math inline">\(x\)</span> in this set.
+Find:
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(E(X)\)</span></li>
+<li><span class="math inline">\(E(X^2)\)</span></li>
+<li><span class="math inline">\(\var(X)\)</span></li>
+</ol></li>
+</ol>
+<p>&lt;!–&gt;
+Answers:
+a. <span class="math inline">\(E(X) = \sum_{x = 1}^4 \frac{x^2}{10} = \frac{1}{10}(1 + 4 + 9 + 16) = \frac{30}{10} = 3\)</span>;
+a. <span class="math inline">\(E(X^2) = \sum_{x = 1}^4 \frac{x^3}{10} = \frac{1}{10}(1 + 8 + 27 + 64) = \frac{100}{10} = 10\)</span>;
+a. <span class="math inline">\(\var(X) = E(X^2) - E^2(X) = 10 - 3^2 = 1\)</span>;
+&lt;–&gt;</p>
+<ol style="list-style-type: decimal">
+<li>A discrete random variable <span class="math inline">\(X\)</span> takes values in the set <span class="math inline">\(\{1,2,3\}\)</span>
+and has <span class="math inline">\(P(X=x)=c/x\)</span> for each <span class="math inline">\(x\)</span> in this set, where
+<span class="math inline">\(c\)</span> is some suitable constant.
+Find <span class="math inline">\(c\)</span> and so find
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(E(X)\)</span></li>
+<li><span class="math inline">\(E(X^2)\)</span></li>
+<li><span class="math inline">\(\var(X)\)</span></li>
+</ol></li>
+</ol>
+<p>&lt;!–&gt;
+Answers:</p>
+<pre><code>By the axioms of probability we know that
+\begin{eqnarray*}
+    \sum_{x = 1}^3 \frac{c}{x} &amp;=&amp; 1\\
+    c\left(1 + \frac{1}{2} + \frac{1}{3}\right) &amp;=&amp; 1 \\
+    c\left(\frac{6}{6} + \frac{3}{6} + \frac{2}{6}\right) &amp;=&amp; 1 \\
+    c\left(\frac{11}{6}\right) &amp;=&amp; 1 \\
+    c &amp;=&amp; \frac{6}{11} 
+\end{eqnarray*}
+
+Therefore,
+    a. $E(X) = \sum_{x = 1}^3 \frac{6}{11} = 3 \times \frac{6}{11} = 1.64~\SF{3}$;
+    a. $E(X^2) = \sum_{x = 1}^3 \frac{6x}{11} = \frac{6}{11}\left( 1 + 2 + 3\right) = 3.27~\SF{3}$;
+    a. $\var(X) = E(X^2) - E^2(X) = 0.595~\SF{3}$;</code></pre>
+<p>&lt;–&gt;</p>
+<ol style="list-style-type: decimal">
+<li>You throw two fair dice. Let <span class="math inline">\(X\)</span> denote the sum of the two numbers
+thrown. Find:
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(E(X)\)</span></li>
+<li><span class="math inline">\(E(X^2)\)</span></li>
+<li><span class="math inline">\(\var(X)\)</span></li>
+</ol></li>
+</ol>
+<p>&lt;!–&gt;
+Answers:</p>
+<pre><code>Let $X_1$ be the score on the first die, and $X_2$ be the score on the second die, therefore $X = X_1 + X_2$ and $E(X_1) = E(X_2) = \frac{1 + 2 + 3 + \dots + 6}{6} = \frac{7}{2}$. Also, $E(X_1^2) = E(X_2^2) = \frac{1 + 4 + 9 + \dots + 36}{6} = \frac{91}{6}$
+
+    a. $E(X) = E(X_1 + X_2) = E(X_1) + E(X_2) = 7$;
+    a. \begin{eqnarray*}
+        E(X^2) &amp;=&amp; E\left[(X_1 + X_2)^2\right]\\
+        &amp;=&amp; E\left(X_1^2 + 2 X_1 X_2 + X_2^2\right)\\
+        &amp;=&amp; E\left(X_1^2\right) + 2 E\left(X_1 X_2\right) + E\left(X_2^2\right) \\
+        &amp;=&amp; E\left(X_1^2\right) + 2 E\left(X_1\right)E\left(X_2\right) + E\left(X_2^2\right) \quad \mbox{since $X_1$, $X_2$ independent}\\
+        &amp;=&amp; 2\cdot\frac{91}{6} + 2 \left(\frac{7}{2}\right)^2\\
+        &amp;=&amp; \frac{91}{3} + \frac{49}{2}\\
+        &amp;=&amp; 54.8~\SF{3}.
+        \end{eqnarray*}
+    a. $\var(X) = E(X^2) - E^2(X) = 54.8 - 49 = 5.83~\SF{3}$.</code></pre>
+<p>&lt;–&gt;</p>
+<ol style="list-style-type: decimal">
+<li><p>2% of packages produced by a packaging machine have defective seals. What is the probability that a batch will contain more than 2 defective packages if the batch size is (a) 20 (b) 50?</p></li>
+<li><p>A rifle range competitor scores one hit in every 4 shots, on the average. Assuming that the binomial distribution is applicable, if they have four shots in a session what is:</p>
+<ol style="list-style-type: lower-alpha">
+<li>the probability that they will get exactly one hit?</li>
+<li>the probability that they will get at least one hit?</li>
+</ol></li>
+<li><p>2% of cans leaving a canning factory have a defective paint finish. Cans are packed in boxes in groups of 50. Determine the mean and standard deviation of:</p>
+<ol style="list-style-type: lower-alpha">
+<li>The number of cans in a box which have a defective finish.</li>
+<li>The proportion of cans in a box which have a defective coating.</li>
+</ol></li>
+<li><p>Sheets of metal have a plating fault which occurs randomly at an average rate of 1 per <span class="math inline">\(\text{m}^2\)</span>. What is the probability that a sheet <span class="math inline">\(1.5\text{m} \times 2 \text{m}\)</span> will have:</p>
+<ol style="list-style-type: lower-alpha">
+<li>At most one fault?</li>
+<li>At least one fault?</li>
+</ol></li>
+<li><p>250 litres of water have been polluted with 106 bacteria. What is the probability that a sample of 1 ml of the water contains no bacteria?</p></li>
+<li><p>An average of 264 vehicles an hour pass along a stretch of road each taking 30 seconds to travel along it. What is the probability that at a given instant there will be no vehicles in the road?</p></li>
+</ol>
+
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="integration.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="differential-equations.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="notation.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -531,7 +469,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/maths-sci-eng/maths-sci-eng.github.io/edit/master/16-further_int.Rmd",
+"link": "https://github.com/maths-sci-eng/maths-sci-eng.github.io/edit/master/45-exercises15_ans.Rmd",
 "text": "Edit"
 },
 "history": {
