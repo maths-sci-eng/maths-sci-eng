@@ -4,7 +4,6 @@
 $X$ be the number of sixes.
 Tabulate $P(X=x)$ for $x=0, 1,\dots,5$.
 
-<!-->
     Answers:
 
     Here $X$ is a binomial random variable with $n = 5$ and $p = \frac{1}{6}$. Hence we have p.m.f.
@@ -20,14 +19,14 @@ Tabulate $P(X=x)$ for $x=0, 1,\dots,5$.
     |3|0.0322|
     |4|0.00322|
     |5|0.000129|
-<-->
+
 
 1. A random variable $X$ has Poisson distribution with rate parameter $\lambda=2$. Find:
     a. $P(X \le 2)$
     a. $P(X=3)$
     a. $P(X \ge 4)$
 
-<!-->
+
     Answers:
 
     Here $X$ is a Poisson random variable with rate $\lambda = 2$ and p.m.f.
@@ -38,7 +37,7 @@ Tabulate $P(X=x)$ for $x=0, 1,\dots,5$.
     a. $P(X \le 2) = e^{-2} + 2 \times e^{-2} + \frac{4 \times e^{-2}}{2} = 0.677\text{ to 3 s.f.}$
     a. $P(X=3) = \frac{2^3 e^{-2}}{3!} = \frac{8 \times e^{-2}}{6} = 0.180\text{ to 3 s.f.}$
     a. $P(X \ge 4) = 1 - P(X < 4) = 1 - \left(e^{-2} + 2 \times e^{-2} + \frac{4 \times e^{-2}}{2} + \frac{8 \times e^{-2}}{6}\right) = 1 - 0.857 = 0.143\text{ to 3 s.f.}$
-<-->
+
 
 1. A discrete random variable $X$ takes values in the set $\{1,2,3,4\}$
 and has $P(X=x)=x/10$ for each $x$ in this set.
@@ -47,12 +46,11 @@ Find:
     a. $E(X^2)$
     a. $\var(X)$
 
-<!-->
     Answers:
     a. $E(X) = \sum_{x = 1}^4 \frac{x^2}{10} = \frac{1}{10}(1 + 4 + 9 + 16) = \frac{30}{10} = 3$;
     a. $E(X^2) = \sum_{x = 1}^4 \frac{x^3}{10} = \frac{1}{10}(1 + 8 + 27 + 64) = \frac{100}{10} = 10$;
     a. $\var(X) = E(X^2) - E^2(X) = 10 - 3^2 = 1$;
-<-->
+
 
 1. A discrete random variable $X$ takes values in the set $\{1,2,3\}$
 and has $P(X=x)=c/x$ for each $x$ in this set, where
@@ -62,7 +60,7 @@ Find $c$ and so find
     a. $E(X^2)$
     a. $\var(X)$
 
-<!-->
+
     Answers:
     
     By the axioms of probability we know that
@@ -78,7 +76,7 @@ Find $c$ and so find
         a. $E(X) = \sum_{x = 1}^3 \frac{6}{11} = 3 \times \frac{6}{11} = 1.64~\SF{3}$;
         a. $E(X^2) = \sum_{x = 1}^3 \frac{6x}{11} = \frac{6}{11}\left( 1 + 2 + 3\right) = 3.27~\SF{3}$;
         a. $\var(X) = E(X^2) - E^2(X) = 0.595~\SF{3}$;
-<-->
+
 
 1. You throw two fair dice. Let $X$ denote the sum of the two numbers
 thrown. Find:
@@ -86,7 +84,6 @@ thrown. Find:
     a. $E(X^2)$
     a. $\var(X)$
 
-<!-->
     Answers:
 
     Let $X_1$ be the score on the first die, and $X_2$ be the score on the second die, therefore $X = X_1 + X_2$ and $E(X_1) = E(X_2) = \frac{1 + 2 + 3 + \dots + 6}{6} = \frac{7}{2}$. Also, $E(X_1^2) = E(X_2^2) = \frac{1 + 4 + 9 + \dots + 36}{6} = \frac{91}{6}$
@@ -103,15 +100,50 @@ thrown. Find:
             \end{eqnarray*}
         a. $\var(X) = E(X^2) - E^2(X) = 54.8 - 49 = 5.83~\SF{3}$.
 
-<-->
-
 
 1. 2% of packages produced by a packaging machine have defective seals. What is the probability that a batch will contain more than 2 defective packages if the batch size is (a) 20 (b) 50?
+
+    Answers:
+
+    Here we will use the binomial distribution. Let a defective seal be a "success", then $p=0.02$, $q=1-p=0.98$ and the number of trials are (a) $n=20$ and (b) $n=50$.
+    We want to find $P(X>2)$, but it is simpler to calculate this via the complement as $1-P(X\leq 2)$. We have
+
+    a. \begin{align*}
+        P(X=0)={20 \choose 0}0.02^0 0.98^{20}=0.6676\\
+        P(X=1)={20 \choose 1}0.02^1 0.98^{19}=0.2725\\
+        P(X=2)={20 \choose 2}0.02^2 0.98^{18}=0.0528
+        \end{align*}
+
+        $P(X\le 2)=0.6676 + 0.2725 + 0.0528 = 0.9929$
+
+        and
+
+        $P(X>2)=1-0.9929=0.0071$ or $0.71\%$
+
+        b. A similar calculation with $n=20$ replaced by $n=50$ gives $0.078$ or $7.8\%$.
 
 1. A rifle range competitor scores one hit in every 4 shots, on the average. Assuming that the binomial distribution is applicable, if they have four shots in a session what is:
     a. the probability that they will get exactly one hit?
     a. the probability that they will get at least one hit?
 
+    Answer:
+
+    Let a hit correspond to a "success", then $p=0.25$ and $q=1-p=0.75$. The number of trials is $n=4$. We have
+
+    $$P(X=x)={4 \choose x}0.25^x 0.75^{4-x}$$
+
+    a. $P(X=1)={4 \choose 1}0.25^1 0.75^{3}=0.422$.
+
+    a. $P(X\ge 1)=P(X=1)+P(X=2)+P(X=3)+P(X=4)$ or it will be simpler to calculate via the complement:
+    $P(X\ge 1)=1-P(X<1)$ =1 - P(X=0)$
+
+    $$P(X=0)={4 \choose 0}0.25^0 0.75^4=0.3164$$
+
+    Hence
+
+    $$P(X\ge 1)=1-0.3164=0.6836$$
+
+    
 1. 2% of cans leaving a canning factory have a defective paint finish. Cans are packed in boxes in groups of 50. Determine the mean and standard deviation of:
     a. The number of cans in a box which have a defective finish.
     a. The proportion of cans in a box which have a defective coating.

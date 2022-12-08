@@ -1,0 +1,441 @@
+# Continuous Random Variables
+
+Recall that a *random variable* is a numerical valued function defined on the sample space. In plain language, it is a rule for assigning a number to each point in the sample space.
+
+So far all our discussion has been about *discrete* random variables i.e. those whose range of values is finite or countably infinite.  However, it is conceptually possible for a random variable to take a continuum of values, such as an interval of real values (or a number of such intervals).
+
+A *continuous* random variable has an *uncountably infinite* number of possible values.
+
+Most properties of continuous random variables are analogous to the ideas we have already seen for discrete random variables, but the probability mass function is replaced by the *probability density function*, and summation is replaced by integration.
+
+Consider the random variable $X$ which represents the life, in hours, of a 100 watt electric light bulb. The range of values of $X$ is the interval $0 \leq x < \infty$, which is not a countably infinite set. So $X$ is a **continuous** random variable. Suppose that $a$ and $b$ are two non-negative real values with $a < b$, then ${a \leq X \leq b}$ is an event in the sample space of $X$, so we should be able to define the probability, $P(a \leq X \leq b)$, that this event occurs. 
+
+In general for a continuous random variable we assume there is some function $f_X(x)$, such that for all $a < b$:
+$$
+P(a \leq X \leq b) = \int_a^b f_X(x) dx.
+$$
+We call the function $f_X(x)$ the *probability density function* of the continuous random variable $X$. Hence $P(a \leq X \leq b)$ is equal to the area under the graph of $f_X(x)$ between $x = a$ and $x = b$.
+
+
+```{r densityfunc, echo = FALSE, fig.cap = "$P(a<X<b)$ is the area under $f_X(x)$ from $a$ to $b$", fig.alt = "$P(a<X<b)$ is the area under $f_X(x)$ from $a$ to $b$"}
+library(latex2exp)
+u <- seq(-3, 3, by = .01)
+plot(u, dnorm(u), xlim = c(-3, 3), ylim = c(-0.1, 0.5), type = "l", axes = TRUE, xlab = TeX(r'($x$)'), ylab = TeX(r'($f_X(x)$)'), col="blue")
+axis(1)
+lines(c(-3,3),c(0,0))
+I=which((u>=0.5) & (u<=1.5))
+polygon(c(u[I],rev(u[I])),c(dnorm(u)[I],rep(0,length(I))),col="darkgray",border=NA)
+text(0.5,-0.03, TeX(r'($a$)'), cex = 1)
+text(1.5,-0.03, TeX(r'($b$)'), cex = 1)
+```
+
+When the range of values of a random variable is a continuum, we concentrate on probabilities of events such as $a \leq X \leq b$, rather than events such as $X = a$. We can see that:
+$$P(X = a) = \int_a^a f_X(x) dx =0.$$
+Hence if $X$ is a continuous random variable then for any single real number $a$, $P(X = a) = 0$. (Note $P(X=a)\neq f_X(a)$, since $f_X$ is a probability **density** *not* a probability.) This also means we do not in general have to distinguish between $P(a < X)$ and $P(a \leq X)$ or between $P(X < b)$ and $P(X \leq b)$ for continuous random variables.
+
+As with discrete random variables, the probability of the whole sample space for a continuous random variable must be one, so $f_X(x)$ must integrate to one over the range of $X$ i.e.:
+$$
+\int_{-\infty}^{\infty} f_X(x) = 1.
+$$
+Note we can take this integral to be over the whole real line $(-\infty, \infty)$, since even if the range of possible values of $X$ is more restricted than that, then $f_X(x)$ will be zero outside of its range.
+
+
+## Uniform distribution
+
+A random variable $X$ is equally likely to take any value in the range $[a, b]$, where $a < b$. What is the probability density function of $X$?
+
+If $X$ is equally likely to take any value in the range $[a, b]$, then the probability density function of $X$ must be a constant across the range. Hence, $f_X(x) = c$ for some $c > 0$ when $x \in [a, b]$.
+
+Since $\int_a^b c~dx = 1$, then this implies that $c = 1 / (b - a)$. Hence,
+$$
+f_X(x) = \begin{cases}
+\frac{1}{b - a}  & \mbox{for $x \in [a, b]$,}\\
+0 & \mbox{otherwise.}
+\end{cases}.
+$$
+Here $X \sim U(a, b)$ has a *uniform distribution*.
+
+As an example, we plot the probability density function for $X \sim U(-0.5, 1.5)$.
+
+$$
+f_X(x) = \begin{cases}
+\frac{1}{2} & \mbox{for $-0.5 < x < 1.5$,}\\
+0 & \mbox{otherwise.}
+\end{cases}.
+$$
+
+```{r fXU, echo = FALSE, fig.cap = "Graph of the density function $f_X(x)$ for $X\\sim U(-0.5,1.5)$.", fig.alt = "Graph of the density function $f_X(x)$ for $X\\sim U(-0.5,1.5)$."}
+library(latex2exp)
+s <- c(-2, -0.5)
+t <- c(0, 0)
+u <- c(-0.5,1.5)
+v <- c(0.5,0.5)
+w <- c(1.5,2)
+x <- c(0,0)
+plot(s, t, xlim = c(-2, 2), ylim = c(0, 1), type = "l", axes = TRUE, xlab = TeX(r'($x$)'), ylab = TeX(r'($\f_X(x)$)'))
+lines(u, v, type = "l")
+lines(w, x, type = "l")
+```
+
+## Cumulative Distribution Function
+
+For a continuous random variable $X$, we define the *cumulative distribution function* of $X$ in a similar way to that for a discrete random variable i.e:
+$$
+F_X(x) = P(X < x) = \int_{-\infty}^{x} f_X(u) du. 
+$$
+Note that, as for discrete random variables, if $X$ is continuous then $0 \leq F_X(x) \leq 1$ (because $F_X(x)$ is a probability).
+
+Furthermore, $F_X(x)$ is a non-decreasing function of $x$, with 
+$$
+\lim_{x \to -\infty} F_X(x) = 0 \quad \mbox{and} \quad \lim_{x \to \infty} F_X(x) = 1.
+$$
+
+In the continuous case $F_X(x)$ is in general a smooth (usually S shaped) curve rather than a step function as it is in the discrete case. $F_X(x)$ is defined for all values of $x$ (not just the range of values for which $f_X(x)$ is non-zero).
+
+For example, if $X \sim U(a, b)$, then
+$$
+F_X(x) = \begin{cases}
+0 & \mbox{for $x < a$,}\\
+\frac{x - a}{b - a} & \mbox{for $a < x < b$,}\\
+1 & \mbox{for $x > b$.}
+\end{cases}.
+$$
+
+As an example, we plot the cumulative distribution function for $X \sim U(-0.5, 1.5)$.
+
+$$
+F_X(x) = \begin{cases}
+0 & \mbox{for $x < -0.5$,}\\
+\frac{x + 0.5}{2} & \mbox{for $-0.5 < x < 1.5$,}\\
+1 & \mbox{for $x > 1.5$.}
+\end{cases}.
+$$
+
+```{r cumFXU, echo = FALSE, fig.cap = "Graph of the cumulative distribution function $F_X(x)$ for $X\\sim U(-0.5,1.5)$.", fig.alt = "Graph of the cumulative distribution function $F_X(x)$ for $X\\sim U(-0.5,1.5)$."}
+library(latex2exp)
+s <- c(-2, -0.5)
+t <- c(0, 0)
+u <- c(-0.5,1.5)
+v <- c(0,1)
+w <- c(1.5,2)
+x <- c(1,1)
+plot(s, t, xlim = c(-2, 2), ylim = c(0, 1), type = "l", axes = TRUE, xlab = TeX(r'($x$)'), ylab = TeX(r'($\f_X(x)$)'))
+lines(u, v, type = "l")
+lines(w, x, type = "l")
+```
+
+The distribution function is useful for calculating probabilities such as $P(a \leq X \leq b)$, since
+$$
+P(a \leq X \leq b) = P(X \leq b) - P(X \leq a) = F_X(b) - F_X(a).
+$$
+
+## Expectation and Variance
+
+
+The *expected value* of a continuous random variable $X$ is:
+$$
+\operatorname{E}(X) = \int_{-\infty}^{\infty} xf_X(x) dx.
+$$
+Remember that if the range of values of $X$ is more restricted than the whole real line, then $f_X(x)$ will be zero outside of this range, so this definition still holds. In essence we say that we "integrate over the range of values" of $X$. This is analogous to the discrete case, except we take an integral instead of a sum.
+
+::: {.example #Euniform name="Expectation of a Uniform RV"}
+If $X \sim U(a, b)$, what is $\operatorname{E}(X)$?
+
+\begin{eqnarray*}
+\operatorname{E}(X) = \int_{a}^{b} \frac{x}{b - a} dx &=& \left[\frac{x^2}{2(b - a)} \right]_{a}^{b} \\
+&=& \frac{b^2 - a^2}{2(b - a)} \\
+&=& \frac{(b - a)(b + a)}{2(b - a)}\\
+&=& \frac{b+a}{2}.
+\end{eqnarray*}
+:::
+
+The *variance* of a continuous random variable $X$ is defined in the same way as for the discrete case:
+$$
+\operatorname{var}(X) = \operatorname{E}\left([X - \operatorname{E}(X)]^2\right) = \int_{-\infty}^{\infty} (x - \mu)^2f_X(x) dx,
+$$
+where $\mu = \operatorname{E}(X)$. 
+
+
+Other analogous properties to the discrete case also hold:
+
+* Let $a$ and $b$ be constants, and let $g(X)$ and $h(X)$ be functions defined on the range of a random variable $X$. Then,
+$$
+\operatorname{E}\left[ag(X) + bh(X)\right] = a\operatorname{E}[g(X)] + b\operatorname{E}[h(X)]
+$$
+and in particular $\operatorname{E}(aX + b) = a\operatorname{E}(X) + b$.
+
+* If $g(\cdot)$ is a function of a continuous random variable $X$, then:
+$$
+E\left[g(X)\right] = \int_{-\infty}^{\infty} g(x)f_X(x) dx.
+$$
+
+* It can be shown that
+$$
+\operatorname{var}(X) = E\left(X^2\right) - E^2(X),
+$$
+and $\operatorname{var}(aX + b) = a^2\operatorname{var}(X)$.
+
+::: {.example #Varuniform name="Variance of a Uniform RV"}
+If $X \sim U(a, b)$, what is $\operatorname{var}(X)$?
+
+We can calculate
+\begin{eqnarray*}
+\operatorname{E}\left(X^2\right) = \int_{a}^{b} \frac{x^2}{b - a} dx &=& \left[\frac{x^3}{3(b - a)} \right]_{a}^{b} \\
+&=& \frac{b^3 - a^3}{3(b - a)}.
+\end{eqnarray*}
+Hence,
+\begin{eqnarray*}
+\operatorname{var}(X) = E\left(X^2\right) - E^2(X) &=& \frac{b^3 - a^3}{3(b - a)} - \frac{(a + b)^2}{4}\\
+&=& \frac{(b - a)^2}{12}.
+\end{eqnarray*}
+
+:::
+
+## Normal Distribution
+
+
+The normal (or \emph{Gaussian}) distribution is the king of probability distributions. 
+
+We say that $X$ has the *standard normal distribution* if its density function is
+$$
+\phi(x)=\frac{e^{-x^2/2}}{\sqrt{2\pi}}
+$$
+for $-\infty < x < \infty$.
+The graph of $\phi$ is the famous "bell-shaped curve".
+
+```{r phi2, echo = FALSE, fig.cap = "Graph of the normal distribution density function $\\phi$.", fig.alt = "Graph of the normal distribution density function $\\phi$."}
+library(latex2exp)
+u <- seq(-3, 3, by = .01)
+plot(u, dnorm(u), type = "l", axes = TRUE, xlab = TeX(r'($x$)'), ylab = TeX(r'($\phi(x)$)'))
+```
+
+If $\phi$ is a density, we should have
+$$
+\frac{1}{\sqrt{2\pi}}\int_{-\infty}^\infty e^{-x^2/2}\,dx = 1.
+$$
+However, evaluating this definite integral requires methods beyond the scope of these notes.
+
+The mean and variance are $\operatorname{E}(X)=0$ and $\operatorname{var}(X)=1$.
+
+If $X$ is a standard normal random variable and $Y=\sigma X+\mu$ where $\sigma>0$
+and $-\infty < \mu < \infty$, then $Y$ has a *normal (Gaussian) distribution* with mean $\mu$ and variance $\sigma^2$.
+
+The probability density function of $Y$ is
+$$
+f_Y(y)=\frac1{\sigma\sqrt{2\pi}}\exp\left[-\frac{(y-\mu)^2}{2\sigma^2}\right].
+$$
+We write $Y\sim N(\mu,\sigma^2)$ to denote the distribution of this random variable being a normal distribution with mean $\mu$ and variance $\sigma^2$. The plot is shifted to the right by $\mu$ and "stretched" by $\sigma$.
+
+```{r normplotnonstandard, echo = FALSE, fig.cap = "Density for $Y\\sim N(3,4)$.", fig.alt = "Density for $Y\\sim N(3,4)$"}
+library(latex2exp)
+u <- seq(-9, 9, by = .01)
+plot(u, dnorm(u), type = "l", axes = TRUE, xlab = TeX(r'($y$)'), ylab = TeX(r'($f_Y(y)$)'))
+lines(u, (1/2)*dnorm((u-3)/2), type = "l", col = "blue")
+```
+
+The cumulative distribution function of a standard normal random variable, usually denoted by $\Phi$, is
+$$
+\Phi(x)=P(X < x)=\frac1{\sqrt{2\pi}}\int_{-\infty}^x e^{-u^2/2}\,du
+$$
+but this integral can't be expressed in terms of standard functions, like exponentials, logarithms and trigonometric functions. For this reason, values of this function ($\Phi(x)$) are tabulated in statistical tables (but usually not available on pocket calculators).
+
+```{r cumnorm, echo = FALSE, fig.cap = "Cumulative distribution function $\\Phi(x)$.", fig.alt = "Cumulative distribution function $\\Phi(x)$."}
+library(latex2exp)
+u <- seq(-3, 3, by = .01)
+plot(u, pnorm(u), type = "l", axes = TRUE, xlab = TeX(r'($x$)'), ylab = TeX(r'($\Phi(x)$)'))
+```
+
+We remark on one useful identity. Since the standard normal distribution is symmetric about zero
+\begin{eqnarray*}
+\Phi(-x)&=&P(X < -x)=P(X > x)\\
+&=&1-P(X <  x)=1-\Phi(x)
+\end{eqnarray*}
+and it's only necessary to tabulate $\Phi(x)$ for $x>0$.
+
+## Standard Normal Distribution Tables
+
+There are two forms commonly used, tabulating either  .
+
+$$P(X<x)=\int_{-\infty}^x \phi(u)\,du$=\Phi(x)$$
+or
+$$P(0<X<x)=\int_{0}^x \phi(u)\,du=\Phi(x)-\Phi(0)=\Phi(x)-0.5$$
+where $X\sim N(0,1)$ and noting $\Phi(0)=0.5$ by symmetry. To save space, values of $P(X< x)$ or $P(0< X < x)$ are listed down the rows in increments of $x$ by $0.1$ and along the columns in increments of $x$ by $0.01$.
+
+```{r normplot1, echo = FALSE, fig.cap = "$P(X<x)$ is the area under $\\phi(x)$ from $-\\infty$ to $x$", fig.alt = "$P(X<x)$ is the area under $\\phi(x)$ from $-\\infty$ to $x$"}
+library(latex2exp)
+u <- seq(-3, 3, by = .01)
+plot(u, dnorm(u), type = "l", axes = TRUE, xlab = TeX(r'($x$)'), ylab = TeX(r'($\phi(x)$)'))
+axis(1)
+I=which((u<=1.5))
+polygon(c(u[I],rev(u[I])),c(dnorm(u)[I],rep(0,length(I))),col="darkgray",border=NA)
+```
+
+```{r normtable1}
+library(knitr)
+library(kableExtra)
+library(latex2exp)
+u=seq(0,3.09,by=0.01)
+p=pnorm(u)
+m=matrix(p,ncol=10,byrow=TRUE)
+rownames(m)=seq(0,3,b=.1)
+colnames(m)=seq(0,.09,by=.01)
+kable(m, digits=4, caption = "Standard Normal Cumulative Distribution Table: type 1.")%>%
+    kable_styling(font_size = 11, bootstrap_options = c("striped", "hover", "condensed", "responsive", "bordered"))%>%
+    column_spec(1, bold=TRUE, border_right=T, background = "darkgrey")%>%
+    row_spec(0, bold=TRUE, background = "darkgrey")
+```
+
+
+```{r normplot2, echo = FALSE, fig.cap = "$P(0<X<x)$ is the area under $\\phi(x)$ from $0$ to $x$", fig.alt = "$P(0<X<x)$ is the area under $\\phi(x)$ from $0$ to $x$$"}
+library(latex2exp)
+u <- seq(-3, 3, by = .01)
+plot(u, dnorm(u), type = "l", axes = TRUE, xlab = TeX(r'($x$)'), ylab = TeX(r'($\phi(x)$)'))
+axis(1)
+I=which((0<=u) & (u<=1.5))
+polygon(c(u[I],rev(u[I])),c(dnorm(u)[I],rep(0,length(I))),col="darkgray",border=NA)
+```
+
+```{r normtable2}
+library(knitr)
+library(kableExtra)
+library(latex2exp)
+u=seq(0,3.09,by=0.01)
+p=pnorm(u)-0.5
+m=matrix(p,ncol=10,byrow=TRUE)
+rownames(m)=seq(0,3,b=.1)
+colnames(m)=seq(0,.09,by=.01)
+kable(m, digits=4, caption = "Standard Normal Cumulative Distribution Table: type 2.")%>%
+    kable_styling(font_size = 11, bootstrap_options = c("striped", "hover", "condensed", "responsive", "bordered"))%>%
+    column_spec(1, bold=TRUE, border_right=T, background = "darkgrey")%>%
+    row_spec(0, bold=TRUE, background = "darkgrey")
+```
+
+
+::: {.example #stattable name="Using Statistical Tables"}
+What is $P(-0.45<X<1.25)$ for a standard normal variable $X$?
+
+Using table \@ref(tab:normtable1)
+\begin{eqnarray*}
+P(-0.45<X<1.25) &=&P(X<1.25)\\
+&& \quad - P(X<-0.45)\\
+&=&P(X<1.25)\\
+&& \quad -\left[1 - P(X<0.45)\right]\\
+&\approx&0.8944-(1 - 0.6736)\\
+&\approx&0.568
+\end{eqnarray*}
+
+Or using table \@ref(tab:normtable2)
+\begin{eqnarray*}
+P(-0.45<X<1.25) &=&P(0<X<1.25)\\
+&& \quad + P(0<X<0.45)\\
+&=&0.3944+0.1736\\
+&\approx&0.568
+\end{eqnarray*}
+:::
+
+We can use standard tables to find probabilities of general normal random variables. If $Y$ is normal with mean $\mu$ and variance $\sigma^2$,
+then
+$$X=(Y-\mu)/\sigma$$
+is standard normal. Then for $a<b$,
+\begin{eqnarray*}
+P(a\le Y\le b)&=&P(a\le \sigma X+\mu\le b)\\
+&=&P\left(\frac{a-\mu}\sigma\le X\le\frac{b-\mu}\sigma\right)\\
+&=&\Phi\left(\frac{b-\mu}\sigma\right)-\Phi\left(\frac{a-\mu}\sigma\right).
+\end{eqnarray*}
+
+
+::: {.example #nonstandardnorm name="Non-standard normal random variables"}
+
+1. If $Y$ is normal with mean $1$ and variance $4=2^2$, then $X=(Y-1)/2$ is \textbf{standard normal}. Calculate $P(0<Y<2.5)$.
+
+    Using table \@ref(tab:normtable1)
+    \begin{eqnarray*}
+    P(0<Y<2.5)&=&P(-0.5<X<0.75)\\
+    &=&P(X<0.75)-\left[1 - P(X<0.5)\right]\\
+    &\approx&0.7734 - (1 - 0.6915)\approx 0.4649
+    \end{eqnarray*}
+
+    or using table \@ref(tab:normtable2)
+    \begin{eqnarray*}
+    P(0<Y<2.5)&=&P(-0.5<X<0.75)\\
+    &=&P(0<X<0.75)+ P(0<X<0.5)\\
+    &\approx&0.2734 + 0.1915\approx 0.4649
+    \end{eqnarray*}
+
+1. If $Y$ is normal with mean $3$ and variance $25$, calculate $P(4<Y<8)$.
+
+    \begin{eqnarray*}
+    P(4<Y<8)&=&P(0.2<X<1)\\
+    &=&P(X<1)- P(X<0.2)\\
+    &\approx 0.8413 - 0.5793 & \approx 0.262.
+    \end{eqnarray*}
+
+    or
+
+    \begin{eqnarray*}
+    P(4<Y<8)&=&P(0.2<X<1)\\
+    &=&P(0<X<1)-P(0<X<0.2)\\
+    &\approx&0.3413 - 0.0793\approx 0.262.
+    \end{eqnarray*}
+:::
+
+If $X$ is standard normal, we find
+\begin{eqnarray*}
+P(|X|>2)&=&1-P(-2<X<2)\\
+&=&2 P(X > 2)\\
+&=&2 \left[1 - P(X < 2)\right]\\
+&\approx& 2 \times (1 - 0.9772)\\
+&=& 0.0456.
+\end{eqnarray*}
+
+Hence approx. 95\% of the distribution lies in the region $-2 < X < 2$ (or in the case of a general normal random variable $Y$ this region is between $\mu\pm2\sigma$).
+
+```{r normplot2sig, echo = FALSE, fig.cap = "Approximately 95% lies within $\\pm2\\sigma$.", fig.alt = "Approximately 95% lies within $\\pm2\\sigma$"}
+library(latex2exp)
+u <- seq(-3, 3, by = .01)
+plot(u, dnorm(u), type = "l", axes = TRUE, xlab = TeX(r'($x$)'), ylab = TeX(r'($\phi(x)$)'))
+axis(1)
+I=which((u>=-2) & (u<=2))
+polygon(c(u[I],rev(u[I])),c(dnorm(u)[I],rep(0,length(I))),col="darkgray",border=NA)
+```
+
+**Linear interpolation**
+
+Note that if the exact value you are looking for isn't tabulated then one option would be to round to the nearest value. A more accurate approximation is to use linear interpolation between the two nearest values given in the table e.g. you want $\Phi(c)$ and nearest values in table are $\Phi(a)$ and $\Phi(b)$ where $a < c < b$, then approximate
+$$
+\Phi(c) = \Phi(a) + \left(\frac{c - a}{b - a}\right)(\Phi(b) - \Phi(a)).
+$$
+(Make sure you adjust appropriately if finding $1 - \Phi(c)$.)
+
+
+## The Law of Large Numbers
+
+The concept of the "law of averages" can be made mathematically respectable and precise through a result known as the *law of large numbers*.
+
+Suppose $X_1, \dots, X_n$ is a sequence of independent identically distributed (i.i.d.) random variables such that $E(X_i) = \mu$ and
+$\operatorname{var}(X_i) = \sigma^2$ for $i = 1, \dots, n$, and let
+$$
+\bar{X} = \frac{1}{n} \sum_{i=1}^n X_i
+$$
+denote the *sample mean* (so-called because one can think of the sequence $X_1, \dots, X_n$ as conceptually representing repeated independent samples (observations) from the same probability distribution).
+
+The *law of large numbers* then states that the probability that the difference between $\bar{X}$ and $\mu$ is arbitrarily small can be made close to 1 by taking a large enough sample.
+
+
+## Central Limit Theorem
+
+The reason the normal distribution is so ubiqitous is due to the *Central Limit Theorem* (CLT).
+
+Informally, the CLT states that the average of a set of i.i.d. random variables each of which has mean $\mu$ and variance $\sigma^2$ is approximately normally distributed with mean $\mu$ and variance $\frac{\sigma^2}{n}$ if $n$ is large.
+
+Hence, if $\bar{X} = \frac{1}{n} \sum_{i = 1}^n X_i$, then $\bar{X} \sim N\left(\mu, \frac{\sigma^2}{n}\right)$ for large $n$ **whatever** distribution the $X_i$ have.
+
+::: {.example #clt name="Central Limit Theorem"}
+You repeatedly throw a fair die $n$ times and take the average of the scores.
+
+Here, $X_i$ is the score on the $i^{\text{th}}$ die, and $\displaystyle{\bar{X} = \frac{1}{n} \sum_{i=1}^n X_i}$ is the mean score, then $\bar{X}$ will approximately follow a $N\left(3.5, \frac{2.92}{n}\right)$ distribution for large $n$.
+:::
+
+Another way of stating the CLT is that as $n \to \infty$ the probability distribution of $\left(\frac{X - \mu}{\sigma / \sqrt{n}}\right)$ tends to a *standard normal distribution*.
+
+What is remarkable about this theorem is that it applies whatever probability distribution $X_i$ has. It can be discrete or continuous, and of any type, Binomial, Poisson, uniform, normal,...
