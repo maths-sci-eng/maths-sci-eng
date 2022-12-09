@@ -1,4 +1,4 @@
-# Exercise Set 15 {.unlisted .unnumbered}
+# Exercise Set 15 Answers {.unlisted .unnumbered}
 
 1. You throw five fair dice and count the number of sixes you get. Let
 $X$ be the number of sixes.
