@@ -23,7 +23,7 @@
 <meta name="author" content="Dr Mark Callaway" />
 
 
-<meta name="date" content="2022-12-08" />
+<meta name="date" content="2022-12-09" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -429,10 +429,8 @@ P(X=2)={20 \choose 2}0.02^2 0.98^{18}=0.0528
 \end{align*}\]</span></p>
 <p><span class="math inline">\(P(X\le 2)=0.6676 + 0.2725 + 0.0528 = 0.9929\)</span></p>
 <p>and</p>
-<p><span class="math inline">\(P(X&gt;2)=1-0.9929=0.0071\)</span> or <span class="math inline">\(0.71\%\)</span></p>
-<ol start="2" style="list-style-type: lower-alpha">
-<li>A similar calculation with <span class="math inline">\(n=20\)</span> replaced by <span class="math inline">\(n=50\)</span> gives <span class="math inline">\(0.078\)</span> or <span class="math inline">\(7.8\%\)</span>.</li>
-</ol></li>
+<p><span class="math inline">\(P(X&gt;2)=1-0.9929=0.0071\)</span> or <span class="math inline">\(0.71\%\)</span></p></li>
+<li><p>A similar calculation with <span class="math inline">\(n=20\)</span> replaced by <span class="math inline">\(n=50\)</span> gives <span class="math inline">\(0.078\)</span>.</p></li>
 </ol></li>
 <li><p>A rifle range competitor scores one hit in every 4 shots, on the average. Assuming that the binomial distribution is applicable, if they have four shots in a session what is:</p>
 <ol style="list-style-type: lower-alpha">
@@ -444,24 +442,42 @@ P(X=2)={20 \choose 2}0.02^2 0.98^{18}=0.0528
 <p><span class="math display">\[P(X=x)={4 \choose x}0.25^x 0.75^{4-x}\]</span></p>
 <ol style="list-style-type: lower-alpha">
 <li><p><span class="math inline">\(P(X=1)={4 \choose 1}0.25^1 0.75^{3}=0.422\)</span>.</p></li>
-<li><p><span class="math inline">\(P(X\ge 1)=P(X=1)+P(X=2)+P(X=3)+P(X=4)\)</span> or it will be simpler to calculate via the complement:
-<span class="math inline">\(P(X\ge 1)=1-P(X&lt;1)\)</span> =1 - P(X=0)$</p></li>
-</ol>
+<li><p><span class="math inline">\(P(X\ge 1)=P(X=1)+P(X=2)+P(X=3)+P(X=4)\)</span> or it will be simpler to calculate via the complement: <span class="math inline">\(P(X\ge 1)=1-P(X&lt;1)\)</span> =1 - P(X=0)$</p>
 <p><span class="math display">\[P(X=0)={4 \choose 0}0.25^0 0.75^4=0.3164\]</span></p>
 <p>Hence</p>
 <p><span class="math display">\[P(X\ge 1)=1-0.3164=0.6836\]</span></p></li>
-<li><p>2% of cans leaving a canning factory have a defective paint finish. Cans are packed in boxes in groups of 50. Determine the mean and standard deviation of:</p>
-<ol style="list-style-type: lower-alpha">
-<li>The number of cans in a box which have a defective finish.</li>
-<li>The proportion of cans in a box which have a defective coating.</li>
 </ol></li>
+<li><p>2% of cans leaving a canning factory have a defective paint finish. Cans are packed in boxes in groups of 50. Determine the mean and standard deviation of the number of cans in a box which have a defective finish.</p>
+<p>Answer:</p>
+<p>Let finding a defective can be a “success”, which has probability <span class="math inline">\(p=0.02\)</span>. The number of trials is <span class="math inline">\(n=50\)</span>. The mean is given by <span class="math inline">\(np=50\times 0.02=1\)</span>. The standard deviation is <span class="math inline">\(\sqrt{np(1-p)}=\sqrt{50\times 0.02\times 0.98}=0.99\)</span></p></li>
 <li><p>Sheets of metal have a plating fault which occurs randomly at an average rate of 1 per <span class="math inline">\(\text{m}^2\)</span>. What is the probability that a sheet <span class="math inline">\(1.5\text{m} \times 2 \text{m}\)</span> will have:</p>
 <ol style="list-style-type: lower-alpha">
 <li>At most one fault?</li>
 <li>At least one fault?</li>
+</ol>
+<p>Answers:</p>
+<p>Here we assume a Poisson distribution with rate <span class="math inline">\(\lambda = 1\,\text{m}^{-2}\)</span>.</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>\begin{align<em>}
+P(X)&amp;=P(X=0)+P(X=1)\
+&amp;=+\
+&amp;=0.0498 + 0.1494
+end{align</em>}</p></li>
+<li><p><span class="math display">\[\begin{align*}
+P(X\ge 1)&amp;=1-P(X&lt;1)\\
+&amp;=1-P(X=0)\\
+&amp;=1-0.0498\\
+&amp;=0.9502
+\end{align*}\]</span></p></li>
 </ol></li>
-<li><p>250 litres of water have been polluted with 106 bacteria. What is the probability that a sample of 1 ml of the water contains no bacteria?</p></li>
-<li><p>An average of 264 vehicles an hour pass along a stretch of road each taking 30 seconds to travel along it. What is the probability that at a given instant there will be no vehicles in the road?</p></li>
+<li><p>250 litres of water have been polluted with <span class="math inline">\(10^6\)</span> bacteria. What is the probability that a sample of 1 ml of the water contains no bacteria?</p>
+<p>Answer:</p>
+<p>250 L contains <span class="math inline">\(10^6\)</span> bacteria, so assuming a Poisson distribution with rate <span class="math inline">\(\dfrac{10^6}{250\times 10^3}=4\)</span> bacterial per ml. Hence,</p>
+<p><span class="math display">\[P(X=0)=\frac{4^0e^{-4}}{0!}=0.0183.\]</span></p></li>
+<li><p>An average of 264 vehicles an hour pass along a stretch of road each taking 30 seconds to travel along it. What is the probability that at a given instant there will be no vehicles in the road?</p>
+<p>Answer:</p>
+<p>The road will have no vehicles if none entered in the previous 30 seconds. We first determine the mean: There are 264 vehicles per hour on average, therefore in 30 seconds we would expect <span class="math inline">\(264\times 30/3600 = 2.2\)</span> cars per 30 seconds, that is, <span class="math inline">\(\lambda=2.2\)</span></p>
+<p><span class="math display">\[P(X=0)=e^{-2.2}=0.1108.\]</span></p></li>
 </ol>
 
 </div>

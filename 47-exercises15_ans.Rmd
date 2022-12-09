@@ -120,7 +120,7 @@ thrown. Find:
 
         $P(X>2)=1-0.9929=0.0071$ or $0.71\%$
 
-        b. A similar calculation with $n=20$ replaced by $n=50$ gives $0.078$ or $7.8\%$.
+    a. A similar calculation with $n=20$ replaced by $n=50$ gives $0.078$.
 
 1. A rifle range competitor scores one hit in every 4 shots, on the average. Assuming that the binomial distribution is applicable, if they have four shots in a session what is:
     a. the probability that they will get exactly one hit?
@@ -134,25 +134,55 @@ thrown. Find:
 
     a. $P(X=1)={4 \choose 1}0.25^1 0.75^{3}=0.422$.
 
-    a. $P(X\ge 1)=P(X=1)+P(X=2)+P(X=3)+P(X=4)$ or it will be simpler to calculate via the complement:
-    $P(X\ge 1)=1-P(X<1)$ =1 - P(X=0)$
+    a. $P(X\ge 1)=P(X=1)+P(X=2)+P(X=3)+P(X=4)$ or it will be simpler to calculate via the complement: $P(X\ge 1)=1-P(X<1)$ =1 - P(X=0)$
 
-    $$P(X=0)={4 \choose 0}0.25^0 0.75^4=0.3164$$
+        $$P(X=0)={4 \choose 0}0.25^0 0.75^4=0.3164$$
 
-    Hence
+        Hence
 
-    $$P(X\ge 1)=1-0.3164=0.6836$$
+        $$P(X\ge 1)=1-0.3164=0.6836$$
 
     
-1. 2% of cans leaving a canning factory have a defective paint finish. Cans are packed in boxes in groups of 50. Determine the mean and standard deviation of:
-    a. The number of cans in a box which have a defective finish.
-    a. The proportion of cans in a box which have a defective coating.
+1. 2% of cans leaving a canning factory have a defective paint finish. Cans are packed in boxes in groups of 50. Determine the mean and standard deviation of the number of cans in a box which have a defective finish.
+
+    Answer:
+
+    Let finding a defective can be a "success", which has probability $p=0.02$. The number of trials is $n=50$. The mean is given by $np=50\times 0.02=1$. The standard deviation is $\sqrt{np(1-p)}=\sqrt{50\times 0.02\times 0.98}=0.99$
 
 1. Sheets of metal have a plating fault which occurs randomly at an average rate of 1 per $\text{m}^2$. What is the probability that a sheet $1.5\text{m} \times 2 \text{m}$ will have:
     a. At most one fault?
     a. At least one fault?
 
-1. 250 litres of water have been polluted with 106 bacteria. What is the probability that a sample of 1 ml of the water contains no bacteria?
+    Answers:
+
+    Here we assume a Poisson distribution with rate $\lambda = 1\,\text{m}^{-2}$.
+
+    a. \begin{align*}
+        P(X\leq 1)&=P(X=0)+P(X=1)\\
+        &=\frac{\lambda^0 e^{-\lambda}}{0!}+\frac{\lambda^1 e^{-\lambda}}{1!}\\
+        &=0.0498 + 0.1494
+        end{align*}
+    
+    a. \begin{align*}
+        P(X\ge 1)&=1-P(X<1)\\
+        &=1-P(X=0)\\
+        &=1-0.0498\\
+        &=0.9502
+        \end{align*}
+
+1. 250 litres of water have been polluted with $10^6$ bacteria. What is the probability that a sample of 1 ml of the water contains no bacteria?
+
+    Answer:
+
+    250 L contains $10^6$ bacteria, so assuming a Poisson distribution with rate $\dfrac{10^6}{250\times 10^3}=4$ bacterial per ml. Hence,
+
+    $$P(X=0)=\frac{4^0e^{-4}}{0!}=0.0183.$$
+
 
 1. An average of 264 vehicles an hour pass along a stretch of road each taking 30 seconds to travel along it. What is the probability that at a given instant there will be no vehicles in the road?
 
+    Answer:
+
+    The road will have no vehicles if none entered in the previous 30 seconds. We first determine the mean: There are 264 vehicles per hour on average, therefore in 30 seconds we would expect $264\times 30/3600 = 2.2$ cars per 30 seconds, that is, $\lambda=2.2$
+
+    $$P(X=0)=e^{-2.2}=0.1108.$$

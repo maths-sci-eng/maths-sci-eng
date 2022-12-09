@@ -36,15 +36,13 @@ thrown. Find:
     a. the probability that they will get exactly one hit?
     a. the probability that they will get at least one hit?
 
-1. 2% of cans leaving a canning factory have a defective paint finish. Cans are packed in boxes in groups of 50. Determine the mean and standard deviation of:
-    a. The number of cans in a box which have a defective finish.
-    a. The proportion of cans in a box which have a defective coating.
+1. 2% of cans leaving a canning factory have a defective paint finish. Cans are packed in boxes in groups of 50. Determine the mean and standard deviation of the number of cans in a box which have a defective finish.
 
 1. Sheets of metal have a plating fault which occurs randomly at an average rate of 1 per $\text{m}^2$. What is the probability that a sheet $1.5\text{m} \times 2 \text{m}$ will have:
     a. At most one fault?
     a. At least one fault?
 
-1. 250 litres of water have been polluted with 106 bacteria. What is the probability that a sample of 1 ml of the water contains no bacteria?
+1. 250 litres of water have been polluted with $10^6$ bacteria. What is the probability that a sample of 1 ml of the water contains no bacteria?
 
 1. An average of 264 vehicles an hour pass along a stretch of road each taking 30 seconds to travel along it. What is the probability that at a given instant there will be no vehicles in the road?
 
