@@ -1,0 +1,7 @@
+# Exercise Set 17 {.unlisted .unnumbered}
+
+1. A sample of underweight babies was fed a special diet and the following weight gains (lbs) were observed at the end of three months:
+6.7 2.7 2.5 3.6 3.4 4.1 4.8 5.9 8.3
+What are the mean and standard deviation?
+
+

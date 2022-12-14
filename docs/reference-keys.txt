@@ -327,4 +327,16 @@ normal-distribution
 standard-normal-distribution-tables
 the-law-of-large-numbers
 central-limit-theorem
+statistics
+frequency
+tables
+graphs
+measures-of-central-tendency
+mean
+mode
+median
+measures-of-dispersion
+range
+interquartile-range
+variance-and-standard-deviation-1
 random-variables
