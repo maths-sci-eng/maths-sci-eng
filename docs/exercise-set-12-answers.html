@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 5 Complex Numbers | Mathematics for Scientists and Engineers</title>
+  <title>Exercise Set 12 Answers | Mathematics for Scientists and Engineers</title>
   <meta name="description" content="Mathematics Lecture Notes for UoE Penryn Science and Engineering Disciplines." />
   <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 5 Complex Numbers | Mathematics for Scientists and Engineers" />
+  <meta property="og:title" content="Exercise Set 12 Answers | Mathematics for Scientists and Engineers" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="Mathematics Lecture Notes for UoE Penryn Science and Engineering Disciplines." />
   <meta name="github-repo" content="maths-sci-eng/maths-sci-eng.github.io" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 5 Complex Numbers | Mathematics for Scientists and Engineers" />
+  <meta name="twitter:title" content="Exercise Set 12 Answers | Mathematics for Scientists and Engineers" />
   
   <meta name="twitter:description" content="Mathematics Lecture Notes for UoE Penryn Science and Engineering Disciplines." />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="trigonometry.html"/>
-<link rel="next" href="vectors.html"/>
+<link rel="prev" href="exercise-set-11-answers.html"/>
+<link rel="next" href="exercise-set-12.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -345,245 +345,119 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="complex" class="section level1 hasAnchor" number="5">
-<h1><span class="header-section-number">Chapter 5</span> Complex Numbers<a href="complex.html#complex" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>We are familiar with integers (<span class="math inline">\(\dots, -5, -4, -3, -2, -1, 0, 1 \dots\)</span>), denoted by <span class="math inline">\(\mathbb{Z}\)</span>, and rational numbers (<span class="math inline">\(1/2, 4/5\)</span>, etc.), denoted by <span class="math inline">\(\mathbb{Q}\)</span>. We also know about irrational numbers such as <span class="math inline">\(e\)</span>, <span class="math inline">\(\pi\)</span> (the area of a circle with radius equal to <span class="math inline">\(1\)</span>) or <span class="math inline">\(\sqrt{2}\)</span> — one solution of the quadratic equation
-<span class="math display">\[
-x^2 - 2 = 0.
-\]</span>
-The collection of natural numbers, integers, rational and irrational numbers make up what we call the <em>real numbers</em>, denoted by <span class="math inline">\(\mathbb{R}\)</span>.</p>
-<p>But do we have “enough” numbers? The answer is no! We do not have to look hard for why we do not have enough numbers. The simple equation
-<span class="math display">\[
-x^2 + 1 = 0
-\]</span>
-does not have real solutions. The answer would be <span class="math inline">\(\pm \sqrt{-1}\)</span>, if that would make sense. More generally, the quadratic equation
-<span class="math display">\[
-a x^2 + b x + c = 0, \quad \text{with}\quad b^2 - 4 ac &lt; 0
-\]</span>
-does not have real number solutions!</p>
-<div id="i-and-complex-numbers" class="section level2 hasAnchor" number="5.1">
-<h2><span class="header-section-number">5.1</span> <span class="math inline">\(i\)</span> and complex numbers<a href="complex.html#i-and-complex-numbers" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Our fix is to define the <em>imaginary number</em> <span class="math inline">\(i\)</span> by<a href="#fn8" class="footnote-ref" id="fnref8"><sup>8</sup></a>
-<span class="math display">\[
-i = \sqrt{-1},\quad \text{ so that }\quad i^2 = -1.
-\]</span>
-With this definition in mind, consider the quadratic equation
-<span class="math display">\[
-x^2 + 4 x + 13 = 0.
-\]</span>
-Completing the square gives
-<span class="math display">\[
-(x+2)^2 + 9 = 0 \quad \implies \quad
-x+2 = \pm \sqrt{-9} = \pm 3 \sqrt{-1} = \pm 3 i \quad \implies \quad
-x = -2 \pm 3 i.
-\]</span></p>
-<p>This leads us to <em>Complex Numbers</em>, denoted by <span class="math inline">\(\mathbb{C}\)</span>, defined as the set of all numbers
-<span class="math display">\[
-z = x + i y, \quad \text{where $x$ and $y$ are real numbers}.
-\]</span>
-This form is also called the <em>Cartesian representation</em> of a complex number. It has a <em>real part</em> <span class="math inline">\(\mathbf{Re}(z) = x\)</span> and an <em>imaginary part</em> <span class="math inline">\(\mathbf{Im}(z) = y\)</span>. We can then represent a complex number graphically by plotting the real and imaginary parts as coordinates in a Cartesian coordinate system, as in figure <a href="complex.html#fig:complexcart">5.1</a>, known as the <em>complex plane</em>. The <span class="math inline">\(x\)</span>-axis is called the <em>real axis</em> and the <span class="math inline">\(y\)</span>-axis is called the <em>imaginary axis</em>.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:complexcart"></span>
-<img src="figures/complexcart.png" alt="The complex number $z = x + iy$ in Cartesian coordinates."  />
-<p class="caption">
-Figure 5.1: The complex number <span class="math inline">\(z = x + iy\)</span> in Cartesian coordinates.
-</p>
-</div>
-<p>Note that any real number <span class="math inline">\(x\)</span> can also be considered as a complex number, since it is a complex number that happens to have <span class="math inline">\(0\)</span> imaginary part: <span class="math inline">\(x = x +0i\)</span>; it is a complex number that lies on the real axis.</p>
-<p>We know from experience that a quadratic equation can have at most 2 roots. Once we have accepted complex numbers as part of our everyday lives, we see that they complete the picture of roots of polynomials.</p>
-<div class="theorem">
-<p><span id="thm:FTA" class="theorem"><strong>Theorem 5.1  (Fundamental Theorem of Algebra) </strong></span>Every non-zero, complex, single variable, degree <span class="math inline">\(n\)</span> polynomial, has exactly <span class="math inline">\(n\)</span> roots.</p>
-</div>
-<p>To clarify the above theorem, we are talking about a polynomial of the form
-<span class="math display">\[f(x)=a_0 + a_1 x + a_2 x^2 + \dotsb + a_n x^n\]</span>
-where the variable <span class="math inline">\(x\)</span> can be a complex number (so can also be a real number) and the coefficients <span class="math inline">\(a_i\)</span> are complex numbers (so can also be real numbers) and at least one of these coefficients is not <span class="math inline">\(0\)</span>. Since we allow the single variable <span class="math inline">\(x\)</span> to be a complex number, the roots may be complex numbers. Note that some of the <span class="math inline">\(n\)</span> roots might be <em>repeated roots</em>, for example, according to the theorem the quadratic
-<span class="math display">\[x^2-4x+4=(x-2)(x-2)\]</span>
-must have two roots and in this case they happen to be repeated roots; we say the root is <span class="math inline">\(x=2\)</span> with <em>multiplicity</em> 2.</p>
-</div>
-<div id="complex-arithmetic" class="section level2 hasAnchor" number="5.2">
-<h2><span class="header-section-number">5.2</span> Complex arithmetic<a href="complex.html#complex-arithmetic" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>We can add, subtract and multiply complex numbers <span class="math inline">\(z = x+iy\)</span> and <span class="math inline">\(w = u+iv\)</span>, using usual algebraic rules for expanding brackets — just remembering that <span class="math inline">\(i^2 = -1\)</span>:
-<span class="math display">\[\begin{align*}
-z + w &amp;= (x + iy) + (u + iv) = (x+u) + i (y+v),\\
-z - w &amp;= (x + iy) - (u + iv) = (x-u) + i (y-v),\\
-z \times w &amp;= (x + iy) \times (u + iv) = x u + i x v + i yu + i^2 y v = (xu - yv) + i (xv + yu).
-\end{align*}\]</span></p>
-<div class="example">
-<p><span id="exm:complexarithmetic" class="example"><strong>Example 5.1  (Complex Arithmetic) </strong></span>Let <span class="math inline">\(z = 3 - 5i\)</span> (that is, <span class="math inline">\(z = 3 + (-5)i\)</span>) and <span class="math inline">\(w = 2 + i\)</span> then
-<span class="math display">\[
-z + w = 5 - 4i, \qquad z - w = 1 - 6i,
-\]</span>
-and
-<span class="math display">\[
-z\times w = (3 - 5i)\times (2+i) = 6 + 3i - 10i - 5i^2 = 11 - 7i.
-\]</span>
-Thus <span class="math inline">\(\mathbf{Re}(z\times w) = 11\)</span> and <span class="math inline">\(\mathbf{Im}(z\times w) = -7\)</span>.</p>
-</div>
-<p>The <em>complex conjugate</em> of <span class="math inline">\(z = x + iy\)</span> is the complex number
-<span class="math display">\[
-\overline{z} = x - iy.
-\]</span>
-This is the “mirror image” of <span class="math inline">\(z\)</span> in the real axis.</p>
-<p>The <em>modulus</em> of <span class="math inline">\(z = x + iy\)</span> is
-<span class="math display">\[
-|z| = \sqrt{x^2 + y^2} \qquad \text{(the non-negative square root).}
-\]</span>
-Geometrically, this is the distance of <span class="math inline">\(z\)</span> (i.e. the point <span class="math inline">\(P\)</span>) from the origin – See figure <a href="complex.html#fig:complexcart">5.1</a>. Note that if <span class="math inline">\(b = 0\)</span> (so that <span class="math inline">\(z\)</span> is actually a real number), then this definition of <span class="math inline">\(|z|\)</span> agrees with the usual modulus (absolute value) for real numbers.</p>
-<div class="example">
-<p><span id="exm:conjugate" class="example"><strong>Example 5.2  (Complex conjugate) </strong></span>For <span class="math inline">\(z = 2 - i\)</span>, we have <span class="math inline">\(\overline{z} = 2 + i\)</span> and <span class="math inline">\(|z| = \sqrt{2^2 + (-1)^2} = \sqrt{5}\)</span>.</p>
-</div>
-<p>Some properties of modulus and conjugate: For any complex numbers <span class="math inline">\(z, w\)</span>,</p>
-<ul>
-<li><span class="math inline">\(\overline{\overline{z}} = z\)</span>;</li>
-<li><span class="math inline">\(\overline{z \pm w} = \overline{z} + \overline{w}\)</span>;</li>
-<li><span class="math inline">\(\overline{z\times w} = \overline{z}\times \overline{w}\)</span>;</li>
-<li><span class="math inline">\(|z|\)</span> is a positive real number unless <span class="math inline">\(z = 0\)</span> with <span class="math inline">\(|0| = 0\)</span>;</li>
-<li><span class="math inline">\(z\times \overline{z} = |z|^2\)</span>;</li>
-<li><span class="math inline">\(|z\times w| = |z|\,|w|\)</span>.</li>
-</ul>
-<p>What about division of complex numbers? This is made easy using the complex conjugate as follows:
-<span class="math display">\[\frac{z}{w}=\frac{z}{w}\frac{\overline{w}}{\overline{w}}=\frac{z\times \overline{w}}{|w|^2}.\]</span></p>
-<div class="example">
-<p><span id="exm:complexdiv" class="example"><strong>Example 5.3  (Complex division) </strong></span>Let <span class="math inline">\(z = 2 + 3i\)</span> and <span class="math inline">\(w = 4 - 2i\)</span>.</p>
-<p><span class="math display">\[\begin{align*}
-\frac{z}{w}&amp;=\frac{2 + 3i}{4 - 2i}\frac{4+2i}{4+2i}\\
-&amp;=\frac{8+4i+12i+6i^2}{16+4}\\
-&amp;=\frac{2+16i}{20}\\
-&amp;=\frac{1}{10}+\frac{4}{5}i
-\end{align*}\]</span></p>
-</div>
-<p>A useful fact: if a polynomial has <em>real</em> coefficients and has a complex root <span class="math inline">\(z\)</span>, then its complex conjugate <span class="math inline">\(\overline{z}\)</span> is also a root; we say that complex roots appear in <em>complex conjugate pairs</em> in real polynomials.</p>
-</div>
-<div id="the-argument-polar-and-exponential-form-for-complex-numbers" class="section level2 hasAnchor" number="5.3">
-<h2><span class="header-section-number">5.3</span> The argument, polar and exponential form for complex numbers<a href="complex.html#the-argument-polar-and-exponential-form-for-complex-numbers" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>If we think of the complex number <span class="math inline">\(z = x + iy\)</span> as a point <span class="math inline">\(P = z\)</span> in the <span class="math inline">\((x,y)\)</span>-plane, then it is natural to think also of representing <span class="math inline">\(P\)</span> in <em>polar coordinates</em> <span class="math inline">\((r,\theta)\)</span> – see figure <a href="complex.html#fig:complexpolar">5.2</a>.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:complexpolar"></span>
-<img src="figures/complexpolar.png" alt="The complex number $z = x + iy$ in polar coordinates."  />
-<p class="caption">
-Figure 5.2: The complex number <span class="math inline">\(z = x + iy\)</span> in polar coordinates.
-</p>
-</div>
-<p>Here, <span class="math inline">\(r = |z| = \sqrt{x^2 + y^2}\)</span> is the distance from the origin <span class="math inline">\(O\)</span> and <span class="math inline">\(\theta\)</span> is the angle between the positive real axis and the line <span class="math inline">\(OP\)</span>. We call <span class="math inline">\(\theta\)</span> the <em>argument</em> of <span class="math inline">\(z\)</span>, denoted <span class="math inline">\(\theta = \arg(z)\)</span>. We have that
-<span class="math display">\[
-P = (x,y) \quad \text{(in Cartesian coordinates)}\quad \text{or} \quad
-P = (r,\theta) \quad \text{(in Polar coordinates)}
-\]</span>
-with
-<span class="math display">\[\begin{array}{rrclcrcl}
-&amp; r &amp;=&amp; \sqrt{x^2 + y^2} &amp; \quad\text{and}\quad &amp; \tan(\theta) &amp;=&amp; \frac{y}{x},\\
-\text{or} \qquad &amp; x &amp;=&amp; r \cos(\theta) &amp; \quad\text{and}\quad &amp; y &amp;=&amp; r \sin(\theta).
-\end{array}\]</span></p>
-<p>Therefore, we can recover the Cartesian coordinates of <span class="math inline">\(P\)</span> from the polar form <span class="math inline">\((r, \theta)\)</span> of a complex number <span class="math inline">\(z\)</span> as
-<span class="math display">\[
-z = r \cos(\theta) + i (r \sin(\theta)) = r (\cos(\theta) + i \sin(\theta)),
-\]</span></p>
-<div class="theorem">
-<p><span id="thm:euler" class="theorem"><strong>Theorem 5.2  (Euler's formula) </strong></span>For any real number <span class="math inline">\(\theta\)</span>,
-<span class="math display">\[
-e^{i\theta}=\cos (\theta) + i \sin(\theta).
-\]</span></p>
-</div>
-<p>This can be derived from the power series of <span class="math inline">\(e^\theta, \sin(\theta)\)</span> and <span class="math inline">\(\cos(\theta)\)</span>. Eulers formula allows us to write any complex number <span class="math inline">\(z\)</span> in yet another form, the <em>exponential form</em> of <span class="math inline">\(z\)</span>:
-<span class="math display">\[
-z = r (\cos (\theta) + i \sin (\theta)) = re^{i\theta}.
-\]</span></p>
-<p>Note that since <span class="math inline">\(\sin\)</span> and <span class="math inline">\(\cos\)</span> are periodic with period <span class="math inline">\(2\pi\)</span>, there are actually an infinite number of ways of expressing a complex number in polar or exponential form; for any integer value of <span class="math inline">\(m\)</span>
-<span class="math display">\[re^{i(\theta+2m\pi)}=r(\cos(\theta+2m\pi)+i\sin(\theta+2m\pi))=r(\cos(\theta)+i\sin(\theta))=re^{i\theta}=w\]</span>
-so we can add any multiple of <span class="math inline">\(2m\pi\)</span> to <span class="math inline">\(\theta\)</span> and get the same complex number. Graphically, this corresponds to going around a full circle <span class="math inline">\(m\)</span> times in the complex plane and back to the same point.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:complexpolargeo"></span>
-<iframe src="https://www.geogebra.org/calculator/mvgafsek" width="672" height="400px" data-external="1">
-</iframe>
-<p class="caption">
-Figure 5.3: A complex number <span class="math inline">\(w=re^{i\theta}\)</span> plotted in the complex plane. Drag the sliders to vary <span class="math inline">\(\theta\)</span> and <span class="math inline">\(r\)</span>. <a href="https://www.geogebra.org/calculator/mvgafsek">[Open graph in browser.]</a>
-</p>
-</div>
-<p>The usual rules of exponents hold for complex exponentials, now using the rules of complex arithmetic. The exponential form is particularly nice when taking the product of two complex numbers. For <span class="math inline">\(z = re^{i\theta}\)</span> and <span class="math inline">\(w = se^{i\phi}\)</span>, we have
-<span class="math display">\[\begin{align*}
-u &amp;= (re^{i\theta}) \times (se^{i\phi})\\
-&amp;= rs e^{i(\theta + \phi)} \\
-&amp;= R e^{i\alpha},
-\end{align*}\]</span>
-where <span class="math inline">\(R = rs\)</span> is the distance of <span class="math inline">\(u\)</span> from the origin and <span class="math inline">\(\alpha = \theta + \phi\)</span> is the argument of <span class="math inline">\(u\)</span>.</p>
-<p><strong>Caution</strong>: For <span class="math inline">\(z = x + iy\)</span> (with <span class="math inline">\(x \neq 0\)</span>), if <span class="math inline">\(\theta = \arg(z)\)</span> then we always have <span class="math inline">\(\tan (\theta) = y/x\)</span>. However, this does not mean that <span class="math inline">\(\theta = \tan^{-1}(y/x)\)</span>. The <span class="math inline">\(\tan^{-1}\)</span> (or <span class="math inline">\(\arctan\)</span>) function can only give values in the first and fourth quadrants (between <span class="math inline">\(-\pi/2\)</span> and <span class="math inline">\(\pi/2\)</span>), but the argument of a complex number could be in any of the four quadrants (between <span class="math inline">\(-\pi\)</span> and <span class="math inline">\(\pi\)</span>). Therefore, to find the argument of a complex number always draw a diagram. (A quick sketch is all that is needed.)</p>
-</div>
-<div id="roots-of-complex-numbers" class="section level2 hasAnchor" number="5.4">
-<h2><span class="header-section-number">5.4</span> Roots of complex numbers<a href="complex.html#roots-of-complex-numbers" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>We know that square roots of positive real numbers have two solutions, for example <span class="math inline">\(\sqrt{4}=\pm 2\)</span>. This agrees with Theorem (thm:FTA) as we could formulate this as a solution to the equation</p>
-<p><span class="math display">\[x^2=4\]</span></p>
-<p>which is the quadratic</p>
-<p><span class="math display">\[x^2-4=0\]</span></p>
-<p>and so must have two roots. More generally, the <span class="math inline">\(n^\text{th}\)</span> root of any number <span class="math inline">\(w\)</span> can be formulated as the solutions to the polynomial equation</p>
-<p><span class="math display">\[z^n-w=0.\]</span></p>
-<p>Theorem (thm:FTA) implies that there are <span class="math inline">\(n\)</span> solutions, allowing for these to be complex numbers. Furthermore, it turns out that these roots will be distinct (no repeated roots). The easiest way to find these roots is using the exponential form. We can write <span class="math inline">\(w\)</span> as</p>
-<p><span class="math display">\[w=re^{i\theta}\]</span></p>
-<p>then the first <span class="math inline">\(n^\text{th}\)</span> root is</p>
-<p><span class="math display">\[w^{\frac{1}{n}}=(re^{i\theta})^\frac{1}{n}=r^\frac{1}{n}e^{i\frac{\theta}{n}}\]</span></p>
-<p>but where are the remaining <span class="math inline">\(n-1\)</span> roots? Well, since we can also write <span class="math inline">\(w=re^{i(\theta+2m\pi)}\)</span>, so</p>
-<p><span class="math display">\[w^{\frac{1}{n}}=r^{\frac{1}{n}}e^{i(\frac{\theta}{n}+\frac{2m}{n}\pi)}\]</span></p>
-<p>and we have a distinct solution for all values of <span class="math inline">\(m=0,\dotsc,n-1\)</span>. Once we reach <span class="math inline">\(m=n\)</span> we have gone full circle and are back to the original solution. To double check these are solutions, we can take them to the power <span class="math inline">\(n\)</span></p>
-<p><span class="math display">\[\begin{align*}
-(r^{\frac{1}{n}}e^{i(\frac{\theta}{n}+\frac{2m}{n}\pi)})^n&amp;=re^{in(\frac{\theta}{n}+\frac{2m}{n}\pi)}\\
-&amp;=re^{i(\frac{n\theta}{n}+\frac{2mn}{n}\pi)}\\
-&amp;=re^{i(\theta+2m\pi)}\\
-&amp;=re^{i\theta}\\
-&amp;=w.
-\end{align*}\]</span></p>
-<p>Geometrically, these <span class="math inline">\(n\)</span> solutions are evenly spaced around a circle of radius <span class="math inline">\(r^{\frac{1}{n}}\)</span> in the complex plane, with an angle of <span class="math inline">\(\frac{2}{n}\pi\)</span> between them.</p>
-<div class="example">
-<p><span id="exm:complexroots" class="example"><strong>Example 5.4  (Complex roots) </strong></span>Find the cube roots of <span class="math inline">\(z=2\)</span> and sketch them in the complex plane.</p>
-<p>We first write <span class="math inline">\(z=2+0i\)</span> in exponential form
-<span class="math display">\[z=2e^{i0}\]</span>
-then the solutions are
-<span class="math display">\[\begin{align*}
-w_1&amp;=\sqrt[3]{2}e^{i0}=\sqrt[3]{2}\\
-w_2&amp;=\sqrt[3]{2}e^{i(0+\frac{2\pi}{3})}=\sqrt[3]{2}e^{i\frac{2\pi}{3}}\\
-w_3&amp;=\sqrt[3]{2}e^{i(0+\frac{2(2)\pi}{3})}=\sqrt[3]{2}e^{i\frac{4\pi}{3}}
-\end{align*}\]</span></p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:complexrootsexmp"></span>
-<img src="figures/complexroots.png" alt="The cube roots of $2$ in the complex plane. Note they are evenly spaced around a circle of radius $\sqrt[3]{2}$."  />
-<p class="caption">
-Figure 5.4: The cube roots of <span class="math inline">\(2\)</span> in the complex plane. Note they are evenly spaced around a circle of radius <span class="math inline">\(\sqrt[3]{2}\)</span>.
-</p>
-</div>
-</div>
-</div>
-<div id="eitheta-and-trigonometric-identities" class="section level2 hasAnchor" number="5.5">
-<h2><span class="header-section-number">5.5</span> <span class="math inline">\(e^{i\theta}\)</span> and trigonometric identities<a href="complex.html#eitheta-and-trigonometric-identities" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>There are many double angle, and similar, formulas relating the various trig. functions. Remembering them can be quite a struggle. In fact we can recover them easily using complex numbers in polar form:
-<span class="math display">\[
-e^{i \theta} = \cos (\theta) + i \sin (\theta).
-\]</span>
-So for arbitrary <span class="math inline">\(\theta\)</span> and <span class="math inline">\(\phi\)</span>
-<span class="math display">\[
-e^{i \theta} e^{i \phi} = \begin{cases} (\cos (\theta) + i \sin (\theta)) \times (\cos (\phi) + i \sin (\phi)) &amp; \text{or} \\
-e^{i (\theta + \phi)} = \cos (\theta + \phi) + i \sin (\theta + \phi). \end{cases}
-\]</span>
-It follows that
-<span class="math display">\[\begin{align*}
-(\cos (\theta) + i \sin (\theta)) \times (\cos (\phi) + i \sin (\phi))
-&amp;= \cos (\theta) \cos (\phi) - \sin (\theta) \sin (\phi) + i (\cos (\theta) \sin (\phi) + \sin (\theta) \cos (\phi))\\
-&amp;= \cos (\theta + \phi) + i \sin (\theta + \phi)
-\end{align*}\]</span>
-and equating real and imaginary parts on the left and right hand sides gives:
-<span class="math display">\[
-\cos (\theta) \cos (\phi) - \sin (\theta) \sin (\phi)   = \cos (\theta + \phi) \qquad
-\text{and}\qquad \cos (\theta) \sin (\phi) + \sin (\theta) \cos (\phi) = \sin (\theta + \phi)
-\]</span></p>
-
-</div>
-</div>
-<div class="footnotes">
-<hr />
-<ol start="8">
-<li id="fn8"><p>Engineers often use the notation <span class="math inline">\(j\)</span> instead of <span class="math inline">\(i\)</span>.<a href="complex.html#fnref8" class="footnote-back">↩︎</a></p></li>
+<div id="exercise-set-12-answers" class="section level1 unlisted unnumbered hasAnchor">
+<h1>Exercise Set 12 Answers<a href="exercise-set-12-answers.html#exercise-set-12-answers" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<ol style="list-style-type: decimal">
+<li>Determine the following integrals by making use of trigonometric or hyperbolic identities.
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(\displaystyle \int_0^{\pi/4}4\sin(3\theta)\cos(\theta)d\theta\)</span></li>
+<li><span class="math inline">\(\displaystyle \int \left( \cos\left(\frac{x}{2}\right) - \sin\left(\frac{x}{2}\right)\right)^2 \, dx\)</span></li>
+<li><span class="math inline">\(\displaystyle \int \sin^3(x)\, dx\)</span></li>
+<li><span class="math inline">\(\displaystyle \int \frac{ \cos(2x)} { \cos^2(x) \sin^2(x)} \, dx\)</span></li>
+<li><span class="math inline">\(\displaystyle \int \cos(x) \sin(2x) \, dx\)</span></li>
+<li><span class="math inline">\(\displaystyle \int \tan(2x) \,dx\)</span></li>
+<li><span class="math inline">\(\displaystyle \int \sinh^3(x) \cosh^2(x)\)</span></li>
 </ol>
+Answers:
+<ol style="list-style-type: lower-alpha">
+<li><span class="math display">\[\int_0^{\frac{\pi}{4}}4\sin(3\theta)\cos(\theta)\, d\theta\]</span>
+Use the product to sum trigonometric identity: <span class="math inline">\(\sin(A)\cos(B) = \frac{1}{2}\left(\sin(A+B) + \sin(A+B)\right)\)</span>.
+<span class="math display">\[2\int_0^{\frac{\pi}{4}}\sin(4\theta) + \sin(2\theta)\, d\theta = 2\left[\frac{-\cos(4\theta)}{4} + \frac{-\cos(2\theta)}{2}\right]_0^{\frac{\pi}{4} = 2\left(\frac{1}{4} - 0 + \frac{1}{4}+\frac{1}{2}\right) = 2\]</span></li>
+<li><span class="math display">\[\int \left( \cos \frac{x}{2} - \sin \frac{x}{2}\right)^2 \, dx =  \int \left(\cos^2 \frac{x}{2}+\sin^2 \frac{x}{2}- \sin x \right) \, dx = \int \left(1 - \sin x \right) \, dx  =  x+\cos x+ C\]</span></li>
+<li><span class="math display">\[\int \sin^3 x \, dx = \int \sin x (1 - \cos^2 x) \, dx =  -\cos x + {1 \over 3} \cos^3 x + C\]</span></li>
+<li><span class="math display">\[\int \frac{ \cos 2x} { \cos^2 x \sin^2 x} \, dx= \int \frac{\cos^2x - \sin^2 x} { \cos^2 x \sin^2 x} \, dx=\int \left( \frac{1} { \sin^2 x } - \frac{1} { \cos^2 x} \right) \, dx= -\cot x -\tan x+C\]</span></li>
+<li><span class="math display">\[\int \cos x \sin 2x \, dx = \int 2 \sin x \cos^2 x  \, dx = -{2 \over 3} \cos^3 x + C\]</span>
+Having used <span class="math inline">\(\sin(2x) = 2\sin(x)\cos(x)\)</span> and using reverse chain rule (identifying that the integral was of the form <span class="math inline">\(g&#39;(x)f&#39;(g(x))\)</span>, with <span class="math inline">\(g&#39;(x) = \cos(x)\)</span>, <span class="math inline">\(f&#39;(x) = \cos^2(x)\)</span>. <span class="math inline">\(\int g&#39;(x)f&#39;(g(x))\, dx = f(g(x))\)</span>, since <span class="math inline">\(\frac{d}{dx} (f(g(x))) = g&#39;(x)f&#39;(g(x))\)</span>.
+Or, can use the product to sum identity again:
+<span class="math display">\[\int \cos x \sin 2x \, dx = \int \frac{1}{2} (\sin 3 x +\sin x) \, dx = - \frac{1}{6} \cos 3x - {1 \over 2} \cos x + C\]</span>.</li>
+<li><span class="math display">\[\int \tan 2x \,dx =  - {1  \over 2} \ln \vert \cos 2x \vert  + C = {1 \over 2} \ln \vert \sec 2 x \vert +C\]</span>
+Where <span class="math inline">\(\int\tan(x)dx\)</span> can be solved with substitution, by letting <span class="math inline">\(t =\cos(t)\)</span> and <span class="math inline">\(dx = \frac{dt}{-\sin(x)}\)</span>, so <span class="math inline">\(\int \frac{-1}{t}\, dt = -\ln(t) + C = \ln(\csc(x)) + c\)</span>. Alternatively, the integral of <span class="math inline">\(\tan(x)\)</span> can be identified as reverse chain rule: <span class="math inline">\(\int g&#39;(x)f&#39;(g(x))\,dx = f(g(x))\)</span>.</li>
+<li><span class="math display">\[\int \sinh^3 x \cosh^2 x \, dx = \int \sinh x (\cosh^2 x - 1) \cosh^2 x \, dx = - {1 \over 3} \cosh^3 x +{1 \over 5} \cosh^5 x +C, \]</span> having used <span class="math inline">\(\sinh^2(x) = 1 - \cosh^2(x)\)</span> and reverse chain rule, or substitution with <span class="math inline">\(u = \cosh(x)\)</span> and <span class="math inline">\(du = \sinh(x)dx\)</span>.</li>
+</ol></li>
+<li>Determine the following integrals using the method of partial fractions.
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(\displaystyle \int \frac{1}{x^2+x-6} \, dx\)</span></li>
+<li><span class="math inline">\(\displaystyle \int \frac{-12u-13}{(2u+1)(u-3)} \, du\)</span></li>
+<li><span class="math inline">\(\displaystyle \int \frac{4x^2+13x-4}{2x^2+5x-3}\, dx\)</span></li>
+<li><span class="math inline">\(\displaystyle \int \frac{x^3}{x^2-1}\, dx\)</span></li>
+<li><span class="math inline">\(\displaystyle \int \frac{x^5-2x^2}{x^2-1} \, dx\)</span></li>
+<li><span class="math inline">\(\displaystyle \int \frac{z+1}{(z-1)^2} \, dz\)</span></li>
+<li><span class="math inline">\(\displaystyle \int \frac{5y^2}{(y^2+1)(2y-1)} \, dy\)</span></li>
+</ol>
+Answers:
+<ol style="list-style-type: lower-alpha">
+<li><span class="math display">\[\frac{1}{x^2+x-6} = \frac{1}{(x+3)(x-2)} = \frac{A}{x+3}+\frac{B}{x-2} \frac{A(x-2) + B(x+3)}{(x+3)(x-2)}\]</span>
+Equating the powers of <span class="math inline">\(x\)</span> and solving the resulting simultaneous equations gives <span class="math inline">\(A + B = 0\)</span> and <span class="math inline">\(3B-2A = 1\)</span>, so <span class="math inline">\(A = -\frac{1}{5}. B = \frac{1}{5}\)</span>. So
+<span class="math display">\[\int\frac{1}{x^2+x-6}\,dx = \int \frac{-1}{5(x+3)} + \frac{1}{5(x-2)}\, dx = -\frac{1}{5}\ln(x+3) + \frac{1}{5}\ln(x-2) + c\]</span></li>
+<li><span class="math display">\[\frac{-12u - 13}{(2u+1)(u-3)} = \frac{A}{2u+1} + \frac{B}{u-3} = \frac{A(u-3) + B(2u+1)}{(2u+1)(u-3)}\]</span>
+With the numerator given two simultaneous equations solved by <span class="math inline">\(A=2,B=-7\)</span>. So
+<span class="math display">\[\int\frac{-12u-13}{(2u+1)(u-3)}\.du = \int \frac{2}{2u+1} + \frac{-7}{u-2}\.du = \ln(2u+1) - 7\ln(u-3) + c\]</span></li>
+<li><span class="math display">\[\frac{4x^2 + 13x - 4}{2x^2 + 5x - 3} = \frac{A}{2x-1} + \frac{B}{x+3} + C\]</span>
+Since the order of the numerator is equal to the order of the denominator, a constant term must be included. This gives three equations in <span class="math inline">\(A,B,C\)</span>, which are solved by <span class="math inline">\(A=1,B=1,C=2\)</span>. So
+<span class="math display">\[\int\frac{4x^2 + 13x - 4}{2x^2 + 5x - 3}\. dx = \int \frac{1}{2x-2} + \frac{1}{x+3} + 2 \. dx = \frac{1}{2}\ln(2x-1) + \ln(x+3) + 2x + c\]</span></li>
+<li><span class="math display">\[\frac{x^3}{x^2-1} = \frac{x^3}{(x+1)(x-1)} = \frac{A}{x+1} + \frac{B}{x-1} + Cx + D\]</span>
+since the numerator is one order higher than the denominator, a linear term must be included.
+<span class="math display">\[\frac{A(x-1) + B(x+1) + Cx(x^2-1) + D(x^2-1)}{x^2-1} = \frac{x^3}{x^2-1}\]</span>
+Giving <span class="math inline">\(A+B=1, B-A = 0 and C=1\)</span>. So <span class="math inline">\(A=\frac{1}{2}, B=\frac{1}{2}, C=1\)</span> and
+<span class="math display">\[\int\frac{x^3}{x^2-1}\. dx = \int \frac{1}{2(x+1)} + \frac{1}{2(x-1)} + 1\. dx = \frac{1}{2}\ln(x+1) + \frac{1}{2}\ln(x-1) + x + c = \frac{1}{2}\ln(x^2-1) + x + c = \ln((x^2-1)^{\frac{1}{2}}) + c + c\]</span></li>
+<li><span class="math display">\[\frac{z+1}{(x-1)^2} = \frac{A}{z-1} + \frac{B}{(x-1)^2}\]</span>
+Since there is a repeated root of the form <span class="math inline">\((z-\alpha)^n\)</span>, so the first <span class="math inline">\(n\)</span> powers of <span class="math inline">\((z-\alpha)\)</span> must appear as denominators in the partial fractions exapnsion.
+<span class="math display">\[\frac{A}{z-1} + \frac{B}{(z-1)^2} = \frac{A(z-1) + B}{(z-1)^2} = \frac{z+1}{(z-1)^2}\]</span>
+The numerator is solved by <span class="math inline">\(A=1\)</span> and <span class="math inline">\(B=3\)</span>, so
+<span class="math display">\[\int \frac{z+1}{(z-1)^2}\,dz = \int \frac{1}{z-1} + \frac{3}{(z-1)^2} \. dz = \ln(z-1) - (z-1)^{-3} + c\]</span></li>
+<li><span class="math display">\[\frac{5y^2}{(y^2+1)(2y-1)} = \frac{Ay+B}{y^2+1} + \frac{C}{2y-1}\]</span>
+with the numerator of the first partial fraction being a linear polynomial since the quadratic in the denominator is irreducible.
+<span class="math display">\[
+\frac{(Ay+B)(2y-1) + C(y^2+1)}{(y^2+1)(2y-1)} = \frac{2Ay^2 - Ay + 2By - B + Cy^2 + 1}{(y^2+1)(2y-1)} = \frac{5y^2}{(y^2+1)(2y-1)}\]</span>
+Equating the powers of <span class="math inline">\(y\)</span> gives
+<span class="math display">\[2A+C = 5,\quad 2B-A = 0,\quad 1-B = 0\\
+\Rightarrow A=2,B=1,C=1\]</span>
+so the integral can be rewritten as the partial fractions
+<span class="math display">\[
+\int \frac{5y^2}{(y^2+1)(2y-1)}\;dy = \int \frac{2y+1}{y^2+1} + \frac{1}{2y-1}\. dy = \tan^{-1}(y) + \ln(y^2+1) + \frac{1}{2}\ln(2y-1) + c\]</span></li>
+</ol></li>
+<li>Determine the following integrals using the method of integration by parts.
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(\displaystyle \int x \cos(x) \,dx\)</span></li>
+<li><span class="math inline">\(\displaystyle \int t^2 e^{t} \, dt\)</span></li>
+<li><span class="math inline">\(\displaystyle \int e^{x}\sin(x) \, dx\)</span></li>
+<li><span class="math inline">\(\displaystyle \int (x+1)^2 e^{-2x} \, dx\)</span></li>
+<li>$^{-1}(x) , dx $.</li>
+</ol>
+Answers:
+<ol style="list-style-type: lower-alpha">
+<li>Using integration by parts, <span class="math inline">\(\int u\,dv = uv - \int v\,du\)</span> with <span class="math inline">\(u=x\)</span> and <span class="math inline">\(dv = \cos(x)\)</span>
+<span class="math display">\[\int x \cos (x) \, dx = x \sin (x) - \int \sin (x) \, dx = x \sin (x) + \cos (x) + C \]</span></li>
+<li>Let <span class="math inline">\(u = t^2, du = 2t, dv = e^t, v = e^t\)</span>
+<span class="math display">\[\int t^2 e^t \,dt = t^2e^t - \int 2te^t \,dt\]</span>
+Here, perform integration by parts once again. Let <span class="math inline">\(u=t, du = 1, dv = e^t, v = e^t\)</span>
+<span class="math display">\[\int te^t \,dt = te^t - \int e^t \,dt = (t-1)e^t\]</span>
+and the orignal integral becomes
+<span class="math display">\[\int t^2 e^t\,dt = t^2 e^t - 2\int te^t\,dt = t^2 e^t - 2(t-1)e^t = (t^2 -2t + 2)e^t + c\]</span></li>
+<li>Integrating by parts, <span class="math inline">\(\int f\,dg = fg - \int g\,df\)</span> with <span class="math inline">\(f = \sin(x),df = \cos(x), dv = e^x, v = e^x\)</span>.
+<span class="math display">\[
+\int e^x \sin(x)\,dx = e^x \sin(x) - \int e^x \cos(x)\,dx\]</span>
+And we are still left with an integral that must be solved by parts. It looks like this cycle might keep repeating, but in fact, trying out the next step will reveal the answer. Let <span class="math inline">\(u= \cos(x),du=-\sin(x), dv=e^x,v=e^x\)</span>
+<span class="math display">\[\int e^x \cos(x) \,dx = e^x \cos(x) + \int e^x \sin(x)\,dx\]</span>
+And examining the original integral we see that $e^x (x),dx appears on both sides:
+<span class="math display">\[
+\int e^x \sin(x)\,dx = e^x\sin(x) - \left(e^x\cos(x)+\int e^x \sin(x)\,dx\right)\\
+2\int e^x \sin(x)\,dx = e^x\sin(x) - e^x\cos(x)\\
+\int e^x \sin(x)\,dx = \frac{1}{2}e^x\left(\sin(x)-\cos(x)\right) + c\]</span></li>
+<li><span class="math display">\[\int (x+1)^2 e^{-2x} \, dx = -{1 \over 2}(x+1)^2 e^{-2x} + \int (x+1) e^{-2x} \, dx = -{1 \over 2}(x+1)^2 e^{-2x} - {1 \over 2}(x+1) e^{-2x}\]</span></li>
+<li><span class="math display">\[y = \sin^{-1} x \Rightarrow \sin y = x \Rightarrow  \cos y {{dy}\over{dx}} = 1 \Rightarrow {{dy}\over{dx}} =  (1 - x^2)^{-1/2} } $, so \\[2ex]
+{ \int \sin^{-1} x \, dx = x \sin^{-1} x - \int x (1-x^2)^{-1/2} \, dx = x \sin^{-1} x + (1 - x^2)^{1/2} + C \]</span></li>
+</ol></li>
+</ol>
+
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="trigonometry.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="vectors.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="exercise-set-11-answers.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="exercise-set-12.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -604,7 +478,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/maths-sci-eng/maths-sci-eng.github.io/edit/master/05-complex.Rmd",
+"link": "https://github.com/maths-sci-eng/maths-sci-eng.github.io/edit/master/42-exercises12_ans.Rmd",
 "text": "Edit"
 },
 "history": {

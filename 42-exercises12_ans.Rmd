@@ -1,0 +1,100 @@
+# Exercise Set 12 Answers {.unlisted .unnumbered}
+
+1. Determine the following integrals by making use of trigonometric or hyperbolic identities.
+    a. $\displaystyle \int_0^{\pi/4}4\sin(3\theta)\cos(\theta)d\theta$
+    a. $\displaystyle \int \left( \cos\left(\frac{x}{2}\right) - \sin\left(\frac{x}{2}\right)\right)^2 \, dx$
+    a. $\displaystyle \int \sin^3(x)\, dx$
+    a. $\displaystyle \int \frac{ \cos(2x)} { \cos^2(x) \sin^2(x)} \, dx$
+    a. $\displaystyle \int \cos(x) \sin(2x) \, dx$
+    a. $\displaystyle \int \tan(2x) \,dx$
+    a. $\displaystyle \int \sinh^3(x) \cosh^2(x)$
+
+    Answers:
+    a. $$\int_0^{\frac{\pi}{4}}4\sin(3\theta)\cos(\theta)\, d\theta$$
+    Use the product to sum trigonometric identity: $\sin(A)\cos(B) = \frac{1}{2}\left(\sin(A+B) + \sin(A+B)\right)$.
+    $$2\int_0^{\frac{\pi}{4}}\sin(4\theta) + \sin(2\theta)\, d\theta = 2\left[\frac{-\cos(4\theta)}{4} + \frac{-\cos(2\theta)}{2}\right]_0^{\frac{\pi}{4} = 2\left(\frac{1}{4} - 0 + \frac{1}{4}+\frac{1}{2}\right) = 2$$
+    a. $$\int \left( \cos \frac{x}{2} - \sin \frac{x}{2}\right)^2 \, dx =  \int \left(\cos^2 \frac{x}{2}+\sin^2 \frac{x}{2}- \sin x \right) \, dx = \int \left(1 - \sin x \right) \, dx  =  x+\cos x+ C$$
+    a. $$\int \sin^3 x \, dx = \int \sin x (1 - \cos^2 x) \, dx =  -\cos x + {1 \over 3} \cos^3 x + C$$
+    a. $$\int \frac{ \cos 2x} { \cos^2 x \sin^2 x} \, dx= \int \frac{\cos^2x - \sin^2 x} { \cos^2 x \sin^2 x} \, dx=\int \left( \frac{1} { \sin^2 x } - \frac{1} { \cos^2 x} \right) \, dx= -\cot x -\tan x+C$$
+    a. $$\int \cos x \sin 2x \, dx = \int 2 \sin x \cos^2 x  \, dx = -{2 \over 3} \cos^3 x + C$$
+    Having used $\sin(2x) = 2\sin(x)\cos(x)$ and using reverse chain rule (identifying that the integral was of the form $g'(x)f'(g(x))$, with $g'(x) = \cos(x)$, $f'(x) = \cos^2(x)$. $\int g'(x)f'(g(x))\, dx = f(g(x))$, since $\frac{d}{dx} (f(g(x))) = g'(x)f'(g(x))$.
+    Or, can use the product to sum identity again:
+    $$\int \cos x \sin 2x \, dx = \int \frac{1}{2} (\sin 3 x +\sin x) \, dx = - \frac{1}{6} \cos 3x - {1 \over 2} \cos x + C$$.
+    a. $$\int \tan 2x \,dx =  - {1  \over 2} \ln \vert \cos 2x \vert  + C = {1 \over 2} \ln \vert \sec 2 x \vert +C$$
+    Where $\int\tan(x)dx$ can be solved with substitution, by letting $t =\cos(t)$ and $dx = \frac{dt}{-\sin(x)}$, so $\int \frac{-1}{t}\, dt = -\ln(t) + C = \ln(\csc(x)) + c$. Alternatively, the integral of $\tan(x)$ can be identified as reverse chain rule: $\int g'(x)f'(g(x))\,dx = f(g(x))$.
+    a. $$\int \sinh^3 x \cosh^2 x \, dx = \int \sinh x (\cosh^2 x - 1) \cosh^2 x \, dx = - {1 \over 3} \cosh^3 x +{1 \over 5} \cosh^5 x +C, $$ having used $\sinh^2(x) = 1 - \cosh^2(x)$ and reverse chain rule, or substitution with $u = \cosh(x)$ and $du = \sinh(x)dx$.
+    
+    
+    
+1. Determine the following integrals using the method of partial fractions.
+    a. $\displaystyle \int \frac{1}{x^2+x-6} \, dx$
+    a. $\displaystyle \int \frac{-12u-13}{(2u+1)(u-3)} \, du$
+    a. $\displaystyle \int \frac{4x^2+13x-4}{2x^2+5x-3}\, dx$
+    a. $\displaystyle \int \frac{x^3}{x^2-1}\, dx$
+    a. $\displaystyle \int \frac{x^5-2x^2}{x^2-1} \, dx$
+    a. $\displaystyle \int \frac{z+1}{(z-1)^2} \, dz$
+    a. $\displaystyle \int \frac{5y^2}{(y^2+1)(2y-1)} \, dy$
+
+    Answers:
+    a. $$\frac{1}{x^2+x-6} = \frac{1}{(x+3)(x-2)} = \frac{A}{x+3}+\frac{B}{x-2} \frac{A(x-2) + B(x+3)}{(x+3)(x-2)}$$
+    Equating the powers of $x$ and solving the resulting simultaneous equations gives $A + B = 0$ and $3B-2A = 1$, so $A = -\frac{1}{5}. B = \frac{1}{5}$. So
+    $$\int\frac{1}{x^2+x-6}\,dx = \int \frac{-1}{5(x+3)} + \frac{1}{5(x-2)}\, dx = -\frac{1}{5}\ln(x+3) + \frac{1}{5}\ln(x-2) + c$$
+    a. $$\frac{-12u - 13}{(2u+1)(u-3)} = \frac{A}{2u+1} + \frac{B}{u-3} = \frac{A(u-3) + B(2u+1)}{(2u+1)(u-3)}$$
+    With the numerator given two simultaneous equations solved by $A=2,B=-7$. So
+    $$\int\frac{-12u-13}{(2u+1)(u-3)}\.du = \int \frac{2}{2u+1} + \frac{-7}{u-2}\.du = \ln(2u+1) - 7\ln(u-3) + c$$
+    a. $$\frac{4x^2 + 13x - 4}{2x^2 + 5x - 3} = \frac{A}{2x-1} + \frac{B}{x+3} + C$$
+    Since the order of the numerator is equal to the order of the denominator, a constant term must be included. This gives three equations in $A,B,C$, which are solved by $A=1,B=1,C=2$. So
+    $$\int\frac{4x^2 + 13x - 4}{2x^2 + 5x - 3}\. dx = \int \frac{1}{2x-2} + \frac{1}{x+3} + 2 \. dx = \frac{1}{2}\ln(2x-1) + \ln(x+3) + 2x + c$$
+    a. $$\frac{x^3}{x^2-1} = \frac{x^3}{(x+1)(x-1)} = \frac{A}{x+1} + \frac{B}{x-1} + Cx + D$$
+    since the numerator is one order higher than the denominator, a linear term must be included.
+    $$\frac{A(x-1) + B(x+1) + Cx(x^2-1) + D(x^2-1)}{x^2-1} = \frac{x^3}{x^2-1}$$
+    Giving $A+B=1, B-A = 0 and C=1$. So $A=\frac{1}{2}, B=\frac{1}{2}, C=1$ and
+    $$\int\frac{x^3}{x^2-1}\. dx = \int \frac{1}{2(x+1)} + \frac{1}{2(x-1)} + 1\. dx = \frac{1}{2}\ln(x+1) + \frac{1}{2}\ln(x-1) + x + c = \frac{1}{2}\ln(x^2-1) + x + c = \ln((x^2-1)^{\frac{1}{2}}) + c + c$$
+    a. $$\frac{z+1}{(x-1)^2} = \frac{A}{z-1} + \frac{B}{(x-1)^2}$$
+    Since there is a repeated root of the form $(z-\alpha)^n$, so the first $n$ powers of $(z-\alpha)$ must appear as denominators in the partial fractions exapnsion.
+    $$\frac{A}{z-1} + \frac{B}{(z-1)^2} = \frac{A(z-1) + B}{(z-1)^2} = \frac{z+1}{(z-1)^2}$$
+    The numerator is solved by $A=1$ and $B=3$, so
+    $$\int \frac{z+1}{(z-1)^2}\,dz = \int \frac{1}{z-1} + \frac{3}{(z-1)^2} \. dz = \ln(z-1) - (z-1)^{-3} + c$$
+    a. $$\frac{5y^2}{(y^2+1)(2y-1)} = \frac{Ay+B}{y^2+1} + \frac{C}{2y-1}$$
+    with the numerator of the first partial fraction being a linear polynomial since the quadratic in the denominator is irreducible.
+    $$
+    \frac{(Ay+B)(2y-1) + C(y^2+1)}{(y^2+1)(2y-1)} = \frac{2Ay^2 - Ay + 2By - B + Cy^2 + 1}{(y^2+1)(2y-1)} = \frac{5y^2}{(y^2+1)(2y-1)}$$
+    Equating the powers of $y$ gives
+    $$2A+C = 5,\quad 2B-A = 0,\quad 1-B = 0\\
+    \Rightarrow A=2,B=1,C=1$$
+    so the integral can be rewritten as the partial fractions
+    $$
+    \int \frac{5y^2}{(y^2+1)(2y-1)}\;dy = \int \frac{2y+1}{y^2+1} + \frac{1}{2y-1}\. dy = \tan^{-1}(y) + \ln(y^2+1) + \frac{1}{2}\ln(2y-1) + c$$
+    
+    
+    
+    
+1. Determine the following integrals using the method of integration by parts.
+    a. $\displaystyle \int x \cos(x) \,dx$
+    a. $\displaystyle \int t^2 e^{t} \, dt$
+    a. $\displaystyle \int e^{x}\sin(x) \, dx$
+    a. $\displaystyle \int (x+1)^2 e^{-2x} \, dx$
+    a. $\displaystyle \int \sin^{-1}(x) \, dx $.
+    
+    Answers:
+    a. Using integration by parts, $\int u\,dv = uv - \int v\,du$ with $u=x$ and $dv = \cos(x)$
+    $$\int x \cos (x) \, dx = x \sin (x) - \int \sin (x) \, dx = x \sin (x) + \cos (x) + C $$
+    a. Let $u = t^2, du = 2t, dv = e^t, v = e^t$
+    $$\int t^2 e^t \,dt = t^2e^t - \int 2te^t \,dt$$
+    Here, perform integration by parts once again. Let $u=t, du = 1, dv = e^t, v = e^t$
+    $$\int te^t \,dt = te^t - \int e^t \,dt = (t-1)e^t$$
+    and the orignal integral becomes
+    $$\int t^2 e^t\,dt = t^2 e^t - 2\int te^t\,dt = t^2 e^t - 2(t-1)e^t = (t^2 -2t + 2)e^t + c$$
+    a. Integrating by parts, $\int f\,dg = fg - \int g\,df$ with $f = \sin(x),df = \cos(x), dv = e^x, v = e^x$.
+    $$
+    \int e^x \sin(x)\,dx = e^x \sin(x) - \int e^x \cos(x)\,dx$$
+    And we are still left with an integral that must be solved by parts. It looks like this cycle might keep repeating, but in fact, trying out the next step will reveal the answer. Let $u= \cos(x),du=-\sin(x), dv=e^x,v=e^x$
+    $$\int e^x \cos(x) \,dx = e^x \cos(x) + \int e^x \sin(x)\,dx$$
+    And examining the original integral we see that $\int e^x \sin(x)\,dx appears on both sides:
+    $$
+    \int e^x \sin(x)\,dx = e^x\sin(x) - \left(e^x\cos(x)+\int e^x \sin(x)\,dx\right)\\
+    2\int e^x \sin(x)\,dx = e^x\sin(x) - e^x\cos(x)\\
+    \int e^x \sin(x)\,dx = \frac{1}{2}e^x\left(\sin(x)-\cos(x)\right) + c$$
+    a. $$\int (x+1)^2 e^{-2x} \, dx = -{1 \over 2}(x+1)^2 e^{-2x} + \int (x+1) e^{-2x} \, dx = -{1 \over 2}(x+1)^2 e^{-2x} - {1 \over 2}(x+1) e^{-2x}$$
+    a. $$y = \sin^{-1} x \Rightarrow \sin y = x \Rightarrow  \cos y {{dy}\over{dx}} = 1 \Rightarrow {{dy}\over{dx}} =  (1 - x^2)^{-1/2} } $, so \\[2ex]
+    { \int \sin^{-1} x \, dx = x \sin^{-1} x - \int x (1-x^2)^{-1/2} \, dx = x \sin^{-1} x + (1 - x^2)^{1/2} + C $$
