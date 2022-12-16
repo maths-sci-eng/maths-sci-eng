@@ -23,7 +23,7 @@
 <meta name="author" content="Dr Mark Callaway" />
 
 
-<meta name="date" content="2022-12-15" />
+<meta name="date" content="2022-12-16" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -973,14 +973,15 @@
 <li>Middle Quartile = Median (<span class="math inline">\(Q_2\)</span>): 50% of the data falls before <span class="math inline">\(Q_2\)</span></li>
 <li>Upper Quartile (<span class="math inline">\(Q_3\)</span>): 75% of the data falls before <span class="math inline">\(Q_3\)</span></li>
 </ul>
-<p>These can be estimated from the ogive plot. In our widget length example, we have</p>
+<p>These can be estimated from the ogive plot by drawing horizontal lines from the 25%, 50% and 75% values on the vertical axis to the ogive curve, and dropping vertical lines to the horizontal axis. In our widget length example, we have:</p>
 <p><img src="maths-notes_files/figure-html/ogiveqs-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>with the estimates <span class="math inline">\(Q_1\approx 20.68\)</span>, <span class="math inline">\(Q_2\approx 20.79\)</span>, <span class="math inline">\(Q_3\approx 20.895\)</span>.</p>
 <p>The <em>interquartile range</em> is defined as
 <span class="math display">\[IQR=Q_3-Q_1\]</span>
-and is a measure of the spread of the data. For our widget lengths we have <span class="math inline">\(IQR=\)</span></p>
-<p>A related plot is the <em>box plot</em>, which includes the LQ, UQ, Median and extreme values.
+and is a measure of the spread of the data. For our widget lengths we have <span class="math inline">\(IQR\approx 20.895-20.68=0.215\)</span>.</p>
+<p>A related plot is the <em>box plot</em>, which includes <span class="math inline">\(Q_1\)</span>, <span class="math inline">\(Q_2\)</span> (median), <span class="math inline">\(Q_3\)</span> and the extreme values.
 <img src="maths-notes_files/figure-html/boxplot-1.png" width="672" style="display: block; margin: auto;" /></p>
-<p>More generally, we define the <span class="math inline">\(k^\text{th}\)</span> <em>percentile</em> <span class="math inline">\(p\)</span> as the value for which <span class="math inline">\(k\)</span>% of the data falls before <span class="math inline">\(p\)</span>. For example, the <span class="math inline">\(25^{\text{th}}\)</span> percentile is the same thing as <span class="math inline">\(Q_1\)</span>.</p>
+<p>More generally, we define the <span class="math inline">\(k^\text{th}\)</span> <em>percentile</em> <span class="math inline">\(P_k\)</span> as the value for which <span class="math inline">\(k\)</span>% of the data falls before <span class="math inline">\(P_k\)</span>. For example, the <span class="math inline">\(25^{\text{th}}\)</span> percentile is <span class="math inline">\(P_{25}=Q_1\)</span>.</p>
 </div>
 <div id="variance-and-standard-deviation-1" class="section level3 hasAnchor" number="20.10.3">
 <h3><span class="header-section-number">20.10.3</span> Variance and Standard Deviation<a href="statistics.html#variance-and-standard-deviation-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -988,7 +989,7 @@ and is a measure of the spread of the data. For our widget lengths we have <span
 <span class="math display">\[\sigma^2=\frac{1}{N} \sum_{i=1}^N (x_i - \mu)^2\]</span>
 but if we only have a sample of <span class="math inline">\(n&lt;N\)</span> observations, we use
 <span class="math display">\[S^2=\frac{1}{n-1} \sum_{i=1}^n (x_i - \bar{x})^2\]</span>
-Why do we divide by <span class="math inline">\(n-1\)</span> and not <span class="math inline">\(n\)</span>? This gives a more accurate estimate of the population variance (see <a href="https://en.wikipedia.org/wiki/Variance#Sample_variance">wikipedia</a>).</p>
+Why do we divide by <span class="math inline">\(n-1\)</span> and not <span class="math inline">\(n\)</span>? This gives a more accurate estimate of the population variance (see this <a href="https://en.wikipedia.org/wiki/Variance#Sample_variance">wikipedia</a> article for more details).</p>
 <p>As the units of variance are the squared units of the data, it is usually more useful to take the square root to obtain a measure with the same units as the data. This is called the <em>standard deviation</em>:</p>
 <p><span class="math display">\[S=\sqrt{S^2}=\sqrt{\frac{1}{n-1} \sum_{i=1}^n (x_i - \bar{x})^2}.\]</span></p>
 <p>We can find <span class="math inline">\(S\)</span> in a convenient way by tabulating the values in the sum. For our second data set above we have <span class="math inline">\(\bar{x}=\frac{1}{n}\sum_{i=1}^nx_i=140/5=28\)</span>. Then,</p>

@@ -264,7 +264,7 @@ The *quartiles* are the values that split the cumulative data into quarters.
 * Upper Quartile ($Q_3$): 75% of the data falls before $Q_3$
 
 
-These can be estimated from the ogive plot. In our widget length example, we have
+These can be estimated from the ogive plot by drawing horizontal lines from the 25%, 50% and 75% values on the vertical axis to the ogive curve, and dropping vertical lines to the horizontal axis. In our widget length example, we have:
 
 
 ```{r ogiveqs, echo = FALSE}
@@ -280,17 +280,20 @@ lines(c(0,20.895),c(30,30), col = "blue")
 lines(c(20.895,20.895),c(30,0), col = "blue")
 ```
 
+with the estimates $Q_1\approx 20.68$, $Q_2\approx 20.79$, $Q_3\approx 20.895$.
+
 The *interquartile range*  is defined as
 $$IQR=Q_3-Q_1$$
-and is a measure of the spread of the data. For our widget lengths we have $IQR=$
+and is a measure of the spread of the data. For our widget lengths we have $IQR\approx 20.895-20.68=0.215$.
 
-A related plot is the *box plot*, which includes the LQ, UQ, Median and extreme values.
+A related plot is the *box plot*, which includes $Q_1$, $Q_2$ (median), $Q_3$ and the extreme values.
 ```{r boxplot}
 y <- c(20.9,20.57,20.86,20.74,20.82,20.63,20.53,20.89,20.75,20.65,20.71,21.03,20.72,20.41,20.94,20.75,20.79,20.65,21.08,20.89,20.5,20.88,20.97,20.78,20.61,20.92,21.07,21.16,20.8,20.77,20.82,20.72,20.6,20.9,20.86,20.68,20.75,20.88,20.56,20.94)
 boxplot(y, main = "Widget lengths", xlab = "length (mm)", ylab = "Sample of 40 widgets", horizontal = TRUE)
+text(c(20.675,20.785,20.895,20.41,21.15),c(1.25), c("Q1","Q2","Q3","min","max"),col = "blue")
 ```
 
-More generally, we define the $k^\text{th}$ *percentile* $p$ as the value for which $k$% of the data falls before $p$. For example, the $25^{\text{th}}$ percentile is the same thing as $Q_1$.
+More generally, we define the $k^\text{th}$ *percentile* $P_k$ as the value for which $k$% of the data falls before $P_k$. For example, the $25^{\text{th}}$ percentile is $P_{25}=Q_1$.
 
 
 ### Variance and Standard Deviation
@@ -300,7 +303,7 @@ The variance is the average of the squared deviations from the mean. This tells 
 $$\sigma^2=\frac{1}{N} \sum_{i=1}^N (x_i - \mu)^2$$
 but if we only have a sample of $n<N$ observations, we use
 $$S^2=\frac{1}{n-1} \sum_{i=1}^n (x_i - \bar{x})^2$$
-Why do we divide by $n-1$ and not $n$? This gives a more accurate estimate of the population variance (see [wikipedia](https://en.wikipedia.org/wiki/Variance#Sample_variance)).
+Why do we divide by $n-1$ and not $n$? This gives a more accurate estimate of the population variance (see this [wikipedia](https://en.wikipedia.org/wiki/Variance#Sample_variance) article for more details).
 
 As the units of variance are the squared units of the data, it is usually more useful to take the square root to obtain a measure with the same units as the data. This is called the *standard deviation*:
 
