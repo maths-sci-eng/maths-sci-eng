@@ -327,6 +327,7 @@ normal-distribution
 standard-normal-distribution-tables
 the-law-of-large-numbers
 central-limit-theorem
+statistics
 frequency
 tables
 graphs

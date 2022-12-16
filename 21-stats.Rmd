@@ -1,4 +1,4 @@
-# Statistics {-}
+# Statistics
 
 Statistics is the branch of mathematics that is primarily concerned with the collection, summarisation and interpretation of data. Data consist of sets of recorded observations or values. There are three broad types of data:
 
