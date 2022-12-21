@@ -21,6 +21,11 @@ Contact: m.callaway@exeter.ac.uk
 Recommended text: Engineering Mathematics, John Bird. Available online through the UoE library here: <https://encore.exeter.ac.uk/iii/encore/record/C__Rb4511752>
 
 
+## Acknowledgements {-}
+
+Thank you to my colleagues who have contributed to these notes by sharing lecture materials: Dr TJ McKinley, Dr Houry Melkonian, Dr Markus Mueller and Prof Stuart Townley. Thank you to Ed Branford for his contributions to the exercise solutions.
+
+
 ```{r, include=FALSE}
 knitr::opts_chunk$set(
   comment = "#>", echo = FALSE, fig.align = 'center'

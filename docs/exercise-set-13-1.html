@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Exercise Set 13 | Mathematics for Scientists and Engineers</title>
+  <meta name="description" content="Mathematics Lecture Notes for UoE Penryn Science and Engineering Disciplines." />
+  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Exercise Set 13 | Mathematics for Scientists and Engineers" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Mathematics Lecture Notes for UoE Penryn Science and Engineering Disciplines." />
+  <meta name="github-repo" content="maths-sci-eng/maths-sci-eng.github.io" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Exercise Set 13 | Mathematics for Scientists and Engineers" />
+  
+  <meta name="twitter:description" content="Mathematics Lecture Notes for UoE Penryn Science and Engineering Disciplines." />
+  
+
+<meta name="author" content="Dr Mark Callaway" />
+
+
+<meta name="date" content="2022-12-21" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="exercise-set-13.html"/>
+<link rel="next" href="exercise-set-14.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<link href="libs/bsTable-3.3.7/bootstrapTable.min.css" rel="stylesheet" />
+<script src="libs/bsTable-3.3.7/bootstrapTable.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Mathematics for Scientists and Engineers</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#acknowledgements"><i class="fa fa-check"></i>Acknowledgements</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="foundations.html"><a href="foundations.html"><i class="fa fa-check"></i><b>1</b> Foundations</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="foundations.html"><a href="foundations.html#numbers"><i class="fa fa-check"></i><b>1.1</b> Numbers</a></li>
+<li class="chapter" data-level="1.2" data-path="foundations.html"><a href="foundations.html#algebra"><i class="fa fa-check"></i><b>1.2</b> Algebra</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="foundations.html"><a href="foundations.html#exponents"><i class="fa fa-check"></i><b>1.2.1</b> Rules of Exponents</a></li>
+<li class="chapter" data-level="1.2.2" data-path="foundations.html"><a href="foundations.html#brackets"><i class="fa fa-check"></i><b>1.2.2</b> Brackets</a></li>
+<li class="chapter" data-level="1.2.3" data-path="foundations.html"><a href="foundations.html#simplifiying-expressions"><i class="fa fa-check"></i><b>1.2.3</b> Simplifiying Expressions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="equations-and-inequalities.html"><a href="equations-and-inequalities.html"><i class="fa fa-check"></i><b>2</b> Equations and Inequalities</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="equations-and-inequalities.html"><a href="equations-and-inequalities.html#equations"><i class="fa fa-check"></i><b>2.1</b> Equations</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="equations-and-inequalities.html"><a href="equations-and-inequalities.html#formulas"><i class="fa fa-check"></i><b>2.1.1</b> Formulas</a></li>
+<li class="chapter" data-level="2.1.2" data-path="equations-and-inequalities.html"><a href="equations-and-inequalities.html#conditional-equations"><i class="fa fa-check"></i><b>2.1.2</b> Conditional equations</a></li>
+<li class="chapter" data-level="2.1.3" data-path="equations-and-inequalities.html"><a href="equations-and-inequalities.html#quad-eqs"><i class="fa fa-check"></i><b>2.1.3</b> Quadratic equations</a></li>
+<li class="chapter" data-level="2.1.4" data-path="equations-and-inequalities.html"><a href="equations-and-inequalities.html#simultaneous-equations"><i class="fa fa-check"></i><b>2.1.4</b> Simultaneous equations</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="equations-and-inequalities.html"><a href="equations-and-inequalities.html#inequalities"><i class="fa fa-check"></i><b>2.2</b> Inequalities</a></li>
+<li class="chapter" data-level="2.3" data-path="equations-and-inequalities.html"><a href="equations-and-inequalities.html#common-mistakes"><i class="fa fa-check"></i><b>2.3</b> Common mistakes!</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="functions-and-graphs.html"><a href="functions-and-graphs.html"><i class="fa fa-check"></i><b>3</b> Functions and Graphs</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="functions-and-graphs.html"><a href="functions-and-graphs.html#lines"><i class="fa fa-check"></i><b>3.1</b> Lines</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="functions-and-graphs.html"><a href="functions-and-graphs.html#parallel-lines"><i class="fa fa-check"></i><b>3.1.1</b> Parallel lines</a></li>
+<li class="chapter" data-level="3.1.2" data-path="functions-and-graphs.html"><a href="functions-and-graphs.html#perpendicular-lines"><i class="fa fa-check"></i><b>3.1.2</b> Perpendicular lines</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="functions-and-graphs.html"><a href="functions-and-graphs.html#polynomials"><i class="fa fa-check"></i><b>3.2</b> Polynomials</a></li>
+<li class="chapter" data-level="3.3" data-path="functions-and-graphs.html"><a href="functions-and-graphs.html#rational-functions"><i class="fa fa-check"></i><b>3.3</b> Rational functions</a></li>
+<li class="chapter" data-level="3.4" data-path="functions-and-graphs.html"><a href="functions-and-graphs.html#root-functions"><i class="fa fa-check"></i><b>3.4</b> Root functions</a></li>
+<li class="chapter" data-level="3.5" data-path="functions-and-graphs.html"><a href="functions-and-graphs.html#trigonometric-functions"><i class="fa fa-check"></i><b>3.5</b> Trigonometric functions</a></li>
+<li class="chapter" data-level="3.6" data-path="functions-and-graphs.html"><a href="functions-and-graphs.html#exponentials-and-logarithms"><i class="fa fa-check"></i><b>3.6</b> Exponentials and logarithms</a>
+<ul>
+<li class="chapter" data-level="3.6.1" data-path="functions-and-graphs.html"><a href="functions-and-graphs.html#logarthmic-plots"><i class="fa fa-check"></i><b>3.6.1</b> Logarthmic plots</a></li>
+</ul></li>
+<li class="chapter" data-level="3.7" data-path="functions-and-graphs.html"><a href="functions-and-graphs.html#hyperbolic-functions"><i class="fa fa-check"></i><b>3.7</b> Hyperbolic functions</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="trigonometry.html"><a href="trigonometry.html"><i class="fa fa-check"></i><b>4</b> Trigonometry</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="trigonometry.html"><a href="trigonometry.html#pythagoras"><i class="fa fa-check"></i><b>4.1</b> Pythagoras</a></li>
+<li class="chapter" data-level="4.2" data-path="trigonometry.html"><a href="trigonometry.html#degrees-and-radians"><i class="fa fa-check"></i><b>4.2</b> Degrees and radians</a></li>
+<li class="chapter" data-level="4.3" data-path="trigonometry.html"><a href="trigonometry.html#trigonometric-ratios"><i class="fa fa-check"></i><b>4.3</b> Trigonometric ratios</a></li>
+<li class="chapter" data-level="4.4" data-path="trigonometry.html"><a href="trigonometry.html#sine-and-cosine-rules"><i class="fa fa-check"></i><b>4.4</b> Sine and cosine rules</a></li>
+<li class="chapter" data-level="4.5" data-path="trigonometry.html"><a href="trigonometry.html#trigonometric-waveforms"><i class="fa fa-check"></i><b>4.5</b> Trigonometric waveforms</a></li>
+<li class="chapter" data-level="4.6" data-path="trigonometry.html"><a href="trigonometry.html#trigonometric-identities"><i class="fa fa-check"></i><b>4.6</b> Trigonometric identities</a>
+<ul>
+<li class="chapter" data-level="4.6.1" data-path="trigonometry.html"><a href="trigonometry.html#pythagorean-identities"><i class="fa fa-check"></i><b>4.6.1</b> Pythagorean identities</a></li>
+<li class="chapter" data-level="4.6.2" data-path="trigonometry.html"><a href="trigonometry.html#compound-angle-formulae"><i class="fa fa-check"></i><b>4.6.2</b> Compound angle formulae</a></li>
+<li class="chapter" data-level="4.6.3" data-path="trigonometry.html"><a href="trigonometry.html#double-angle-formulae"><i class="fa fa-check"></i><b>4.6.3</b> Double angle formulae</a></li>
+<li class="chapter" data-level="4.6.4" data-path="trigonometry.html"><a href="trigonometry.html#product-to-sum-formulae"><i class="fa fa-check"></i><b>4.6.4</b> Product to sum formulae</a></li>
+<li class="chapter" data-level="4.6.5" data-path="trigonometry.html"><a href="trigonometry.html#sum-to-product-formulae"><i class="fa fa-check"></i><b>4.6.5</b> Sum to product formulae</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="complex.html"><a href="complex.html"><i class="fa fa-check"></i><b>5</b> Complex Numbers</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="complex.html"><a href="complex.html#i-and-complex-numbers"><i class="fa fa-check"></i><b>5.1</b> <span class="math inline">\(i\)</span> and complex numbers</a></li>
+<li class="chapter" data-level="5.2" data-path="complex.html"><a href="complex.html#complex-arithmetic"><i class="fa fa-check"></i><b>5.2</b> Complex arithmetic</a></li>
+<li class="chapter" data-level="5.3" data-path="complex.html"><a href="complex.html#the-argument-polar-and-exponential-form-for-complex-numbers"><i class="fa fa-check"></i><b>5.3</b> The argument, polar and exponential form for complex numbers</a></li>
+<li class="chapter" data-level="5.4" data-path="complex.html"><a href="complex.html#roots-of-complex-numbers"><i class="fa fa-check"></i><b>5.4</b> Roots of complex numbers</a></li>
+<li class="chapter" data-level="5.5" data-path="complex.html"><a href="complex.html#eitheta-and-trigonometric-identities"><i class="fa fa-check"></i><b>5.5</b> <span class="math inline">\(e^{i\theta}\)</span> and trigonometric identities</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="vectors.html"><a href="vectors.html"><i class="fa fa-check"></i><b>6</b> Vectors</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="vectors.html"><a href="vectors.html#vector-addition"><i class="fa fa-check"></i><b>6.1</b> Vector addition</a></li>
+<li class="chapter" data-level="6.2" data-path="vectors.html"><a href="vectors.html#scalar-multiplication"><i class="fa fa-check"></i><b>6.2</b> Scalar multiplication</a></li>
+<li class="chapter" data-level="6.3" data-path="vectors.html"><a href="vectors.html#vectors-in-cartesian-coordinates"><i class="fa fa-check"></i><b>6.3</b> Vectors in Cartesian coordinates</a></li>
+<li class="chapter" data-level="6.4" data-path="vectors.html"><a href="vectors.html#vector-products"><i class="fa fa-check"></i><b>6.4</b> Vector products</a>
+<ul>
+<li class="chapter" data-level="6.4.1" data-path="vectors.html"><a href="vectors.html#dot-product"><i class="fa fa-check"></i><b>6.4.1</b> Dot product</a></li>
+<li class="chapter" data-level="6.4.2" data-path="vectors.html"><a href="vectors.html#cross-product"><i class="fa fa-check"></i><b>6.4.2</b> Cross product</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="systems-of-linear-equations.html"><a href="systems-of-linear-equations.html"><i class="fa fa-check"></i><b>7</b> Systems of Linear Equations</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="systems-of-linear-equations.html"><a href="systems-of-linear-equations.html#lines-and-planes"><i class="fa fa-check"></i><b>7.1</b> Lines and planes</a></li>
+<li class="chapter" data-level="7.2" data-path="systems-of-linear-equations.html"><a href="systems-of-linear-equations.html#solving-linear-systems---gaussian-elimination"><i class="fa fa-check"></i><b>7.2</b> Solving linear systems - Gaussian elimination</a></li>
+<li class="chapter" data-level="7.3" data-path="systems-of-linear-equations.html"><a href="systems-of-linear-equations.html#echelon-form"><i class="fa fa-check"></i><b>7.3</b> Echelon Form</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="matrices.html"><a href="matrices.html"><i class="fa fa-check"></i><b>8</b> Matrices</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="matrices.html"><a href="matrices.html#linearrevisited"><i class="fa fa-check"></i><b>8.1</b> Solving linear systems revisited</a></li>
+<li class="chapter" data-level="8.2" data-path="matrices.html"><a href="matrices.html#determinants"><i class="fa fa-check"></i><b>8.2</b> Determinants</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="linear-transformations.html"><a href="linear-transformations.html"><i class="fa fa-check"></i><b>9</b> Linear Transformations</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="linear-transformations.html"><a href="linear-transformations.html#matrix-algebra"><i class="fa fa-check"></i><b>9.1</b> Matrix Algebra</a>
+<ul>
+<li class="chapter" data-level="9.1.1" data-path="linear-transformations.html"><a href="linear-transformations.html#addition-and-subtraction"><i class="fa fa-check"></i><b>9.1.1</b> Addition and Subtraction</a></li>
+<li class="chapter" data-level="9.1.2" data-path="linear-transformations.html"><a href="linear-transformations.html#multiplication-by-a-scalar"><i class="fa fa-check"></i><b>9.1.2</b> Multiplication by a scalar</a></li>
+<li class="chapter" data-level="9.1.3" data-path="linear-transformations.html"><a href="linear-transformations.html#matrix-multiplication"><i class="fa fa-check"></i><b>9.1.3</b> Matrix multiplication</a></li>
+<li class="chapter" data-level="9.1.4" data-path="linear-transformations.html"><a href="linear-transformations.html#functional-interpretations"><i class="fa fa-check"></i><b>9.1.4</b> Functional interpretations</a></li>
+<li class="chapter" data-level="9.1.5" data-path="linear-transformations.html"><a href="linear-transformations.html#two-special-matrices"><i class="fa fa-check"></i><b>9.1.5</b> Two special matrices</a></li>
+<li class="chapter" data-level="9.1.6" data-path="linear-transformations.html"><a href="linear-transformations.html#some-further-properties"><i class="fa fa-check"></i><b>9.1.6</b> Some further properties</a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="linear-transformations.html"><a href="linear-transformations.html#matrix-inverse"><i class="fa fa-check"></i><b>9.2</b> Matrix inverse</a>
+<ul>
+<li class="chapter" data-level="9.2.1" data-path="linear-transformations.html"><a href="linear-transformations.html#finding-the-inverse-of-a-2times-2-matrix"><i class="fa fa-check"></i><b>9.2.1</b> Finding the inverse of a <span class="math inline">\(2\times 2\)</span> matrix</a></li>
+<li class="chapter" data-level="9.2.2" data-path="linear-transformations.html"><a href="linear-transformations.html#finding-the-inverse-of-an-ntimes-n-matrix"><i class="fa fa-check"></i><b>9.2.2</b> Finding the inverse of an <span class="math inline">\(n\times n\)</span> matrix</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="eigenvalues-and-eigenvectors.html"><a href="eigenvalues-and-eigenvectors.html"><i class="fa fa-check"></i><b>10</b> Eigenvalues and Eigenvectors</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="eigenvalues-and-eigenvectors.html"><a href="eigenvalues-and-eigenvectors.html#matrix-diagonalisation"><i class="fa fa-check"></i><b>10.1</b> Matrix Diagonalisation</a></li>
+<li class="chapter" data-level="10.2" data-path="eigenvalues-and-eigenvectors.html"><a href="eigenvalues-and-eigenvectors.html#finding-eigenvalues"><i class="fa fa-check"></i><b>10.2</b> Finding Eigenvalues</a></li>
+<li class="chapter" data-level="10.3" data-path="eigenvalues-and-eigenvectors.html"><a href="eigenvalues-and-eigenvectors.html#finding-eigenvectors"><i class="fa fa-check"></i><b>10.3</b> Finding Eigenvectors</a></li>
+<li class="chapter" data-level="10.4" data-path="eigenvalues-and-eigenvectors.html"><a href="eigenvalues-and-eigenvectors.html#powers-of-diagonalisable-matrices"><i class="fa fa-check"></i><b>10.4</b> Powers of diagonalisable matrices</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="differentiation.html"><a href="differentiation.html"><i class="fa fa-check"></i><b>11</b> Differentiation</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="differentiation.html"><a href="differentiation.html#concept"><i class="fa fa-check"></i><b>11.1</b> Concept</a></li>
+<li class="chapter" data-level="11.2" data-path="differentiation.html"><a href="differentiation.html#standard-derivatives"><i class="fa fa-check"></i><b>11.2</b> Standard derivatives</a></li>
+<li class="chapter" data-level="11.3" data-path="differentiation.html"><a href="differentiation.html#rules"><i class="fa fa-check"></i><b>11.3</b> Rules</a></li>
+<li class="chapter" data-level="11.4" data-path="differentiation.html"><a href="differentiation.html#higher-order-derivatives"><i class="fa fa-check"></i><b>11.4</b> Higher order derivatives</a></li>
+<li class="chapter" data-level="11.5" data-path="differentiation.html"><a href="differentiation.html#further-techniques"><i class="fa fa-check"></i><b>11.5</b> Further Techniques</a>
+<ul>
+<li class="chapter" data-level="11.5.1" data-path="differentiation.html"><a href="differentiation.html#implicit-differentiation"><i class="fa fa-check"></i><b>11.5.1</b> Implicit Differentiation</a></li>
+<li class="chapter" data-level="11.5.2" data-path="differentiation.html"><a href="differentiation.html#logarithmic-differentiation"><i class="fa fa-check"></i><b>11.5.2</b> Logarithmic Differentiation</a></li>
+<li class="chapter" data-level="11.5.3" data-path="differentiation.html"><a href="differentiation.html#parametric-differentiation"><i class="fa fa-check"></i><b>11.5.3</b> Parametric Differentiation</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="applications-of-differentiation.html"><a href="applications-of-differentiation.html"><i class="fa fa-check"></i><b>12</b> Applications of Differentiation</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="applications-of-differentiation.html"><a href="applications-of-differentiation.html#maxima-and-minima"><i class="fa fa-check"></i><b>12.1</b> Maxima and Minima</a></li>
+<li class="chapter" data-level="12.2" data-path="applications-of-differentiation.html"><a href="applications-of-differentiation.html#points-of-inflection"><i class="fa fa-check"></i><b>12.2</b> Points of Inflection</a></li>
+<li class="chapter" data-level="12.3" data-path="applications-of-differentiation.html"><a href="applications-of-differentiation.html#higher-order-derivative-test"><i class="fa fa-check"></i><b>12.3</b> Higher Order Derivative Test</a></li>
+<li class="chapter" data-level="12.4" data-path="applications-of-differentiation.html"><a href="applications-of-differentiation.html#graph-sketching"><i class="fa fa-check"></i><b>12.4</b> Graph Sketching</a></li>
+<li class="chapter" data-level="12.5" data-path="applications-of-differentiation.html"><a href="applications-of-differentiation.html#optimisation"><i class="fa fa-check"></i><b>12.5</b> Optimisation</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="sequences.html"><a href="sequences.html"><i class="fa fa-check"></i><b>13</b> Sequences</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="sequences.html"><a href="sequences.html#limits-of-sequences"><i class="fa fa-check"></i><b>13.1</b> Limits of Sequences</a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="series.html"><a href="series.html"><i class="fa fa-check"></i><b>14</b> Series</a>
+<ul>
+<li class="chapter" data-level="14.1" data-path="series.html"><a href="series.html#sigma-notation"><i class="fa fa-check"></i><b>14.1</b> Sigma Notation</a></li>
+<li class="chapter" data-level="14.2" data-path="series.html"><a href="series.html#infinite-series"><i class="fa fa-check"></i><b>14.2</b> Infinite Series</a></li>
+<li class="chapter" data-level="14.3" data-path="series.html"><a href="series.html#power-series"><i class="fa fa-check"></i><b>14.3</b> Power Series</a></li>
+<li class="chapter" data-level="14.4" data-path="series.html"><a href="series.html#taylor-series"><i class="fa fa-check"></i><b>14.4</b> Taylor Series</a>
+<ul>
+<li class="chapter" data-level="14.4.1" data-path="series.html"><a href="series.html#linearisation"><i class="fa fa-check"></i><b>14.4.1</b> Linearisation</a></li>
+<li class="chapter" data-level="14.4.2" data-path="series.html"><a href="series.html#taylor-polynomials"><i class="fa fa-check"></i><b>14.4.2</b> Taylor Polynomials</a></li>
+<li class="chapter" data-level="14.4.3" data-path="series.html"><a href="series.html#taylor-series-1"><i class="fa fa-check"></i><b>14.4.3</b> Taylor Series</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="integration.html"><a href="integration.html"><i class="fa fa-check"></i><b>15</b> Integration</a>
+<ul>
+<li class="chapter" data-level="15.1" data-path="integration.html"><a href="integration.html#indefinite-integrals"><i class="fa fa-check"></i><b>15.1</b> Indefinite Integrals</a>
+<ul>
+<li class="chapter" data-level="15.1.1" data-path="integration.html"><a href="integration.html#standard-integrals"><i class="fa fa-check"></i><b>15.1.1</b> Standard Integrals</a></li>
+</ul></li>
+<li class="chapter" data-level="15.2" data-path="integration.html"><a href="integration.html#definite-integrals"><i class="fa fa-check"></i><b>15.2</b> Definite Integrals</a></li>
+<li class="chapter" data-level="15.3" data-path="integration.html"><a href="integration.html#integration-by-substitution"><i class="fa fa-check"></i><b>15.3</b> Integration by Substitution</a></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="further-integration-techniques.html"><a href="further-integration-techniques.html"><i class="fa fa-check"></i><b>16</b> Further Integration Techniques</a>
+<ul>
+<li class="chapter" data-level="16.1" data-path="further-integration-techniques.html"><a href="further-integration-techniques.html#integrals-of-trigonometric-and-hyperbolic-functions"><i class="fa fa-check"></i><b>16.1</b> Integrals of trigonometric and hyperbolic functions</a></li>
+<li class="chapter" data-level="16.2" data-path="further-integration-techniques.html"><a href="further-integration-techniques.html#integrals-of-rational-functions-using-partial-fractions"><i class="fa fa-check"></i><b>16.2</b> Integrals of rational functions using partial fractions</a></li>
+<li class="chapter" data-level="16.3" data-path="further-integration-techniques.html"><a href="further-integration-techniques.html#integration-by-parts"><i class="fa fa-check"></i><b>16.3</b> Integration by Parts</a></li>
+</ul></li>
+<li class="chapter" data-level="17" data-path="differential-equations.html"><a href="differential-equations.html"><i class="fa fa-check"></i><b>17</b> Differential Equations</a>
+<ul>
+<li class="chapter" data-level="17.1" data-path="differential-equations.html"><a href="differential-equations.html#linear-or-nonlinear-odes"><i class="fa fa-check"></i><b>17.1</b> Linear or Nonlinear ODEs</a></li>
+<li class="chapter" data-level="17.2" data-path="differential-equations.html"><a href="differential-equations.html#separable-first-order-odes"><i class="fa fa-check"></i><b>17.2</b> Separable First Order ODEs</a></li>
+<li class="chapter" data-level="17.3" data-path="differential-equations.html"><a href="differential-equations.html#linear-first-order-odes"><i class="fa fa-check"></i><b>17.3</b> Linear first order ODEs</a></li>
+<li class="chapter" data-level="17.4" data-path="differential-equations.html"><a href="differential-equations.html#linear-second-order-odes"><i class="fa fa-check"></i><b>17.4</b> Linear Second Order ODEs</a>
+<ul>
+<li class="chapter" data-level="17.4.1" data-path="differential-equations.html"><a href="differential-equations.html#homogeneous-equation-with-constant-coefficients"><i class="fa fa-check"></i><b>17.4.1</b> Homogeneous equation with constant coefficients</a></li>
+<li class="chapter" data-level="17.4.2" data-path="differential-equations.html"><a href="differential-equations.html#inhomogeneous-equation-with-constant-coefficients"><i class="fa fa-check"></i><b>17.4.2</b> Inhomogeneous equation with constant coefficients</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="18" data-path="probability-fundamentals.html"><a href="probability-fundamentals.html"><i class="fa fa-check"></i><b>18</b> Probability Fundamentals</a>
+<ul>
+<li class="chapter" data-level="18.1" data-path="probability-fundamentals.html"><a href="probability-fundamentals.html#sample-space-and-events"><i class="fa fa-check"></i><b>18.1</b> Sample space and events</a></li>
+<li class="chapter" data-level="18.2" data-path="probability-fundamentals.html"><a href="probability-fundamentals.html#counting"><i class="fa fa-check"></i><b>18.2</b> Counting</a></li>
+<li class="chapter" data-level="18.3" data-path="probability-fundamentals.html"><a href="probability-fundamentals.html#permutations-and-combinations"><i class="fa fa-check"></i><b>18.3</b> Permutations and Combinations</a>
+<ul>
+<li class="chapter" data-level="18.3.1" data-path="probability-fundamentals.html"><a href="probability-fundamentals.html#permutations"><i class="fa fa-check"></i><b>18.3.1</b> Permutations</a></li>
+<li class="chapter" data-level="18.3.2" data-path="probability-fundamentals.html"><a href="probability-fundamentals.html#combinations"><i class="fa fa-check"></i><b>18.3.2</b> Combinations</a></li>
+</ul></li>
+<li class="chapter" data-level="18.4" data-path="probability-fundamentals.html"><a href="probability-fundamentals.html#probabilities"><i class="fa fa-check"></i><b>18.4</b> Probabilities</a></li>
+<li class="chapter" data-level="18.5" data-path="probability-fundamentals.html"><a href="probability-fundamentals.html#conditional-probability"><i class="fa fa-check"></i><b>18.5</b> Conditional Probability</a></li>
+<li class="chapter" data-level="18.6" data-path="probability-fundamentals.html"><a href="probability-fundamentals.html#independence"><i class="fa fa-check"></i><b>18.6</b> Independence</a></li>
+<li class="chapter" data-level="18.7" data-path="probability-fundamentals.html"><a href="probability-fundamentals.html#law-of-total-probability"><i class="fa fa-check"></i><b>18.7</b> Law of Total Probability</a></li>
+<li class="chapter" data-level="18.8" data-path="probability-fundamentals.html"><a href="probability-fundamentals.html#bayes-theorem"><i class="fa fa-check"></i><b>18.8</b> Bayes’ Theorem</a></li>
+</ul></li>
+<li class="chapter" data-level="19" data-path="discrete-random-variables.html"><a href="discrete-random-variables.html"><i class="fa fa-check"></i><b>19</b> Discrete Random Variables</a>
+<ul>
+<li class="chapter" data-level="19.1" data-path="discrete-random-variables.html"><a href="discrete-random-variables.html#bernoulli-trials"><i class="fa fa-check"></i><b>19.1</b> Bernoulli trials</a></li>
+<li class="chapter" data-level="19.2" data-path="discrete-random-variables.html"><a href="discrete-random-variables.html#binomial-distribution"><i class="fa fa-check"></i><b>19.2</b> Binomial Distribution</a></li>
+<li class="chapter" data-level="19.3" data-path="discrete-random-variables.html"><a href="discrete-random-variables.html#cumulative-distribution-functions"><i class="fa fa-check"></i><b>19.3</b> Cumulative Distribution Functions</a></li>
+<li class="chapter" data-level="19.4" data-path="discrete-random-variables.html"><a href="discrete-random-variables.html#poisson-distribution"><i class="fa fa-check"></i><b>19.4</b> Poisson distribution</a></li>
+<li class="chapter" data-level="19.5" data-path="discrete-random-variables.html"><a href="discrete-random-variables.html#expectation-and-variance"><i class="fa fa-check"></i><b>19.5</b> Expectation and Variance</a>
+<ul>
+<li class="chapter" data-level="19.5.1" data-path="discrete-random-variables.html"><a href="discrete-random-variables.html#expectation"><i class="fa fa-check"></i><b>19.5.1</b> Expectation</a></li>
+<li class="chapter" data-level="19.5.2" data-path="discrete-random-variables.html"><a href="discrete-random-variables.html#variance-and-standard-deviation"><i class="fa fa-check"></i><b>19.5.2</b> Variance and Standard Deviation</a></li>
+</ul></li>
+<li class="chapter" data-level="19.6" data-path="discrete-random-variables.html"><a href="discrete-random-variables.html#summary-of-discrete-distributions"><i class="fa fa-check"></i><b>19.6</b> Summary of Discrete Distributions</a></li>
+</ul></li>
+<li class="chapter" data-level="20" data-path="continuous-random-variables.html"><a href="continuous-random-variables.html"><i class="fa fa-check"></i><b>20</b> Continuous Random Variables</a>
+<ul>
+<li class="chapter" data-level="20.1" data-path="continuous-random-variables.html"><a href="continuous-random-variables.html#uniform-distribution"><i class="fa fa-check"></i><b>20.1</b> Uniform distribution</a></li>
+<li class="chapter" data-level="20.2" data-path="continuous-random-variables.html"><a href="continuous-random-variables.html#cumulative-distribution-function"><i class="fa fa-check"></i><b>20.2</b> Cumulative Distribution Function</a></li>
+<li class="chapter" data-level="20.3" data-path="continuous-random-variables.html"><a href="continuous-random-variables.html#expectation-and-variance-1"><i class="fa fa-check"></i><b>20.3</b> Expectation and Variance</a></li>
+<li class="chapter" data-level="20.4" data-path="continuous-random-variables.html"><a href="continuous-random-variables.html#normal-distribution"><i class="fa fa-check"></i><b>20.4</b> Normal Distribution</a></li>
+<li class="chapter" data-level="20.5" data-path="continuous-random-variables.html"><a href="continuous-random-variables.html#standard-normal-distribution-tables"><i class="fa fa-check"></i><b>20.5</b> Standard Normal Distribution Tables</a></li>
+<li class="chapter" data-level="20.6" data-path="continuous-random-variables.html"><a href="continuous-random-variables.html#the-law-of-large-numbers"><i class="fa fa-check"></i><b>20.6</b> The Law of Large Numbers</a></li>
+<li class="chapter" data-level="20.7" data-path="continuous-random-variables.html"><a href="continuous-random-variables.html#central-limit-theorem"><i class="fa fa-check"></i><b>20.7</b> Central Limit Theorem</a></li>
+</ul></li>
+<li class="chapter" data-level="21" data-path="statistics.html"><a href="statistics.html"><i class="fa fa-check"></i><b>21</b> Statistics</a>
+<ul>
+<li class="chapter" data-level="21.1" data-path="statistics.html"><a href="statistics.html#frequency"><i class="fa fa-check"></i><b>21.1</b> Frequency</a>
+<ul>
+<li class="chapter" data-level="21.1.1" data-path="statistics.html"><a href="statistics.html#tables"><i class="fa fa-check"></i><b>21.1.1</b> Tables</a></li>
+<li class="chapter" data-level="21.1.2" data-path="statistics.html"><a href="statistics.html#graphs"><i class="fa fa-check"></i><b>21.1.2</b> Graphs</a></li>
+</ul></li>
+<li class="chapter" data-level="21.2" data-path="statistics.html"><a href="statistics.html#measures-of-central-tendency"><i class="fa fa-check"></i><b>21.2</b> Measures of central tendency</a>
+<ul>
+<li class="chapter" data-level="21.2.1" data-path="statistics.html"><a href="statistics.html#mean"><i class="fa fa-check"></i><b>21.2.1</b> Mean</a></li>
+<li class="chapter" data-level="21.2.2" data-path="statistics.html"><a href="statistics.html#mode"><i class="fa fa-check"></i><b>21.2.2</b> Mode</a></li>
+<li class="chapter" data-level="21.2.3" data-path="statistics.html"><a href="statistics.html#median"><i class="fa fa-check"></i><b>21.2.3</b> Median</a></li>
+</ul></li>
+<li class="chapter" data-level="21.3" data-path="statistics.html"><a href="statistics.html#measures-of-dispersion"><i class="fa fa-check"></i><b>21.3</b> Measures of Dispersion</a>
+<ul>
+<li class="chapter" data-level="21.3.1" data-path="statistics.html"><a href="statistics.html#range"><i class="fa fa-check"></i><b>21.3.1</b> Range</a></li>
+<li class="chapter" data-level="21.3.2" data-path="statistics.html"><a href="statistics.html#interquartile-range-and-percentiles"><i class="fa fa-check"></i><b>21.3.2</b> Interquartile Range and Percentiles</a></li>
+<li class="chapter" data-level="21.3.3" data-path="statistics.html"><a href="statistics.html#variance-and-standard-deviation-1"><i class="fa fa-check"></i><b>21.3.3</b> Variance and Standard Deviation</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="exercise-set-1.html"><a href="exercise-set-1.html"><i class="fa fa-check"></i>Exercise Set 1</a></li>
+<li class="chapter" data-level="" data-path="exercise-set-2.html"><a href="exercise-set-2.html"><i class="fa fa-check"></i>Exercise Set 2</a></li>
+<li class="chapter" data-level="" data-path="exercise-set-3.html"><a href="exercise-set-3.html"><i class="fa fa-check"></i>Exercise Set 3</a></li>
+<li class="chapter" data-level="" data-path="exercise-set-4.html"><a href="exercise-set-4.html"><i class="fa fa-check"></i>Exercise Set 4</a></li>
+<li class="chapter" data-level="" data-path="exercise-set-5.html"><a href="exercise-set-5.html"><i class="fa fa-check"></i>Exercise Set 5</a></li>
+<li class="chapter" data-level="" data-path="exercise-set-6.html"><a href="exercise-set-6.html"><i class="fa fa-check"></i>Exercise Set 6</a></li>
+<li class="chapter" data-level="" data-path="exercise-set-7.html"><a href="exercise-set-7.html"><i class="fa fa-check"></i>Exercise Set 7</a></li>
+<li class="chapter" data-level="" data-path="exercise-set-8.html"><a href="exercise-set-8.html"><i class="fa fa-check"></i>Exercise Set 8</a></li>
+<li class="chapter" data-level="" data-path="exercise-set-9.html"><a href="exercise-set-9.html"><i class="fa fa-check"></i>Exercise Set 9</a></li>
+<li class="chapter" data-level="" data-path="exercise-set-10.html"><a href="exercise-set-10.html"><i class="fa fa-check"></i>Exercise Set 10</a></li>
+<li class="chapter" data-level="" data-path="exercise-set-11.html"><a href="exercise-set-11.html"><i class="fa fa-check"></i>Exercise Set 11</a></li>
+<li class="chapter" data-level="" data-path="exercise-set-12.html"><a href="exercise-set-12.html"><i class="fa fa-check"></i>Exercise Set 12</a></li>
+<li class="chapter" data-level="" data-path="exercise-set-13.html"><a href="exercise-set-13.html"><i class="fa fa-check"></i>Exercise Set 13</a></li>
+<li class="chapter" data-level="" data-path="exercise-set-13-1.html"><a href="exercise-set-13-1.html"><i class="fa fa-check"></i>Exercise Set 13</a></li>
+<li class="chapter" data-level="" data-path="exercise-set-14.html"><a href="exercise-set-14.html"><i class="fa fa-check"></i>Exercise Set 14</a></li>
+<li class="chapter" data-level="" data-path="exercise-set-15.html"><a href="exercise-set-15.html"><i class="fa fa-check"></i>Exercise Set 15</a></li>
+<li class="chapter" data-level="" data-path="exercise-set-16.html"><a href="exercise-set-16.html"><i class="fa fa-check"></i>Exercise Set 16</a></li>
+<li class="chapter" data-level="" data-path="exercise-set-17.html"><a href="exercise-set-17.html"><i class="fa fa-check"></i>Exercise Set 17</a></li>
+<li class="chapter" data-level="" data-path="notation.html"><a href="notation.html"><i class="fa fa-check"></i>Notation</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Mathematics for Scientists and Engineers</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="exercise-set-13-1" class="section level1 unnumbered hasAnchor">
+<h1>Exercise Set 13<a href="exercise-set-13-1.html#exercise-set-13-1" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<ol style="list-style-type: decimal">
+<li><p>Using the method of separation of variables, find the general solutions of the following first order differential equations and the particular solutions in those cases where initial conditions are specified:</p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(\displaystyle x^2\frac{dy}{dx}=(y+xy)\)</span></li>
+<li><span class="math inline">\(\displaystyle \frac{dy}{dx}=\frac{y-1}{x-1},\; y(2)=3\)</span></li>
+<li><span class="math inline">\(\displaystyle \frac{dy}{dx}=\frac{y+2}{x-2}\)</span></li>
+</ol>
+<p>Answers:</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>First we separate the variables
+<span class="math display">\[
+x^2\frac{dy}{dx} = y(1+x)\\
+\Rightarrow \frac{1}{y}\frac{dy}{dx} = \frac{1+x}{x^2} = \frac{1}{x^2} + \frac{1}{x}\]</span>
+Now integrating both sides with respect to <span class="math inline">\(x\)</span>
+<span class="math display">\[\int \frac{1}{y}\frac{dy}{dx} \, dx = \int \left(\frac{1}{x^2} + \frac{1}{x}\right) \, dx \Rightarrow \int \frac{1}{y}\, dy\\
+\int \frac{1}{y} = \int \left(\frac{1}{x^2} + \frac{1}{x}\right)\, dx\\
+\ln(y) = -\frac{1}{x} + \ln(x) + c\]</span>
+Which can be rewritten as <span class="math inline">\(\ln(y)-\ln(x) = -x^{-1} + c\)</span> and then, by applying the logarithmic rule <span class="math inline">\(\ln(B) - \ln(C) = \ln(\tfrac{B}{C})\)</span>
+<span class="math display">\[
+\ln\left(\frac{y}{x}\right) = -\frac{1}{x} + c\]</span>
+Which can be written in terms of the exponential (raise <span class="math inline">\(e\)</span> to the power of both sides)
+<span class="math display">\[
+\frac{y}{x} = e^{-\frac{1}{x} + c} = Ae^{-\frac{1}{x}}\\
+y = Axe^{-\frac{1}{x}}\]</span>
+Where <span class="math inline">\(A = e^c\)</span>.</p></li>
+<li><p>First, separate the variables and integrate
+<span class="math display">\[
+\int\frac{dy}{y-1} =\int\frac{dx}{x-1}+C,
+\]</span>
+so the general solution is
+<span class="math display">\[
+\ln|y-1|=\ln|x-1|+C \implies \quad \left|\frac{y-1}{x-1}\right| = B,
+\]</span>
+where <span class="math inline">\(C\)</span> and <span class="math inline">\(B=e^C\)</span> are constants. This means that <span class="math inline">\(\frac{y-1}{x-1}= A\)</span>, where <span class="math inline">\(A\)</span> is another constant, giving the general solution <span class="math inline">\(y=A(x-1)+1\)</span>.
+Because <span class="math inline">\(y(2) = 3\)</span>, we have that <span class="math inline">\(3 = A + 1\)</span>, so the particular solution is
+<span class="math display">\[
+y(x) = 2x+1
+\]</span></p></li>
+<li><p>Separatating the variables yields
+<span class="math display">\[
+\frac{1}{y+2} \frac{dy}{dx} = \frac{1}{x-2}\]</span>
+And now integrating with respect to <span class="math inline">\(x\)</span>
+<span class="math display">\[\int \frac{1}{y+2} \frac{dy}{dx}\, dx = \int \frac{1}{x-2}\,dx\\
+= \int \frac{1}{y+2} dy = \int \frac{1}{x-2} dx\\
+\Rightarrow \ln(y+2) = \ln(x-2) + c\]</span>
+Letting <span class="math inline">\(c = \ln (A)\)</span>, with <span class="math inline">\(A\)</span> another constant, then
+<span class="math display">\[\ln(y+2) = \ln(x-2) + \ln(A) = \ln((x-2)A)\]</span>
+So <span class="math inline">\(y+2 = A(x-2)\)</span> and <span class="math inline">\(y = Ax-2A -2\)</span>.</p></li>
+</ol></li>
+<li><p>Using the integrating factor method, find the general solutions of the following linear first order differential equations and the particular solutions in those cases where initial conditions are specified:</p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(\displaystyle \frac{dy}{dx}+\frac{3}{x}y=4+x^2,\;y(1)=1\)</span></li>
+<li><span class="math inline">\(\displaystyle x\frac{dy}{dx}+2y=x^{-4},\;y(1)=-\frac{1}{2}\)</span></li>
+<li><span class="math inline">\(\displaystyle \frac{dy}{dx}+\frac{y}{x}=\cos(x),\;y\left(\frac{\pi}{2}\right)=0\)</span></li>
+<li><span class="math inline">\(\displaystyle \frac{dy}{dx}=e^{-x}-2y,\;y(0)=0\)</span></li>
+<li><span class="math inline">\(\displaystyle \frac{dy}{dx}=y\tan(x)+\sin(x)\)</span></li>
+</ol>
+<p>Answers:
+Recall that for a first order differential equation of the form
+<span class="math display">\[\frac{dy}{dx} + p(x)y = r(x)\]</span>
+The integrating factor <span class="math inline">\(u(x)\)</span> is given by
+<span class="math display">\[
+u(x) = \exp\left(\int p(x)\, dx\right)
+\]</span>
+and then
+<span class="math display">\[\frac{d}{dx}(u(x)y(x)) = u(x)r(x)\]</span>
+and
+<span class="math display">\[
+y(x) = \left[ \int e^{\int p(x)dx} r(x) \,dx + C\right] e^{-\int p(x) dx}.
+\]</span>
+See the lecture notes for details for why this is the case.</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Here, <span class="math inline">\(u(x) = \exp\left(\int \frac{3}{x}dx\right) = e^{\ln(x^3)} = x^3\)</span>, and we have that
+<span class="math display">\[
+\frac{d}{dx}(x^3y) = x^3 (4+x^2) = x^5 + 4x^3\\
+\Rightarrow x^3y = \int x^5 + 4x^3 \, dx = \frac{1}{6}x^6 + x^4 + c
+\Rightarrow y = \frac{1}{6} x^3 + x + \frac{c}{x^3}
+\]</span>
+And from the initial condition <span class="math inline">\(y(1) = 1\)</span>
+<span class="math display">\[1 = \frac{1}{6} + 1 + c \Rightarrow c = -\frac{1}{6}\]</span>
+so
+<span class="math display">\[y(x) = \frac{1}{6}x^3 + x -\frac{1}{6X^3}\]</span></p></li>
+<li><p><span class="math display">\[x \frac{dy}{dx} + 2y = x^{-4}\]</span>
+Whic is equivalent to
+<span class="math display">\[\frac{dy}{dx} + 2\frac{y}{x} = x^{-5}\]</span>
+Here, the integrating factor is
+<span class="math display">\[u(x) = \exp\left(\int \frac{2}{x}dx\right) = e^{ln(x^2)} = x^2\]</span>
+and
+<span class="math display">\[\frac{d}{dx}(x^2y) = x^2x^{-5} = x^{-3}\\
+\Rightarrow x^2y = \int x^{-3} \, dx = -\frac{1}{2}x^{-2} + C\]</span>
+And with the initial conditions <span class="math inline">\(y(1)=-\frac{1}{2}\)</span>, <span class="math inline">\(c = 0\)</span>, and the particular solution is
+<span class="math display">\[y(x) = -\frac{1}{2}x^{-4}\]</span></p></li>
+<li><p><span class="math display">\[\frac{dy}{dx} + \frac{y}{x} = \cos(x)\]</span>
+In this case, the integrating factor is
+<span class="math display">\[u(x) = \exp\left(\int\frac{1}{x}dx\right) = e^{\ln(x)} = x\\
+\Rightarrow \frac{d}{dx}(e^xy) = e^x\cos(x)\\
+x y = \int x\cos(x)\, dx\]</span>
+And the inegral can be solved by parts: <span class="math inline">\(\int uv&#39; = uv - \int u&#39;v\)</span>. Let <span class="math inline">\(u=x, u&#39;=1, v&#39; = \cos(x), v = \sin(x)\)</span>. So
+<span class="math display">\[
+x y = x\sin(x) - \int \sin(x)\,dx = x\sin(x) + \cos(x) + c\\
+y = \sin(x) + \frac{\cos(x)}{x} + \frac{c}{x}\]</span>
+With <span class="math inline">\(y(\frac{\pi}{2}) = 0\)</span>, <span class="math inline">\(c=-\frac{\pi}{2}\)</span> so the particular solution is
+<span class="math display">\[
+y(x) = \sin(x) + \frac{\cos(x)}{x} + \frac{\pi}{2x}\]</span></p></li>
+<li><p>First rearrange to
+<span class="math display">\[\frac{dy}{dx} + 2y = e^{-x}\]</span>
+The integrating factor is
+<span class="math display">\[u(x) = \exp\left(\int 2 dx\right) = e^{2x}\]</span>
+Then the general solution is
+<span class="math display">\[
+y = \frac{1}{e^{2x}}\int e^{2x}e^{-x} \, dx = \frac{1}{e^{2x}}(e^x + c) = \frac{1}{e^x} + \frac{c}{e^{2x}}\]</span>
+And to find the particular solution with the intial condition <span class="math inline">\(y(0) = 0\)</span>, <span class="math inline">\(c=-1\)</span> and he particular solution is
+<span class="math display">\[
+y = e^{-x} - e^{-2x}\]</span></p></li>
+<li><p><span class="math display">\[\frac{dy}{dx} - y\tan(x) = \sin(x)\]</span>
+Here, the integrating factor (taking care with the minus sign which must be included in <span class="math inline">\(p(x)\)</span>) is
+<span class="math display">\[
+\begin{align}
+u(x) &amp;= \exp\left(\int -\tan(x)\,dx\right) = \exp\left(\int -\frac{\sin(x)}{\cos(x)}dx\right)\\
+&amp;= \exp\left(\ln(\cos(x))\right) = \exp\left(\ln(\cos(x))\right) = \cos(x)\end{align}
+\]</span>
+and the general solution is
+<span class="math display">\[
+\begin{align}
+y(x) &amp;= \int \cos(x)\sin(x)\frac{1}{\cos(x)}\\ &amp;= \left(\frac{1}{2}\cos^2(x) + c\right)\frac{1}{\cos(x)}\\
+&amp;= \frac{\cos(x)}{2} + c \sec(x)
+\end{align}
+\]</span>
+Note that there are other forms for the solution, since <span class="math inline">\(\cos(x)\sin(x) = \frac{1}{2}\sin(2x)\)</span>.</p></li>
+</ol></li>
+<li><p>Find the general solutions of the following constant coefficient, linear, homogeneous differential equations, and the particular solutions in those cases where initial conditions are specified:</p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(\displaystyle \frac{d^2y}{dx^2}+5\frac{dy}{dx}+6y=0,\;y(0)=0,\; \frac{dy(0)}{dx}=1\)</span></li>
+<li><span class="math inline">\(\displaystyle \frac{d^2y}{dx^2}+8\frac{dy}{dx}+25y=0,\;y(0)=1,\; \frac{dy(0)}{dx}=0\)</span></li>
+<li><span class="math inline">\(\displaystyle \frac{d^2y}{dx^2}+2\frac{dy}{dx}+y=0\)</span></li>
+</ol>
+<p>Answers:
+Recall that for second order homogeneous differential equations, we standard form is
+<span class="math display">\[\frac{d^2y}{dx^2} + p \frac{dy}{dx} + qy = 0\]</span>
+and we consider the possible solution <span class="math inline">\(y = e^{mx}\)</span>. Substitution yields
+<span class="math display">\[(m^2 + pm + q)e^{mx} = 0 \text{ hence, because $e^{mx}$ is never zero, } m^2 + pm + q = 0.\]</span>
+Solving this auxiliary (or characteristic) equation gives the two roots, and there are three possible cases for obtaining the two linearly independent solutions—see the lecture notes.</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>The auxiliary equation is given by
+<span class="math display">\[
+m^2 + 5m + 6 = 0\\
+(m+3)(m+2) = 0\\
+m_1 = -3, m_2 = -2
+\]</span>
+And the general solution is
+<span class="math display">\[y(X) = Ae^{-3x} + B e^{-2x}.\]</span>
+We have the intial conditions <span class="math inline">\(y(0) = 0\)</span> and <span class="math inline">\(\frac{dy(0)}{dx} = 1\)</span>,
+so <span class="math inline">\(A+B = 0\)</span> and <span class="math inline">\(-3A -2B = 1\)</span>. This gives <span class="math inline">\(A=-1\)</span> and <span class="math inline">\(B = 1\)</span>. So the particular solution is
+<span class="math display">\[
+y(x) = -e^{-3x} + e^{-2x}
+\]</span></p></li>
+<li><p>Here, the auxiliary (or characteristic) equation is
+<span class="math display">\[
+m^2 + 8m + 25 = 0\\
+m = \frac{-8 \pm  \sqrt{64 - 100}}{2}\\
+m_1 = \frac{-8 + 6i}{2} = -4+3i\\
+m_2 = \frac{-8 - 6i}{2} = -4-3i
+\]</span>
+The general solution is therefore <span class="math inline">\(y= e^{-4x}(A \cos 3x + B \sin 3x)\)</span>.</p></li>
+</ol>
+<p></p>
+<p><span class="math inline">\(y(0)=1 \implies A=1\)</span>. <span class="math inline">\(y&#39; = -4 e^{-4x}(A \cos 3x + B \sin 3x) + e^{-4x}(-3A \sin 3x + 3B \cos 3x)\)</span>.
+Thus, <span class="math inline">\(y&#39;(0)=0 \implies -4A +3B = 0 \implies B= \frac{4}{3}\)</span>, giving the particular solution
+<span class="math display">\[
+y = \frac{1}{3} e^{-4x}(3 \cos 3x + 4 \sin 3x).
+\]</span></p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(m^2 +2m+1 = 0 \implies (m+1)^2=0\)</span>, so <span class="math inline">\(m=-1\)</span> twice. The general solution is then
+<span class="math display">\[
+y =  (A + Bx) e^{-x}.
+\]</span></li>
+</ol></li>
+<li><p>For each of the following differential equations, find: the Complementary Function; a Particular Integral; and the Particular Solution corresponding to the given initial conditions:</p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(\displaystyle \frac{d^2y}{dx^2}+\frac{dy}{dx}+y=36e^{5x}\)</span></li>
+<li><span class="math inline">\(\displaystyle \frac{d^2y}{dx^2}+3\frac{dy}{dx}-4y=-34\sin(x)\)</span></li>
+<li><span class="math inline">\(\displaystyle \frac{d^2y}{dx^2}+3\frac{dy}{dx}-4y=24e^{-x},\;y(0)=0,\; \frac{dy(0)}{dx}=10\)</span></li>
+<li><span class="math inline">\(\displaystyle \frac{d^2y}{dx^2}-3\frac{dy}{dx}+2y=x^2-2x+3,\;y(0)=\frac{3}{4},\; \frac{dy(0)}{dx}=\frac{3}{2}.\)</span></li>
+</ol>
+<p>Answers:</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>First, find the complementary function (the solution to the homogeneous differential equation). The characteristic equation for the homogeneous part is
+<span class="math display">\[m^2 + 2m + 1 = 0 \\(m+1)^2 = 0\\m=-1 \text{equal roots}\]</span>
+Therefore, <span class="math inline">\(y_{CF} = (A+Bx)e^{-x}\)</span>
+Now for the particular integral, the solution to the nonhomogeneous part of the differential equation. Since the right hand side is <span class="math inline">\(36e^{5x}\)</span>, take the trial (ansatz) particular integral <span class="math inline">\(y_{PI} = Ce^{5x}\)</span>. Substituting this into the differential equation gives
+<span class="math display">\[\frac{d^2y_{PI}}{dx^2}+\frac{dy_{PI}}{dx}+y_{PI}=36e^{5x}\\
+25Ce^{5x} + 2(5Ce^{5x}) + Ce^{5x} = 36Ce^{5x} = 36e^{5x}\]</span>
+and we have <span class="math inline">\(C=1\)</span>. Therefore, the particular integral is <span class="math inline">\(y_{PI} = e^{5x}\)</span> and the general solution is
+<span class="math display">\[
+y = (A+Bx)e^{-x} + e^{5x}.
+\]</span></p></li>
+<li><p>Proceeding the same way, the characteristic equation is
+<span class="math display">\[
+m^2 + 3m - 4 = 0\\
+(m+4)(m-1) = 0\\
+m_1 = -4, m_2 = 1
+\]</span>
+so there are two distinct roots, and
+<span class="math display">\[y_{CF} = Ae^{-4x} + B e^x\]</span>
+For the particular integral, the right hand side is <span class="math inline">\(-34\sin(x)\)</span>, so try the function
+<span class="math display">\[
+\begin{align}
+y_{PI} &amp;= a \cos(x)+ b\sin(x)\\
+\frac{dy_{PI}}{dx} &amp;= -a \sin(x) + b\cos(x)\\
+\frac{d^2y_{PI}}{dx^2} &amp;= -a \cos(x) - b\sin(X)
+\end{align}
+\]</span>
+And substituting these into the differential equation
+<span class="math display">\[
+\left(-a\cos(x) - b\sin(x)\right) + 3 \left(-a \sin(x) + b\cos(x)\right) - 4\left(a\cos(x) + b\sin(x)\right) = -34\sin(x)\\
+(3b-5a)\cos(x) + (-5b - 3a)\sin(x) = -34\sin(x)\]</span>
+Equating the coefficients of <span class="math inline">\(\sin(x)\)</span> and <span class="math inline">\(\cos(x)\)</span>, since the above must hold for all <span class="math inline">\(x\)</span>:
+<span class="math display">\[
+\begin{align}
+3b-5a &amp;= 0\\
+-5b - 3a &amp;= 0
+\end{align}
+\]</span>
+Solving these simultaneos equations gives <span class="math inline">\(a=3, b=5\)</span>. Therefore the particular integral is
+<span class="math display">\[y_{PI} = 3\cos(x) + 5\sin(x)\]</span>
+and the general solution <span class="math inline">\(y = y_{CF} + y_{PI}\)</span> is
+<span class="math display">\[
+y(x) = Ae^{-4x} + Be^x + 3\cos(x) + 5\sin(x)
+\]</span></p></li>
+<li><p>The characteristic equation is solved by
+<span class="math display">\[
+m^2 + 3m - 4 = 0\\
+(m+4)(m-1) = 0\\
+m_1 = -4, m_2 = 1
+\]</span>
+There are two distinct roots and <span class="math inline">\(y_{CF} = Ae^{-4x} = Be^x\)</span>. For the particular integral, since the right hand side is <span class="math inline">\(24e^{-x}\)</span>, try the function
+<span class="math display">\[
+\begin{align}
+y_{PI} &amp;= Ce^{-x}\\
+\frac{dy_{PI}}{dx} &amp;= -Ce^{-x}\\
+\frac{d^2y_{PI}}{dx} &amp;= Ce^{-x}
+\end{align}
+\]</span>
+Upon substituting into the differential equation
+<span class="math display">\[
+Ce^{-x} - 3(Ce^{-x}) - 4Ce^{-x} = 24e^{-x}\]</span>
+so -6C = 25$ and <span class="math inline">\(C = -4\)</span>.
+The general solution is then <span class="math inline">\(y = y_{CF} + y_{PI}\)</span>
+<span class="math display">\[
+y(x) = Ae^{-4x} + B e^{-x} - 4e^{-x}\]</span>
+The initial conditions are <span class="math inline">\(y(0) = 0\)</span> and <span class="math inline">\(\frac{dy(0)}{dx} = 0\)</span>, which can be used to solve for <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>.
+<span class="math display">\[
+A+B - 4 = 0\\
+-4a + B + 4 = 10
+\]</span>
+and <span class="math inline">\(A = -0.4\)</span>, <span class="math inline">\(B=4.4\)</span> so the particular solution is
+<span class="math display">\[
+y(x) = -0.4 e^{-4x} + 4.4 e^x - 4e^{-x}
+\]</span></p></li>
+<li><p>The characteristic equation is given by
+<span class="math display">\[
+m^2 - 3m + 2 = 0\\
+(m-2)(m-1) = 0\\
+m_1 = 2, m_2 = 1
+\]</span>
+There are two distinct roots, so the complementary function is
+<span class="math display">\[y_{CF} = Ae^{2x} + Be^x\]</span>
+Because the right hand side is a quadratic, take the particular integral to also be a quadratic.
+<span class="math display">\[
+\begin{align}
+y_{PI} &amp;= Cx^2 +Dx + E\\
+\frac{y_{PI}}{dx} &amp;= 2Cx + D\\
+\frac{d^2 y_{PI}}{dx^2} &amp;= 2C
+\end{align}
+\]</span>
+Substituting into the homogeneous part of the differential equation and grouping terms in powers of <span class="math inline">\(x\)</span>:
+<span class="math display">\[
+2cx^2 + (2D - 6C)x + 2C - 3D + 2E = 3
+\]</span>
+Which gives <span class="math inline">\(C = \frac{1}{2},D=\frac{1}{2},E = \frac{7}{4}\)</span>. Therefrore the general solution is
+<span class="math display">\[
+y = Ae^{2x} + Be^x + \frac{x^2}{2} + \frac{x}{2} + \frac{7}{4}
+\]</span>
+For the particualr solution, find <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> given the initial conditions <span class="math inline">\(y(0) = \frac{3}{4}\)</span> and <span class="math inline">\(\frac{dy(0)}{dx} = \frac{3}{2}\)</span>
+<span class="math display">\[
+\begin{align}
+A + B + \frac{7}{4} &amp;= \frac{3}{4} &amp;\Rightarrow &amp; A+B &amp; = -1\\
+2A + B + \frac{1}{2} &amp;= \frac{3}{2} &amp;\Rightarrow &amp; 2A + B &amp;=1
+\end{align}
+\]</span>
+From these, <span class="math inline">\(A=2\)</span> and <span class="math inline">\(B=-3\)</span>, so the particular solution is
+<span class="math display">\[
+y(x) = 2e^{2x} - 3e^x +\frac{x^2}{2} + \frac{x}{2} + \frac{7}{4}
+\]</span></p></li>
+</ol></li>
+</ol>
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="exercise-set-13.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="exercise-set-14.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": null,
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/maths-sci-eng/maths-sci-eng.github.io/edit/master/47-exercises13_ans.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["maths-notes.pdf", "maths-notes.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

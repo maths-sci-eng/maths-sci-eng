@@ -1,0 +1,140 @@
+# Exercise Set 16 Answers {.unlisted .unnumbered}
+
+1. A normally distributed random variable $X$ has mean $1$ and variance $4$. Using tables, find 
+    a. $P(X>0)$ 
+    a. $P(X<2)$
+    a. $P(|X|<1)$
+    a. the value of $c$ such that $P(X<c)=0.0643$
+
+    Answers:
+
+    Let $Y = \frac{X - \mu}{\sigma}$, where $\mu = 1$ and $\sigma = 2$. Therefore $Y$ is a standard normal random variable, and $X = \sigma Y + \mu$. 
+
+    a. \begin{eqnarray*}
+    P(X > 0) &=& P([2 Y + 1] > 0)\\
+    &=& P(Y > -1/2) \\
+    &=& 1 - P(Y > 1/2) \qquad \mbox{due to symmetry}\\
+    &=& 1 - 0.3085 \qquad \mbox{from tables}\\
+    &=& 0.692~\text{(3 s.f.)}
+    \end{eqnarray*}
+
+    a. \begin{eqnarray*}
+    P(X < 2) &=& P([2 Y + 1] < 2)\\
+    &=& P(Y < 1/2) \\
+    &=& 1 - P(Y > 1/2) \qquad \mbox{due to symmetry}\\
+    &=& 0.692~\text{(3 s.f.)}\qquad~\mbox{from tables}.
+    \end{eqnarray*}
+
+    a. \begin{eqnarray*}
+    P(|X| < 1) &=& P(-1 < X < 1)\\
+    &=& P(-1 < 2 Y + 1 < 1)\\
+    &=& P(-1 < Y < 0)\\
+    &=& \frac{1}{2} - P(Y > 1) \qquad \mbox{due to symmetry}\\
+    &=& 0.5 - 0.1587 \qquad \mbox{from tables}\\
+    &=& 0.341~\text{(3 s.f.)}.
+    \end{eqnarray*}
+
+    a. \begin{eqnarray*}
+    P(X < c) &=& P([2 Y + 1] < c)\\
+    &=& P(Y < (c - 1) / 2)\\
+    &=& P(Y > (1 - c) / 2) \qquad \mbox{due to symmetry}.
+    \end{eqnarray*}
+
+    From tables we have that $P(Y > 1.52) = 0.0643$, and hence we want the value of $c$ such that
+
+    \begin{eqnarray*}
+    (1 - c) / 2 &=& 1.52\\
+    c &=& -2.04.
+    \end{eqnarray*}
+
+
+1. A normally distributed random variable $X$ has mean 1 and variance 5. Using tables, find:
+    a. $P(X > 1)$
+    a. $P(|X| < 0.1)$
+    a. The value of $c$ such that $P(X < c) = 0.01287$
+
+    Answers:
+
+    a. \begin{eqnarray*}
+        P(X > 1) &=& P(Z > \frac{1 - 1}{\sqrt{5}}) \quad \mbox{where $Z \sim N(0, 1)$}\\
+        &=& P(Z > 0) \\
+        &=& 0.5 \quad \mbox{from tables}.
+    \end{eqnarray*}
+    (Or could answer this by noting a symmetry argument with $E(X) = 1$ and therefore by definition $P(X > 1) = 0.5$ since the normal distribution is symmetric about the mean.)
+    
+    a. \begin{eqnarray*}
+        P(|X| < 0.1) &=& P(-0.1 < X < 0.1)\\
+        &=& P(\frac{-0.1 - 1}{\sqrt{5}} < Z < \frac{0.1 - 1}{\sqrt{5}}) \quad \mbox{where $Z \sim N(0, 1)$}\\
+        &=& P(-0.4919 < Z < -0.4025)\\
+        &=& P(Z > 0.4025) - P(Z > 0.4919) \quad \mbox{by symmetry}.
+    \end{eqnarray*}
+    To calculate $P(Z > 0.4025)$ and $P(Z > 0.4919)$ we need to use linear interpolation. Firstly, we note that $P(Z > 0.40) = 0.3446$ and $P(Z > 0.41) = 0.3409$, and therefore
+    \begin{eqnarray*}
+        P(Z > 0.4025) &=& P(Z > 0.40) - \frac{0.4025 - 0.4}{0.41 - 0.4}\left[P(Z > 0.40) - P(Z > 0.41)\right]\\
+        &=& 0.3446 - 0.25 \times 0.0037\\
+        &=& 0.3437~\text{(4 s.f.)}.
+    \end{eqnarray*}
+    Secondly, we note that $P(Z > 0.49) = 0.3121$ and $P(Z > 0.5) = 0.3085$, and therefore
+    \begin{eqnarray*}
+        P(Z > 0.4919) &=& P(Z > 0.49) - \frac{0.4919 - 0.49}{0.5 - 0.49}\left[P(Z > 0.49) - P(Z > 0.5)\right]\\
+        &=& 0.3121 - 0.19 \times 0.0036\\
+        &=& 0.3114~\text{(4 s.f.)}.
+    \end{eqnarray*}
+    Therefore,
+    $$
+    P(|X| < 0.1) = P(Z > 0.4025) - P(Z > 0.4919) = 0.3437 - 0.3114 = 0.0323~\text{(4 s.f.)}.
+    $$
+        
+    a. From tables we have that $P(Z > 2.23) = 0.01287$ and so by symmetry $P(Z < -2.23) = 0.01287$. Therefore,
+    $$
+    P(X < c) = P\left(Z < \frac{c - 1}{\sqrt{5}}\right),
+    $$
+    and this implies that
+    \begin{eqnarray*}
+    \frac{c - 1}{\sqrt{5}} &=& -2.23\\
+    c &=& -2.23 \times \sqrt{5} + 1\\
+    &=& -3.986~\text{(4 s.f.)}.
+    \end{eqnarray*}
+
+1. A thermostat is set to switch at $20^\circ\,\text{C}$ operates in a range of temperatures with a mean value of $20.4^\circ\,\text{C}$ and a standard deviation of $1.3^\circ\,\text{C}$. What is the probability that its operating temperature will fall between $19.5^\circ\,\text{C}$ and $20.5^\circ\,\text{C}$? 
+
+    Answers:
+
+    The operating temperature is a normal random variable $X$ with mean $\mu=20.4$ and standard deviation $\sigma=1.3$. We are looking for $P(19.5<X<20.5)$. The equivalent probability of a standard normal random variable $Z$ is given by the limits
+    $$ z_1 = \frac{19.5 - 20.4}{1.3}=-0.69 \quad\text{and}\quad z_2=\frac{20.5-20.4}{1.3}=0.08$$
+    that is $P(-0.69< Z <0.08)$.
+    Using standard normal distribution tables:
+    \begin{align*}
+    P(-0.69< Z <0.08)&=P(0<Z<0.69)+P(0<Z<0.08)\\
+    &= 0.2549 + 0.0319\\
+    &= 0.2868.
+    \end{align*}
+
+1. The life of a drill has a mean of 16 hours and a standard deviation of 2.6 hours. Assuming it is normally distributed determine the probability of a bit lasting
+    a. More than 20 hours.
+    a. Less than 14 hours.
+
+    Answers:
+
+    The time is a normal random variable $X$ with mean $\mu=16$ and standard deviation $\sigma=2.6$.
+    
+    a. $P(X>20)$. The equivalent probability of a standard normal random variable $Z$ is given by the limit
+    $$ z = \frac{20 - 16}{2.6}=1.54$$
+    that is $P(Z >1.54)$.
+    Using standard normal distribution tables:
+    \begin{align*}
+    P(Z>1.54)&=1-(P(0<Z<1.54)+0.5)\\
+    &= 0.5 - 0.4382\\
+    &= 0.0618.
+    \end{align*}
+
+    a. $P(X<14)$. The equivalent probability of a standard normal random variable $Z$ is given by the limit
+    $$ z = \frac{14 - 16}{2.6}=-0.77$$
+    that is $P(Z <-0.77)$.
+    Using standard normal distribution tables:
+    \begin{align*}
+    P(Z<-0.77)&=1-(P(0<Z<0.77)+0.5)\\
+    &= 0.5 - 0.2794\\
+    &= 0.2206.
+    \end{align*}
+

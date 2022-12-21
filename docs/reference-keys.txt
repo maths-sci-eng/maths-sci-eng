@@ -179,7 +179,6 @@ exm:clt
 fig:complexsketch
 eq:vecwildebeest
 eq:asymp
-exm:randomcoin
 foundations
 numbers
 algebra
@@ -339,4 +338,3 @@ measures-of-dispersion
 range
 interquartile-range-and-percentiles
 variance-and-standard-deviation-1
-random-variables

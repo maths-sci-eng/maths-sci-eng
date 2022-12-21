@@ -23,7 +23,7 @@
 <meta name="author" content="Dr Mark Callaway" />
 
 
-<meta name="date" content="2022-12-16" />
+<meta name="date" content="2022-12-21" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -76,7 +76,10 @@
 <li><a href="./">Mathematics for Scientists and Engineers</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#acknowledgements"><i class="fa fa-check"></i>Acknowledgements</a></li>
+</ul></li>
 <li class="chapter" data-level="1" data-path="foundations.html"><a href="foundations.html"><i class="fa fa-check"></i><b>1</b> Foundations</a>
 <ul>
 <li class="chapter" data-level="1.1" data-path="foundations.html"><a href="foundations.html#numbers"><i class="fa fa-check"></i><b>1.1</b> Numbers</a></li>
@@ -287,7 +290,6 @@
 <li class="chapter" data-level="20.6" data-path="continuous-random-variables.html"><a href="continuous-random-variables.html#the-law-of-large-numbers"><i class="fa fa-check"></i><b>20.6</b> The Law of Large Numbers</a></li>
 <li class="chapter" data-level="20.7" data-path="continuous-random-variables.html"><a href="continuous-random-variables.html#central-limit-theorem"><i class="fa fa-check"></i><b>20.7</b> Central Limit Theorem</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="exercise-set-1.html"><a href="exercise-set-1.html"><i class="fa fa-check"></i>Exercise Set 1</a></li>
 <li class="chapter" data-level="21" data-path="statistics.html"><a href="statistics.html"><i class="fa fa-check"></i><b>21</b> Statistics</a>
 <ul>
 <li class="chapter" data-level="21.1" data-path="statistics.html"><a href="statistics.html#frequency"><i class="fa fa-check"></i><b>21.1</b> Frequency</a>
@@ -308,6 +310,7 @@
 <li class="chapter" data-level="21.3.3" data-path="statistics.html"><a href="statistics.html#variance-and-standard-deviation-1"><i class="fa fa-check"></i><b>21.3.3</b> Variance and Standard Deviation</a></li>
 </ul></li>
 </ul></li>
+<li class="chapter" data-level="" data-path="exercise-set-1.html"><a href="exercise-set-1.html"><i class="fa fa-check"></i>Exercise Set 1</a></li>
 <li class="chapter" data-level="" data-path="exercise-set-2.html"><a href="exercise-set-2.html"><i class="fa fa-check"></i>Exercise Set 2</a></li>
 <li class="chapter" data-level="" data-path="exercise-set-3.html"><a href="exercise-set-3.html"><i class="fa fa-check"></i>Exercise Set 3</a></li>
 <li class="chapter" data-level="" data-path="exercise-set-4.html"><a href="exercise-set-4.html"><i class="fa fa-check"></i>Exercise Set 4</a></li>
@@ -320,12 +323,13 @@
 <li class="chapter" data-level="" data-path="exercise-set-11.html"><a href="exercise-set-11.html"><i class="fa fa-check"></i>Exercise Set 11</a></li>
 <li class="chapter" data-level="" data-path="exercise-set-12.html"><a href="exercise-set-12.html"><i class="fa fa-check"></i>Exercise Set 12</a></li>
 <li class="chapter" data-level="" data-path="exercise-set-13.html"><a href="exercise-set-13.html"><i class="fa fa-check"></i>Exercise Set 13</a></li>
+<li class="chapter" data-level="" data-path="exercise-set-13-1.html"><a href="exercise-set-13-1.html"><i class="fa fa-check"></i>Exercise Set 13</a></li>
 <li class="chapter" data-level="" data-path="exercise-set-14.html"><a href="exercise-set-14.html"><i class="fa fa-check"></i>Exercise Set 14</a></li>
 <li class="chapter" data-level="" data-path="exercise-set-15.html"><a href="exercise-set-15.html"><i class="fa fa-check"></i>Exercise Set 15</a></li>
+<li class="chapter" data-level="" data-path="exercise-set-16.html"><a href="exercise-set-16.html"><i class="fa fa-check"></i>Exercise Set 16</a></li>
+<li class="chapter" data-level="" data-path="exercise-set-17.html"><a href="exercise-set-17.html"><i class="fa fa-check"></i>Exercise Set 17</a></li>
 <li class="chapter" data-level="" data-path="notation.html"><a href="notation.html"><i class="fa fa-check"></i>Notation</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
-<li class="chapter" data-level="" data-path="exercise-set-16-1.html"><a href="exercise-set-16-1.html"><i class="fa fa-check"></i>Exercise Set 16</a></li>
-<li class="chapter" data-level="" data-path="exercise-set-17.html"><a href="exercise-set-17.html"><i class="fa fa-check"></i>Exercise Set 17</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -655,8 +659,8 @@ The standard deviation is
 <tr class="odd">
 <td>Bernoulli <span class="math inline">\(X\sim\operatorname{Bern}(p)\)</span></td>
 <td><span class="math inline">\(p_X(x)=p^x(1-p)^{1-x}\)</span>; <span class="math inline">\(x=0,1\)</span>; <span class="math inline">\(0 \le p \le 1\)</span>.</td>
-<td><span class="math inline">\(\operatorname{E}(x)=p\)</span></td>
-<td><span class="math inline">\(\operatorname{var}(X)p(1-p)\)</span></td>
+<td><span class="math inline">\(\operatorname{E}(X)=p\)</span></td>
+<td><span class="math inline">\(\operatorname{var}(X)=p(1-p)\)</span></td>
 </tr>
 <tr class="even">
 <td>Binomial <span class="math inline">\(X\sim\operatorname{Bin}(n,p)\)</span></td>

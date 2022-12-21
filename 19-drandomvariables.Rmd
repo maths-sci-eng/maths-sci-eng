@@ -297,7 +297,7 @@ Here we list (without proof) the expectation and variance of the discrete probab
 
 |**Distribution**|**Probability Density Function**|**Expectation**|**Variance**|
 |---|---|---|---|
-|Bernoulli $X\sim\operatorname{Bern}(p)$|$p_X(x)=p^x(1-p)^{1-x}$; $x=0,1$; $0 \le p \le 1$.| $\operatorname{E}(x)=p$ | $\operatorname{var}(X)p(1-p)$ |
+|Bernoulli $X\sim\operatorname{Bern}(p)$|$p_X(x)=p^x(1-p)^{1-x}$; $x=0,1$; $0 \le p \le 1$.| $\operatorname{E}(X)=p$ | $\operatorname{var}(X)=p(1-p)$ |
 |Binomial $X\sim\operatorname{Bin}(n,p)$|$p_X(x)={n \choose x} p^x (1-p)^{n-x}$; $n=1,2,\dotsc$; $0 \le p \le 1$; $x=0,1,2\dotsc,n$ |$\operatorname{E}(X)=np$ | $\operatorname{var}(X)=np(1-p)$ |
 |Poisson $X\sim\operatorname{Po}(\lambda)$|$p_X(x)=\dfrac{\lambda^xe^{-\lambda}}{x!}$; $x=0,1,2,\dotsc$; $\lambda>0$|$\operatorname{E}(X)=\lambda$ | $\operatorname{var}(X)=\lambda$|
 
