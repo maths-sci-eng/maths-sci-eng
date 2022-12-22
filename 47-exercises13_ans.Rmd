@@ -1,4 +1,4 @@
-# Exercise Set 13 {-}
+# Exercise Set 13 Answers {.unlisted .unnumbered}
 
 1. Using the method of separation of variables, find the general solutions of the following first order differential equations and the particular solutions in those cases where initial conditions are specified:
 
