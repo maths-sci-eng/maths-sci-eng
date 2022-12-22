@@ -179,6 +179,7 @@ exm:clt
 fig:complexsketch
 eq:vecwildebeest
 eq:asymp
+tab:examtable
 foundations
 numbers
 algebra
