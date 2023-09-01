@@ -8,7 +8,6 @@
 Leonhard Euler
 
 
-
 We quite often need to find maximum and minimum points of a function in relation to optimisation or due to some physical principle, such as the minimisation of potential energy in physics.
 
 We distinguish between *local* maxima/minima and *global* maxima/minima. A global maximum is a "peak" in the graph of a function that is higher than or equal to any other value of the function, whilst a local maximum is a "peak" that is higher than or equal to any other value in the immediate region around the peak; we have similar definitions for a global and local minimum. If we are looking at maxima/minima where there are no points (globally/locally) that are equal in value, we add the word *strict* maximum/minimum. Differentiation can help us to find local maxima/minima.

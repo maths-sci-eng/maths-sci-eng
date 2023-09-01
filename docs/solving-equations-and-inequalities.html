@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 20 Discrete Random Variables | Mathematics for Scientists and Engineers</title>
+  <title>Chapter 3 Solving Equations and Inequalities | Mathematics for Scientists and Engineers</title>
   <meta name="description" content="Mathematics Lecture Notes for UoE Penryn Science and Engineering Disciplines." />
   <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 20 Discrete Random Variables | Mathematics for Scientists and Engineers" />
+  <meta property="og:title" content="Chapter 3 Solving Equations and Inequalities | Mathematics for Scientists and Engineers" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="Mathematics Lecture Notes for UoE Penryn Science and Engineering Disciplines." />
   <meta name="github-repo" content="maths-sci-eng/maths-sci-eng.github.io" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 20 Discrete Random Variables | Mathematics for Scientists and Engineers" />
+  <meta name="twitter:title" content="Chapter 3 Solving Equations and Inequalities | Mathematics for Scientists and Engineers" />
   
   <meta name="twitter:description" content="Mathematics Lecture Notes for UoE Penryn Science and Engineering Disciplines." />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="probability-fundamentals.html"/>
-<link rel="next" href="continuous-random-variables.html"/>
+<link rel="prev" href="functions-and-graphs.html"/>
+<link rel="next" href="trigonometry.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -370,342 +370,265 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="discrete-random-variables" class="section level1 hasAnchor" number="20">
-<h1><span class="header-section-number">Chapter 20</span> Discrete Random Variables<a href="discrete-random-variables.html#discrete-random-variables" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>A <em>random variable</em> is a numerical valued function defined on the sample space.</p>
+<div id="solving-equations-and-inequalities" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">Chapter 3</span> Solving Equations and Inequalities<a href="solving-equations-and-inequalities.html#solving-equations-and-inequalities" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>In this section we shall look at some solutions methods to some forms of commonly encountered equations and inequalities.</p>
+<div id="quad-eqs" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> Quadratic equations<a href="solving-equations-and-inequalities.html#quad-eqs" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>A particularly common form of equations that arise in science and engineering are <em>quadratic</em> equations. These are equations of the form</p>
+<p><span class="math display">\[ax^2+bx+c=0\]</span></p>
+<p>where <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span> and <span class="math inline">\(c\)</span> are constants and we wish to find the values of <span class="math inline">\(x\)</span> satisfying this equation. We explore three different methods below.</p>
+<div id="factorisation-by-inspection" class="section level3 hasAnchor" number="3.1.1">
+<h3><span class="header-section-number">3.1.1</span> Factorisation by inspection<a href="solving-equations-and-inequalities.html#factorisation-by-inspection" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>First consider a quadratic where <span class="math inline">\(a=1\)</span>, that is</p>
+<p><span class="math display">\[x^2+bx+c=0.\]</span></p>
+<p>If we can write a quadratic equation as a product of two simple linear factors in the form<a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a>:</p>
+<p><span class="math display">\[x^2+bx+c = (x+\alpha)(x+\beta)\]</span></p>
+<p>then <span class="math inline">\(x=-\alpha\)</span> and <span class="math inline">\(x=-\beta\)</span> are solutions to <span class="math inline">\(ax^2+bx+c=0\)</span>, since for <span class="math inline">\(x=-\alpha\)</span></p>
+<p><span class="math display">\[(-\alpha+\alpha)(-\alpha+\beta)=0(-\alpha+\beta)=0\]</span></p>
+<p>and similarly for <span class="math inline">\(x=-\beta\)</span>. Furthermore, these will be the only two solutions: it is possible there are two different solutions <span class="math inline">\(\alpha\neq\beta\)</span>, one “repeated” solution where <span class="math inline">\(\alpha=\beta\)</span> so that the quadratic factorises as <span class="math inline">\((x+\alpha)(x+\alpha)=(x+\alpha)^2\)</span>, or there may be no solutions<a href="#fn6" class="footnote-ref" id="fnref6"><sup>6</sup></a>. In many cases it is easy to spot the values of <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span>. To see this, let’s work backwards and expand the brackets:</p>
+<p><span class="math display">\[(x+\alpha)(x+\beta)=x^2+\beta x +\alpha x +\alpha\beta = x^2 + (\alpha + \beta)x + \alpha\beta\]</span></p>
+<p>so we just need to find the values of <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span> that sum to <span class="math inline">\(b\)</span> and multiply together to give <span class="math inline">\(c\)</span>.</p>
 <div class="example">
-<p><span id="exm:rv" class="example"><strong>Example 20.1  (Random Variables) </strong></span>A coin with probability <span class="math inline">\(p\)</span> of getting a head is tossed three times.</p>
-<p>There are 8 possible outcomes from the experiment. Let <span class="math inline">\(X\)</span> be a random variable counting the number of heads.</p>
-<table>
-<thead>
-<tr class="header">
-<th><strong>Sample</strong></th>
-<th><strong>Probability</strong></th>
-<th><span class="math inline">\(X\)</span></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>TTT</td>
-<td><span class="math inline">\((1-p)^3\)</span></td>
-<td>0</td>
-</tr>
-<tr class="even">
-<td>TTH</td>
-<td><span class="math inline">\(p(1-p)^2\)</span></td>
-<td>1</td>
-</tr>
-<tr class="odd">
-<td>THT</td>
-<td><span class="math inline">\(p(1-p)^2\)</span></td>
-<td>1</td>
-</tr>
-<tr class="even">
-<td>HTT</td>
-<td><span class="math inline">\(p(1-p)^2\)</span></td>
-<td>1</td>
-</tr>
-<tr class="odd">
-<td>THH</td>
-<td><span class="math inline">\(p^2(1-p)\)</span></td>
-<td>2</td>
-</tr>
-<tr class="even">
-<td>HTH</td>
-<td><span class="math inline">\(p^2(1-p)\)</span></td>
-<td>2</td>
-</tr>
-<tr class="odd">
-<td>HHT</td>
-<td><span class="math inline">\(p^2(1-p)\)</span></td>
-<td>2</td>
-</tr>
-<tr class="even">
-<td>HHH</td>
-<td><span class="math inline">\(p^3\)</span></td>
-<td>3</td>
-</tr>
-</tbody>
-</table>
+<p><span id="exm:factorise" class="example"><strong>Example 3.1  </strong></span>If we have
+<span class="math display">\[x^2+5x+6=0\]</span>
+we are looking for two numbers that sum to make <span class="math inline">\(5\)</span> and multiply to make <span class="math inline">\(6\)</span>, so the answer is clearly <span class="math inline">\(x=2\)</span> and <span class="math inline">\(x=3\)</span>, giving the factorisation
+<span class="math display">\[x^2+5x+6=(x+2)(x+3).\]</span></p>
 </div>
-<p>The convention is to denote a random variable using upper case letters and lower-case letters to denote a value that the random variable takes e.g. here we have <span class="math inline">\(X=x\)</span> with <span class="math inline">\(x = 0, 1, 2, 3\)</span>.</p>
-<p>A random variable is said to be <em>discrete</em> if its range of values is finite or countably infinite (i.e. it must be possible to list all the values in a, possibly infinite, sequence).</p>
-<p>In the coin toss example, we could write a function to map the probabilities of observing <span class="math inline">\(x\)</span> heads from three tosses as:
-<span class="math display">\[
-P(X = x) = {3 \choose x} p^x (1 - p)^{3 - x}\quad\mbox{for}~x = 0, 1, 2, 3.
-\]</span></p>
-<p>The function <span class="math inline">\(P(X = x)\)</span> is known as a <em>probability distribution</em>. In the discrete case, it is also called a <em>probability mass function</em>. Some authors use the notation <span class="math inline">\(p_X(x)\)</span> or <span class="math inline">\(f_X(x)\)</span>. We will tend to use the former for discrete random variables and the latter for <em>continuous</em> random variables (more on that later).</p>
-<p>By the laws of probability, we always have
-<span class="math display">\[
-P(X = x) \geq 0
-\]</span>
-and
-<span class="math display">\[
-\sum_{x} P(X = x) = 1.
-\]</span>
-Where the notation <span class="math inline">\(\displaystyle \sum_x\)</span> means to sum over all possible values of <span class="math inline">\(x\)</span>.</p>
-<div id="bernoulli-trials" class="section level2 hasAnchor" number="20.1">
-<h2><span class="header-section-number">20.1</span> Bernoulli trials<a href="discrete-random-variables.html#bernoulli-trials" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Possibly the simplest example of a random variable is when an outcome can only take one of two values e.g.</p>
-<ul>
-<li>success / failure,</li>
-<li>survival / death,</li>
-<li>defective / non-defective.</li>
-</ul>
-<p>Note that these outcomes are not numerical, but typically we can assign numerical values to them, for example we could let
-<span class="math display">\[
-X = \begin{cases}
-1 &amp; \text{if success,}\\
-0 &amp; \text{if failure.}
-\end{cases}
-\]</span></p>
-<p>If we assume that the <strong>probability of success</strong> is given by a value <span class="math inline">\(0\le p\le 1\)</span>, then the <strong>probability mass function</strong> is:
-<span class="math display">\[
-p_X(x) = P(X = x) = p^x (1 - p)^{1 - x} \qquad \mbox{for}~x = 0, 1.
-\]</span>
-The experiment is known as a <em>Bernoulli trial</em>, after <a href="https://en.wikipedia.org/wiki/Jacob_Bernoulli">Jacob Bernoulli (1654–1705)</a>.</p>
-<p>We write <span class="math inline">\(X \sim \mbox{Bern}(p)\)</span> to say that the random variable <span class="math inline">\(X\)</span> has a Bernoulli probability distribution with parameter <span class="math inline">\(p\)</span>.</p>
-</div>
-<div id="binomial-distribution" class="section level2 hasAnchor" number="20.2">
-<h2><span class="header-section-number">20.2</span> Binomial Distribution<a href="discrete-random-variables.html#binomial-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Often we may have an experiment which consists of a fixed number <span class="math inline">\(n\)</span> of <strong>independent</strong> Bernoulli trials. Let <span class="math inline">\(X\)</span> denote the number of successes.</p>
-<p>In this case there are <span class="math inline">\(2^n\)</span> possible outcomes and <span class="math inline">\(X\)</span> is defined in the range <span class="math inline">\(0, \dots, n\)</span>. There will be <span class="math inline">\({n \choose x}\)</span> of the <span class="math inline">\(2^n\)</span> possible outcomes corresponding to a value <span class="math inline">\(X = x\)</span>, which will occur with probability <span class="math inline">\(p^x(1-p)^{n - x}\)</span>,</p>
-<p>A <em>binomial random variable</em>, <span class="math inline">\(X \sim \mbox{Bin}(n, p)\)</span>, is the number of successes from a fixed number (<span class="math inline">\(n\)</span>) of Bernoulli trials.
-A binomial random variable <span class="math inline">\(X\)</span> therefore has probability mass function:
-<span class="math display">\[
-p_X(x) = P(X = x) = {n \choose x} p^x (1 - p)^{n - x} \quad \mbox{for}~x = 0, \dots, n~\mbox{ and }~0 \leq p \leq 1.
-\]</span></p>
-<p>The coin tossing example we saw earlier is a case of a binomial random variable, with p.m.f.
-<span class="math display">\[\begin{eqnarray*}
-p_X(x) = {3 \choose x} p^x (1 - p)^{3 - x} \\
-\mbox{for}~x = 0, 1, 2, 3.
-\end{eqnarray*}\]</span></p>
-<p>So for a fair coin (<span class="math inline">\(p = 0.5\)</span>):
-<span class="math display">\[\begin{eqnarray*}
-p_X(0) &amp;=&amp; 0.125\\
-p_X(1) &amp;=&amp; 0.375\\
-p_X(2) &amp;=&amp; 0.375\\
-p_X(3) &amp;=&amp; 0.125
-\end{eqnarray*}\]</span>
-and note that as expected <span class="math inline">\(\sum_{x = 0}^3 p_X(x) = 1\)</span>.</p>
-</div>
-<div id="cumulative-distribution-functions" class="section level2 hasAnchor" number="20.3">
-<h2><span class="header-section-number">20.3</span> Cumulative Distribution Functions<a href="discrete-random-variables.html#cumulative-distribution-functions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Another useful quantity is called the <em>cumulative distribution function</em> and for discrete random variables is defined as:
-<span class="math display">\[
-P(X \leq x) = \sum_{k \leq x} P(X = k).
-\]</span>
-So for a fair coin (<span class="math inline">\(p = 0.5\)</span>):</p>
-<p><strong>Probability mass function</strong>:
-<span class="math display">\[\begin{eqnarray*}
-p_X(0) &amp;=&amp; 0.125\\
-p_X(1) &amp;=&amp; 0.375\\
-p_X(2) &amp;=&amp; 0.375\\
-p_X(3) &amp;=&amp; 0.125.
-\end{eqnarray*}\]</span></p>
-<p><strong>Cumulative distribution function</strong>:
-<span class="math display">\[\begin{eqnarray*}
-P(X \leq 0) &amp;=&amp; 0.125\\
-P(X \leq 1) &amp;=&amp; 0.5\\
-P(X \leq 2) &amp;=&amp; 0.875\\
-P(X \leq 3) &amp;=&amp; 1.
-\end{eqnarray*}\]</span></p>
+<p>If we have a more general quadratic where <span class="math inline">\(a\neq1\)</span>, then we could start by taking out a factor of <span class="math inline">\(a\)</span>
+<span class="math display">\[ax^2+bx+c=a\left(x^2+\frac{b}{a}x+\frac{c}{a}\right)=0\]</span>
+and then dividing both sides by <span class="math inline">\(a\)</span>
+<span class="math display">\[x^2+\frac{b}{a}x+\frac{c}{a}=0\]</span>
+The values of <span class="math inline">\(x\)</span> satisfying this new equation will be the same as those for the original, so we can now use the above method to find the solutions. However, sometimes we not only want the solution, but also want to know how to factorise the quadratic. In this case we shall have to keep the factor of <span class="math inline">\(a\)</span>. To factorise we just need to find the values of the coefficients in the factorisation that will give the answer we need when we expand the brackets.</p>
 <div class="example">
-<p><span id="exm:cumulative" class="example"><strong>Example 20.2  (Cumulative distributions) </strong></span>If 1% of a product is defective, then in a random sample of 200 items, what is the probability that less than 2 are defective?</p>
-<p>We can consider that the sampling scheme is approximately equivalent to a sequence of independent Bernoulli trials. Here “success” is defined as “having a defect” and has probability <span class="math inline">\(p = 0.01\)</span>. Let <span class="math inline">\(X\)</span> be the number of defective items. Hence,
-<span class="math display">\[\begin{eqnarray*}
-P(X &lt; 2) &amp;=&amp; P(X = 0) + P(X = 1)\\
-&amp;=&amp; {200 \choose 0} \cdot 0.01^0 \cdot 0.99^{200} + {200 \choose 1} \cdot 0.01^1 \cdot 0.99^{199}\\
-&amp;=&amp; 0.40 \text{ to 2 s.f.}
-\end{eqnarray*}\]</span></p>
+<p><span id="exm:factorise2" class="example"><strong>Example 3.2  </strong></span>Solve <span class="math inline">\(4x^2 + 8x + 3 = 0\)</span> by factorising.</p>
+<p>We need the <span class="math inline">\(x\)</span> terms to multiply together to make <span class="math inline">\(4x^2\)</span>, so we could have either
+<span class="math display">\[(4x + \star)(x + \star)\]</span>
+or
+<span class="math display">\[(2x + \star)(2x + \star)\]</span>
+and we need the constant terms to multiply together to make <span class="math inline">\(3\)</span>, so we could have either
+<span class="math display">\[(\star + 3)(\star + 1)\]</span>
+or
+<span class="math display">\[(\star - 3)(\star - 1).\]</span>
+The sum of the products of the outer terms and inner terms needs to be <span class="math inline">\(8x\)</span> and the only way this is possible is with
+<span class="math display">\[(2x+3)(2x+1).\]</span></p>
+<p>The solutions then come from solving for each factor being <span class="math inline">\(0\)</span>, giving
+<span class="math display">\[x=-\frac{3}{2}\quad\text{ or }\quad x= -\frac{1}{2}\]</span></p>
 </div>
+<p>Not all quadratics will factorise “nicely”, that is to say, where the coefficients in the linear factors will be integers. We can first test if the quadratic will factorise with integer coefficients by computing the quantity</p>
+<p><span class="math display">\[\Delta = b^2 - 4ac\]</span></p>
+<p>which is known as the <em>discriminant</em> of a quadratic: if this number is a perfect square, then the linear factors will have integer coefficients; if it is not a perfect square, the coefficients will not be integers.</p>
+<p>In the case where the coefficients are not integers it can be difficult to determine the coefficients by inspection and the following two methods can be applied instead.</p>
 </div>
-<div id="poisson-distribution" class="section level2 hasAnchor" number="20.4">
-<h2><span class="header-section-number">20.4</span> Poisson distribution<a href="discrete-random-variables.html#poisson-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The Poisson distribution is named after <a href="https://en.wikipedia.org/wiki/Sim%C3%A9on_Denis_Poisson">Simeon Denis Poisson (1781–1840)</a>. The Poisson distribution has been used to model (according to Wikipedia):</p>
-<ul>
-<li>the number of goals in a football match,</li>
-<li>the number of children in a family,</li>
-<li>the number of patients arriving in an hour in A &amp; E,</li>
-<li>the number of soldiers killed in a year by horse-kicks in a corps of the Prussian cavalry.</li>
-</ul>
-<p>Roughly speaking, a Poisson distribution is appropriate when recording the number of events occuring in a given unit time if these events are independent and occur at a constant rate.</p>
-<p>A discrete random variable <span class="math inline">\(X\)</span> follows a <em>Poisson</em> distribution with rate <span class="math inline">\(\lambda\)</span> if it has probability mass function:
-<span class="math display">\[\begin{eqnarray*}
-P(X = x) &amp;=&amp; \frac{\lambda^x e^{-\lambda}}{x!}\\
-&amp;&amp; \mbox{for}~x = 0, 1, 2, \dots\\
-&amp;&amp; \mbox{and}~\lambda &gt; 0.
-\end{eqnarray*}\]</span></p>
-<p>We write <span class="math inline">\(X\sim Po(\lambda)\)</span> to denote <span class="math inline">\(X\)</span> being a random variable with a Poisson distribution with parameter <span class="math inline">\(\lambda\)</span>.</p>
-<div class="example">
-<p><span id="exm:poisson" class="example"><strong>Example 20.3  (Poisson distribution) </strong></span>Births occur in a hospital at an average rate of 1.8 births per hour.</p>
-<ol style="list-style-type: decimal">
-<li>What is the probability that 5 births will occur in any given hour?</li>
-<li>What is the probability that no births will occur in any given hour?</li>
-<li>What is the probability that at least two births will occur in any given hour?</li>
-</ol>
-<p>Let <span class="math inline">\(X\)</span> be the number of births in any given hour. Here <span class="math inline">\(X \sim Po(1.8)\)</span> and</p>
-<ol style="list-style-type: decimal">
-<li><span class="math inline">\(P(X = 5) = \frac{1.8^5 e^{-1.8}}{5!} = 0.0260\text{ to 3 s.f.}.\)</span></li>
-<li><span class="math inline">\(P(X = 0) = e^{-1.8} = 0.165\text{ to 3 s.f.}.\)</span></li>
-<li><span class="math inline">\(P(X \geq 2) = 1 - P(X &lt; 2) = 1 - e^{-1.8} - 1.8 e^{-1.8} = 0.537\text{ to 3 s.f.}.\)</span></li>
-</ol>
-</div>
-<p>In some instances, we can use the Poisson distribution to approximate the binomial distribution.</p>
-<div class="example">
-<p><span id="exm:binomapprox" class="example"><strong>Example 20.4  (Poisson approximation of binomial) </strong></span>A manufacturer sells screws in boxes of 100. On average, 0.5% of screws produced at the factory are defective. Find the probability that no more than one screw in a randomly selected box is defective.</p>
-<p>In this case, we can model the number of defective screws in a box, <span class="math inline">\(X\)</span>, as a binomial random variable with parameters <span class="math inline">\(n = 100\)</span> and <span class="math inline">\(p = 0.005\)</span>. So the answer is:
-<span class="math display">\[\begin{eqnarray*}
-P(X \leq 1) = p_X(0) + p_X(1) &amp;=&amp; {100 \choose 0} 0.995^{100} + {100 \choose 1}0.005(0.995)^{99}\\
-&amp;=&amp; 0.91 \text{ to 2 s.f.}
-\end{eqnarray*}\]</span></p>
-<p>However, a binomial distribution can be well-approximated by a Poisson distribution with rate <span class="math inline">\(\lambda = np\)</span> if <span class="math inline">\(n\)</span> is “large” and “<span class="math inline">\(np\)</span>” is fairly small. Here <span class="math inline">\(n = 100\)</span> and <span class="math inline">\(np = 0.5\)</span>, and so we could approximate the above result as:
-<span class="math display">\[\begin{eqnarray*}
-P(X \leq 1) &amp;\approx&amp; e^{-0.5} + 0.5e^{-0.5}\\
-&amp;=&amp; 0.91 \text{ to 2 s.f.}
-\end{eqnarray*}\]</span></p>
-</div>
-<p>Rule-of-thumb: <span class="math inline">\(np &lt; 10\)</span>, <span class="math inline">\(n \geq 20\)</span>, <span class="math inline">\(p \leq 0.05\)</span></p>
-</div>
-<div id="expectation-and-variance" class="section level2 hasAnchor" number="20.5">
-<h2><span class="header-section-number">20.5</span> Expectation and Variance<a href="discrete-random-variables.html#expectation-and-variance" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="expectation" class="section level3 hasAnchor" number="20.5.1">
-<h3><span class="header-section-number">20.5.1</span> Expectation<a href="discrete-random-variables.html#expectation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Given a discrete random variable <span class="math inline">\(X\)</span>, we define its <em>expected value</em> (or <em>expectation</em>) as:
-<span class="math display">\[
-\operatorname{E}(X) = \sum_x xp_X(x).
-\]</span>
-The expectation of <span class="math inline">\(X\)</span> corresponds to the approximate average value of <span class="math inline">\(X\)</span> obtained from a repeated series of independent experiments.</p>
-<p>For example, if <span class="math inline">\(X\)</span> is the amount of money you win in a gambling game, then if <span class="math inline">\(\operatorname{E}(X) = 0\)</span>, in the long-term you would expect to break even. (In reality, a casino would ensure <span class="math inline">\(\operatorname{E}(X) &lt; 0\)</span>.)</p>
-<p>We sometimes refer to <span class="math inline">\(\operatorname{E}(X)\)</span> as the <em>mean</em> of <span class="math inline">\(X\)</span>.</p>
-<div class="example">
-<p><span id="exm:expectation" class="example"><strong>Example 20.5  (Expectation) </strong></span>Find the expected score from a single roll of a fair die.
-<span class="math display">\[\begin{eqnarray*}
-\operatorname{E}(X) &amp;=&amp; \sum_{x = 1}^6 x p_X(x)\\
-&amp;=&amp; \left(1 \times \frac{1}{6}\right) + \left(2 \times \frac{1}{6}\right) + \dots + \left(6 \times \frac{1}{6}\right)\\
-&amp;=&amp; 3.5
-\end{eqnarray*}\]</span></p>
-</div>
-<p>We can apply functions to a random variable, which then define a new random variable. We can then also find the expectation of these new random variables as in the following example.</p>
-<div class="example">
-<p><span id="exm:expfunction" class="example"><strong>Example 20.6  (Expectation of functions) </strong></span>Let <span class="math inline">\(X\)</span> be the score from a single roll of a fair die. Find the expected value of the random variable <span class="math inline">\(Y = X^2\)</span>.</p>
-<p>We note that <span class="math inline">\(Y\)</span> can take values <span class="math inline">\(\{1, 4, 9, 16, 25, 36\}\)</span>, each with probability <span class="math inline">\(\frac{1}{6}\)</span>. Therefore
-<span class="math display">\[\begin{eqnarray*}
-\operatorname{E}(Y) &amp;=&amp; \left(1 \times \frac{1}{6}\right) + \left(4 \times \frac{1}{6}\right) + \dots + \left(36 \times \frac{1}{6}\right)\\
-&amp;=&amp; \sum_{x = 1}^6 x^2 p_X(x)\\
-&amp;=&amp; 15.2\text{ to 3 s.f.}
-\end{eqnarray*}\]</span></p>
-</div>
-<p>In general, if <span class="math inline">\(g(\cdot)\)</span> is a function defined on the range of a discrete random variable <span class="math inline">\(X\)</span>, then <span class="math inline">\(g(X)\)</span> is also a random variable, and it follows that
-<span class="math display">\[
-\operatorname{E}[g(X)] = \sum_{x} g(x) p_X(x)
-\]</span></p>
-<p><strong>Some useful properties of the expectation:</strong></p>
-<ul>
-<li><p>Let <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> be constants, and let <span class="math inline">\(g(X)\)</span> and <span class="math inline">\(h(X)\)</span> be functions defined on the range of a random variable <span class="math inline">\(X\)</span>. Then,
-<span class="math display">\[
-  \operatorname{E}\left[ag(X) + bh(X)\right] = a\operatorname{E}[g(X)] + b\operatorname{E}[h(X)]
-  \]</span></p></li>
-<li><p>The expected value of a constant, <span class="math inline">\(a\)</span>, is itself i.e.
-<span class="math display">\[
-      \operatorname{E}(a) = a.
-  \]</span></p></li>
-</ul>
-</div>
-<div id="variance-and-standard-deviation" class="section level3 hasAnchor" number="20.5.2">
-<h3><span class="header-section-number">20.5.2</span> Variance and Standard Deviation<a href="discrete-random-variables.html#variance-and-standard-deviation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>The <em>variance</em> is the expected squared deviation of a random variable from its mean.
-<span class="math display">\[
-\operatorname{var}(X) = \operatorname{E}\left[(X - \mu)^2\right]
-\]</span>
-where <span class="math inline">\(\mu = \operatorname{E}(X)\)</span> is the mean of <span class="math inline">\(X\)</span>.</p>
-<p>Informally it measures how spread out a set of random numbers are expected to be from their mean, such that random variables with higher variances are harder to predict than those with smaller variances.</p>
-<p>A useful alternative form for the variance is given as
-<span class="math display">\[
-\operatorname{var}(X) = \operatorname{E}\left(X^2\right) - \operatorname{E}^2(X).
-\]</span>
-This can be derived by considering that
+<div id="completing-the-square" class="section level3 hasAnchor" number="3.1.2">
+<h3><span class="header-section-number">3.1.2</span> Completing the square<a href="solving-equations-and-inequalities.html#completing-the-square" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>In this method, we first rewrite a quadratic equation
+<span class="math display">\[ax^2+bx+c=0\]</span>
+into the form
+<span class="math display">\[a(x-h)^2+k=0\]</span>
+that is, a squared term plus a constant, hence the name “completing the square”.</p>
+<p>We then solve by rearranging and taking sqaure roots
 <span class="math display">\[\begin{align*}
-\operatorname{var}(X) &amp;= \operatorname{E}\left[(X - \mu)^2\right]\\
-&amp;= \operatorname{E}\left(X^2 - 2X\mu + \mu^2\right)\\
-&amp;= \operatorname{E}\left(X^2\right) - 2\mu \operatorname{E}(X) + \operatorname{E}(\mu^2)\\
-&amp;= \operatorname{E}\left(X^2\right) - 2\mu^2 + \mu^2\\
-&amp;= \operatorname{E}\left(X^2\right) - \mu^2.
-\end{align*}\]</span></p>
-<p>Another important quantity is the <em>standard deviation</em>
-<span class="math display">\[
-\sigma = \operatorname{sd}(X) = \sqrt{\operatorname{var}(X)}.
-\]</span>
-This effectively re-scales the variance to be on the same scale as the data (having the same units rather than the units squared).</p>
+(x-h)^2+k&amp;=0\\
+(x-h)^2&amp;=-k\\
+x-h&amp;=\pm\sqrt{-k}\\
+x&amp;=h\pm\sqrt{-k}
+\end{align*}\]</span>
+where <span class="math inline">\(\pm\)</span> means there is one solution coming from taking the <span class="math inline">\(+\)</span> option and the other from taking the <span class="math inline">\(-\)</span> option.</p>
+<p>We just need to find <span class="math inline">\(h\)</span> and <span class="math inline">\(k\)</span>. They are given by
+<span class="math display">\[h=-\frac{b}{2a},\quad k=c-\frac{b^2}{4a}.\]</span></p>
+<p>It is not necessary to remember these formulae, we can instead figure out the coefficients as we go along.</p>
 <div class="example">
-<p><span id="exm:variance" class="example"><strong>Example 20.7  (Variance) </strong></span>Find the variance of the score, <span class="math inline">\(X\)</span>, from a single roll of a fair die.</p>
-<p>If we use the alternative form for the variance, then from earlier results we have:
-<span class="math display">\[
-\operatorname{var}(X) = \operatorname{E}(X^2) -\operatorname{E}^2(X) = 15.17 - 3.5^2 = 2.917\text{ to 4 s.f.}.
-\]</span>
-The standard deviation is
-<span class="math display">\[
-\operatorname{sd}(X) = \sqrt{2.917} = 1.708\text{ to 4 s.f.}.
-\]</span></p>
+<p><span id="exm:completesqr" class="example"><strong>Example 3.3  (Completing the Square) </strong></span>Consider the quadratic equation
+<span class="math display">\[2x^2+12x-26=0.\]</span>
+We first take out the factor <span class="math inline">\(a=2\)</span>
+<span class="math display">\[2x^2+12x-26=2(x^2+6x-13)\]</span>
+Next we can make a square term that agrees with the first two terms by taking half the <span class="math inline">\(x\)</span> coefficient (i.e. <span class="math inline">\(6\div2=3\)</span>):
+<span class="math display">\[(x+3)^2=x^2+6x+9.\]</span></p>
+<p>This differs from the required result in the constant term by
+<span class="math display">\[-13-9=-22\]</span>
+and so we need to “complete the square” by adding <span class="math inline">\(-22\)</span>, to obtain
+<span class="math display">\[2x^2+6x+13=2[(x+3)^2-22]=2(x+3)^2-44.\]</span></p>
+<p>The solutions are then
+<span class="math display">\[\begin{align*}
+2(x+3)^2-44&amp;=0\\
+2(x+3)^2&amp;=44\\
+(x+3)^2&amp;=22\\
+x&amp;=-3\pm\sqrt{22}.
+\end{align*}\]</span></p>
 </div>
-<p><strong>A useful property of the variance:</strong></p>
-<ul>
-<li>For <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> constants:
-<span class="math display">\[
-      \operatorname{var}(aX + b) = a^2\operatorname{var}(X)
-  \]</span></li>
-</ul>
+<p>Another use of completing the square is in determining the location of the minimum or maximum point of a quadratic function. We know that the graph of such a function is a parabola which either opens upwards in a “<span class="math inline">\(\cup\)</span>” shape or opens downwards in a “<span class="math inline">\(\cap\)</span>” shape, so it has a minimum or a maximum, respectively: the sign of the <span class="math inline">\(x^2\)</span> coefficient determines this, with <span class="math inline">\(+\)</span> corresponding to upward opening and <span class="math inline">\(-\)</span> corresponding to downward opening. In the previous example, after completing the square we obtained <span class="math inline">\(y=2(x+3)^2-44\)</span>, and since the coefficient in <span class="math inline">\(2x^2\)</span> is positive the quadratic function must have a minimum somewhere. Since the term <span class="math inline">\((x+3)^2\)</span> must be positive, the smallest it can be is when <span class="math inline">\(x=-3\)</span> and the term is <span class="math inline">\((-3+3)^2=0\)</span>. This means we must have a minimum at <span class="math inline">\(x=-3\)</span> where y=2(-3+3)^2-44=-44$. This idea can be generalised: find the value of <span class="math inline">\(x\)</span> that makes the squared term <span class="math inline">\(0\)</span>, and then the minimum/maximum <span class="math inline">\(y\)</span> value is equal to the constant term.</p>
+</div>
+<div id="the-quadratic-formula" class="section level3 hasAnchor" number="3.1.3">
+<h3><span class="header-section-number">3.1.3</span> The quadratic formula<a href="solving-equations-and-inequalities.html#the-quadratic-formula" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Sometimes it is difficult to find the solutions using the above methods and so thankfully we have a forumula for finding them (or to determine if there are no real number solutions).</p>
+<div class="theorem">
+<p><span id="thm:quadform" class="theorem"><strong>Theorem 3.1  (Quadratic Formula) </strong></span>The solutions to the quadratic equation
+<span class="math display">\[ax^2+bx+c=0\]</span>
+are given by
+<span class="math display">\[x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}.\]</span></p>
+<p>If the quantity <span class="math inline">\(\Delta = b^2-4ac\)</span>, known as the <em>discriminant</em>, is such that <span class="math inline">\(\Delta = 0\)</span> then there will be one repeated solution; if <span class="math inline">\(\Delta\)</span> is negative, then there are no real number solutions (since we cannot take the square root of a negative number).</p>
+</div>
+<div class="exercise">
+<p><span id="exr:quadform" class="exercise"><strong>Exercise 3.1  </strong></span>Derive the quadratic formula. Hint: use the method of “completing the square” on a general quadratic equation.</p>
 </div>
 </div>
-<div id="summary-of-discrete-distributions" class="section level2 hasAnchor" number="20.6">
-<h2><span class="header-section-number">20.6</span> Summary of Discrete Distributions<a href="discrete-random-variables.html#summary-of-discrete-distributions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Here we list (without proof) the expectation and variance of the discrete probability distributions we have considered above.</p>
-<table>
-<colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><strong>Distribution</strong></th>
-<th><strong>Probability Density Function</strong></th>
-<th><strong>Expectation</strong></th>
-<th><strong>Variance</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Bernoulli <span class="math inline">\(X\sim\operatorname{Bern}(p)\)</span></td>
-<td><span class="math inline">\(p_X(x)=p^x(1-p)^{1-x}\)</span>; <span class="math inline">\(x=0,1\)</span>; <span class="math inline">\(0 \le p \le 1\)</span>.</td>
-<td><span class="math inline">\(\operatorname{E}(X)=p\)</span></td>
-<td><span class="math inline">\(\operatorname{var}(X)=p(1-p)\)</span></td>
-</tr>
-<tr class="even">
-<td>Binomial <span class="math inline">\(X\sim\operatorname{Bin}(n,p)\)</span></td>
-<td><span class="math inline">\(p_X(x)={n \choose x} p^x (1-p)^{n-x}\)</span>; <span class="math inline">\(n=1,2,\dotsc\)</span>; <span class="math inline">\(0 \le p \le 1\)</span>; <span class="math inline">\(x=0,1,2\dotsc,n\)</span></td>
-<td><span class="math inline">\(\operatorname{E}(X)=np\)</span></td>
-<td><span class="math inline">\(\operatorname{var}(X)=np(1-p)\)</span></td>
-</tr>
-<tr class="odd">
-<td>Poisson <span class="math inline">\(X\sim\operatorname{Po}(\lambda)\)</span></td>
-<td><span class="math inline">\(p_X(x)=\dfrac{\lambda^xe^{-\lambda}}{x!}\)</span>; <span class="math inline">\(x=0,1,2,\dotsc\)</span>; <span class="math inline">\(\lambda&gt;0\)</span></td>
-<td><span class="math inline">\(\operatorname{E}(X)=\lambda\)</span></td>
-<td><span class="math inline">\(\operatorname{var}(X)=\lambda\)</span></td>
-</tr>
-</tbody>
-</table>
+</div>
+<div id="higher-order-polynomials" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> Higher order polynomials<a href="solving-equations-and-inequalities.html#higher-order-polynomials" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We are often interested in finding the values of <span class="math inline">\(x\)</span> for which <span class="math inline">\(f(x)=0\)</span>, known as the <em>roots</em> of a polynomial. We already know how to find roots of a quadratic using the quadratic formula (section <a href="solving-equations-and-inequalities.html#quad-eqs">3.1</a>). We will now look at the more general <em>factor theorem</em> that can help in finding roots of higher degree polynomials.</p>
+<p>If we factorise the quadratic equation
+<span class="math display">\[x^2-3x-10=0\]</span>
+we obtain
+<span class="math display">\[(x+2)(x-5)=0.\]</span>
+If the product of two numbers is zero, then either one or both of the numbers must be zero. So the possible roots are
+<span class="math display">\[(x+2)=0 \quad \implies\quad x=-2\]</span>
+or
+<span class="math display">\[(x-5)=0\quad \implies\quad x=5.\]</span>
+More generally, a factor <span class="math inline">\((x-a)\)</span> corresponds to a root <span class="math inline">\(x=a\)</span>. Knowing the factors tells us the roots, and vice versa. It turns out this holds more generally for any degree polynomial.</p>
+<div class="theorem">
+<p><span id="thm:factors" class="theorem"><strong>Theorem 3.2  (Factor Theorem) </strong></span>The value <span class="math inline">\(x=a\)</span> is a root of the polynomial equation <span class="math inline">\(f(x)=0\)</span> if and only if <span class="math inline">\((x-a)\)</span> is a factor of the polynomial <span class="math inline">\(f(x)\)</span>.</p>
+</div>
+<p>We already have a fool-proof way to solve quadratic equations – use the quadratic formula. There are also formulae for <a href="https://en.wikipedia.org/wiki/Cubic_equation#General_cubic_formula">cubic</a> and <a href="https://en.wikipedia.org/wiki/Quartic_equation#The_general_case">quartic</a> polynomials, but these are a bit more complicated. Furthermore, it turns out it is <strong>impossible</strong> to derive a formula for <a href="https://en.wikipedia.org/wiki/Abel%E2%80%93Ruffini_theorem">quintic</a> and higher degree polynomials! The factor theorem can be helpful in finding roots of polynomials greater than degree 2. Here is an example.</p>
+<div class="example">
+<p><span id="exm:factorthmcubic" class="example"><strong>Example 3.4  (Factor theorem applied to a cubic polynomial) </strong></span>Find the roots of the cubic polynomial <span class="math display">\[f(x)=x^3-7x-6.\]</span></p>
+<p>After a little trial and error with small integer values of <span class="math inline">\(x\)</span> we find
+<span class="math display">\[f(3)=3^3-7(3)-6=0\]</span>
+which by the factor theorem implies that <span class="math inline">\((x-3)\)</span> is a factor. Now applying polynomial division by the factor <span class="math inline">\((x-3)\)</span> we find
+<span class="math display">\[\frac{x^3-7x-6}{x-3}=x^2+3x+2\]</span>
+so that
+<span class="math display">\[x^3-7x-6=(x-3)(x^2+3x+2).\]</span>
+Now that we have taken out one linear factor we are left with a quadratic factor, which we know how to deal with. Factorising the quadratic factor yields
+<span class="math display">\[x^3-7x-6=(x-3)(x+1)(x+2).\]</span>
+Hence the roots are
+<span class="math display">\[x=3, x=-1,\,\text{ and } x=-2.\]</span></p>
+</div>
+</div>
+<div id="simultaneous-equations" class="section level2 hasAnchor" number="3.3">
+<h2><span class="header-section-number">3.3</span> Simultaneous equations<a href="solving-equations-and-inequalities.html#simultaneous-equations" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Sometimes a problem will be formulated in terms of multiple equations with multiple, shared variables. The set of equations usually represent constraints between the variables and we need to determine which values of the variables are valid solutions, i.e. which values satisfy all of the equations <em>simultaneously</em> – hence such sets of equations are known as <em>simultaneous equations</em>. Sometimes we can solve simultaneous equations by rearranging one equation to set one of the variables as the subject and then substitute this into another equation in order to eliminate one of the variables.</p>
+<div class="example">
+<p><span id="exm:simul-lin" class="example"><strong>Example 3.5  </strong></span>Given the following two simultaneous equations in the variables <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>
+<span class="math display">\[\begin{align*}
+3x+2y&amp;=5\\
+x-4y&amp;=1
+\end{align*}\]</span>
+we could rearrange the second equation to make <span class="math inline">\(x\)</span> the subject
+<span class="math display">\[x=1+4y\]</span>
+and then substitute this back in for <span class="math inline">\(x\)</span> in the first equation
+<span class="math display">\[3(1+4y)+2y=5\]</span>
+and then solve for <span class="math inline">\(y\)</span>
+<span class="math display">\[\begin{align*}
+3(1+4y)+2y&amp;=5\\
+3+12y+2y&amp;=5\\
+14y&amp;=2\\
+y&amp;=\frac{1}{7}.
+\end{align*}\]</span>
+Now that we have the value for <span class="math inline">\(y\)</span> we can substitute this back into either equation to find <span class="math inline">\(x\)</span>. Since we already rearranged the second equation to make <span class="math inline">\(x\)</span> the subject, we might as well use that one:
+<span class="math display">\[x=1+4y=1+\frac{4}{7}=\frac{11}{7}.\]</span>
+Hence the solution is
+<span class="math display">\[x=\frac{11}{7},\quad y=\frac{1}{7}.\]</span></p>
+</div>
+<p>The above example shows a particular type of simultaneous equations called <em>linear</em> simultaneous equations (if we were to plot a graph of each of the equations we would see that they form straight lines, hence the term <em>linear</em>). We shall look at a systematic way to deal with linear simultaneous equations in section <a href="gauss.html#gauss">7</a>.</p>
+<div class="example">
+<p><span id="exm:simul-nonlin" class="example"><strong>Example 3.6  </strong></span>Given the following two simultaneous equations in the variables <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>
+<span class="math display">\[\begin{align*}
+2x+y&amp;=7\\
+x^2-xy&amp;=6
+\end{align*}\]</span>
+it will be easiest to rearrange the first equation for <span class="math inline">\(y\)</span>, to get
+<span class="math display">\[y=7-2x\]</span>
+and then substituting this into the second equation
+<span class="math display">\[\begin{align*}
+x^2-x(7-2x)&amp;=6\\
+3x^2-7x-6&amp;=0\\
+(3x+2)(x-3)&amp;=0\\
+\end{align*}\]</span>
+so the factorisation tells us
+<span class="math display">\[x=-\frac{2}{3},\text{ or } x = 3.\]</span>
+Now substiting these two possibilities back into the first equation gives
+<span class="math display">\[\begin{align*}
+2(-\frac{2}{3})+y&amp;=7\\
+y&amp;=\frac{25}{3}
+\end{align*}\]</span>
+and
+<span class="math display">\[\begin{align*}
+2(3)+y&amp;=7\\
+y&amp;=1.
+\end{align*}\]</span>
+To summarise, the solutions are:
+<span class="math display">\[x = -\frac{2}{3},\quad y = \frac{25}{3}\]</span>
+and
+<span class="math display">\[x=3,\quad y=1.\]</span></p>
+</div>
+<p>The examples presented above are relatively simple, and in some real-world scenarios equations might be very complicated, or even impossible, to solve by hand. In these cases we need to turn to computational techniques. We’ll look at some computational techniques in section <a href="numerics.html#numerics">18</a>.</p>
+</div>
+<div id="inequalities-1" class="section level2 hasAnchor" number="3.4">
+<h2><span class="header-section-number">3.4</span> Inequalities<a href="solving-equations-and-inequalities.html#inequalities-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Assume we are comparing two expressions <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span> that depend on the variable <span class="math inline">\(x\)</span> and need to find, for example, the values of <span class="math inline">\(x\)</span> for which <span class="math inline">\(P&gt;Q\)</span>. Let us take a look at a range of examples to see how to solve these types of problems.</p>
+<div class="example">
+<p><span id="exm:solvineqs" class="example"><strong>Example 3.7  </strong></span>We wish to find all values of <span class="math inline">\(x\)</span> satisfying the following inequalities.</p>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(2x+6&lt;18.\)</span></p>
+<p>Here we can easily re-arrange the inequality (subtract <span class="math inline">\(6\)</span> from each side and divide by the positive number <span class="math inline">\(2\)</span> – which preserves the direction of the inequality) to obtain
+<span class="math display">\[x&lt;6.\]</span></p></li>
+<li><p><span class="math inline">\(x^2-7x+12&gt;0\)</span></p>
+<p>Factorise the l.h.s. to give <span class="math inline">\((x-3)(x-4)&gt;0\)</span>, so to be positive the factors on the left need to be either both positive or both negative, i.e.:</p>
+<ol style="list-style-type: lower-alpha">
+<li><p><span class="math inline">\((x-3)&gt;0\)</span> and <span class="math inline">\((x-4)&gt;0\)</span>, so we must have both <span class="math inline">\(x&gt;4\)</span> and <span class="math inline">\(x&gt;3\)</span>, which means that we must take <span class="math inline">\(x&gt;4\)</span>.</p></li>
+<li><p><span class="math inline">\((x-3)&lt;0\)</span> and <span class="math inline">\((x-4)&lt;0\)</span>, so we require both <span class="math inline">\(x&lt;3\)</span> and <span class="math inline">\(x&lt;4\)</span>, which means we must take <span class="math inline">\(x&lt;3\)</span>.</p></li>
+</ol>
+<p>Since either situation a or b satisfies the inequality the solution is <span class="math inline">\(x&lt;3\)</span> or <span class="math inline">\(x&gt;4\)</span>.</p></li>
+<li><p><span class="math inline">\(\left|10-3x\right|\leq 8\)</span>, where <span class="math inline">\(|\cdot|\)</span> denotes the absolute value. We must have both:</p>
+<ol style="list-style-type: lower-alpha">
+<li><p><span class="math display">\[\begin{align*}
+  10-3x&amp;\leq 8\\
+  -3x&amp;\leq-2\\
+  x&amp;\geq \frac{2}{3}
+  \end{align*}\]</span></p>
+<p>i.e. the interval <span class="math inline">\(x\geq\dfrac{2}{3}.\)</span>
+And,</p></li>
+<li><p><span class="math inline">\(-(10-3x)\leq 8\)</span>, leading to <span class="math inline">\(x\leq 6\)</span>.</p></li>
+</ol>
+<p>Hence <span class="math inline">\(\dfrac{2}{3}\leq x \leq 6\)</span>.</p></li>
+<li><p><span class="math inline">\(\dfrac{1}{x-3}&gt;\dfrac{1}{x-2}\)</span></p>
+<p>Let’s first do this the wrong way to illustrate a point. Let’s multiply both sides by <span class="math inline">\((x-2)\)</span> to obtain
+<span class="math display">\[\begin{gather*}
+\frac{x-2}{x-3}&gt;1\\
+\frac{x-2}{x-3}-1&gt;0\\
+\frac{(x-2)-(x-3)}{x-3}=\frac{1}{x-3}&gt;0
+\end{gather*}\]</span>
+giving the solution <span class="math inline">\(x&gt;3\)</span>.</p>
+<p>We can check the solution graphically by plotting the l.h.s. and r.h.s. and seeing where the l.h.s. is greater than the r.h.s.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:ineq"></span>
+<iframe src="https://www.desmos.com/calculator/ld9jyh4z3y?embed" width="672" height="400px" data-external="1"></iframe>
+<p class="caption">
+Figure 3.1: A plot of the inequality <span class="math inline">\(\frac{1}{x-3}&gt;\frac{1}{x-2}\)</span>: the solid red line is the l.h.s and the dashed blue line is the r.h.s.. We are interested in finding the values of <span class="math inline">\(x\)</span> where the red line is above the blue line (the red-shaded region). <a href="https://www.desmos.com/calculator/ld9jyh4z3y">[Open graph in browser.]</a>
+</p>
+</div>
+<p>It would appear that something has gone wrong! There is a second interval <span class="math inline">\(x&lt;2\)</span> where the inequality holds true. The problem is that we multiplied by the factor <span class="math inline">\((x-2)\)</span> forgetting the fact that <span class="math inline">\(x\)</span> is a variable, so this factor could be positive or negative depending on the value of <span class="math inline">\(x\)</span> and hence can flip the inequality. We could still perform this multiplication so long as we keep track of the two possible cases when <span class="math inline">\((x-2)\)</span> is positive or negative. However, a safer strategy is to first subtract the r.h.s. from the l.h.s., then factorise as much as possible:</p>
+<p><span class="math display">\[\frac{1}{x-3}-\frac{1}{x-2}=\frac{(x-2)-(x-3)}{(x-3)(x-2)}=\frac{1}{(x-3)(x-2)}&gt;0.\]</span></p>
+<p>Hence for the denominator to be positive we must have either <span class="math inline">\(x&gt;3\)</span> and <span class="math inline">\(x&gt;2\)</span>, or <span class="math inline">\(x&lt;3\)</span> and <span class="math inline">\(x&lt;2\)</span>. Together these yield the solution <span class="math inline">\(x&lt;2\)</span> or <span class="math inline">\(x&gt;3\)</span>.</p></li>
+</ol>
+</div>
+<p>The general strategy for finding <span class="math inline">\(P&gt;Q\)</span> (or similar) is therefore: (1) Consider <span class="math inline">\(P-Q\)</span> and factorise as much as possible; (2) Determine the sign of each factor of <span class="math inline">\(P-Q\)</span> for varying <span class="math inline">\(x\)</span>; (3) Determine when <span class="math inline">\(P-Q&gt;0\)</span> (and hence when <span class="math inline">\(P&gt;Q\)</span>).</p>
 
 </div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="5">
+<li id="fn5"><p>In fact, any quadratic can be factorised as a product of two linear factors, but we may need complex numbers to do this; more on this in section <a href="complex.html#complex">5</a>.<a href="solving-equations-and-inequalities.html#fnref5" class="footnote-back">↩︎</a></p></li>
+<li id="fn6"><p>That is, no solutions for which <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span> are real numbers, but there will instead be complex number solutions.<a href="solving-equations-and-inequalities.html#fnref6" class="footnote-back">↩︎</a></p></li>
+</ol>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="probability-fundamentals.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="continuous-random-variables.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="functions-and-graphs.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="trigonometry.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -726,7 +649,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/maths-sci-eng/maths-sci-eng.github.io/edit/master/19-drandomvariables.Rmd",
+"link": "https://github.com/maths-sci-eng/maths-sci-eng.github.io/edit/master/03-eqs_and_ineqs.Rmd",
 "text": "Edit"
 },
 "history": {

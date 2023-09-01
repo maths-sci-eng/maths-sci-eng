@@ -1,4 +1,4 @@
-# Systems of Linear Equations
+# Systems of Linear Equations {#gauss}
 
 So-called *linear equations* arise often in mathematical problems in science and engineering. In this chapter we will see a very useful method for solving simultaneous linear equations, known as *Gaussian elimination*. We'll start by understanding the geometric nature of linear equations.
 

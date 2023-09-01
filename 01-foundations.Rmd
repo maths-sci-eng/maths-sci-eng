@@ -42,14 +42,20 @@ We deal with various number systems in mathematics.
 * The *real numbers* consist of all rational and irrational numbers together. We can think of real numbers as points on a continuous straight line, or as numbers that possibly have a decimal representation requiring an infinite number of digits^[Real numbers require quite a bit of work to define in a rigorous mathematical way and we will not do this here; the interested reader should look up "construction of real numbers by Dedekind cuts" or "construction of real numbers by Cauchy sequences".].
     The set of real numbers is denoted by $\mathbb{R}$.
 
-* We learn about all of the above numbers early on in our mathematical education. However, there is a further set of numbers that is very useful in science and engineering that you may not have encountered before: the *complex numbers*, denoted by $\mathbb{C}$. These are not as intuitive as real numbers and we explore them in detail in section \@ref(complex).
+* We learn about all of the above numbers early on in our mathematical education. However, there is a further set of numbers that is very useful in science and engineering that you may not have encountered before: the *complex numbers*, denoted by $\mathbb{C}$. These are not as intuitive as real numbers and they are explored in section \@ref(complex).
 
 
 ## Algebra
 
-This section contains some basic algebraic rules. Fluency with notation and manipulations allows us to progress to higher level mathematics with ease.
+Algebra is the general name given to the rules for manipulating numerical variables.
 
-We are familiar with the basic rules of arithmetic: $+, -, \times, \div$. When an expression contains multiple operations we can use brackets to indicate the order in which the operations are executed. We also commonly use powers (exponents). When evaluating an expression, remember to use the mnemonic BEDMAS, which defines the precedence of these operations:
+We often use letters as placeholders for numerical values. We can then manipulate these letters as if they were numbers using the rules of algebra, and hence re-arraging formulae or fing the general solution to an equation. We can then "plug-in" specific numbers to get the answer.
+
+Being fluent in the notation and manipulations of algebra allows us to progress to higher (more useful and more interesting) areas of mathematics.
+
+### BEDMAS
+
+Recall that when an expression contains multiple arithmetic operations, there is a certain *precedence* (they must be carried out in a certain order), so that there is no ambiguity in evaluating the answer. This is usually remembered by the mneumonic BEDMAS:
 
 B - Brackets
 
@@ -65,100 +71,232 @@ S - Subtraction
 
 Division and Multiplication can be carried out in either order, as can Addition and Subtraction. We'll recap the rules of Brackets and Exponents in the next sections.
 
-:::{.example name="BEDMAS" #BEDMAS}
+::: {.example name="BEDMAS" #BEDMAS}
 We have
 $$3+2\times 4=11,$$
 whilst
 $$(3+2)\times 4 = 20.$$
+Another example:
+$$18\divide 3^2 = 2$$
+whilst
+$$(18\divide 3)^2 = 36.$$ 
 :::
+
+### Notation for Multiplication and Division
+
+Let $a,b$ and $c$ be numerical variables.
+
+To simplify our mathematical writing, we shorten the multiplication $a\times b$ to $ab$
+
+We also write division $a\div c$ in the "fraction" form $\dfrac{a}{c}$
+
+Since division and multiplication can be carried out in either order, the following are different ways of writing the same thing:
+$$\dfrac{a}{c}b=\dfrac{ab}{c}=a\dfrac{b}{c}$$
+
+and since multiplication of two numbers can be carried out in either order, there are even more ways of writing this expression:
+$$\frac{b}{c}a=\frac{ba}{c}=b\frac{a}{c}$$
 
 ### Rules of Exponents {#exponents}
 
-In their most basic form, we use exponents as a shorthand for multiplication of a number by itself some positive integer number of times. For example:
+In their most basic form, we use exponents as a shorthand for multiplication of a number by itself a given number of times. For example:
 
-$5\times 5 = 5^2$ spoken as "5 squared"
+$5\times 5 = 5^2$ spoken as "5 squared" or "5 to the power 2"
 
-$5\times 5\times 5=5^3$ spoken as "5 cubed"
+$5\times 5\times 5=5^3$ spoken as "5 cubed" or "5 to the power 3"
 
-and more generally, for any real number $x$ and positive integer $n$,
-$\underbrace{x\times \dotsb \times x}_{\text{with }n\, x\text{'s}} = x^n$ spoken as "x to the power $n$"
+and more generally, for any numbers $x$ and $a$,
+
+$\underbrace{x\times \dotsb \times x}_{\text{with }a\, x\text{'s}} = x^a$ spoken as "x to the power $a$"
 
 The number $x$ is known as the *base* and the number $n$ is known as the *power*, *index* or *exponent*.
 
-Now for any real number $x$ and positive integers $a$ and $b$, it should be clear that the following rule holds:
+Next, we look at rules for combining and simplifying exponents. We start by assuming the base $x$ is a positive real number and the exponent $a$ is a postive integer.
+
+Now for any positive integers $a$ and $b$, it should be clear that the following rule holds:
 
 ::: {.theorem #exprule1 name="Rule 1"}
+Multiplying powers with the same base:
 $$x^ax^b=x^{a+b}$$
 :::
 
-since we are multiplying $a$ $x$'s by a further $b$ $x$'s to give a total of $a+b$ $x$'s multiplied together. Extending this idea, we also have:
+since we are multiplying $a$ $x$'s by a further $b$ $x$'s to give a total of $a+b$ $x$'s multiplied together
 
-::: {.theorem #exprule1 name="Rule 2"}
+$$\underbrace{x\times \dotsb \times x}_{\text{with }a\, x\text{'s}}\times\underbrace{x\times \dotsb \times x}_{\text{with }b\, x\text{'s}}=\underbrace{x^{a+b}}_{\text{with }a+b\, x\text{'s}}$$
+
+::: {.example name="Multiplying powers"}
+Example:
+
+$2^3 2^4 = 2^7$
+
+It is also worth seeing a non-example:
+
+$3^3 4^2=?$
+
+There is in general no simple way to combine exponents with different bases (3 and 4 here):
+
+$$3^3 4^2=(3\times 3 \times 3) \times (4 \times 4) = 27 \times 16=432$$
+
+and this number cannot be written as a power of any whole number.
+:::
+
+Extending this idea, we also have:
+
+::: {.theorem #exprule2 name="Rule 2"}
+Power of a Power
 $$(x^a)^b=x^{ab}$$
 :::
 
-::: {.exercise #rule2}
-Why does Rule 2 hold? Can you prove it using Rule 1? Furthermore, show that $(x^a)^b=(x^b)^a$.
+This follows from Rule 1 since
+$$(x^a)^b=\underbrace{x^a\times \dotsb \times x^a}_{b\, \text{times}}=x^{a+\dotsb+a}=x^{ab}$
+
+::: {.example name="Power of a power"}
+$(5^3)^4=5^{12}$
 :::
+
+::: {.exercise #rule2}
+Show that $(x^a)^b=(x^b)^a$.
+:::
+
+The following is a straightforward rule applying when we have powers of products of two different numbers $x$ and $y$.
+
+::: {.theorem #exprule3 name="Rule 3"}
+Power of a product:
+$$(xy)^a=x^ay^a$$
+:::
+
+::: {.example name="Power of a product"}
+$(2\times 3)^4=(2\times 3)\times(2\times 3)\times(2\times 3)\times(2\times 3)
+= 2^4\times 3^4$
+:::
+
+And we have a similar rule for powers of quotients.
+
+::: {.theorem name="Rule 4"}
+Power of a quotient:
+
+$$\left(\frac{x}{y}\right)^a=\frac{x^a}{y^a}$$
+:::
+
+This follows from the previous rule:
+
+$\left(\frac{x}{y}\right)^a=\left(x\frac{1}{y}\right)^a=x^a\left(\frac{1}{y}\right)^a=x^a\frac{1}{y^a}=\frac{x^a}{y^a}.$
 
 So far we have allowed the exponents to be positive integers. Can we make sense of negative integers as exponents? Consider for $a$ and $b$ as positive integers the product
 
 $$x^a\frac{1}{x^b}=\frac{x^a}{x^b}$$
 
-For arguments sake let's take $a>b$, then since we have $a$ $x$'s on the top and $b$ $x$'s on the bottom, we can cancel the common factors to leave $a-b$ $x$'s. So,
+Let's start with a concrete example and for arguments sake let's take $a>b$ with $a=5, b=2$. Then:
+
+$$\frac{x^5}{x^2}=\frac{x\times x \times x\times x \times x}{x \times x}=x\times x\times x=x^3$$
+
+where we have cancelled the 2 common factors of $x$, leaving us with a product of $5-2=3$ $x$'s.
+
+More generally, taking $\frac{x^a}{x^b}$ for $a>b$ we have $a$ $x$'s on the top and $b$ $x$'s on the bottom, so we can cancel the common factors to leave $a-b$ $x$'s. So,
 
 \begin{equation}
-x^a\frac{1}{x^b}=\frac{x^a}{x^b}=x^{a-b} (\#eq:divexps)
+$\frac{x^a}{x^b}$=x^a\frac{1}{x^b}=\frac{x^a}{x^b}=x^{a-b} (\#eq:divexps)
 \end{equation}
 
 and following Rule 1 we could think of this as $x^{a-b}=x^{a+(-b)}=x^ax^{-b}$, and therefore using a negative exponent $-b$ gives the reciprocal of $x^b$.
 
-::: {.theorem #exprule1 name="Rule 3"}
+::: {.theorem #exprule3 name="Rule 5"}
 $$x^{-a}=\frac{1}{x^a}$$
 :::
 
-Next, we can consider the value of $x^0$. In \@ref(eq:divexps) with the particular case $b=a$, we have
+
+::: {.example name="Negative Exponents"}
+1. Note in particular $x^{-1}=\frac{1}{x}$, the reciprocal of $x$
+
+2. Generally, $\frac{x^a}{x^b}=x^a\frac{1}{x^b}=x^ax^{-b}=x^{a-b}$
+
+so, for example,
+
+$$\frac{5^6}{5^2}=5^4$$
+
+and
+
+$$\frac{7^2}{7^5}=7^{-3}$$
+(which is $\dfrac{1}{7^3}$)
+
+3. How do negative exponents work in a "power of a power"?
+
+$$(x^2)^{-3}=\frac{1}{(x^2)^{3}}=\frac{1}{x^6}=x^{-6}$$
+
+which is compatible with the "multiply exponents" rule
+
+$$(x^2)^{-3}=x^{(2\times -3)}=x^{-6}$$.
+:::
+
+So far we have assumed $x$ is positive. What happens when $x=0$? Then $0^a$ is multiplying $0$ by itself $a$ times, so the result is obviously $0$. Note this does not hold when $a=0$ since we have $0^0$, which is an indeterminate form. Also when $-a<0$, have $0^{-a}=\frac{1}{0^a}=\frac{1}{0}$ which is also an indeterminate form. So we need $a>0$ for this result.
+
+::: {.theorem #exprule3 name="Rule 6"}
+$$0^{a}=0, \text{ for }a>0$$
+:::
+
+Next, we can consider the the exponent $a=0$, that is the value of $x^0$. In \@ref(eq:divexps) with the particular case $b=a$, we have
 
 $$1=\frac{x^a}{x^a}=x^{a-a}=x^0$$
 
-so we get that for any non-zero^[We need to be more careful when $x=0$, since we would have $\frac{0^a}{0^a}=\frac{0}{0}$, which is an indeterminate form so the argument is not valid; it turns out $0^0$ is also an indeterminate form.] value of $x$:
+so we get that for any non-zero^[We already know that $0^0$ is an indeterminate form.] value of $x$:
 
-::: {.theorem name="Rule 4"}
-$$x^0=1$$
+::: {.theorem name="Rule 7"}
+$$x^0=1, \text{ for } x\neq 0$$
 :::
 
-Now lets try to make sense of a power of the form $x^{\frac{a}{b}}$ where $a$ is an integer and $b$ is a positive integer. That is, we now allow for fractional (otherwise known as *rational*) exponents. Since we have $\frac{a}{b}=a\frac{1}{b}$ we can write (using Rule 2):
+So far we have only considered exponents that are integers and values of the base that are non-negative real numbers. It turns out that the previous rules actually apply to any *real number* exponent and non-negative real number base. We'll start by thinking about *fractional exponents*, and in particular exponents of the form
 
-$$x^{\frac{a}{b}}=(x^a)^{\frac{1}{b}}.$$
+$$x^{\frac{1}{a}}$$
 
-In the case $b=a$, we therefore have
+where $a$ is a non-zero integer.
 
-$$x=x^1=x^{\frac{a}{a}}=(x^{\frac{1}{a}})^a.$$
+::: {.example }
+Take $(9^\frac{1}{2})^2=9^{(\frac{1}{2}\times 2)}=9^1=9$.
 
-This means that raising $x^\frac{1}{a}$ to the power $a$ gets us back to $x$, hence the number $x^\frac{1}{a}$ is the $a^\text{th}$ root of $x$. For example $(3^\frac{1}{2})^2=3^{2\frac{1}{2}}=3^1=3$, so we must have $3^\frac{1}{2}=\sqrt{3}$.
-
-::: {.theorem name="Rule 5"}
-$$x^{\frac{1}{a}}=\sqrt[a]{x}.$$
+This implies $9^{\frac{1}{2}}=3$, the square root of $9$.
 :::
 
-In particular the square root is $x^{\frac{1}{2}}=\sqrt{x}$ and the cube root is $x^{\frac{1}{3}}=\sqrt[3]{x}$; we tend to use the root notation for expressions containing square or cube roots on their own, and use the power notation when combining different roots.
+More generally, take $(x^\frac{1}{a})^a=x^{\frac{1}{a}a}=x^1=x$. This means that raising $x^\frac{1}{a}$ to the power $a$ gets us back to $x$, hence the number $x^\frac{1}{a}$ is the $a^\text{th}$ root of $x$. In particular the square root is $x^{\frac{1}{2}}=\sqrt{x}$ and the cube root is $x^{\frac{1}{3}}=\sqrt[3]{x}$; we tend to use the root notation for expressions containing square or cube roots on their own, and use the power notation when combining different roots.
 
-It turns out that we can extend exponents beyond rational numbers to any *real* number, with all of the above rules still holding. Proving this is beyond the scope of these notes.
+::: {.theorem name="Rule 8"}
+Reciprocal powers are roots:
+$$x^\frac{1}{a}=\sqrt[a]{x}.$$
+:::
 
-Something's missing: we said $x$ can be any real number, but then how do we interpret something like $y=(-1)^\frac{1}{2}$? That is, $y$ must be a number such that when it is multiplied by itself it gives the negative number $-1$, but this is impossible for a real number! Answering this conundrum requires us to invent a new set of numbers, called *complex numbers* -- see section \@ref(complex).
+::: {.example}
+$8^\frac{1}{3}=\sqrt[3]{8}=2$
+:::
 
+Now lets try to make sense of a power of the form $x^{\frac{a}{b}}$ where $a$ is an integer and $b$ is a positive integer. That is, we now allow for any fractional (otherwise known as *rational*) exponent. Since we have $\frac{a}{b}=a\frac{1}{b}$ we can write (using Rule 2):
+
+$$x^{\frac{a}{b}}=x^{a\frac{1}{b}}=(x^a)^{\frac{1}{b}}=\sqrt[b]{x^a},$$
+
+or, equaivalently
+
+$$x^{\frac{a}{b}}=x^{\frac{1}{b}a}=(x^{\frac{1}{b}})^a=(\sqrt[b]{x})^a.$$
+
+::: {.theorem name="Rule 9"}
+Fractional exponents:
+$$x^{\frac{a}{b}}=\sqrt[b]{x^a}=(\sqrt[b]{x})^a$$
+:::
+
+### More on exponents
+
+As we mentioned, an exponent can be *any* real number. Not all numbers can be written as fractions i.e. *rational numbers*, such as $\sqrt{2}, \pi, e$: these are called *irrational numbers*, and the above rules still work with irrational exponents. Proving this is beyond the scope of these notes, but your calculator can happily handle calculations with any real number exponent.
+
+Another thing we have not mentioned so far is what happens when $x$ is a negative number. This is easy to understand when the exponent $a$ is an integer, since we are just multiplying a negative number by itself multiple times (and taking the reciprocal if $a$ is negative). But how do we interpret something like $y=(-1)^\frac{1}{2}$? That is, $y$ must be a number such that when it is multiplied by itself it gives the negative number $-1$, but this is impossible for a real number! Answering this conundrum requires us to invent a new set of numbers, called *complex numbers* -- this is addressed in section \@ref(complex).
 
 A summary of the rules:
 
 ::: {.theorem #exprules name="Rules of Exponents"}
-
-
 1. $x^ax^b=x^{a+b}$
 2. $(x^a)^b=x^{ab}$
-3. $x^{-a}=\frac{1}{x^a}$
-4. $x^0=1$
-5. $x^{\frac{1}{a}}=\sqrt[a]{x}.$
-
+3. $(xy)^a=x^ay^a$
+4. $\left(\frac{x}{y}\right)^a=\frac{x^a}{y^a}$
+5. $x^{-a}=\frac{1}{x^a}$
+6. $0^a=0$, for $a>0$
+7. $x^0=1$, for $x\neq 0$
+8. $x^{\frac{1}{a}}=\sqrt[a]{x}
+9. $x^{\frac{a}{b}}=\sqrt[b]{x^a}=(\sqrt[b]{x})^a.$
 :::
 
 
@@ -177,16 +315,23 @@ $$3+(2\times 4)=11.$$
 The brackets are not really needed in the second version since we get the same result from following BEDMAS, but adding brackets can make an expression easier to read and evaluate.
 
 #### Expansion
-Recall that we can expand expressions involving multiplication of brackets such as the following:
+
+Recall that we can expand expressions involving multiplication of brackets by multiplying each term, such as the following:
 
 $$a(b+c)=ab+ac$$
 $$(a+b)(c+d)=ac+ad+bc+bd$$
 $$(a+b)^2=(a+b)(a+b)=a^2+ab+ba+b^2=a^2+b^2+2ab$$
-$$(ab)^2=(ab)(ab)=a^2b^2.$$
+$$(ab)^2=(ab)(ab)=abab=a^2b^2.$$
 
 We often want to expand expressions in order to simplify them by grouping together like-terms, for example:
 
 $$(a+b)(b+c)+2ac=ab+ac+b^2+bc+2ac=ab+3ac+b^2+bc.$$
+
+With more than two brackets, we do the expansion in two steps: it does not matter which expansion we perform first. For example, we could start by expanding the first two sets of brackets in the following
+
+$$\underbrace{(a+b)(c+d)}_{\text{first expand these two}}(e+f)=(ac+ad+bc+bd)(e+f)=ace+ade+bce+bde + acf+adf+bcf+bdf$$
+
+but since the order of multiplication is unimportant, we could have started by expanding any two of the three sets of brackets.
 
 In the case of the sum of two numbers (a *binomial* term) to a postive integer power we have a general formula for the expansion, i.e. something of the form
 
@@ -252,3 +397,103 @@ In order to simplify an expression we can carry out the following proceedures:
 
 Note: these are "rules of thumb", as there usually does not exist such a thing as a "simplest" form for a given algebraic expression. The meaning of "simple" is dependent on what we want to gain from it. The intention is to put the expression in a form that is easier to understand (in the given context) and which usually uses fewer symbols (but not always).
 
+
+## Equations
+
+An equation indicates the *equality* of two mathematical expressions: what is on the left of the $=$ sign is the same as what is on the right of the $=$ sign. When manipulating equations, we must perform the same operation to each side in order to maintain equality -- think about a traditional mechanical balance scale, where if we were to change the mass on one side of the balance we would need to do the same to the other side in order to maintain balance. We will use the abreviations l.h.s. for left-hand-side and r.h.s. for right-hand-side. There are a few subtly different types of equations; the main two are *formulas* and *conditional equations*.
+
+### Formulas {#formulas}
+
+Equations are often regarded as *formulas*, which can be used to calculate the value of a mathematical or physical quantity in terms of other known quantities. In this case, we write a single *dependent* variable on the left hand side and the right hand side will contain *independent* variables and constants. The value of the dependent variable *depends* on the values of the independent variables and is obtained by evaluating the right hand side when the values of the independent variables are known. For example, the formula for the area $A$ of a circle is
+
+$$A=\pi r^2$$
+
+where the independent variable $r$ is the radius of the cirle and $\pi$ is the mathematical constant $3.141...$. By plugging in a particular value for $r$ we then obtain a value for the area $A$.  We often want to re-arrange equations to make a different variable the dependent variable, or *subject*, of the formula, i.e. to place it alone on the left hand-side. Re-arranging formulae is also known as *transposition*. For example, if we knew the area of a cirlce and wanted to calculate the corresponding radius, we can re-arrange the equation to make $r$ the subject:
+
+$$r=\sqrt{\frac{A}{\pi}}.$$
+
+In obtaining this, we carry out the "opposite" of the operations on the right hand side to both sides of the equation. These opposites are:
+
+* addition and subtraction;
+* multiplication and division;
+* powers and roots.
+
+Let's see this step by step in our example. We start with 
+
+$$A=\pi r^2.$$
+
+Then, divide both sides by $\pi$
+
+$$\frac{A}{\pi}=\frac{\pi}{\pi}r^2=r^2$$
+
+so that $r^2$ is no longer multiplied by $\pi$. Now, to get from $r^2$ to $r$ we need to take the square root of both sides
+
+$$\sqrt{\frac{A}{\pi}}=\sqrt{r^2}=r$$
+
+and finally, we put the subject on the left hand side (since we read from left to right it is simply convention to do this, but mathematically it makes no difference since it is still an equality).
+
+### Conditional equations
+
+Another type of equation is a *conditional* equation. These may not hold true for all values of the variables and we will want to find the values for which equality is true. For example,
+$$5x+4=19$$
+is only true when $x=3$. We can solve this equation by making $x$ the subject:
+
+subract $4$ from both sides
+
+$$5x=15$$
+
+divide both sides by $5$
+
+$$x=3.$$
+
+Note that an equation may have more than one solution, or perhaps no solutions. For example,
+
+$$x^2=4$$
+
+has two possible solutions, either $x=2$ or $x=-2$. On the other hand, the equation
+
+$$x+2=x+3$$
+
+has no solutions. To see this, subtract $x+2$ from both sides and we obtain
+
+$$0=1$$
+
+which is false, so no value of $x$ can give us equality.
+
+## Inequalities
+
+We are familiar with the symbols $<, \leq, >$ and $\geq$, (less than, less than or equal to, greater than and greater than or equal to) which are used to define inequalities.
+
+::: {.example #ineqs}
+$$x<5$$ denotes all numbers that are strictly less that $5$ (so not including $5$ itself).
+$$-1< x \leq 1$$ denotes all numbers that are strictly greater than $-1$ but less that or equal to $1$ (so $x=1$ is a possibility).
+:::
+
+When re-arranging inequalities we need to be a bit more careful with their manipulation than with equalities. If we perform the same operation to both sides in an equality then the equality still holds true, but this is not the case in general for inequalities -- in particular we need to be careful with multiplication by negative numbers which "flips" the inequality.
+
+For example, if we take all values $x$ such that $x>10$, then an equivalent expression after multiplying by $-1$ is $-x<-10$ (NOT $-x>-10$).
+
+Let $a,u,v,x,y,z$ be real numbers, then some basic relations that hold true are:
+
+* if $x>y$ and $y>z$, then $x>z$;
+* if $x>y$, then $x+z>y+z$ and $x-z>y-z$;
+* if $x>y$ and $u>v$, then $x+u>y+v$;
+* if $x>y$, then $ax>ay$ if $a>0$, and $ax < ay$ if $a<0$;
+* if $x>y$, then $\dfrac{x}{a}>\dfrac{y}{a}$ if $a>0$, and $\dfrac{x}{a}<\dfrac{y}{a}$ if $a<0$;
+* if $x>y>0$ and $u>v>0$, then $xu>yv$ and $\dfrac{x}{v}>\dfrac{y}{u}$;
+* if $x>y>0$, then $\dfrac{1}{x}<\dfrac{1}{y}$.
+
+It should not be necessary to memorise all of these, it just requires a little thought when manipulating inequalities: the important ones to be careful with are multiplying or dividing by negative values.
+
+
+## Common mistakes!
+
+We finish this section with some common algebraic errors to watch out for! Invent your own examples to convince yourself that these things are true.
+
+**Fractions:** $\frac{a}{b+c}\neq \frac{a}{b}+\frac{a}{c}$ and $\frac{a+b}{c+b}\neq\frac{a}{c}$ (can't "cancel" the $b$'s.).
+
+**Inequalities:** $ab>c$ does not imply that $a>\frac{c}{b}$ (what happens if $b$ is negative?).
+
+**Powers:** $(a+b)^2\neq a^2+b^2$.
+
+**Roots:** $\sqrt{a+b}\neq \sqrt{a}+\sqrt{b}$.

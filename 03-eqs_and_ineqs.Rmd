@@ -1,68 +1,8 @@
-# Equations and Inequalities
+# Solving Equations and Inequalities
 
-## Equations
+In this section we shall look at some solutions methods to some forms of commonly encountered equations and inequalities.
 
-An equation indicates the *equality* of two mathematical expressions: what is on the left of the $=$ sign is the same as what is on the right of the $=$ sign. When manipulating equations, we must perform the same operation to each side in order to maintain equality -- think about a traditional mechanical balance scale, where if we were to change the mass on one side of the balance we would need to do the same to the other side in order to maintain balance. We will use the abreviations l.h.s. for left-hand-side and r.h.s. for right-hand-side. There are a few subtly different types of equations; the main two are *formulas* and *conditional equations*.
-
-### Formulas
-
-Equations are often regarded as *formulas*, which can be used to calculate the value of a mathematical or physical quantity in terms of other known quantities. In this case, we write a single *dependent* variable on the left hand side and the right hand side will contain *independent* variables and constants. The value of the dependent variable *depends* on the values of the independent variables and is obtained by evaluating the right hand side when the values of the independent variables are known. For example, the formula for the area $A$ of a circle is
-
-$$A=\pi r^2$$
-
-where the independent variable $r$ is the radius of the cirle and $\pi$ is the mathematical constant $3.141...$. By plugging in a particular value for $r$ we then obtain a value for the area $A$.  We often want to re-arrange equations to make a different variable the dependent variable, or *subject*, of the formula, i.e. to place it alone on the left hand-side. Re-arranging formulae is also known as *transposition*. For example, if we knew the area of a cirlce and wanted to calculate the corresponding radius, we can re-arrange the equation to make $r$ the subject:
-
-$$r=\sqrt{\frac{A}{\pi}}.$$
-
-In obtaining this, we carry out the "opposite" of the operations on the right hand side to both sides of the equation. These opposites are:
-
-* addition and subtraction;
-* multiplication and division;
-* powers and roots.
-
-Let's see this step by step in our example. We start with 
-
-$$A=\pi r^2.$$
-
-Then, divide both sides by $\pi$
-
-$$\frac{A}{\pi}=\frac{\pi}{\pi}r^2=r^2$$
-
-so that $r^2$ is no longer multiplied by $\pi$. Now, to get from $r^2$ to $r$ we need to take the square root of both sides
-
-$$\sqrt{\frac{A}{\pi}}=\sqrt{r^2}=r$$
-
-and finally, we put the subject on the left hand side (since we read from left to right it is simply convention to do this, but mathematically it makes no difference since it is still an equality).
-
-### Conditional equations
-
-Another type of equation is a *conditional* equation. These may not hold true for all values of the variables and we will want to find the values for which equality is true. For example,
-$$5x+4=19$$
-is only true when $x=3$. We can solve this equation by making $x$ the subject:
-
-subract $4$ from both sides
-
-$$5x=15$$
-
-divide both sides by $5$
-
-$$x=3.$$
-
-Note that an equation may have more than one solution, or perhaps no solutions. For example,
-
-$$x^2=4$$
-
-has two possible solutions, either $x=2$ or $x=-2$. On the other hand, the equation
-
-$$x+2=x+3$$
-
-has no solutions. To see this, subtract $x+2$ from both sides and we obtain
-
-$$0=1$$
-
-which is false, so no value of $x$ can give us equality.
-
-### Quadratic equations {#quad-eqs}
+## Quadratic equations {#quad-eqs}
 
 A particularly common form of equations that arise in science and engineering are *quadratic* equations. These are equations of the form
 
@@ -70,7 +10,7 @@ $$ax^2+bx+c=0$$
 
 where $a$, $b$ and $c$ are constants and we wish to find the values of $x$ satisfying this equation. We explore three different methods below.
 
-#### Factorisation by inspection
+### Factorisation by inspection
 
 First consider a quadratic where $a=1$, that is
 
@@ -129,7 +69,7 @@ which is known as the *discriminant* of a quadratic: if this number is a perfect
 
 In the case where the coefficients are not integers it can be difficult to determine the coefficients by inspection and the following two methods can be applied instead.
 
-#### Completing the square
+### Completing the square
 
 In this method, we first rewrite a quadratic equation
 $$ax^2+bx+c=0$$
@@ -173,8 +113,10 @@ x&=-3\pm\sqrt{22}.
 \end{align*}
 :::
 
+Another use of completing the square is in determining the location of the minimum or maximum point of a quadratic function. We know that the graph of such a function is a parabola which either opens upwards in a "$\cup$" shape or opens downwards in a "$\cap$" shape, so it has a minimum or a maximum, respectively: the sign of the $x^2$ coefficient determines this, with $+$ corresponding to upward opening and $-$ corresponding to downward opening. In the previous example, after completing the square we obtained $y=2(x+3)^2-44$, and since the coefficient in $2x^2$ is positive the quadratic function must have a minimum somewhere. Since the term $(x+3)^2$ must be positive, the smallest it can be is when $x=-3$ and the term is $(-3+3)^2=0$. This means we must have a minimum at $x=-3$ where y=2(-3+3)^2-44=-44$. This idea can be generalised: find the value of $x$ that makes the squared term $0$, and then the minimum/maximum $y$ value is equal to the constant term.
 
-#### The quadratic formula
+
+### The quadratic formula
 
 Sometimes it is difficult to find the solutions using the above methods and so thankfully we have a forumula for finding them (or to determine if there are no real number solutions).
 
@@ -191,7 +133,44 @@ If the quantity $\Delta = b^2-4ac$, known as the *discriminant*, is such that $\
 Derive the quadratic formula. Hint: use the method of "completing the square" on a general quadratic equation.
 :::
 
-### Simultaneous equations
+
+## Higher order polynomials
+
+We are often interested in finding the values of $x$ for which $f(x)=0$, known as the *roots* of a polynomial. We already know how to find roots of a quadratic using the quadratic formula (section \@ref(quad-eqs)). We will now look at the more general *factor theorem* that can help in finding roots of higher degree polynomials.
+
+If we factorise the quadratic equation
+$$x^2-3x-10=0$$
+we obtain
+$$(x+2)(x-5)=0.$$
+If the product of two numbers is zero, then either one or both of the numbers must be zero. So the possible roots are
+$$(x+2)=0 \quad \implies\quad x=-2$$
+or
+$$(x-5)=0\quad \implies\quad x=5.$$
+More generally, a factor $(x-a)$ corresponds to a root $x=a$. Knowing the factors tells us the roots, and vice versa. It turns out this holds more generally for any degree polynomial.
+
+::: {.theorem #factors name="Factor Theorem"}
+The value $x=a$ is a root of the polynomial equation $f(x)=0$ if and only if $(x-a)$ is a factor of the polynomial $f(x)$.
+:::
+
+We already have a fool-proof way to solve quadratic equations -- use the quadratic formula. There are also formulae for [cubic](https://en.wikipedia.org/wiki/Cubic_equation#General_cubic_formula) and [quartic](https://en.wikipedia.org/wiki/Quartic_equation#The_general_case) polynomials, but these are a bit more complicated. Furthermore, it turns out it is **impossible** to derive a formula for [quintic](https://en.wikipedia.org/wiki/Abel%E2%80%93Ruffini_theorem) and higher degree polynomials! The factor theorem can be helpful in finding roots of polynomials greater than degree 2. Here is an example.
+
+::: {.example #factorthmcubic name="Factor theorem applied to a cubic polynomial"}
+Find the roots of the cubic polynomial $$f(x)=x^3-7x-6.$$
+
+After a little trial and error with small integer values of $x$ we find
+$$f(3)=3^3-7(3)-6=0$$
+which by the factor theorem implies that $(x-3)$ is a factor. Now applying polynomial division by the factor $(x-3)$ we find
+$$\frac{x^3-7x-6}{x-3}=x^2+3x+2$$
+so that
+$$x^3-7x-6=(x-3)(x^2+3x+2).$$
+Now that we have taken out one linear factor we are left with a quadratic factor, which we know how to deal with. Factorising the quadratic factor yields
+$$x^3-7x-6=(x-3)(x+1)(x+2).$$
+Hence the roots are
+$$x=3, x=-1,\,\text{ and } x=-2.$$
+:::
+
+
+## Simultaneous equations
 
 Sometimes a problem will be formulated in terms of multiple equations with multiple, shared variables. The set of equations usually represent constraints between the variables and we need to determine which values of the variables are valid solutions, i.e. which values satisfy all of the equations *simultaneously* -- hence such sets of equations are known as *simultaneous equations*. Sometimes we can solve simultaneous equations by rearranging one equation to set one of the variables as the subject and then substitute this into another equation in order to eliminate one of the variables.
 
@@ -218,7 +197,7 @@ Hence the solution is
 $$x=\frac{11}{7},\quad y=\frac{1}{7}.$$
 :::
 
-The above example shows a particular type of simultaneous equations called *linear* simultaneous equations (if we were to plot a graph of each of the equations we would see that they form straight lines, hence the term *linear*). We shall look at a systematic way to deal with linear simultaneous equations in section \@ref(linear).
+The above example shows a particular type of simultaneous equations called *linear* simultaneous equations (if we were to plot a graph of each of the equations we would see that they form straight lines, hence the term *linear*). We shall look at a systematic way to deal with linear simultaneous equations in section \@ref(gauss).
 
 ::: {.example #simul-nonlin}
 Given the following two simultaneous equations in the variables $x$ and $y$
@@ -254,29 +233,7 @@ $$x=3,\quad y=1.$$
 
 The examples presented above are relatively simple, and in some real-world scenarios equations might be very complicated, or even impossible, to solve by hand. In these cases we need to turn to computational techniques. We'll look at some computational techniques in section \@ref(numerics).
 
-
 ## Inequalities
-
-We are familiar with the symbols $<, \leq, >$ and $\geq$, (less than, less than or equal to, greater than and greater than or equal to) which are used to define inequalities.
-
-::: {.example #ineqs}
-$$x<5$$ denotes all numbers that are strictly less that $5$ (so not including $5$ itself).
-$$-1< x \leq 1$$ denotes all numbers that are strictly greater than $-1$ but less that or equal to $1$ (so $x=1$ is a possibility).
-:::
-
-When solving inequalities (i.e. finding values of $x$ which satisfy the expression) we need to be a bit more careful with their manipulation than with equalities. If we perform the same operation to both sides in an equality then the equality still holds true, but this is not the case in general for inequalities -- in particular we need to be careful with multiplication by negative numbers which "flips" the inequality.
-
-Let $a,u,v,x,y,z$ be real numbers, then some basic relations that hold true are:
-
-* if $x>y$ and $y>z$, then $x>z$;
-* if $x>y$, then $x+z>y+z$ and $x-z>y-z$;
-* if $x>y$ and $u>v$, then $x+u>y+v$;
-* if $x>y$, then $ax>ay$ if $a>0$, and $ax < ay$ if $a<0$;
-* if $x>y$, then $\dfrac{x}{a}>\dfrac{y}{a}$ if $a>0$, and $\dfrac{x}{a}<\dfrac{y}{a}$ if $a<0$;
-* if $x>y>0$ and $u>v>0$, then $xu>yv$ and $\dfrac{x}{v}>\dfrac{y}{u}$;
-* if $x>y>0$, then $\dfrac{1}{x}<\dfrac{1}{y}$.
-
-It should not be necessary to memorise all of these, it just requires a little thought when manipulating inequalities: the important ones to be careful with are multiplying or dividing by negative values.
 
 Assume we are comparing two expressions $P$ and $Q$ that depend on the variable $x$ and need to find, for example, the values of $x$ for which $P>Q$. Let us take a look at a range of examples to see how to solve these types of problems.
 
@@ -337,16 +294,3 @@ We wish to find all values of $x$ satisfying the following inequalities.
 :::
 
 The general strategy for finding $P>Q$ (or similar) is therefore: (1) Consider $P-Q$ and factorise as much as possible; (2) Determine the sign of each factor of $P-Q$ for varying $x$; (3) Determine when $P-Q>0$ (and hence when $P>Q$).
-
-
-## Common mistakes!
-
-We finish this section with some common algebraic errors to watch out for! Invent your own examples to convince yourself that these things are true.
-
-**Fractions:** $\frac{a}{b+c}\neq \frac{a}{b}+\frac{a}{c}$ and $\frac{a+b}{c+b}\neq\frac{a}{c}$ (can't "cancel" the $b$'s.).
-
-**Inequalities:** $ab>c$ does not imply that $a>\frac{c}{b}$ (what happens if $b$ is negative?).
-
-**Powers:** $(a+b)^2\neq a^2+b^2$.
-
-**Roots:** $\sqrt{a+b}\neq \sqrt{a}+\sqrt{b}$.

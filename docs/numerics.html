@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 20 Discrete Random Variables | Mathematics for Scientists and Engineers</title>
+  <title>Chapter 18 Numerical Methods | Mathematics for Scientists and Engineers</title>
   <meta name="description" content="Mathematics Lecture Notes for UoE Penryn Science and Engineering Disciplines." />
   <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 20 Discrete Random Variables | Mathematics for Scientists and Engineers" />
+  <meta property="og:title" content="Chapter 18 Numerical Methods | Mathematics for Scientists and Engineers" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="Mathematics Lecture Notes for UoE Penryn Science and Engineering Disciplines." />
   <meta name="github-repo" content="maths-sci-eng/maths-sci-eng.github.io" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 20 Discrete Random Variables | Mathematics for Scientists and Engineers" />
+  <meta name="twitter:title" content="Chapter 18 Numerical Methods | Mathematics for Scientists and Engineers" />
   
   <meta name="twitter:description" content="Mathematics Lecture Notes for UoE Penryn Science and Engineering Disciplines." />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="probability-fundamentals.html"/>
-<link rel="next" href="continuous-random-variables.html"/>
+<link rel="prev" href="differential-equations.html"/>
+<link rel="next" href="probability-fundamentals.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -370,332 +370,22 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="discrete-random-variables" class="section level1 hasAnchor" number="20">
-<h1><span class="header-section-number">Chapter 20</span> Discrete Random Variables<a href="discrete-random-variables.html#discrete-random-variables" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>A <em>random variable</em> is a numerical valued function defined on the sample space.</p>
-<div class="example">
-<p><span id="exm:rv" class="example"><strong>Example 20.1  (Random Variables) </strong></span>A coin with probability <span class="math inline">\(p\)</span> of getting a head is tossed three times.</p>
-<p>There are 8 possible outcomes from the experiment. Let <span class="math inline">\(X\)</span> be a random variable counting the number of heads.</p>
-<table>
-<thead>
-<tr class="header">
-<th><strong>Sample</strong></th>
-<th><strong>Probability</strong></th>
-<th><span class="math inline">\(X\)</span></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>TTT</td>
-<td><span class="math inline">\((1-p)^3\)</span></td>
-<td>0</td>
-</tr>
-<tr class="even">
-<td>TTH</td>
-<td><span class="math inline">\(p(1-p)^2\)</span></td>
-<td>1</td>
-</tr>
-<tr class="odd">
-<td>THT</td>
-<td><span class="math inline">\(p(1-p)^2\)</span></td>
-<td>1</td>
-</tr>
-<tr class="even">
-<td>HTT</td>
-<td><span class="math inline">\(p(1-p)^2\)</span></td>
-<td>1</td>
-</tr>
-<tr class="odd">
-<td>THH</td>
-<td><span class="math inline">\(p^2(1-p)\)</span></td>
-<td>2</td>
-</tr>
-<tr class="even">
-<td>HTH</td>
-<td><span class="math inline">\(p^2(1-p)\)</span></td>
-<td>2</td>
-</tr>
-<tr class="odd">
-<td>HHT</td>
-<td><span class="math inline">\(p^2(1-p)\)</span></td>
-<td>2</td>
-</tr>
-<tr class="even">
-<td>HHH</td>
-<td><span class="math inline">\(p^3\)</span></td>
-<td>3</td>
-</tr>
-</tbody>
-</table>
+<div id="numerics" class="section level1 hasAnchor" number="18">
+<h1><span class="header-section-number">Chapter 18</span> Numerical Methods<a href="numerics.html#numerics" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>In general, many mathematical problems do not have algebraic solution methods. Instead, we need to resort to <em>numerical methods</em>. This usually results in an approximate solution: we get an answer that is close to the true solution <span class="math inline">\(x\)</span>, but might have an error <span class="math inline">\(\varepsilon\)</span>, so that we obtain some value in the interval <span class="math inline">\(x-\varepsilon\)</span> to <span class="math inline">\(x+\varepsilon\)</span>. For many practical applications an approximate solution is “good enough”.</p>
+<div id="numerical-root-finding" class="section level2 hasAnchor" number="18.1">
+<h2><span class="header-section-number">18.1</span> Numerical Root Finding<a href="numerics.html#numerical-root-finding" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We have seen how to solve linear and quadratic equations algebraically. We mentioned in section <a href="functions-and-graphs.html#polynomials">2.2</a> that there also exist formulae for finding roots of cubic and quartic polynomial equations, but not quintic or higher.</p>
+<p>We often need to find the roots (values of <span class="math inline">\(x\)</span> for which <span class="math inline">\(f(x)=0\)</span>) of some function</p>
 </div>
-<p>The convention is to denote a random variable using upper case letters and lower-case letters to denote a value that the random variable takes e.g. here we have <span class="math inline">\(X=x\)</span> with <span class="math inline">\(x = 0, 1, 2, 3\)</span>.</p>
-<p>A random variable is said to be <em>discrete</em> if its range of values is finite or countably infinite (i.e. it must be possible to list all the values in a, possibly infinite, sequence).</p>
-<p>In the coin toss example, we could write a function to map the probabilities of observing <span class="math inline">\(x\)</span> heads from three tosses as:
-<span class="math display">\[
-P(X = x) = {3 \choose x} p^x (1 - p)^{3 - x}\quad\mbox{for}~x = 0, 1, 2, 3.
-\]</span></p>
-<p>The function <span class="math inline">\(P(X = x)\)</span> is known as a <em>probability distribution</em>. In the discrete case, it is also called a <em>probability mass function</em>. Some authors use the notation <span class="math inline">\(p_X(x)\)</span> or <span class="math inline">\(f_X(x)\)</span>. We will tend to use the former for discrete random variables and the latter for <em>continuous</em> random variables (more on that later).</p>
-<p>By the laws of probability, we always have
-<span class="math display">\[
-P(X = x) \geq 0
-\]</span>
-and
-<span class="math display">\[
-\sum_{x} P(X = x) = 1.
-\]</span>
-Where the notation <span class="math inline">\(\displaystyle \sum_x\)</span> means to sum over all possible values of <span class="math inline">\(x\)</span>.</p>
-<div id="bernoulli-trials" class="section level2 hasAnchor" number="20.1">
-<h2><span class="header-section-number">20.1</span> Bernoulli trials<a href="discrete-random-variables.html#bernoulli-trials" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Possibly the simplest example of a random variable is when an outcome can only take one of two values e.g.</p>
-<ul>
-<li>success / failure,</li>
-<li>survival / death,</li>
-<li>defective / non-defective.</li>
-</ul>
-<p>Note that these outcomes are not numerical, but typically we can assign numerical values to them, for example we could let
-<span class="math display">\[
-X = \begin{cases}
-1 &amp; \text{if success,}\\
-0 &amp; \text{if failure.}
-\end{cases}
-\]</span></p>
-<p>If we assume that the <strong>probability of success</strong> is given by a value <span class="math inline">\(0\le p\le 1\)</span>, then the <strong>probability mass function</strong> is:
-<span class="math display">\[
-p_X(x) = P(X = x) = p^x (1 - p)^{1 - x} \qquad \mbox{for}~x = 0, 1.
-\]</span>
-The experiment is known as a <em>Bernoulli trial</em>, after <a href="https://en.wikipedia.org/wiki/Jacob_Bernoulli">Jacob Bernoulli (1654–1705)</a>.</p>
-<p>We write <span class="math inline">\(X \sim \mbox{Bern}(p)\)</span> to say that the random variable <span class="math inline">\(X\)</span> has a Bernoulli probability distribution with parameter <span class="math inline">\(p\)</span>.</p>
+<div id="numerical-differentiation" class="section level2 hasAnchor" number="18.2">
+<h2><span class="header-section-number">18.2</span> Numerical differentiation<a href="numerics.html#numerical-differentiation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 </div>
-<div id="binomial-distribution" class="section level2 hasAnchor" number="20.2">
-<h2><span class="header-section-number">20.2</span> Binomial Distribution<a href="discrete-random-variables.html#binomial-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Often we may have an experiment which consists of a fixed number <span class="math inline">\(n\)</span> of <strong>independent</strong> Bernoulli trials. Let <span class="math inline">\(X\)</span> denote the number of successes.</p>
-<p>In this case there are <span class="math inline">\(2^n\)</span> possible outcomes and <span class="math inline">\(X\)</span> is defined in the range <span class="math inline">\(0, \dots, n\)</span>. There will be <span class="math inline">\({n \choose x}\)</span> of the <span class="math inline">\(2^n\)</span> possible outcomes corresponding to a value <span class="math inline">\(X = x\)</span>, which will occur with probability <span class="math inline">\(p^x(1-p)^{n - x}\)</span>,</p>
-<p>A <em>binomial random variable</em>, <span class="math inline">\(X \sim \mbox{Bin}(n, p)\)</span>, is the number of successes from a fixed number (<span class="math inline">\(n\)</span>) of Bernoulli trials.
-A binomial random variable <span class="math inline">\(X\)</span> therefore has probability mass function:
-<span class="math display">\[
-p_X(x) = P(X = x) = {n \choose x} p^x (1 - p)^{n - x} \quad \mbox{for}~x = 0, \dots, n~\mbox{ and }~0 \leq p \leq 1.
-\]</span></p>
-<p>The coin tossing example we saw earlier is a case of a binomial random variable, with p.m.f.
-<span class="math display">\[\begin{eqnarray*}
-p_X(x) = {3 \choose x} p^x (1 - p)^{3 - x} \\
-\mbox{for}~x = 0, 1, 2, 3.
-\end{eqnarray*}\]</span></p>
-<p>So for a fair coin (<span class="math inline">\(p = 0.5\)</span>):
-<span class="math display">\[\begin{eqnarray*}
-p_X(0) &amp;=&amp; 0.125\\
-p_X(1) &amp;=&amp; 0.375\\
-p_X(2) &amp;=&amp; 0.375\\
-p_X(3) &amp;=&amp; 0.125
-\end{eqnarray*}\]</span>
-and note that as expected <span class="math inline">\(\sum_{x = 0}^3 p_X(x) = 1\)</span>.</p>
+<div id="numerical-integration" class="section level2 hasAnchor" number="18.3">
+<h2><span class="header-section-number">18.3</span> Numerical Integration<a href="numerics.html#numerical-integration" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 </div>
-<div id="cumulative-distribution-functions" class="section level2 hasAnchor" number="20.3">
-<h2><span class="header-section-number">20.3</span> Cumulative Distribution Functions<a href="discrete-random-variables.html#cumulative-distribution-functions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Another useful quantity is called the <em>cumulative distribution function</em> and for discrete random variables is defined as:
-<span class="math display">\[
-P(X \leq x) = \sum_{k \leq x} P(X = k).
-\]</span>
-So for a fair coin (<span class="math inline">\(p = 0.5\)</span>):</p>
-<p><strong>Probability mass function</strong>:
-<span class="math display">\[\begin{eqnarray*}
-p_X(0) &amp;=&amp; 0.125\\
-p_X(1) &amp;=&amp; 0.375\\
-p_X(2) &amp;=&amp; 0.375\\
-p_X(3) &amp;=&amp; 0.125.
-\end{eqnarray*}\]</span></p>
-<p><strong>Cumulative distribution function</strong>:
-<span class="math display">\[\begin{eqnarray*}
-P(X \leq 0) &amp;=&amp; 0.125\\
-P(X \leq 1) &amp;=&amp; 0.5\\
-P(X \leq 2) &amp;=&amp; 0.875\\
-P(X \leq 3) &amp;=&amp; 1.
-\end{eqnarray*}\]</span></p>
-<div class="example">
-<p><span id="exm:cumulative" class="example"><strong>Example 20.2  (Cumulative distributions) </strong></span>If 1% of a product is defective, then in a random sample of 200 items, what is the probability that less than 2 are defective?</p>
-<p>We can consider that the sampling scheme is approximately equivalent to a sequence of independent Bernoulli trials. Here “success” is defined as “having a defect” and has probability <span class="math inline">\(p = 0.01\)</span>. Let <span class="math inline">\(X\)</span> be the number of defective items. Hence,
-<span class="math display">\[\begin{eqnarray*}
-P(X &lt; 2) &amp;=&amp; P(X = 0) + P(X = 1)\\
-&amp;=&amp; {200 \choose 0} \cdot 0.01^0 \cdot 0.99^{200} + {200 \choose 1} \cdot 0.01^1 \cdot 0.99^{199}\\
-&amp;=&amp; 0.40 \text{ to 2 s.f.}
-\end{eqnarray*}\]</span></p>
-</div>
-</div>
-<div id="poisson-distribution" class="section level2 hasAnchor" number="20.4">
-<h2><span class="header-section-number">20.4</span> Poisson distribution<a href="discrete-random-variables.html#poisson-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The Poisson distribution is named after <a href="https://en.wikipedia.org/wiki/Sim%C3%A9on_Denis_Poisson">Simeon Denis Poisson (1781–1840)</a>. The Poisson distribution has been used to model (according to Wikipedia):</p>
-<ul>
-<li>the number of goals in a football match,</li>
-<li>the number of children in a family,</li>
-<li>the number of patients arriving in an hour in A &amp; E,</li>
-<li>the number of soldiers killed in a year by horse-kicks in a corps of the Prussian cavalry.</li>
-</ul>
-<p>Roughly speaking, a Poisson distribution is appropriate when recording the number of events occuring in a given unit time if these events are independent and occur at a constant rate.</p>
-<p>A discrete random variable <span class="math inline">\(X\)</span> follows a <em>Poisson</em> distribution with rate <span class="math inline">\(\lambda\)</span> if it has probability mass function:
-<span class="math display">\[\begin{eqnarray*}
-P(X = x) &amp;=&amp; \frac{\lambda^x e^{-\lambda}}{x!}\\
-&amp;&amp; \mbox{for}~x = 0, 1, 2, \dots\\
-&amp;&amp; \mbox{and}~\lambda &gt; 0.
-\end{eqnarray*}\]</span></p>
-<p>We write <span class="math inline">\(X\sim Po(\lambda)\)</span> to denote <span class="math inline">\(X\)</span> being a random variable with a Poisson distribution with parameter <span class="math inline">\(\lambda\)</span>.</p>
-<div class="example">
-<p><span id="exm:poisson" class="example"><strong>Example 20.3  (Poisson distribution) </strong></span>Births occur in a hospital at an average rate of 1.8 births per hour.</p>
-<ol style="list-style-type: decimal">
-<li>What is the probability that 5 births will occur in any given hour?</li>
-<li>What is the probability that no births will occur in any given hour?</li>
-<li>What is the probability that at least two births will occur in any given hour?</li>
-</ol>
-<p>Let <span class="math inline">\(X\)</span> be the number of births in any given hour. Here <span class="math inline">\(X \sim Po(1.8)\)</span> and</p>
-<ol style="list-style-type: decimal">
-<li><span class="math inline">\(P(X = 5) = \frac{1.8^5 e^{-1.8}}{5!} = 0.0260\text{ to 3 s.f.}.\)</span></li>
-<li><span class="math inline">\(P(X = 0) = e^{-1.8} = 0.165\text{ to 3 s.f.}.\)</span></li>
-<li><span class="math inline">\(P(X \geq 2) = 1 - P(X &lt; 2) = 1 - e^{-1.8} - 1.8 e^{-1.8} = 0.537\text{ to 3 s.f.}.\)</span></li>
-</ol>
-</div>
-<p>In some instances, we can use the Poisson distribution to approximate the binomial distribution.</p>
-<div class="example">
-<p><span id="exm:binomapprox" class="example"><strong>Example 20.4  (Poisson approximation of binomial) </strong></span>A manufacturer sells screws in boxes of 100. On average, 0.5% of screws produced at the factory are defective. Find the probability that no more than one screw in a randomly selected box is defective.</p>
-<p>In this case, we can model the number of defective screws in a box, <span class="math inline">\(X\)</span>, as a binomial random variable with parameters <span class="math inline">\(n = 100\)</span> and <span class="math inline">\(p = 0.005\)</span>. So the answer is:
-<span class="math display">\[\begin{eqnarray*}
-P(X \leq 1) = p_X(0) + p_X(1) &amp;=&amp; {100 \choose 0} 0.995^{100} + {100 \choose 1}0.005(0.995)^{99}\\
-&amp;=&amp; 0.91 \text{ to 2 s.f.}
-\end{eqnarray*}\]</span></p>
-<p>However, a binomial distribution can be well-approximated by a Poisson distribution with rate <span class="math inline">\(\lambda = np\)</span> if <span class="math inline">\(n\)</span> is “large” and “<span class="math inline">\(np\)</span>” is fairly small. Here <span class="math inline">\(n = 100\)</span> and <span class="math inline">\(np = 0.5\)</span>, and so we could approximate the above result as:
-<span class="math display">\[\begin{eqnarray*}
-P(X \leq 1) &amp;\approx&amp; e^{-0.5} + 0.5e^{-0.5}\\
-&amp;=&amp; 0.91 \text{ to 2 s.f.}
-\end{eqnarray*}\]</span></p>
-</div>
-<p>Rule-of-thumb: <span class="math inline">\(np &lt; 10\)</span>, <span class="math inline">\(n \geq 20\)</span>, <span class="math inline">\(p \leq 0.05\)</span></p>
-</div>
-<div id="expectation-and-variance" class="section level2 hasAnchor" number="20.5">
-<h2><span class="header-section-number">20.5</span> Expectation and Variance<a href="discrete-random-variables.html#expectation-and-variance" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="expectation" class="section level3 hasAnchor" number="20.5.1">
-<h3><span class="header-section-number">20.5.1</span> Expectation<a href="discrete-random-variables.html#expectation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Given a discrete random variable <span class="math inline">\(X\)</span>, we define its <em>expected value</em> (or <em>expectation</em>) as:
-<span class="math display">\[
-\operatorname{E}(X) = \sum_x xp_X(x).
-\]</span>
-The expectation of <span class="math inline">\(X\)</span> corresponds to the approximate average value of <span class="math inline">\(X\)</span> obtained from a repeated series of independent experiments.</p>
-<p>For example, if <span class="math inline">\(X\)</span> is the amount of money you win in a gambling game, then if <span class="math inline">\(\operatorname{E}(X) = 0\)</span>, in the long-term you would expect to break even. (In reality, a casino would ensure <span class="math inline">\(\operatorname{E}(X) &lt; 0\)</span>.)</p>
-<p>We sometimes refer to <span class="math inline">\(\operatorname{E}(X)\)</span> as the <em>mean</em> of <span class="math inline">\(X\)</span>.</p>
-<div class="example">
-<p><span id="exm:expectation" class="example"><strong>Example 20.5  (Expectation) </strong></span>Find the expected score from a single roll of a fair die.
-<span class="math display">\[\begin{eqnarray*}
-\operatorname{E}(X) &amp;=&amp; \sum_{x = 1}^6 x p_X(x)\\
-&amp;=&amp; \left(1 \times \frac{1}{6}\right) + \left(2 \times \frac{1}{6}\right) + \dots + \left(6 \times \frac{1}{6}\right)\\
-&amp;=&amp; 3.5
-\end{eqnarray*}\]</span></p>
-</div>
-<p>We can apply functions to a random variable, which then define a new random variable. We can then also find the expectation of these new random variables as in the following example.</p>
-<div class="example">
-<p><span id="exm:expfunction" class="example"><strong>Example 20.6  (Expectation of functions) </strong></span>Let <span class="math inline">\(X\)</span> be the score from a single roll of a fair die. Find the expected value of the random variable <span class="math inline">\(Y = X^2\)</span>.</p>
-<p>We note that <span class="math inline">\(Y\)</span> can take values <span class="math inline">\(\{1, 4, 9, 16, 25, 36\}\)</span>, each with probability <span class="math inline">\(\frac{1}{6}\)</span>. Therefore
-<span class="math display">\[\begin{eqnarray*}
-\operatorname{E}(Y) &amp;=&amp; \left(1 \times \frac{1}{6}\right) + \left(4 \times \frac{1}{6}\right) + \dots + \left(36 \times \frac{1}{6}\right)\\
-&amp;=&amp; \sum_{x = 1}^6 x^2 p_X(x)\\
-&amp;=&amp; 15.2\text{ to 3 s.f.}
-\end{eqnarray*}\]</span></p>
-</div>
-<p>In general, if <span class="math inline">\(g(\cdot)\)</span> is a function defined on the range of a discrete random variable <span class="math inline">\(X\)</span>, then <span class="math inline">\(g(X)\)</span> is also a random variable, and it follows that
-<span class="math display">\[
-\operatorname{E}[g(X)] = \sum_{x} g(x) p_X(x)
-\]</span></p>
-<p><strong>Some useful properties of the expectation:</strong></p>
-<ul>
-<li><p>Let <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> be constants, and let <span class="math inline">\(g(X)\)</span> and <span class="math inline">\(h(X)\)</span> be functions defined on the range of a random variable <span class="math inline">\(X\)</span>. Then,
-<span class="math display">\[
-  \operatorname{E}\left[ag(X) + bh(X)\right] = a\operatorname{E}[g(X)] + b\operatorname{E}[h(X)]
-  \]</span></p></li>
-<li><p>The expected value of a constant, <span class="math inline">\(a\)</span>, is itself i.e.
-<span class="math display">\[
-      \operatorname{E}(a) = a.
-  \]</span></p></li>
-</ul>
-</div>
-<div id="variance-and-standard-deviation" class="section level3 hasAnchor" number="20.5.2">
-<h3><span class="header-section-number">20.5.2</span> Variance and Standard Deviation<a href="discrete-random-variables.html#variance-and-standard-deviation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>The <em>variance</em> is the expected squared deviation of a random variable from its mean.
-<span class="math display">\[
-\operatorname{var}(X) = \operatorname{E}\left[(X - \mu)^2\right]
-\]</span>
-where <span class="math inline">\(\mu = \operatorname{E}(X)\)</span> is the mean of <span class="math inline">\(X\)</span>.</p>
-<p>Informally it measures how spread out a set of random numbers are expected to be from their mean, such that random variables with higher variances are harder to predict than those with smaller variances.</p>
-<p>A useful alternative form for the variance is given as
-<span class="math display">\[
-\operatorname{var}(X) = \operatorname{E}\left(X^2\right) - \operatorname{E}^2(X).
-\]</span>
-This can be derived by considering that
-<span class="math display">\[\begin{align*}
-\operatorname{var}(X) &amp;= \operatorname{E}\left[(X - \mu)^2\right]\\
-&amp;= \operatorname{E}\left(X^2 - 2X\mu + \mu^2\right)\\
-&amp;= \operatorname{E}\left(X^2\right) - 2\mu \operatorname{E}(X) + \operatorname{E}(\mu^2)\\
-&amp;= \operatorname{E}\left(X^2\right) - 2\mu^2 + \mu^2\\
-&amp;= \operatorname{E}\left(X^2\right) - \mu^2.
-\end{align*}\]</span></p>
-<p>Another important quantity is the <em>standard deviation</em>
-<span class="math display">\[
-\sigma = \operatorname{sd}(X) = \sqrt{\operatorname{var}(X)}.
-\]</span>
-This effectively re-scales the variance to be on the same scale as the data (having the same units rather than the units squared).</p>
-<div class="example">
-<p><span id="exm:variance" class="example"><strong>Example 20.7  (Variance) </strong></span>Find the variance of the score, <span class="math inline">\(X\)</span>, from a single roll of a fair die.</p>
-<p>If we use the alternative form for the variance, then from earlier results we have:
-<span class="math display">\[
-\operatorname{var}(X) = \operatorname{E}(X^2) -\operatorname{E}^2(X) = 15.17 - 3.5^2 = 2.917\text{ to 4 s.f.}.
-\]</span>
-The standard deviation is
-<span class="math display">\[
-\operatorname{sd}(X) = \sqrt{2.917} = 1.708\text{ to 4 s.f.}.
-\]</span></p>
-</div>
-<p><strong>A useful property of the variance:</strong></p>
-<ul>
-<li>For <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> constants:
-<span class="math display">\[
-      \operatorname{var}(aX + b) = a^2\operatorname{var}(X)
-  \]</span></li>
-</ul>
-</div>
-</div>
-<div id="summary-of-discrete-distributions" class="section level2 hasAnchor" number="20.6">
-<h2><span class="header-section-number">20.6</span> Summary of Discrete Distributions<a href="discrete-random-variables.html#summary-of-discrete-distributions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Here we list (without proof) the expectation and variance of the discrete probability distributions we have considered above.</p>
-<table>
-<colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><strong>Distribution</strong></th>
-<th><strong>Probability Density Function</strong></th>
-<th><strong>Expectation</strong></th>
-<th><strong>Variance</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Bernoulli <span class="math inline">\(X\sim\operatorname{Bern}(p)\)</span></td>
-<td><span class="math inline">\(p_X(x)=p^x(1-p)^{1-x}\)</span>; <span class="math inline">\(x=0,1\)</span>; <span class="math inline">\(0 \le p \le 1\)</span>.</td>
-<td><span class="math inline">\(\operatorname{E}(X)=p\)</span></td>
-<td><span class="math inline">\(\operatorname{var}(X)=p(1-p)\)</span></td>
-</tr>
-<tr class="even">
-<td>Binomial <span class="math inline">\(X\sim\operatorname{Bin}(n,p)\)</span></td>
-<td><span class="math inline">\(p_X(x)={n \choose x} p^x (1-p)^{n-x}\)</span>; <span class="math inline">\(n=1,2,\dotsc\)</span>; <span class="math inline">\(0 \le p \le 1\)</span>; <span class="math inline">\(x=0,1,2\dotsc,n\)</span></td>
-<td><span class="math inline">\(\operatorname{E}(X)=np\)</span></td>
-<td><span class="math inline">\(\operatorname{var}(X)=np(1-p)\)</span></td>
-</tr>
-<tr class="odd">
-<td>Poisson <span class="math inline">\(X\sim\operatorname{Po}(\lambda)\)</span></td>
-<td><span class="math inline">\(p_X(x)=\dfrac{\lambda^xe^{-\lambda}}{x!}\)</span>; <span class="math inline">\(x=0,1,2,\dotsc\)</span>; <span class="math inline">\(\lambda&gt;0\)</span></td>
-<td><span class="math inline">\(\operatorname{E}(X)=\lambda\)</span></td>
-<td><span class="math inline">\(\operatorname{var}(X)=\lambda\)</span></td>
-</tr>
-</tbody>
-</table>
+<div id="numerical-solutions-to-odes" class="section level2 hasAnchor" number="18.4">
+<h2><span class="header-section-number">18.4</span> Numerical Solutions to ODEs<a href="numerics.html#numerical-solutions-to-odes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 
 </div>
 </div>
@@ -704,8 +394,8 @@ The standard deviation is
           </div>
         </div>
       </div>
-<a href="probability-fundamentals.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="continuous-random-variables.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="differential-equations.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="probability-fundamentals.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -726,7 +416,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/maths-sci-eng/maths-sci-eng.github.io/edit/master/19-drandomvariables.Rmd",
+"link": "https://github.com/maths-sci-eng/maths-sci-eng.github.io/edit/master/17.5-numerical_methods.Rmd",
 "text": "Edit"
 },
 "history": {
