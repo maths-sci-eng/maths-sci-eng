@@ -293,7 +293,7 @@ then differentiate implicitly:
 
 Curves in the plane may also be described *parametrically*. Given two functions $u(t)$ and $v(t)$, the curve
 $$
-\{(x,y): x=u(t), y=v(t)
+\{(x,y): x=u(t), y=v(t)\}
 $$
 is said to be represented *parametrically* by $u$ and $v$, and the pair of functions $u$ and $v$ are called a parametric representation of the curve.
 
