@@ -8,7 +8,7 @@ A particularly common form of equations that arise in science and engineering ar
 
 $$ax^2+bx+c=0$$
 
-where $a$, $b$ and $c$ are constants and we wish to find the values of $x$ satisfying this equation. We explore three different methods below.
+where $a$, $b$ and $c$ are constants and we wish to find the values of $x$ satisfying this equation. Graphically, these are the $x$-coordinates where the polynomial function $f(x)=ax^2+bx+c$ crossses the $x$-axis: these values are known as the *roots* of the polynomial. We explore three different methods below.
 
 ### Factorisation by inspection
 

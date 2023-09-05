@@ -239,6 +239,7 @@ pythagoras
 degrees-and-radians
 trigonometric-ratios
 sine-and-cosine-rules
+angles-in-cartesian-coordinates
 trigonometric-waveforms
 trigonometric-identities
 pythagorean-identities

@@ -22,6 +22,7 @@ knitr::include_graphics("figures/pythag.png")
 
 One particular application is finding the distance between two points in a Cartesian coordinate system.
 
+
 ## Degrees and radians
 
 We can measure an angle in two different units: degrees or radians.
@@ -76,11 +77,11 @@ Recall that we can calculate relationships between angles and side lengths of a 
 
 A useful way to remember these relationships is the mnemonic "SOH CAH TOA":
 
-SOH - Sine equals Opposite over Hypotenuse
+**SOH** - **S**ine equals **O**pposite over **H**ypotenuse
 
-CAH - Cosine equals Adjacent over Hypotenuse
+**CAH** - **C**osine equals **A**djacent over **H**ypotenuse
 
-TOA - Tan equals Opposite over Adjacent
+**TOA** - **T**an equals **O**pposite over **A**djacent
 
 These are most commonly used to determine angles by using the *inverse* functions:
 
@@ -156,6 +157,16 @@ This is useful when we have:
 
 :::
 
+## Angles in Cartesian Coordinates
+
+When calculating angles in the Cartesian plane we need to be a bit careful with the inverse trigonometric functions, because they are only directly valid in certain ranges (see section \@ref(inverse_trig_funcs)). The easiest way around this is to always find a suitable right-anged triangle, and then interpret the angles and lengths correctly in the plane (as we will show below). We usually measure angles in the Cartesian plane from the positive $x$-axis in an anti-clockwise direction. Negative angles correspond to measuring in the clockwise direction, so that, for example: $180^\circ$ is equivalent to $-180^\circ$, $90^\circ$ is equivalent to $-270^\circ$, etc. Also, angles greater than $360^\circ$, or $2\pi\text{ rad}$, correspond to "wrapping" around the circle more than once, for example: $360^\circ$ is equivalent to $0^\circ$, $405^\circ$ is equivalent to $45^\circ$, $-540^\circ$ is equivalent to $180^\circ$.
+
+Let's consider a circle centered at the origin, which has equation $x^2+y^2=r^2$, where $r$ is the radius (note that by Pythagoras this equation is all points that are a distance $r$ from the origin).
+
+What is the angle between the $x$-axis and a radial line joining the origin $(0,0)$ to a point $(x,y)$ on the circle? Let's first assume $x$ and $y$ are positive. We can consider a triangle formed from the points $(0,0)$, $(x,y)$ and $(x,0)$. Then we know the hypotenuse has length $r$, the opposite has length $y$ and the adjacent has length $x$, and since we have a right-angled triangle we can use all of the usual trigonometric ratios to calculate angles and lengths in this triangle.
+
+Now consider a point $(x,y)$ with $x$ negative and $y$ positive, that is, in the second quadrant. We can draw a right-angled triangle between the points $(0,0)$, $(x,0)$ and $(x,y)$. Since we want to consider lengths in this triangle, we take the positive value $|x|$. Then the angle $\phi$ between the negative $x$-axis and the radial line can be found from $\phi = \arctan\left(\frac{y}{|x|}\right)$. However, the actual angle we want is $\theta$, and so we can get this from $\theta = 180^\circ - \phi$, or in radians $\theta=\pi-\phi$. We can do a similar proceedure in the remaining two quadrants.
+
 
 ## Trigonometric waveforms
 
@@ -189,6 +200,12 @@ where:
 $R=\sqrt{a^2+b^2}$
 
 $\phi=\tan^{-1}(b/a)$
+
+Such waves are associated with *circular motion*. If we imagine a particle moving around a circle at a constant angular speed and take the projection onto one of the coordinate axes, for example the $y$-axis, then the displacement from the origin plotted against time will draw out a sinusoid. This is becuase the position on the $y$-axis is $y=r\sin(\theta)$.
+
+```{r, circular_motion, echo=FALSE, fig.cap="Click the play button in block 1 (next to variable $t$, the angle). Demonstration of a sinusoidal wave from circular motion: as the angle $t$ increases and the point moves around the circle (red) the projection onto the $y$ axis (blue) describes a sinusoid (green). [[Open graph in browser.]](https://www.desmos.com/calculator/7kznu6egdw)"}
+knitr::include_url("https://www.desmos.com/calculator/7kznu6egdw")
+```
 
 ## Trigonometric identities
 
