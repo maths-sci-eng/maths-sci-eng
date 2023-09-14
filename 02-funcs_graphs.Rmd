@@ -1,6 +1,19 @@
 # Functions and Graphs
 
-A function $f$ can be thought of as a machine that takes an input value $x$ and returns an output value $y$. The output value $y$ corresponding to the input $x$ is also denoted by $f(x)$ (read "$f$ of $x$"). We most commonly encounter functions whose input is a real number and output is a real number, but there are many other types of functions in mathematics. We are familiar with plotting such functions on a graph, where we draw the coordinates $(x,f(x))$, or $(x,y)$, against perpendicular axes -- this is known as the *Cartesian coordinate system*. In this section we shall take a look at some useful functions, their graphs, and some of their other interesting properties.
+A function $f$ can be thought of as a machine that takes an input value $x$ and returns an output value $y$. The output value $y$ corresponding to the input $x$ is also denoted by $f(x)$ (read "$f$ of $x$"). We most commonly encounter functions whose input is a real number and output is a real number, but there are many other types of functions in mathematics.
+
+
+```{r func, echo=FALSE, fig.cap = "A function can be thought of as a machine: we have an input value $x$, the machine is the function $f$, and the output is the value $f(x)$", fig.alt = "Depiction of a function as a machine in a box, which takes an input $x$ and returns an output $f(x)$."}
+knitr::include_graphics("figures/function.png")
+```
+
+We are familiar with plotting such functions on a graph, where we draw the coordinates $(x,f(x))$, or $(x,y)$, against perpendicular axes -- this is known as the *Cartesian coordinate system*.
+
+```{r graph, echo=FALSE, fig.cap = "A function can be plotted in Cartesian Coordinates: the corresponding inputs $x$ and outputs $y=f(x)$ are plotted as a point; these often form a continuous curve in the plane.", fig.alt = "Depiction of an arbitrary curve in Cartesian coordinates."}
+knitr::include_graphics("figures/graph.png")
+```
+
+In this section we shall take a look at some useful functions, their graphs, and some of their other interesting properties.
 
 ## Linear Functions {#lines}
 
@@ -8,7 +21,7 @@ We are familiar with the equation of a straight line:
 $$y=mx+d$$
 with gradient $m$ and intercepting the $y$-axis at the value $d$.
 
-```{r mx+c, echo=FALSE, fig.cap = "Straight line graph of $y=\frac{1}{2}x+1$.", fig.alt = "Straight line graph of $y=\frac{1}{2}x+1$, showing gradient and intercept."}
+```{r mx+c, echo=FALSE, fig.cap = "Straight line graph of $y=\\frac{1}{2}x+1$.", fig.alt = "Straight line graph of $y=\\frac{1}{2}x+1$, showing gradient and intercept."}
 knitr::include_graphics("figures/mx+c.png")
 ```
 
@@ -113,7 +126,7 @@ h(x)&=-3.6 + x^2 -2x^{10}
 
 The number $n$ corresponding to the highest power in the polynomial is called the *order* or *degree* of the polynomial. For the functions $f, g$ and $h$ above the degrees are $2, 5$ and $10$, respectively. We have a few special names for polynomials of low degree:
 
-* Degree 1: a *linear* polynomial, since its graph is a line
+* Degree 1: a *linear* polynomial, since its graph is a line $f(x)=a_0+a_1 x$
 * Degree 2: a *quadratic* polynomial
 * Degree 3: a *cubic* polynomial
 * Degree 4: a *quartic* polynomial

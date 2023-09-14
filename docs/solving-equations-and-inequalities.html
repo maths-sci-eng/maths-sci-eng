@@ -23,7 +23,7 @@
 <meta name="author" content="Dr Mark Callaway" />
 
 
-<meta name="date" content="2023-09-05" />
+<meta name="date" content="2023-09-14" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -116,7 +116,7 @@
 <ul>
 <li class="chapter" data-level="2.7.1" data-path="functions-and-graphs.html"><a href="functions-and-graphs.html#finding-the-inverse-of-a-function"><i class="fa fa-check"></i><b>2.7.1</b> Finding the inverse of a function</a></li>
 <li class="chapter" data-level="2.7.2" data-path="functions-and-graphs.html"><a href="functions-and-graphs.html#root-functions"><i class="fa fa-check"></i><b>2.7.2</b> Root functions</a></li>
-<li class="chapter" data-level="2.7.3" data-path="functions-and-graphs.html"><a href="functions-and-graphs.html#inverse-trigonometric-functions"><i class="fa fa-check"></i><b>2.7.3</b> Inverse Trigonometric Functions</a></li>
+<li class="chapter" data-level="2.7.3" data-path="functions-and-graphs.html"><a href="functions-and-graphs.html#inverse_trig_funcs"><i class="fa fa-check"></i><b>2.7.3</b> Inverse Trigonometric Functions</a></li>
 <li class="chapter" data-level="2.7.4" data-path="functions-and-graphs.html"><a href="functions-and-graphs.html#logarithms"><i class="fa fa-check"></i><b>2.7.4</b> Logarithms</a></li>
 <li class="chapter" data-level="2.7.5" data-path="functions-and-graphs.html"><a href="functions-and-graphs.html#logarthmic-plots"><i class="fa fa-check"></i><b>2.7.5</b> Logarthmic plots</a></li>
 </ul></li>
@@ -130,7 +130,11 @@
 <li class="chapter" data-level="3.1.3" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#the-quadratic-formula"><i class="fa fa-check"></i><b>3.1.3</b> The quadratic formula</a></li>
 </ul></li>
 <li class="chapter" data-level="3.2" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#higher-order-polynomials"><i class="fa fa-check"></i><b>3.2</b> Higher order polynomials</a></li>
-<li class="chapter" data-level="3.3" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#simultaneous-equations"><i class="fa fa-check"></i><b>3.3</b> Simultaneous equations</a></li>
+<li class="chapter" data-level="3.3" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#simultaneous-equations"><i class="fa fa-check"></i><b>3.3</b> Simultaneous equations</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#simultaneous-linear-equations"><i class="fa fa-check"></i><b>3.3.1</b> Simultaneous linear equations</a></li>
+<li class="chapter" data-level="3.3.2" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#non-linear-simultaneous-equations"><i class="fa fa-check"></i><b>3.3.2</b> Non-linear simultaneous equations</a></li>
+</ul></li>
 <li class="chapter" data-level="3.4" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#inequalities-1"><i class="fa fa-check"></i><b>3.4</b> Inequalities</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="trigonometry.html"><a href="trigonometry.html"><i class="fa fa-check"></i><b>4</b> Trigonometry</a>
@@ -378,7 +382,16 @@
 <h2><span class="header-section-number">3.1</span> Quadratic equations<a href="solving-equations-and-inequalities.html#quad-eqs" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>A particularly common form of equations that arise in science and engineering are <em>quadratic</em> equations. These are equations of the form</p>
 <p><span class="math display">\[ax^2+bx+c=0\]</span></p>
-<p>where <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span> and <span class="math inline">\(c\)</span> are constants and we wish to find the values of <span class="math inline">\(x\)</span> satisfying this equation. Graphically, these are the <span class="math inline">\(x\)</span>-coordinates where the polynomial function <span class="math inline">\(f(x)=ax^2+bx+c\)</span> crossses the <span class="math inline">\(x\)</span>-axis: these values are known as the <em>roots</em> of the polynomial. We explore three different methods below.</p>
+<p>where <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span> and <span class="math inline">\(c\)</span> are constants and we wish to find the values of <span class="math inline">\(x\)</span> satisfying this equation. Graphically, these are the <span class="math inline">\(x\)</span>-coordinates where the polynomial function <span class="math inline">\(f(x)=ax^2+bx+c\)</span> crossses the <span class="math inline">\(x\)</span>-axis: these values are known as the <em>roots</em> of the polynomial. A quadratic may cross the <span class="math inline">\(x\)</span>-axis either twice, just once, or not at all.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:quadratic-roots"></span>
+<iframe src="https://www.desmos.com/calculator/qk8eaxcjx4" width="672" height="400px" data-external="1">
+</iframe>
+<p class="caption">
+Figure 3.1: The displayed quadtratic function has 2 roots. Try changing the sliders to find quadratics with just 1 root and with no roots. <a href="https://www.desmos.com/calculator/qk8eaxcjx4">[Open graph in browser.]</a>
+</p>
+</div>
+<p>:::</p>
+<p>We explore three different methods for finding the roots of a quadratic below.</p>
 <div id="factorisation-by-inspection" class="section level3 hasAnchor" number="3.1.1">
 <h3><span class="header-section-number">3.1.1</span> Factorisation by inspection<a href="solving-equations-and-inequalities.html#factorisation-by-inspection" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>First consider a quadratic where <span class="math inline">\(a=1\)</span>, that is</p>
@@ -508,15 +521,18 @@ Hence the roots are
 <div id="simultaneous-equations" class="section level2 hasAnchor" number="3.3">
 <h2><span class="header-section-number">3.3</span> Simultaneous equations<a href="solving-equations-and-inequalities.html#simultaneous-equations" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Sometimes a problem will be formulated in terms of multiple equations with multiple, shared variables. The set of equations usually represent constraints between the variables and we need to determine which values of the variables are valid solutions, i.e. which values satisfy all of the equations <em>simultaneously</em> – hence such sets of equations are known as <em>simultaneous equations</em>. Sometimes we can solve simultaneous equations by rearranging one equation to set one of the variables as the subject and then substitute this into another equation in order to eliminate one of the variables.</p>
+<div id="simultaneous-linear-equations" class="section level3 hasAnchor" number="3.3.1">
+<h3><span class="header-section-number">3.3.1</span> Simultaneous linear equations<a href="solving-equations-and-inequalities.html#simultaneous-linear-equations" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We begin with the simplest type of simultaneous equations: the case when all of the equations are <em>linear</em>, that is, geometrically they correspond to straight lines in the plane. We will just consider the case of two equations in two unknowns (the variables <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>). There are three possible types of solution, which we illustrate with the following three examples.</p>
 <div class="example">
-<p><span id="exm:simul-lin" class="example"><strong>Example 3.5  </strong></span>Given the following two simultaneous equations in the variables <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>
+<p><span id="exm:simul-lin-1" class="example"><strong>Example 3.5  </strong></span>Solve the following two simultaneous equations in the variables <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>:
 <span class="math display">\[\begin{align*}
-3x+2y&amp;=5\\
-x-4y&amp;=1
+3x+2y&amp;=5,\\
+x-4y&amp;=1.
 \end{align*}\]</span>
-we could rearrange the second equation to make <span class="math inline">\(x\)</span> the subject
+We could start by rearranging equation two to make <span class="math inline">\(x\)</span> the subject
 <span class="math display">\[x=1+4y\]</span>
-and then substitute this back in for <span class="math inline">\(x\)</span> in the first equation
+(it does not matter which equation we choose first or which variable we choose first, this choice was just easier to re-arrange) and then substitute this back in for <span class="math inline">\(x\)</span> in equation one
 <span class="math display">\[3(1+4y)+2y=5\]</span>
 and then solve for <span class="math inline">\(y\)</span>
 <span class="math display">\[\begin{align*}
@@ -525,21 +541,86 @@ and then solve for <span class="math inline">\(y\)</span>
 14y&amp;=2\\
 y&amp;=\frac{1}{7}.
 \end{align*}\]</span>
-Now that we have the value for <span class="math inline">\(y\)</span> we can substitute this back into either equation to find <span class="math inline">\(x\)</span>. Since we already rearranged the second equation to make <span class="math inline">\(x\)</span> the subject, we might as well use that one:
+Now that we have the value for <span class="math inline">\(y\)</span> we can substitute this back into either equation to find <span class="math inline">\(x\)</span>. Since we already rearranged equation two to make <span class="math inline">\(x\)</span> the subject, we might as well use that:
 <span class="math display">\[x=1+4y=1+\frac{4}{7}=\frac{11}{7}.\]</span>
 Hence the solution is
-<span class="math display">\[x=\frac{11}{7},\quad y=\frac{1}{7}.\]</span></p>
+<span class="math display">\[x=\frac{11}{7},\quad y=\frac{1}{7}.\]</span>
+Geometrically, the two linear equations describe lines in the plane. If we have <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> values that satisfy both equations simultaneously, we have a point <span class="math inline">\((x,y)\)</span> that lies on both lines: that is, <span class="math inline">\((x,y)\)</span> is a point of intersection of the two lines.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:linear-intersect"></span>
+<iframe src="https://www.desmos.com/calculator/lpeezgzm63" width="672" height="400px" data-external="1">
+</iframe>
+<p class="caption">
+Figure 3.2: The lines <span class="math inline">\(3x+2y=5\)</span> (red line) and <span class="math inline">\(x-4y=1\)</span> (blue line) intersect at a single point. <a href="https://www.desmos.com/calculator/lpeezgzm63">[Open graph in browser.]</a>
+</p>
 </div>
-<p>The above example shows a particular type of simultaneous equations called <em>linear</em> simultaneous equations (if we were to plot a graph of each of the equations we would see that they form straight lines, hence the term <em>linear</em>). We shall look at a systematic way to deal with linear simultaneous equations in section <a href="gauss.html#gauss">7</a>.</p>
+</div>
 <div class="example">
-<p><span id="exm:simul-nonlin" class="example"><strong>Example 3.6  </strong></span>Given the following two simultaneous equations in the variables <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>
+<p><span id="exm:simul-lin-0" class="example"><strong>Example 3.6  </strong></span>Solve the following two simultaneous equations in the variables <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>:
 <span class="math display">\[\begin{align*}
-2x+y&amp;=7\\
-x^2-xy&amp;=6
+-x+3y&amp;=2,\\
+2x-6y&amp;=11.
 \end{align*}\]</span>
-it will be easiest to rearrange the first equation for <span class="math inline">\(y\)</span>, to get
+We could start by rearranging equation one to make <span class="math inline">\(x\)</span> the subject
+<span class="math display">\[x=3y-2\]</span>
+and then substitute this back in for <span class="math inline">\(x\)</span> in equation two
+<span class="math display">\[2(3y-2)-6y=11\]</span>
+and then solve for <span class="math inline">\(y\)</span>
+<span class="math display">\[\begin{align*}
+2(3y-2)-6y&amp;=11\\
+6y-6-6y&amp;=11\\
+0&amp;=17.
+\end{align*}\]</span>
+which is impossible. This tells us there are no solutions to the simultaneous equations; that is, there are no values of <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> that satisfy both equations at the same time. Geometrically, the two equations correspond to parallel lines, and of course, two parallel lines never intersect.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:linear-parallel"></span>
+<iframe src="https://www.desmos.com/calculator/b0ymbkzxb6" width="672" height="400px" data-external="1">
+</iframe>
+<p class="caption">
+Figure 3.3: The lines <span class="math inline">\(-x+3y=2\)</span> (red line) and <span class="math inline">\(2x-6y=11\)</span> (blue line) are parallel and do not intersect. <a href="https://www.desmos.com/calculator/b0ymbkzxb6">[Open graph in browser.]</a>
+</p>
+</div>
+</div>
+<div class="example">
+<p><span id="exm:simul-lin-inf" class="example"><strong>Example 3.7  </strong></span>Solve the following two simultaneous equations in the variables <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>:
+<span class="math display">\[\begin{align*}
+2x-y&amp;=2\\
+4x-2y&amp;=4
+\end{align*}\]</span>
+we can rearrange equation one to make <span class="math inline">\(y\)</span> the subject
+<span class="math display">\[y=2x-2\]</span>
+and then substitute this back in for <span class="math inline">\(y\)</span> in equation two
+<span class="math display">\[4x-2(2x-2)=4\]</span>
+and then solve for <span class="math inline">\(x\)</span>
+<span class="math display">\[\begin{align*}
+4x-2(2x-2)&amp;=4\\
+4x-4x+4&amp;=4\\
+0x&amp;=0\\
+0&amp;=0.
+\end{align*}\]</span>
+This equality holds for any value of <span class="math inline">\(x\)</span>, so <span class="math inline">\(x\)</span> can be any number. Therefore so long as <span class="math inline">\(y\)</span> satisfies one of the equations, for example
+<span class="math display">\[y=2x-2\]</span>
+then the pair of values <span class="math inline">\((x,y)\)</span> is a solution: in this case any point on the line <span class="math inline">\(y=2x-2\)</span> is a solution, so we have <em>infinitely many</em> solutions. Note that equation two is just <span class="math inline">\(2\times\)</span> equation one, so they are effectively the same equation and describe the same line in the plane, hence <em>all</em> of their points intersect. The solutions are just the points that lie on the line described by equation one, or equivalently, equation two.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:linear-same"></span>
+<iframe src="https://www.desmos.com/calculator/wxbjwyswuz" width="672" height="400px" data-external="1">
+</iframe>
+<p class="caption">
+Figure 3.4: The lines <span class="math inline">\(2x-y=2\)</span> (red line) and <span class="math inline">\(4x-2y=4\)</span> (blue line) are in fact the same line, so intersect at all points on the line: there is a solution for any value of <span class="math inline">\(x\)</span> or any value of <span class="math inline">\(y\)</span>. <a href="https://www.desmos.com/calculator/wxbjwyswuz">[Open graph in browser.]</a>
+</p>
+</div>
+</div>
+<p>The three examples above demonstrate the three general possibilities for two equations with two unknowns: one pair of solutions <span class="math inline">\((x,y)\)</span>; no solutions; infinitely many solutions along a line. This is simply the three ways that two lines could intersect in the plane: at one point; at no points (parallel, unequal lines); at all points (the equations describe the same line).</p>
+<p>We shall look at a systematic way to deal with linear simultaneous equations in arbitrary dimensions (any number of equations and any number of variables) in section <a href="gauss.html#gauss">7</a>.</p>
+</div>
+<div id="non-linear-simultaneous-equations" class="section level3 hasAnchor" number="3.3.2">
+<h3><span class="header-section-number">3.3.2</span> Non-linear simultaneous equations<a href="solving-equations-and-inequalities.html#non-linear-simultaneous-equations" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="example">
+<p><span id="exm:simul-nonlin" class="example"><strong>Example 3.8  </strong></span>Given the following two simultaneous equations, solve for the variables <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>
+<span class="math display">\[\begin{align*}
+2x+y&amp;=7,\\
+x^2-xy&amp;=6.
+\end{align*}\]</span>
+We note that the first equation is linear, but the second is non-linear. It will be easiest to rearrange the first (linear) equation for <span class="math inline">\(y\)</span>, to get
 <span class="math display">\[y=7-2x\]</span>
-and then substituting this into the second equation
+and then substituting this into the second (non-linear) equation
 <span class="math display">\[\begin{align*}
 x^2-x(7-2x)&amp;=6\\
 3x^2-7x-6&amp;=0\\
@@ -560,15 +641,24 @@ y&amp;=1.
 To summarise, the solutions are:
 <span class="math display">\[x = -\frac{2}{3},\quad y = \frac{25}{3}\]</span>
 and
-<span class="math display">\[x=3,\quad y=1.\]</span></p>
+<span class="math display">\[x=3,\quad y=1.\]</span>
+We can think about this problem graphically as we did for simultaneous linear equations: each equation describes a line or curve in the plane, and a solution corresponds to a point of intersection.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:non-linear-intersect"></span>
+<iframe src="https://www.desmos.com/calculator/kxu4qhz83t" width="672" height="400px" data-external="1">
+</iframe>
+<p class="caption">
+Figure 3.5: The lines <span class="math inline">\(2x+y=7\)</span> (red line) and the curve <span class="math inline">\(x^2-xy=6\)</span> (blue curve) intersect at two points. <a href="https://www.desmos.com/calculator/kxu4qhz83t">[Open graph in browser.]</a>
+</p>
 </div>
-<p>The examples presented above are relatively simple, and in some real-world scenarios equations might be very complicated, or even impossible, to solve by hand. In these cases we need to turn to computational techniques. We’ll look at some computational techniques in section <a href="numerics.html#numerics">18</a>.</p>
+</div>
+<p>The example presented above is relatively simple. In some real-world scenarios equations might be very complicated (with many variables or many simultaneous equations), and it is known that some equations are impossible to solve by hand. In these cases we need to turn to computational techniques. We’ll look at some computational techniques in section <a href="numerics.html#numerics">18</a>.</p>
+</div>
 </div>
 <div id="inequalities-1" class="section level2 hasAnchor" number="3.4">
 <h2><span class="header-section-number">3.4</span> Inequalities<a href="solving-equations-and-inequalities.html#inequalities-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Assume we are comparing two expressions <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span> that depend on the variable <span class="math inline">\(x\)</span> and need to find, for example, the values of <span class="math inline">\(x\)</span> for which <span class="math inline">\(P&gt;Q\)</span>. Let us take a look at a range of examples to see how to solve these types of problems.</p>
 <div class="example">
-<p><span id="exm:solvineqs" class="example"><strong>Example 3.7  </strong></span>We wish to find all values of <span class="math inline">\(x\)</span> satisfying the following inequalities.</p>
+<p><span id="exm:solvineqs" class="example"><strong>Example 3.9  </strong></span>We wish to find all values of <span class="math inline">\(x\)</span> satisfying the following inequalities.</p>
 <ol style="list-style-type: decimal">
 <li><p><span class="math inline">\(2x+6&lt;18.\)</span></p>
 <p>Here we can easily re-arrange the inequality (subtract <span class="math inline">\(6\)</span> from each side and divide by the positive number <span class="math inline">\(2\)</span> – which preserves the direction of the inequality) to obtain
@@ -604,7 +694,7 @@ giving the solution <span class="math inline">\(x&gt;3\)</span>.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:ineq"></span>
 <iframe src="https://www.desmos.com/calculator/ld9jyh4z3y?embed" width="672" height="400px" data-external="1"></iframe>
 <p class="caption">
-Figure 3.1: A plot of the inequality <span class="math inline">\(\frac{1}{x-3}&gt;\frac{1}{x-2}\)</span>: the solid red line is the l.h.s and the dashed blue line is the r.h.s.. We are interested in finding the values of <span class="math inline">\(x\)</span> where the red line is above the blue line (the red-shaded region). <a href="https://www.desmos.com/calculator/ld9jyh4z3y">[Open graph in browser.]</a>
+Figure 3.6: A plot of the inequality <span class="math inline">\(\frac{1}{x-3}&gt;\frac{1}{x-2}\)</span>: the solid red line is the l.h.s and the dashed blue line is the r.h.s.. We are interested in finding the values of <span class="math inline">\(x\)</span> where the red line is above the blue line (the red-shaded region). <a href="https://www.desmos.com/calculator/ld9jyh4z3y">[Open graph in browser.]</a>
 </p>
 </div>
 <p>It would appear that something has gone wrong! There is a second interval <span class="math inline">\(x&lt;2\)</span> where the inequality holds true. The problem is that we multiplied by the factor <span class="math inline">\((x-2)\)</span> forgetting the fact that <span class="math inline">\(x\)</span> is a variable, so this factor could be positive or negative depending on the value of <span class="math inline">\(x\)</span> and hence can flip the inequality. We could still perform this multiplication so long as we keep track of the two possible cases when <span class="math inline">\((x-2)\)</span> is positive or negative. However, a safer strategy is to first subtract the r.h.s. from the l.h.s., then factorise as much as possible:</p>

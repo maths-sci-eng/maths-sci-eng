@@ -432,6 +432,8 @@ $$\sqrt{\frac{A}{\pi}}=\sqrt{r^2}=r$$
 
 and finally, we put the subject on the left hand side (since we read from left to right it is simply convention to do this, but mathematically it makes no difference since it is still an equality).
 
+$$r=\sqrt{\frac{A}{\pi}}$$
+
 ### Conditional equations
 
 Another type of equation is a *conditional* equation. These may not hold true for all values of the variables and we will want to find the values for which equality is true. For example,

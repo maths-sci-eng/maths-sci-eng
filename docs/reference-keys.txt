@@ -17,6 +17,8 @@ thm:unlabeled-div-10
 thm:exprules
 exm:unlabeled-div-11
 exm:ineqs
+fig:func
+fig:graph
 fig:lines
 fig:inclination
 fig:perpendicular
@@ -41,6 +43,7 @@ thm:logrules
 thm:changebase
 fig:earthquake
 fig:semilog
+fig:quadratic-roots
 exm:factorise
 exm:factorise2
 exm:completesqr
@@ -48,8 +51,14 @@ thm:quadform
 exr:quadform
 thm:factors
 exm:factorthmcubic
-exm:simul-lin
+exm:simul-lin-1
+fig:linear-intersect
+exm:simul-lin-0
+fig:linear-parallel
+exm:simul-lin-inf
+fig:linear-same
 exm:simul-nonlin
+fig:non-linear-intersect
 exm:solvineqs
 fig:ineq
 thm:pythag
@@ -223,7 +232,7 @@ hyperbolic-functions
 inverse-functions
 finding-the-inverse-of-a-function
 root-functions
-inverse-trigonometric-functions
+inverse_trig_funcs
 logarithms
 logarthmic-plots
 solving-equations-and-inequalities
@@ -233,6 +242,8 @@ completing-the-square
 the-quadratic-formula
 higher-order-polynomials
 simultaneous-equations
+simultaneous-linear-equations
+non-linear-simultaneous-equations
 inequalities-1
 trigonometry
 pythagoras

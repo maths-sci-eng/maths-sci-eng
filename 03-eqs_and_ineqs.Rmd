@@ -8,7 +8,14 @@ A particularly common form of equations that arise in science and engineering ar
 
 $$ax^2+bx+c=0$$
 
-where $a$, $b$ and $c$ are constants and we wish to find the values of $x$ satisfying this equation. Graphically, these are the $x$-coordinates where the polynomial function $f(x)=ax^2+bx+c$ crossses the $x$-axis: these values are known as the *roots* of the polynomial. We explore three different methods below.
+where $a$, $b$ and $c$ are constants and we wish to find the values of $x$ satisfying this equation. Graphically, these are the $x$-coordinates where the polynomial function $f(x)=ax^2+bx+c$ crossses the $x$-axis: these values are known as the *roots* of the polynomial. A quadratic may cross the $x$-axis either twice, just once, or not at all.
+
+```{r, quadratic-roots, echo=FALSE, fig.cap="The displayed quadtratic function has 2 roots. Try changing the sliders to find quadratics with just 1 root and with no roots. [[Open graph in browser.]](https://www.desmos.com/calculator/qk8eaxcjx4)"}
+knitr::include_url("https://www.desmos.com/calculator/qk8eaxcjx4")
+```
+:::
+
+We explore three different methods for finding the roots of a quadratic below.
 
 ### Factorisation by inspection
 
@@ -174,15 +181,19 @@ $$x=3, x=-1,\,\text{ and } x=-2.$$
 
 Sometimes a problem will be formulated in terms of multiple equations with multiple, shared variables. The set of equations usually represent constraints between the variables and we need to determine which values of the variables are valid solutions, i.e. which values satisfy all of the equations *simultaneously* -- hence such sets of equations are known as *simultaneous equations*. Sometimes we can solve simultaneous equations by rearranging one equation to set one of the variables as the subject and then substitute this into another equation in order to eliminate one of the variables.
 
-::: {.example #simul-lin}
-Given the following two simultaneous equations in the variables $x$ and $y$
+### Simultaneous linear equations
+
+We begin with the simplest type of simultaneous equations: the case when all of the equations are *linear*, that is, geometrically they correspond to straight lines in the plane. We will just consider the case of two equations in two unknowns (the variables $x$ and $y$). There are three possible types of solution, which we illustrate with the following three examples.
+
+::: {.example #simul-lin-1}
+Solve the following two simultaneous equations in the variables $x$ and $y$:
 \begin{align*}
-3x+2y&=5\\
-x-4y&=1
+3x+2y&=5,\\
+x-4y&=1.
 \end{align*}
-we could rearrange the second equation to make $x$ the subject
+We could start by rearranging equation two to make $x$ the subject
 $$x=1+4y$$
-and then substitute this back in for $x$ in the first equation
+(it does not matter which equation we choose first or which variable we choose first, this choice was just easier to re-arrange) and then substitute this back in for $x$ in equation one
 $$3(1+4y)+2y=5$$
 and then solve for $y$
 \begin{align*}
@@ -191,23 +202,85 @@ and then solve for $y$
 14y&=2\\
 y&=\frac{1}{7}.
 \end{align*}
-Now that we have the value for $y$ we can substitute this back into either equation to find $x$. Since we already rearranged the second equation to make $x$ the subject, we might as well use that one:
+Now that we have the value for $y$ we can substitute this back into either equation to find $x$. Since we already rearranged equation two to make $x$ the subject, we might as well use that:
 $$x=1+4y=1+\frac{4}{7}=\frac{11}{7}.$$
 Hence the solution is
 $$x=\frac{11}{7},\quad y=\frac{1}{7}.$$
+Geometrically, the two linear equations describe lines in the plane. If we have $x$ and $y$ values that satisfy both equations simultaneously, we have a point $(x,y)$ that lies on both lines: that is, $(x,y)$ is a point of intersection of the two lines.
+
+
+```{r, linear-intersect, echo=FALSE, fig.cap="The lines $3x+2y=5$ (red line) and  $x-4y=1$ (blue line) intersect at a single point. [[Open graph in browser.]](https://www.desmos.com/calculator/lpeezgzm63)"}
+knitr::include_url("https://www.desmos.com/calculator/lpeezgzm63")
+```
 :::
 
-The above example shows a particular type of simultaneous equations called *linear* simultaneous equations (if we were to plot a graph of each of the equations we would see that they form straight lines, hence the term *linear*). We shall look at a systematic way to deal with linear simultaneous equations in section \@ref(gauss).
+
+::: {.example #simul-lin-0}
+Solve the following two simultaneous equations in the variables $x$ and $y$:
+\begin{align*}
+-x+3y&=2,\\
+2x-6y&=11.
+\end{align*}
+We could start by rearranging equation one to make $x$ the subject
+$$x=3y-2$$
+and then substitute this back in for $x$ in equation two
+$$2(3y-2)-6y=11$$
+and then solve for $y$
+\begin{align*}
+2(3y-2)-6y&=11\\
+6y-6-6y&=11\\
+0&=17.
+\end{align*}
+which is impossible. This tells us there are no solutions to the simultaneous equations; that is, there are no values of $x$ and $y$ that satisfy both equations at the same time. Geometrically, the two equations correspond to parallel lines, and of course, two parallel lines never intersect.
+
+```{r, linear-parallel, echo=FALSE, fig.cap="The lines $-x+3y=2$ (red line) and  $2x-6y=11$ (blue line) are parallel and do not intersect. [[Open graph in browser.]](https://www.desmos.com/calculator/b0ymbkzxb6)"}
+knitr::include_url("https://www.desmos.com/calculator/b0ymbkzxb6")
+```
+:::
+
+
+::: {.example #simul-lin-inf}
+Solve the following two simultaneous equations in the variables $x$ and $y$:
+\begin{align*}
+2x-y&=2\\
+4x-2y&=4
+\end{align*}
+we can rearrange equation one to make $y$ the subject
+$$y=2x-2$$
+and then substitute this back in for $y$ in equation two
+$$4x-2(2x-2)=4$$
+and then solve for $x$
+\begin{align*}
+4x-2(2x-2)&=4\\
+4x-4x+4&=4\\
+0x&=0\\
+0&=0.
+\end{align*}
+This equality holds for any value of $x$, so $x$ can be any number. Therefore so long as $y$ satisfies one of the equations, for example
+$$y=2x-2$$
+then the pair of values $(x,y)$ is a solution: in this case any point on the line $y=2x-2$ is a solution, so we have *infinitely many* solutions. Note that equation two is just $2\times$ equation one, so they are effectively the same equation and describe the same line in the plane, hence *all* of their points intersect. The solutions are just the points that lie on the line described by equation one, or equivalently, equation two.
+
+```{r, linear-same, echo=FALSE, fig.cap="The lines $2x-y=2$ (red line) and  $4x-2y=4$ (blue line) are in fact the same line, so intersect at all points on the line: there is a solution for any value of $x$ or any value of $y$. [[Open graph in browser.]](https://www.desmos.com/calculator/wxbjwyswuz)"}
+knitr::include_url("https://www.desmos.com/calculator/wxbjwyswuz")
+```
+
+:::
+
+The three examples above demonstrate the three general possibilities for two equations with two unknowns: one pair of solutions $(x,y)$; no solutions; infinitely many solutions along a line. This is simply the three ways that two lines could intersect in the plane: at one point; at no points (parallel, unequal lines); at all points (the equations describe the same line).
+
+We shall look at a systematic way to deal with linear simultaneous equations in arbitrary dimensions (any number of equations and any number of variables) in section \@ref(gauss).
+
+### Non-linear simultaneous equations
 
 ::: {.example #simul-nonlin}
-Given the following two simultaneous equations in the variables $x$ and $y$
+Given the following two simultaneous equations, solve for the variables $x$ and $y$
 \begin{align*}
-2x+y&=7\\
-x^2-xy&=6
+2x+y&=7,\\
+x^2-xy&=6.
 \end{align*}
-it will be easiest to rearrange the first equation for $y$, to get
+We note that the first equation is linear, but the second is non-linear. It will be easiest to rearrange the first (linear) equation for $y$, to get
 $$y=7-2x$$
-and then substituting this into the second equation
+and then substituting this into the second (non-linear) equation
 \begin{align*}
 x^2-x(7-2x)&=6\\
 3x^2-7x-6&=0\\
@@ -229,9 +302,15 @@ To summarise, the solutions are:
 $$x = -\frac{2}{3},\quad y = \frac{25}{3}$$
 and
 $$x=3,\quad y=1.$$
+We can think about this problem graphically as we did for simultaneous linear equations: each equation describes a line or curve in the plane, and a solution corresponds to a point of intersection.
+
+```{r, non-linear-intersect, echo=FALSE, fig.cap="The lines $2x+y=7$ (red line) and the curve $x^2-xy=6$ (blue curve) intersect at two points. [[Open graph in browser.]](https://www.desmos.com/calculator/kxu4qhz83t)"}
+knitr::include_url("https://www.desmos.com/calculator/kxu4qhz83t")
+```
+
 :::
 
-The examples presented above are relatively simple, and in some real-world scenarios equations might be very complicated, or even impossible, to solve by hand. In these cases we need to turn to computational techniques. We'll look at some computational techniques in section \@ref(numerics).
+The example presented above is relatively simple. In some real-world scenarios equations might be very complicated (with many variables or many simultaneous equations), and it is known that some equations are impossible to solve by hand. In these cases we need to turn to computational techniques. We'll look at some computational techniques in section \@ref(numerics).
 
 ## Inequalities
 
