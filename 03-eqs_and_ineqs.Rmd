@@ -120,7 +120,7 @@ x&=-3\pm\sqrt{22}.
 \end{align*}
 :::
 
-Another use of completing the square is in determining the location of the minimum or maximum point of a quadratic function. We know that the graph of such a function is a parabola which either opens upwards in a "$\cup$" shape or opens downwards in a "$\cap$" shape, so it has a minimum or a maximum, respectively: the sign of the $x^2$ coefficient determines this, with $+$ corresponding to upward opening and $-$ corresponding to downward opening. In the previous example, after completing the square we obtained $y=2(x+3)^2-44$, and since the coefficient in $2x^2$ is positive the quadratic function must have a minimum somewhere. Since the term $(x+3)^2$ must be positive, the smallest it can be is when $x=-3$ and the term is $(-3+3)^2=0$. This means we must have a minimum at $x=-3$ where y=2(-3+3)^2-44=-44$. This idea can be generalised: find the value of $x$ that makes the squared term $0$, and then the minimum/maximum $y$ value is equal to the constant term.
+Another use of completing the square is in determining the location of the minimum or maximum point of a quadratic function. We know that the graph of such a function is a parabola which either opens upwards in a "$\cup$" shape or opens downwards in a "$\cap$" shape, so it has a minimum or a maximum, respectively: the sign of the $x^2$ coefficient determines this, with $+$ corresponding to upward opening and $-$ corresponding to downward opening. In the previous example, after completing the square we obtained $y=2(x+3)^2-44$, and since the coefficient in $2x^2$ is positive the quadratic function must have a minimum somewhere. Since the term $(x+3)^2$ must be positive, the smallest it can be is when $x=-3$ and the term is $(-3+3)^2=0$. This means we must have a minimum at $x=-3$ where $y=2(-3+3)^2-44=-44$. This idea can be generalised: find the value of $x$ that makes the squared term $0$, and then the minimum/maximum $y$ value is equal to the constant term.
 
 
 ### The quadratic formula
@@ -137,7 +137,7 @@ If the quantity $\Delta = b^2-4ac$, known as the *discriminant*, is such that $\
 :::
 
 ::: {.exercise #quadform}
-Derive the quadratic formula. Hint: use the method of "completing the square" on a general quadratic equation.
+Derive the quadratic formula. Hint: use the method of "completing the square" on the general form of a quadratic equation $ax^2+bx+c=0$.
 :::
 
 
@@ -311,6 +311,15 @@ knitr::include_url("https://www.desmos.com/calculator/kxu4qhz83t")
 :::
 
 The example presented above is relatively simple. In some real-world scenarios equations might be very complicated (with many variables or many simultaneous equations), and it is known that some equations are impossible to solve by hand. In these cases we need to turn to computational techniques. We'll look at some computational techniques in section \@ref(numerics).
+
+## Exponentials and Logarithms
+
+Recall that exponentials and logarithms are inverses of one another. When solving equations involing exponentials and logarithms, we usually need to apply the inverse in order to extract the $x$ variable, and make use of the rules of exponentials and logarithms. We shall illustrate this with a series of examples.
+
+
+EXAMPLES
+
+
 
 ## Inequalities
 

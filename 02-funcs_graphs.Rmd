@@ -402,6 +402,23 @@ If $n$ is an odd number then it also makes sense for negative values of $x$ (why
 knitr::include_url("https://www.desmos.com/calculator/exmc148194")
 ```
 
+It is important to keep these facts in mind when re-arranging equations. For example, consider the equation of the area $A$ of a circle of radius $r$:
+
+$$A=\pi r^2.$$
+
+To find the radius as a function of area, we first re-arrange to give
+
+$$r^2=\frac{A}{\pi}$$
+
+and now if we take the square root of both sides, mathematically there are TWO possible solutions, one positive and one negative
+
+$$r=\pm \sqrt{\frac{A}{\pi}}.$$
+
+However, in this particular context only the positive solution makes sense since a radius must be a positive number, so we take
+
+$$r=\sqrt{\frac{A}{\pi}}.$$
+
+
 ### Inverse Trigonometric Functions {#inverse_trig_funcs}
 
 Since the trigonometric functions are not one-to-one, we must restrict them if we want to define a partial inverse. Since the input to a trigonometry function is an angle, the output of an inverse trigonometric function is an angle.
