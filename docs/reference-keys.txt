@@ -19,6 +19,7 @@ exm:unlabeled-div-11
 exm:ineqs
 fig:func
 fig:graph
+fig:mxc
 fig:lines
 fig:inclination
 fig:perpendicular
@@ -244,6 +245,7 @@ higher-order-polynomials
 simultaneous-equations
 simultaneous-linear-equations
 non-linear-simultaneous-equations
+exponentials-and-logarithms
 inequalities-1
 trigonometry
 pythagoras

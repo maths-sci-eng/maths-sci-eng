@@ -1,214 +1,332 @@
 # Exercise Set 3 Answers {.unlisted .unnumbered}
 
-These exercises cover the topic of Trigonometry.
+7.  Solve the following quadratic equations by factorisation.
 
-Tip: always start by drawing a labelled diagram in trigonometry questions.
-
-1. Consider the smaller of the two angles between the hour hand and minute hand of a clock. Write the angles at the following times in both degrees and radians (in terms of $\pi$).
-    a. 6:00
-    a. 3:00
-    a. 4:00
-    a. 4:30
-    a. 6:45
+    a.  $x^2-28x-60=0$
+    b.  $p^2=8p-15$
+    c.  $-2y^2(3+y^2)=(2y^2+2y-3)(-y^2+y-4)-2$
+    d.  $3x^2-14x+8$
+    e.  $x^2+10x+25$
 
     Answers:
-    a. $180^\circ$, $\pi\text{ rad}$
-    a. $90^\circ$, $\frac{\pi}{2}\text{ rad}$
-    a. $60^\circ$, $\frac{2\pi}{3}\text{ rad}$
-    a. $45^\circ$, $\frac{\pi}{4}\text{ rad}$
-    a. $67.5^\circ$, $\frac{3\pi}{8}\text{ rad}$
+    
+    a.  We are looking for two factors of 25 with summation equal to 10. Thus, these factors are 5 and 5
 
+    $$
+    x^2 + 10x + 25 = (x+5)(x+5) = (x+5)^2
+    $$
+    So there is a single solution $x=-5$.
 
-1. Convert the following angles from degrees to radians (leave your answer in terms of $\pi$ where possible, or to 2 d.p.).
-    a. $330^\circ$
-    a. $22.5^\circ$
-    a. $27^\circ$
-    a. $35^\circ$
-
-    Answers:
-    a. $\frac{11}{6}\pi\text{ rad}$
-    a. $\frac{\pi}{8}\text{ rad}$
-    a. $\frac{3}{20}\pi\text{ rad}$ or $0.47\text{ rad}$
-    a. $\frac{7}{36}\pi\text{ rad}$ or $0.61\text{ rad}$
-
-
-1. A *bearing* is the angle measured clockwise from North to the direction of interest.
-    A point $K$ is 12km due west of a second point $L$ and 25km due south of a third point $M$. Calculate the bearing of $L$ from $M$.
-
-    Answers:
-
-    Drawing a right angled triangle $MKL$ the angle $\angle KML$ is
-    $$\tan(\angle KML)=\frac{12}{25}\quad\implies\quad \angle KML=\tan^{-1}\frac{12}{25}=25.6^\circ$$
-    The bearing of $L$ from $M$ is the angle clockwise from a line pointing North from $M$, so the bearing is:
-    $$180^\circ -25.6^\circ=154.4^\circ.$$
-
-1.  Solve (i.e. find all unkown angles and side lengths) the triangle $ABC$ where $A = 53^\circ$, $B = 61^\circ$ and $a = 12.6$cm.
-
-    Answers:
-
-    We first find angle $C$:
-
-    $$C=180^\circ-61^\circ-53^\circ=66^\circ.$$
-
-    Now using the sine rule:
-
-    $$b=\frac{a}{\sin(A)}\sin(B)=\frac{12.6}{\sin(53^\circ)}\sin(61^\circ)=13.8\text{ cm}$$
-
-    and
-
-    $$c=\frac{a}{\sin(A)}\sin(C)=\frac{12.6}{\sin(66^\circ)}\sin(53^\circ)=14.4\text{ cm}.$$
-
-1.  Let $AOB$ be a triangle. $OA = 60$mm, $AB = 180$mm and $OB = 200$mm. Find angle $A$.
-
-    Answers:
-
-    Using the cosine rule:
-    \begin{align*}\cos(A)&=\frac{b^2+c^2-a^2}{2bc}\\
-    &=\frac{60^2+180^2-200^2}{2\times 60\times 180}\\
-    &=-0.185
+    b. Factorise by inspection into the form $(x+)(x+b)$ where $ab = -60$ and $a + b = -28$
+    
+    \begin{align*}
+    x^2-28x-60 &= 0\\
+    (x-30)(x+2) & = 0\\
+    \Rightarrow  x=30, -2
     \end{align*}
-    which gives
-    $$A=\cos^{-1}(-0.185)=101^\circ.$$
+    
+    c. First, put into quadratic form $ax^2 + bx + c = 0$ and then factorise by inspection
+    
+    \begin{align*}
+    p^2 = 8p - 18\\
+    p^2 - 8p + 15 &= 0\\
+    (p-3)(p-5) &= 0\\
+    \Rightarrow p = 3,5
+    \end{align*}
+    
+    d.Multiply out and group powers of $y$. Third and fourth powers cancel in this question.Then factorise by inspection, in this case into one term of the form $(3y+a)$ and one of the form $(y+b)$
+    
+    \begin{align*}
+    -2y^2(3+y^2) &= (2y^2 + 2y - 3)(-y^2 + y -4) -2\\
+    -6y^2 - 2y^4 &= -2y^4 + 2y^3 - 8y^2 - 2y^3 + 2y^2 - 8y = 3y^2 - 3y + 12 -2\\
+    3y^2 - 11y + 10 &= 0\\
+    (3y-5)(y-2)&=0\\
+    \Rightarrow y = 2,5
+    \end{align*}
 
-1. An *angle of elevation* is an angle that an imaginary straight line must be raised from the horizontal ground to line up with a point of interest above the ground.
-An observer is standing at a point $O$ which is $30$m from the base of a tower. On top of the tower is a vertical mast. If the angles of elevation of the top of the tower and the top of the mast from $M$ are $40^\circ$ and $50^\circ$ respectively, calculate the height of the mast.
+    e. We are looking for two factors of $3\times 8 = 24$ with summation equals to -14. These factors are $-12$ and $-2$
+    \begin{align*}
+    3x^2 - 14x + 8 &= 3x^2 - 12x - 2x + 8\\
+    &= 3x(x-4) - 2(x-4) = (x-4)(3x-2)
+    \end{align*}
+
+        
+8.  Solve the following quadratic equations, giving results correct to 2 d.p.
+
+    a.  $4x^2+x-3=0$
+    b.  $x^2+x=5$
+    c.  $x+\frac{1}{x}=5$
+    
+    Answers:
+
+    These questions require the application of the quadratic formula: for a quadratic which can be put into the form $ax^2 + bx + c = 0$,
+    $$
+    x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+    $$
+
+    a. $4x^2 + x - 3$
+    
+    $$
+    x = \frac{-1 \pm \sqrt{1^2 - 4\times 4 \times (-3)}}{8}\\
+    x = 3.38, -3.63
+    $$
+    b. First, rearrange $x^2 + x = 5$ as $x^2 + x - 5 =0$, then apply the quadratic formula
+    $$
+    x = \frac{-1 \pm \sqrt{1^2 - 4\times 1 \times (-5)}}{2}\\
+    x = 1.79, -2.79
+    $$
+    c. First, rearrange $x + \frac{1}{x} = 5$ into $x^2 + 1 - 5 = 0$ and then apply the quadratic formula.
+    $$
+    x = \frac{5 \pm \sqrt{(-5)^2 - 4\times 1 \times 1}}{2}\\
+    x = 4.79, 0.21
+    $$
+    
+    
+9.  Solve the following sets of simultaneous equations.
+
+    a.  $3x+4y=7$, $5x+6y=11$
+    b.  $2x+y=7$, $x^2-xy=6$
+    c.  $x + y=2$, $x^2-xy+y^2 = 1$
 
     Answers:
 
-    Let the base of the tower be point $B$, the top of the tower point $T$ and the top of the mast point $M$. Then there are two right-angled triangles: $OBT$ and $OBM$. We have $OB=30$m, angle $\angle BOT=40^\circ$ and angle $\angle BOM=50^\circ$. We need to calculate $TM$. Using trig. ratios:
+    a. Because these simultaneous equations are linear in $x$ and $y$, they can be solved by multiplying the equations and adding or subtracting them to cancel one of $x$ or $y$. Here, they can be solved by multiplying the left equation by 5 and the right equation by 3, then subtracting to cancel the $x$ term:
+    $$
+    3x+4y = 7,\quad 5x + 6y = 11\\
+    15 x + 20y = 35,\quad 15x + 18y = 33\\
+    \text{subtracting the right equaltion from the left:}\\
+    2y = 2 \Rightarrow y=1,x=1
+    $$
+    It will be seen that this is equivalent to Gaussian elimination of matrices. This could also have been solved via direct substitution (e.g., $x = (7-4y)/3$), as the following are.
 
-    $$BT=OB\tan(\angle BOT)=30\tan^{-1}(40^\circ)=25.2\text{ m}$$
-    $$BM=OB\tan(\angle BOM)=30\tan^{-1}(50^\circ)=35.8\text{ m}$$
+    b. 
+    $$ 2x + y = 7,\quad x^2 - xy = 6\\
+    \Rightarrow y=7-2x \. \text{substitute into right hand equation}\\
+    x^2 - x(7-2x) = 6\\
+    x^2 - 7x + 2x^2 = 6\\
+    3x^2 - 7x - 6 = 0
+    $$
+    which can now be factorised by inspection to obtain the two solutions for $x$
+    $$
+    (3x+2)(x-3) = 0\\
+    \Rightarrow x = -\frac{2}{3},x = 3
+    $$
+    The value for $y$ must be calculated for both cases of $x$. It is simplest to use $y = 7 - 2x$. The solutions are:
+    $$
+    x = -\frac{2}{3},y=\frac{25}{3},\quad\text{and  }\, x = 3, y = 1
+    $$
 
-    and hence
+    c. As before, substitute one of $x$ or $y$ using the linear equation
+    $$
+    x+y = 2, \quad x^2 - xy + y^2 = 1\\
+    \Rightarrow x = 2-y,\quad (2-y)^2 - (2-y)y + y^2 = 1\\
+    4 - 4y^2 + y^2 - 2y + y^2 + y^2 = 1\\
+    y^2 + 2y - 3 = 0\\
+    (y+3)(y-1) = 0\\
+    y=1, -3
+    $$
+    and again, we must give $x$ for both cases. The two solutions are
+    $$
+    x=1,y=1\quad\text{and }x =5,y=-3
+    $$
 
-    $$TM=OM-OT=35.8-25.2=10.6\text{ m}.$$
+10. Solve the following inequalities.
 
+    a.  $7-3x>x-5$
+    b.  $x^2\ge 4$
+    c.  $x^2-x-6<0$
+    d.  $x^2-3x-12\le 2x+2$
+    e.  $\frac{2}{2x-1} > \frac{3}{3x+1}$
+    f.  $\frac{2x}{x-5}\le 3$
+    g.  $x^3-9x^2<0$
 
-1. The small hand of a clock is 75% the length of the long hand. Calculate the distance between the ends of the hands at 5 o'clock.
 
     Answers:
+    a.
+    \begin{align*}
+    7-3x  &> x-5\\
+    13  &> 4x\\
+    x  &< \frac{13}{4}
+    \end{align*}
 
-    Let the distance between the ends of the hands be $d$ and the length of the long hand $x$. Then the length of the short hand is $0.75x$. The angle at 5 o'clock is $150^\circ$. Using the cosine rule:
+    
+    b. Here, we must include both the positive and the negative solution to the square root:
+    \begin{align*}
+    x^2 &\geq 4\\
+    \pm x &\geq 2\\
+    x\geq 2 & x\leq -2
+    \end{align*}
+    It is often worth sketching the graph and examining the inequality to determine where the inequality is satisfied.
+    
+    c.
+    $$
+    x^2 - x - 6 < 0 \\
+    (x+2)(x-3) < 0
+    $$
+    The graph of $x^2$ will form a $\cup$ shape, so the parts below the axis are between the crossing points of $x = -2$ and $x=3$. So the inequality is satisfied for
+    $$
+    -2<x<3
+    $$
+    Note the use of strict inequalities $x<3$ and $x>-2$ because the inequality is $<0$ (as opposed to $\leq$).
 
-    $$d^2=(0.75x)^2+x^2-1.5x^2\cos(150^\circ)=2.86x^2$$
-    and
-    $d=1.69x.$
+    d. Group terms to form a quadratic, find the solutions and determine whether the interval between them or outside of them satisfied the inequality:
+    \begin{align*}
+    x ^2 - 3x - 12 &\leq 2x + 2\\
+    x^2 - 5x - 14 &\leq 0\\
+    (x-7)(x+2)&\leq 0
+    \end{align*}
+    And the part of the curve below the axis is the range $-2\leq x \leq 7$
+  
+e. Do not multiply through by a variable, since at times the term will be negative and necessitate a flip of the inequality. Instead, subtract one side from both sides:
 
-1. A student $1.8$m tall is standing $24$m away from a tree and using an eye level instrument to measure the angle of elevation. The angle measured to the top of the tree is $12^\circ 34'$, calculate the height of the tree. (Degrees can be further subdivided in to *minutes* denoted $x'$ and *seconds* denoted $x''$, with $1'$ being $1/60$ of a degree and $1''$ being $1/60$ of a minute. To use a calculator you will first need to convert minutes and seconds to decimals.)
+    \begin{align*}
+    \frac{2}{2x-1} &> \frac{3}{3x+1}\\
+    \frac{2}{2x-2} - \frac{3}{3x+1} &> 0\\
+    \frac{2(3x+1) - 3(2x-1)}{(2x-1)(3x+1)} &> 0\\
+    \frac{5}{(2x-1)(3x+1)} &> 0
+    \end{align*}
+
+    In order for the inequality to hold, either both terms in the denominator are positive or both are negative.
+    $$
+    \text{positve case: }2x-1>0,\quad 3x+1 > 0\\
+    x > \frac{1}{2} \text{ and } x > \frac{1}{3}\\
+    x > \frac{1}{2}\\
+    \text{negative case: }2x-2 < 0, \quad 3x+1 < 0\\
+    x<\frac{1}{2} \text{ and } x < \frac{1}{3}\\
+    x < \frac{1}{3}
+    $$
+    So the final solution is $x > \frac{1}{2}$ and $x < \frac{1}{3}$.
+
+    f.
+    \begin{align*}
+    \frac{2x}{x-5} &\leq 3 \\
+    \frac{2x}{x-5} - 3 &\leq 0\\
+    \frac{2x - 3(x-5)}{x-5} & \leq 0\\
+    \frac{15-x}{x-5}&\leq 0
+    \end{align*}
+
+    Which will ony old if one of the numerator or denominator is negative. So the inequality is solved by $x\geq 15$ and $x\leq 5$.
+
+    g.
+    Here, a cubic is presented, but a factor of $x^2$ can be taken out
+    \begin{align*}
+    x^3 - 9x^2 &< 0 \\
+    x^2(x-9) &< 0\\
+    \end{align*}
+    The $x^2$ factor is always positive, so the whole inequality holds when $x-9$ is negative. Hence, $x<9$
+
+
+1. Find the solutions to the following equations without using a calculator.
+    a. $x=\log_4(64)$
+    a. $x=\log_{101}(101)$
+    a. $x=\ln(e)$
+    a. $x=\log_{56}(1)$
+    a. $10^x=100000$
+    a. $2^x=128$
+    a. $\log_3(x)=4$
+    a. $\log_x(125)=3$
+    
+    
+    Answers:
+    a. $x = \log_4(64) = \log_4(4^3)=3$
+    b. $x = \log_{101}(101) =\log_{101}(101^1)=1$
+    c. $x = \ln(e) =\log_e(e^1)= 1$
+    d. $x = log_{56}(1) =\log_{56}(56^0)=0$
+    e. $10^x = 100000=10^5 \Rightarrow x = 5$
+    f. $2^x = 128=2^7$ \Rightarrow x = 7$ the powers of 2 are useful to know
+    g. $3^{\log_3(x)} = 3^4 \Rightarrow x = 3^4 = 3^2 \times 3^2 = 81$
+    h. $\log_x(125) = 3 \Rightarrow x^3 = 125 \Rightarrow x = 5$
+
+
+1. Calculate the following logarithms using a calculator.
+    a. $\ln(2)$
+    a. $\log(20)$
+    a. $\log_{16}(100)$ - do this using your $\log_a(x)$ button and also using the change of base rule with your $\log$ or $\ln$ button.
 
     Answers:
+    To 2 d.p.
+    a. $\ln(2) = 0.69$
+    b. $\log(20) = 1.30$
+    c. $\log_{16}(100) = 1.66$ or using the change of base rule with $\log_{10}$, $\log_{16}=\frac{\log_{10}(100)}{\log_{10}(16)}=\frac{2}{\log_{10}(16)}=1.66$
 
-    Let the student be at position $O$ with eye-level $E$, the base of the tree at position $B$ and the top of the tree at position $T$. Drawing a line parallel to $OB$ from $E$ to the tree, let the intersection point be $S$. We have $OE=BS=1.8\text{ m}$ (or perhaps more realistically we could use 1.7m for eye-level), $OB=ES=24\text{ m}$ and $\angle SET=12^\circ 34'$. First, we convert the angle to decimal:
-    $$12^\circ 34'=12^\circ + \frac{34}{60}=12^\circ + 0.57^\circ=12.57^\circ.$$
-    Now,
-    $$ST=ES\tan(\angle SET)=24\tan(12.57^\circ)=5.4\text{ m}$$
-    so
-    $$BT=BS+ST=5.4+1.8=7.2\text{ m}.$$
+1. Calculate $4321\times 9876$ using logs: convert both values to logs, add, then convert back.
 
-1.  The angles of elevation of a navigation balloon that is flying in between two points on the ground $A$ and $B$ are $48^\circ$ and $62^\circ$ respectively. If $A$ and $B$ are $0.3$km apart, calculate the height of the balloon. 
+Answer:
+$$\log(4321 \times 9876)=\log(4321) + \log(9876) = 7.630165..., \text{ the product rule of logarithms}\\
+4321 \times 9876=10^{7.630165...} = 42674196
+$$
 
-    Answers:
+1. Simplify the following expression involving logarithms.
+     $$\log_a(x^2)+3\log_a(x)-2\log_a(4x^2).$$
 
-    Let the ballon be at point $C$, then we have a triangle $ABC$. Angle $C$ is $C=180-48-62=70^\circ$. We now find the length of $BC$ using the sine rule:
-
-    $$BC=\frac{AB}{\sin(C)}\sin(A)=\frac{0.3}{\sin(70^\circ)}\sin(48^\circ)=0.237\text{ km}$$
-    Now dropping a perpendicular from $C$ to the ground at a point $D$ (on the line $AB$) we have a right angled triangle $BDC$. Using $\sin(\theta)=Opp./Hyp.$ the height is then
-    $$DC=BC\sin(C)=0.237\sin(62^\circ)=0.21\text{ km}.$$
-
-
-1.  The figure below shows a tetrahedron with an equilateral triangle of side 2m forming the base and isosceles triangles of equal side 3m forming the slanting 
-faces. Calculate:
-
-    a. The height of the tetrahedron $ND$;
-    b. The angle that edge $DA$ makes with the plane $ABC$;
-    c. The angle between the planes $ACD$ and $ACB$.
-
-    ```{r tetra_ans, out.width="30%"}
-    knitr::include_graphics("figures/tetra.png")
-    ```
-
-    Answers:
-
-    a. $ABC$ is an equilateral triangle, so each of its angles are $60^\circ$. By symmetry, $N$ is in the centre of triangle $ABC$. Therefore $\angle ANB=120^\circ$ and $\angle BAN=30^\circ$. Using the sine rule:
-
-        $$AN=\frac{2}{\sin(120^\circ)}\sin(30^\circ)=1.15\text{ m}.$$
-
-        Now using Pythagoras on right-angled triangle $AND$:
-
-        $$ND=\sqrt{AD^2-AN^2}=\sqrt{3^2-1.15^2}=\sqrt{7.68}=2.77\text{ m}$$
-
-    a. This is given by angle $\angle NAD$, which can be found using $\cos(\theta)=Adj./Hyp.$
-
-        $$\cos(\angle NAD)=\frac{1.15}{3}=0.385\implies \angle NAD=\cos^{-1}(0.385)=67.4^\circ.$$
-
-    a. By similar reasoning to the above, this is left for the reader to verify as being $78.2^\circ$.
-
-1. Write the following in the form $R\cos(\omega t\pm \beta)$.
-    a. $-2\sin(\omega t) + 5\cos(\omega t)$
-    a. $-5\cos(\omega t) + 5 \sin(\omega t)$
-
-    Answers:
-    a. Using the compound angle identity
-
-        $$R\cos(\omega t+\beta)=R(\cos(\omega t)\cos(\beta)-\sin(\omega t)\sin(\beta))$$
-        and comparing the r.h.s. with $-2\sin(\omega t) + 5\cos(\omega t)$ and equating coefficients of sin and cos,
-        $$R\cos(\beta)=5\quad\text{and}\quad R\sin(\beta)=2.$$
-        Since $\sin(\theta)$ and $\cos(\theta)$ are both positive only for $0^\circ\leq\theta\leq 90^\circ$ (i.e. in the first quadrant) then
-        $$\beta=\tan^{-1}\left(\frac{2}{5}\right)=21.80^\circ\quad\text{or}\quad 0.38\text{ rad}.$$
-        Now using
-        $$\cos^2(\theta)+\sin^2(\theta)=1$$
-        we have
-        $$R^2cos^2(\beta)+R^2\sin(\beta)=R^2(\cos^2(\beta)+\sin(\beta))=R^2$$
-        so
-        $$R=\sqrt{5^2+2^2}=\sqrt{29}.$$
-        Finally we have
-        $$-2\sin(\omega t) + 5\cos(\omega t)=\sqrt{29}\cos(\omega t + 0.38).$$
-
-    a. Using the compound angle identity
-
-        $$R\cos(\omega t-\beta)=R(\cos(\omega t)\cos(\beta)+\sin(\omega t)\sin(\beta))$$
-        and comparing the r.h.s. with $-5\cos(\omega t) + 5\sin(\omega t)$ and equating coefficients of sin and cos,
-        $$R\cos(\beta)=-5\quad\text{and}\quad R\sin(\beta)=5.$$
-        Since $\sin(\theta)$ is positive and $\cos(\theta)$ is negative only for $90^\circ\leq\theta\leq 180^\circ$ (i.e. in the second quadrant) then
-        $$\beta=180^\circ-\tan^{-1}\left(\frac{5}{5}\right)=135^\circ\quad\text{or}\quad 2.36\text{ rad}.$$
-        Now using
-        $$\cos^2(\theta)+\sin^2(\theta)=1$$
-        we have
-        $$R^2cos^2(\beta)+R^2\sin(\beta)=R^2(\cos^2(\beta)+\sin(\beta))=R^2$$
-        so
-        $$R=\sqrt{5^2+5^2}=5\sqrt{2}.$$
-        Finally we have
-        $$-5\cos(\omega t) + 5\sin(\omega t)=5\sqrt{2}\cos(\omega t + 2.36).$$
+Answer:
+Applying the various log rules, starting with the power rules then product and quotient rules:
+$$
+\begin{aligned}
+& \log_a(x^2)+3\log_a(x)-2\log_a(4x^2)\\
+&= \log_a(x^2) + \log_a(x^3) - log_a(16x^4)\\
+&= \log_a(\frac{x^5}{16x^4})\\
+&= \log_a(\frac{x}{16})
+\end{aligned}
+$$
 
 
-1. In a spring-mass system the motion of the mass is described by
-$$x=A\cos(\omega t)+B\sin(\omega t)$$
-where $x$ is the distance of the mass from its equilibrium position, $\omega$ is the natural frequency of oscillations, and $A$ and $B$ are constants. For $A=\sqrt{3}$, $B=1$ and $\omega=10$:
-    a. Write $x$ in the form $R\cos(\omega t-\beta)$ and state the amplitude of $x$.
-    a. Sketch one complete cycle of $x$.
+1. Solve the following for $x$.
+    $$2\log_a(x)-\log_a(x-1)=\log_a(x+3).$$
 
-    Answers:
-    a. Using the compound angle identity
+Answer:
+$$
+\begin{aligned}
+2 \log_a(x) - \log_a(x-1) &= \log_a(x+3)\\
+\log_a\left(\frac{x^2}{x-1}\right) &= \log_a(x+3)\\
+\log_a\left(\frac{x^2}{(x-1)(x+3)}\right) &= 0, \text{ since } \log_a(1) = 0\\
+\frac{x^2}{(x-1)(x+3)} &= 1\\
+x^2 &= (x-1)(x+3) = x^2 + 2x - 3\\
+x &= \frac{3}{2}
+\end{aligned}
+$$
 
-        $$R\cos(\omega t-\beta)=R(\cos(\omega t)\cos(\beta)+\sin(\omega t)\sin(\beta))$$
-        and comparing the r.h.s. with $\sqrt{3}\cos(10 t) + \sin(10 t)$ and equating coefficients of sin and cos,
-        $$R\cos(\beta)=\sqrt{3}\quad\text{and}\quad R\sin(\beta)=1.$$
-        Since $\sin(\theta)$ and $\cos(\theta)$ are both positive only for $0^\circ\leq\theta\leq 90^\circ$ (i.e. in the first quadrant) then
-        $$\beta=\tan^{-1}\left(\frac{1}{\sqrt{3}}\right)=30\circ\quad\text{or}\quad \frac{\pi}{6}\text{ rad}.$$
-        Now using
-        $$\cos^2(\theta)+\sin^2(\theta)=1$$
-        we have
-        $$R^2cos^2(\beta)+R^2\sin(\beta)=R^2(\cos^2(\beta)+\sin(\beta))=R^2$$
-        so
-        $$R=\sqrt{\sqrt{3}^2+1^2}=2$$
-        Finally we have
-        $$x(t)=\sqrt{3}\cos(10 t) + \sin(10 t)=2\cos(10 t -\frac{\pi}{6}).$$
+1. Find $y$ in terms of $x$:
+    $$5\log_a(y)-2\log_a(x+4)=2\log_a(y)+\log_a(x).$$
 
-        From this we can read off the amplitude as $R=2$.
+Answer:
+First, rearrange and then apply the logarithm power, product and quotient rules:
+$$
+\begin{align}
+5\log_a(y)-2\log_a(x+4)&=2\log_a(y)+\log_a(x)\\
+\Rightarrow \log_a(y^5) - \log_a(y^2) &= \log_a(x) + 2\log_a(x+4)\\
+= \log_a(y^3) &= \log_a((x+4)^2)\\
+\Rightarrow y^3 &= x(x+4)^2\\
+y &= \left(x(x+4)^2\right)^{\frac{1}{3}}
+\end{align}
+$$
 
-    a. The period is $T=\frac{2\pi}{10}=\frac{\pi}{5}$ and the displacement of the peak at $0$ is $\frac{\pi/6}{10}=\frac{\pi}{60}$.
+1. Use natural logarthims to make $t$ the subject of the formula
+    $$V=1-e^{\frac{-t}{RC}}.$$
 
-        ```{r coswave, out.width="50%"}
-        knitr::include_graphics("figures/ex3coswave.png")
-        ```
+Answer:
+Make the exponential term the subject and then take the natural logarithms of both sides
+$$
+\begin{align}
+V &= 1- e^{\frac{-t}{RC}}\\
+e^{\frac{-t}{RC}} &= 1- v\\
+\ln\left(e^{\frac{-t}{RC}}\right) &= \ln(1- v)\\
+\frac{-t}{RC} &= \ln(1-v)\\
+t &= -RC\ln(1-v)
+\end{align}
+$$
+
+
+1. Show that the following hyperbolic identity holds:
+    $$\cosh^2(x)-\sinh^2(x)=1.$$
+
+Answer:
+Use the definitions of $\cosh(x) = \frac{e^x + e^-x}{2}$ and $\sinh(x) = \frac{e^x - e^{-x}}{2}$
+$$
+\begin{align}
+\cosh^2(x) - \sinh^2(x) &=(\cosh(x) + \sinh{x})(\cosh(x) - \sinh(x))\\
+&=\left(\frac{e^x + e^{-x} + e^x - e^{-x}}{2}\right)\left(\frac{e^x + e^{-x} - e^x + e^{-x}}{2}\right)\\
+&=e^x e^{-x}\\
+&= 1 \text{ as required}
+\end{align}
+$$

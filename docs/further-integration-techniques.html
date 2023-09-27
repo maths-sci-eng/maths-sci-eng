@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 16 Further Integration Techniques | Mathematics for Scientists and Engineers</title>
   <meta name="description" content="Mathematics Lecture Notes for UoE Penryn Science and Engineering Disciplines." />
-  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 16 Further Integration Techniques | Mathematics for Scientists and Engineers" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Dr Mark Callaway" />
 
 
-<meta name="date" content="2023-09-14" />
+<meta name="date" content="2023-09-27" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -59,6 +59,10 @@
 
 
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -135,7 +139,8 @@
 <li class="chapter" data-level="3.3.1" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#simultaneous-linear-equations"><i class="fa fa-check"></i><b>3.3.1</b> Simultaneous linear equations</a></li>
 <li class="chapter" data-level="3.3.2" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#non-linear-simultaneous-equations"><i class="fa fa-check"></i><b>3.3.2</b> Non-linear simultaneous equations</a></li>
 </ul></li>
-<li class="chapter" data-level="3.4" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#inequalities-1"><i class="fa fa-check"></i><b>3.4</b> Inequalities</a></li>
+<li class="chapter" data-level="3.4" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#exponentials-and-logarithms"><i class="fa fa-check"></i><b>3.4</b> Exponentials and Logarithms</a></li>
+<li class="chapter" data-level="3.5" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#inequalities-1"><i class="fa fa-check"></i><b>3.5</b> Inequalities</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="trigonometry.html"><a href="trigonometry.html"><i class="fa fa-check"></i><b>4</b> Trigonometry</a>
 <ul>
@@ -353,6 +358,7 @@
 <li class="chapter" data-level="" data-path="exercise-set-15.html"><a href="exercise-set-15.html"><i class="fa fa-check"></i>Exercise Set 15</a></li>
 <li class="chapter" data-level="" data-path="exercise-set-16.html"><a href="exercise-set-16.html"><i class="fa fa-check"></i>Exercise Set 16</a></li>
 <li class="chapter" data-level="" data-path="exercise-set-17.html"><a href="exercise-set-17.html"><i class="fa fa-check"></i>Exercise Set 17</a></li>
+<li class="chapter" data-level="" data-path="exercise-set-18.html"><a href="exercise-set-18.html"><i class="fa fa-check"></i>Exercise Set 18</a></li>
 <li class="chapter" data-level="" data-path="notation.html"><a href="notation.html"><i class="fa fa-check"></i>Notation</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -393,8 +399,8 @@
 du= \frac{du(x)}{dx} dx, \;\;  d (c+x)=dx; \;\; d (x^2)=2x dx, \;\; d (\sin x)= \cos x d x, ...,
 \]</span></p>
 <div class="example">
+<p><span id="exm:subint" class="example"><strong>Example 16.1  (Integration by Substitution) </strong></span></p>
 <ol style="list-style-type: decimal">
-<li><span id="exm:subint" class="example"><strong>Example 16.1  (Integration by Substitution) </strong></span></li>
 <li><p>Evaluate the indefinite integral
 <span class="math display">\[
 \int (3x+2)^4 dx
@@ -456,8 +462,8 @@ Introduce <span class="math inline">\(u=2x\)</span>, then <span class="math inli
 <h2><span class="header-section-number">16.2</span> Integrals of trigonometric and hyperbolic functions<a href="further-integration-techniques.html#integrals-of-trigonometric-and-hyperbolic-functions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Here we make extensive use of trigonometric and hyperbolic identities to transform the integrand into a more manageable form.</p>
 <div class="example">
+<p><span id="exm:trig" class="example"><strong>Example 16.2  (Integrals using identities) </strong></span></p>
 <ol style="list-style-type: decimal">
-<li><span id="exm:trig" class="example"><strong>Example 16.2  (Integrals using identities) </strong></span></li>
 <li><p>Evaluate the definite integral
 <span class="math display">\[\begin{align*}
 \int_0^{\pi} \sin^2(x)  dx &amp;=\int_0^{\pi} \frac{1}{2} \left( 1 - \cos(2x) \right)  dx\\
@@ -530,8 +536,8 @@ where the degree of <span class="math inline">\(r\)</span> will be strictly less
 <span class="math display">\[\frac{p(x)}{(x-\alpha)^t}=\frac{c_1}{x-\alpha}+\frac{c_2}{(x-\alpha)^2}\dotsb + \frac{c_t}{(x-\alpha)^t}.\]</span></p></li>
 </ul>
 <div class="example">
+<p><span id="exm:partfrac" class="example"><strong>Example 16.3  (Integration by partial fractions) </strong></span></p>
 <ol style="list-style-type: decimal">
-<li><span id="exm:partfrac" class="example"><strong>Example 16.3  (Integration by partial fractions) </strong></span></li>
 <li><p>Evaluate the indefinite integral
 <span class="math display">\[
 I=\int  \frac{2x^2 -x + 4} { x(x^2+4) } dx
@@ -586,8 +592,8 @@ This is the formula for <em>integration by parts</em>:
 \int u \; dv = uv - \int  v \; d u.
 \]</span></p>
 <div class="example">
+<p><span id="exm:byparts" class="example"><strong>Example 16.4  (Integration by parts) </strong></span></p>
 <ol style="list-style-type: decimal">
-<li><span id="exm:byparts" class="example"><strong>Example 16.4  (Integration by parts) </strong></span></li>
 <li><p>Evaluate the indefinite integral
 <span class="math display">\[
 \int \ln x \; dx,

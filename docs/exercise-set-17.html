@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Exercise Set 17 | Mathematics for Scientists and Engineers</title>
   <meta name="description" content="Mathematics Lecture Notes for UoE Penryn Science and Engineering Disciplines." />
-  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Exercise Set 17 | Mathematics for Scientists and Engineers" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Dr Mark Callaway" />
 
 
-<meta name="date" content="2023-09-14" />
+<meta name="date" content="2023-09-27" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -59,6 +59,10 @@
 
 
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -135,7 +139,8 @@
 <li class="chapter" data-level="3.3.1" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#simultaneous-linear-equations"><i class="fa fa-check"></i><b>3.3.1</b> Simultaneous linear equations</a></li>
 <li class="chapter" data-level="3.3.2" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#non-linear-simultaneous-equations"><i class="fa fa-check"></i><b>3.3.2</b> Non-linear simultaneous equations</a></li>
 </ul></li>
-<li class="chapter" data-level="3.4" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#inequalities-1"><i class="fa fa-check"></i><b>3.4</b> Inequalities</a></li>
+<li class="chapter" data-level="3.4" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#exponentials-and-logarithms"><i class="fa fa-check"></i><b>3.4</b> Exponentials and Logarithms</a></li>
+<li class="chapter" data-level="3.5" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#inequalities-1"><i class="fa fa-check"></i><b>3.5</b> Inequalities</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="trigonometry.html"><a href="trigonometry.html"><i class="fa fa-check"></i><b>4</b> Trigonometry</a>
 <ul>
@@ -353,6 +358,7 @@
 <li class="chapter" data-level="" data-path="exercise-set-15.html"><a href="exercise-set-15.html"><i class="fa fa-check"></i>Exercise Set 15</a></li>
 <li class="chapter" data-level="" data-path="exercise-set-16.html"><a href="exercise-set-16.html"><i class="fa fa-check"></i>Exercise Set 16</a></li>
 <li class="chapter" data-level="" data-path="exercise-set-17.html"><a href="exercise-set-17.html"><i class="fa fa-check"></i>Exercise Set 17</a></li>
+<li class="chapter" data-level="" data-path="exercise-set-18.html"><a href="exercise-set-18.html"><i class="fa fa-check"></i>Exercise Set 18</a></li>
 <li class="chapter" data-level="" data-path="notation.html"><a href="notation.html"><i class="fa fa-check"></i>Notation</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -378,242 +384,26 @@
 <div id="exercise-set-17" class="section level1 unnumbered hasAnchor">
 <h1>Exercise Set 17<a href="exercise-set-17.html#exercise-set-17" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <ol style="list-style-type: decimal">
-<li><p>The following table contains students’ exam marks.</p>
-<table>
-<tbody>
-<tr class="odd">
-<td>75</td>
-<td>85</td>
-<td>59</td>
-<td>73</td>
-<td>88</td>
-<td>65</td>
-<td>60</td>
-<td>86</td>
-<td>72</td>
-<td>63</td>
-<td>78</td>
-<td>61</td>
-<td>75</td>
-<td>78</td>
-<td>74</td>
-<td>67</td>
-</tr>
-<tr class="even">
-<td>60</td>
-<td>68</td>
-<td>74</td>
-<td>66</td>
-<td>82</td>
-<td>78</td>
-<td>94</td>
-<td>73</td>
-<td>71</td>
-<td>83</td>
-<td>79</td>
-<td>96</td>
-<td>67</td>
-<td>62</td>
-<td>75</td>
-<td>81</td>
-</tr>
-<tr class="odd">
-<td>75</td>
-<td>71</td>
-<td>65</td>
-<td>79</td>
-<td>73</td>
-<td>80</td>
-<td>78</td>
-<td>72</td>
-<td>74</td>
-<td>53</td>
-<td>76</td>
-<td>65</td>
-<td>73</td>
-<td>67</td>
-<td>72</td>
-<td>63</td>
-</tr>
-</tbody>
-</table>
+<li><p>A normally distributed random variable <span class="math inline">\(X\)</span> has mean <span class="math inline">\(1\)</span>
+and variance <span class="math inline">\(4\)</span>. Using tables, find</p>
 <ol style="list-style-type: lower-alpha">
-<li>Create a frequency distribution table with classes 50-59, 60-69,… etc.</li>
-<li>Draw a histogram from the table.</li>
+<li><span class="math inline">\(P(X&gt;0)\)</span></li>
+<li><span class="math inline">\(P(X&lt;2)\)</span></li>
+<li><span class="math inline">\(P(|X|&lt;1)\)</span></li>
+<li>the value of <span class="math inline">\(c\)</span> such that <span class="math inline">\(P(X&lt;c)=0.0643\)</span></li>
 </ol></li>
-<li><p>The following table shows the results of 178 measurements of the carbon content of a mixed powder fed to a plant over a period of one month.</p>
-<table>
-<thead>
-<tr class="header">
-<th>Range of values of Carbon (%)</th>
-<th>Frequency</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>4.10-4.19</td>
-<td>1</td>
-</tr>
-<tr class="even">
-<td>4.20-4.29</td>
-<td>2</td>
-</tr>
-<tr class="odd">
-<td>4.30-4.39</td>
-<td>7</td>
-</tr>
-<tr class="even">
-<td>4.40-4.49</td>
-<td>20</td>
-</tr>
-<tr class="odd">
-<td>4.50-4.59</td>
-<td>24</td>
-</tr>
-<tr class="even">
-<td>4.60-4.69</td>
-<td>31</td>
-</tr>
-<tr class="odd">
-<td>4.70-4.79</td>
-<td>38</td>
-</tr>
-<tr class="even">
-<td>4.80-4.89</td>
-<td>24</td>
-</tr>
-<tr class="odd">
-<td>4.90-4.99</td>
-<td>21</td>
-</tr>
-<tr class="even">
-<td>5.00-5.09</td>
-<td>7</td>
-</tr>
-<tr class="odd">
-<td>5.10-5.19</td>
-<td>3</td>
-</tr>
-<tr class="even">
-<td><strong>Total</strong></td>
-<td><strong>178</strong></td>
-</tr>
-</tbody>
-</table>
-<p>From this frequency distribution, construct:</p>
+<li><p>A normally distributed random variable <span class="math inline">\(X\)</span> has mean 1 and variance 5. Using tables, find:</p>
 <ol style="list-style-type: lower-alpha">
-<li>a histogram</li>
-<li>a frequency polygon</li>
-<li>an ogive</li>
-</ol>
-<p>From the ogive, estimate the percentage of measurements showing a carbon content below 5.00%.</p></li>
-<li><p>The following numbers are the marks obtained by 50 students in an
-examination:</p>
-<table>
-<tbody>
-<tr class="odd">
-<td>57</td>
-<td>60</td>
-<td>37</td>
-<td>74</td>
-<td>62</td>
-<td>40</td>
-<td>56</td>
-<td>59</td>
-<td>80</td>
-<td>60</td>
-</tr>
-<tr class="even">
-<td>62</td>
-<td>94</td>
-<td>78</td>
-<td>73</td>
-<td>56</td>
-<td>68</td>
-<td>67</td>
-<td>79</td>
-<td>83</td>
-<td>87</td>
-</tr>
-<tr class="odd">
-<td>90</td>
-<td>93</td>
-<td>58</td>
-<td>46</td>
-<td>77</td>
-<td>63</td>
-<td>66</td>
-<td>66</td>
-<td>56</td>
-<td>71</td>
-</tr>
-<tr class="even">
-<td>51</td>
-<td>77</td>
-<td>53</td>
-<td>69</td>
-<td>70</td>
-<td>69</td>
-<td>70</td>
-<td>70</td>
-<td>47</td>
-<td>54</td>
-</tr>
-<tr class="odd">
-<td>49</td>
-<td>54</td>
-<td>68</td>
-<td>35</td>
-<td>64</td>
-<td>67</td>
-<td>76</td>
-<td>73</td>
-<td>68</td>
-<td>61</td>
-</tr>
-</tbody>
-</table>
-<ol style="list-style-type: lower-alpha">
-<li>Reduce these marks to a frequency distribution, with equal class widths, having as the first interval 35-44 inclusive. Draw an ogive for the distribution.</li>
-<li>Using the graph, what is the median mark?</li>
-<li>Use your graph to estimate what % of students pass the examination if the pass mark is 55.</li>
+<li><span class="math inline">\(P(X &gt; 1)\)</span></li>
+<li><span class="math inline">\(P(|X| &lt; 0.1)\)</span></li>
+<li>The value of <span class="math inline">\(c\)</span> such that <span class="math inline">\(P(X &lt; c) = 0.01287\)</span></li>
 </ol></li>
-<li><p>A sample of underweight babies was fed a special diet and the following weight gains (lbs) were observed at the end of three months: 6.7, 2.7, 2.5, 3.6, 3.4, 4.1, 4.8, 5.9, 8.3. What are the mean and standard deviation?</p></li>
-<li><p>In an examination, the marks awarded to the first 40 scripts were:</p>
-<p>32, 57, 43, 65, 28, 60, 47, 52, 39, 48, 25, 53, 47, 52, 62, 31, 38, 46, 72, 51, 29, 45, 54, 48, 50, 66, 63, 36, 23, 43, 32, 39, 58, 55, 29, 48, 37, 43, 54, 40.</p>
+<li><p>A thermostat is set to switch at <span class="math inline">\(20^\circ\,\text{C}\)</span> operates in a range of temperatures with a mean value of <span class="math inline">\(20.4^\circ\,\text{C}\)</span> and a standard deviation of <span class="math inline">\(1.3^\circ\,\text{C}\)</span>. What is the probability that its operating temperature will fall between <span class="math inline">\(19.5^\circ\,\text{C}\)</span> and <span class="math inline">\(20.5^\circ\,\text{C}\)</span>?</p></li>
+<li><p>The life of a drill has a mean of 16 hours and a standard deviation of 2.6 hours. Assuming it is normally distributed determine the probability of a bit lasting</p>
 <ol style="list-style-type: lower-alpha">
-<li>Taking classes 14.5-24.5, 24.5-34.5, 34.5-44.5 etc, draw up a frequency distribution table for the marks. Also estimate the relative frequency, cumulative frequency and relative cumulative frequency.</li>
-<li>Draw a histogram, frequency polygon and ogive for this frequency distribution.</li>
-<li>From the frequency table, estimate the mean, variance and standard deviation of the marks.</li>
+<li>More than 20 hours.</li>
+<li>Less than 14 hours.</li>
 </ol></li>
-<li><p>A city has been criticized for its excessive discharges of untreated sewage into the nearby river. A microbiologist take 45 samples of water downstream from the treated sewage outlet and measures the number of bacteria present. A summary table is as follows:</p>
-<table>
-<thead>
-<tr class="header">
-<th>Number of Bacteria</th>
-<th>Number of Samples</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>20-30</td>
-<td>5</td>
-</tr>
-<tr class="even">
-<td>30-40</td>
-<td>20</td>
-</tr>
-<tr class="odd">
-<td>40-50</td>
-<td>15</td>
-</tr>
-<tr class="even">
-<td>50-60</td>
-<td>5</td>
-</tr>
-</tbody>
-</table>
-<p>What are the <span class="math inline">\(25^{\text{th}}\)</span> and <span class="math inline">\(75^{\text{th}}\)</span> percentiles?</p></li>
 </ol>
 
 </div>

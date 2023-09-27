@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Exercise Set 7 | Mathematics for Scientists and Engineers</title>
   <meta name="description" content="Mathematics Lecture Notes for UoE Penryn Science and Engineering Disciplines." />
-  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Exercise Set 7 | Mathematics for Scientists and Engineers" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Dr Mark Callaway" />
 
 
-<meta name="date" content="2023-09-14" />
+<meta name="date" content="2023-09-27" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -59,6 +59,10 @@
 
 
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -135,7 +139,8 @@
 <li class="chapter" data-level="3.3.1" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#simultaneous-linear-equations"><i class="fa fa-check"></i><b>3.3.1</b> Simultaneous linear equations</a></li>
 <li class="chapter" data-level="3.3.2" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#non-linear-simultaneous-equations"><i class="fa fa-check"></i><b>3.3.2</b> Non-linear simultaneous equations</a></li>
 </ul></li>
-<li class="chapter" data-level="3.4" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#inequalities-1"><i class="fa fa-check"></i><b>3.4</b> Inequalities</a></li>
+<li class="chapter" data-level="3.4" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#exponentials-and-logarithms"><i class="fa fa-check"></i><b>3.4</b> Exponentials and Logarithms</a></li>
+<li class="chapter" data-level="3.5" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#inequalities-1"><i class="fa fa-check"></i><b>3.5</b> Inequalities</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="trigonometry.html"><a href="trigonometry.html"><i class="fa fa-check"></i><b>4</b> Trigonometry</a>
 <ul>
@@ -353,6 +358,7 @@
 <li class="chapter" data-level="" data-path="exercise-set-15.html"><a href="exercise-set-15.html"><i class="fa fa-check"></i>Exercise Set 15</a></li>
 <li class="chapter" data-level="" data-path="exercise-set-16.html"><a href="exercise-set-16.html"><i class="fa fa-check"></i>Exercise Set 16</a></li>
 <li class="chapter" data-level="" data-path="exercise-set-17.html"><a href="exercise-set-17.html"><i class="fa fa-check"></i>Exercise Set 17</a></li>
+<li class="chapter" data-level="" data-path="exercise-set-18.html"><a href="exercise-set-18.html"><i class="fa fa-check"></i>Exercise Set 18</a></li>
 <li class="chapter" data-level="" data-path="notation.html"><a href="notation.html"><i class="fa fa-check"></i>Notation</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -377,42 +383,66 @@
             <section class="normal" id="section-">
 <div id="exercise-set-7" class="section level1 unnumbered hasAnchor">
 <h1>Exercise Set 7<a href="exercise-set-7.html#exercise-set-7" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>These exercises cover solving linear equations by Gaussian elimination.</p>
 <ol style="list-style-type: decimal">
-<li><p>Write down the <span class="math inline">\(2\times 2\)</span> matrix <span class="math inline">\(R_\pi\)</span> that rotates a vector anticlockwise by <span class="math inline">\(\pi\)</span>. Apply this to a vector <span class="math inline">\(\mathbf{v}=\left(\begin{smallmatrix}v_1\\v_2\end{smallmatrix}\right)\)</span>.</p></li>
-<li><p>Write down the <span class="math inline">\(2\times 2\)</span> matrix <span class="math inline">\(M_x\)</span> that reflects a vector in the <span class="math inline">\(x\)</span>-axis. Similarly write down the <span class="math inline">\(2\times 2\)</span> matrix <span class="math inline">\(M_y\)</span> that reflects a vector in the <span class="math inline">\(y\)</span>-axis. Multiply these two matrices to find the transformation that first reflects in the <span class="math inline">\(x\)</span>-axis and then reflects in the <span class="math inline">\(y\)</span>-axis. Compare this to the matrix <span class="math inline">\(R_\pi\)</span>.</p></li>
-<li><p>Note that <span class="math inline">\(R^2_\theta=R_{2\theta}\)</span> (why?). Use this to find the “double angle identity” for <span class="math inline">\(\cos\)</span> and <span class="math inline">\(\sin\)</span>. Can you find other trigonometric identities using <span class="math inline">\(R_\theta\)</span>?</p></li>
-<li><p>For each of the following pairs of matrices <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, find (when possible), <span class="math inline">\(A+B\)</span>, <span class="math inline">\(A-B\)</span>, <span class="math inline">\(A^2\)</span>, <span class="math inline">\(B^2\)</span>, <span class="math inline">\(AB\)</span>, <span class="math inline">\(BA\)</span>.</p>
+<li><p>Use Gaussian elimination (elementary row operations) to determine whether or not the following systems of equations have solutions, and, when they do, to find <em>all solutions</em>. In the cases where there is more than one solution, find the general solution and also give one particular solution. (Tip: Choosing the elementary row operations carefully can minimise the use of fractions).</p>
 <ol style="list-style-type: lower-alpha">
-<li><span class="math inline">\(A = \begin{pmatrix} 2 &amp; 3 \\ 4 &amp; 1 \end{pmatrix}\qquad B = \begin{pmatrix} -1 &amp; 2 \\ -2 &amp; 0 \end{pmatrix}\)</span></li>
-<li><span class="math inline">\(A = \begin{pmatrix} 4 &amp; -5 \\ 6 &amp; 1 \\ 0 &amp; 1 \end{pmatrix}\qquad B = \begin{pmatrix} 5 &amp; 2 &amp; -3 \\ 1 &amp; 3 &amp; -1 \\ 2 &amp; 2 &amp; -1 \end{pmatrix}\)</span></li>
-<li><span class="math inline">\(A = \begin{pmatrix} 1 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 1\\ 1 &amp; 0 &amp; 1 \end{pmatrix} \qquad B = \begin{pmatrix} 0 &amp; 0 &amp; 1 \\ 1 &amp; 0 &amp; 0 \\ 1 &amp; 1 &amp; 0 \end{pmatrix}\)</span></li>
-<li><span class="math inline">\(A = \begin{pmatrix} -1 &amp; 1 &amp; 0 &amp; 1 \\ 1 &amp; 0 &amp; 1 &amp; 1\\ 1 &amp; 0 &amp; 1 &amp; 0\\ 1 &amp; 1 &amp; 1 &amp; -1 \end{pmatrix} \qquad B = \begin{pmatrix} 0 &amp; 0 &amp; 1 \\ 1 &amp; 0 &amp; 0 \\ 1 &amp; 1 &amp; 0 \\ 1 &amp; -1 &amp; 1 \end{pmatrix}\)</span>.</li>
+<li><p><span class="math display">\[\begin{align*}
+x + y - z &amp;= -3, \\
+2x + 2y - z &amp;= -2, \\
+3x + 2y - 3z&amp;= -7;
+\end{align*}\]</span></p></li>
+<li><p><span class="math display">\[\begin{align*}
+2x - 2y + 3z&amp;= 5, \\
+3x - 2y + 4z&amp;= 6, \\
+4x + y  + 2z&amp;= 2;
+\end{align*}\]</span></p></li>
+<li><p><span class="math display">\[\begin{align*}
+3x + 2y + 13z&amp;= 2, \\
+4x + 2y + 16z&amp;= 1, \\
+x  + y  + 5z &amp;= 1;
+\end{align*}\]</span></p></li>
+<li><p><span class="math display">\[\begin{align*}
+2x + z &amp;= 3, \\
+x  + y  + z &amp;= 2, \\
+x  + 3y + 2z&amp;= 3;
+\end{align*}\]</span></p></li>
+<li><p><span class="math display">\[\begin{align*}
+2x + 4y  + z  - 3t&amp;= 7, \\
+5x + 10y + 6z - 4t&amp;= 14, \\
+7x + 14y + 5z - 9t&amp;= 23;
+\end{align*}\]</span></p></li>
+<li><p><span class="math display">\[\begin{align*}
+3x + 4y &amp;= 1, \\
+2x - 4y + 2z&amp;= 4, \\
+3x + z &amp;= 2, \\
+x - 2y + z &amp;= 2;
+\end{align*}\]</span></p></li>
+<li><p><span class="math display">\[\begin{align*}
+3x - y  + 2z + t&amp;= 3, \\
+x  + 2y - z  + t&amp;= -3, \\
+3x + y  + z  + t&amp;= 0, \\
+3x + 2y + t&amp;= -1.
+\end{align*}\]</span></p></li>
 </ol></li>
-<li><p>Find two <span class="math inline">\(3 \times 3\)</span> matrices <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> such that <span class="math inline">\(AB=BA\)</span>. Now find two <span class="math inline">\(3 \times 3\)</span> matrices such that <span class="math inline">\(AB\neq BA\)</span>.</p></li>
-<li><p>For any two numbers <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>, if <span class="math inline">\(ab=0\)</span> then at least one of <span class="math inline">\(a\)</span> or <span class="math inline">\(b\)</span> must be <span class="math inline">\(0\)</span>. Does an analagous result hold for matrices? That is, if <span class="math inline">\(AB=0_{n\times m}\)</span> must at least one of the matrices <span class="math inline">\(A\)</span> or <span class="math inline">\(B\)</span> be the zero matrix?</p></li>
-<li><p>Determine whether the following matrices are <em>invertible</em> or <em>singular</em> by computing their determinants. If they are invertible, find the inverse.</p>
-<ol style="list-style-type: lower-alpha">
-<li><span class="math inline">\(\begin{pmatrix} 2 &amp; 1 \\ 1 &amp; 1 \end{pmatrix}\)</span></li>
-<li><span class="math inline">\(\begin{pmatrix} 6 &amp; 3 \\ -4 &amp; -2 \end{pmatrix}\)</span></li>
-<li><span class="math inline">\(\begin{pmatrix} 4 &amp; -28 &amp; 48 \\ -27 &amp; 162 &amp; -216 \\ 32 &amp; -160 &amp; 192 \end{pmatrix}\)</span></li>
-<li><span class="math inline">\(\begin{pmatrix} \cos(\theta) &amp; -\sin(\theta) \\ \sin(\theta) &amp; \cos(\theta)\end{pmatrix}\)</span></li>
-<li><span class="math inline">\(\begin{pmatrix} 1 &amp; 3 &amp; -5 \\ -2 &amp; 1 &amp; 4 \\ 1 &amp; 2 &amp; -4 \end{pmatrix}\)</span></li>
-<li><span class="math inline">\(\begin{pmatrix} 1 &amp; -1 &amp; 4 \\ 2 &amp; 3 &amp; 3 \\ 3 &amp; 1 &amp; 8 \end{pmatrix}\)</span></li>
-</ol></li>
-<li><p>Find the eigenvalues and eigenvectors of each of the following matrices <span class="math inline">\(A\)</span>. Determine whether the matrix is diagonalisable and, if so, find the matrices <span class="math inline">\(D\)</span> and <span class="math inline">\(P\)</span> in the diagonalisation <span class="math inline">\(D=P^{-1}AP\)</span>.</p>
-<ol style="list-style-type: lower-alpha">
-<li><span class="math inline">\(\begin{pmatrix} 1 &amp; 0 \\ 2 &amp; 2 \end{pmatrix}\)</span></li>
-<li><span class="math inline">\(\begin{pmatrix} 1 &amp; 2 \\ 0 &amp; 1 \end{pmatrix}\)</span></li>
-<li><span class="math inline">\(\begin{pmatrix} 1 &amp; 2 \\ 2 &amp; -2 \end{pmatrix}\)</span></li>
-<li><span class="math inline">\(\begin{pmatrix} 1 &amp; -2 &amp; -1 \\ 2 &amp; 6 &amp; 2 \\ -1 &amp; -2 &amp; 1 \end{pmatrix}\)</span></li>
-<li><span class="math inline">\(\begin{pmatrix} -2 &amp; 1 &amp; 1 \\ -11 &amp; 4 &amp; 5 \\ -1 &amp; 1 &amp; 0 \end{pmatrix}\)</span></li>
-<li><span class="math inline">\(\begin{pmatrix} 2 &amp; \sqrt 2 &amp; 0 \\ \sqrt 2 &amp; 2 &amp; \sqrt 2 \\ 0 &amp; \sqrt 2 &amp; 2 \end{pmatrix}\)</span></li>
-<li><span class="math inline">\(\begin{pmatrix} 1 &amp; -1 &amp; -1 \\ 1 &amp; -1 &amp; 0 \\ 1 &amp; 0 &amp; -1 \end{pmatrix}\)</span></li>
-<li><span class="math inline">\(\begin{pmatrix} 5 &amp; 5 &amp; 1 \\ -2 &amp; -1 &amp; 0 \\ 1 &amp; 1 &amp; 1 \end{pmatrix}\)</span>.</li>
-</ol></li>
-<li><p>For the matrices in a. and d. in the previous question, find a formula for <span class="math inline">\(A^n\)</span>.</p></li>
-<li><p><em>Linear Difference Equations</em>. A population of Wildebeest can be classified into two life stages: juvenile and adult. Each year <span class="math inline">\(60\%\)</span> of the juveniles survive to become adults, adults give birth on average to <span class="math inline">\(0.5\)</span> juvelines and <span class="math inline">\(70\%\)</span> of adults survive the year. If there are <span class="math inline">\(200\)</span> juveniles and <span class="math inline">\(200\)</span> adults in one year, what is the long term population of juveniles and adults? What is the long term ratio of juveniles to adults? Hint: write this as a matrix equation and use diagonalisation (save some time and use a computer to find the eigenvalues and eigenvectors for this question).</p>
-<p>How about in the case when the adult survival rate increases to <span class="math inline">\(80\%\)</span>? In this case also give the long term growth rate of the juvenile and adult populations. What happens in the case that the adult survival rate drops to <span class="math inline">\(60\%\)</span>?</p></li>
+<li><p><em>Balancing chemical equations.</em> In the combustion of propane gas, propane (<span class="math inline">\(C_3H_8\)</span>) combines with oxygen (<span class="math inline">\(O_2\)</span>) to form carbon dioxide (<span class="math inline">\(CO_2\)</span>) and water (<span class="math inline">\(H_2O\)</span>) according to the equation
+<span class="math display">\[x_1 C_3H_8 + x_2 O_2\to x_3CO_2+x_4H_2O.\]</span>
+To balance this equation, we must find natural numbers <span class="math inline">\(x_1, x_2, x_3, x_4\)</span> such that the total numbers of <span class="math inline">\(C\)</span>, <span class="math inline">\(H\)</span> and <span class="math inline">\(O\)</span> atoms are equal on both sides. Formulate this problem as a set of linear equations and solve using Guassian elimination.</p></li>
+<li><p><em>Electrical networks.</em> Consider the circuit diagram below.</p>
+<p><img src="figures/circuit.png" width="30%" style="display: block; margin: auto;" /></p>
+<p>The voltage drop across a resistor is (by Ohm’s law) <span class="math inline">\(V=IR\)</span> where <span class="math inline">\(V\)</span> is in volts, the current <span class="math inline">\(I\)</span> is in amps and the resistance <span class="math inline">\(R\)</span> is in ohms.
+Kirchhoff’s junction law: the sum of currents flowing into a junction is equal to the sum of currents flowing out of that junction.
+Kirchoff’s Voltage law: The sum of the voltage drops in one direction around a loop equals the sum of the voltage sources in the same direction around the loop.
+Using these laws it is possible to derive the following set of linear equations for the currents <span class="math inline">\(I_1, I_2, I_3\)</span>:</p>
+<p><span class="math display">\[\begin{align*}
+11I_1-3I_2&amp;=30\\
+-3I_1+6I_2-I_3&amp;=5\\
+-I_2+3I_3&amp;=-25.
+\end{align*}\]</span></p>
+<p>Determine the currents. (Extra challenge: derive the equations!).</p></li>
+<li><p><em>Network analysis</em>. The diagram below represents the traffic flow in a one-way road network. Each directed edge represents a one-way road and is labelled with the flow through that road. The nodes represent road junctions.</p>
+<p><img src="figures/flownetwork.png" width="30%" style="display: block; margin: auto;" /></p>
+<p>By considering the flow in and out of each node and the total flow in and out of the network, formulate a system of linear equations for the unknown flows <span class="math inline">\(x_1,\dotsc,x_5\)</span> and solve them by Gaussian elimination. You will find there is a “free variable”, but the requirement for non-negative flows puts some restrictions on the variables. In particular, what are the restrictions on <span class="math inline">\(x_1\)</span> and <span class="math inline">\(x_5\)</span>?</p></li>
 </ol>
 
 </div>

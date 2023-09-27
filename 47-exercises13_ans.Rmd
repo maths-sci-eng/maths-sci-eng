@@ -1,313 +1,127 @@
 # Exercise Set 13 Answers {.unlisted .unnumbered}
 
-1. Using the method of separation of variables, find the general solutions of the following first order differential equations and the particular solutions in those cases where initial conditions are specified:
-
-    a. $\displaystyle x^2\frac{dy}{dx}=(y+xy)$
-    a. $\displaystyle \frac{dy}{dx}=\frac{y-1}{x-1},\; y(2)=3$
-    a. $\displaystyle \frac{dy}{dx}=\frac{y+2}{x-2}$
+1. Determine the following integrals by making use of trigonometric or hyperbolic identities.
+    a. $\displaystyle \int_0^{\pi/4}4\sin(3\theta)\cos(\theta)d\theta$
+    a. $\displaystyle \int \left( \cos\left(\frac{x}{2}\right) - \sin\left(\frac{x}{2}\right)\right)^2 \, dx$
+    a. $\displaystyle \int \sin^3(x)\, dx$
+    a. $\displaystyle \int \frac{ \cos(2x)} { \cos^2(x) \sin^2(x)} \, dx$
+    a. $\displaystyle \int \cos(x) \sin(2x) \, dx$
+    a. $\displaystyle \int \tan(2x) \,dx$
+    a. $\displaystyle \int \sinh^3(x) \cosh^2(x)$
 
     Answers:
-    a. First we separate the variables
-    $$
-    x^2\frac{dy}{dx} = y(1+x)\\
-    \Rightarrow \frac{1}{y}\frac{dy}{dx} = \frac{1+x}{x^2} = \frac{1}{x^2} + \frac{1}{x}$$
-    Now integrating both sides with respect to $x$
-    $$\int \frac{1}{y}\frac{dy}{dx} \, dx = \int \left(\frac{1}{x^2} + \frac{1}{x}\right) \, dx \Rightarrow \int \frac{1}{y}\, dy\\
-    \int \frac{1}{y} = \int \left(\frac{1}{x^2} + \frac{1}{x}\right)\, dx\\
-    \ln(y) = -\frac{1}{x} + \ln(x) + c$$
-    Which can be rewritten as $\ln(y)-\ln(x) = -x^{-1} + c$ and then, by applying the logarithmic rule $\ln(B) - \ln(C) = \ln(\tfrac{B}{C})$
-    $$
-    \ln\left(\frac{y}{x}\right) = -\frac{1}{x} + c$$
-    Which can be written in terms of the exponential (raise $e$ to the power of both sides)
-    $$
-    \frac{y}{x} = e^{-\frac{1}{x} + c} = Ae^{-\frac{1}{x}}\\
-    y = Axe^{-\frac{1}{x}}$$
-    Where $A = e^c$.
+    a. $$\int_0^{\frac{\pi}{4}}4\sin(3\theta)\cos(\theta)\, d\theta$$
+    Use the product to sum trigonometric identity: $\sin(A)\cos(B) = \frac{1}{2}\left(\sin(A+B) + \sin(A+B)\right)$.
+    \begin{align*}
+    2\int_0^{\frac{\pi}{4}}\sin(4\theta) + \sin(2\theta)\, d\theta &= 2\left[\frac{-\cos(4\theta)}{4} + \frac{-\cos(2\theta)}{2}\right]_0^{\frac{\pi}{4}}\\
+    & = 2\left(\frac{1}{4} - 0 + \frac{1}{4}+\frac{1}{2}\right)\\
+    & = 2
+    \end{align*}
+    a. \begin{align*}
+    \int \left( \cos \frac{x}{2} - \sin \frac{x}{2}\right)^2 \, dx &=  \int \left(\cos^2 \frac{x}{2}+\sin^2 \frac{x}{2}- \sin x \right) \, dx\\
+    &= \int \left(1 - \sin x \right) \, dx\\
+    &=  x+\cos x+ C
+    \end{align*}
+    a. \begin{align*}
+    \int \sin^3 x \, dx &= \int \sin x (1 - \cos^2 x) \, dx\\
+    & =  -\cos x + \frac{1}{3} \cos^3 x + C
+    \end{align*}
+    a. \begin{align*}
+    \int \frac{ \cos 2x} { \cos^2 x \sin^2 x} \, dx&= \int \frac{\cos^2x - \sin^2 x} { \cos^2 x \sin^2 x} \, dx\\
+    &=\int \left( \frac{1} { \sin^2 x } - \frac{1} { \cos^2 x} \right) \, dx\\
+    &= -\cot x -\tan x+C
+    \end{align*}
+    a. \begin{align*}
+    \int \cos x \sin 2x \, dx = \int 2 \sin x \cos^2 x  \, dx = -{2 \over 3} \cos^3 x + C
+    \end{align*}
+    Having used $\sin(2x) = 2\sin(x)\cos(x)$ and using reverse chain rule, identifying that the integral was of the form $g'(x)f'(g(x))$, with $g'(x) = \cos(x)$, $f'(x) = \cos^2(x)$, $\int g'(x)f'(g(x))\, dx = f(g(x))$, since $\frac{d}{dx} (f(g(x))) = g'(x)f'(g(x))$.
+    Or, can use the product to sum identity again:
+    $$\int \cos x \sin 2x \, dx = \int \frac{1}{2} (\sin 3 x +\sin x) \, dx = - \frac{1}{6} \cos 3x - {1 \over 2} \cos x + C.$$
+    a. $$\int \tan 2x \,dx =  - {1  \over 2} \ln \vert \cos 2x \vert  + C = {1 \over 2} \ln \vert \sec 2 x \vert +C$$
+    Where $\int\tan(x)dx$ can be solved with substitution, by letting $t =\cos(t)$ and $dx = \frac{dt}{-\sin(x)}$, so $\int \frac{-1}{t}\, dt = -\ln(t) + C = \ln(\csc(x)) + c$. Alternatively, the integral of $\tan(x)$ can be identified as reverse chain rule: $\int g'(x)f'(g(x))\,dx = f(g(x))$.
+    a. \begin{align*}
+    \int \sinh^3 x \cosh^2 x \, dx &= \int \sinh x (\cosh^2 x - 1) \cosh^2 x \, dx\\
+    &= - {1 \over 3} \cosh^3 x +{1 \over 5} \cosh^5 x +C
+    \end{align*}
+    having used $\sinh^2(x) = 1 - \cosh^2(x)$ and reverse chain rule, or substitution with $u = \cosh(x)$ and $du = \sinh(x)dx$.
     
-    a. First, separate the variables and integrate
-    $$
-    \int\frac{dy}{y-1} =\int\frac{dx}{x-1}+C,
-    $$
-    so the general solution is
-    $$
-    \ln|y-1|=\ln|x-1|+C \implies \quad \left|\frac{y-1}{x-1}\right| = B,
-    $$
-    where $C$ and $B=e^C$ are constants. This means that $\frac{y-1}{x-1}= A$, where $A$ is another constant, giving the general solution $y=A(x-1)+1$.
-    Because $y(2) = 3$, we have that $3 = A + 1$, so the particular solution is
-    $$
-    y(x) = 2x+1
-    $$
-    
-    a. Separatating the variables yields
-    $$
-    \frac{1}{y+2} \frac{dy}{dx} = \frac{1}{x-2}$$
-    And now integrating with respect to $x$
-    $$\int \frac{1}{y+2} \frac{dy}{dx}\, dx = \int \frac{1}{x-2}\,dx\\
-    = \int \frac{1}{y+2} dy = \int \frac{1}{x-2} dx\\
-    \Rightarrow \ln(y+2) = \ln(x-2) + c$$
-    Letting $c = \ln (A)$, with $A$ another constant, then
-    $$\ln(y+2) = \ln(x-2) + \ln(A) = \ln((x-2)A)$$
-    So $y+2 = A(x-2)$ and $y = Ax-2A -2$.
-    
-    
-1. Using the integrating factor method, find the general solutions of the following linear first order differential equations and the particular solutions in those cases where initial conditions are specified:
+1. Determine the following integrals using the method of partial fractions.
+    a. $\displaystyle \int \frac{1}{x^2+x-6} \, dx$
+    a. $\displaystyle \int \frac{-12u-13}{(2u+1)(u-3)} \, du$
+    a. $\displaystyle \int \frac{4x^2+13x-4}{2x^2+5x-3}\, dx$
+    a. $\displaystyle \int \frac{x^3}{x^2-1}\, dx$
+    a. $\displaystyle \int \frac{x^5-2x^2}{x^2-1} \, dx$
+    a. $\displaystyle \int \frac{z+1}{(z-1)^2} \, dz$
+    a. $\displaystyle \int \frac{5y^2}{(y^2+1)(2y-1)} \, dy$
 
-    a. $\displaystyle \frac{dy}{dx}+\frac{3}{x}y=4+x^2,\;y(1)=1$
-    a. $\displaystyle x\frac{dy}{dx}+2y=x^{-4},\;y(1)=-\frac{1}{2}$
-    a. $\displaystyle \frac{dy}{dx}+\frac{y}{x}=\cos(x),\;y\left(\frac{\pi}{2}\right)=0$
-    a. $\displaystyle \frac{dy}{dx}=e^{-x}-2y,\;y(0)=0$
-    a. $\displaystyle \frac{dy}{dx}=y\tan(x)+\sin(x)$
+    Answers:
+    a. $$\frac{1}{x^2+x-6} = \frac{1}{(x+3)(x-2)} = \frac{A}{x+3}+\frac{B}{x-2} \frac{A(x-2) + B(x+3)}{(x+3)(x-2)}$$
+    Equating the powers of $x$ and solving the resulting simultaneous equations gives $A + B = 0$ and $3B-2A = 1$, so $A = -\frac{1}{5}. B = \frac{1}{5}$. So
+    $$\int\frac{1}{x^2+x-6}\,dx = \int \frac{-1}{5(x+3)} + \frac{1}{5(x-2)}\, dx = -\frac{1}{5}\ln(x+3) + \frac{1}{5}\ln(x-2) + c$$
+    a. $$\frac{-12u - 13}{(2u+1)(u-3)} = \frac{A}{2u+1} + \frac{B}{u-3} = \frac{A(u-3) + B(2u+1)}{(2u+1)(u-3)}$$
+    With the numerator given two simultaneous equations solved by $A=2,B=-7$. So
+    $$\int\frac{-12u-13}{(2u+1)(u-3)}\,du = \int \frac{2}{2u+1} + \frac{-7}{u-2}\,du = \ln(2u+1) - 7\ln(u-3) + c$$
+    a. $$\frac{4x^2 + 13x - 4}{2x^2 + 5x - 3} = \frac{A}{2x-1} + \frac{B}{x+3} + C$$
+    Since the order of the numerator is equal to the order of the denominator, a constant term must be included. This gives three equations in $A,B,C$, which are solved by $A=1,B=1,C=2$. So
+    \begin{align*}
+    \int\frac{4x^2 + 13x - 4}{2x^2 + 5x - 3}\, dx &= \int \frac{1}{2x-2} + \frac{1}{x+3} + 2 \, dx\\
+    &= \frac{1}{2}\ln(2x-1) + \ln(x+3) + 2x + c
+    \end{align*}
+    a. $$\frac{x^3}{x^2-1} = \frac{x^3}{(x+1)(x-1)} = \frac{A}{x+1} + \frac{B}{x-1} + Cx + D$$
+    since the numerator is one order higher than the denominator, a linear term must be included.
+    $$\frac{A(x-1) + B(x+1) + Cx(x^2-1) + D(x^2-1)}{x^2-1} = \frac{x^3}{x^2-1}$$
+    Giving $A+B=1, B-A = 0$ and $C=1$. So $A=\frac{1}{2}, B=\frac{1}{2}, C=1$ and
+    \begin{align*}
+    \int\frac{x^3}{x^2-1}\, dx &= \int \frac{1}{2(x+1)} + \frac{1}{2(x-1)} + 1\, dx\\
+    &= \frac{1}{2}\ln(x+1) + \frac{1}{2}\ln(x-1) + x + c\\
+    &= \frac{1}{2}\ln(x^2-1) + x + c = \ln((x^2-1)^{\frac{1}{2}}) + x + c
+    \end{align*}
+    a. $$\frac{z+1}{(x-1)^2} = \frac{A}{z-1} + \frac{B}{(x-1)^2}$$
+    Since there is a repeated root of the form $(z-\alpha)^n$, so the first $n$ powers of $(z-\alpha)$ must appear as denominators in the partial fractions exapnsion.
+    $$\frac{A}{z-1} + \frac{B}{(z-1)^2} = \frac{A(z-1) + B}{(z-1)^2} = \frac{z+1}{(z-1)^2}$$
+    The numerator is solved by $A=1$ and $B=3$, so
+    $$\int \frac{z+1}{(z-1)^2}\,dz = \int \frac{1}{z-1} + \frac{3}{(z-1)^2} \, dz = \ln(z-1) - (z-1)^{-3} + c$$
+    a. $$\frac{5y^2}{(y^2+1)(2y-1)} = \frac{Ay+B}{y^2+1} + \frac{C}{2y-1}$$
+    with the numerator of the first partial fraction being a linear polynomial since the quadratic in the denominator is irreducible.
+    $$
+    \frac{(Ay+B)(2y-1) + C(y^2+1)}{(y^2+1)(2y-1)} = \frac{2Ay^2 - Ay + 2By - B + Cy^2 + 1}{(y^2+1)(2y-1)} = \frac{5y^2}{(y^2+1)(2y-1)}$$
+    Equating the powers of $y$ gives
+    $$2A+C = 5,\quad 2B-A = 0,\quad 1-B = 0\\
+    \Rightarrow A=2,B=1,C=1$$
+    so the integral can be rewritten as the partial fractions
+    $$
+    \int \frac{5y^2}{(y^2+1)(2y-1)}\;dy = \int \frac{2y+1}{y^2+1} + \frac{1}{2y-1}\, dy = \tan^{-1}(y) + \ln(y^2+1) + \frac{1}{2}\ln(2y-1) + c$$
     
+    
+    
+    
+1. Determine the following integrals using the method of integration by parts.
+    a. $\displaystyle \int x \cos(x) \,dx$
+    a. $\displaystyle \int t^2 e^{t} \, dt$
+    a. $\displaystyle \int e^{x}\sin(x) \, dx$
+    a. $\displaystyle \int (x+1)^2 e^{-2x} \, dx$
+    a. $\displaystyle \int \sin^{-1}(x) \, dx $.
     
     Answers:
-    Recall that for a first order differential equation of the form
-    $$\frac{dy}{dx} + p(x)y = r(x)$$
-    The integrating factor $u(x)$ is given by
+    a. Using integration by parts, $\int u\,dv = uv - \int v\,du$ with $u=x$ and $dv = \cos(x)$
+    $$\int x \cos (x) \, dx = x \sin (x) - \int \sin (x) \, dx = x \sin (x) + \cos (x) + C $$
+    a. Let $u = t^2, du = 2t, dv = e^t, v = e^t$
+    $$\int t^2 e^t \,dt = t^2e^t - \int 2te^t \,dt$$
+    Here, perform integration by parts once again. Let $u=t, du = 1, dv = e^t, v = e^t$
+    $$\int te^t \,dt = te^t - \int e^t \,dt = (t-1)e^t$$
+    and the orignal integral becomes
+    $$\int t^2 e^t\,dt = t^2 e^t - 2\int te^t\,dt = t^2 e^t - 2(t-1)e^t = (t^2 -2t + 2)e^t + c$$
+    a. Integrating by parts, $\int f\,dg = fg - \int g\,df$ with $f = \sin(x),df = \cos(x), dv = e^x, v = e^x$.
     $$
-    u(x) = \exp\left(\int p(x)\, dx\right)
+    \int e^x \sin(x)\,dx = e^x \sin(x) - \int e^x \cos(x)\,dx$$
+    And we are still left with an integral that must be solved by parts. It looks like this cycle might keep repeating, but in fact, trying out the next step will reveal the answer. Let $u= \cos(x),du=-\sin(x), dv=e^x,v=e^x$
+    $$\int e^x \cos(x) \,dx = e^x \cos(x) + \int e^x \sin(x)\,dx$$
+    And examining the original integral we see that $\int e^x \sin(x)\,dx$ appears on both sides:
     $$
-    and then
-    $$\frac{d}{dx}(u(x)y(x)) = u(x)r(x)$$
-    and
-    $$
-    y(x) = \left[ \int e^{\int p(x)dx} r(x) \,dx + C\right] e^{-\int p(x) dx}.
-    $$
-    See the lecture notes for details for why this is the case.
-    a. Here, $u(x) = \exp\left(\int \frac{3}{x}dx\right) = e^{\ln(x^3)} = x^3$, and we have that
-    $$
-    \frac{d}{dx}(x^3y) = x^3 (4+x^2) = x^5 + 4x^3\\
-    \Rightarrow x^3y = \int x^5 + 4x^3 \, dx = \frac{1}{6}x^6 + x^4 + c
-    \Rightarrow y = \frac{1}{6} x^3 + x + \frac{c}{x^3}
-    $$
-    And from the initial condition $y(1) = 1$
-    $$1 = \frac{1}{6} + 1 + c \Rightarrow c = -\frac{1}{6}$$
+    \int e^x \sin(x)\,dx = e^x\sin(x) - \left(e^x\cos(x)+\int e^x \sin(x)\,dx\right)\\
+    2\int e^x \sin(x)\,dx = e^x\sin(x) - e^x\cos(x)\\
+    \int e^x \sin(x)\,dx = \frac{1}{2}e^x\left(\sin(x)-\cos(x)\right) + c$$
+    a. $$\int (x+1)^2 e^{-2x} \, dx = -{1 \over 2}(x+1)^2 e^{-2x} + \int (x+1) e^{-2x} \, dx = -{1 \over 2}(x+1)^2 e^{-2x} - {1 \over 2}(x+1) e^{-2x}$$
+    a. $$y = \sin^{-1} x \Rightarrow \sin y = x \Rightarrow  \cos y {\frac{dy}{dx}} = 1 \Rightarrow {\frac{dy}{dx}} =  (1 - x^2)^{-1/2},$$
     so
-    $$y(x) = \frac{1}{6}x^3 + x -\frac{1}{6X^3}$$
-    
-    
-    a. $$x \frac{dy}{dx} + 2y = x^{-4}$$
-    Whic is equivalent to 
-    $$\frac{dy}{dx} + 2\frac{y}{x} = x^{-5}$$
-    Here, the integrating factor is 
-    $$u(x) = \exp\left(\int \frac{2}{x}dx\right) = e^{ln(x^2)} = x^2$$
-    and
-    $$\frac{d}{dx}(x^2y) = x^2x^{-5} = x^{-3}\\
-    \Rightarrow x^2y = \int x^{-3} \, dx = -\frac{1}{2}x^{-2} + C$$
-    And with the initial conditions $y(1)=-\frac{1}{2}$, $c = 0$, and the particular solution is
-    $$y(x) = -\frac{1}{2}x^{-4}$$
-    
-    a. 
-    $$\frac{dy}{dx} + \frac{y}{x} = \cos(x)$$
-    In this case, the integrating factor is
-    $$u(x) = \exp\left(\int\frac{1}{x}dx\right) = e^{\ln(x)} = x\\
-    \Rightarrow \frac{d}{dx}(e^xy) = e^x\cos(x)\\
-    x y = \int x\cos(x)\, dx$$
-    And the inegral can be solved by parts: $\int uv' = uv - \int u'v$. Let $u=x, u'=1, v' = \cos(x), v = \sin(x)$. So
-    $$
-    x y = x\sin(x) - \int \sin(x)\,dx = x\sin(x) + \cos(x) + c\\
-    y = \sin(x) + \frac{\cos(x)}{x} + \frac{c}{x}$$
-    With $y(\frac{\pi}{2}) = 0$, $c=-\frac{\pi}{2}$ so the particular solution is
-    $$
-    y(x) = \sin(x) + \frac{\cos(x)}{x} + \frac{\pi}{2x}$$
-    
-    a. First rearrange to
-    $$\frac{dy}{dx} + 2y = e^{-x}$$
-    The integrating factor is 
-    $$u(x) = \exp\left(\int 2 dx\right) = e^{2x}$$
-    Then the general solution is
-    $$
-    y = \frac{1}{e^{2x}}\int e^{2x}e^{-x} \, dx = \frac{1}{e^{2x}}(e^x + c) = \frac{1}{e^x} + \frac{c}{e^{2x}}$$
-    And to find the particular solution with the intial condition $y(0) = 0$, $c=-1$ and he particular solution is
-    $$
-    y = e^{-x} - e^{-2x}$$
-    
-    a. $$\frac{dy}{dx} - y\tan(x) = \sin(x)$$
-    Here, the integrating factor (taking care with the minus sign which must be included in $p(x)$) is
-    $$
-    \begin{align}
-    u(x) &= \exp\left(\int -\tan(x)\,dx\right) = \exp\left(\int -\frac{\sin(x)}{\cos(x)}dx\right)\\ 
-    &= \exp\left(\ln(\cos(x))\right) = \exp\left(\ln(\cos(x))\right) = \cos(x)\end{align}
-    $$
-    and the general solution is
-    $$
-    \begin{align}
-    y(x) &= \int \cos(x)\sin(x)\frac{1}{\cos(x)}\\ &= \left(\frac{1}{2}\cos^2(x) + c\right)\frac{1}{\cos(x)}\\
-    &= \frac{\cos(x)}{2} + c \sec(x)
-    \end{align}
-    $$
-    Note that there are other forms for the solution, since $\cos(x)\sin(x) = \frac{1}{2}\sin(2x)$.
-    
-1. Find the general solutions of the following constant coefficient, linear, homogeneous differential equations, and the particular solutions in those cases where initial conditions are specified:
-
-    a. $\displaystyle \frac{d^2y}{dx^2}+5\frac{dy}{dx}+6y=0,\;y(0)=0,\; \frac{dy(0)}{dx}=1$
-    a. $\displaystyle \frac{d^2y}{dx^2}+8\frac{dy}{dx}+25y=0,\;y(0)=1,\; \frac{dy(0)}{dx}=0$
-    a. $\displaystyle \frac{d^2y}{dx^2}+2\frac{dy}{dx}+y=0$
-
-
-
-    Answers:
-    Recall that for second order homogeneous differential equations, we standard form is 
-    $$\frac{d^2y}{dx^2} + p \frac{dy}{dx} + qy = 0$$
-    and we consider the possible solution $y = e^{mx}$. Substitution yields
-    $$(m^2 + pm + q)e^{mx} = 0 \text{ hence, because $e^{mx}$ is never zero, } m^2 + pm + q = 0.$$
-    Solving this auxiliary (or characteristic) equation gives the two roots, and there are three possible cases for obtaining the two linearly independent solutions---see the lecture notes.
-    a. The auxiliary equation is given by
-    $$
-    m^2 + 5m + 6 = 0\\
-    (m+3)(m+2) = 0\\
-    m_1 = -3, m_2 = -2
-    $$
-    And the general solution is
-    $$y(X) = Ae^{-3x} + B e^{-2x}.$$
-    We have the intial conditions $y(0) = 0$ and $\frac{dy(0)}{dx} = 1$,
-    so $A+B = 0$ and $-3A -2B = 1$. This gives $A=-1$ and $B = 1$. So the particular solution is
-    $$
-    y(x) = -e^{-3x} + e^{-2x}
-    $$
-    
-    a.
-    Here, the auxiliary (or characteristic) equation is
-    $$
-    m^2 + 8m + 25 = 0\\
-    m = \frac{-8 \pm  \sqrt{64 - 100}}{2}\\
-    m_1 = \frac{-8 + 6i}{2} = -4+3i\\
-    m_2 = \frac{-8 - 6i}{2} = -4-3i
-    $$
-    The general solution is therefore $y= e^{-4x}(A \cos 3x + B \sin 3x)$.
-
-    \medskip
-
-    $y(0)=1 \implies A=1$. $y' = -4 e^{-4x}(A \cos 3x + B \sin 3x) +        e^{-4x}(-3A \sin 3x + 3B \cos 3x)$.
-    Thus, $y'(0)=0 \implies -4A +3B         = 0 \implies B= \frac{4}{3}$, giving the particular solution
-    $$
-    y = \frac{1}{3} e^{-4x}(3 \cos 3x + 4 \sin 3x).
-    $$
-
-    a. $m^2 +2m+1 = 0 \implies (m+1)^2=0$, so $m=-1$ twice. The general solution is then 
-    $$
-    y =  (A + Bx) e^{-x}.
-    $$
-
-    
-1. For each of the following differential equations, find: the Complementary Function; a Particular Integral; and the Particular Solution corresponding to the given initial conditions:
-
-    a. $\displaystyle \frac{d^2y}{dx^2}+\frac{dy}{dx}+y=36e^{5x}$
-    a. $\displaystyle \frac{d^2y}{dx^2}+3\frac{dy}{dx}-4y=-34\sin(x)$
-    a. $\displaystyle \frac{d^2y}{dx^2}+3\frac{dy}{dx}-4y=24e^{-x},\;y(0)=0,\; \frac{dy(0)}{dx}=10$
-    a. $\displaystyle \frac{d^2y}{dx^2}-3\frac{dy}{dx}+2y=x^2-2x+3,\;y(0)=\frac{3}{4},\; \frac{dy(0)}{dx}=\frac{3}{2}.$
-
-
-    Answers:
-    a. First, find the complementary function (the solution to the homogeneous differential equation). The characteristic equation for the homogeneous part is 
-    $$m^2 + 2m + 1 = 0 \\(m+1)^2 = 0\\m=-1 \text{equal roots}$$
-    Therefore, $y_{CF} = (A+Bx)e^{-x}$
-    Now for the particular integral, the solution to the nonhomogeneous part of the differential equation. Since the right hand side is $36e^{5x}$, take the trial (ansatz) particular integral $y_{PI} = Ce^{5x}$. Substituting this into the differential equation gives
-    $$\frac{d^2y_{PI}}{dx^2}+\frac{dy_{PI}}{dx}+y_{PI}=36e^{5x}\\
-    25Ce^{5x} + 2(5Ce^{5x}) + Ce^{5x} = 36Ce^{5x} = 36e^{5x}$$
-    and we have $C=1$. Therefore, the particular integral is $y_{PI} = e^{5x}$ and the general solution is
-    $$
-    y = (A+Bx)e^{-x} + e^{5x}.
-    $$
-    
-    a. Proceeding the same way, the characteristic equation is
-    $$
-    m^2 + 3m - 4 = 0\\
-    (m+4)(m-1) = 0\\
-    m_1 = -4, m_2 = 1
-    $$
-    so there are two distinct roots, and 
-    $$y_{CF} = Ae^{-4x} + B e^x$$
-    For the particular integral, the right hand side is $-34\sin(x)$, so try the function
-    $$
-    \begin{align}
-    y_{PI} &= a \cos(x)+ b\sin(x)\\
-    \frac{dy_{PI}}{dx} &= -a \sin(x) + b\cos(x)\\
-    \frac{d^2y_{PI}}{dx^2} &= -a \cos(x) - b\sin(X)
-    \end{align}
-    $$
-    And substituting these into the differential equation
-    $$
-    \left(-a\cos(x) - b\sin(x)\right) + 3 \left(-a \sin(x) + b\cos(x)\right) - 4\left(a\cos(x) + b\sin(x)\right) = -34\sin(x)\\
-    (3b-5a)\cos(x) + (-5b - 3a)\sin(x) = -34\sin(x)$$
-    Equating the coefficients of $\sin(x)$ and $\cos(x)$, since the above must hold for all $x$:
-    $$
-    \begin{align}
-    3b-5a &= 0\\
-    -5b - 3a &= 0
-    \end{align}
-    $$
-    Solving these simultaneos equations gives $a=3, b=5$. Therefore the particular integral is
-    $$y_{PI} = 3\cos(x) + 5\sin(x)$$
-    and the general solution $y = y_{CF} + y_{PI}$ is 
-    $$
-    y(x) = Ae^{-4x} + Be^x + 3\cos(x) + 5\sin(x)
-    $$
-    
-    
-    a. The characteristic equation is solved by
-    $$
-    m^2 + 3m - 4 = 0\\
-    (m+4)(m-1) = 0\\
-    m_1 = -4, m_2 = 1 
-    $$
-    There are two distinct roots and $y_{CF} = Ae^{-4x} = Be^x$. For the particular integral, since the right hand side is $24e^{-x}$, try the function
-    $$
-    \begin{align}
-    y_{PI} &= Ce^{-x}\\
-    \frac{dy_{PI}}{dx} &= -Ce^{-x}\\
-    \frac{d^2y_{PI}}{dx} &= Ce^{-x}
-    \end{align}
-    $$
-    Upon substituting into the differential equation
-    $$
-    Ce^{-x} - 3(Ce^{-x}) - 4Ce^{-x} = 24e^{-x}$$
-    so -6C = 25$ and $C = -4$.
-    The general solution is then $y = y_{CF} + y_{PI}$
-    $$
-    y(x) = Ae^{-4x} + B e^{-x} - 4e^{-x}$$
-    The initial conditions are $y(0) = 0$ and $\frac{dy(0)}{dx} = 0$, which can be used to solve for $A$ and $B$.
-    $$
-    A+B - 4 = 0\\
-    -4a + B + 4 = 10
-    $$
-    and $A = -0.4$, $B=4.4$ so the particular solution is
-    $$
-    y(x) = -0.4 e^{-4x} + 4.4 e^x - 4e^{-x}
-    $$
-    
-    a.
-    The characteristic equation is given by
-    $$
-    m^2 - 3m + 2 = 0\\
-    (m-2)(m-1) = 0\\
-    m_1 = 2, m_2 = 1
-    $$
-    There are two distinct roots, so the complementary function is
-    $$y_{CF} = Ae^{2x} + Be^x$$
-    Because the right hand side is a quadratic, take the particular integral to also be a quadratic.
-    $$
-    \begin{align}
-    y_{PI} &= Cx^2 +Dx + E\\
-    \frac{y_{PI}}{dx} &= 2Cx + D\\
-    \frac{d^2 y_{PI}}{dx^2} &= 2C
-    \end{align}
-    $$
-    Substituting into the homogeneous part of the differential equation and grouping terms in powers of $x$:
-    $$
-    2cx^2 + (2D - 6C)x + 2C - 3D + 2E = 3
-    $$
-    Which gives $C = \frac{1}{2},D=\frac{1}{2},E = \frac{7}{4}$. Therefrore the general solution is
-    $$
-    y = Ae^{2x} + Be^x + \frac{x^2}{2} + \frac{x}{2} + \frac{7}{4}
-    $$
-    For the particualr solution, find $A$ and $B$ given the initial conditions $y(0) = \frac{3}{4}$ and $\frac{dy(0)}{dx} = \frac{3}{2}$
-    $$
-    \begin{align}
-    A + B + \frac{7}{4} &= \frac{3}{4} &\Rightarrow & A+B & = -1\\
-    2A + B + \frac{1}{2} &= \frac{3}{2} &\Rightarrow & 2A + B &=1
-    \end{align}
-    $$
-    From these, $A=2$ and $B=-3$, so the particular solution is
-    $$
-    y(x) = 2e^{2x} - 3e^x +\frac{x^2}{2} + \frac{x}{2} + \frac{7}{4}
-    $$
+    $$\int \sin^{-1} x \, dx = x \sin^{-1} x - \int x (1-x^2)^{-1/2} \, dx = x \sin^{-1} x + (1 - x^2)^{1/2} + C $$

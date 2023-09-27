@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Exercise Set 10 | Mathematics for Scientists and Engineers</title>
   <meta name="description" content="Mathematics Lecture Notes for UoE Penryn Science and Engineering Disciplines." />
-  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Exercise Set 10 | Mathematics for Scientists and Engineers" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Dr Mark Callaway" />
 
 
-<meta name="date" content="2023-09-14" />
+<meta name="date" content="2023-09-27" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -59,6 +59,10 @@
 
 
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -135,7 +139,8 @@
 <li class="chapter" data-level="3.3.1" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#simultaneous-linear-equations"><i class="fa fa-check"></i><b>3.3.1</b> Simultaneous linear equations</a></li>
 <li class="chapter" data-level="3.3.2" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#non-linear-simultaneous-equations"><i class="fa fa-check"></i><b>3.3.2</b> Non-linear simultaneous equations</a></li>
 </ul></li>
-<li class="chapter" data-level="3.4" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#inequalities-1"><i class="fa fa-check"></i><b>3.4</b> Inequalities</a></li>
+<li class="chapter" data-level="3.4" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#exponentials-and-logarithms"><i class="fa fa-check"></i><b>3.4</b> Exponentials and Logarithms</a></li>
+<li class="chapter" data-level="3.5" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#inequalities-1"><i class="fa fa-check"></i><b>3.5</b> Inequalities</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="trigonometry.html"><a href="trigonometry.html"><i class="fa fa-check"></i><b>4</b> Trigonometry</a>
 <ul>
@@ -353,6 +358,7 @@
 <li class="chapter" data-level="" data-path="exercise-set-15.html"><a href="exercise-set-15.html"><i class="fa fa-check"></i>Exercise Set 15</a></li>
 <li class="chapter" data-level="" data-path="exercise-set-16.html"><a href="exercise-set-16.html"><i class="fa fa-check"></i>Exercise Set 16</a></li>
 <li class="chapter" data-level="" data-path="exercise-set-17.html"><a href="exercise-set-17.html"><i class="fa fa-check"></i>Exercise Set 17</a></li>
+<li class="chapter" data-level="" data-path="exercise-set-18.html"><a href="exercise-set-18.html"><i class="fa fa-check"></i>Exercise Set 18</a></li>
 <li class="chapter" data-level="" data-path="notation.html"><a href="notation.html"><i class="fa fa-check"></i>Notation</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -378,36 +384,42 @@
 <div id="exercise-set-10" class="section level1 unnumbered hasAnchor">
 <h1>Exercise Set 10<a href="exercise-set-10.html#exercise-set-10" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <ol style="list-style-type: decimal">
-<li><p>Write the series
-<span class="math display">\[\begin{equation*}
-\frac{1}{1\cdot 2}+\frac{1}{2\cdot 3}+\frac{1}{3\cdot 4}+\frac{1}{4\cdot 5}+\frac{1}{5\cdot 6}
-\end{equation*}\]</span>
-using Sigma notation in the forms <span class="math inline">\(\displaystyle\sum_{k=1}^{n}(\dots)\)</span> and <span class="math inline">\(\displaystyle\sum_{l=0}^{m}(\dots)\)</span>.</p></li>
-<li><p>Evaluate <span class="math inline">\(\displaystyle\sum_{n=1}^{10}\frac{2}{3^n}\)</span> and <span class="math inline">\(\displaystyle\sum_{n=0}^{9}\frac{2}{3^n}\)</span> using the formula for the <span class="math inline">\(n^{\text{th}}\)</span> partial sum of a geometric series.</p></li>
-<li><p>Do the following geometric series converge or diverge? If they converge, find their sum.</p>
+<li><p>Find <span class="math inline">\(\dfrac{dy}{dx}\)</span> for the following by implicit differentiation.</p>
 <ol style="list-style-type: lower-alpha">
-<li><span class="math inline">\(\displaystyle\sum_{n=1}^{\infty}\frac{2}{3^n}\)</span></li>
-<li><span class="math inline">\(\displaystyle\sum_{n=1}^{\infty}(-1)^{n-1}\frac{1}{2^{n-1}}\)</span></li>
-<li><span class="math inline">\(\displaystyle\sum_{n=1}^{\infty}\left( \dfrac{\pi}{2}\right)^n\)</span></li>
+<li><span class="math inline">\(x^2y+3xy^3-x=3\)</span></li>
+<li><span class="math inline">\(\sin(x^2y^2)=x\)</span></li>
+<li><span class="math inline">\(xy^2=y+e^{xy}\)</span></li>
 </ol></li>
-<li><p>Find the <span class="math inline">\(3^{\text{rd}}\)</span> degree Taylor polynomials of the following functions.</p>
+<li><p>Consider the curve <span class="math inline">\(x^2+3xy+y^2+2x-7=0\)</span>. Use implicit differentiation to find <span class="math inline">\(\dfrac{dy}{dx}\)</span> and hence compute the equation of the tangent at the point <span class="math inline">\((1,1)\)</span>.</p></li>
+<li><p>Find the slope of the circle <span class="math inline">\(x^2+y^2=25\)</span> at the point <span class="math inline">\((-3,-4)\)</span>. Hence find the equations of the tangent and normal at that point.</p></li>
+<li><p>Find <span class="math inline">\(\dfrac{dy}{dx}\)</span> and <span class="math inline">\(\dfrac{d^2y}{dx^2}\)</span> for the following by implicit differentiation.</p>
 <ol style="list-style-type: lower-alpha">
-<li><span class="math inline">\(f(x)=2x^3-x^2+4x+5\)</span> at <span class="math inline">\(a=0\)</span></li>
-<li><span class="math inline">\(f(x)=\dfrac{1}{1+x}\)</span> at <span class="math inline">\(a=0\)</span>.</li>
-<li><span class="math inline">\(f(x)=\sqrt{x}\)</span> at <span class="math inline">\(a=1\)</span></li>
+<li><span class="math inline">\(y+\sin(y)=x\)</span></li>
+<li><span class="math inline">\(x^2-xy+y^2=3\)</span></li>
 </ol></li>
-<li><p>Derive the Taylor series for <span class="math inline">\(e^x\)</span> at <span class="math inline">\(a=0\)</span> (this converges for all <span class="math inline">\(x\)</span>).</p></li>
-<li><p>Derive the Taylor series for <span class="math inline">\(\sin(x)\)</span> at <span class="math inline">\(a=\dfrac{\pi}{2}\)</span> (this converges for all <span class="math inline">\(x\)</span>).</p></li>
-<li><p>From the Taylor series of <span class="math inline">\(f(x)=\ln(x+1)\)</span> at zero (this converges for <span class="math inline">\(-1 &lt; x \le 1\)</span>), show that:
-<span class="math display">\[\begin{equation*}
-\sum_{n=1}^{\infty}\frac{(-1)^{n+1}}{n}=\ln(2).
-\end{equation*}\]</span></p></li>
-<li><p>The Taylor series for <span class="math inline">\(\tan^{-1}\)</span> at zero is
-<span class="math display">\[\tan^{-1}(x) = \sum_{n=0}^\infty \frac{(-1)^n x^{2n+1}}{2n+1}\]</span>
-which converges for <span class="math inline">\(|x|\leq 1\)</span>. Use this to approximate <span class="math inline">\(\pi\)</span> (you could do this in MATLAB/Python using a for loop to easily experiment with the number of terms in the sum).</p></li>
-<li><p>Prove Euler’s formula for complex numbers using the Taylor series for <span class="math inline">\(e^x\)</span>, <span class="math inline">\(\cos(x)\)</span> and <span class="math inline">\(\sin(x)\)</span> at <span class="math inline">\(0\)</span>, .</p></li>
-<li><p>Find the Taylor series for <span class="math inline">\(\cos(x)\)</span> at zero by differentiating the Taylor series for <span class="math inline">\(\sin(x)\)</span> at zero term by term (we can differentiate any power series term by term for values of <span class="math inline">\(x\)</span> where the series converges).</p></li>
-<li><p>Find the Taylor series of <span class="math inline">\(\dfrac{1}{1-x}\)</span> at <span class="math inline">\(a=0\)</span> (this converges for <span class="math inline">\(|x|&lt;1\)</span>). Hence find the Taylor series of <span class="math inline">\(\dfrac{1}{(1-x)^2}\)</span> at <span class="math inline">\(a=0\)</span>.</p></li>
+<li><p>Find <span class="math inline">\(\dfrac{dy}{dx}\)</span> and <span class="math inline">\(\dfrac{d^2y}{dx^2}\)</span> for the following parametric equations.</p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(y=\cos(2t)\)</span> and <span class="math inline">\(x=\sin(t)\)</span></li>
+<li><span class="math inline">\(y=\dfrac{3+2t}{1+t}\)</span> and <span class="math inline">\(x=\dfrac{2-3t}{1+t}\)</span></li>
+<li><span class="math inline">\(y=3\sin(\theta)-\sin^3(\theta)\)</span> and <span class="math inline">\(x=\cos^3(\theta)\)</span></li>
+</ol></li>
+<li><p>Find the derivative of the following inverse functions by implicit differentiation.</p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(y=\sin^{-1}(x)\)</span></li>
+<li><span class="math inline">\(y=\cosh^{-1}(3x)\)</span></li>
+<li><span class="math inline">\(y=\tan^{-1}(4x^2)\)</span></li>
+</ol></li>
+<li><p>Find <span class="math inline">\(\dfrac{dy}{dx}\)</span> for the following using logarithmic differentiation.</p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(y=a^x\)</span></li>
+<li><span class="math inline">\(y=\dfrac{(x-4)^7(2x+3)^2}{(4x+7)^3}\)</span></li>
+</ol></li>
+<li><p>Find <span class="math inline">\(\dfrac{dy}{dx}\)</span> for the following.</p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(y=x^x\)</span></li>
+<li><span class="math inline">\(y=(\tanh(x))^x\)</span></li>
+<li><span class="math inline">\(x^3+\sin(xy)=xy^2\)</span></li>
+</ol></li>
 </ol>
 
 </div>

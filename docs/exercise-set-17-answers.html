@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Exercise Set 17 Answers | Mathematics for Scientists and Engineers</title>
   <meta name="description" content="Mathematics Lecture Notes for UoE Penryn Science and Engineering Disciplines." />
-  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Exercise Set 17 Answers | Mathematics for Scientists and Engineers" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Dr Mark Callaway" />
 
 
-<meta name="date" content="2023-09-14" />
+<meta name="date" content="2023-09-27" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -31,7 +31,7 @@
   
   
 <link rel="prev" href="exercise-set-17.html"/>
-<link rel="next" href="notation.html"/>
+<link rel="next" href="exercise-set-18.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -59,6 +59,10 @@
 
 
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -135,7 +139,8 @@
 <li class="chapter" data-level="3.3.1" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#simultaneous-linear-equations"><i class="fa fa-check"></i><b>3.3.1</b> Simultaneous linear equations</a></li>
 <li class="chapter" data-level="3.3.2" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#non-linear-simultaneous-equations"><i class="fa fa-check"></i><b>3.3.2</b> Non-linear simultaneous equations</a></li>
 </ul></li>
-<li class="chapter" data-level="3.4" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#inequalities-1"><i class="fa fa-check"></i><b>3.4</b> Inequalities</a></li>
+<li class="chapter" data-level="3.4" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#exponentials-and-logarithms"><i class="fa fa-check"></i><b>3.4</b> Exponentials and Logarithms</a></li>
+<li class="chapter" data-level="3.5" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#inequalities-1"><i class="fa fa-check"></i><b>3.5</b> Inequalities</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="trigonometry.html"><a href="trigonometry.html"><i class="fa fa-check"></i><b>4</b> Trigonometry</a>
 <ul>
@@ -353,6 +358,7 @@
 <li class="chapter" data-level="" data-path="exercise-set-15.html"><a href="exercise-set-15.html"><i class="fa fa-check"></i>Exercise Set 15</a></li>
 <li class="chapter" data-level="" data-path="exercise-set-16.html"><a href="exercise-set-16.html"><i class="fa fa-check"></i>Exercise Set 16</a></li>
 <li class="chapter" data-level="" data-path="exercise-set-17.html"><a href="exercise-set-17.html"><i class="fa fa-check"></i>Exercise Set 17</a></li>
+<li class="chapter" data-level="" data-path="exercise-set-18.html"><a href="exercise-set-18.html"><i class="fa fa-check"></i>Exercise Set 18</a></li>
 <li class="chapter" data-level="" data-path="notation.html"><a href="notation.html"><i class="fa fa-check"></i>Notation</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -378,572 +384,133 @@
 <div id="exercise-set-17-answers" class="section level1 unlisted unnumbered hasAnchor">
 <h1>Exercise Set 17 Answers<a href="exercise-set-17-answers.html#exercise-set-17-answers" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <ol style="list-style-type: decimal">
-<li><p>The following table contains students’ exam marks.</p>
-<table>
-<tbody>
-<tr class="odd">
-<td>75</td>
-<td>85</td>
-<td>59</td>
-<td>73</td>
-<td>88</td>
-<td>65</td>
-<td>60</td>
-<td>86</td>
-<td>72</td>
-<td>63</td>
-<td>78</td>
-<td>61</td>
-<td>75</td>
-<td>78</td>
-<td>74</td>
-<td>67</td>
-</tr>
-<tr class="even">
-<td>60</td>
-<td>68</td>
-<td>74</td>
-<td>66</td>
-<td>82</td>
-<td>78</td>
-<td>94</td>
-<td>73</td>
-<td>71</td>
-<td>83</td>
-<td>79</td>
-<td>96</td>
-<td>67</td>
-<td>62</td>
-<td>75</td>
-<td>81</td>
-</tr>
-<tr class="odd">
-<td>75</td>
-<td>71</td>
-<td>65</td>
-<td>79</td>
-<td>73</td>
-<td>80</td>
-<td>78</td>
-<td>72</td>
-<td>74</td>
-<td>53</td>
-<td>76</td>
-<td>65</td>
-<td>73</td>
-<td>67</td>
-<td>72</td>
-<td>63</td>
-</tr>
-</tbody>
-</table>
+<li><p>A normally distributed random variable <span class="math inline">\(X\)</span> has mean <span class="math inline">\(1\)</span> and variance <span class="math inline">\(4\)</span>. Using tables, find</p>
 <ol style="list-style-type: lower-alpha">
-<li>Create a frequency distribution table with classes 50-59, 60-69,… etc.</li>
-<li>Draw a histogram from the table.</li>
+<li><span class="math inline">\(P(X&gt;0)\)</span></li>
+<li><span class="math inline">\(P(X&lt;2)\)</span></li>
+<li><span class="math inline">\(P(|X|&lt;1)\)</span></li>
+<li>the value of <span class="math inline">\(c\)</span> such that <span class="math inline">\(P(X&lt;c)=0.0643\)</span></li>
+</ol>
+<p>Answers:</p>
+<p>Let <span class="math inline">\(Y = \frac{X - \mu}{\sigma}\)</span>, where <span class="math inline">\(\mu = 1\)</span> and <span class="math inline">\(\sigma = 2\)</span>. Therefore <span class="math inline">\(Y\)</span> is a standard normal random variable, and <span class="math inline">\(X = \sigma Y + \mu\)</span>.</p>
+<ol style="list-style-type: lower-alpha">
+<li><p><span class="math display">\[\begin{eqnarray*}
+P(X &gt; 0) &amp;=&amp; P([2 Y + 1] &gt; 0)\\
+&amp;=&amp; P(Y &gt; -1/2) \\
+&amp;=&amp; 1 - P(Y &gt; 1/2) \qquad \mbox{due to symmetry}\\
+&amp;=&amp; 1 - 0.3085 \qquad \mbox{from tables}\\
+&amp;=&amp; 0.692~\text{(3 s.f.)}
+\end{eqnarray*}\]</span></p></li>
+<li><p><span class="math display">\[\begin{eqnarray*}
+P(X &lt; 2) &amp;=&amp; P([2 Y + 1] &lt; 2)\\
+&amp;=&amp; P(Y &lt; 1/2) \\
+&amp;=&amp; 1 - P(Y &gt; 1/2) \qquad \mbox{due to symmetry}\\
+&amp;=&amp; 0.692~\text{(3 s.f.)}\qquad~\mbox{from tables}.
+\end{eqnarray*}\]</span></p></li>
+<li><p><span class="math display">\[\begin{eqnarray*}
+P(|X| &lt; 1) &amp;=&amp; P(-1 &lt; X &lt; 1)\\
+&amp;=&amp; P(-1 &lt; 2 Y + 1 &lt; 1)\\
+&amp;=&amp; P(-1 &lt; Y &lt; 0)\\
+&amp;=&amp; \frac{1}{2} - P(Y &gt; 1) \qquad \mbox{due to symmetry}\\
+&amp;=&amp; 0.5 - 0.1587 \qquad \mbox{from tables}\\
+&amp;=&amp; 0.341~\text{(3 s.f.)}.
+\end{eqnarray*}\]</span></p></li>
+<li><p><span class="math display">\[\begin{eqnarray*}
+P(X &lt; c) &amp;=&amp; P([2 Y + 1] &lt; c)\\
+&amp;=&amp; P(Y &lt; (c - 1) / 2)\\
+&amp;=&amp; P(Y &gt; (1 - c) / 2) \qquad \mbox{due to symmetry}.
+\end{eqnarray*}\]</span></p></li>
+</ol>
+<p>From tables we have that <span class="math inline">\(P(Y &gt; 1.52) = 0.0643\)</span>, and hence we want the value of <span class="math inline">\(c\)</span> such that</p>
+<p><span class="math display">\[\begin{eqnarray*}
+(1 - c) / 2 &amp;=&amp; 1.52\\
+c &amp;=&amp; -2.04.
+\end{eqnarray*}\]</span></p></li>
+<li><p>A normally distributed random variable <span class="math inline">\(X\)</span> has mean 1 and variance 5. Using tables, find:</p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(P(X &gt; 1)\)</span></li>
+<li><span class="math inline">\(P(|X| &lt; 0.1)\)</span></li>
+<li>The value of <span class="math inline">\(c\)</span> such that <span class="math inline">\(P(X &lt; c) = 0.01287\)</span></li>
 </ol>
 <p>Answers:</p>
 <ol style="list-style-type: lower-alpha">
-<li></li>
-</ol>
-<table>
-<thead>
-<tr class="header">
-<th>Class</th>
-<th>Frequency</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>50-59</td>
-<td>2</td>
-</tr>
-<tr class="even">
-<td>60-69</td>
-<td>14</td>
-</tr>
-<tr class="odd">
-<td>70-79</td>
-<td>23</td>
-</tr>
-<tr class="even">
-<td>80-89</td>
-<td>7</td>
-</tr>
-<tr class="odd">
-<td>90-99</td>
-<td>2</td>
-</tr>
-</tbody>
-</table>
-<ol style="list-style-type: lower-alpha">
-<li></li>
+<li><p><span class="math display">\[\begin{eqnarray*}
+P(X &gt; 1) &amp;=&amp; P(Z &gt; \frac{1 - 1}{\sqrt{5}}) \quad \mbox{where $Z \sim N(0, 1)$}\\
+&amp;=&amp; P(Z &gt; 0) \\
+&amp;=&amp; 0.5 \quad \mbox{from tables}.
+\end{eqnarray*}\]</span>
+(Or could answer this by noting a symmetry argument with <span class="math inline">\(E(X) = 1\)</span> and therefore by definition <span class="math inline">\(P(X &gt; 1) = 0.5\)</span> since the normal distribution is symmetric about the mean.)</p></li>
+<li><p><span class="math display">\[\begin{eqnarray*}
+P(|X| &lt; 0.1) &amp;=&amp; P(-0.1 &lt; X &lt; 0.1)\\
+&amp;=&amp; P(\frac{-0.1 - 1}{\sqrt{5}} &lt; Z &lt; \frac{0.1 - 1}{\sqrt{5}}) \quad \mbox{where $Z \sim N(0, 1)$}\\
+&amp;=&amp; P(-0.4919 &lt; Z &lt; -0.4025)\\
+&amp;=&amp; P(Z &gt; 0.4025) - P(Z &gt; 0.4919) \quad \mbox{by symmetry}.
+\end{eqnarray*}\]</span>
+To calculate <span class="math inline">\(P(Z &gt; 0.4025)\)</span> and <span class="math inline">\(P(Z &gt; 0.4919)\)</span> we need to use linear interpolation. Firstly, we note that <span class="math inline">\(P(Z &gt; 0.40) = 0.3446\)</span> and <span class="math inline">\(P(Z &gt; 0.41) = 0.3409\)</span>, and therefore
+<span class="math display">\[\begin{eqnarray*}
+P(Z &gt; 0.4025) &amp;=&amp; P(Z &gt; 0.40) - \frac{0.4025 - 0.4}{0.41 - 0.4}\left[P(Z &gt; 0.40) - P(Z &gt; 0.41)\right]\\
+&amp;=&amp; 0.3446 - 0.25 \times 0.0037\\
+&amp;=&amp; 0.3437~\text{(4 s.f.)}.
+\end{eqnarray*}\]</span>
+Secondly, we note that <span class="math inline">\(P(Z &gt; 0.49) = 0.3121\)</span> and <span class="math inline">\(P(Z &gt; 0.5) = 0.3085\)</span>, and therefore
+<span class="math display">\[\begin{eqnarray*}
+P(Z &gt; 0.4919) &amp;=&amp; P(Z &gt; 0.49) - \frac{0.4919 - 0.49}{0.5 - 0.49}\left[P(Z &gt; 0.49) - P(Z &gt; 0.5)\right]\\
+&amp;=&amp; 0.3121 - 0.19 \times 0.0036\\
+&amp;=&amp; 0.3114~\text{(4 s.f.)}.
+\end{eqnarray*}\]</span>
+Therefore,
+<span class="math display">\[
+P(|X| &lt; 0.1) = P(Z &gt; 0.4025) - P(Z &gt; 0.4919) = 0.3437 - 0.3114 = 0.0323~\text{(4 s.f.)}.
+\]</span></p></li>
+<li><p>From tables we have that <span class="math inline">\(P(Z &gt; 2.23) = 0.01287\)</span> and so by symmetry <span class="math inline">\(P(Z &lt; -2.23) = 0.01287\)</span>. Therefore,
+<span class="math display">\[
+P(X &lt; c) = P\left(Z &lt; \frac{c - 1}{\sqrt{5}}\right),
+\]</span>
+and this implies that
+<span class="math display">\[\begin{eqnarray*}
+\frac{c - 1}{\sqrt{5}} &amp;=&amp; -2.23\\
+c &amp;=&amp; -2.23 \times \sqrt{5} + 1\\
+&amp;=&amp; -3.986~\text{(4 s.f.)}.
+\end{eqnarray*}\]</span></p></li>
 </ol></li>
-</ol>
-<p><img src="maths-notes_files/figure-html/markshisto-1.png" width="672" style="display: block; margin: auto;" /></p>
-<ol style="list-style-type: decimal">
-<li><p>The following table shows the results of 178 measurements of the carbon content of a mixed powder fed to a plant over a period of one month.</p>
-<table>
-<thead>
-<tr class="header">
-<th>Range of values of Carbon (%)</th>
-<th>Frequency</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>4.10-4.19</td>
-<td>1</td>
-</tr>
-<tr class="even">
-<td>4.20-4.29</td>
-<td>2</td>
-</tr>
-<tr class="odd">
-<td>4.30-4.39</td>
-<td>7</td>
-</tr>
-<tr class="even">
-<td>4.40-4.49</td>
-<td>20</td>
-</tr>
-<tr class="odd">
-<td>4.50-4.59</td>
-<td>24</td>
-</tr>
-<tr class="even">
-<td>4.60-4.69</td>
-<td>31</td>
-</tr>
-<tr class="odd">
-<td>4.70-4.79</td>
-<td>38</td>
-</tr>
-<tr class="even">
-<td>4.80-4.89</td>
-<td>24</td>
-</tr>
-<tr class="odd">
-<td>4.90-4.99</td>
-<td>21</td>
-</tr>
-<tr class="even">
-<td>5.00-5.09</td>
-<td>7</td>
-</tr>
-<tr class="odd">
-<td>5.10-5.19</td>
-<td>3</td>
-</tr>
-<tr class="even">
-<td><strong>Total</strong></td>
-<td><strong>178</strong></td>
-</tr>
-</tbody>
-</table>
-<p>From this frequency distribution, construct:</p>
-<ol style="list-style-type: lower-alpha">
-<li>a histogram</li>
-<li>a frequency polygon</li>
-<li>an ogive</li>
-</ol>
-<p>From the ogive, estimate the percentage of measurements showing a carbon content below 5.00%.</p>
+<li><p>A thermostat is set to switch at <span class="math inline">\(20^\circ\,\text{C}\)</span> operates in a range of temperatures with a mean value of <span class="math inline">\(20.4^\circ\,\text{C}\)</span> and a standard deviation of <span class="math inline">\(1.3^\circ\,\text{C}\)</span>. What is the probability that its operating temperature will fall between <span class="math inline">\(19.5^\circ\,\text{C}\)</span> and <span class="math inline">\(20.5^\circ\,\text{C}\)</span>?</p>
 <p>Answers:</p>
+<p>The operating temperature is a normal random variable <span class="math inline">\(X\)</span> with mean <span class="math inline">\(\mu=20.4\)</span> and standard deviation <span class="math inline">\(\sigma=1.3\)</span>. We are looking for <span class="math inline">\(P(19.5&lt;X&lt;20.5)\)</span>. The equivalent probability of a standard normal random variable <span class="math inline">\(Z\)</span> is given by the limits
+<span class="math display">\[ z_1 = \frac{19.5 - 20.4}{1.3}=-0.69 \quad\text{and}\quad z_2=\frac{20.5-20.4}{1.3}=0.08\]</span>
+that is <span class="math inline">\(P(-0.69&lt; Z &lt;0.08)\)</span>.
+Using standard normal distribution tables:
+<span class="math display">\[\begin{align*}
+P(-0.69&lt; Z &lt;0.08)&amp;=P(0&lt;Z&lt;0.69)+P(0&lt;Z&lt;0.08)\\
+&amp;= 0.2549 + 0.0319\\
+&amp;= 0.2868.
+\end{align*}\]</span></p></li>
+<li><p>The life of a drill has a mean of 16 hours and a standard deviation of 2.6 hours. Assuming it is normally distributed determine the probability of a bit lasting</p>
 <ol style="list-style-type: lower-alpha">
-<li><p><img src="maths-notes_files/figure-html/powderhisto-1.png" width="672" style="display: block; margin: auto;" /></p></li>
-<li><p><img src="maths-notes_files/figure-html/powderpoly-1.png" width="672" style="display: block; margin: auto;" /></p></li>
-<li><p><img src="maths-notes_files/figure-html/powderogive-1.png" width="672" style="display: block; margin: auto;" /></p></li>
+<li>More than 20 hours.</li>
+<li>Less than 14 hours.</li>
+</ol>
+<p>Answers:</p>
+<p>The time is a normal random variable <span class="math inline">\(X\)</span> with mean <span class="math inline">\(\mu=16\)</span> and standard deviation <span class="math inline">\(\sigma=2.6\)</span>.</p>
+<ol style="list-style-type: lower-alpha">
+<li><p><span class="math inline">\(P(X&gt;20)\)</span>. The equivalent probability of a standard normal random variable <span class="math inline">\(Z\)</span> is given by the limit
+<span class="math display">\[ z = \frac{20 - 16}{2.6}=1.54\]</span>
+that is <span class="math inline">\(P(Z &gt;1.54)\)</span>.
+Using standard normal distribution tables:
+<span class="math display">\[\begin{align*}
+P(Z&gt;1.54)&amp;=1-(P(0&lt;Z&lt;1.54)+0.5)\\
+&amp;= 0.5 - 0.4382\\
+&amp;= 0.0618.
+\end{align*}\]</span></p></li>
+<li><p><span class="math inline">\(P(X&lt;14)\)</span>. The equivalent probability of a standard normal random variable <span class="math inline">\(Z\)</span> is given by the limit
+<span class="math display">\[ z = \frac{14 - 16}{2.6}=-0.77\]</span>
+that is <span class="math inline">\(P(Z &lt;-0.77)\)</span>.
+Using standard normal distribution tables:
+<span class="math display">\[\begin{align*}
+P(Z&lt;-0.77)&amp;=1-(P(0&lt;Z&lt;0.77)+0.5)\\
+&amp;= 0.5 - 0.2794\\
+&amp;= 0.2206.
+\end{align*}\]</span></p></li>
 </ol></li>
-</ol>
-<p>Approximately 169 samples have a carbon content less than 5%.</p>
-<ol style="list-style-type: decimal">
-<li><p>The following numbers are the marks obtained by 50 students in an
-examination:</p>
-<table>
-<tbody>
-<tr class="odd">
-<td>57</td>
-<td>60</td>
-<td>37</td>
-<td>74</td>
-<td>62</td>
-<td>40</td>
-<td>56</td>
-<td>59</td>
-<td>80</td>
-<td>60</td>
-</tr>
-<tr class="even">
-<td>62</td>
-<td>94</td>
-<td>78</td>
-<td>73</td>
-<td>56</td>
-<td>68</td>
-<td>67</td>
-<td>79</td>
-<td>83</td>
-<td>87</td>
-</tr>
-<tr class="odd">
-<td>90</td>
-<td>93</td>
-<td>58</td>
-<td>46</td>
-<td>77</td>
-<td>63</td>
-<td>66</td>
-<td>66</td>
-<td>56</td>
-<td>71</td>
-</tr>
-<tr class="even">
-<td>51</td>
-<td>77</td>
-<td>53</td>
-<td>69</td>
-<td>70</td>
-<td>69</td>
-<td>70</td>
-<td>70</td>
-<td>47</td>
-<td>54</td>
-</tr>
-<tr class="odd">
-<td>49</td>
-<td>54</td>
-<td>68</td>
-<td>35</td>
-<td>64</td>
-<td>67</td>
-<td>76</td>
-<td>73</td>
-<td>68</td>
-<td>61</td>
-</tr>
-</tbody>
-</table>
-<ol style="list-style-type: lower-alpha">
-<li>Reduce these marks to a frequency distribution, with equal class widths, having as the first interval 35-44 inclusive. Draw an ogive for the distribution.</li>
-<li>Using the graph, what is the median mark?</li>
-<li>Use your graph to estimate what % of students pass the examination if the pass mark is 55.</li>
-</ol>
-<p>Answers:</p>
-<ol style="list-style-type: lower-alpha">
-<li></li>
-</ol>
-<table>
-<thead>
-<tr class="header">
-<th>Class</th>
-<th>Frequency</th>
-<th>Cumulative Frequency</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>35-44</td>
-<td>3</td>
-<td>3</td>
-</tr>
-<tr class="even">
-<td>45-54</td>
-<td>7</td>
-<td>10</td>
-</tr>
-<tr class="odd">
-<td>55-64</td>
-<td>13</td>
-<td>23</td>
-</tr>
-<tr class="even">
-<td>65-74</td>
-<td>16</td>
-<td>39</td>
-</tr>
-<tr class="odd">
-<td>75-84</td>
-<td>7</td>
-<td>46</td>
-</tr>
-<tr class="even">
-<td>85-94</td>
-<td>4</td>
-<td>50</td>
-</tr>
-</tbody>
-</table>
-<ol style="list-style-type: lower-alpha">
-<li><p><img src="maths-notes_files/figure-html/examogive-1.png" width="672" style="display: block; margin: auto;" /></p></li>
-<li><p>The median can be estimated by drawing a horizontal line from the vertical axis at <span class="math inline">\(50/2=25\)</span> and reading of the corresponding value on the horiztonal axis (blue lines on the plot above). We find the median is approximately 66.</p></li>
-<li><p>Drawing a vertical line from 55 to the curve and reading from the vertical axis gives the cumulative frequency up to 55 marks as approximately 11 students (red lines on the plot above). Therefore <span class="math inline">\(50-11=39\)</span> students pass. As a percentage, we have <span class="math inline">\(39/50 \times 100= 78\%\)</span>.</p></li>
-</ol></li>
-<li><p>A sample of underweight babies was fed a special diet and the following weight gains (lbs) were observed at the end of three months: 6.7, 2.7, 2.5, 3.6, 3.4, 4.1, 4.8, 5.9, 8.3. What are the mean and standard deviation?</p>
-<p>Answer:</p>
-<p><span class="math inline">\(\bar{x} = 4.67\)</span>, <span class="math inline">\(S= 1.95\)</span> lbs.</p></li>
-<li><p>In an examination, the marks awarded to the first 40 scripts were:</p>
-<p>32, 57, 43, 65, 28, 60, 47, 52, 39, 48, 25, 53, 47, 52, 62, 31, 38, 46, 72, 51, 29, 45, 54, 48, 50, 66, 63, 36, 23, 43, 32, 39, 58, 55, 29, 48, 37, 43, 54, 40.</p>
-<ol style="list-style-type: lower-alpha">
-<li>Taking classes 14.5-24.5, 24.5-34.5, 34.5-44.5 etc, draw up a frequency distribution table for the marks. Also estimate the relative frequency, cumulative frequency and relative cumulative frequency.</li>
-<li>Draw a histogram, frequency polygon and ogive for this frequency distribution.</li>
-<li>From the frequency table, estimate the mean, variance and standard deviation of the marks.</li>
-</ol>
-<p>Answers:</p></li>
-</ol>
-<p>Frequency distribution:</p>
-<table>
-<caption>
-<span id="tab:examtable">Table 22.1: </span>Frequency Table
-</caption>
-<thead>
-<tr>
-<th style="text-align:left;">
-Class
-</th>
-<th style="text-align:right;">
-Frequency
-</th>
-<th style="text-align:right;">
-Relative Frequency
-</th>
-<th style="text-align:right;">
-Cumulative Frequency
-</th>
-<th style="text-align:right;">
-Relative Cumulative Frequency
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;">
-(14.5,24.5]
-</td>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:right;">
-0.025
-</td>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:right;">
-0.025
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-(24.5,34.5]
-</td>
-<td style="text-align:right;">
-7
-</td>
-<td style="text-align:right;">
-0.175
-</td>
-<td style="text-align:right;">
-8
-</td>
-<td style="text-align:right;">
-0.200
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-(34.5,44.5]
-</td>
-<td style="text-align:right;">
-9
-</td>
-<td style="text-align:right;">
-0.225
-</td>
-<td style="text-align:right;">
-17
-</td>
-<td style="text-align:right;">
-0.425
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-(44.5,54.5]
-</td>
-<td style="text-align:right;">
-14
-</td>
-<td style="text-align:right;">
-0.350
-</td>
-<td style="text-align:right;">
-31
-</td>
-<td style="text-align:right;">
-0.775
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-(54.5,64.5]
-</td>
-<td style="text-align:right;">
-6
-</td>
-<td style="text-align:right;">
-0.150
-</td>
-<td style="text-align:right;">
-37
-</td>
-<td style="text-align:right;">
-0.925
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-(64.5,74.5]
-</td>
-<td style="text-align:right;">
-3
-</td>
-<td style="text-align:right;">
-0.075
-</td>
-<td style="text-align:right;">
-40
-</td>
-<td style="text-align:right;">
-1.000
-</td>
-</tr>
-</tbody>
-</table>
-<p>Plots:</p>
-<p><img src="maths-notes_files/figure-html/exmhisto-1.png" width="672" style="display: block; margin: auto;" /><img src="maths-notes_files/figure-html/exmhisto-2.png" width="672" style="display: block; margin: auto;" /><img src="maths-notes_files/figure-html/exmhisto-3.png" width="672" style="display: block; margin: auto;" /></p>
-<p>Table to calculate mean, variance and standard deviation:</p>
-<table style="width:100%;">
-<colgroup>
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Class</th>
-<th>Midpoint <span class="math inline">\(x\)</span></th>
-<th>Frequency <span class="math inline">\(f\)</span></th>
-<th><span class="math inline">\(xf\)</span></th>
-<th><span class="math inline">\(x-\bar{x}\)</span></th>
-<th><span class="math inline">\((x-\bar{x})^2\)</span></th>
-<th><span class="math inline">\(f(x-\bar{x})^2\)</span></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>14.5-24.5</td>
-<td>19.5</td>
-<td>1</td>
-<td>19.5</td>
-<td>-26.5</td>
-<td>702.25</td>
-<td>702.25</td>
-</tr>
-<tr class="even">
-<td>24.5-34.5</td>
-<td>29.5</td>
-<td>7</td>
-<td>206.5</td>
-<td>-16.5</td>
-<td>272.25</td>
-<td>1905.75</td>
-</tr>
-<tr class="odd">
-<td>34.5-44.5</td>
-<td>39.5</td>
-<td>9</td>
-<td>355.5</td>
-<td>-6.5</td>
-<td>42.25</td>
-<td>380.25</td>
-</tr>
-<tr class="even">
-<td>44.5-54.5</td>
-<td>49.5</td>
-<td>14</td>
-<td>693</td>
-<td>3.5</td>
-<td>12.25</td>
-<td>171.5</td>
-</tr>
-<tr class="odd">
-<td>54.5-64.5</td>
-<td>59.5</td>
-<td>6</td>
-<td>357</td>
-<td>13.5</td>
-<td>182.25</td>
-<td>1093.5</td>
-</tr>
-<tr class="even">
-<td>64.5-74.5</td>
-<td>69.5</td>
-<td>3</td>
-<td>208.5</td>
-<td>23.5</td>
-<td>552.25</td>
-<td>1656.75</td>
-</tr>
-<tr class="odd">
-<td><strong>Total</strong></td>
-<td></td>
-<td>40</td>
-<td>1840</td>
-<td></td>
-<td></td>
-<td>5910</td>
-</tr>
-</tbody>
-</table>
-<p><span class="math inline">\(\bar{x}=\frac{1}{N}\sum_x xf=\frac{1}{40}\times 1840 = 46\)</span></p>
-<p><span class="math inline">\(S^2=\frac{1}{N-1}\sum_x f(x-\bar{x})^2 = \frac{1}{39}\times 5910=151.54\)</span></p>
-<p><span class="math inline">\(S=\sqrt{S^2}=\sqrt{151.54}=12.31\)</span></p>
-<ol style="list-style-type: decimal">
-<li><p>A city has been criticized for its excessive discharges of untreated sewage into the nearby river. A microbiologist take 45 samples of water downstream from the treated sewage outlet and measures the number of bacteria present. A summary table is as follows:</p>
-<table>
-<thead>
-<tr class="header">
-<th>Number of Bacteria</th>
-<th>Number of Samples</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>20-30</td>
-<td>5</td>
-</tr>
-<tr class="even">
-<td>30-40</td>
-<td>20</td>
-</tr>
-<tr class="odd">
-<td>40-50</td>
-<td>15</td>
-</tr>
-<tr class="even">
-<td>50-60</td>
-<td>5</td>
-</tr>
-</tbody>
-</table>
-<p>What are the <span class="math inline">\(25^{\text{th}}\)</span> and <span class="math inline">\(75^{\text{th}}\)</span> percentiles?</p>
-<p>Answers:</p>
-<p>Note <span class="math inline">\(P_{25}=Q_1\)</span> and <span class="math inline">\(P_{75}=Q_3\)</span>.</p>
-<p><span class="math inline">\(Q_1\)</span> is between item 11 and 12, which lies in class 30-40. Within this class, there are 6 values before <span class="math inline">\(Q_1\)</span> and 14 values after: that is, <span class="math inline">\(\frac{3}{10}\)</span> of the interval lies before and <span class="math inline">\(\frac{7}{10}\)</span> after. The class width is 10. Therefore, <span class="math inline">\(Q_1=30+3=33\)</span>.</p>
-<p><span class="math inline">\(Q_3\)</span> is between item 34 and 35, which lies in class 40-50. Within this class, there are 9 values before <span class="math inline">\(Q_3\)</span> and 6 values after: that is, <span class="math inline">\(\frac{6}{10}\)</span> of the interval lies before and <span class="math inline">\(\frac{4}{10}\)</span> after. The class width is 10. Therefore, <span class="math inline">\(Q_3=40+6=46\)</span>.</p></li>
 </ol>
 
 </div>
@@ -953,7 +520,7 @@ Relative Cumulative Frequency
         </div>
       </div>
 <a href="exercise-set-17.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="notation.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="exercise-set-18.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

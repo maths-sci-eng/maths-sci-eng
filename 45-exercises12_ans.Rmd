@@ -1,127 +1,167 @@
 # Exercise Set 12 Answers {.unlisted .unnumbered}
 
-1. Determine the following integrals by making use of trigonometric or hyperbolic identities.
-    a. $\displaystyle \int_0^{\pi/4}4\sin(3\theta)\cos(\theta)d\theta$
-    a. $\displaystyle \int \left( \cos\left(\frac{x}{2}\right) - \sin\left(\frac{x}{2}\right)\right)^2 \, dx$
-    a. $\displaystyle \int \sin^3(x)\, dx$
-    a. $\displaystyle \int \frac{ \cos(2x)} { \cos^2(x) \sin^2(x)} \, dx$
-    a. $\displaystyle \int \cos(x) \sin(2x) \, dx$
-    a. $\displaystyle \int \tan(2x) \,dx$
-    a. $\displaystyle \int \sinh^3(x) \cosh^2(x)$
+1. Determine the following indefinite integrals
+    a. $\int 2x^7\; dx$
+    a. $\int 5x^2+2x-1 \; dx$
+    a. $\int \sin(\theta)+\cos(\theta) \; d\theta$
+    a. $\int 3e^t + \frac{2}{t} \; d t$
+    a. $\int x^\frac{1}{2} \; dx$
 
     Answers:
-    a. $$\int_0^{\frac{\pi}{4}}4\sin(3\theta)\cos(\theta)\, d\theta$$
-    Use the product to sum trigonometric identity: $\sin(A)\cos(B) = \frac{1}{2}\left(\sin(A+B) + \sin(A+B)\right)$.
-    \begin{align*}
-    2\int_0^{\frac{\pi}{4}}\sin(4\theta) + \sin(2\theta)\, d\theta &= 2\left[\frac{-\cos(4\theta)}{4} + \frac{-\cos(2\theta)}{2}\right]_0^{\frac{\pi}{4}}\\
-    & = 2\left(\frac{1}{4} - 0 + \frac{1}{4}+\frac{1}{2}\right)\\
-    & = 2
-    \end{align*}
-    a. \begin{align*}
-    \int \left( \cos \frac{x}{2} - \sin \frac{x}{2}\right)^2 \, dx &=  \int \left(\cos^2 \frac{x}{2}+\sin^2 \frac{x}{2}- \sin x \right) \, dx\\
-    &= \int \left(1 - \sin x \right) \, dx\\
-    &=  x+\cos x+ C
-    \end{align*}
-    a. \begin{align*}
-    \int \sin^3 x \, dx &= \int \sin x (1 - \cos^2 x) \, dx\\
-    & =  -\cos x + \frac{1}{3} \cos^3 x + C
-    \end{align*}
-    a. \begin{align*}
-    \int \frac{ \cos 2x} { \cos^2 x \sin^2 x} \, dx&= \int \frac{\cos^2x - \sin^2 x} { \cos^2 x \sin^2 x} \, dx\\
-    &=\int \left( \frac{1} { \sin^2 x } - \frac{1} { \cos^2 x} \right) \, dx\\
-    &= -\cot x -\tan x+C
-    \end{align*}
-    a. \begin{align*}
-    \int \cos x \sin 2x \, dx = \int 2 \sin x \cos^2 x  \, dx = -{2 \over 3} \cos^3 x + C
-    \end{align*}
-    Having used $\sin(2x) = 2\sin(x)\cos(x)$ and using reverse chain rule, identifying that the integral was of the form $g'(x)f'(g(x))$, with $g'(x) = \cos(x)$, $f'(x) = \cos^2(x)$, $\int g'(x)f'(g(x))\, dx = f(g(x))$, since $\frac{d}{dx} (f(g(x))) = g'(x)f'(g(x))$.
-    Or, can use the product to sum identity again:
-    $$\int \cos x \sin 2x \, dx = \int \frac{1}{2} (\sin 3 x +\sin x) \, dx = - \frac{1}{6} \cos 3x - {1 \over 2} \cos x + C.$$
-    a. $$\int \tan 2x \,dx =  - {1  \over 2} \ln \vert \cos 2x \vert  + C = {1 \over 2} \ln \vert \sec 2 x \vert +C$$
-    Where $\int\tan(x)dx$ can be solved with substitution, by letting $t =\cos(t)$ and $dx = \frac{dt}{-\sin(x)}$, so $\int \frac{-1}{t}\, dt = -\ln(t) + C = \ln(\csc(x)) + c$. Alternatively, the integral of $\tan(x)$ can be identified as reverse chain rule: $\int g'(x)f'(g(x))\,dx = f(g(x))$.
-    a. \begin{align*}
-    \int \sinh^3 x \cosh^2 x \, dx &= \int \sinh x (\cosh^2 x - 1) \cosh^2 x \, dx\\
-    &= - {1 \over 3} \cosh^3 x +{1 \over 5} \cosh^5 x +C
-    \end{align*}
-    having used $\sinh^2(x) = 1 - \cosh^2(x)$ and reverse chain rule, or substitution with $u = \cosh(x)$ and $du = \sinh(x)dx$.
+    a. $\int 2x^7 \; dx = \frac{1}{4}x^8 + c$
+    a. $\int 5x^2 + 2x-1\; dx = \frac{5}{3}x^3 + x^2 - x + c$
+    a. $\int \sin(\theta)+\cos(\theta) \; d\theta = -\cos(\theta) + \sin(\theta) + c$
+    a. $\int 3e^t + \frac{2}{t} \; dt = 3e^t + 2\ln(t) + c$
+    a. $\int x^\frac{1}{2} \; dx = \frac{2}{3}x^{\frac{3}{2}} + c$
     
-1. Determine the following integrals using the method of partial fractions.
-    a. $\displaystyle \int \frac{1}{x^2+x-6} \, dx$
-    a. $\displaystyle \int \frac{-12u-13}{(2u+1)(u-3)} \, du$
-    a. $\displaystyle \int \frac{4x^2+13x-4}{2x^2+5x-3}\, dx$
-    a. $\displaystyle \int \frac{x^3}{x^2-1}\, dx$
-    a. $\displaystyle \int \frac{x^5-2x^2}{x^2-1} \, dx$
-    a. $\displaystyle \int \frac{z+1}{(z-1)^2} \, dz$
-    a. $\displaystyle \int \frac{5y^2}{(y^2+1)(2y-1)} \, dy$
+1. Determine the following definite integrals
+    a. $\int_0^2 x^2-2x\; dx$
+    a. $\int_4^{16} \frac{2}{\sqrt{x}} \; dx$
+    a. $\int_{-r}^r \frac{mx^2}{2r}\: dx$
+    a. $\int_{-\frac{\pi}{2}}^\frac{\pi}{2}\cos(x)\; dx$
+    a. $\int_{\ln(2)}^{\ln(3)} e^x\; dx$
+    
+    Answers:
+    a. $\int_0^2 x^2-2x\; dx = \left[\frac{x^3}{3} - x^2\right]_0^2 = \left(\frac{2^3}{3} - 2^2\right) - 0 = -\frac{4}{3}$
+    a. $\int_4^{16} \frac{2}{\sqrt{x}} \; dx = \int_4^16 2x^{-\frac{1}{2}}\;dx = \left[4x^{\frac{1}{2}}\right]_4^16 = 16 - 8 = 8$
+    a. Note that the limit, $r$, appears inside the integral, but it is just a constant. It is explicitly taken out of the integral here
+    $\int_{-r}^r \frac{mx^2}{2r}\:dx = \frac{m}{2r}\int_{-r}^r x^2 \: dx = \frac{m}{2r}\left[\frac{1}{3}x^3\right]_{-r}^r = \frac{m}{2r}\left(\frac{r^3}{3} + \frac{r^3}{3}\right) = \frac{mr^2}{3}$
+    a. $\int_{-\frac{\pi}{2}}^\frac{\pi}{2}\cos(x)\; dx = \left[\sin(x)\right]_{-\frac{\pi}{2}}^\frac{\pi}{2} = \sin(\pi/2) - \sin(\pi/2) = 2$
+    a. $\int_{\ln(2)}^{\ln(3)} e^x\; dx = \left[e^x\right]_{\ln(2)}^{\ln(3)} = e^{\ln(3)} - e^{\ln(2)} = 3-2 = 1$
+    
+
+1. Find the area between the curve and the $x$-axis of the function $f(x)=x^3-x$ and the lines $x=0$ and $x=2$.
+
+    Answer:
+
+    We are looking for the area enclosed by the function and the $x$-axis, but we cannot simply take the definite integral from $0$ to $2$ as the function is negative at some points on this interval.
+
+    The roots of $f(x)=x^3-x=x(x+1)(x-1)$ are $-1,0,1$ and these are where the function changes sign. We can plug in values between the roots to see where $f(x)$ is positive and where it is negative. Since we are interested in the interval from $0$ to $2$ we check $f(0.5)=-3.75$ and $f(2)=6$. So the area will be given by
+    $$A=\int_0^1 -f(x)\, dx + \int_1^2 f(x)\, dx.$$
+    Hence
+    $$A=\left[-\frac{1}{4}x^4 + \frac{1}{2}x^2\right]_0^1 + \left[\frac{1}{4}x^4 - \frac{1}{2}x^2\right]_1^2 = (\frac{1}{4}-0) + (2 - (-1/4)) = \frac{5}{2}.$$
+
+1. The velocity $v$ ($\text{ms}^{-1}$) of a particle moving in a straight line at time $t$ ($\text{s}$) is given by:
+    $$v=6t^2-30t-36\quad t>0$$
+    By integrating, find the distance travelled by the particle between $t=3$ and $t=5$ seconds.
+
+    Answer:
+
+    $$\int_3^5 6t^2 - 30t - 36\: dt = \left[2t^3 - 15t^2 - 36t\right]_3^5 = -116$$
+    Since we are looking for a distance, we take the absolute value: $116\text{m}$.
+    
+1. Find the following integrals using a suitable substitution.
+    a. $\int (4x-3)^5 \; dx$
+    a. $\int 4\sin(3x+2)\; dx$
+    a. $\int_2^5 \frac{1}{1-2x} \; dx$
+    a. $\int \frac{1}{\sqrt{(5-3x)^3}}\; dx$
+    a. $\int \frac{4x}{\sqrt{(x^2+3)^3}}\; dx$
+    a. $\int 2xe^{x^2-5}\; dx$
+    a. $\int \frac{\sin(\sqrt{x})}{\sqrt{x}}\; dx$
+    a. $\int \cos(\theta)\sin(\theta)\; d\theta$
+    a. $\int \frac{\cos(x)}{1+\sin(x)}\; dx$
 
     Answers:
-    a. $$\frac{1}{x^2+x-6} = \frac{1}{(x+3)(x-2)} = \frac{A}{x+3}+\frac{B}{x-2} \frac{A(x-2) + B(x+3)}{(x+3)(x-2)}$$
-    Equating the powers of $x$ and solving the resulting simultaneous equations gives $A + B = 0$ and $3B-2A = 1$, so $A = -\frac{1}{5}. B = \frac{1}{5}$. So
-    $$\int\frac{1}{x^2+x-6}\,dx = \int \frac{-1}{5(x+3)} + \frac{1}{5(x-2)}\, dx = -\frac{1}{5}\ln(x+3) + \frac{1}{5}\ln(x-2) + c$$
-    a. $$\frac{-12u - 13}{(2u+1)(u-3)} = \frac{A}{2u+1} + \frac{B}{u-3} = \frac{A(u-3) + B(2u+1)}{(2u+1)(u-3)}$$
-    With the numerator given two simultaneous equations solved by $A=2,B=-7$. So
-    $$\int\frac{-12u-13}{(2u+1)(u-3)}\,du = \int \frac{2}{2u+1} + \frac{-7}{u-2}\,du = \ln(2u+1) - 7\ln(u-3) + c$$
-    a. $$\frac{4x^2 + 13x - 4}{2x^2 + 5x - 3} = \frac{A}{2x-1} + \frac{B}{x+3} + C$$
-    Since the order of the numerator is equal to the order of the denominator, a constant term must be included. This gives three equations in $A,B,C$, which are solved by $A=1,B=1,C=2$. So
+
+    a. $\int (4x-3)^5\:dx$. Let $u=4x-3$, so $\frac{du}{dx}=4 \Rightarrow dx = \frac{1}{4}du$
+    $$
+    \int (4x-3)^5\;dx = \int u^5 \frac{1}{4}du =\frac{u^6}{24} +c = \frac{(4x-3)^6}{24} + c$$
+    a. $\int 4\sin(3x+2)\;dx$. Let $u=3x+2$, so $\frac{du}{dx} = 3 \Rightarrow dx = \frac{1}{3}du$,
+    $$
+    \int 4\sin(3x+2)\;dx = \frac{4}{3}\int\sin(u)\:du = -\frac{4}{3}\cos(u) + c = -\frac{4}{3}\cos(3x+2) + c
+    $$
+    a. $\int_2^5\frac{1}{1-2x}\:dx$. Let $u=1-2x$, so $\frac{du}{dx} = -2 \Rightarrow dx = -\frac{1}{2}du$. This is a definite integral, so the limits must also be given in terms of u:
     \begin{align*}
-    \int\frac{4x^2 + 13x - 4}{2x^2 + 5x - 3}\, dx &= \int \frac{1}{2x-2} + \frac{1}{x+3} + 2 \, dx\\
-    &= \frac{1}{2}\ln(2x-1) + \ln(x+3) + 2x + c
+    \int_{x=2}^{x=5} \frac{1}{1-2x}\:dx &= -\frac{1}{2}\int_{u=-3}^{u=5}\frac{du}{u} = -\frac{1}{2}\left[\ln(u)\right]_{-3}^{-9}\\
+    &= -\frac{1}{2}(\ln(-9) - \ln(-3)) = -\frac{1}{2}\ln\left(\frac{-9}{-3}\right) = -\frac{1}{2}\ln(3)
     \end{align*}
-    a. $$\frac{x^3}{x^2-1} = \frac{x^3}{(x+1)(x-1)} = \frac{A}{x+1} + \frac{B}{x-1} + Cx + D$$
-    since the numerator is one order higher than the denominator, a linear term must be included.
-    $$\frac{A(x-1) + B(x+1) + Cx(x^2-1) + D(x^2-1)}{x^2-1} = \frac{x^3}{x^2-1}$$
-    Giving $A+B=1, B-A = 0$ and $C=1$. So $A=\frac{1}{2}, B=\frac{1}{2}, C=1$ and
+    a. $\int\frac{1}{\sqrt{(5-3x)^3}}\:dx$. Let $u=5-3x$, so $\frac{du}{dx} = -3 \Rightarrow dx = -\frac{du}{3}$
+    $$
+    \int\frac{1}{\sqrt{(5-3x)^3}}\:dx = \int u^{-\frac{3}{2}}\:du = \frac{2}{3}u^{-\frac{1}{2}} + c = \frac{2}{3}(5-3x)^{-\frac{1}{2}} + c
+    $$
+    a. $\int\frac{4x}{\sqrt{(x^2 + 3)^3}}\:dx$. Let $u=x^2 +3$, so $\frac{du}{dx} = 2x \Rightarrow dx = \frac{du}{2x}$. Here, the $4x$ term remains in the denominator after substituting, but will be cancelled out once $dx$ is substituted.
+    $$
+    \int\frac{4x}{\sqrt{(x^2 + 3)^3}}\:dx = \int\frac{4x}{u^{\frac{3}{2}}}\frac{du}{2x} = \int 2u^{-\frac{3}{2}} = -4u^{-\frac{1}{2}} + c = -4(x^2+3)^{-\frac{1}{2}} + c
+    $$
+    This could also have been solved by reverse chain rule (think about how the answer would be differentiated, and see that the integral was of the form $g'(x)f(g(x))$.
+    a. $\int 2x e^{x^2-5}\:dx$. Let $u=x^2 - 5$ so $\frac{du}{dx} = 2x \Rightarrow dx = \frac{du}{2x}$. Again, the remaining term in $x$ is removed after substituting for $u$ without needed to take a square root.
+    $$
+    \int 2x e^u \frac{du}{2x} = \int e^u \: du = e^u + c = e^{x^2 -5} + c
+    $$
+    Which could have been solved by identifying reverse chain rule.
+    a. $\int \frac{\sin(\sqrt{x})}{\sqrt{x}} dx$. Let $u= \sqrt{x}$ so $\frac{du}{dx} = \frac{1}{2\sqrt{x}} \Rightarrow \frac{1}{\sqrt{x}}dx = 2du$.
+    $$\int \frac{\sin(\sqrt{x})}{\sqrt{x}} dx=2\int \sin(u) du = -2\cos(u)+c=-2\sin(\sqrt{x})+c.$$
+
+    a. $\int \cos(\theta)\sin(\theta)\: d\theta$. Let $u= \sin(\theta)$ so $\frac{du}{d\theta} = \cos(\theta) \Rightarrow d\theta = \frac{du}{\cos(\theta)}$.
+    $$
+    \int \cos(\theta)\sin(\theta)\: d\theta = \int \cos(\theta)u\frac{du}{\cos(\theta)} = \int u\: du = \frac{1}{2}u^2 + c = \frac{1}{2}\sin^2(\theta) + c
+    $$
+    a. $\int \frac{\cos(x)}{1+\sin(x)}\:dx$. Let $u=1+\sin(x)$ so $\frac{du}{dx} = \cos(x) \Rightarrow dx = \frac{du}{\cos(x)}$
+    $$
+    \int \frac{\cos(x)}{1+\sin(x)}\:dx = \int \frac{1}{u}\:du = \ln(u)+c = \ln(1+\sin(x)) + c$$
+    
+1. The *Root Mean Square* (RMS) value of a signal over the interval $a$ to $b$ is defined as
+    $$\left(\frac{1}{b-a}\int_{a}^{b} (f(x))^2 \; dx\right)^\frac{1}{2}$$
+    Find the RMS of the voltage signal
+    $$V(t)=3\sin(2t)+5\cos(4t)$$
+    between $a=0$ and $b=2\pi$.
+
+    Answer:
+
+    Firstly, multiply out the square term inside the integral, so
     \begin{align*}
-    \int\frac{x^3}{x^2-1}\, dx &= \int \frac{1}{2(x+1)} + \frac{1}{2(x-1)} + 1\, dx\\
-    &= \frac{1}{2}\ln(x+1) + \frac{1}{2}\ln(x-1) + x + c\\
-    &= \frac{1}{2}\ln(x^2-1) + x + c = \ln((x^2-1)^{\frac{1}{2}}) + x + c
+    v(t)^2 &= (3\sin(2t) + 5\cos(4t))(3\sin(2t) + 5\cos(4t))\\
+    &= 9\sin^2(2t) + 30\sin(2t)\cos(4t) + 25\cos^2(4t)
     \end{align*}
-    a. $$\frac{z+1}{(x-1)^2} = \frac{A}{z-1} + \frac{B}{(x-1)^2}$$
-    Since there is a repeated root of the form $(z-\alpha)^n$, so the first $n$ powers of $(z-\alpha)$ must appear as denominators in the partial fractions exapnsion.
-    $$\frac{A}{z-1} + \frac{B}{(z-1)^2} = \frac{A(z-1) + B}{(z-1)^2} = \frac{z+1}{(z-1)^2}$$
-    The numerator is solved by $A=1$ and $B=3$, so
-    $$\int \frac{z+1}{(z-1)^2}\,dz = \int \frac{1}{z-1} + \frac{3}{(z-1)^2} \, dz = \ln(z-1) - (z-1)^{-3} + c$$
-    a. $$\frac{5y^2}{(y^2+1)(2y-1)} = \frac{Ay+B}{y^2+1} + \frac{C}{2y-1}$$
-    with the numerator of the first partial fraction being a linear polynomial since the quadratic in the denominator is irreducible.
+    So the individual terms in the integral, with constants taken outside of the integral, are
     $$
-    \frac{(Ay+B)(2y-1) + C(y^2+1)}{(y^2+1)(2y-1)} = \frac{2Ay^2 - Ay + 2By - B + Cy^2 + 1}{(y^2+1)(2y-1)} = \frac{5y^2}{(y^2+1)(2y-1)}$$
-    Equating the powers of $y$ gives
-    $$2A+C = 5,\quad 2B-A = 0,\quad 1-B = 0\\
-    \Rightarrow A=2,B=1,C=1$$
-    so the integral can be rewritten as the partial fractions
+    \int_0^{2\pi} (v(t))^2\:dt = 9\int_0^{2\pi} \sin^2(2t)\:dt + 30\int_0^{2\pi} \sin(2t)\cos(4t)\:dt + 25 \int_0^{2\pi}\cos^2(4t)\:dt
     $$
-    \int \frac{5y^2}{(y^2+1)(2y-1)}\;dy = \int \frac{2y+1}{y^2+1} + \frac{1}{2y-1}\, dy = \tan^{-1}(y) + \ln(y^2+1) + \frac{1}{2}\ln(2y-1) + c$$
-    
-    
-    
-    
-1. Determine the following integrals using the method of integration by parts.
-    a. $\displaystyle \int x \cos(x) \,dx$
-    a. $\displaystyle \int t^2 e^{t} \, dt$
-    a. $\displaystyle \int e^{x}\sin(x) \, dx$
-    a. $\displaystyle \int (x+1)^2 e^{-2x} \, dx$
-    a. $\displaystyle \int \sin^{-1}(x) \, dx $.
-    
-    Answers:
-    a. Using integration by parts, $\int u\,dv = uv - \int v\,du$ with $u=x$ and $dv = \cos(x)$
-    $$\int x \cos (x) \, dx = x \sin (x) - \int \sin (x) \, dx = x \sin (x) + \cos (x) + C $$
-    a. Let $u = t^2, du = 2t, dv = e^t, v = e^t$
-    $$\int t^2 e^t \,dt = t^2e^t - \int 2te^t \,dt$$
-    Here, perform integration by parts once again. Let $u=t, du = 1, dv = e^t, v = e^t$
-    $$\int te^t \,dt = te^t - \int e^t \,dt = (t-1)e^t$$
-    and the orignal integral becomes
-    $$\int t^2 e^t\,dt = t^2 e^t - 2\int te^t\,dt = t^2 e^t - 2(t-1)e^t = (t^2 -2t + 2)e^t + c$$
-    a. Integrating by parts, $\int f\,dg = fg - \int g\,df$ with $f = \sin(x),df = \cos(x), dv = e^x, v = e^x$.
+    We evaluate each of the terms separately:
     $$
-    \int e^x \sin(x)\,dx = e^x \sin(x) - \int e^x \cos(x)\,dx$$
-    And we are still left with an integral that must be solved by parts. It looks like this cycle might keep repeating, but in fact, trying out the next step will reveal the answer. Let $u= \cos(x),du=-\sin(x), dv=e^x,v=e^x$
-    $$\int e^x \cos(x) \,dx = e^x \cos(x) + \int e^x \sin(x)\,dx$$
-    And examining the original integral we see that $\int e^x \sin(x)\,dx$ appears on both sides:
+    9\int_0^{2\pi} \sin^2(2t)\:dt = 9\int_0^{2\pi}\frac{1-\cos(4t)}{2}\:dt$$
+    having used the cosine double-angle formula: $\cos(2\theta) = 1- 2\sin^2(\theta)$.
     $$
-    \int e^x \sin(x)\,dx = e^x\sin(x) - \left(e^x\cos(x)+\int e^x \sin(x)\,dx\right)\\
-    2\int e^x \sin(x)\,dx = e^x\sin(x) - e^x\cos(x)\\
-    \int e^x \sin(x)\,dx = \frac{1}{2}e^x\left(\sin(x)-\cos(x)\right) + c$$
-    a. $$\int (x+1)^2 e^{-2x} \, dx = -{1 \over 2}(x+1)^2 e^{-2x} + \int (x+1) e^{-2x} \, dx = -{1 \over 2}(x+1)^2 e^{-2x} - {1 \over 2}(x+1) e^{-2x}$$
-    a. $$y = \sin^{-1} x \Rightarrow \sin y = x \Rightarrow  \cos y {\frac{dy}{dx}} = 1 \Rightarrow {\frac{dy}{dx}} =  (1 - x^2)^{-1/2},$$
-    so
-    $$\int \sin^{-1} x \, dx = x \sin^{-1} x - \int x (1-x^2)^{-1/2} \, dx = x \sin^{-1} x + (1 - x^2)^{1/2} + C $$
+    \frac{9}{2}\left[t - \frac{1}{4}\sin(4t)\right]_0^{2\pi} = \frac{9}{2}(2\pi - 0) = 9\pi$$
+    For the second term, we again need a trigonometric identity, in this case the product to sum formula $\sin(\theta)\cos(\phi) = \frac{1}{2}(\sin(\theta + \phi) + \sin(\theta - \phi))$:
+    $$
+    30\int_0^{2\pi} \sin(2t)\cos(4t)\: dt = \frac{30}{2}\int_0^{2\pi} = \sin(6t) + \sin(-2t)\:dt = 15\int_0^{2\pi}\sin(6t) - \sin(2t)\:dt \\= 15\left[-\frac{1}{6}\cos(6t) + \frac{1}{2}\cos(2t)\right]_0^{2\pi} = 0
+    $$
+    And finally, using $\cos^2(4t) = \frac{1}{2}(\cos(8t)+1)$:
+    $$
+    25\int_0^{2\pi}\cos^2(4t)\: dt = \frac{25}{2}\int_0^{2\pi}\cos(8t) + 1\:dt \\= \frac{25}{2}\left[\frac{1}{8}\sin(8t) + t\right]_0^{2\pi} = 25\pi
+    $$
+    Putting these three terms together:
+    $$
+    \int_0^{2\pi}(v(t))^2\:dt = 34\pi\\
+    \left(\frac{1}{2\pi - 0}\int_0^{2\pi}(v(t))^2\:dt\right)^{\frac{1}{2}} = \left(\frac{34\pi}{2\pi}\right)^\frac{1}{2} = \sqrt{17}
+    $$
+
+1. The *volume of revolution* of a curve is defined as
+    $$\int_a^b \pi (f(x))^2 \; dx$$
+    Find the volume of revolution of the curve
+    $$f(x)=e^{-2x}$$
+    between $a=1$ and $b=2$.
+
+    Answer:
+
+    If $f(x) = e^{-2x}$ then $(f(x))^2 = e^{-4x}$. So the voume of revolution of the curve $f(x)$ between $a=1$ and $b=2$ is
+    $$
+    \int_1^2 \pi e^{-4x}\;dx = \pi\left[-\frac{1}{4}e^{-4x}\right]_1^2 = \pi\left(\frac{-e^{-8}}{4} - \frac{-e^{-4}}{4}\right) =0.0141 \text{ to 3d.p.}
+    $$
+
+1. The points $(1,1)$ and $(2,8)$ on the curve $y=x^3$ are joined by a straight line. Calculate the area between the line and the curve.
+
+    Answer:
+
+    The area between two curves described by funtions $f_1(x)$ and $f_2(x)$ is the area between the function $(f_1(x) - f_2(x))$ and the $x$-axis. First, find the equation of the line between the points $(1,1)$ and $(2,8)$:
+    $$
+    f_1(x) = 7x - 6, \quad \text{since the gradient is } \frac{8-1}{2-1}.
+    $$
+    So the area between the line $y=f_1(x)$ and the line $y=f_2(x) = x^3$ is
+    \begin{align*}
+    \int_1^2 (f_1(x)-f_2(x))\;dx &= \int_1^2 7x-6-x^3\;dx\\
+    &= \left[\frac{7}{2}x^2 - 6x - \frac{1}{4}x^4\right]_1^2\\
+    &= (14-12-4)-(\frac{7}{2} - 6 -\frac{1}{4})\\
+    &= \frac{3}{4}
+    \end{align*}

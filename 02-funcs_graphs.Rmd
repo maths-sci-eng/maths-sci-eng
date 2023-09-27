@@ -21,7 +21,7 @@ We are familiar with the equation of a straight line:
 $$y=mx+d$$
 with gradient $m$ and intercepting the $y$-axis at the value $d$.
 
-```{r mx+c, echo=FALSE, fig.cap = "Straight line graph of $y=\\frac{1}{2}x+1$.", fig.alt = "Straight line graph of $y=\\frac{1}{2}x+1$, showing gradient and intercept."}
+```{r mxc, echo=FALSE, fig.cap = "Straight line graph of $y=\\frac{1}{2}x+1$.", fig.alt = "Straight line graph of $y=\\frac{1}{2}x+1$, showing gradient and intercept."}
 knitr::include_graphics("figures/mx+c.png")
 ```
 

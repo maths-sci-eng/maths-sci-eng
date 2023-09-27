@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 1 Foundations | Mathematics for Scientists and Engineers</title>
   <meta name="description" content="Mathematics Lecture Notes for UoE Penryn Science and Engineering Disciplines." />
-  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 1 Foundations | Mathematics for Scientists and Engineers" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Dr Mark Callaway" />
 
 
-<meta name="date" content="2023-09-14" />
+<meta name="date" content="2023-09-27" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -59,6 +59,10 @@
 
 
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -135,7 +139,8 @@
 <li class="chapter" data-level="3.3.1" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#simultaneous-linear-equations"><i class="fa fa-check"></i><b>3.3.1</b> Simultaneous linear equations</a></li>
 <li class="chapter" data-level="3.3.2" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#non-linear-simultaneous-equations"><i class="fa fa-check"></i><b>3.3.2</b> Non-linear simultaneous equations</a></li>
 </ul></li>
-<li class="chapter" data-level="3.4" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#inequalities-1"><i class="fa fa-check"></i><b>3.4</b> Inequalities</a></li>
+<li class="chapter" data-level="3.4" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#exponentials-and-logarithms"><i class="fa fa-check"></i><b>3.4</b> Exponentials and Logarithms</a></li>
+<li class="chapter" data-level="3.5" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#inequalities-1"><i class="fa fa-check"></i><b>3.5</b> Inequalities</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="trigonometry.html"><a href="trigonometry.html"><i class="fa fa-check"></i><b>4</b> Trigonometry</a>
 <ul>
@@ -353,6 +358,7 @@
 <li class="chapter" data-level="" data-path="exercise-set-15.html"><a href="exercise-set-15.html"><i class="fa fa-check"></i>Exercise Set 15</a></li>
 <li class="chapter" data-level="" data-path="exercise-set-16.html"><a href="exercise-set-16.html"><i class="fa fa-check"></i>Exercise Set 16</a></li>
 <li class="chapter" data-level="" data-path="exercise-set-17.html"><a href="exercise-set-17.html"><i class="fa fa-check"></i>Exercise Set 17</a></li>
+<li class="chapter" data-level="" data-path="exercise-set-18.html"><a href="exercise-set-18.html"><i class="fa fa-check"></i>Exercise Set 18</a></li>
 <li class="chapter" data-level="" data-path="notation.html"><a href="notation.html"><i class="fa fa-check"></i>Notation</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -454,9 +460,9 @@ The set of real numbers is denoted by <span class="math inline">\(\mathbb{R}\)</
 whilst
 <span class="math display">\[(3+2)\times 4 = 20.\]</span>
 Another example:
-<span class="math display">\[18\divide 3^2 = 2\]</span>
+<span class="math display">\[18\div 3^2 = 2\]</span>
 whilst
-<span class="math display">\[(18\divide 3)^2 = 36.\]</span></p>
+<span class="math display">\[(18\div 3)^2 = 36.\]</span></p>
 </div>
 </div>
 <div id="notation-for-multiplication-and-division" class="section level3 hasAnchor" number="1.2.2">
@@ -529,15 +535,15 @@ $<span class="math inline">\((x^a)^b=\underbrace{x^a\times \dotsb \times x^a}_{b
 <p>where we have cancelled the 2 common factors of <span class="math inline">\(x\)</span>, leaving us with a product of <span class="math inline">\(5-2=3\)</span> <span class="math inline">\(x\)</span>’s.</p>
 <p>More generally, taking <span class="math inline">\(\frac{x^a}{x^b}\)</span> for <span class="math inline">\(a&gt;b\)</span> we have <span class="math inline">\(a\)</span> <span class="math inline">\(x\)</span>’s on the top and <span class="math inline">\(b\)</span> <span class="math inline">\(x\)</span>’s on the bottom, so we can cancel the common factors to leave <span class="math inline">\(a-b\)</span> <span class="math inline">\(x\)</span>’s. So,</p>
 <p><span class="math display" id="eq:divexps">\[\begin{equation}
-$\frac{x^a}{x^b}$=x^a\frac{1}{x^b}=\frac{x^a}{x^b}=x^{a-b} \tag{1.1}
+\frac{x^a}{x^b}=x^{a-b} \tag{1.1}
 \end{equation}\]</span></p>
 <p>and following Rule 1 we could think of this as <span class="math inline">\(x^{a-b}=x^{a+(-b)}=x^ax^{-b}\)</span>, and therefore using a negative exponent <span class="math inline">\(-b\)</span> gives the reciprocal of <span class="math inline">\(x^b\)</span>.</p>
 <div class="theorem">
 <p><span id="thm:exprule3" class="theorem"><strong>Theorem 1.3  (Rule 5) </strong></span><span class="math display">\[x^{-a}=\frac{1}{x^a}\]</span></p>
 </div>
 <div class="example">
+<p><span id="exm:unlabeled-div-5" class="example"><strong>Example 1.5  (Negative Exponents) </strong></span></p>
 <ol style="list-style-type: decimal">
-<li><span id="exm:unlabeled-div-5" class="example"><strong>Example 1.5  (Negative Exponents) </strong></span></li>
 <li><p>Note in particular <span class="math inline">\(x^{-1}=\frac{1}{x}\)</span>, the reciprocal of <span class="math inline">\(x\)</span></p></li>
 <li><p>Generally, <span class="math inline">\(\frac{x^a}{x^b}=x^a\frac{1}{x^b}=x^ax^{-b}=x^{a-b}\)</span></p></li>
 </ol>
@@ -593,8 +599,8 @@ $\frac{x^a}{x^b}$=x^a\frac{1}{x^b}=\frac{x^a}{x^b}=x^{a-b} \tag{1.1}
 <p>Another thing we have not mentioned so far is what happens when <span class="math inline">\(x\)</span> is a negative number. This is easy to understand when the exponent <span class="math inline">\(a\)</span> is an integer, since we are just multiplying a negative number by itself multiple times (and taking the reciprocal if <span class="math inline">\(a\)</span> is negative). But how do we interpret something like <span class="math inline">\(y=(-1)^\frac{1}{2}\)</span>? That is, <span class="math inline">\(y\)</span> must be a number such that when it is multiplied by itself it gives the negative number <span class="math inline">\(-1\)</span>, but this is impossible for a real number! Answering this conundrum requires us to invent a new set of numbers, called <em>complex numbers</em> – this is addressed in section <a href="complex.html#complex">5</a>.</p>
 <p>A summary of the rules:</p>
 <div class="theorem">
+<p><span id="thm:exprules" class="theorem"><strong>Theorem 1.8  (Rules of Exponents) </strong></span></p>
 <ol style="list-style-type: decimal">
-<li><span id="thm:exprules" class="theorem"><strong>Theorem 1.8  (Rules of Exponents) </strong></span></li>
 <li><span class="math inline">\(x^ax^b=x^{a+b}\)</span></li>
 <li><span class="math inline">\((x^a)^b=x^{ab}\)</span></li>
 <li><span class="math inline">\((xy)^a=x^ay^a\)</span></li>
@@ -602,7 +608,7 @@ $\frac{x^a}{x^b}$=x^a\frac{1}{x^b}=\frac{x^a}{x^b}=x^{a-b} \tag{1.1}
 <li><span class="math inline">\(x^{-a}=\frac{1}{x^a}\)</span></li>
 <li><span class="math inline">\(0^a=0\)</span>, for <span class="math inline">\(a&gt;0\)</span></li>
 <li><span class="math inline">\(x^0=1\)</span>, for <span class="math inline">\(x\neq 0\)</span></li>
-<li>$x^{}=</li>
+<li><span class="math inline">\(x^{\frac{1}{a}}=\sqrt[a]{x}\)</span></li>
 <li><span class="math inline">\(x^{\frac{a}{b}}=\sqrt[b]{x^a}=(\sqrt[b]{x})^a.\)</span></li>
 </ol>
 </div>

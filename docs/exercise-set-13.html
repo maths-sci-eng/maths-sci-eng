@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Exercise Set 13 | Mathematics for Scientists and Engineers</title>
   <meta name="description" content="Mathematics Lecture Notes for UoE Penryn Science and Engineering Disciplines." />
-  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Exercise Set 13 | Mathematics for Scientists and Engineers" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Dr Mark Callaway" />
 
 
-<meta name="date" content="2023-09-14" />
+<meta name="date" content="2023-09-27" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -59,6 +59,10 @@
 
 
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -135,7 +139,8 @@
 <li class="chapter" data-level="3.3.1" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#simultaneous-linear-equations"><i class="fa fa-check"></i><b>3.3.1</b> Simultaneous linear equations</a></li>
 <li class="chapter" data-level="3.3.2" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#non-linear-simultaneous-equations"><i class="fa fa-check"></i><b>3.3.2</b> Non-linear simultaneous equations</a></li>
 </ul></li>
-<li class="chapter" data-level="3.4" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#inequalities-1"><i class="fa fa-check"></i><b>3.4</b> Inequalities</a></li>
+<li class="chapter" data-level="3.4" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#exponentials-and-logarithms"><i class="fa fa-check"></i><b>3.4</b> Exponentials and Logarithms</a></li>
+<li class="chapter" data-level="3.5" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#inequalities-1"><i class="fa fa-check"></i><b>3.5</b> Inequalities</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="trigonometry.html"><a href="trigonometry.html"><i class="fa fa-check"></i><b>4</b> Trigonometry</a>
 <ul>
@@ -353,6 +358,7 @@
 <li class="chapter" data-level="" data-path="exercise-set-15.html"><a href="exercise-set-15.html"><i class="fa fa-check"></i>Exercise Set 15</a></li>
 <li class="chapter" data-level="" data-path="exercise-set-16.html"><a href="exercise-set-16.html"><i class="fa fa-check"></i>Exercise Set 16</a></li>
 <li class="chapter" data-level="" data-path="exercise-set-17.html"><a href="exercise-set-17.html"><i class="fa fa-check"></i>Exercise Set 17</a></li>
+<li class="chapter" data-level="" data-path="exercise-set-18.html"><a href="exercise-set-18.html"><i class="fa fa-check"></i>Exercise Set 18</a></li>
 <li class="chapter" data-level="" data-path="notation.html"><a href="notation.html"><i class="fa fa-check"></i>Notation</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -378,32 +384,33 @@
 <div id="exercise-set-13" class="section level1 unnumbered hasAnchor">
 <h1>Exercise Set 13<a href="exercise-set-13.html#exercise-set-13" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <ol style="list-style-type: decimal">
-<li><p>Using the method of separation of variables, find the general solutions of the following first order differential equations and the particular solutions in those cases where initial conditions are specified:</p>
+<li>Determine the following integrals by making use of trigonometric or hyperbolic identities.
 <ol style="list-style-type: lower-alpha">
-<li><span class="math inline">\(\displaystyle x^2\frac{dy}{dx}=(y+xy)\)</span></li>
-<li><span class="math inline">\(\displaystyle \frac{dy}{dx}=\frac{y-1}{x-1},\; y(2)=3\)</span></li>
-<li><span class="math inline">\(\displaystyle \frac{dy}{dx}=\frac{y+2}{x-2}\)</span></li>
+<li><span class="math inline">\(\displaystyle \int_0^{\pi/4}4\sin(3\theta)\cos(\theta)d\theta\)</span></li>
+<li><span class="math inline">\(\displaystyle \int \left( \cos\left(\frac{x}{2}\right) - \sin\left(\frac{x}{2}\right)\right)^2 \, dx\)</span></li>
+<li><span class="math inline">\(\displaystyle \int \sin^3(x)\, dx\)</span></li>
+<li><span class="math inline">\(\displaystyle \int \frac{ \cos(2x)} { \cos^2(x) \sin^2(x)} \, dx\)</span></li>
+<li><span class="math inline">\(\displaystyle \int \cos(x) \sin(2x) \, dx\)</span></li>
+<li><span class="math inline">\(\displaystyle \int \tan(2x) \,dx\)</span></li>
+<li><span class="math inline">\(\displaystyle \int \sinh^3(x) \cosh^2(x)\)</span></li>
 </ol></li>
-<li><p>Using the integrating factor method, find the general solutions of the following linear first order differential equations and the particular solutions in those cases where initial conditions are specified:</p>
+<li>Determine the following integrals using the method of partial fractions.
 <ol style="list-style-type: lower-alpha">
-<li><span class="math inline">\(\displaystyle \frac{dy}{dx}+\frac{3}{x}y=4+x^2,\;y(1)=1\)</span></li>
-<li><span class="math inline">\(\displaystyle x\frac{dy}{dx}+2y=x^{-4},\;y(1)=-\frac{1}{2}\)</span></li>
-<li><span class="math inline">\(\displaystyle \frac{dy}{dx}+\frac{y}{x}=\cos(x),\;y\left(\frac{\pi}{2}\right)=0\)</span></li>
-<li><span class="math inline">\(\displaystyle \frac{dy}{dx}=e^{-x}-2y,\;y(0)=0\)</span></li>
-<li><span class="math inline">\(\displaystyle \frac{dy}{dx}=y\tan(x)+\sin(x)\)</span></li>
+<li><span class="math inline">\(\displaystyle \int \frac{1}{x^2+x-6} \, dx\)</span></li>
+<li><span class="math inline">\(\displaystyle \int \frac{-12u-13}{(2u+1)(u-3)} \, du\)</span></li>
+<li><span class="math inline">\(\displaystyle \int \frac{4x^2+13x-4}{2x^2+5x-3}\, dx\)</span></li>
+<li><span class="math inline">\(\displaystyle \int \frac{x^3}{x^2-1}\, dx\)</span></li>
+<li><span class="math inline">\(\displaystyle \int \frac{x^5-2x^2}{x^2-1} \, dx\)</span></li>
+<li><span class="math inline">\(\displaystyle \int \frac{z+1}{(z-1)^2} \, dz\)</span></li>
+<li><span class="math inline">\(\displaystyle \int \frac{5y^2}{(y^2+1)(2y-1)} \, dy\)</span></li>
 </ol></li>
-<li><p>Find the general solutions of the following constant coefficient, linear, homogeneous differential equations, and the particular solutions in those cases where initial conditions are specified:</p>
+<li>Determine the following integrals using the method of integration by parts.
 <ol style="list-style-type: lower-alpha">
-<li><span class="math inline">\(\displaystyle \frac{d^2y}{dx^2}+5\frac{dy}{dx}+6y=0,\;y(0)=0,\; \frac{dy(0)}{dx}=1\)</span></li>
-<li><span class="math inline">\(\displaystyle \frac{d^2y}{dx^2}+8\frac{dy}{dx}+25y=0,\;y(0)=1,\; \frac{dy(0)}{dx}=0\)</span></li>
-<li><span class="math inline">\(\displaystyle \frac{d^2y}{dx^2}+2\frac{dy}{dx}+y=0\)</span></li>
-</ol></li>
-<li><p>For each of the following differential equations, find: the Complementary Function; a Particular Integral; and the Particular Solution corresponding to the given initial conditions:</p>
-<ol style="list-style-type: lower-alpha">
-<li><span class="math inline">\(\displaystyle \frac{d^2y}{dx^2}+\frac{dy}{dx}+y=36e^{5x}\)</span></li>
-<li><span class="math inline">\(\displaystyle \frac{d^2y}{dx^2}+3\frac{dy}{dx}-4y=-34\sin(x)\)</span></li>
-<li><span class="math inline">\(\displaystyle \frac{d^2y}{dx^2}+3\frac{dy}{dx}-4y=24e^{-x},\;y(0)=0,\; \frac{dy(0)}{dx}=10\)</span></li>
-<li><span class="math inline">\(\displaystyle \frac{d^2y}{dx^2}-3\frac{dy}{dx}+2y=x^2-2x+3,\;y(0)=\frac{3}{4},\; \frac{dy(0)}{dx}=\frac{3}{2}.\)</span></li>
+<li><span class="math inline">\(\displaystyle \int x \cos(x) \,dx\)</span></li>
+<li><span class="math inline">\(\displaystyle \int t^2 e^{t} \, dt\)</span></li>
+<li><span class="math inline">\(\displaystyle \int e^{x}\sin(x) \, dx\)</span></li>
+<li><span class="math inline">\(\displaystyle \int (x+1)^2 e^{-2x} \, dx\)</span></li>
+<li>$^{-1}(x) , dx $.</li>
 </ol></li>
 </ol>
 

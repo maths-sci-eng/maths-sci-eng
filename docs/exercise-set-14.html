@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Exercise Set 14 | Mathematics for Scientists and Engineers</title>
   <meta name="description" content="Mathematics Lecture Notes for UoE Penryn Science and Engineering Disciplines." />
-  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Exercise Set 14 | Mathematics for Scientists and Engineers" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Dr Mark Callaway" />
 
 
-<meta name="date" content="2023-09-14" />
+<meta name="date" content="2023-09-27" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -59,6 +59,10 @@
 
 
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -135,7 +139,8 @@
 <li class="chapter" data-level="3.3.1" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#simultaneous-linear-equations"><i class="fa fa-check"></i><b>3.3.1</b> Simultaneous linear equations</a></li>
 <li class="chapter" data-level="3.3.2" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#non-linear-simultaneous-equations"><i class="fa fa-check"></i><b>3.3.2</b> Non-linear simultaneous equations</a></li>
 </ul></li>
-<li class="chapter" data-level="3.4" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#inequalities-1"><i class="fa fa-check"></i><b>3.4</b> Inequalities</a></li>
+<li class="chapter" data-level="3.4" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#exponentials-and-logarithms"><i class="fa fa-check"></i><b>3.4</b> Exponentials and Logarithms</a></li>
+<li class="chapter" data-level="3.5" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#inequalities-1"><i class="fa fa-check"></i><b>3.5</b> Inequalities</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="trigonometry.html"><a href="trigonometry.html"><i class="fa fa-check"></i><b>4</b> Trigonometry</a>
 <ul>
@@ -353,6 +358,7 @@
 <li class="chapter" data-level="" data-path="exercise-set-15.html"><a href="exercise-set-15.html"><i class="fa fa-check"></i>Exercise Set 15</a></li>
 <li class="chapter" data-level="" data-path="exercise-set-16.html"><a href="exercise-set-16.html"><i class="fa fa-check"></i>Exercise Set 16</a></li>
 <li class="chapter" data-level="" data-path="exercise-set-17.html"><a href="exercise-set-17.html"><i class="fa fa-check"></i>Exercise Set 17</a></li>
+<li class="chapter" data-level="" data-path="exercise-set-18.html"><a href="exercise-set-18.html"><i class="fa fa-check"></i>Exercise Set 18</a></li>
 <li class="chapter" data-level="" data-path="notation.html"><a href="notation.html"><i class="fa fa-check"></i>Notation</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -378,44 +384,33 @@
 <div id="exercise-set-14" class="section level1 unnumbered hasAnchor">
 <h1>Exercise Set 14<a href="exercise-set-14.html#exercise-set-14" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <ol style="list-style-type: decimal">
-<li><p>Consider the experiment of multiplying the score on two fair dice.</p>
+<li><p>Using the method of separation of variables, find the general solutions of the following first order differential equations and the particular solutions in those cases where initial conditions are specified:</p>
 <ol style="list-style-type: lower-alpha">
-<li>What is the sample space?</li>
-<li>What is the event of obtaining an odd number, and what is its probability?</li>
-<li>What is the event of obtaining a number that is square and odd?</li>
-<li>What is the event of obtaining a number that is square or odd?</li>
+<li><span class="math inline">\(\displaystyle x^2\frac{dy}{dx}=(y+xy)\)</span></li>
+<li><span class="math inline">\(\displaystyle \frac{dy}{dx}=\frac{y-1}{x-1},\; y(2)=3\)</span></li>
+<li><span class="math inline">\(\displaystyle \frac{dy}{dx}=\frac{y+2}{x-2}\)</span></li>
 </ol></li>
-<li><p>Consider the experiment of tossing a fair coin three times. Find the following probabilities:</p>
+<li><p>Using the integrating factor method, find the general solutions of the following linear first order differential equations and the particular solutions in those cases where initial conditions are specified:</p>
 <ol style="list-style-type: lower-alpha">
-<li>obtaining 2 heads</li>
-<li>obtaining at least 1 head</li>
-<li>obtaining at least 1 head and at least 1 tail</li>
+<li><span class="math inline">\(\displaystyle \frac{dy}{dx}+\frac{3}{x}y=4+x^2,\;y(1)=1\)</span></li>
+<li><span class="math inline">\(\displaystyle x\frac{dy}{dx}+2y=x^{-4},\;y(1)=-\frac{1}{2}\)</span></li>
+<li><span class="math inline">\(\displaystyle \frac{dy}{dx}+\frac{y}{x}=\cos(x),\;y\left(\frac{\pi}{2}\right)=0\)</span></li>
+<li><span class="math inline">\(\displaystyle \frac{dy}{dx}=e^{-x}-2y,\;y(0)=0\)</span></li>
+<li><span class="math inline">\(\displaystyle \frac{dy}{dx}=y\tan(x)+\sin(x)\)</span></li>
 </ol></li>
-<li><p>How many ways are there of arranging the letters in the word MATHS?</p></li>
-<li><p>How many four letter arrangements are there of letters from the word UNCOPYRIGHTABLE?</p></li>
-<li><p>In a meal deal you can choose any 3 items from: sandwich, wrap, pasta, sushi, crisps, drink, chocolate. How many different meal deals are there?</p></li>
-<li><p>How many arrangements of he word MISSISSIPPI are there? How many of these contain the “word” SSSS?</p></li>
-<li><p>You roll ten fair dice. Assume that the scores of each of the ten dice are independent. What are the the probabilities that</p>
+<li><p>Find the general solutions of the following constant coefficient, linear, homogeneous differential equations, and the particular solutions in those cases where initial conditions are specified:</p>
 <ol style="list-style-type: lower-alpha">
-<li>you roll exactly two sixes?</li>
-<li>you roll no sixes?</li>
-<li>you roll at least two sixes?</li>
+<li><span class="math inline">\(\displaystyle \frac{d^2y}{dx^2}+5\frac{dy}{dx}+6y=0,\;y(0)=0,\; \frac{dy(0)}{dx}=1\)</span></li>
+<li><span class="math inline">\(\displaystyle \frac{d^2y}{dx^2}+8\frac{dy}{dx}+25y=0,\;y(0)=1,\; \frac{dy(0)}{dx}=0\)</span></li>
+<li><span class="math inline">\(\displaystyle \frac{d^2y}{dx^2}+2\frac{dy}{dx}+y=0\)</span></li>
 </ol></li>
-<li><p>A poker hand consists of 5 cards from a standard 52 card deck. How many diferent poker hands are there? How many poker hands are there of each of the following types?</p>
+<li><p>For each of the following differential equations, find: the Complementary Function; a Particular Integral; and the Particular Solution corresponding to the given initial conditions:</p>
 <ol style="list-style-type: lower-alpha">
-<li><em>four-of-a-kind</em>: four cards of one value, the other being another value, for instance <span class="math inline">\(5\spadesuit\,5\heartsuit\,5\diamondsuit\,5\clubsuit\,7\clubsuit\)</span></li>
-<li><em>two-pairs</em>: two cards of the same value, another two cards of a second value, and the last card being of a third value, for instance <span class="math inline">\(Q\heartsuit\, Q\clubsuit\, 8\spadesuit\,8\clubsuit\,9\diamondsuit\)</span></li>
-<li><em>straight</em>: five cards of sequential rank, but not all of the same suit, for instance, <span class="math inline">\(A\spadesuit\,2\heartsuit\,3\spadesuit\,4\clubsuit\,5\diamondsuit\)</span></li>
+<li><span class="math inline">\(\displaystyle \frac{d^2y}{dx^2}+\frac{dy}{dx}+y=36e^{5x}\)</span></li>
+<li><span class="math inline">\(\displaystyle \frac{d^2y}{dx^2}+3\frac{dy}{dx}-4y=-34\sin(x)\)</span></li>
+<li><span class="math inline">\(\displaystyle \frac{d^2y}{dx^2}+3\frac{dy}{dx}-4y=24e^{-x},\;y(0)=0,\; \frac{dy(0)}{dx}=10\)</span></li>
+<li><span class="math inline">\(\displaystyle \frac{d^2y}{dx^2}-3\frac{dy}{dx}+2y=x^2-2x+3,\;y(0)=\frac{3}{4},\; \frac{dy(0)}{dx}=\frac{3}{2}.\)</span></li>
 </ol></li>
-<li><p>A box contains 7 rock samples; 4 have an independent property set A and the other 3 have a property set B. We withdraw two rock samples one at a time without replacement. Find the probabilities:</p>
-<ol style="list-style-type: lower-alpha">
-<li>the samples have different property sets</li>
-<li>at least one rock sample has property set A</li>
-<li>if a third sample is drawn from the box, the probability of all the samples having property set B.</li>
-</ol></li>
-<li><p>Derive Bayes’ Theorem from the definition of conditional probability.</p></li>
-<li><p>A test is 99% effective at detecting drug use in active users and 99% effective at finding negative results for non-drug users. At a given time, 0.1% of the population are active drug users. What is the probability that a randomly selected individual who tests positive is actually a drug user?</p></li>
-<li><p>A product tester employed by the Gizmo Corporation tests the company’s gizmos. A gizmo has 3% probability of being defective. The tester’s test registers a defective gizmo as being defective with 95% probability, but it registers a non-defective gizmo as being defective with 2% probability. The tester performs a test on a gizmo drawn at random. Their test indicates the gizmo is defective.What is the probability that it really is defective?</p></li>
 </ol>
 
 </div>

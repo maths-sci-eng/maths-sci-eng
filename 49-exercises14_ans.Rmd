@@ -1,193 +1,313 @@
 # Exercise Set 14 Answers {.unlisted .unnumbered}
 
-1. Consider the experiment of multiplying the score on two fair dice.
-    a. What is the sample space?
-    a. What is the event of obtaining an odd number, and what is its probability?
-    a. What is the event of obtaining a number that is square and odd?
-    a. What is the event of obtaining a number that is square or odd?
+1. Using the method of separation of variables, find the general solutions of the following first order differential equations and the particular solutions in those cases where initial conditions are specified:
+
+    a. $\displaystyle x^2\frac{dy}{dx}=(y+xy)$
+    a. $\displaystyle \frac{dy}{dx}=\frac{y-1}{x-1},\; y(2)=3$
+    a. $\displaystyle \frac{dy}{dx}=\frac{y+2}{x-2}$
 
     Answers:
-
-    a. $S=\{1,2,3,4,5,6,8,9,10,12,15,16,18,20,24,25,30,36\}$
-    a. $A=\{1,3,5,9,15,25\}$, $P(A)=\frac{1+2+2+1+2+1}{36}=\frac{1}{4}$
-    a. $B=\{1,4,9,16,25,36\}$, $A\cap B=\{1,9,25\}$ (also $P(A\cap B)=\frac{3}{36}=\frac{1}{12}$)
-    a. $A\cup B=\{1,3,4,5,9,15,16,25,36\}$ (also $P(A\cup B)=\frac{1+2+1+2+1+2+1+1+1}{36}=\frac{1}{3}$)
-
-1. Consider the experiment of tossing a fair coin three times. Find the following probabilities:
-    a. obtaining 2 heads
-    a. obtaining at least 1 head
-    a. obtaining at least 1 head and at least 1 tail
-
-    Answers:
-
-    a. There are 4 ways of getting 2 heads and $2^3=8$ equally likely outcomes. Hence $P(\text{2 Heads})=\frac{4}{8}=\frac{1}{2}$.
-    a. Obtaining at least one head (call this event $A$) is the same as the complement of obtaining all tails (call this event $B$). Since the coin tosses are independent, $P(B)=\left(\frac{1}{2}\right)^3=\frac{1}{8}$ and then $P(A)=1-P(B)=\frac{7}{8}$.
-    a. Obtaining at least 1 head and at least 1 tail (call this event $A$) is the complement of obtaining all tails ($B$) or all heads ($C$), which are mutually exclusive. Hence $P(B\cup C)=P(B)+P(C)$ and $P(A)=1-P(B\cup C)=1-\frac{1}{8}-\frac{1}{8}=\frac{3}{4}$.
-
-1. How many ways are there of arranging the letters in the word MATHS?
-
-    Answer:
-
-    There are 5 distinct letters, hence the number of arrangements is $5!=120$.
-
-1. How many four letter arrangements are there of letters from the word UNCOPYRIGHTABLE?
-
-    Answer:
-
-    There are 15 distinct letters and we are choosing 4. We are interested in the different orders, so this is a question about *permutations*. The number of permutations is:
-
-    $${}_{15} P_4=\frac{15!}{(15-4)!}=\frac{15!}{11!}=32760.$$
-
-1. In a meal deal you can choose any 3 items from: sandwich, wrap, pasta, sushi, crisps, drink, chocolate. How many different meal deals are there?
-
-    Answer:
-
-    In this case, we are not interested in the ordering of the three items when buying them, so this is a question about *combinations*. The number of combinations is
-
-    $${}_7 C_3={7 \choose 3}=\frac{7!}{3!4!}=35.$$
-
-1. How many arrangements of he word MISSISSIPPI are there? How many of these contain the "word" SSSS?
-
-    Answers:
-
-    In this case, we are interested in different orderings, but there are identical letters that do not contribute to the different arrangements. We have the frequencies #M=1, #I=4, #S=4, #P=2, and we need to factor out the repeats. Hence the number of arrangements is
-    $$\displaystyle{\frac{11!}{4!4!2!}} = 34650.$$
-
-    The number of these arrangements that contain the word SSSS are the arrangements of the blocks: SSSS, M, I, I, I, P, P, I:
+    a. First we separate the variables
     $$
-    \frac{8!}{4!2!} = 840.
+    x^2\frac{dy}{dx} = y(1+x)\\
+    \Rightarrow \frac{1}{y}\frac{dy}{dx} = \frac{1+x}{x^2} = \frac{1}{x^2} + \frac{1}{x}$$
+    Now integrating both sides with respect to $x$
+    $$\int \frac{1}{y}\frac{dy}{dx} \, dx = \int \left(\frac{1}{x^2} + \frac{1}{x}\right) \, dx \Rightarrow \int \frac{1}{y}\, dy\\
+    \int \frac{1}{y} = \int \left(\frac{1}{x^2} + \frac{1}{x}\right)\, dx\\
+    \ln(y) = -\frac{1}{x} + \ln(x) + c$$
+    Which can be rewritten as $\ln(y)-\ln(x) = -x^{-1} + c$ and then, by applying the logarithmic rule $\ln(B) - \ln(C) = \ln(\tfrac{B}{C})$
     $$
-
-1. You roll ten fair dice. Assume that the scores of each of the ten dice are independent. What are the the probabilities that
-    a. you roll exactly two sixes?
-    a. you roll no sixes?
-    a. you roll at least two sixes?
-
-    Answers:
-
-    a. ${10 \choose 2} \left(\frac{1}{6}\right)^2\left(\frac{5}{6}\right)^8 = 0.29 \text{ to 2 s.f.}$
-    a. $\left(\frac{5}{6}\right)^{10} = 0.16 \text{ to 2 s.f.}$
-    a. $1 - \left(\frac{5}{6}\right)^{10} - {10 \choose 1} \left(\frac{1}{6}\right)\left(\frac{5}{6}\right)^9 = 0.52 \text{ to 2 s.f.}$
-
-1. A poker hand consists of 5 cards from a standard 52 card deck. How many diferent poker hands are there? How many poker hands are there of each of the following types?
-    a. *four-of-a-kind*: four cards of one value, the other being another value, for instance $5\spadesuit\,5\heartsuit\,5\diamondsuit\,5\clubsuit\,7\clubsuit$
-    a. *two-pairs*: two cards of the same value, another two cards of a second value, and the last card being of a third value, for instance $Q\heartsuit\, Q\clubsuit\, 8\spadesuit\,8\clubsuit\,9\diamondsuit$
-    a. *straight*: five cards of sequential rank, but not all of the same suit, for instance, $A\spadesuit\,2\heartsuit\,3\spadesuit\,4\clubsuit\,5\diamondsuit$
-
-    Answers:
-
-    a. *four-of-a-kind*: There are ${13 \choose 1}$ way of choosing the number on the four-of-a-kind, and then given the number, there are ${4 \choose 4} = 1$ ways to choose the suits. Then we have ${12 \choose 1}$ ways to choose the number for the remaining card, and ${4 \choose 1}$ ways to choose the suit. Hence the answer is:
-        $$
-        {13 \choose 1}{12 \choose 1}{4 \choose 1} = 13 \times 12 \times 4 = 624.
-        $$
-
-    a. *two pairs*: Here we have ${13 \choose 2}$ ways of choosing two distinct numbers from 13, corresponding to the numbers on both pairs. Then we have ${4 \choose 2}$ ways of choosing the suits for each pair in turn. Then we have ${11 \choose 1}$ ways of choosing the number for the remaining card, and ${4 \choose 1}$ ways of choosing the suit. Hence the answer is:
-        $$
-        {13 \choose 2}{4 \choose 2}^2{11 \choose 1}{4 \choose 1} = 78 \times 36 \times 11 \times 4 = 123552.
-        $$
+    \ln\left(\frac{y}{x}\right) = -\frac{1}{x} + c$$
+    Which can be written in terms of the exponential (raise $e$ to the power of both sides)
+    $$
+    \frac{y}{x} = e^{-\frac{1}{x} + c} = Ae^{-\frac{1}{x}}\\
+    y = Axe^{-\frac{1}{x}}$$
+    Where $A = e^c$.
     
-    a. *straight*: Here there are ${10 \choose 1}$ ways to choose the value of the starting card for the straight ($A, 2, 3, \dots, 10$). Once the starting card is chosen, then there is only one way to choose the remaining values for the straight. If we include straight flushes, then there are then ${4 \choose 1}^5$ ways to choose the combination of suits for the straight. However, ${10 \choose 1} \times 4 = 40$ of these correspond to straight (and royal) flushes (i.e. all with the same suit), hence the answer is:
-        $$
-        {10 \choose 1}{4 \choose 1}^5 - 40 = (10 \times 1,024) - 40 = 10200.
-        $$
+    a. First, separate the variables and integrate
+    $$
+    \int\frac{dy}{y-1} =\int\frac{dx}{x-1}+C,
+    $$
+    so the general solution is
+    $$
+    \ln|y-1|=\ln|x-1|+C \implies \quad \left|\frac{y-1}{x-1}\right| = B,
+    $$
+    where $C$ and $B=e^C$ are constants. This means that $\frac{y-1}{x-1}= A$, where $A$ is another constant, giving the general solution $y=A(x-1)+1$.
+    Because $y(2) = 3$, we have that $3 = A + 1$, so the particular solution is
+    $$
+    y(x) = 2x+1
+    $$
+    
+    a. Separatating the variables yields
+    $$
+    \frac{1}{y+2} \frac{dy}{dx} = \frac{1}{x-2}$$
+    And now integrating with respect to $x$
+    $$\int \frac{1}{y+2} \frac{dy}{dx}\, dx = \int \frac{1}{x-2}\,dx\\
+    = \int \frac{1}{y+2} dy = \int \frac{1}{x-2} dx\\
+    \Rightarrow \ln(y+2) = \ln(x-2) + c$$
+    Letting $c = \ln (A)$, with $A$ another constant, then
+    $$\ln(y+2) = \ln(x-2) + \ln(A) = \ln((x-2)A)$$
+    So $y+2 = A(x-2)$ and $y = Ax-2A -2$.
+    
+    
+1. Using the integrating factor method, find the general solutions of the following linear first order differential equations and the particular solutions in those cases where initial conditions are specified:
+
+    a. $\displaystyle \frac{dy}{dx}+\frac{3}{x}y=4+x^2,\;y(1)=1$
+    a. $\displaystyle x\frac{dy}{dx}+2y=x^{-4},\;y(1)=-\frac{1}{2}$
+    a. $\displaystyle \frac{dy}{dx}+\frac{y}{x}=\cos(x),\;y\left(\frac{\pi}{2}\right)=0$
+    a. $\displaystyle \frac{dy}{dx}=e^{-x}-2y,\;y(0)=0$
+    a. $\displaystyle \frac{dy}{dx}=y\tan(x)+\sin(x)$
+    
+    
+    Answers:
+    Recall that for a first order differential equation of the form
+    $$\frac{dy}{dx} + p(x)y = r(x)$$
+    The integrating factor $u(x)$ is given by
+    $$
+    u(x) = \exp\left(\int p(x)\, dx\right)
+    $$
+    and then
+    $$\frac{d}{dx}(u(x)y(x)) = u(x)r(x)$$
+    and
+    $$
+    y(x) = \left[ \int e^{\int p(x)dx} r(x) \,dx + C\right] e^{-\int p(x) dx}.
+    $$
+    See the lecture notes for details for why this is the case.
+    a. Here, $u(x) = \exp\left(\int \frac{3}{x}dx\right) = e^{\ln(x^3)} = x^3$, and we have that
+    $$
+    \frac{d}{dx}(x^3y) = x^3 (4+x^2) = x^5 + 4x^3\\
+    \Rightarrow x^3y = \int x^5 + 4x^3 \, dx = \frac{1}{6}x^6 + x^4 + c
+    \Rightarrow y = \frac{1}{6} x^3 + x + \frac{c}{x^3}
+    $$
+    And from the initial condition $y(1) = 1$
+    $$1 = \frac{1}{6} + 1 + c \Rightarrow c = -\frac{1}{6}$$
+    so
+    $$y(x) = \frac{1}{6}x^3 + x -\frac{1}{6X^3}$$
+    
+    
+    a. $$x \frac{dy}{dx} + 2y = x^{-4}$$
+    Whic is equivalent to 
+    $$\frac{dy}{dx} + 2\frac{y}{x} = x^{-5}$$
+    Here, the integrating factor is 
+    $$u(x) = \exp\left(\int \frac{2}{x}dx\right) = e^{ln(x^2)} = x^2$$
+    and
+    $$\frac{d}{dx}(x^2y) = x^2x^{-5} = x^{-3}\\
+    \Rightarrow x^2y = \int x^{-3} \, dx = -\frac{1}{2}x^{-2} + C$$
+    And with the initial conditions $y(1)=-\frac{1}{2}$, $c = 0$, and the particular solution is
+    $$y(x) = -\frac{1}{2}x^{-4}$$
+    
+    a. 
+    $$\frac{dy}{dx} + \frac{y}{x} = \cos(x)$$
+    In this case, the integrating factor is
+    $$u(x) = \exp\left(\int\frac{1}{x}dx\right) = e^{\ln(x)} = x\\
+    \Rightarrow \frac{d}{dx}(e^xy) = e^x\cos(x)\\
+    x y = \int x\cos(x)\, dx$$
+    And the inegral can be solved by parts: $\int uv' = uv - \int u'v$. Let $u=x, u'=1, v' = \cos(x), v = \sin(x)$. So
+    $$
+    x y = x\sin(x) - \int \sin(x)\,dx = x\sin(x) + \cos(x) + c\\
+    y = \sin(x) + \frac{\cos(x)}{x} + \frac{c}{x}$$
+    With $y(\frac{\pi}{2}) = 0$, $c=-\frac{\pi}{2}$ so the particular solution is
+    $$
+    y(x) = \sin(x) + \frac{\cos(x)}{x} + \frac{\pi}{2x}$$
+    
+    a. First rearrange to
+    $$\frac{dy}{dx} + 2y = e^{-x}$$
+    The integrating factor is 
+    $$u(x) = \exp\left(\int 2 dx\right) = e^{2x}$$
+    Then the general solution is
+    $$
+    y = \frac{1}{e^{2x}}\int e^{2x}e^{-x} \, dx = \frac{1}{e^{2x}}(e^x + c) = \frac{1}{e^x} + \frac{c}{e^{2x}}$$
+    And to find the particular solution with the intial condition $y(0) = 0$, $c=-1$ and he particular solution is
+    $$
+    y = e^{-x} - e^{-2x}$$
+    
+    a. $$\frac{dy}{dx} - y\tan(x) = \sin(x)$$
+    Here, the integrating factor (taking care with the minus sign which must be included in $p(x)$) is
+    $$
+    \begin{align}
+    u(x) &= \exp\left(\int -\tan(x)\,dx\right) = \exp\left(\int -\frac{\sin(x)}{\cos(x)}dx\right)\\ 
+    &= \exp\left(\ln(\cos(x))\right) = \exp\left(\ln(\cos(x))\right) = \cos(x)\end{align}
+    $$
+    and the general solution is
+    $$
+    \begin{align}
+    y(x) &= \int \cos(x)\sin(x)\frac{1}{\cos(x)}\\ &= \left(\frac{1}{2}\cos^2(x) + c\right)\frac{1}{\cos(x)}\\
+    &= \frac{\cos(x)}{2} + c \sec(x)
+    \end{align}
+    $$
+    Note that there are other forms for the solution, since $\cos(x)\sin(x) = \frac{1}{2}\sin(2x)$.
+    
+1. Find the general solutions of the following constant coefficient, linear, homogeneous differential equations, and the particular solutions in those cases where initial conditions are specified:
+
+    a. $\displaystyle \frac{d^2y}{dx^2}+5\frac{dy}{dx}+6y=0,\;y(0)=0,\; \frac{dy(0)}{dx}=1$
+    a. $\displaystyle \frac{d^2y}{dx^2}+8\frac{dy}{dx}+25y=0,\;y(0)=1,\; \frac{dy(0)}{dx}=0$
+    a. $\displaystyle \frac{d^2y}{dx^2}+2\frac{dy}{dx}+y=0$
 
 
-1. A box contains 7 rock samples; 4 have an independent property set A and the other 3 have a property set B. We withdraw two rock samples one at a time without replacement. Find the probabilities:
-    a. the samples have different property sets
-    a. at least one rock sample has property set A
-    a. if a third sample is drawn from the box, the probability of all the samples having property set B.
 
     Answers:
-
-    Perhaps the easiest way of answering this question is by drawing out a "probability tree" and adding together the probabilities that give the required outcomes.
-
-    ```{r probtree1}
-    knitr::include_graphics("figures/probtree1.png")
-    ```
-
-    ```{r probtree2}
-    knitr::include_graphics("figures/probtree2.png")
-    ```
-
-    a. $P(\text{A,B})+P(\text{B,A})=\frac{2}{7}+\frac{2}{7}=\frac{4}{7}$
-    a. $P(\text{A,B})+P(\text{B,A})+P(\text{A,A})=1-P(\text{B,B})=1-\frac{1}{7}=\frac{6}{7}$
-    a. $P(\text{B,B,B})=\frac{1}{35}$
-
-
-    We can also think in terms of arrangements. Firstly, if we were to pick out all 7 rocks the number of arrangements would be
+    Recall that for second order homogeneous differential equations, we standard form is 
+    $$\frac{d^2y}{dx^2} + p \frac{dy}{dx} + qy = 0$$
+    and we consider the possible solution $y = e^{mx}$. Substitution yields
+    $$(m^2 + pm + q)e^{mx} = 0 \text{ hence, because $e^{mx}$ is never zero, } m^2 + pm + q = 0.$$
+    Solving this auxiliary (or characteristic) equation gives the two roots, and there are three possible cases for obtaining the two linearly independent solutions---see the lecture notes.
+    a. The auxiliary equation is given by
     $$
-    \frac{7!}{4!\times 3!}=35
+    m^2 + 5m + 6 = 0\\
+    (m+3)(m+2) = 0\\
+    m_1 = -3, m_2 = -2
     $$
-    where we have divided by $4!$ to account for the 4 arrangements of rocks with property A being the same, and similarly by $3!$ to account for the rocks with property set B. Now we have:
-    a. The first two rocks are either (A, B) or (B, A) -- 2 mutually exclusive possibilities. The number of arrangements of the remaining 5 rocks are
+    And the general solution is
+    $$y(X) = Ae^{-3x} + B e^{-2x}.$$
+    We have the intial conditions $y(0) = 0$ and $\frac{dy(0)}{dx} = 1$,
+    so $A+B = 0$ and $-3A -2B = 1$. This gives $A=-1$ and $B = 1$. So the particular solution is
     $$
-    \frac{5!}{3!\times 2!}=10.
+    y(x) = -e^{-3x} + e^{-2x}
     $$
-    Hence the probability is
+    
+    a.
+    Here, the auxiliary (or characteristic) equation is
     $$
-    \frac{2 \times 10}{35}=\frac{4}{7}
+    m^2 + 8m + 25 = 0\\
+    m = \frac{-8 \pm  \sqrt{64 - 100}}{2}\\
+    m_1 = \frac{-8 + 6i}{2} = -4+3i\\
+    m_2 = \frac{-8 - 6i}{2} = -4-3i
     $$
-    a. Now we have the three possibilities (A, B), (B, A) or (A, A). This is the complement of obtaining (B, B), then looking for all arrangements of the remaining 5 rocks:
+    The general solution is therefore $y= e^{-4x}(A \cos 3x + B \sin 3x)$.
+
+    \medskip
+
+    $y(0)=1 \implies A=1$. $y' = -4 e^{-4x}(A \cos 3x + B \sin 3x) +        e^{-4x}(-3A \sin 3x + 3B \cos 3x)$.
+    Thus, $y'(0)=0 \implies -4A +3B         = 0 \implies B= \frac{4}{3}$, giving the particular solution
     $$
-    \frac{5!}{4!\times 1!}=5.
+    y = \frac{1}{3} e^{-4x}(3 \cos 3x + 4 \sin 3x).
     $$
-    So the number of ways of getting at least one A are $35 - 5 = 30$ and the probability is
-    $$\frac{30}{35}=\frac{6}{7}.$$
 
-    a. In this case we obtain (B, B, B) and there is only 1 arrangement of the remaining 4 rocks, (A, A, A, A). Hence the probability is
-    $$\frac{1}{35}.$$
-
-1. Derive Bayes' Theorem from the definition of conditional probability.
-
-    Answer:
-
-    From the definition of conditional probability we have
-    $$P(A|B)=\frac{P(A\cap B)}{P(B)}$$
-    and swapping $A$ and $B$, also
-    $$P(B|A)=\frac{P(A\cap B)}{P(A)}$$
-    where we have used $B\cap A=A\cap B$. Re-arranging the first equation to give
-    $$P(A\cap B)=P(A|B)P(B)$$
-    and substituting this into the second equation gives
-    $$P(B|A)=\frac{P(A|B)P(B)}{P(A)}$$
-    which is Bayes' Theorem.
-
-1. A test is 99% effective at detecting drug use in active users and 99% effective at finding negative results for non-drug users. At a given time, 0.1% of the population are active drug users. What is the probability that a randomly selected individual who tests positive is actually a drug user?
-
-    Answer:
-
-    Here, drug users and non-users form a partition of the sample space. Let $+$ denote the event of a positive test result, so by the law of total probability we have:
-    \begin{eqnarray*}
-    P(+) &=& P(+ | \mbox{user})P(\mbox{user}) + P(+ | \mbox{non-user})P(\mbox{non-user})\\
-    &=& 0.99 \times 0.001 + 0.01 \times 0.999\\
-    &=& 0.011 \text{ to 2 s.f.}
-    \end{eqnarray*}
-
-    By Bayes' Theorem we have:
+    a. $m^2 +2m+1 = 0 \implies (m+1)^2=0$, so $m=-1$ twice. The general solution is then 
     $$
-    P(\mbox{user} | +) = \frac{P(+ | \mbox{user})P(\mbox{user})}{P(+)}.
+    y =  (A + Bx) e^{-x}.
     $$
-    Hence the answer is:
-    \begin{eqnarray*}
-    P(\mbox{user} | +) &=& \frac{0.99 \times 0.001}{0.99 \times 0.001 + 0.01 \times 0.999}\\
-    &=& 0.090 \text{ to 2 s.f.}
-    \end{eqnarray*}
 
+    
+1. For each of the following differential equations, find: the Complementary Function; a Particular Integral; and the Particular Solution corresponding to the given initial conditions:
 
-1. A product tester employed by the Gizmo Corporation tests the company's gizmos. A gizmo has 3% probability of being defective. The tester's test registers a defective gizmo as being defective with 95% probability, but it registers a non-defective gizmo as being defective with 2% probability. The tester performs a test on a gizmo drawn at random. Their test indicates the gizmo is defective.What is the probability that it really is defective?
+    a. $\displaystyle \frac{d^2y}{dx^2}+\frac{dy}{dx}+y=36e^{5x}$
+    a. $\displaystyle \frac{d^2y}{dx^2}+3\frac{dy}{dx}-4y=-34\sin(x)$
+    a. $\displaystyle \frac{d^2y}{dx^2}+3\frac{dy}{dx}-4y=24e^{-x},\;y(0)=0,\; \frac{dy(0)}{dx}=10$
+    a. $\displaystyle \frac{d^2y}{dx^2}-3\frac{dy}{dx}+2y=x^2-2x+3,\;y(0)=\frac{3}{4},\; \frac{dy(0)}{dx}=\frac{3}{2}.$
+
 
     Answers:
-
-    Let $A$ be the event that the gizmo is defective, and let $B$ be the event that the test picks this up. We have:
-    \begin{eqnarray*}
-    P(A) &=& 0.03\\
-    P(A^c) &=& 0.97\\
-    P(B | A) &=& 0.95\\
-    P(B | A^c) &=& 0.02,
-    \end{eqnarray*}
-    and we want $P(A | B)$, and by Bayes' Theorem:
-    \begin{eqnarray*}
-    P(A | B) &=& \frac{P(B | A)P(A)}{P(B)}\\
-    &=& \frac{P(B | A)P(A)}{P(B | A)P(A) + P(B | A^c)P(A^c)}\qquad \mbox{by law of total probability}\\
-    &=& \frac{0.95 \times 0.03}{0.95 \times 0.03 + 0.02 \times 0.97}\\
-    &=& 0.59\text{ to 2 s.f.}.
-    \end{eqnarray*}
+    a. First, find the complementary function (the solution to the homogeneous differential equation). The characteristic equation for the homogeneous part is 
+    $$m^2 + 2m + 1 = 0 \\(m+1)^2 = 0\\m=-1 \text{equal roots}$$
+    Therefore, $y_{CF} = (A+Bx)e^{-x}$
+    Now for the particular integral, the solution to the nonhomogeneous part of the differential equation. Since the right hand side is $36e^{5x}$, take the trial (ansatz) particular integral $y_{PI} = Ce^{5x}$. Substituting this into the differential equation gives
+    $$\frac{d^2y_{PI}}{dx^2}+\frac{dy_{PI}}{dx}+y_{PI}=36e^{5x}\\
+    25Ce^{5x} + 2(5Ce^{5x}) + Ce^{5x} = 36Ce^{5x} = 36e^{5x}$$
+    and we have $C=1$. Therefore, the particular integral is $y_{PI} = e^{5x}$ and the general solution is
+    $$
+    y = (A+Bx)e^{-x} + e^{5x}.
+    $$
+    
+    a. Proceeding the same way, the characteristic equation is
+    $$
+    m^2 + 3m - 4 = 0\\
+    (m+4)(m-1) = 0\\
+    m_1 = -4, m_2 = 1
+    $$
+    so there are two distinct roots, and 
+    $$y_{CF} = Ae^{-4x} + B e^x$$
+    For the particular integral, the right hand side is $-34\sin(x)$, so try the function
+    $$
+    \begin{align}
+    y_{PI} &= a \cos(x)+ b\sin(x)\\
+    \frac{dy_{PI}}{dx} &= -a \sin(x) + b\cos(x)\\
+    \frac{d^2y_{PI}}{dx^2} &= -a \cos(x) - b\sin(X)
+    \end{align}
+    $$
+    And substituting these into the differential equation
+    $$
+    \left(-a\cos(x) - b\sin(x)\right) + 3 \left(-a \sin(x) + b\cos(x)\right) - 4\left(a\cos(x) + b\sin(x)\right) = -34\sin(x)\\
+    (3b-5a)\cos(x) + (-5b - 3a)\sin(x) = -34\sin(x)$$
+    Equating the coefficients of $\sin(x)$ and $\cos(x)$, since the above must hold for all $x$:
+    $$
+    \begin{align}
+    3b-5a &= 0\\
+    -5b - 3a &= 0
+    \end{align}
+    $$
+    Solving these simultaneos equations gives $a=3, b=5$. Therefore the particular integral is
+    $$y_{PI} = 3\cos(x) + 5\sin(x)$$
+    and the general solution $y = y_{CF} + y_{PI}$ is 
+    $$
+    y(x) = Ae^{-4x} + Be^x + 3\cos(x) + 5\sin(x)
+    $$
+    
+    
+    a. The characteristic equation is solved by
+    $$
+    m^2 + 3m - 4 = 0\\
+    (m+4)(m-1) = 0\\
+    m_1 = -4, m_2 = 1 
+    $$
+    There are two distinct roots and $y_{CF} = Ae^{-4x} = Be^x$. For the particular integral, since the right hand side is $24e^{-x}$, try the function
+    $$
+    \begin{align}
+    y_{PI} &= Ce^{-x}\\
+    \frac{dy_{PI}}{dx} &= -Ce^{-x}\\
+    \frac{d^2y_{PI}}{dx} &= Ce^{-x}
+    \end{align}
+    $$
+    Upon substituting into the differential equation
+    $$
+    Ce^{-x} - 3(Ce^{-x}) - 4Ce^{-x} = 24e^{-x}$$
+    so -6C = 25$ and $C = -4$.
+    The general solution is then $y = y_{CF} + y_{PI}$
+    $$
+    y(x) = Ae^{-4x} + B e^{-x} - 4e^{-x}$$
+    The initial conditions are $y(0) = 0$ and $\frac{dy(0)}{dx} = 0$, which can be used to solve for $A$ and $B$.
+    $$
+    A+B - 4 = 0\\
+    -4a + B + 4 = 10
+    $$
+    and $A = -0.4$, $B=4.4$ so the particular solution is
+    $$
+    y(x) = -0.4 e^{-4x} + 4.4 e^x - 4e^{-x}
+    $$
+    
+    a.
+    The characteristic equation is given by
+    $$
+    m^2 - 3m + 2 = 0\\
+    (m-2)(m-1) = 0\\
+    m_1 = 2, m_2 = 1
+    $$
+    There are two distinct roots, so the complementary function is
+    $$y_{CF} = Ae^{2x} + Be^x$$
+    Because the right hand side is a quadratic, take the particular integral to also be a quadratic.
+    $$
+    \begin{align}
+    y_{PI} &= Cx^2 +Dx + E\\
+    \frac{y_{PI}}{dx} &= 2Cx + D\\
+    \frac{d^2 y_{PI}}{dx^2} &= 2C
+    \end{align}
+    $$
+    Substituting into the homogeneous part of the differential equation and grouping terms in powers of $x$:
+    $$
+    2cx^2 + (2D - 6C)x + 2C - 3D + 2E = 3
+    $$
+    Which gives $C = \frac{1}{2},D=\frac{1}{2},E = \frac{7}{4}$. Therefrore the general solution is
+    $$
+    y = Ae^{2x} + Be^x + \frac{x^2}{2} + \frac{x}{2} + \frac{7}{4}
+    $$
+    For the particualr solution, find $A$ and $B$ given the initial conditions $y(0) = \frac{3}{4}$ and $\frac{dy(0)}{dx} = \frac{3}{2}$
+    $$
+    \begin{align}
+    A + B + \frac{7}{4} &= \frac{3}{4} &\Rightarrow & A+B & = -1\\
+    2A + B + \frac{1}{2} &= \frac{3}{2} &\Rightarrow & 2A + B &=1
+    \end{align}
+    $$
+    From these, $A=2$ and $B=-3$, so the particular solution is
+    $$
+    y(x) = 2e^{2x} - 3e^x +\frac{x^2}{2} + \frac{x}{2} + \frac{7}{4}
+    $$

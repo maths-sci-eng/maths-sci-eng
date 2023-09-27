@@ -1,286 +1,346 @@
 # Exercise Set 9 Answers {.unlisted .unnumbered}
 
-1. Find $\dfrac{dy}{dx}$ for the following by implicit differentiation.
-
-    a. $x^2y+3xy^3-x=3$
-    a. $\sin(x^2y^2)=x$
-    a. $xy^2=y+e^{xy}$
-
-    Answers:
-
-    a. \begin{align*}
-        2xy+x^2\frac{dy}{dx}+3y^3+9xy^2\frac{dy}{dx}-1&=0\\
-        (x^2+9xy^2)\frac{dy}{dx}&=1-2xy-3y^3\\
-        \frac{dy}{dx}&=\frac{1-2xy-3y^3}{x^2+9xy^2}
-        \end{align*}
-
-    a. \begin{align*}
-        \cos(x^2y^2)\left(2xy^2+2x^2y\frac{dy}{dx}\right)&=1\\
-        \frac{dy}{dx}&=\frac{1-2xy^2\cos(x^2y^2)}{2x^2y\cos(x^2y^2)}
-        \end{align*}
-
-    a. \begin{align*}
-        \frac{d}{dx}(xy^2)&=\frac{d}{dx}(y+e^{xy})\\
-        2xy\frac{dy}{dx}+y^2&=\frac{dy}{dx}+\frac{d}{dx}e^{xy}\\
-        2xy\frac{dy}{dx}+y^2&=\frac{dy}{dx}+e^{xy}\frac{d}{dx}(xy)\\
-        2xy\frac{dy}{dx}+y^2&=\frac{dy}{dx}+e^{xy}\left(x\frac{dy}{dx}+y\right)\\
-        2xy\frac{dy}{dx}-xe^{xy}\frac{dy}{dx}-\frac{dy}{dx}&=ye^{xy}-y^2\\
-        \frac{dy}{dx}(2xy-xe^{xy}-1)&=ye^{xy}-y^2\\
-        \frac{dy}{dx}&=\frac{ye^{xy}-y^2}{(2xy-1-xe^{xy})}.
-        \end{align*}
-
-1. Consider the curve $x^2+3xy+y^2+2x-7=0$. Use implicit differentiation to find $\dfrac{dy}{dx}$ and hence compute the equation of the tangent at the point $(1,1)$.
-
-    Answers:
-
-    \begin{align*}
-    2x+3y+3x\frac{dy}{dx}+2\frac{dy}{dx}+2&=0\\
-    \frac{dy}{dx}&=-\frac{2x+3y+2}{3x+2}.\\
-    \end{align*}
-    At the point $(1,1)$
-    \begin{equation*}
-    \frac{dy}{dx}\Bigr|_{\substack{(1,1)}}=-\frac{2+3+2}{3+2}=-\frac{7}{5}
-    \end{equation*}
-    then the equation of the tangent line is
-    \begin{equation*}
-    y=1-\frac{7}{5}(x-1).
-    \end{equation*}
-
-1. Find the slope of the circle $x^2+y^2=25$ at the point $(-3,-4)$. Hence find the equations of the tangent and normal at that point.
-
-    Answers:
-    By implicit differentiation
-    $$2x+2y\frac{dy}{dx}=0$$
-    hence
-    $$\frac{dy}{dx}=-\frac{x}{y}$$
-    and at $(-3,-4)$
-    $$\frac{dy}{dx}=-\frac{3}{4}.$$
-
-    The equation of the tangent line is given by
-    $$y-(-4)=-\frac{3}{4}(x-(-3))$$
-    or
-    $$y=-\frac{3}{4}x-\frac{25}{4}.$$
-
-    The equation of the normal line is
-    $$y-(-4)=\frac{4}{3}(x-(-3))$$
-    or
-    $$y=\frac{4}{3}x.$$    
-
-1. Find $\dfrac{dy}{dx}$ and $\dfrac{d^2y}{dx^2}$ for the following by implicit differentiation.
-    a. $y+\sin(y)=x$
-    a. $x^2-xy+y^2=3$
+1. Find the first and second dervatives of the following expressions.
+    a. $y=3x^5+2x-1$
+    a. $y=4x^{-1}$
+    a. $y=x^{\frac{1}{2}}+x^{\frac{1}{3}}$
+    a. $y=x^7+\sin(x)$
+    a. $y=e^x+5$
 
     Answers:
 
     a. \begin{align*}
-        \frac{dy}{dx}+\cos(y)\frac{dy}{dx}&=1\\
-        \frac{dy}{dx}&=\frac{1}{1+\cos(y)}
-        \end{align*}
-    a. \begin{align*}
-        2x-y-x\frac{dy}{dx}+2y\frac{dy}{dx}&=0\\
-        (x-2y)\frac{dy}{dx}&=2x-y\\
-        \frac{dy}{dx}&=\frac{2x-y}{x-2y}
-        \end{align*}
-
-
-1. Find $\dfrac{dy}{dx}$ and $\dfrac{d^2y}{dx^2}$ for the following parametric equations.
-    a. $y=\cos(2t)$ and $x=\sin(t)$
-    a. $y=\dfrac{3+2t}{1+t}$ and $x=\dfrac{2-3t}{1+t}$
-    a. $y=3\sin(\theta)-\sin^3(\theta)$ and $x=\cos^3(\theta)$
-
-    Answers:
-
-    a. \begin{align*}
-        \frac{dy}{dt}=-2\sin(2t)&&\frac{dx}{dt}=\cos(t)
-        \end{align*}
-        The first derivative is
-        \begin{align*}
-        \frac{dy}{dx}&=\frac{\dfrac{dy}{dt}}{\dfrac{dx}{dt}}\\
-        &=\frac{-2\sin(2t)}{\cos(t)}\\
-        &=\frac{-4\sin(t)\cos(t)}{\cos(t)}\\
-        &=-4\sin(t).
-        \end{align*}
-        The second derivative is (using the chain rule)
-        \begin{align*}
-        \frac{d^2y}{dx^2}&=\frac{d}{dt}\left(\frac{dy}{dx}\right)\frac{dt}{dx}\\
-        &=\frac{d}{dt}(-4\sin(t))\cdot \frac{1}{\cos(t)}\\
-        &=-4\cos(t)\cdot \frac{1}{\cos(t)}\\
-        &=-4.
-        \end{align*}
-
-    a. \begin{align*}
-        \frac{dy}{dt}=-\frac{1}{(1+t)^2}&&\frac{dx}{dt}=-\frac{5}{(1+t)^2}
-        \end{align*}
-        The first derivative is
-        \begin{align*}
-        \frac{dy}{dx}&=\frac{\dfrac{dy}{dt}}{\dfrac{dx}{dt}}\\
-        &=\frac{1}{(1+t)^2}\cdot \frac{(1+t)^2}{5}\\
-        =\frac{1}{5}
-        \end{align*}
-        then the second derivative
-        \begin{equation*}
-        \frac{d^2y}{dx^2}=0.
-        \end{equation*}
-
-    a. \begin{align*}
-        \frac{dy}{d\theta}=3\cos^3(\theta)&&\frac{dx}{d\theta}=-3\cos^2(\theta)\sin(\theta)
-        \end{align*}
-        The first derivative is
-        \begin{align*}
-        \frac{dy}{dx}&=\frac{\dfrac{dy}{d\theta}}{\dfrac{dx}{d\theta}}\\
-        &=\frac{3\cos^3(\theta)}{-3\cos^2(\theta)\sin(\theta)}\\
-        &=-\cot(t)
-        \end{align*}
-        and the second derivative
-        \begin{align*}
-        \frac{d^2y}{dx^2}&=\frac{d}{d\theta}\left(\frac{dy}{dx}\right)\frac{d\theta}{dx}\\
-        &=\frac{d}{d\theta}(-\cot(t))\cdot \frac{1}{-3\cos^2(\theta)\sin(\theta)}\\
-        &=\frac{1}{\sin^2(\theta)}\cdot \frac{1}{-3\cos^2(\theta)\sin(\theta)}\\
-        &=\frac{-1}{3\cos^2(\theta)\sin^3(\theta)},
-        \end{align*}
-        where we have used
-        \begin{align*}
-        \frac{d}{d\theta}(-\cot(t))&=\frac{d}{d\theta}\frac{-\cos(\theta)}{\sin(\theta)}\\
-        &=\frac{\sin(\theta)\sin(\theta)-(-\cos(\theta))\cos(\theta)}{\sin^2(\theta)}\\
-        &=\frac{1}{\sin^2(\theta)}.
-        \end{align*}
-
-1. Find the derivative of the following inverse functions by implicit differentiation.
-    a. $y=\sin^{-1}(x)$
-    a. $y=\cosh^{-1}(3x)$
-    a. $y=\tan^{-1}(4x^2)$
-
-    Answers:
-
-    a. We have that
-        \begin{equation*}
-        \sin(y)=x
-        \end{equation*}
-        then by implicit differentiation
-        \begin{align*}
-        \cos(y)\dfrac{dy}{dx}=1\\
-        \dfrac{dy}{dx}=\dfrac{1}{\cos(y)}.
-        \end{align*}
-        Using the identity $\cos^2(y)+\sin^2(y)=1$
-        \begin{align*}
-        \cos(y)&=\sqrt{1-\sin^2(y)}\\
-        &=\sqrt{1-x^2}
-        \end{align*}
-        so,
-        \begin{equation*}
-        \dfrac{dy}{dx}=\dfrac{1}{\sqrt{1-x^2}}.
-        \end{equation*}
-
-    a. We have
-        \begin{equation*}
-        \cosh(y)=3x
-        \end{equation*}
-        then by implicit differentiation
-        \begin{align*}
-        \sinh(y)\dfrac{dy}{dx}&=3\\
-        \dfrac{dy}{dx}&=\dfrac{3}{\sinh(y)}.
-        \end{align*}
-
-        Since $\cosh^2(y)-\sinh^2(y)=1$
-        \begin{equation*}
-        \sinh(y)=\sqrt{\cosh^2(y)-1}=\sqrt{(3x)^2-1}.
-        \end{equation*}
-        So,
-        \begin{equation*}
-        \dfrac{dy}{dx}=\frac{3}{\sqrt{9x^2-1}}.
-        \end{equation*}
-
-
-    a. We have
-        \begin{equation*}
-        \tan(y)=4x^2.
-        \end{equation*}
-        By implicit differentiation,
-        \begin{align*}
-        \sec^2(y)\dfrac{dy}{dx}&=8x\\
-        \dfrac{dy}{dx}&=\dfrac{8x}{\sec^2(y)}
-        \end{align*}
-        Using
-        \begin{align*}
-        \cos^2(y)+\sin^2(y)&=1\\
-        1+\tan^2(y)&=\sec^2(y)
-        \end{align*}
-        we have $\sec^2(y)=1+(4x^2)^2$, and then
-        \begin{equation*}
-        \dfrac{dy}{dx}=\dfrac{8x}{1+16x^4}.
-        \end{equation*}
-
-1. Find $\dfrac{dy}{dx}$ for the following using logarithmic differentiation.
-    a. $y=a^x$
-    a. $y=\dfrac{(x-4)^7(2x+3)^2}{(4x+7)^3}$
-
-
-    Answers:
-
-    a. Taking logs and differentiating implicitly
-        \begin{align*}
-        \ln(y)=\ln(a^x)&=x\ln(a)\\
-        \frac{1}{y}\dfrac{dy}{dx}&=\ln(a)\\
-        \dfrac{dy}{dx}&=y\ln(a)\\
-        \dfrac{dy}{dx}&=a^x\ln(a).
+        y &= 3x^5 + 2x -1$\\
+        \frac{dy}{dx} &= 15x + 2\\
+        \frac{d^2y}{dx^2} &= 15
         \end{align*}
     
-    a. Taking logs
-        \begin{align*}
-        \ln(y)&=\ln\left[\dfrac{(x-4)^7(2x+3)^2}{(4x+7)^3}\right]\\
-        &=\ln(x-4)^7+\ln(2x+3)^2-\ln(4x+7)^3\\
-        &=7\ln(x-4)+2\ln(2x+3)-3\ln(4x+7)
-        \end{align*}
-        Then differentiating
-        \begin{align*}
-        \frac{1}{y}\dfrac{dy}{dx}&=\frac{7}{x-4}+\frac{2}{2x+3}\cdot 2-\frac{3}{4x-7}\cdot 4\\
-        \dfrac{dy}{dx}&=\dfrac{(x-4)^7(2x+3)^2}{(4x+7)^3}\left[ \frac{7}{x-4}+\frac{4}{2x+3}-\frac{12}{4x-7}\right]
+    a. \begin{align*}
+            y&=4x^{-1}\\
+        \frac{dy}{dx} &= -4x^{-2}\\
+        \frac{d^2y}{dx^2} &= 8x^{-3}
         \end{align*}
 
+    a. \begin{align*}
+            y &= x^\frac{1}{2} + x^\frac{1}{3}\\
+            \frac{dy}{dx} &= \frac{1}{2}x^{-\frac{1}{2}} + \frac{1}{3}x^{-\frac{2}{3}}\\
+            \frac{d^2y}{dx^2} &= -\frac{1}{4}x^{-\frac{3}{2}} + -\frac{2}{9}x^{-\frac{5}{3}}
+            \end{align*}
 
-1. Find $\dfrac{dy}{dx}$ for the following.
-    a. $y=x^x$
-    a. $y=(\tanh(x))^x$
-    a. $x^3+\sin(xy)=xy^2$
+    a. \begin{align*}
+            y &= x^6 \sin(x)\\
+            \frac{dy}{dx} &= 7x^6 + \cos (x)\\
+            \frac{d^2y}{dx^2} &= 42x^5 - \sin(x)
+            \end{align*}
+
+    a. \begin{align*}
+            y &= e^x + 5\\
+            \frac{dy}{dx} &= e^x\\
+            \frac{d^2y}{dx^2} &= e^x
+            \end{align*}
+
+
+1. Find the derivative of $(1+2x)(x-x^2)$ in two ways: first, expand and find the derivative; second, use the product rule. Your answers should agree!
+
+    Answer:
+        
+    Method 1, expand and find the derivative:
+    \begin{align*}
+    y &= (1+2x)(x-x^2)\\
+    &=x - x^2 + 2x^2 - 2x^3\\
+    &=-2x^3 + x^2 + x\\
+    \frac{dy}{dx} &= -6x^2 + 2x + 1
+    \end{align*}
+
+    Method 2, product rule. Let $y=h(x) = f(x)g(x)$ where $f(x) = (1+2x)$ and $g(x) = (x-x^2)$
+    \begin{align*}
+    y &= (1+2x)(x-x^2)\\
+    y' &= 2(x-x^2)+(1+2x)(1-2x)\\
+    &=-6x^2 + 2x + 1
+    \end{align*}
+    And as expected, we have obtained the same answer with both methods.
+
+1. Use the product rule to show that $(af)'(x)=af'(x)$ for any differentiable function $f$ and number $a$.
+
+    Answer:
+
+    We wish to show that $(af)'(x) = a f(x)$, or in Leibniz notation, $\frac{d}{dx}af(x)=a \frac{d}{dx}f(x)$. This can be shown using product rule, where one of the functions is $f(x)$ and the other is simply the constant function $g(x)=a$
+    \begin{align*}
+    (gf)'(x) &= g(x)' f(x) + g(x)f'(x)\\
+    &= 0f(x)+g(x)f'(x)\\
+    &=a f'(x)
+    \end{align*}
+    or in Leibniz notation
+    \begin{align*}
+    \frac{d}{dx}(g(x)f(x))&=\frac{d}{dx}(g(x))f(x)+g(x)\frac{d}{dx}f(x)\\
+    &=0f(x)+g(x)\frac{d}{dx}f(x)\\
+    &=a\frac{d}{dx}f(x)
+    \end{align*}
+    using $g'(x)=\frac{d}{dx}g(x)=0$ because the derivative of a constant function is zero.
+
+1. Use the chain rule to show that $(f(ax+b))'=af'(ax+b)$ for any differentiable function $f$ and numbers $a$ and $b$.
+
+    Answer:
+
+    To show $(f(ax+b))' = a f'(ax+b)$, we can recognise the derivative as an application of chain rule: $(f(g(x)))' = g'(x)f'(g(x))$, where $g(x) = ax+b$. Since $g'(x) = a$, we have that
+    $$(f(ax+b))'= a (f'(ax+b))$$
+
+1. Find the derivatives of the following functions (you may like to use the additional rules you have just derived in the previous two questions).
+    a. $f(x)=\sqrt{2}\sin(x)$
+    a. $f(x)=\ln(2)\ln(x)$
+    a. $f(x)=\cos(3x)$
+    a. $f(x)=\sin(5x+2)$
+    a. $f(x)=3e^{2x}$
+    a. $f(x)=3e^{2x+1}$
 
     Answers:
 
-    a. First take the natural logarithm:
-        \begin{equation*}
-        \ln(y)=x\ln(x),
-        \end{equation*}
-        then differentiate implicitly:
+    a. $$f(x)= \sqrt{2} \sin (x)\\
+        f'(x) = \sqrt{2} \cos (x)$$
+    a. $$f(x) =  \ln (2) \ln(x)\\
+        f'(x) = \frac{\ln 2}{x}$$
+    a. $$f(x) = \cos (3x)\\
+        f'(x) = -3 \sin (3x)$$
+    a. $$f(x) = \sin (5x+2)\\
+        f'(x) = 5 \cos (5x+2)$$
+    a. $$f(x) = 3e^{2x}\\
+        f'(x) = 6e^{2x}$$
+    a. $$f(x) = 3e^{2x+1}\\
+        f'(x) = 6e^{2x+1}$$
+
+
+1. Find the derivatives of the following functions using the product rule.
+    a. $f(x)=3x^2\sin(x)$
+    a. $f(x)=\sin(x)\cos(x)$
+    a. $f(x)=(x^3-x)e^x$
+    a. $f(x)=x\ln(x)$
+
+    Answers:
+
+    a. $$f(x) = 3x^2 \sin (x)\\
+        f'(x) = 6x \sin(x) + 3x^2 \cos(x)$$
+    a. $$ f(x) = \sin(x)\cos(x) \quad(=\frac{1}{2}\sin(2x))\\
+        f'(x) = \cos^2(x) - \sin^2(x) = \cos(2x)$$
+    a. $$f(x) = (x^3 - x)e^x\\
+        f'(x) = (3x^2 - 1)e^x + (x^3 - x)e^x\\
+        = (x^3 + 3x^2 - x - 1)e^x$$
+    a. $$f(x) = x \ln (x)\\
+        f'(x) = \ln(x) + 1$$
+
+1. Find the derivatives of the following functions using the chain rule.
+    a. $f(x)=\cos(x^2)$
+    a. $f(x)=\sin(\cos(x))$
+    a. $f(x)=e^{\sin(x)}$
+    a. $f(x)=\sin^{100}(x)$
+
+    Answers:
+
+    These are all applications of chain rule for taking derivatives of functions of the from $f(x) = h(g(x))$
+
+    a. This is a composition of two functions, $h(x) = \cos(x)$, $g(x) = x^2$
+        $$f'(x) = -2x \sin(x^2)$$
+    a. Taking the derivative of $h(g(x))$ where $h(x) = \sin(x)$ and $g(x) = \cos(x)$
+        $$f'(x) = -\sin(x)\cos(\cos(x))$$
+    a. $f'(x) = (h(g(x)))'$ where $h(x) = e^x$ and $g(x) = \sin(x)$
+        $$f'(x) = \cos(x)e^{\sin(x)}$$
+    a. Here, $h(x) = x^{100}$ and $g(x) = \sin(x)$
+        $$f'(x) = 100\cos(x)\sin^{99}(x)$$
+
+
+1. Find the derivatives of the following functions using the quotient rule.
+    a. $f(x)=\dfrac{1}{1+x^2}$
+    a. $f(x)=\dfrac{x^2}{1+x^2}$
+    a. $f(x)=\dfrac{x^3}{e^{3x}}$
+    a. $f(x)=\dfrac{x-\sqrt{x}}{x^2}$
+    a. $f(x)=\dfrac{\sin(x)}{\cos(x)}$
+
+    Answers:
+
+    a. $f(x) = \frac{1}{1+x^2}$. Applying quotient rule:
+        $$f'(x) = \frac{-2x}{(1+x^2)^2}$$
+    a. $f(x) = \frac{x^2}{1+x^2}$.
+        $$f'(x) = \frac{2x(1+x^2) - x^2(2x)}{(1+x^2)^2} = \frac{2x}{(1+x^2)^2}$$
+    a. $f(x) = \frac{x^3}{e^{3x}}$
+        $$f'(x) = \frac{3x^2 \times e^{3x} - x^3\times 3e^{3x}}{e^{6x}} = \frac{3(x-1)x^2}{e^{3x}}$$
+    a. $f(x) = \frac{x-x^{\frac{1}{2}}}{x^2}$
+        $$f'(x) = \frac{(1-\frac{1}{2}x^{-\frac{1}{2}})\times x^2 - (x-x^\frac{1}{2})\times 2x}{x^4}\\
+        = \frac{x^2 - \frac{1}{2}x^{\frac{3}{2}}  - 2x^2 + 2x^{\frac{3}{3}}}{x^4}\\
+        =\frac{-x^2 + \frac{3}{2}x^{\frac{3}{2}}}{x^4} = -x^{-2} + \frac{3}{2}x^{-\frac{5}{2}}$$
+    a. $f(x) = \frac{\sin(x)}{\cos{x}}$
+    $$f'(x) = \frac{\cos^2(x) + \sin^2(x)}{\cos^2 (x)} = \frac{1}{\cos^2(x)} = \sec^2(x)$$
+
+
+1. Find the derivatives of the following functions.
+
+    a. $f(x)=\sin^2(\sin(x))$
+    a. $f(x)=\ln(x^2)$
+    a. $f(x)=a^x$ for any $a>0$
+    a. $f(x)=e^x\sin(x^2)$
+
+    Answers:
+
+    a. We recognise this as a composition of three functions $f(x)=s(t(u(x)))$ with
+        $u(x)=\sin(x)$
+        $t(x)=\sin(x)$
+        $s(x)=x^2$
+        First applying the chain rule to $s$ and $t$
+        $$\frac{df(x)}{dx}=\frac{ds(t)}{dt}\frac{dt(u(x))}{dx}$$
+        Then applying the chain rule to $t$ and $u$
+        $$\frac{df(x)}{dx}=\frac{ds(t)}{dt}\left(\frac{dt(u)}{du}\frac{du(x)}{dx}\right)$$
+        so we have
+        $$\frac{df(x)}{dx}=2\sin(\sin(x))\times \cos(\sin(x))\times\cos(x).$$
+
+    a. We could first turn the power into a product to obtain $f(x)=2\ln(x)$, then the derivative is
+        $$\frac{df(x)}{dx}=2\frac{1}{x}.$$
+
+        Alternatively, we could use the chain rule. Letting $u(x)=x^2$ we have
         \begin{align*}
-        \frac{d}{dx}(\ln(y))&=\frac{d}{dx}(x\ln(x))\\
-        \frac{1}{y}\frac{dy}{dx}&=\frac{dx}{dx}\ln(x)+x\frac{d}{dx}\ln(x)\\
-        \frac{1}{y}\frac{dy}{dx}&=\ln(x)+x\frac{1}{x}\\
-        \frac{dy}{dx}&=y(\ln(x)+1)=x^x(\ln(x)+1).
+        \frac{df(x)}{dx}&=\frac{\ln(u)}{du}\frac{du(x)}{dx}\\
+        &=\frac{1}{u}2x\\
+        &=\frac{2x}{x^2}\\
+        &=\frac{2}{x}.
         \end{align*}
 
-        **Important!** The derivative of $x^x$ is **not** $x\cdot x^{x-1}=x^x$. We can't treat variable exponents like constant exponents!
+    a. We can use the natural logarithm to obtain
+        $$f(x)=e^{\ln(a^x)}=e^{x\ln(a)}.$$
+        Then
+        $$\frac{df(x)}{dx}=\ln(a)e^{x\ln(a)}=\ln(a)e^{\ln(a^x)}=\ln(a)a^x.$$
 
-    a. Taking logs
-        \begin{equation*}
-        \ln(y)=x\ln(\tanh(x)),
-        \end{equation*}
-        then differentiating
+    a. We have $f(x)=s(x)t(u(x))$ with $s(x)=e^x$, $t(x)=\sin(x)$, $u(x)=x^2$. We have a product and a composition. First applying the product rule
+        $$\frac{df(x)}{dx}=\frac{ds(x)}{dx}t(u(x))+s(x)\frac{dt(u(x))}{dx}.$$
+        Then appying the chain rule
+        $$
+        \frac{df(x)}{dx}=\frac{ds(x)}{dx}t(u(x))+s(x)\frac{dt(u)}{du}\frac{du(x)}{dx}.$$
+        So, we have
         \begin{align*}
-        \frac{1}{y}\dfrac{dy}{dx}&=\ln(\tanh(x))+\frac{x}{\tanh(x)}\textrm{sech}^2(x)\\
-        &=\ln(\tanh(x))+\frac{x\cosh(x)}{\sinh(x)\cosh^2(x)}\\
-        &=\ln(\tanh(x))+\frac{x}{\sinh(x)\cosh(x)}\\
-        &=\ln(\tanh(x))+\frac{2x}{\sinh(2x)}.\\
+        \frac{df(x)}{dx}&=e^x\sin(x^2)+e^x\cos(x^2)2x\\
+        &=e^x(\sin(x^2)+2x\cos(x^2))
         \end{align*}
-        So,
-        \begin{equation*}
-        \dfrac{dy}{dx}=(\tanh(x))^x\left[ \ln(\tanh(x))+\frac{2x}{\sinh(2x)}\right].
-        \end{equation*}
 
-    a. By implicit differentiation and using the product rule
-        \begin{align*}
-        3x^2+\cos(xy)\left(y+x\dfrac{dy}{dx} \right)&=y^2+2xy\dfrac{dy}{dx}\\
-        3x^2+y\cos(xy)-y^2&=2xy\dfrac{dy}{dx}-x\cos(xy)\dfrac{dy}{dx}
+
+1. Show that $\frac{d}{dx}\sinh(x)=\cosh(x)$ and $\frac{d}{dx}\cosh(x)=\sinh(x)$.
+
+    Answer:
+
+    $\dfrac{d}{dx}\sinh(ax)=\dfrac{d}{dx}\dfrac{e^{ax}-e^{-ax}}{2}=\dfrac{ae^{ax}-(-a)e^{-ax}}{2}=a\dfrac{e^{ax}+e^{-ax}}{2}=a\cosh(ax)$
+    and
+    $\dfrac{d}{dx}\cosh(ax)=\dfrac{d}{dx}\dfrac{e^{ax}+e^{-ax}}{2}=\dfrac{ae^{ax}+(-a)e^{-ax}}{2}=a\dfrac{e^{ax}-e^{-ax}}{2}=a\sinh(ax)$.
+
+1. Find all local maxima and minima of the following functions. Are there any global maxima or minima? Also sketch their graphs.
+    a. $f(x)=x^2+3x+1$
+    a. $f(x)=x^3-3x$
+
+    Answers:
+    
+    For graph sketching we want to find the following:
+    * Where the curve crosses the $x$-axis and $y$-axis.
+    * The coordinates of any local maxima and minima.
+    * The general shape of the curve.
+    * Any asymptotes.
+
+    a. We have $f'(x)=2x+3$. Stationary points are where $f'(x)=0 \implies x=\frac{-3}{2}$.
+    
+        To check for local maxima and minima we find the second derivative: $f''(x)=2$.
+        Since this is always postive, we only have one local minimum at $x=\frac{-3}{2}$, $y=-\frac{5}{4}$.
+        From the dominant $x^2$ term being positive, we see this is a parabola which opens upwards, hence this minimum will be the global minimum and there are no local or global maxima.
+
+        The curve crosses the $x$-axis where $f(x)=0$. Using the quadratic formula:
+        $$x=\frac{-3\pm\sqrt{9-4}}{2}=\frac{-3\pm\sqrt{5}}{2}$$
+        so the approximate solutions are $x_1=-2.618$ and $x_2=-0.382$.
+
+        The curve crosses the $y$-axis at $f(0)=1$.
+
+        Sketch:
+
+        ```{r quadsketch, echo=FALSE}
+        knitr::include_graphics("figures/ex8quad-sketch.png")        
+        ```
+
+    a. We have $f'(x)=3x^2-3$. Stationary points are where $f'(x)=0 \implies x=\pm 1$.
+    
+        To check for local maxima and minima we find the second derivative: $f''(x)=6x$.
+        This implies that $(-1,2)$ is a local maximum and $(1,-2)$ is a local minimum.
+        From the dominant $x^3$ term, we see that $f(x)$ can take arbitrarily large positive and negative values, hence there are no global maxima or minima.
+
+        The curve crosses the $x$-axis where $f(x)=0$. Factorising the cubic, we have:
+        $$f(x)=x(x-\sqrt{3})(x+\sqrt{3})$$
+        so the solutions are $x_0=0$ and approximately $x_1=-1.732$, $x_2=1.732$.
+
+        The curve crosses the $y$-axis at $f(0)=0$.
+
+        Sketch:
+
+        ```{r cubicsketch, echo=FALSE}
+        knitr::include_graphics("figures/ex8cubic-sketch.png")        
+        ```
+
+
+1. A particle moving in a straight line has displacement $x$ as a function of time $t\geq 0$ given by
+    $$x=-t^{3}+5t^{2}+t.$$
+    a. Find the velocity $v$ and acceleration $a$.
+    a. What is the initial velocity?
+    a. What is the largest positive displacement?
+    a. At what time does the particle return to the origin?
+
+    Answers:
+
+    a. \begin{align*} x &= -t^3 + 5t^2 + t\\
+        v &= \frac{dx}{dt} = -3t^2 + 10t + 1\\
+        a &= \frac{dv}{dt} = \frac{d^2x}{dt^2} = -6t + 10
         \end{align*}
-        so,
-        \begin{equation*}
-        \dfrac{dy}{dx}=\frac{3x^2+y\cos(xy)-y^2}{2xy-x\cos(xy)}
-        \end{equation*}
+    
+    a. $v(0) = 1$
+  
+    a. To find the largest positive displacement, we must find the turning points of $x$. These times are found by solving for $v(t) = 0$
+        $$v = -3t^2 + 10t + 1 = 0\\
+        \text{solved by } t = \frac{5}{3}\pm \frac{2\sqrt{7}}{3}$$
+        The solution $\frac{5}{3}-\frac{2\sqrt{7}}{3}$ is in negative time, and the shape of the dominant $-t^3$ term in $x$ suggests that the maximum will be at time $\frac{5}{3}+\frac{2\sqrt{7}}{3}$, but it is prudent to check the second derivative of $x$ (which is $a$).
+        $$a(\frac{5}{3}-\frac{2\sqrt{7}}{3}) = 4\sqrt{7}\\
+        a(\frac{5}{3}+\frac{2\sqrt{7}}{3}) = -4\sqrt{7}$$
+        And hence the maximum displacement does indeed occur at time $t=\frac{5}{3}+\frac{2\sqrt{7}}{3}$, and $x(\frac{5}{3}+\frac{2\sqrt{7}}{3}) \approx 21.9$
+    
+    a. To find when the particle returns to the origin, we must solve for $x(t) = 0$.
+        $$-t^3 + 5t^2 + t = 0\\
+        -t^2 + 5t + 1 = 0\\
+        t = \frac{5 \pm \sqrt{29}}{2}$$
+        Where one solution is for a negative $t$, so the particle returns to the origin at $t = \frac{5 +\sqrt{29}}{2} \approx 5.19$
+
+
+1. Find the points of inflection of the following functions.
+    a. $f(x)=\dfrac{x^3}{3}-\dfrac{x^2}{2}-2x+5$
+    a. $f(x)=x+\sin(x)$
+
+    Answer:
+
+    a. To find points of inflection, we find the points at which the second derivative is zero and the third derivative is non-zero.
+        $$f(x) = \frac{x^3}{3} - \frac{x^2}{2} - 2x + 5\\
+        f'(x) = x^2 - x - 2\\
+        f'(x) = 0 = x^2 - x- 2 = (x+1)(x-2)\\
+        f''(x) = 2x-1\\
+        f'''(x)=2$$
+        The second derivative is zero at $x=\frac{1}{2}$, and the second derivative also changes signs either side of this point. Alternatively we simply note that $f''(x=\frac{1}{2}) = 0$ and $f'''(x=\frac{1}{2})\neq 0$, so it is an inflection point by the Third Derivative Test for Inflection Points.
+        
+    a. $$f(x) = \sin (x) + x\\
+        f'(x) = \cos(x)+1$$
+        So there are stationary points at $x = \frac{\pi}{2} + 2\pi k$ for any integer $k$. $f''(x) = -\sin(x)$, which is zero whenever $x = k\pi$ for integer $k$. The third derivative, $f'''(x) = -\cos(x)$ is non zero whenever $x \neq \frac{\pi}{2} + 2\pi k$. So the points of inflection, by the Third Derivative Test, are whenever $x=2\pi k$ for integer $k$. Note that half of these are also stationary points.
+
+1. A rectangular box with no lid is made from a thin sheet of metal. The base is $2x\text{ mm}$ long and $x\text{ mm}$ wide, and the volume is $48000\text{ mm}^3$. Show that the area $A$ of metal used is given by
+    $$A=2x^2+144000x^{-1} \text{ mm}^2.$$
+    Find the value of $x$ for which the minimum area of metal is used along with the value of the minimum area.
+
+    Answer:
+
+    The volume of the box is given by $2x\times x \times h = 48000\text{ mm}^3$. We write the height in terms of volume and base area: $h = \frac{48000}{2x^2}$
+    The area of metal used is given by
+    $$A = 2x^2 + 2\times 2x\times \frac{48000}{x^2} + 2 \times x \times \frac{48000}{2x^2}\\
+    =2x^2 + \frac{96000}{x} + \frac{48000}{x}\\
+    = 2x^2 + \frac{144000}{x}$$
+    We wish to minimise the area of metal used to create the appropriate volume of box. This requires finding the minimum of the Area function.
+    $$A' = 4x - \frac{144000}{x^2}\\
+    A' = 0 \Rightarrow 4x^3 = 144000\\
+    \Rightarrow x = 33.019mm$$
+    We check this is a minimum by looking at the second derivative
+    $$A''=4+\frac{288000}{x^3}$$
+    which is positive for any postive $x$ value, hence we do have a minimum by the second derivative test.
+    The corresponding area is
+    $$ A= 6541.63\text{mm}^3.$$

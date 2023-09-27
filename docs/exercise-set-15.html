@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Exercise Set 15 | Mathematics for Scientists and Engineers</title>
   <meta name="description" content="Mathematics Lecture Notes for UoE Penryn Science and Engineering Disciplines." />
-  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Exercise Set 15 | Mathematics for Scientists and Engineers" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Dr Mark Callaway" />
 
 
-<meta name="date" content="2023-09-14" />
+<meta name="date" content="2023-09-27" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -59,6 +59,10 @@
 
 
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -135,7 +139,8 @@
 <li class="chapter" data-level="3.3.1" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#simultaneous-linear-equations"><i class="fa fa-check"></i><b>3.3.1</b> Simultaneous linear equations</a></li>
 <li class="chapter" data-level="3.3.2" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#non-linear-simultaneous-equations"><i class="fa fa-check"></i><b>3.3.2</b> Non-linear simultaneous equations</a></li>
 </ul></li>
-<li class="chapter" data-level="3.4" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#inequalities-1"><i class="fa fa-check"></i><b>3.4</b> Inequalities</a></li>
+<li class="chapter" data-level="3.4" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#exponentials-and-logarithms"><i class="fa fa-check"></i><b>3.4</b> Exponentials and Logarithms</a></li>
+<li class="chapter" data-level="3.5" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#inequalities-1"><i class="fa fa-check"></i><b>3.5</b> Inequalities</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="trigonometry.html"><a href="trigonometry.html"><i class="fa fa-check"></i><b>4</b> Trigonometry</a>
 <ul>
@@ -353,6 +358,7 @@
 <li class="chapter" data-level="" data-path="exercise-set-15.html"><a href="exercise-set-15.html"><i class="fa fa-check"></i>Exercise Set 15</a></li>
 <li class="chapter" data-level="" data-path="exercise-set-16.html"><a href="exercise-set-16.html"><i class="fa fa-check"></i>Exercise Set 16</a></li>
 <li class="chapter" data-level="" data-path="exercise-set-17.html"><a href="exercise-set-17.html"><i class="fa fa-check"></i>Exercise Set 17</a></li>
+<li class="chapter" data-level="" data-path="exercise-set-18.html"><a href="exercise-set-18.html"><i class="fa fa-check"></i>Exercise Set 18</a></li>
 <li class="chapter" data-level="" data-path="notation.html"><a href="notation.html"><i class="fa fa-check"></i>Notation</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -378,53 +384,44 @@
 <div id="exercise-set-15" class="section level1 unnumbered hasAnchor">
 <h1>Exercise Set 15<a href="exercise-set-15.html#exercise-set-15" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <ol style="list-style-type: decimal">
-<li><p>You throw five fair dice and count the number of sixes you get. Let
-<span class="math inline">\(X\)</span> be the number of sixes.
-Tabulate <span class="math inline">\(P(X=x)\)</span> for <span class="math inline">\(x=0, 1,\dots,5\)</span>.</p></li>
-<li><p>A random variable <span class="math inline">\(X\)</span> has Poisson distribution with rate parameter <span class="math inline">\(\lambda=2\)</span>. Find:</p>
+<li><p>Consider the experiment of multiplying the score on two fair dice.</p>
 <ol style="list-style-type: lower-alpha">
-<li><span class="math inline">\(P(X \le 2)\)</span></li>
-<li><span class="math inline">\(P(X=3)\)</span></li>
-<li><span class="math inline">\(P(X \ge 4)\)</span></li>
+<li>What is the sample space?</li>
+<li>What is the event of obtaining an odd number, and what is its probability?</li>
+<li>What is the event of obtaining a number that is square and odd?</li>
+<li>What is the event of obtaining a number that is square or odd?</li>
 </ol></li>
-<li><p>A discrete random variable <span class="math inline">\(X\)</span> takes values in the set <span class="math inline">\(\{1,2,3,4\}\)</span>
-and has <span class="math inline">\(P(X=x)=x/10\)</span> for each <span class="math inline">\(x\)</span> in this set.
-Find:</p>
+<li><p>Consider the experiment of tossing a fair coin three times. Find the following probabilities:</p>
 <ol style="list-style-type: lower-alpha">
-<li><span class="math inline">\(\operatorname{E}(X)\)</span></li>
-<li><span class="math inline">\(\operatorname{E}(X^2)\)</span></li>
-<li><span class="math inline">\(\operatorname{var}(X)\)</span></li>
+<li>obtaining 2 heads</li>
+<li>obtaining at least 1 head</li>
+<li>obtaining at least 1 head and at least 1 tail</li>
 </ol></li>
-<li><p>A discrete random variable <span class="math inline">\(X\)</span> takes values in the set <span class="math inline">\(\{1,2,3\}\)</span>
-and has <span class="math inline">\(P(X=x)=c/x\)</span> for each <span class="math inline">\(x\)</span> in this set, where
-<span class="math inline">\(c\)</span> is some suitable constant.
-Find <span class="math inline">\(c\)</span> and so find</p>
+<li><p>How many ways are there of arranging the letters in the word MATHS?</p></li>
+<li><p>How many four letter arrangements are there of letters from the word UNCOPYRIGHTABLE?</p></li>
+<li><p>In a meal deal you can choose any 3 items from: sandwich, wrap, pasta, sushi, crisps, drink, chocolate. How many different meal deals are there?</p></li>
+<li><p>How many arrangements of he word MISSISSIPPI are there? How many of these contain the “word” SSSS?</p></li>
+<li><p>You roll ten fair dice. Assume that the scores of each of the ten dice are independent. What are the the probabilities that</p>
 <ol style="list-style-type: lower-alpha">
-<li><span class="math inline">\(\operatorname{E}(X)\)</span></li>
-<li><span class="math inline">\(\operatorname{E}(X^2)\)</span></li>
-<li><span class="math inline">\(\operatorname{var}(X)\)</span></li>
+<li>you roll exactly two sixes?</li>
+<li>you roll no sixes?</li>
+<li>you roll at least two sixes?</li>
 </ol></li>
-<li><p>You throw two fair dice. Let <span class="math inline">\(X\)</span> denote the sum of the two numbers
-thrown. Find:</p>
+<li><p>A poker hand consists of 5 cards from a standard 52 card deck. How many diferent poker hands are there? How many poker hands are there of each of the following types?</p>
 <ol style="list-style-type: lower-alpha">
-<li><span class="math inline">\(\operatorname{E}(X)\)</span></li>
-<li><span class="math inline">\(\operatorname{E}(X^2)\)</span></li>
-<li><span class="math inline">\(\operatorname{var}(X)\)</span></li>
+<li><em>four-of-a-kind</em>: four cards of one value, the other being another value, for instance <span class="math inline">\(5\spadesuit\,5\heartsuit\,5\diamondsuit\,5\clubsuit\,7\clubsuit\)</span></li>
+<li><em>two-pairs</em>: two cards of the same value, another two cards of a second value, and the last card being of a third value, for instance <span class="math inline">\(Q\heartsuit\, Q\clubsuit\, 8\spadesuit\,8\clubsuit\,9\diamondsuit\)</span></li>
+<li><em>straight</em>: five cards of sequential rank, but not all of the same suit, for instance, <span class="math inline">\(A\spadesuit\,2\heartsuit\,3\spadesuit\,4\clubsuit\,5\diamondsuit\)</span></li>
 </ol></li>
-<li><p>2% of packages produced by a packaging machine have defective seals. What is the probability that a batch will contain more than 2 defective packages if the batch size is (a) 20 (b) 50?</p></li>
-<li><p>A rifle range competitor scores one hit in every 4 shots, on the average. Assuming that the binomial distribution is applicable, if they have four shots in a session what is:</p>
+<li><p>A box contains 7 rock samples; 4 have an independent property set A and the other 3 have a property set B. We withdraw two rock samples one at a time without replacement. Find the probabilities:</p>
 <ol style="list-style-type: lower-alpha">
-<li>the probability that they will get exactly one hit?</li>
-<li>the probability that they will get at least one hit?</li>
+<li>the samples have different property sets</li>
+<li>at least one rock sample has property set A</li>
+<li>if a third sample is drawn from the box, the probability of all the samples having property set B.</li>
 </ol></li>
-<li><p>2% of cans leaving a canning factory have a defective paint finish. Cans are packed in boxes in groups of 50. Determine the mean and standard deviation of the number of cans in a box which have a defective finish.</p></li>
-<li><p>Sheets of metal have a plating fault which occurs randomly at an average rate of 1 per <span class="math inline">\(\text{m}^2\)</span>. What is the probability that a sheet <span class="math inline">\(1.5\text{m} \times 2 \text{m}\)</span> will have:</p>
-<ol style="list-style-type: lower-alpha">
-<li>At most one fault?</li>
-<li>At least one fault?</li>
-</ol></li>
-<li><p>250 litres of water have been polluted with <span class="math inline">\(10^6\)</span> bacteria. What is the probability that a sample of 1 ml of the water contains no bacteria?</p></li>
-<li><p>An average of 264 vehicles an hour pass along a stretch of road each taking 30 seconds to travel along it. What is the probability that at a given instant there will be no vehicles in the road?</p></li>
+<li><p>Derive Bayes’ Theorem from the definition of conditional probability.</p></li>
+<li><p>A test is 99% effective at detecting drug use in active users and 99% effective at finding negative results for non-drug users. At a given time, 0.1% of the population are active drug users. What is the probability that a randomly selected individual who tests positive is actually a drug user?</p></li>
+<li><p>A product tester employed by the Gizmo Corporation tests the company’s gizmos. A gizmo has 3% probability of being defective. The tester’s test registers a defective gizmo as being defective with 95% probability, but it registers a non-defective gizmo as being defective with 2% probability. The tester performs a test on a gizmo drawn at random. Their test indicates the gizmo is defective.What is the probability that it really is defective?</p></li>
 </ol>
 
 </div>

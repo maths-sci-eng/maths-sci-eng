@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Exercise Set 6 | Mathematics for Scientists and Engineers</title>
   <meta name="description" content="Mathematics Lecture Notes for UoE Penryn Science and Engineering Disciplines." />
-  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Exercise Set 6 | Mathematics for Scientists and Engineers" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Dr Mark Callaway" />
 
 
-<meta name="date" content="2023-09-14" />
+<meta name="date" content="2023-09-27" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -59,6 +59,10 @@
 
 
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -135,7 +139,8 @@
 <li class="chapter" data-level="3.3.1" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#simultaneous-linear-equations"><i class="fa fa-check"></i><b>3.3.1</b> Simultaneous linear equations</a></li>
 <li class="chapter" data-level="3.3.2" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#non-linear-simultaneous-equations"><i class="fa fa-check"></i><b>3.3.2</b> Non-linear simultaneous equations</a></li>
 </ul></li>
-<li class="chapter" data-level="3.4" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#inequalities-1"><i class="fa fa-check"></i><b>3.4</b> Inequalities</a></li>
+<li class="chapter" data-level="3.4" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#exponentials-and-logarithms"><i class="fa fa-check"></i><b>3.4</b> Exponentials and Logarithms</a></li>
+<li class="chapter" data-level="3.5" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#inequalities-1"><i class="fa fa-check"></i><b>3.5</b> Inequalities</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="trigonometry.html"><a href="trigonometry.html"><i class="fa fa-check"></i><b>4</b> Trigonometry</a>
 <ul>
@@ -353,6 +358,7 @@
 <li class="chapter" data-level="" data-path="exercise-set-15.html"><a href="exercise-set-15.html"><i class="fa fa-check"></i>Exercise Set 15</a></li>
 <li class="chapter" data-level="" data-path="exercise-set-16.html"><a href="exercise-set-16.html"><i class="fa fa-check"></i>Exercise Set 16</a></li>
 <li class="chapter" data-level="" data-path="exercise-set-17.html"><a href="exercise-set-17.html"><i class="fa fa-check"></i>Exercise Set 17</a></li>
+<li class="chapter" data-level="" data-path="exercise-set-18.html"><a href="exercise-set-18.html"><i class="fa fa-check"></i>Exercise Set 18</a></li>
 <li class="chapter" data-level="" data-path="notation.html"><a href="notation.html"><i class="fa fa-check"></i>Notation</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -377,66 +383,82 @@
             <section class="normal" id="section-">
 <div id="exercise-set-6" class="section level1 unnumbered hasAnchor">
 <h1>Exercise Set 6<a href="exercise-set-6.html#exercise-set-6" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>These exercises cover solving linear equations by Gaussian elimination.</p>
+<p>These exercises cover the topic of vectors.</p>
+<p>Note that the questions are independent of one another, so the definition of a vector <span class="math inline">\(\mathbf{a}\)</span> in one question does not carry over to another question with a vector called <span class="math inline">\(\mathbf{a}\)</span>.</p>
 <ol style="list-style-type: decimal">
-<li><p>Use Gaussian elimination (elementary row operations) to determine whether or not the following systems of equations have solutions, and, when they do, to find <em>all solutions</em>. In the cases where there is more than one solution, find the general solution and also give one particular solution. (Tip: Choosing the elementary row operations carefully can minimise the use of fractions).</p>
+<li><p>The points <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span> and <span class="math inline">\(C\)</span> have position vectors
+<span class="math display">\[\begin{align*}
+\mathbf{a}&amp;=5\mathbf{i}-6\mathbf{j}+4\mathbf{k}\\
+\mathbf{b}&amp;=2\mathbf{i}+5\mathbf{j}-3\mathbf{k}\\
+\mathbf{c}&amp;=-\mathbf{i}+4\mathbf{k}.
+\end{align*}\]</span>
+Find:</p>
 <ol style="list-style-type: lower-alpha">
-<li><p><span class="math display">\[\begin{align*}
-x + y - z &amp;= -3, \\
-2x + 2y - z &amp;= -2, \\
-3x + 2y - 3z&amp;= -7;
-\end{align*}\]</span></p></li>
-<li><p><span class="math display">\[\begin{align*}
-2x - 2y + 3z&amp;= 5, \\
-3x - 2y + 4z&amp;= 6, \\
-4x + y  + 2z&amp;= 2;
-\end{align*}\]</span></p></li>
-<li><p><span class="math display">\[\begin{align*}
-3x + 2y + 13z&amp;= 2, \\
-4x + 2y + 16z&amp;= 1, \\
-x  + y  + 5z &amp;= 1;
-\end{align*}\]</span></p></li>
-<li><p><span class="math display">\[\begin{align*}
-2x + z &amp;= 3, \\
-x  + y  + z &amp;= 2, \\
-x  + 3y + 2z&amp;= 3;
-\end{align*}\]</span></p></li>
-<li><p><span class="math display">\[\begin{align*}
-2x + 4y  + z  - 3t&amp;= 7, \\
-5x + 10y + 6z - 4t&amp;= 14, \\
-7x + 14y + 5z - 9t&amp;= 23;
-\end{align*}\]</span></p></li>
-<li><p><span class="math display">\[\begin{align*}
-3x + 4y &amp;= 1, \\
-2x - 4y + 2z&amp;= 4, \\
-3x + z &amp;= 2, \\
-x - 2y + z &amp;= 2;
-\end{align*}\]</span></p></li>
-<li><p><span class="math display">\[\begin{align*}
-3x - y  + 2z + t&amp;= 3, \\
-x  + 2y - z  + t&amp;= -3, \\
-3x + y  + z  + t&amp;= 0, \\
-3x + 2y + t&amp;= -1.
-\end{align*}\]</span></p></li>
+<li><span class="math inline">\(5\mathbf{a}-2\mathbf{b}-3\mathbf{c}\)</span></li>
+<li><span class="math inline">\(\overrightarrow{AC}+\overrightarrow{AB}\)</span></li>
+<li><span class="math inline">\(\mathbf{a}\cdot\mathbf{b}\)</span></li>
+<li>The angle between <span class="math inline">\(\mathbf{a}\)</span> and <span class="math inline">\(\mathbf{b}\)</span></li>
+<li><span class="math inline">\(\mathbf{a}\times\mathbf{c}\)</span></li>
 </ol></li>
-<li><p><em>Balancing chemical equations.</em> In the combustion of propane gas, propane (<span class="math inline">\(C_3H_8\)</span>) combines with oxygen (<span class="math inline">\(O_2\)</span>) to form carbon dioxide (<span class="math inline">\(CO_2\)</span>) and water (<span class="math inline">\(H_2O\)</span>) according to the equation
-<span class="math display">\[x_1 C_3H_8 + x_2 O_2\to x_3CO_2+x_4H_2O.\]</span>
-To balance this equation, we must find natural numbers <span class="math inline">\(x_1, x_2, x_3, x_4\)</span> such that the total numbers of <span class="math inline">\(C\)</span>, <span class="math inline">\(H\)</span> and <span class="math inline">\(O\)</span> atoms are equal on both sides. Formulate this problem as a set of linear equations and solve using Guassian elimination.</p></li>
-<li><p><em>Electrical networks.</em> Consider the circuit diagram below.</p>
-<p><img src="figures/circuit.png" width="30%" style="display: block; margin: auto;" /></p>
-<p>The voltage drop across a resistor is (by Ohm’s law) <span class="math inline">\(V=IR\)</span> where <span class="math inline">\(V\)</span> is in volts, the current <span class="math inline">\(I\)</span> is in amps and the resistance <span class="math inline">\(R\)</span> is in ohms.
-Kirchhoff’s junction law: the sum of currents flowing into a junction is equal to the sum of currents flowing out of that junction.
-Kirchoff’s Voltage law: The sum of the voltage drops in one direction around a loop equals the sum of the voltage sources in the same direction around the loop.
-Using these laws it is possible to derive the following set of linear equations for the currents <span class="math inline">\(I_1, I_2, I_3\)</span>:</p>
-<p><span class="math display">\[\begin{align*}
-11I_1-3I_2&amp;=30\\
--3I_1+6I_2-I_3&amp;=5\\
--I_2+3I_3&amp;=-25.
-\end{align*}\]</span></p>
-<p>Determine the currents. (Extra challenge: derive the equations!).</p></li>
-<li><p><em>Network analysis</em>. The diagram below represents the traffic flow in a one-way road network. Each directed edge represents a one-way road and is labelled with the flow through that road. The nodes represent road junctions.</p>
-<p><img src="figures/flownetwork.png" width="30%" style="display: block; margin: auto;" /></p>
-<p>By considering the flow in and out of each node and the total flow in and out of the network, formulate a system of linear equations for the unknown flows <span class="math inline">\(x_1,\dotsc,x_5\)</span> and solve them by Gaussian elimination. You will find there is a “free variable”, but the requirement for non-negative flows puts some restrictions on the variables. In particular, what are the restrictions on <span class="math inline">\(x_1\)</span> and <span class="math inline">\(x_5\)</span>?</p></li>
+<li><p>Let <span class="math inline">\(\mathbf{p}\)</span> and <span class="math inline">\(\mathbf{q}\)</span> be vectors.</p>
+<ol style="list-style-type: lower-alpha">
+<li>What is the vector <span class="math inline">\(\mathbf{r}\)</span> joining the points whose position vectors are <span class="math inline">\(\mathbf{p}\)</span> and <span class="math inline">\(2\mathbf{q}\)</span>?</li>
+<li>What is the vector <span class="math inline">\(\mathbf{s}\)</span> joing the points whose position vectors are <span class="math inline">\(\mathbf{2q}\)</span> and <span class="math inline">\(-6\mathbf{p}+14\mathbf{q}\)</span>?</li>
+<li>What do you notice about <span class="math inline">\(\mathbf{r}\)</span> and <span class="math inline">\(\mathbf{s}\)</span>?</li>
+<li>What does this tell you about the points whose position vectors are <span class="math inline">\(\mathbf{p}\)</span>, <span class="math inline">\(2\mathbf{q}\)</span> and <span class="math inline">\(-6\mathbf{p}+14{q}\)</span>?
+<!--- they are collinear, i.e. all lie in a straight line ---></li>
+</ol></li>
+<li><p>Let <span class="math inline">\(\mathbf{u}=5\mathbf{i}+2\mathbf{j}\)</span> and <span class="math inline">\(\mathbf{v}=3\mathbf{i}-\mathbf{j}-3\mathbf{k}\)</span>. Find <span class="math inline">\((4\mathbf{u}-6\mathbf{v})\cdot(2\mathbf{u}+3\mathbf{v})\)</span>.</p></li>
+<li><p>Given that the position vectors of the points <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, and <span class="math inline">\(C\)</span> are <span class="math inline">\(\mathbf{a}\)</span>, <span class="math inline">\(\mathbf{b}\)</span> and <span class="math inline">\(\mathbf{c}\)</span>, write down the position vectors of the midpoints of the lines <span class="math inline">\(BC\)</span> and <span class="math inline">\(CA\)</span>.</p></li>
+<li><p>Prove that the vector joining the midpoints of two sides of a triangle is parallel to the third side and half of its length.</p></li>
+<li><p>Show that the vectors
+<span class="math display">\[\begin{align*}
+\mathbf{a}&amp;=8\mathbf{i}+2\mathbf{j}-3\mathbf{k}\\
+\mathbf{b}&amp;=3\mathbf{i}-6\mathbf{j}+4\mathbf{k}
+\end{align*}\]</span>
+are perpendicular to one another (Hint: use the dot product).</p></li>
+<li><p>A block of mass <span class="math inline">\(m=1\,\text{kg}\)</span> is sliding down a frictionless slope under gravity. The slope is at an angle of <span class="math inline">\(45^\circ\)</span> to the horizontal. Recall that the force on the block is given by Newton’s second law: <span class="math inline">\(\mathbf{F}=m\mathbf{g}\)</span> where <span class="math inline">\(\mathbf{g}=-9.8\mathbf{k}\,\text{ms}^{-2}\)</span> is the gravitational acceleration. Resolve the force vector in the directions parallel and perpendicular to the slope. (Hint: you need to project the force vector onto unit vectors that are parallel and perpendicular to the slope.)</p></li>
+<li><p>Let
+<span class="math display">\[\mathbf{a}=\begin{pmatrix}
+2\\
+-1\\
+3
+\end{pmatrix}
+,\qquad
+\mathbf{b}=\begin{pmatrix}
+5\\
+1\\
+-4
+\end{pmatrix}.
+\]</span>
+Show that <span class="math inline">\((\mathbf{a}-\mathbf{b})\times(\mathbf{a}+\mathbf{b})=2\mathbf{a}\times\mathbf{b}\)</span>.</p></li>
+<li><p>Show that
+<span class="math display">\[(\mathbf{a}+\mathbf{b})\cdot((\mathbf{b}+\mathbf{c})\times (\mathbf{c}+\mathbf{a}))=2\mathbf{a}\cdot(\mathbf{b}\times\mathbf{c}).\]</span>
+The quantity <span class="math inline">\(\mathbf{a}\cdot(\mathbf{b}\times\mathbf{c})\)</span> is known as the <a href="https://en.wikipedia.org/wiki/Triple_product#Scalar_triple_product">scalar triple product</a>: its geometric interpretation is the volume of the parallelepiped defined by the three vectors.</p></li>
+<li><p>Let
+<span class="math display">\[\mathbf{a}=\begin{pmatrix}
+\alpha\\
+0\\
+-1
+\end{pmatrix}
+,\qquad
+\mathbf{b}=\begin{pmatrix}
+3\\
+2\\
+5
+\end{pmatrix}
+,\qquad
+\mathbf{c}=\begin{pmatrix}
+2\\
+-1\\
+4
+\end{pmatrix}.
+\]</span>
+Find the values of <span class="math inline">\(\alpha\)</span> for which <span class="math inline">\(\mathbf{a}\times\mathbf{b}\)</span> is perpendicular to <span class="math inline">\(\mathbf{a}\times\mathbf{c}\)</span>.</p></li>
+<li><p>The <em>torque</em> is the rotational equivalent of linear force. It is given by the product of the magnitude of the force and the perpendicular distance of the line of action of a force from the axis of rotation. We can calculate torque using the cross product:
+<span class="math display">\[\boldsymbol\tau = \mathbf{r}\times \mathbf{F}\]</span>
+where <span class="math inline">\(\boldsymbol\tau\)</span> is the torque vector, <span class="math inline">\(\mathbf{r}\)</span> is the position vector (from the axis of rotation to the point where the force is applied) and <span class="math inline">\(\mathbf{F}\)</span> is the force vector.</p>
+<p>Find the torque about the point <span class="math inline">\(\mathbf{i}+2\mathbf{j}-\mathbf{k}\)</span> of a force <span class="math inline">\(\mathbf{F}=3\mathbf{i}+\mathbf{k}\)</span> acting on a particle at position <span class="math inline">\(2\mathbf{i}-\mathbf{j}+3\mathbf{k}\)</span>.</p></li>
 </ol>
 
 </div>

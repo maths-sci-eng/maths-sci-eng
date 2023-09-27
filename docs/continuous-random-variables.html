@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 21 Continuous Random Variables | Mathematics for Scientists and Engineers</title>
   <meta name="description" content="Mathematics Lecture Notes for UoE Penryn Science and Engineering Disciplines." />
-  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 21 Continuous Random Variables | Mathematics for Scientists and Engineers" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Dr Mark Callaway" />
 
 
-<meta name="date" content="2023-09-14" />
+<meta name="date" content="2023-09-27" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -59,6 +59,10 @@
 
 
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -135,7 +139,8 @@
 <li class="chapter" data-level="3.3.1" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#simultaneous-linear-equations"><i class="fa fa-check"></i><b>3.3.1</b> Simultaneous linear equations</a></li>
 <li class="chapter" data-level="3.3.2" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#non-linear-simultaneous-equations"><i class="fa fa-check"></i><b>3.3.2</b> Non-linear simultaneous equations</a></li>
 </ul></li>
-<li class="chapter" data-level="3.4" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#inequalities-1"><i class="fa fa-check"></i><b>3.4</b> Inequalities</a></li>
+<li class="chapter" data-level="3.4" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#exponentials-and-logarithms"><i class="fa fa-check"></i><b>3.4</b> Exponentials and Logarithms</a></li>
+<li class="chapter" data-level="3.5" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#inequalities-1"><i class="fa fa-check"></i><b>3.5</b> Inequalities</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="trigonometry.html"><a href="trigonometry.html"><i class="fa fa-check"></i><b>4</b> Trigonometry</a>
 <ul>
@@ -353,6 +358,7 @@
 <li class="chapter" data-level="" data-path="exercise-set-15.html"><a href="exercise-set-15.html"><i class="fa fa-check"></i>Exercise Set 15</a></li>
 <li class="chapter" data-level="" data-path="exercise-set-16.html"><a href="exercise-set-16.html"><i class="fa fa-check"></i>Exercise Set 16</a></li>
 <li class="chapter" data-level="" data-path="exercise-set-17.html"><a href="exercise-set-17.html"><i class="fa fa-check"></i>Exercise Set 17</a></li>
+<li class="chapter" data-level="" data-path="exercise-set-18.html"><a href="exercise-set-18.html"><i class="fa fa-check"></i>Exercise Set 18</a></li>
 <li class="chapter" data-level="" data-path="notation.html"><a href="notation.html"><i class="fa fa-check"></i>Notation</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -388,7 +394,7 @@ P(a \leq X \leq b) = \int_a^b f_X(x) dx.
 \]</span>
 We call the function <span class="math inline">\(f_X(x)\)</span> the <em>probability density function</em> of the continuous random variable <span class="math inline">\(X\)</span>. Hence <span class="math inline">\(P(a \leq X \leq b)\)</span> is equal to the area under the graph of <span class="math inline">\(f_X(x)\)</span> between <span class="math inline">\(x = a\)</span> and <span class="math inline">\(x = b\)</span>.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:densityfunc"></span>
-<img src="maths-notes_files/figure-html/densityfunc-1.png" alt="$P(a&lt;X&lt;b)$ is the area under $f_X(x)$ from $a$ to $b$" width="672" />
+<img src="maths-notes_files/figure-html/densityfunc-1.png" alt="$P(a<X<b)$ is the area under $f_X(x)$ from $a$ to $b$" width="672" />
 <p class="caption">
 Figure 21.1: <span class="math inline">\(P(a&lt;X&lt;b)\)</span> is the area under <span class="math inline">\(f_X(x)\)</span> from <span class="math inline">\(a\)</span> to <span class="math inline">\(b\)</span>
 </p>
@@ -578,7 +584,7 @@ or
 <span class="math display">\[P(0&lt;X&lt;x)=\int_{0}^x \phi(u)\,du=\Phi(x)-\Phi(0)=\Phi(x)-0.5\]</span>
 where <span class="math inline">\(X\sim N(0,1)\)</span> and noting <span class="math inline">\(\Phi(0)=0.5\)</span> by symmetry. To save space, values of <span class="math inline">\(P(X&lt; x)\)</span> or <span class="math inline">\(P(0&lt; X &lt; x)\)</span> are listed down the rows in increments of <span class="math inline">\(x\)</span> by <span class="math inline">\(0.1\)</span> and along the columns in increments of <span class="math inline">\(x\)</span> by <span class="math inline">\(0.01\)</span>.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:normplot1"></span>
-<img src="maths-notes_files/figure-html/normplot1-1.png" alt="$P(X&lt;x)$ is the area under $\phi(x)$ from $-\infty$ to $x$" width="672" />
+<img src="maths-notes_files/figure-html/normplot1-1.png" alt="$P(X<x)$ is the area under $\phi(x)$ from $-\infty$ to $x$" width="672" />
 <p class="caption">
 Figure 21.7: <span class="math inline">\(P(X&lt;x)\)</span> is the area under <span class="math inline">\(\phi(x)\)</span> from <span class="math inline">\(-\infty\)</span> to <span class="math inline">\(x\)</span>
 </p>
@@ -1712,7 +1718,7 @@ Figure 21.7: <span class="math inline">\(P(X&lt;x)\)</span> is the area under <s
 </tbody>
 </table>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:normplot2"></span>
-<img src="maths-notes_files/figure-html/normplot2-1.png" alt="$P(0&lt;X&lt;x)$ is the area under $\phi(x)$ from $0$ to $x$$" width="672" />
+<img src="maths-notes_files/figure-html/normplot2-1.png" alt="$P(0<X<x)$ is the area under $\phi(x)$ from $0$ to $x$$" width="672" />
 <p class="caption">
 Figure 21.8: <span class="math inline">\(P(0&lt;X&lt;x)\)</span> is the area under <span class="math inline">\(\phi(x)\)</span> from <span class="math inline">\(0\)</span> to <span class="math inline">\(x\)</span>
 </p>
@@ -2874,8 +2880,8 @@ P(a\le Y\le b)&amp;=&amp;P(a\le \sigma X+\mu\le b)\\
 &amp;=&amp;\Phi\left(\frac{b-\mu}\sigma\right)-\Phi\left(\frac{a-\mu}\sigma\right).
 \end{eqnarray*}\]</span></p>
 <div class="example">
+<p><span id="exm:nonstandardnorm" class="example"><strong>Example 21.4  (Non-standard normal random variables) </strong></span></p>
 <ol style="list-style-type: decimal">
-<li><span id="exm:nonstandardnorm" class="example"><strong>Example 21.4  (Non-standard normal random variables) </strong></span></li>
 <li><p>If <span class="math inline">\(Y\)</span> is normal with mean <span class="math inline">\(1\)</span> and variance <span class="math inline">\(4=2^2\)</span>, then <span class="math inline">\(X=(Y-1)/2\)</span> is . Calculate <span class="math inline">\(P(0&lt;Y&lt;2.5)\)</span>.</p>
 <p>Using table <a href="continuous-random-variables.html#tab:normtable1">21.1</a>
 <span class="math display">\[\begin{eqnarray*}

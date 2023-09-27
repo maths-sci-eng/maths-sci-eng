@@ -1,229 +1,286 @@
 # Exercise Set 10 Answers {.unlisted .unnumbered}
 
-1. Write the series
-    \begin{equation*}
-    \frac{1}{1\cdot 2}+\frac{1}{2\cdot 3}+\frac{1}{3\cdot 4}+\frac{1}{4\cdot 5}+\frac{1}{5\cdot 6}
-    \end{equation*}
-    using Sigma notation in the forms $\displaystyle\sum_{k=1}^{n}(\dots)$ and $\displaystyle\sum_{l=0}^{m}(\dots)$.
+1. Find $\dfrac{dy}{dx}$ for the following by implicit differentiation.
+
+    a. $x^2y+3xy^3-x=3$
+    a. $\sin(x^2y^2)=x$
+    a. $xy^2=y+e^{xy}$
 
     Answers:
 
-    $$\sum_{k=1}^{5}\frac{1}{k(k+1)}$$
-    $$\sum_{l=0}^{4}\frac{1}{(l+1)(l+2)}$$
+    a. \begin{align*}
+        2xy+x^2\frac{dy}{dx}+3y^3+9xy^2\frac{dy}{dx}-1&=0\\
+        (x^2+9xy^2)\frac{dy}{dx}&=1-2xy-3y^3\\
+        \frac{dy}{dx}&=\frac{1-2xy-3y^3}{x^2+9xy^2}
+        \end{align*}
 
-1. Evaluate $\displaystyle\sum_{n=1}^{10}\frac{2}{3^n}$ and $\displaystyle\sum_{n=0}^{9}\frac{2}{3^n}$ using the formula for the $n^{\text{th}}$ partial sum of a geometric series.
+    a. \begin{align*}
+        \cos(x^2y^2)\left(2xy^2+2x^2y\frac{dy}{dx}\right)&=1\\
+        \frac{dy}{dx}&=\frac{1-2xy^2\cos(x^2y^2)}{2x^2y\cos(x^2y^2)}
+        \end{align*}
 
-    Answers:
+    a. \begin{align*}
+        \frac{d}{dx}(xy^2)&=\frac{d}{dx}(y+e^{xy})\\
+        2xy\frac{dy}{dx}+y^2&=\frac{dy}{dx}+\frac{d}{dx}e^{xy}\\
+        2xy\frac{dy}{dx}+y^2&=\frac{dy}{dx}+e^{xy}\frac{d}{dx}(xy)\\
+        2xy\frac{dy}{dx}+y^2&=\frac{dy}{dx}+e^{xy}\left(x\frac{dy}{dx}+y\right)\\
+        2xy\frac{dy}{dx}-xe^{xy}\frac{dy}{dx}-\frac{dy}{dx}&=ye^{xy}-y^2\\
+        \frac{dy}{dx}(2xy-xe^{xy}-1)&=ye^{xy}-y^2\\
+        \frac{dy}{dx}&=\frac{ye^{xy}-y^2}{(2xy-1-xe^{xy})}.
+        \end{align*}
 
-    a. The geometric series $\displaystyle\sum_{n=1}^{10}\dfrac{2}{3^n}$ has first term $a=\dfrac{2}{3^1}=\dfrac{2}{3}$ and second term $ar=\dfrac{2}{3^2}$ and therefore the common ratio is $r=\dfrac{ar}{a}=\dfrac{1}{3}$. Since the sum is for $n=1$ to $n=10$, it is the sum of the first $10$ terms,
-        $$
-        S_{10}=\frac{a(1-r^{10})}{1-r}=\frac{2\left (1-\dfrac{1}{3^{10}}\right)}{3\left (1-\dfrac{1}{3}\right )}=1-\dfrac{1}{3^{10}}.
-        $$
-
-    a. The geometric series $\displaystyle\sum_{n=0}^{9}\frac{2}{3^n}$ has first term $a=\dfrac{2}{3^0}=2$ and second term $ar=\dfrac{2}{3^1}$, and therefore the common ratio is $r=\dfrac{ar}{a}=\dfrac{1}{3}$. Since the sum is for $n=0$ to $n=9$, it is the sum of the first $10$ terms,
-        $$
-        S_{10}=\dfrac{a(1-r^{10})}{1-r}=\dfrac{2\left(1-\dfrac{1}{3^{10}}\right)}{\left(1-\dfrac{1}{3}\right)}=3\left(1-\dfrac{1}{3^{10}}\right).
-        $$
-
-
-1. Do the following geometric series converge or diverge? If they converge, find their sum.
-    a. $\displaystyle\sum_{n=1}^{\infty}\frac{2}{3^n}$
-    a. $\displaystyle\sum_{n=1}^{\infty}(-1)^{n-1}\frac{1}{2^{n-1}}$
-    a. $\displaystyle\sum_{n=1}^{\infty}\left( \dfrac{\pi}{2}\right)^n$
-
-    Answers:
-
-    a. We already know that the first term is $a=\dfrac{2}{3}$ and the common ratio is $r=\dfrac{1}{3}$. Since $|r|<1$, the geometric series converges, with sum
-        $$
-        \sum_{n=1}^{\infty}\frac{2}{3^n}=\frac{a}{1-r}=\frac{\frac{2}{3}}{1-\frac{1}{3}}=1.
-        $$
-
-    a. The first term of the series is $a=1$ and the common ratio is $r=-\dfrac{1}{2}$. Since $|r|<1$ the series converges, and the sum is
-        $$
-        \sum_{n=1}^{\infty}(-1)^{n-1}\frac{1}{2^{n-1}}=\frac{1}{1+\frac{1}{2}}=\frac{2}{3}.
-        $$
-
-    a. The first term of the series is $a=\dfrac{\pi}{2}$, and the common ratio is also $r=\dfrac{\pi}{2}$. Since $|r|>1$, the series diverges.
-
-
-1. Find the $3^{\text{rd}}$ degree Taylor polynomials of the following functions.
-    a. $f(x)=2x^3-x^2+4x+5$ at $a=0$
-    a. $f(x)=\dfrac{1}{1+x}$ at $a=0$. 
-    a. $f(x)=\sqrt{x}$ at $a=1$
-
-    Answers:
-    a. The $3^{\text{rd}}$ degree polynomial of this polynomial at $a=0$ will simply be equal to the polynomial itself. For completeness, we still derive the Taylor series to demonstrate this
-    \begin{align}
-    f(x)&=2x^3 - x^2 + 4x + 5       & f(0)&=5\\
-    f'(x)&= 6x^2 - 2x + 4           & f'(0)&=4\\
-    f''(x)&= 12x - 2                & f''(0) &= -2\\
-    f'''(x) &= 12                   & f'''(0) &= 12
-    \end{align}
-    Substituting these into the Taylor series about $x=0$
-    $$
-    f(x) = \sum_{n=0}^\infty \frac{f^{(n)}(a)}{n!}x\\
-    f(x) = f(0) + \frac{f'(0)}{1}x + \frac{f''(0)}{2}x^2 + \frac{f'''(0)}{6}x^3\\
-    f(x) = 5 + 4x - x^2 + 2 x^3
-     $$
-    since the Taylor series terminates after the $x^3$ term. The original polynomial has been recovered.
-    a. We start by finding the first 3 derivatives.
-    $$ \begin{align}
-    f(x) &= \frac{1}{x+1}        & f(0) &= 1\\
-    f'(x) &= \frac{-1}{(x+1)^2}     & f'(0) &= -1\\
-    f''(x) & = \frac{2}{(x+1)^3}    & f''(0) &= 2\\
-    f'''(x) &= \frac{-6}{(x+1)^4}   & f'''(0) &= -6
-    \end{align}
-    $$
-    Substituting these terms into the Taylor series expansion about $x=0$, up to the $3^\text{rd}$ degree term.:
-    $$f(x) = \sum_{n=0}^\infty \frac{f^{(n)}(a)}{n!}x\\
-    f(x) = 1 - x + x^2 - x^3 + \cdots
-    $$
-    Having just included the first few terms.
-    
-    a. Note that it is not possible to take the Taylor series about $x=0$ because the derivative of $\sqrt{x}$ does not exist at $0$. Taking the expansion about $x=1$.
-    $$
-    \begin{align}
-    f(x) &= \sqrt{x} = x^\frac{1}{2}    & f(1) &= 1\\
-    f'(x) &= \frac{1}{2}x^{-\frac{1}{2}}        & f'(1) &= \frac{1}{2}\\
-    f''(x) & = -\frac{1}{4}x^{-\frac{3}{2}}       & f''(1) &= -\frac{1}{4}\\
-    f'''(x) &=  \frac{3}{8}x^{-\frac{5}{2}}       & f'''(1) &= \frac{3}{8}
-    \end{align}
-    $$
-    Substituting these into the first few terms of the Taylor series about $x=a$
-    $$
-    f(x-1) = \sum_{n=0}^\infty \frac{f^{(n)}(1)}{n!}(x-1)^n\\
-    f(x-1) = 1 + \frac{1}{2}(x-1) -\frac{1}{4}\frac{(x-1)^2}{2!} + \frac{3}{8}\frac{(x-1)^3}{3!} + \cdots\\
-    f(x-1) = 1 + \frac{1}{2}(x-1) - \frac{(x-1)^2}{8} + \frac{(x-1)^3}{16} + \cdots$$
-  
-1. Derive the Taylor series for $e^x$ at $a=0$ (this converges for all $x$).
-
-    Answers:
-
-    Let $f(x)=e^x$.
-    \begin{align*}
-    f(x)&=e^x       & f(0)&=1\\
-    f'(x)&=e^x      & f'(0)&=1\\
-    f^{(n)}(x)&=e^x & f^{(n)}(0)&=1
-    \end{align*}
-    The $n^{\text{th}}$ degree Taylor polynomial is
-    $$
-    P_{n,0}(x)=1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+\dotsb+\frac{x^n}{n!}
-    $$
-    and the Taylor series is
-    $$
-    \sum_{n=0}^{\infty}\frac{x^n}{n!}.
-    $$
-
-1. Derive the Taylor series for $\sin(x+a)$ at $a=\dfrac{\pi}{2}$ (this converges for all $x$).
-
-    Answers:
-
-    The derivatives at $\dfrac{\pi}{2}$ form a periodic sequence of period $4$
-    \begin{align*}
-    f(x)&=\sin(x)       & f\left(\frac{\pi}{2}\right)&=1\\
-    f^{(1)}(x)&=\cos(x)      & f^{(1)}\left(\frac{\pi}{2}\right)&=0\\
-    f^{(2)}(x)&=-\sin(x)     & f^{(2)}\left(\frac{\pi}{2}\right)&=-1\\
-    f^{(3)}(x)&=-\cos(x)     & f^{(3)}\left(\frac{\pi}{2}\right)&=0\\
-    f^{(4)}(x)&=\sin(x) & f^{(4)}\left(\frac{\pi}{2}\right)&=1
-    \end{align*}
-
-    and the Taylor series is
-    $$
-    \sum_{n=0}^{\infty}(-1)^{n}\frac{x^{2n}}{(2n)!}
-    $$
-    which we recognise as the Taylor series for $\cos$ about $0$, which should be unsurprising since $\sin\left(x+\frac{\pi}{2}\right)=\cos(x)$.
-
-
-1. From the Taylor series of $f(x)=\ln(x+1)$ at zero (this converges for $-1 < x \le 1$), show that:
-    $$
-    \sum_{n=1}^{\infty}\frac{(-1)^{n+1}}{n}=\ln(2).
-    $$
-
-    Answers:
-
-    Since we are told that the Taylor series equals $f(x)$ for $-1 < x\le 1$ and $f(1)=\ln(2)$, we have
-    $$
-    \sum_{n=1}^{\infty}(-1)^{n+1}\frac{1}{n}=\ln(2).
-    $$
-
-
-1. The Taylor series for $\tan^{-1}$ at zero is
-    $$\tan^{-1}(x) = \sum_{n=0}^\infty \frac{(-1)^n x^{2n+1}}{2n+1}$$
-    which converges for $|x|\leq 1$. Use this to approximate $\pi$ (you could do this in MATLAB/Python using a for loop to easily experiment with the number of terms in the sum).
-
-
-    Answer:
-
-    We have that $\tan^{-1}(1)=\frac{\pi}{4}$, so can find $\pi$ as $4\tan^{-1}(1)=4\sum_{n=0}^\infty \frac{(-1)^n}{2n+1}$. We can get an approximation by summing over the first $N$ terms of this infinite series.
-
-    ```{verbatim}
-        MATLAB Code:
-        %this is not the most efficient solution but shows a simple method using a for loop
-        %set number of terms in approximation
-        N = 4;
-        x = 1; %set point about which Taylor series is taken
-        sigma_nthterm = 0 %initialise the summation
-        for n = 0:N     %loop over the first N terms
-            nth_term = ((-1)^n * x^(2*x+1))/(2*n+1); %calculate the nth term
-            sigma_nthterm = sigma_nthterm + nth_term;  %add this to the summation
-        end
-
-        pi_approx = sigma_nthterm*4 %calculate the approximation for pi, since tan^{-1}(1) = pi/4
-    ```
-     For N=1000 we get $\pi\approx 3.1426... $
-    
-1. Prove Euler's formula for complex numbers using the Taylor series for $e^x$, $\cos(x)$ and $\sin(x)$ at $0$, .
- 
-    Answer:
-    First, recall the Taylor series for $e^x$
-    $$
-    e_x = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \frac{x^4}{4!} + \cdots
-    $$
-    And now let $x = i\theta$. The odd terms will become imaginary, while the even powers will have changing signs with $i^2$:
-    
-    \begin{align}
-    e^{i\theta} &= 1 + i\theta + \frac{i^2 \theta^2}{2!} + \frac{i^3 \theta^3}{3!} + \frac{i^4 \theta^4}{4!} + \cdots \\
-    &= 1 + i\theta - \frac{\theta^2}{2!} - i\frac{\theta^3}{3!} + \frac{\theta^4}{4!} + \cdots
-    \end{align}
-    
-    Now, group every second term together to identify the Tarlor series of $\cos(x)$ and $i\sin(x)$.
-    
-    $$
-    e^x = \left(1 - \frac{\theta^2}{2!} + \frac{\theta^4}{4!} + \cdots \right) + i\left(\theta - \frac{\theta^3}{3!} + \frac{x^5}{5!} + \cdots\right)\\
-    e^x = \cos(\theta) + i \sin(\theta)
-    $$
-    
-    
- 
-1. Find the Taylor series for $\cos(x)$ at zero by differentiating the Taylor series for $\sin(x)$ at zero term by term (we can differentiate any power series term by term for values of $x$ where the series converges).
-
-    Answers:
-    Taking the derivative of the power series, and noting that $\frac{n}{n!} = \frac{1}{(n-1)!}$
-    $$
-    \sin(x) = x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} + \cdots\\
-    \frac{d}{dx}\sin (x)= 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \frac{x^6}{6!} + \cdots = \cos(x)
-    $$
-    
-    
-    
-    
-1. Find the Taylor series of $\dfrac{1}{1-x}$ at $a=0$ (this converges for $|x|<1$). Hence find the Taylor series of $\dfrac{1}{(1-x)^2}$ at $a=0$. 
+1. Consider the curve $x^2+3xy+y^2+2x-7=0$. Use implicit differentiation to find $\dfrac{dy}{dx}$ and hence compute the equation of the tangent at the point $(1,1)$.
 
     Answers:
 
     \begin{align*}
-    f(x)&=(1-x)^{-1}            & f(0)&=1\\
-    f^{(1)}(x)&=(1-x)^{-2}      & f^{(1)}(0)&=1\\
-    f^{(2)}(x)&=2(1-x)^{-3}     & f^{(2)}(0)&=2\\
-    f^{(3)}(x)&=6(1-x)^{-4}     & f^{(3)}(0)&=6=3!\\
-    f^{(4)}(x)&=24(1-x)^{-5}     & f^{(4)}(0)&=24=4!
+    2x+3y+3x\frac{dy}{dx}+2\frac{dy}{dx}+2&=0\\
+    \frac{dy}{dx}&=-\frac{2x+3y+2}{3x+2}.\\
     \end{align*}
-    so the Taylor Series is
+    At the point $(1,1)$
     \begin{equation*}
-    \sum_{n=0}^{\infty}x^n.
+    \frac{dy}{dx}\Bigr|_{\substack{(1,1)}}=-\frac{2+3+2}{3+2}=-\frac{7}{5}
+    \end{equation*}
+    then the equation of the tangent line is
+    \begin{equation*}
+    y=1-\frac{7}{5}(x-1).
     \end{equation*}
 
-    Now to find the Taylor series of $\frac{1}{(1-x)^2}$ at $0$, we note that $\frac{d}{dx}\frac{1}{(1-x)}=\frac{1}{(1-x)^2}$, hence we can obtain the Taylor series by differentiating the series for $\frac{1}{(1-x)}$ term by term, obtaining:
-    \begin{equation*}
-    \sum_{n=1}^{\infty}nx^{n-1}.
-    \end{equation*}
+1. Find the slope of the circle $x^2+y^2=25$ at the point $(-3,-4)$. Hence find the equations of the tangent and normal at that point.
+
+    Answers:
+    By implicit differentiation
+    $$2x+2y\frac{dy}{dx}=0$$
+    hence
+    $$\frac{dy}{dx}=-\frac{x}{y}$$
+    and at $(-3,-4)$
+    $$\frac{dy}{dx}=-\frac{3}{4}.$$
+
+    The equation of the tangent line is given by
+    $$y-(-4)=-\frac{3}{4}(x-(-3))$$
+    or
+    $$y=-\frac{3}{4}x-\frac{25}{4}.$$
+
+    The equation of the normal line is
+    $$y-(-4)=\frac{4}{3}(x-(-3))$$
+    or
+    $$y=\frac{4}{3}x.$$    
+
+1. Find $\dfrac{dy}{dx}$ and $\dfrac{d^2y}{dx^2}$ for the following by implicit differentiation.
+    a. $y+\sin(y)=x$
+    a. $x^2-xy+y^2=3$
+
+    Answers:
+
+    a. \begin{align*}
+        \frac{dy}{dx}+\cos(y)\frac{dy}{dx}&=1\\
+        \frac{dy}{dx}&=\frac{1}{1+\cos(y)}
+        \end{align*}
+    a. \begin{align*}
+        2x-y-x\frac{dy}{dx}+2y\frac{dy}{dx}&=0\\
+        (x-2y)\frac{dy}{dx}&=2x-y\\
+        \frac{dy}{dx}&=\frac{2x-y}{x-2y}
+        \end{align*}
+
+
+1. Find $\dfrac{dy}{dx}$ and $\dfrac{d^2y}{dx^2}$ for the following parametric equations.
+    a. $y=\cos(2t)$ and $x=\sin(t)$
+    a. $y=\dfrac{3+2t}{1+t}$ and $x=\dfrac{2-3t}{1+t}$
+    a. $y=3\sin(\theta)-\sin^3(\theta)$ and $x=\cos^3(\theta)$
+
+    Answers:
+
+    a. \begin{align*}
+        \frac{dy}{dt}=-2\sin(2t)&&\frac{dx}{dt}=\cos(t)
+        \end{align*}
+        The first derivative is
+        \begin{align*}
+        \frac{dy}{dx}&=\frac{\dfrac{dy}{dt}}{\dfrac{dx}{dt}}\\
+        &=\frac{-2\sin(2t)}{\cos(t)}\\
+        &=\frac{-4\sin(t)\cos(t)}{\cos(t)}\\
+        &=-4\sin(t).
+        \end{align*}
+        The second derivative is (using the chain rule)
+        \begin{align*}
+        \frac{d^2y}{dx^2}&=\frac{d}{dt}\left(\frac{dy}{dx}\right)\frac{dt}{dx}\\
+        &=\frac{d}{dt}(-4\sin(t))\cdot \frac{1}{\cos(t)}\\
+        &=-4\cos(t)\cdot \frac{1}{\cos(t)}\\
+        &=-4.
+        \end{align*}
+
+    a. \begin{align*}
+        \frac{dy}{dt}=-\frac{1}{(1+t)^2}&&\frac{dx}{dt}=-\frac{5}{(1+t)^2}
+        \end{align*}
+        The first derivative is
+        \begin{align*}
+        \frac{dy}{dx}&=\frac{\dfrac{dy}{dt}}{\dfrac{dx}{dt}}\\
+        &=\frac{1}{(1+t)^2}\cdot \frac{(1+t)^2}{5}\\
+        =\frac{1}{5}
+        \end{align*}
+        then the second derivative
+        \begin{equation*}
+        \frac{d^2y}{dx^2}=0.
+        \end{equation*}
+
+    a. \begin{align*}
+        \frac{dy}{d\theta}=3\cos^3(\theta)&&\frac{dx}{d\theta}=-3\cos^2(\theta)\sin(\theta)
+        \end{align*}
+        The first derivative is
+        \begin{align*}
+        \frac{dy}{dx}&=\frac{\dfrac{dy}{d\theta}}{\dfrac{dx}{d\theta}}\\
+        &=\frac{3\cos^3(\theta)}{-3\cos^2(\theta)\sin(\theta)}\\
+        &=-\cot(t)
+        \end{align*}
+        and the second derivative
+        \begin{align*}
+        \frac{d^2y}{dx^2}&=\frac{d}{d\theta}\left(\frac{dy}{dx}\right)\frac{d\theta}{dx}\\
+        &=\frac{d}{d\theta}(-\cot(t))\cdot \frac{1}{-3\cos^2(\theta)\sin(\theta)}\\
+        &=\frac{1}{\sin^2(\theta)}\cdot \frac{1}{-3\cos^2(\theta)\sin(\theta)}\\
+        &=\frac{-1}{3\cos^2(\theta)\sin^3(\theta)},
+        \end{align*}
+        where we have used
+        \begin{align*}
+        \frac{d}{d\theta}(-\cot(t))&=\frac{d}{d\theta}\frac{-\cos(\theta)}{\sin(\theta)}\\
+        &=\frac{\sin(\theta)\sin(\theta)-(-\cos(\theta))\cos(\theta)}{\sin^2(\theta)}\\
+        &=\frac{1}{\sin^2(\theta)}.
+        \end{align*}
+
+1. Find the derivative of the following inverse functions by implicit differentiation.
+    a. $y=\sin^{-1}(x)$
+    a. $y=\cosh^{-1}(3x)$
+    a. $y=\tan^{-1}(4x^2)$
+
+    Answers:
+
+    a. We have that
+        \begin{equation*}
+        \sin(y)=x
+        \end{equation*}
+        then by implicit differentiation
+        \begin{align*}
+        \cos(y)\dfrac{dy}{dx}=1\\
+        \dfrac{dy}{dx}=\dfrac{1}{\cos(y)}.
+        \end{align*}
+        Using the identity $\cos^2(y)+\sin^2(y)=1$
+        \begin{align*}
+        \cos(y)&=\sqrt{1-\sin^2(y)}\\
+        &=\sqrt{1-x^2}
+        \end{align*}
+        so,
+        \begin{equation*}
+        \dfrac{dy}{dx}=\dfrac{1}{\sqrt{1-x^2}}.
+        \end{equation*}
+
+    a. We have
+        \begin{equation*}
+        \cosh(y)=3x
+        \end{equation*}
+        then by implicit differentiation
+        \begin{align*}
+        \sinh(y)\dfrac{dy}{dx}&=3\\
+        \dfrac{dy}{dx}&=\dfrac{3}{\sinh(y)}.
+        \end{align*}
+
+        Since $\cosh^2(y)-\sinh^2(y)=1$
+        \begin{equation*}
+        \sinh(y)=\sqrt{\cosh^2(y)-1}=\sqrt{(3x)^2-1}.
+        \end{equation*}
+        So,
+        \begin{equation*}
+        \dfrac{dy}{dx}=\frac{3}{\sqrt{9x^2-1}}.
+        \end{equation*}
+
+
+    a. We have
+        \begin{equation*}
+        \tan(y)=4x^2.
+        \end{equation*}
+        By implicit differentiation,
+        \begin{align*}
+        \sec^2(y)\dfrac{dy}{dx}&=8x\\
+        \dfrac{dy}{dx}&=\dfrac{8x}{\sec^2(y)}
+        \end{align*}
+        Using
+        \begin{align*}
+        \cos^2(y)+\sin^2(y)&=1\\
+        1+\tan^2(y)&=\sec^2(y)
+        \end{align*}
+        we have $\sec^2(y)=1+(4x^2)^2$, and then
+        \begin{equation*}
+        \dfrac{dy}{dx}=\dfrac{8x}{1+16x^4}.
+        \end{equation*}
+
+1. Find $\dfrac{dy}{dx}$ for the following using logarithmic differentiation.
+    a. $y=a^x$
+    a. $y=\dfrac{(x-4)^7(2x+3)^2}{(4x+7)^3}$
+
+
+    Answers:
+
+    a. Taking logs and differentiating implicitly
+        \begin{align*}
+        \ln(y)=\ln(a^x)&=x\ln(a)\\
+        \frac{1}{y}\dfrac{dy}{dx}&=\ln(a)\\
+        \dfrac{dy}{dx}&=y\ln(a)\\
+        \dfrac{dy}{dx}&=a^x\ln(a).
+        \end{align*}
+    
+    a. Taking logs
+        \begin{align*}
+        \ln(y)&=\ln\left[\dfrac{(x-4)^7(2x+3)^2}{(4x+7)^3}\right]\\
+        &=\ln(x-4)^7+\ln(2x+3)^2-\ln(4x+7)^3\\
+        &=7\ln(x-4)+2\ln(2x+3)-3\ln(4x+7)
+        \end{align*}
+        Then differentiating
+        \begin{align*}
+        \frac{1}{y}\dfrac{dy}{dx}&=\frac{7}{x-4}+\frac{2}{2x+3}\cdot 2-\frac{3}{4x-7}\cdot 4\\
+        \dfrac{dy}{dx}&=\dfrac{(x-4)^7(2x+3)^2}{(4x+7)^3}\left[ \frac{7}{x-4}+\frac{4}{2x+3}-\frac{12}{4x-7}\right]
+        \end{align*}
+
+
+1. Find $\dfrac{dy}{dx}$ for the following.
+    a. $y=x^x$
+    a. $y=(\tanh(x))^x$
+    a. $x^3+\sin(xy)=xy^2$
+
+    Answers:
+
+    a. First take the natural logarithm:
+        \begin{equation*}
+        \ln(y)=x\ln(x),
+        \end{equation*}
+        then differentiate implicitly:
+        \begin{align*}
+        \frac{d}{dx}(\ln(y))&=\frac{d}{dx}(x\ln(x))\\
+        \frac{1}{y}\frac{dy}{dx}&=\frac{dx}{dx}\ln(x)+x\frac{d}{dx}\ln(x)\\
+        \frac{1}{y}\frac{dy}{dx}&=\ln(x)+x\frac{1}{x}\\
+        \frac{dy}{dx}&=y(\ln(x)+1)=x^x(\ln(x)+1).
+        \end{align*}
+
+        **Important!** The derivative of $x^x$ is **not** $x\cdot x^{x-1}=x^x$. We can't treat variable exponents like constant exponents!
+
+    a. Taking logs
+        \begin{equation*}
+        \ln(y)=x\ln(\tanh(x)),
+        \end{equation*}
+        then differentiating
+        \begin{align*}
+        \frac{1}{y}\dfrac{dy}{dx}&=\ln(\tanh(x))+\frac{x}{\tanh(x)}\textrm{sech}^2(x)\\
+        &=\ln(\tanh(x))+\frac{x\cosh(x)}{\sinh(x)\cosh^2(x)}\\
+        &=\ln(\tanh(x))+\frac{x}{\sinh(x)\cosh(x)}\\
+        &=\ln(\tanh(x))+\frac{2x}{\sinh(2x)}.\\
+        \end{align*}
+        So,
+        \begin{equation*}
+        \dfrac{dy}{dx}=(\tanh(x))^x\left[ \ln(\tanh(x))+\frac{2x}{\sinh(2x)}\right].
+        \end{equation*}
+
+    a. By implicit differentiation and using the product rule
+        \begin{align*}
+        3x^2+\cos(xy)\left(y+x\dfrac{dy}{dx} \right)&=y^2+2xy\dfrac{dy}{dx}\\
+        3x^2+y\cos(xy)-y^2&=2xy\dfrac{dy}{dx}-x\cos(xy)\dfrac{dy}{dx}
+        \end{align*}
+        so,
+        \begin{equation*}
+        \dfrac{dy}{dx}=\frac{3x^2+y\cos(xy)-y^2}{2xy-x\cos(xy)}
+        \end{equation*}

@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Exercise Set 13 Answers | Mathematics for Scientists and Engineers</title>
   <meta name="description" content="Mathematics Lecture Notes for UoE Penryn Science and Engineering Disciplines." />
-  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Exercise Set 13 Answers | Mathematics for Scientists and Engineers" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Dr Mark Callaway" />
 
 
-<meta name="date" content="2023-09-14" />
+<meta name="date" content="2023-09-27" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -59,6 +59,10 @@
 
 
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -135,7 +139,8 @@
 <li class="chapter" data-level="3.3.1" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#simultaneous-linear-equations"><i class="fa fa-check"></i><b>3.3.1</b> Simultaneous linear equations</a></li>
 <li class="chapter" data-level="3.3.2" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#non-linear-simultaneous-equations"><i class="fa fa-check"></i><b>3.3.2</b> Non-linear simultaneous equations</a></li>
 </ul></li>
-<li class="chapter" data-level="3.4" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#inequalities-1"><i class="fa fa-check"></i><b>3.4</b> Inequalities</a></li>
+<li class="chapter" data-level="3.4" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#exponentials-and-logarithms"><i class="fa fa-check"></i><b>3.4</b> Exponentials and Logarithms</a></li>
+<li class="chapter" data-level="3.5" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#inequalities-1"><i class="fa fa-check"></i><b>3.5</b> Inequalities</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="trigonometry.html"><a href="trigonometry.html"><i class="fa fa-check"></i><b>4</b> Trigonometry</a>
 <ul>
@@ -353,6 +358,7 @@
 <li class="chapter" data-level="" data-path="exercise-set-15.html"><a href="exercise-set-15.html"><i class="fa fa-check"></i>Exercise Set 15</a></li>
 <li class="chapter" data-level="" data-path="exercise-set-16.html"><a href="exercise-set-16.html"><i class="fa fa-check"></i>Exercise Set 16</a></li>
 <li class="chapter" data-level="" data-path="exercise-set-17.html"><a href="exercise-set-17.html"><i class="fa fa-check"></i>Exercise Set 17</a></li>
+<li class="chapter" data-level="" data-path="exercise-set-18.html"><a href="exercise-set-18.html"><i class="fa fa-check"></i>Exercise Set 18</a></li>
 <li class="chapter" data-level="" data-path="notation.html"><a href="notation.html"><i class="fa fa-check"></i>Notation</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -378,299 +384,134 @@
 <div id="exercise-set-13-answers" class="section level1 unlisted unnumbered hasAnchor">
 <h1>Exercise Set 13 Answers<a href="exercise-set-13-answers.html#exercise-set-13-answers" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <ol style="list-style-type: decimal">
-<li><p>Using the method of separation of variables, find the general solutions of the following first order differential equations and the particular solutions in those cases where initial conditions are specified:</p>
+<li>Determine the following integrals by making use of trigonometric or hyperbolic identities.
 <ol style="list-style-type: lower-alpha">
-<li><span class="math inline">\(\displaystyle x^2\frac{dy}{dx}=(y+xy)\)</span></li>
-<li><span class="math inline">\(\displaystyle \frac{dy}{dx}=\frac{y-1}{x-1},\; y(2)=3\)</span></li>
-<li><span class="math inline">\(\displaystyle \frac{dy}{dx}=\frac{y+2}{x-2}\)</span></li>
+<li><span class="math inline">\(\displaystyle \int_0^{\pi/4}4\sin(3\theta)\cos(\theta)d\theta\)</span></li>
+<li><span class="math inline">\(\displaystyle \int \left( \cos\left(\frac{x}{2}\right) - \sin\left(\frac{x}{2}\right)\right)^2 \, dx\)</span></li>
+<li><span class="math inline">\(\displaystyle \int \sin^3(x)\, dx\)</span></li>
+<li><span class="math inline">\(\displaystyle \int \frac{ \cos(2x)} { \cos^2(x) \sin^2(x)} \, dx\)</span></li>
+<li><span class="math inline">\(\displaystyle \int \cos(x) \sin(2x) \, dx\)</span></li>
+<li><span class="math inline">\(\displaystyle \int \tan(2x) \,dx\)</span></li>
+<li><span class="math inline">\(\displaystyle \int \sinh^3(x) \cosh^2(x)\)</span></li>
 </ol>
-<p>Answers:</p>
+Answers:
 <ol style="list-style-type: lower-alpha">
-<li><p>First we separate the variables
-<span class="math display">\[
-x^2\frac{dy}{dx} = y(1+x)\\
-\Rightarrow \frac{1}{y}\frac{dy}{dx} = \frac{1+x}{x^2} = \frac{1}{x^2} + \frac{1}{x}\]</span>
-Now integrating both sides with respect to <span class="math inline">\(x\)</span>
-<span class="math display">\[\int \frac{1}{y}\frac{dy}{dx} \, dx = \int \left(\frac{1}{x^2} + \frac{1}{x}\right) \, dx \Rightarrow \int \frac{1}{y}\, dy\\
-\int \frac{1}{y} = \int \left(\frac{1}{x^2} + \frac{1}{x}\right)\, dx\\
-\ln(y) = -\frac{1}{x} + \ln(x) + c\]</span>
-Which can be rewritten as <span class="math inline">\(\ln(y)-\ln(x) = -x^{-1} + c\)</span> and then, by applying the logarithmic rule <span class="math inline">\(\ln(B) - \ln(C) = \ln(\tfrac{B}{C})\)</span>
-<span class="math display">\[
-\ln\left(\frac{y}{x}\right) = -\frac{1}{x} + c\]</span>
-Which can be written in terms of the exponential (raise <span class="math inline">\(e\)</span> to the power of both sides)
-<span class="math display">\[
-\frac{y}{x} = e^{-\frac{1}{x} + c} = Ae^{-\frac{1}{x}}\\
-y = Axe^{-\frac{1}{x}}\]</span>
-Where <span class="math inline">\(A = e^c\)</span>.</p></li>
-<li><p>First, separate the variables and integrate
-<span class="math display">\[
-\int\frac{dy}{y-1} =\int\frac{dx}{x-1}+C,
-\]</span>
-so the general solution is
-<span class="math display">\[
-\ln|y-1|=\ln|x-1|+C \implies \quad \left|\frac{y-1}{x-1}\right| = B,
-\]</span>
-where <span class="math inline">\(C\)</span> and <span class="math inline">\(B=e^C\)</span> are constants. This means that <span class="math inline">\(\frac{y-1}{x-1}= A\)</span>, where <span class="math inline">\(A\)</span> is another constant, giving the general solution <span class="math inline">\(y=A(x-1)+1\)</span>.
-Because <span class="math inline">\(y(2) = 3\)</span>, we have that <span class="math inline">\(3 = A + 1\)</span>, so the particular solution is
-<span class="math display">\[
-y(x) = 2x+1
-\]</span></p></li>
-<li><p>Separatating the variables yields
-<span class="math display">\[
-\frac{1}{y+2} \frac{dy}{dx} = \frac{1}{x-2}\]</span>
-And now integrating with respect to <span class="math inline">\(x\)</span>
-<span class="math display">\[\int \frac{1}{y+2} \frac{dy}{dx}\, dx = \int \frac{1}{x-2}\,dx\\
-= \int \frac{1}{y+2} dy = \int \frac{1}{x-2} dx\\
-\Rightarrow \ln(y+2) = \ln(x-2) + c\]</span>
-Letting <span class="math inline">\(c = \ln (A)\)</span>, with <span class="math inline">\(A\)</span> another constant, then
-<span class="math display">\[\ln(y+2) = \ln(x-2) + \ln(A) = \ln((x-2)A)\]</span>
-So <span class="math inline">\(y+2 = A(x-2)\)</span> and <span class="math inline">\(y = Ax-2A -2\)</span>.</p></li>
+<li><span class="math display">\[\int_0^{\frac{\pi}{4}}4\sin(3\theta)\cos(\theta)\, d\theta\]</span>
+Use the product to sum trigonometric identity: <span class="math inline">\(\sin(A)\cos(B) = \frac{1}{2}\left(\sin(A+B) + \sin(A+B)\right)\)</span>.
+<span class="math display">\[\begin{align*}
+2\int_0^{\frac{\pi}{4}}\sin(4\theta) + \sin(2\theta)\, d\theta &amp;= 2\left[\frac{-\cos(4\theta)}{4} + \frac{-\cos(2\theta)}{2}\right]_0^{\frac{\pi}{4}}\\
+&amp; = 2\left(\frac{1}{4} - 0 + \frac{1}{4}+\frac{1}{2}\right)\\
+&amp; = 2
+\end{align*}\]</span></li>
+<li><span class="math display">\[\begin{align*}
+\int \left( \cos \frac{x}{2} - \sin \frac{x}{2}\right)^2 \, dx &amp;=  \int \left(\cos^2 \frac{x}{2}+\sin^2 \frac{x}{2}- \sin x \right) \, dx\\
+&amp;= \int \left(1 - \sin x \right) \, dx\\
+&amp;=  x+\cos x+ C
+\end{align*}\]</span></li>
+<li><span class="math display">\[\begin{align*}
+\int \sin^3 x \, dx &amp;= \int \sin x (1 - \cos^2 x) \, dx\\
+&amp; =  -\cos x + \frac{1}{3} \cos^3 x + C
+\end{align*}\]</span></li>
+<li><span class="math display">\[\begin{align*}
+\int \frac{ \cos 2x} { \cos^2 x \sin^2 x} \, dx&amp;= \int \frac{\cos^2x - \sin^2 x} { \cos^2 x \sin^2 x} \, dx\\
+&amp;=\int \left( \frac{1} { \sin^2 x } - \frac{1} { \cos^2 x} \right) \, dx\\
+&amp;= -\cot x -\tan x+C
+\end{align*}\]</span></li>
+<li><span class="math display">\[\begin{align*}
+\int \cos x \sin 2x \, dx = \int 2 \sin x \cos^2 x  \, dx = -{2 \over 3} \cos^3 x + C
+\end{align*}\]</span>
+Having used <span class="math inline">\(\sin(2x) = 2\sin(x)\cos(x)\)</span> and using reverse chain rule, identifying that the integral was of the form <span class="math inline">\(g&#39;(x)f&#39;(g(x))\)</span>, with <span class="math inline">\(g&#39;(x) = \cos(x)\)</span>, <span class="math inline">\(f&#39;(x) = \cos^2(x)\)</span>, <span class="math inline">\(\int g&#39;(x)f&#39;(g(x))\, dx = f(g(x))\)</span>, since <span class="math inline">\(\frac{d}{dx} (f(g(x))) = g&#39;(x)f&#39;(g(x))\)</span>.
+Or, can use the product to sum identity again:
+<span class="math display">\[\int \cos x \sin 2x \, dx = \int \frac{1}{2} (\sin 3 x +\sin x) \, dx = - \frac{1}{6} \cos 3x - {1 \over 2} \cos x + C.\]</span></li>
+<li><span class="math display">\[\int \tan 2x \,dx =  - {1  \over 2} \ln \vert \cos 2x \vert  + C = {1 \over 2} \ln \vert \sec 2 x \vert +C\]</span>
+Where <span class="math inline">\(\int\tan(x)dx\)</span> can be solved with substitution, by letting <span class="math inline">\(t =\cos(t)\)</span> and <span class="math inline">\(dx = \frac{dt}{-\sin(x)}\)</span>, so <span class="math inline">\(\int \frac{-1}{t}\, dt = -\ln(t) + C = \ln(\csc(x)) + c\)</span>. Alternatively, the integral of <span class="math inline">\(\tan(x)\)</span> can be identified as reverse chain rule: <span class="math inline">\(\int g&#39;(x)f&#39;(g(x))\,dx = f(g(x))\)</span>.</li>
+<li><span class="math display">\[\begin{align*}
+\int \sinh^3 x \cosh^2 x \, dx &amp;= \int \sinh x (\cosh^2 x - 1) \cosh^2 x \, dx\\
+&amp;= - {1 \over 3} \cosh^3 x +{1 \over 5} \cosh^5 x +C
+\end{align*}\]</span>
+having used <span class="math inline">\(\sinh^2(x) = 1 - \cosh^2(x)\)</span> and reverse chain rule, or substitution with <span class="math inline">\(u = \cosh(x)\)</span> and <span class="math inline">\(du = \sinh(x)dx\)</span>.</li>
 </ol></li>
-<li><p>Using the integrating factor method, find the general solutions of the following linear first order differential equations and the particular solutions in those cases where initial conditions are specified:</p>
+<li>Determine the following integrals using the method of partial fractions.
 <ol style="list-style-type: lower-alpha">
-<li><span class="math inline">\(\displaystyle \frac{dy}{dx}+\frac{3}{x}y=4+x^2,\;y(1)=1\)</span></li>
-<li><span class="math inline">\(\displaystyle x\frac{dy}{dx}+2y=x^{-4},\;y(1)=-\frac{1}{2}\)</span></li>
-<li><span class="math inline">\(\displaystyle \frac{dy}{dx}+\frac{y}{x}=\cos(x),\;y\left(\frac{\pi}{2}\right)=0\)</span></li>
-<li><span class="math inline">\(\displaystyle \frac{dy}{dx}=e^{-x}-2y,\;y(0)=0\)</span></li>
-<li><span class="math inline">\(\displaystyle \frac{dy}{dx}=y\tan(x)+\sin(x)\)</span></li>
+<li><span class="math inline">\(\displaystyle \int \frac{1}{x^2+x-6} \, dx\)</span></li>
+<li><span class="math inline">\(\displaystyle \int \frac{-12u-13}{(2u+1)(u-3)} \, du\)</span></li>
+<li><span class="math inline">\(\displaystyle \int \frac{4x^2+13x-4}{2x^2+5x-3}\, dx\)</span></li>
+<li><span class="math inline">\(\displaystyle \int \frac{x^3}{x^2-1}\, dx\)</span></li>
+<li><span class="math inline">\(\displaystyle \int \frac{x^5-2x^2}{x^2-1} \, dx\)</span></li>
+<li><span class="math inline">\(\displaystyle \int \frac{z+1}{(z-1)^2} \, dz\)</span></li>
+<li><span class="math inline">\(\displaystyle \int \frac{5y^2}{(y^2+1)(2y-1)} \, dy\)</span></li>
 </ol>
-<p>Answers:
-Recall that for a first order differential equation of the form
-<span class="math display">\[\frac{dy}{dx} + p(x)y = r(x)\]</span>
-The integrating factor <span class="math inline">\(u(x)\)</span> is given by
-<span class="math display">\[
-u(x) = \exp\left(\int p(x)\, dx\right)
-\]</span>
-and then
-<span class="math display">\[\frac{d}{dx}(u(x)y(x)) = u(x)r(x)\]</span>
-and
-<span class="math display">\[
-y(x) = \left[ \int e^{\int p(x)dx} r(x) \,dx + C\right] e^{-\int p(x) dx}.
-\]</span>
-See the lecture notes for details for why this is the case.</p>
+Answers:
 <ol style="list-style-type: lower-alpha">
-<li><p>Here, <span class="math inline">\(u(x) = \exp\left(\int \frac{3}{x}dx\right) = e^{\ln(x^3)} = x^3\)</span>, and we have that
+<li><span class="math display">\[\frac{1}{x^2+x-6} = \frac{1}{(x+3)(x-2)} = \frac{A}{x+3}+\frac{B}{x-2} \frac{A(x-2) + B(x+3)}{(x+3)(x-2)}\]</span>
+Equating the powers of <span class="math inline">\(x\)</span> and solving the resulting simultaneous equations gives <span class="math inline">\(A + B = 0\)</span> and <span class="math inline">\(3B-2A = 1\)</span>, so <span class="math inline">\(A = -\frac{1}{5}. B = \frac{1}{5}\)</span>. So
+<span class="math display">\[\int\frac{1}{x^2+x-6}\,dx = \int \frac{-1}{5(x+3)} + \frac{1}{5(x-2)}\, dx = -\frac{1}{5}\ln(x+3) + \frac{1}{5}\ln(x-2) + c\]</span></li>
+<li><span class="math display">\[\frac{-12u - 13}{(2u+1)(u-3)} = \frac{A}{2u+1} + \frac{B}{u-3} = \frac{A(u-3) + B(2u+1)}{(2u+1)(u-3)}\]</span>
+With the numerator given two simultaneous equations solved by <span class="math inline">\(A=2,B=-7\)</span>. So
+<span class="math display">\[\int\frac{-12u-13}{(2u+1)(u-3)}\,du = \int \frac{2}{2u+1} + \frac{-7}{u-2}\,du = \ln(2u+1) - 7\ln(u-3) + c\]</span></li>
+<li><span class="math display">\[\frac{4x^2 + 13x - 4}{2x^2 + 5x - 3} = \frac{A}{2x-1} + \frac{B}{x+3} + C\]</span>
+Since the order of the numerator is equal to the order of the denominator, a constant term must be included. This gives three equations in <span class="math inline">\(A,B,C\)</span>, which are solved by <span class="math inline">\(A=1,B=1,C=2\)</span>. So
+<span class="math display">\[\begin{align*}
+\int\frac{4x^2 + 13x - 4}{2x^2 + 5x - 3}\, dx &amp;= \int \frac{1}{2x-2} + \frac{1}{x+3} + 2 \, dx\\
+&amp;= \frac{1}{2}\ln(2x-1) + \ln(x+3) + 2x + c
+\end{align*}\]</span></li>
+<li><span class="math display">\[\frac{x^3}{x^2-1} = \frac{x^3}{(x+1)(x-1)} = \frac{A}{x+1} + \frac{B}{x-1} + Cx + D\]</span>
+since the numerator is one order higher than the denominator, a linear term must be included.
+<span class="math display">\[\frac{A(x-1) + B(x+1) + Cx(x^2-1) + D(x^2-1)}{x^2-1} = \frac{x^3}{x^2-1}\]</span>
+Giving <span class="math inline">\(A+B=1, B-A = 0\)</span> and <span class="math inline">\(C=1\)</span>. So <span class="math inline">\(A=\frac{1}{2}, B=\frac{1}{2}, C=1\)</span> and
+<span class="math display">\[\begin{align*}
+\int\frac{x^3}{x^2-1}\, dx &amp;= \int \frac{1}{2(x+1)} + \frac{1}{2(x-1)} + 1\, dx\\
+&amp;= \frac{1}{2}\ln(x+1) + \frac{1}{2}\ln(x-1) + x + c\\
+&amp;= \frac{1}{2}\ln(x^2-1) + x + c = \ln((x^2-1)^{\frac{1}{2}}) + x + c
+\end{align*}\]</span></li>
+<li><span class="math display">\[\frac{z+1}{(x-1)^2} = \frac{A}{z-1} + \frac{B}{(x-1)^2}\]</span>
+Since there is a repeated root of the form <span class="math inline">\((z-\alpha)^n\)</span>, so the first <span class="math inline">\(n\)</span> powers of <span class="math inline">\((z-\alpha)\)</span> must appear as denominators in the partial fractions exapnsion.
+<span class="math display">\[\frac{A}{z-1} + \frac{B}{(z-1)^2} = \frac{A(z-1) + B}{(z-1)^2} = \frac{z+1}{(z-1)^2}\]</span>
+The numerator is solved by <span class="math inline">\(A=1\)</span> and <span class="math inline">\(B=3\)</span>, so
+<span class="math display">\[\int \frac{z+1}{(z-1)^2}\,dz = \int \frac{1}{z-1} + \frac{3}{(z-1)^2} \, dz = \ln(z-1) - (z-1)^{-3} + c\]</span></li>
+<li><span class="math display">\[\frac{5y^2}{(y^2+1)(2y-1)} = \frac{Ay+B}{y^2+1} + \frac{C}{2y-1}\]</span>
+with the numerator of the first partial fraction being a linear polynomial since the quadratic in the denominator is irreducible.
 <span class="math display">\[
-\frac{d}{dx}(x^3y) = x^3 (4+x^2) = x^5 + 4x^3\\
-\Rightarrow x^3y = \int x^5 + 4x^3 \, dx = \frac{1}{6}x^6 + x^4 + c
-\Rightarrow y = \frac{1}{6} x^3 + x + \frac{c}{x^3}
-\]</span>
-And from the initial condition <span class="math inline">\(y(1) = 1\)</span>
-<span class="math display">\[1 = \frac{1}{6} + 1 + c \Rightarrow c = -\frac{1}{6}\]</span>
+\frac{(Ay+B)(2y-1) + C(y^2+1)}{(y^2+1)(2y-1)} = \frac{2Ay^2 - Ay + 2By - B + Cy^2 + 1}{(y^2+1)(2y-1)} = \frac{5y^2}{(y^2+1)(2y-1)}\]</span>
+Equating the powers of <span class="math inline">\(y\)</span> gives
+<span class="math display">\[2A+C = 5,\quad 2B-A = 0,\quad 1-B = 0\\
+\Rightarrow A=2,B=1,C=1\]</span>
+so the integral can be rewritten as the partial fractions
+<span class="math display">\[
+\int \frac{5y^2}{(y^2+1)(2y-1)}\;dy = \int \frac{2y+1}{y^2+1} + \frac{1}{2y-1}\, dy = \tan^{-1}(y) + \ln(y^2+1) + \frac{1}{2}\ln(2y-1) + c\]</span></li>
+</ol></li>
+<li>Determine the following integrals using the method of integration by parts.
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(\displaystyle \int x \cos(x) \,dx\)</span></li>
+<li><span class="math inline">\(\displaystyle \int t^2 e^{t} \, dt\)</span></li>
+<li><span class="math inline">\(\displaystyle \int e^{x}\sin(x) \, dx\)</span></li>
+<li><span class="math inline">\(\displaystyle \int (x+1)^2 e^{-2x} \, dx\)</span></li>
+<li>$^{-1}(x) , dx $.</li>
+</ol>
+Answers:
+<ol style="list-style-type: lower-alpha">
+<li>Using integration by parts, <span class="math inline">\(\int u\,dv = uv - \int v\,du\)</span> with <span class="math inline">\(u=x\)</span> and <span class="math inline">\(dv = \cos(x)\)</span>
+<span class="math display">\[\int x \cos (x) \, dx = x \sin (x) - \int \sin (x) \, dx = x \sin (x) + \cos (x) + C \]</span></li>
+<li>Let <span class="math inline">\(u = t^2, du = 2t, dv = e^t, v = e^t\)</span>
+<span class="math display">\[\int t^2 e^t \,dt = t^2e^t - \int 2te^t \,dt\]</span>
+Here, perform integration by parts once again. Let <span class="math inline">\(u=t, du = 1, dv = e^t, v = e^t\)</span>
+<span class="math display">\[\int te^t \,dt = te^t - \int e^t \,dt = (t-1)e^t\]</span>
+and the orignal integral becomes
+<span class="math display">\[\int t^2 e^t\,dt = t^2 e^t - 2\int te^t\,dt = t^2 e^t - 2(t-1)e^t = (t^2 -2t + 2)e^t + c\]</span></li>
+<li>Integrating by parts, <span class="math inline">\(\int f\,dg = fg - \int g\,df\)</span> with <span class="math inline">\(f = \sin(x),df = \cos(x), dv = e^x, v = e^x\)</span>.
+<span class="math display">\[
+\int e^x \sin(x)\,dx = e^x \sin(x) - \int e^x \cos(x)\,dx\]</span>
+And we are still left with an integral that must be solved by parts. It looks like this cycle might keep repeating, but in fact, trying out the next step will reveal the answer. Let <span class="math inline">\(u= \cos(x),du=-\sin(x), dv=e^x,v=e^x\)</span>
+<span class="math display">\[\int e^x \cos(x) \,dx = e^x \cos(x) + \int e^x \sin(x)\,dx\]</span>
+And examining the original integral we see that <span class="math inline">\(\int e^x \sin(x)\,dx\)</span> appears on both sides:
+<span class="math display">\[
+\int e^x \sin(x)\,dx = e^x\sin(x) - \left(e^x\cos(x)+\int e^x \sin(x)\,dx\right)\\
+2\int e^x \sin(x)\,dx = e^x\sin(x) - e^x\cos(x)\\
+\int e^x \sin(x)\,dx = \frac{1}{2}e^x\left(\sin(x)-\cos(x)\right) + c\]</span></li>
+<li><span class="math display">\[\int (x+1)^2 e^{-2x} \, dx = -{1 \over 2}(x+1)^2 e^{-2x} + \int (x+1) e^{-2x} \, dx = -{1 \over 2}(x+1)^2 e^{-2x} - {1 \over 2}(x+1) e^{-2x}\]</span></li>
+<li><span class="math display">\[y = \sin^{-1} x \Rightarrow \sin y = x \Rightarrow  \cos y {\frac{dy}{dx}} = 1 \Rightarrow {\frac{dy}{dx}} =  (1 - x^2)^{-1/2},\]</span>
 so
-<span class="math display">\[y(x) = \frac{1}{6}x^3 + x -\frac{1}{6X^3}\]</span></p></li>
-<li><p><span class="math display">\[x \frac{dy}{dx} + 2y = x^{-4}\]</span>
-Whic is equivalent to
-<span class="math display">\[\frac{dy}{dx} + 2\frac{y}{x} = x^{-5}\]</span>
-Here, the integrating factor is
-<span class="math display">\[u(x) = \exp\left(\int \frac{2}{x}dx\right) = e^{ln(x^2)} = x^2\]</span>
-and
-<span class="math display">\[\frac{d}{dx}(x^2y) = x^2x^{-5} = x^{-3}\\
-\Rightarrow x^2y = \int x^{-3} \, dx = -\frac{1}{2}x^{-2} + C\]</span>
-And with the initial conditions <span class="math inline">\(y(1)=-\frac{1}{2}\)</span>, <span class="math inline">\(c = 0\)</span>, and the particular solution is
-<span class="math display">\[y(x) = -\frac{1}{2}x^{-4}\]</span></p></li>
-<li><p><span class="math display">\[\frac{dy}{dx} + \frac{y}{x} = \cos(x)\]</span>
-In this case, the integrating factor is
-<span class="math display">\[u(x) = \exp\left(\int\frac{1}{x}dx\right) = e^{\ln(x)} = x\\
-\Rightarrow \frac{d}{dx}(e^xy) = e^x\cos(x)\\
-x y = \int x\cos(x)\, dx\]</span>
-And the inegral can be solved by parts: <span class="math inline">\(\int uv&#39; = uv - \int u&#39;v\)</span>. Let <span class="math inline">\(u=x, u&#39;=1, v&#39; = \cos(x), v = \sin(x)\)</span>. So
-<span class="math display">\[
-x y = x\sin(x) - \int \sin(x)\,dx = x\sin(x) + \cos(x) + c\\
-y = \sin(x) + \frac{\cos(x)}{x} + \frac{c}{x}\]</span>
-With <span class="math inline">\(y(\frac{\pi}{2}) = 0\)</span>, <span class="math inline">\(c=-\frac{\pi}{2}\)</span> so the particular solution is
-<span class="math display">\[
-y(x) = \sin(x) + \frac{\cos(x)}{x} + \frac{\pi}{2x}\]</span></p></li>
-<li><p>First rearrange to
-<span class="math display">\[\frac{dy}{dx} + 2y = e^{-x}\]</span>
-The integrating factor is
-<span class="math display">\[u(x) = \exp\left(\int 2 dx\right) = e^{2x}\]</span>
-Then the general solution is
-<span class="math display">\[
-y = \frac{1}{e^{2x}}\int e^{2x}e^{-x} \, dx = \frac{1}{e^{2x}}(e^x + c) = \frac{1}{e^x} + \frac{c}{e^{2x}}\]</span>
-And to find the particular solution with the intial condition <span class="math inline">\(y(0) = 0\)</span>, <span class="math inline">\(c=-1\)</span> and he particular solution is
-<span class="math display">\[
-y = e^{-x} - e^{-2x}\]</span></p></li>
-<li><p><span class="math display">\[\frac{dy}{dx} - y\tan(x) = \sin(x)\]</span>
-Here, the integrating factor (taking care with the minus sign which must be included in <span class="math inline">\(p(x)\)</span>) is
-<span class="math display">\[
-\begin{align}
-u(x) &amp;= \exp\left(\int -\tan(x)\,dx\right) = \exp\left(\int -\frac{\sin(x)}{\cos(x)}dx\right)\\
-&amp;= \exp\left(\ln(\cos(x))\right) = \exp\left(\ln(\cos(x))\right) = \cos(x)\end{align}
-\]</span>
-and the general solution is
-<span class="math display">\[
-\begin{align}
-y(x) &amp;= \int \cos(x)\sin(x)\frac{1}{\cos(x)}\\ &amp;= \left(\frac{1}{2}\cos^2(x) + c\right)\frac{1}{\cos(x)}\\
-&amp;= \frac{\cos(x)}{2} + c \sec(x)
-\end{align}
-\]</span>
-Note that there are other forms for the solution, since <span class="math inline">\(\cos(x)\sin(x) = \frac{1}{2}\sin(2x)\)</span>.</p></li>
-</ol></li>
-<li><p>Find the general solutions of the following constant coefficient, linear, homogeneous differential equations, and the particular solutions in those cases where initial conditions are specified:</p>
-<ol style="list-style-type: lower-alpha">
-<li><span class="math inline">\(\displaystyle \frac{d^2y}{dx^2}+5\frac{dy}{dx}+6y=0,\;y(0)=0,\; \frac{dy(0)}{dx}=1\)</span></li>
-<li><span class="math inline">\(\displaystyle \frac{d^2y}{dx^2}+8\frac{dy}{dx}+25y=0,\;y(0)=1,\; \frac{dy(0)}{dx}=0\)</span></li>
-<li><span class="math inline">\(\displaystyle \frac{d^2y}{dx^2}+2\frac{dy}{dx}+y=0\)</span></li>
-</ol>
-<p>Answers:
-Recall that for second order homogeneous differential equations, we standard form is
-<span class="math display">\[\frac{d^2y}{dx^2} + p \frac{dy}{dx} + qy = 0\]</span>
-and we consider the possible solution <span class="math inline">\(y = e^{mx}\)</span>. Substitution yields
-<span class="math display">\[(m^2 + pm + q)e^{mx} = 0 \text{ hence, because $e^{mx}$ is never zero, } m^2 + pm + q = 0.\]</span>
-Solving this auxiliary (or characteristic) equation gives the two roots, and there are three possible cases for obtaining the two linearly independent solutions—see the lecture notes.</p>
-<ol style="list-style-type: lower-alpha">
-<li><p>The auxiliary equation is given by
-<span class="math display">\[
-m^2 + 5m + 6 = 0\\
-(m+3)(m+2) = 0\\
-m_1 = -3, m_2 = -2
-\]</span>
-And the general solution is
-<span class="math display">\[y(X) = Ae^{-3x} + B e^{-2x}.\]</span>
-We have the intial conditions <span class="math inline">\(y(0) = 0\)</span> and <span class="math inline">\(\frac{dy(0)}{dx} = 1\)</span>,
-so <span class="math inline">\(A+B = 0\)</span> and <span class="math inline">\(-3A -2B = 1\)</span>. This gives <span class="math inline">\(A=-1\)</span> and <span class="math inline">\(B = 1\)</span>. So the particular solution is
-<span class="math display">\[
-y(x) = -e^{-3x} + e^{-2x}
-\]</span></p></li>
-<li><p>Here, the auxiliary (or characteristic) equation is
-<span class="math display">\[
-m^2 + 8m + 25 = 0\\
-m = \frac{-8 \pm  \sqrt{64 - 100}}{2}\\
-m_1 = \frac{-8 + 6i}{2} = -4+3i\\
-m_2 = \frac{-8 - 6i}{2} = -4-3i
-\]</span>
-The general solution is therefore <span class="math inline">\(y= e^{-4x}(A \cos 3x + B \sin 3x)\)</span>.</p></li>
-</ol>
-<p></p>
-<p><span class="math inline">\(y(0)=1 \implies A=1\)</span>. <span class="math inline">\(y&#39; = -4 e^{-4x}(A \cos 3x + B \sin 3x) + e^{-4x}(-3A \sin 3x + 3B \cos 3x)\)</span>.
-Thus, <span class="math inline">\(y&#39;(0)=0 \implies -4A +3B = 0 \implies B= \frac{4}{3}\)</span>, giving the particular solution
-<span class="math display">\[
-y = \frac{1}{3} e^{-4x}(3 \cos 3x + 4 \sin 3x).
-\]</span></p>
-<ol style="list-style-type: lower-alpha">
-<li><span class="math inline">\(m^2 +2m+1 = 0 \implies (m+1)^2=0\)</span>, so <span class="math inline">\(m=-1\)</span> twice. The general solution is then
-<span class="math display">\[
-y =  (A + Bx) e^{-x}.
-\]</span></li>
-</ol></li>
-<li><p>For each of the following differential equations, find: the Complementary Function; a Particular Integral; and the Particular Solution corresponding to the given initial conditions:</p>
-<ol style="list-style-type: lower-alpha">
-<li><span class="math inline">\(\displaystyle \frac{d^2y}{dx^2}+\frac{dy}{dx}+y=36e^{5x}\)</span></li>
-<li><span class="math inline">\(\displaystyle \frac{d^2y}{dx^2}+3\frac{dy}{dx}-4y=-34\sin(x)\)</span></li>
-<li><span class="math inline">\(\displaystyle \frac{d^2y}{dx^2}+3\frac{dy}{dx}-4y=24e^{-x},\;y(0)=0,\; \frac{dy(0)}{dx}=10\)</span></li>
-<li><span class="math inline">\(\displaystyle \frac{d^2y}{dx^2}-3\frac{dy}{dx}+2y=x^2-2x+3,\;y(0)=\frac{3}{4},\; \frac{dy(0)}{dx}=\frac{3}{2}.\)</span></li>
-</ol>
-<p>Answers:</p>
-<ol style="list-style-type: lower-alpha">
-<li><p>First, find the complementary function (the solution to the homogeneous differential equation). The characteristic equation for the homogeneous part is
-<span class="math display">\[m^2 + 2m + 1 = 0 \\(m+1)^2 = 0\\m=-1 \text{equal roots}\]</span>
-Therefore, <span class="math inline">\(y_{CF} = (A+Bx)e^{-x}\)</span>
-Now for the particular integral, the solution to the nonhomogeneous part of the differential equation. Since the right hand side is <span class="math inline">\(36e^{5x}\)</span>, take the trial (ansatz) particular integral <span class="math inline">\(y_{PI} = Ce^{5x}\)</span>. Substituting this into the differential equation gives
-<span class="math display">\[\frac{d^2y_{PI}}{dx^2}+\frac{dy_{PI}}{dx}+y_{PI}=36e^{5x}\\
-25Ce^{5x} + 2(5Ce^{5x}) + Ce^{5x} = 36Ce^{5x} = 36e^{5x}\]</span>
-and we have <span class="math inline">\(C=1\)</span>. Therefore, the particular integral is <span class="math inline">\(y_{PI} = e^{5x}\)</span> and the general solution is
-<span class="math display">\[
-y = (A+Bx)e^{-x} + e^{5x}.
-\]</span></p></li>
-<li><p>Proceeding the same way, the characteristic equation is
-<span class="math display">\[
-m^2 + 3m - 4 = 0\\
-(m+4)(m-1) = 0\\
-m_1 = -4, m_2 = 1
-\]</span>
-so there are two distinct roots, and
-<span class="math display">\[y_{CF} = Ae^{-4x} + B e^x\]</span>
-For the particular integral, the right hand side is <span class="math inline">\(-34\sin(x)\)</span>, so try the function
-<span class="math display">\[
-\begin{align}
-y_{PI} &amp;= a \cos(x)+ b\sin(x)\\
-\frac{dy_{PI}}{dx} &amp;= -a \sin(x) + b\cos(x)\\
-\frac{d^2y_{PI}}{dx^2} &amp;= -a \cos(x) - b\sin(X)
-\end{align}
-\]</span>
-And substituting these into the differential equation
-<span class="math display">\[
-\left(-a\cos(x) - b\sin(x)\right) + 3 \left(-a \sin(x) + b\cos(x)\right) - 4\left(a\cos(x) + b\sin(x)\right) = -34\sin(x)\\
-(3b-5a)\cos(x) + (-5b - 3a)\sin(x) = -34\sin(x)\]</span>
-Equating the coefficients of <span class="math inline">\(\sin(x)\)</span> and <span class="math inline">\(\cos(x)\)</span>, since the above must hold for all <span class="math inline">\(x\)</span>:
-<span class="math display">\[
-\begin{align}
-3b-5a &amp;= 0\\
--5b - 3a &amp;= 0
-\end{align}
-\]</span>
-Solving these simultaneos equations gives <span class="math inline">\(a=3, b=5\)</span>. Therefore the particular integral is
-<span class="math display">\[y_{PI} = 3\cos(x) + 5\sin(x)\]</span>
-and the general solution <span class="math inline">\(y = y_{CF} + y_{PI}\)</span> is
-<span class="math display">\[
-y(x) = Ae^{-4x} + Be^x + 3\cos(x) + 5\sin(x)
-\]</span></p></li>
-<li><p>The characteristic equation is solved by
-<span class="math display">\[
-m^2 + 3m - 4 = 0\\
-(m+4)(m-1) = 0\\
-m_1 = -4, m_2 = 1
-\]</span>
-There are two distinct roots and <span class="math inline">\(y_{CF} = Ae^{-4x} = Be^x\)</span>. For the particular integral, since the right hand side is <span class="math inline">\(24e^{-x}\)</span>, try the function
-<span class="math display">\[
-\begin{align}
-y_{PI} &amp;= Ce^{-x}\\
-\frac{dy_{PI}}{dx} &amp;= -Ce^{-x}\\
-\frac{d^2y_{PI}}{dx} &amp;= Ce^{-x}
-\end{align}
-\]</span>
-Upon substituting into the differential equation
-<span class="math display">\[
-Ce^{-x} - 3(Ce^{-x}) - 4Ce^{-x} = 24e^{-x}\]</span>
-so -6C = 25$ and <span class="math inline">\(C = -4\)</span>.
-The general solution is then <span class="math inline">\(y = y_{CF} + y_{PI}\)</span>
-<span class="math display">\[
-y(x) = Ae^{-4x} + B e^{-x} - 4e^{-x}\]</span>
-The initial conditions are <span class="math inline">\(y(0) = 0\)</span> and <span class="math inline">\(\frac{dy(0)}{dx} = 0\)</span>, which can be used to solve for <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>.
-<span class="math display">\[
-A+B - 4 = 0\\
--4a + B + 4 = 10
-\]</span>
-and <span class="math inline">\(A = -0.4\)</span>, <span class="math inline">\(B=4.4\)</span> so the particular solution is
-<span class="math display">\[
-y(x) = -0.4 e^{-4x} + 4.4 e^x - 4e^{-x}
-\]</span></p></li>
-<li><p>The characteristic equation is given by
-<span class="math display">\[
-m^2 - 3m + 2 = 0\\
-(m-2)(m-1) = 0\\
-m_1 = 2, m_2 = 1
-\]</span>
-There are two distinct roots, so the complementary function is
-<span class="math display">\[y_{CF} = Ae^{2x} + Be^x\]</span>
-Because the right hand side is a quadratic, take the particular integral to also be a quadratic.
-<span class="math display">\[
-\begin{align}
-y_{PI} &amp;= Cx^2 +Dx + E\\
-\frac{y_{PI}}{dx} &amp;= 2Cx + D\\
-\frac{d^2 y_{PI}}{dx^2} &amp;= 2C
-\end{align}
-\]</span>
-Substituting into the homogeneous part of the differential equation and grouping terms in powers of <span class="math inline">\(x\)</span>:
-<span class="math display">\[
-2cx^2 + (2D - 6C)x + 2C - 3D + 2E = 3
-\]</span>
-Which gives <span class="math inline">\(C = \frac{1}{2},D=\frac{1}{2},E = \frac{7}{4}\)</span>. Therefrore the general solution is
-<span class="math display">\[
-y = Ae^{2x} + Be^x + \frac{x^2}{2} + \frac{x}{2} + \frac{7}{4}
-\]</span>
-For the particualr solution, find <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> given the initial conditions <span class="math inline">\(y(0) = \frac{3}{4}\)</span> and <span class="math inline">\(\frac{dy(0)}{dx} = \frac{3}{2}\)</span>
-<span class="math display">\[
-\begin{align}
-A + B + \frac{7}{4} &amp;= \frac{3}{4} &amp;\Rightarrow &amp; A+B &amp; = -1\\
-2A + B + \frac{1}{2} &amp;= \frac{3}{2} &amp;\Rightarrow &amp; 2A + B &amp;=1
-\end{align}
-\]</span>
-From these, <span class="math inline">\(A=2\)</span> and <span class="math inline">\(B=-3\)</span>, so the particular solution is
-<span class="math display">\[
-y(x) = 2e^{2x} - 3e^x +\frac{x^2}{2} + \frac{x}{2} + \frac{7}{4}
-\]</span></p></li>
+<span class="math display">\[\int \sin^{-1} x \, dx = x \sin^{-1} x - \int x (1-x^2)^{-1/2} \, dx = x \sin^{-1} x + (1 - x^2)^{1/2} + C \]</span></li>
 </ol></li>
 </ol>
 

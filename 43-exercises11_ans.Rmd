@@ -1,167 +1,229 @@
 # Exercise Set 11 Answers {.unlisted .unnumbered}
 
-1. Determine the following indefinite integrals
-    a. $\int 2x^7\; dx$
-    a. $\int 5x^2+2x-1 \; dx$
-    a. $\int \sin(\theta)+\cos(\theta) \; d\theta$
-    a. $\int 3e^t + \frac{2}{t} \; d t$
-    a. $\int x^\frac{1}{2} \; dx$
-
-    Answers:
-    a. $\int 2x^7 \; dx = \frac{1}{4}x^8 + c$
-    a. $\int 5x^2 + 2x-1\; dx = \frac{5}{3}x^3 + x^2 - x + c$
-    a. $\int \sin(\theta)+\cos(\theta) \; d\theta = -\cos(\theta) + \sin(\theta) + c$
-    a. $\int 3e^t + \frac{2}{t} \; dt = 3e^t + 2\ln(t) + c$
-    a. $\int x^\frac{1}{2} \; dx = \frac{2}{3}x^{\frac{3}{2}} + c$
-    
-1. Determine the following definite integrals
-    a. $\int_0^2 x^2-2x\; dx$
-    a. $\int_4^{16} \frac{2}{\sqrt{x}} \; dx$
-    a. $\int_{-r}^r \frac{mx^2}{2r}\: dx$
-    a. $\int_{-\frac{\pi}{2}}^\frac{\pi}{2}\cos(x)\; dx$
-    a. $\int_{\ln(2)}^{\ln(3)} e^x\; dx$
-    
-    Answers:
-    a. $\int_0^2 x^2-2x\; dx = \left[\frac{x^3}{3} - x^2\right]_0^2 = \left(\frac{2^3}{3} - 2^2\right) - 0 = -\frac{4}{3}$
-    a. $\int_4^{16} \frac{2}{\sqrt{x}} \; dx = \int_4^16 2x^{-\frac{1}{2}}\;dx = \left[4x^{\frac{1}{2}}\right]_4^16 = 16 - 8 = 8$
-    a. Note that the limit, $r$, appears inside the integral, but it is just a constant. It is explicitly taken out of the integral here
-    $\int_{-r}^r \frac{mx^2}{2r}\:dx = \frac{m}{2r}\int_{-r}^r x^2 \: dx = \frac{m}{2r}\left[\frac{1}{3}x^3\right]_{-r}^r = \frac{m}{2r}\left(\frac{r^3}{3} + \frac{r^3}{3}\right) = \frac{mr^2}{3}$
-    a. $\int_{-\frac{\pi}{2}}^\frac{\pi}{2}\cos(x)\; dx = \left[\sin(x)\right]_{-\frac{\pi}{2}}^\frac{\pi}{2} = \sin(\pi/2) - \sin(\pi/2) = 2$
-    a. $\int_{\ln(2)}^{\ln(3)} e^x\; dx = \left[e^x\right]_{\ln(2)}^{\ln(3)} = e^{\ln(3)} - e^{\ln(2)} = 3-2 = 1$
-    
-
-1. Find the area between the curve and the $x$-axis of the function $f(x)=x^3-x$ and the lines $x=0$ and $x=2$.
-
-    Answer:
-
-    We are looking for the area enclosed by the function and the $x$-axis, but we cannot simply take the definite integral from $0$ to $2$ as the function is negative at some points on this interval.
-
-    The roots of $f(x)=x^3-x=x(x+1)(x-1)$ are $-1,0,1$ and these are where the function changes sign. We can plug in values between the roots to see where $f(x)$ is positive and where it is negative. Since we are interested in the interval from $0$ to $2$ we check $f(0.5)=-3.75$ and $f(2)=6$. So the area will be given by
-    $$A=\int_0^1 -f(x)\, dx + \int_1^2 f(x)\, dx.$$
-    Hence
-    $$A=\left[-\frac{1}{4}x^4 + \frac{1}{2}x^2\right]_0^1 + \left[\frac{1}{4}x^4 - \frac{1}{2}x^2\right]_1^2 = (\frac{1}{4}-0) + (2 - (-1/4)) = \frac{5}{2}.$$
-
-1. The velocity $v$ ($\text{ms}^{-1}$) of a particle moving in a straight line at time $t$ ($\text{s}$) is given by:
-    $$v=6t^2-30t-36\quad t>0$$
-    By integrating, find the distance travelled by the particle between $t=3$ and $t=5$ seconds.
-
-    Answer:
-
-    $$\int_3^5 6t^2 - 30t - 36\: dt = \left[2t^3 - 15t^2 - 36t\right]_3^5 = -116$$
-    Since we are looking for a distance, we take the absolute value: $116\text{m}$.
-    
-1. Find the following integrals using a suitable substitution.
-    a. $\int (4x-3)^5 \; dx$
-    a. $\int 4\sin(3x+2)\; dx$
-    a. $\int_2^5 \frac{1}{1-2x} \; dx$
-    a. $\int \frac{1}{\sqrt{(5-3x)^3}}\; dx$
-    a. $\int \frac{4x}{\sqrt{(x^2+3)^3}}\; dx$
-    a. $\int 2xe^{x^2-5}\; dx$
-    a. $\int \frac{\sin(\sqrt{x})}{\sqrt{x}}\; dx$
-    a. $\int \cos(\theta)\sin(\theta)\; d\theta$
-    a. $\int \frac{\cos(x)}{1+\sin(x)}\; dx$
+1. Write the series
+    \begin{equation*}
+    \frac{1}{1\cdot 2}+\frac{1}{2\cdot 3}+\frac{1}{3\cdot 4}+\frac{1}{4\cdot 5}+\frac{1}{5\cdot 6}
+    \end{equation*}
+    using Sigma notation in the forms $\displaystyle\sum_{k=1}^{n}(\dots)$ and $\displaystyle\sum_{l=0}^{m}(\dots)$.
 
     Answers:
 
-    a. $\int (4x-3)^5\:dx$. Let $u=4x-3$, so $\frac{du}{dx}=4 \Rightarrow dx = \frac{1}{4}du$
-    $$
-    \int (4x-3)^5\;dx = \int u^5 \frac{1}{4}du =\frac{u^6}{24} +c = \frac{(4x-3)^6}{24} + c$$
-    a. $\int 4\sin(3x+2)\;dx$. Let $u=3x+2$, so $\frac{du}{dx} = 3 \Rightarrow dx = \frac{1}{3}du$,
-    $$
-    \int 4\sin(3x+2)\;dx = \frac{4}{3}\int\sin(u)\:du = -\frac{4}{3}\cos(u) + c = -\frac{4}{3}\cos(3x+2) + c
-    $$
-    a. $\int_2^5\frac{1}{1-2x}\:dx$. Let $u=1-2x$, so $\frac{du}{dx} = -2 \Rightarrow dx = -\frac{1}{2}du$. This is a definite integral, so the limits must also be given in terms of u:
-    \begin{align*}
-    \int_{x=2}^{x=5} \frac{1}{1-2x}\:dx &= -\frac{1}{2}\int_{u=-3}^{u=5}\frac{du}{u} = -\frac{1}{2}\left[\ln(u)\right]_{-3}^{-9}\\
-    &= -\frac{1}{2}(\ln(-9) - \ln(-3)) = -\frac{1}{2}\ln\left(\frac{-9}{-3}\right) = -\frac{1}{2}\ln(3)
-    \end{align*}
-    a. $\int\frac{1}{\sqrt{(5-3x)^3}}\:dx$. Let $u=5-3x$, so $\frac{du}{dx} = -3 \Rightarrow dx = -\frac{du}{3}$
-    $$
-    \int\frac{1}{\sqrt{(5-3x)^3}}\:dx = \int u^{-\frac{3}{2}}\:du = \frac{2}{3}u^{-\frac{1}{2}} + c = \frac{2}{3}(5-3x)^{-\frac{1}{2}} + c
-    $$
-    a. $\int\frac{4x}{\sqrt{(x^2 + 3)^3}}\:dx$. Let $u=x^2 +3$, so $\frac{du}{dx} = 2x \Rightarrow dx = \frac{du}{2x}$. Here, the $4x$ term remains in the denominator after substituting, but will be cancelled out once $dx$ is substituted.
-    $$
-    \int\frac{4x}{\sqrt{(x^2 + 3)^3}}\:dx = \int\frac{4x}{u^{\frac{3}{2}}}\frac{du}{2x} = \int 2u^{-\frac{3}{2}} = -4u^{-\frac{1}{2}} + c = -4(x^2+3)^{-\frac{1}{2}} + c
-    $$
-    This could also have been solved by reverse chain rule (think about how the answer would be differentiated, and see that the integral was of the form $g'(x)f(g(x))$.
-    a. $\int 2x e^{x^2-5}\:dx$. Let $u=x^2 - 5$ so $\frac{du}{dx} = 2x \Rightarrow dx = \frac{du}{2x}$. Again, the remaining term in $x$ is removed after substituting for $u$ without needed to take a square root.
-    $$
-    \int 2x e^u \frac{du}{2x} = \int e^u \: du = e^u + c = e^{x^2 -5} + c
-    $$
-    Which could have been solved by identifying reverse chain rule.
-    a. $\int \frac{\sin(\sqrt{x})}{\sqrt{x}} dx$. Let $u= \sqrt{x}$ so $\frac{du}{dx} = \frac{1}{2\sqrt{x}} \Rightarrow \frac{1}{\sqrt{x}}dx = 2du$.
-    $$\int \frac{\sin(\sqrt{x})}{\sqrt{x}} dx=2\int \sin(u) du = -2\cos(u)+c=-2\sin(\sqrt{x})+c.$$
+    $$\sum_{k=1}^{5}\frac{1}{k(k+1)}$$
+    $$\sum_{l=0}^{4}\frac{1}{(l+1)(l+2)}$$
 
-    a. $\int \cos(\theta)\sin(\theta)\: d\theta$. Let $u= \sin(\theta)$ so $\frac{du}{d\theta} = \cos(\theta) \Rightarrow d\theta = \frac{du}{\cos(\theta)}$.
+1. Evaluate $\displaystyle\sum_{n=1}^{10}\frac{2}{3^n}$ and $\displaystyle\sum_{n=0}^{9}\frac{2}{3^n}$ using the formula for the $n^{\text{th}}$ partial sum of a geometric series.
+
+    Answers:
+
+    a. The geometric series $\displaystyle\sum_{n=1}^{10}\dfrac{2}{3^n}$ has first term $a=\dfrac{2}{3^1}=\dfrac{2}{3}$ and second term $ar=\dfrac{2}{3^2}$ and therefore the common ratio is $r=\dfrac{ar}{a}=\dfrac{1}{3}$. Since the sum is for $n=1$ to $n=10$, it is the sum of the first $10$ terms,
+        $$
+        S_{10}=\frac{a(1-r^{10})}{1-r}=\frac{2\left (1-\dfrac{1}{3^{10}}\right)}{3\left (1-\dfrac{1}{3}\right )}=1-\dfrac{1}{3^{10}}.
+        $$
+
+    a. The geometric series $\displaystyle\sum_{n=0}^{9}\frac{2}{3^n}$ has first term $a=\dfrac{2}{3^0}=2$ and second term $ar=\dfrac{2}{3^1}$, and therefore the common ratio is $r=\dfrac{ar}{a}=\dfrac{1}{3}$. Since the sum is for $n=0$ to $n=9$, it is the sum of the first $10$ terms,
+        $$
+        S_{10}=\dfrac{a(1-r^{10})}{1-r}=\dfrac{2\left(1-\dfrac{1}{3^{10}}\right)}{\left(1-\dfrac{1}{3}\right)}=3\left(1-\dfrac{1}{3^{10}}\right).
+        $$
+
+
+1. Do the following geometric series converge or diverge? If they converge, find their sum.
+    a. $\displaystyle\sum_{n=1}^{\infty}\frac{2}{3^n}$
+    a. $\displaystyle\sum_{n=1}^{\infty}(-1)^{n-1}\frac{1}{2^{n-1}}$
+    a. $\displaystyle\sum_{n=1}^{\infty}\left( \dfrac{\pi}{2}\right)^n$
+
+    Answers:
+
+    a. We already know that the first term is $a=\dfrac{2}{3}$ and the common ratio is $r=\dfrac{1}{3}$. Since $|r|<1$, the geometric series converges, with sum
+        $$
+        \sum_{n=1}^{\infty}\frac{2}{3^n}=\frac{a}{1-r}=\frac{\frac{2}{3}}{1-\frac{1}{3}}=1.
+        $$
+
+    a. The first term of the series is $a=1$ and the common ratio is $r=-\dfrac{1}{2}$. Since $|r|<1$ the series converges, and the sum is
+        $$
+        \sum_{n=1}^{\infty}(-1)^{n-1}\frac{1}{2^{n-1}}=\frac{1}{1+\frac{1}{2}}=\frac{2}{3}.
+        $$
+
+    a. The first term of the series is $a=\dfrac{\pi}{2}$, and the common ratio is also $r=\dfrac{\pi}{2}$. Since $|r|>1$, the series diverges.
+
+
+1. Find the $3^{\text{rd}}$ degree Taylor polynomials of the following functions.
+    a. $f(x)=2x^3-x^2+4x+5$ at $a=0$
+    a. $f(x)=\dfrac{1}{1+x}$ at $a=0$. 
+    a. $f(x)=\sqrt{x}$ at $a=1$
+
+    Answers:
+    a. The $3^{\text{rd}}$ degree polynomial of this polynomial at $a=0$ will simply be equal to the polynomial itself. For completeness, we still derive the Taylor series to demonstrate this
+    \begin{align}
+    f(x)&=2x^3 - x^2 + 4x + 5       & f(0)&=5\\
+    f'(x)&= 6x^2 - 2x + 4           & f'(0)&=4\\
+    f''(x)&= 12x - 2                & f''(0) &= -2\\
+    f'''(x) &= 12                   & f'''(0) &= 12
+    \end{align}
+    Substituting these into the Taylor series about $x=0$
     $$
-    \int \cos(\theta)\sin(\theta)\: d\theta = \int \cos(\theta)u\frac{du}{\cos(\theta)} = \int u\: du = \frac{1}{2}u^2 + c = \frac{1}{2}\sin^2(\theta) + c
+    f(x) = \sum_{n=0}^\infty \frac{f^{(n)}(a)}{n!}x\\
+    f(x) = f(0) + \frac{f'(0)}{1}x + \frac{f''(0)}{2}x^2 + \frac{f'''(0)}{6}x^3\\
+    f(x) = 5 + 4x - x^2 + 2 x^3
+     $$
+    since the Taylor series terminates after the $x^3$ term. The original polynomial has been recovered.
+    a. We start by finding the first 3 derivatives.
+    $$ \begin{align}
+    f(x) &= \frac{1}{x+1}        & f(0) &= 1\\
+    f'(x) &= \frac{-1}{(x+1)^2}     & f'(0) &= -1\\
+    f''(x) & = \frac{2}{(x+1)^3}    & f''(0) &= 2\\
+    f'''(x) &= \frac{-6}{(x+1)^4}   & f'''(0) &= -6
+    \end{align}
     $$
-    a. $\int \frac{\cos(x)}{1+\sin(x)}\:dx$. Let $u=1+\sin(x)$ so $\frac{du}{dx} = \cos(x) \Rightarrow dx = \frac{du}{\cos(x)}$
+    Substituting these terms into the Taylor series expansion about $x=0$, up to the $3^\text{rd}$ degree term.:
+    $$f(x) = \sum_{n=0}^\infty \frac{f^{(n)}(a)}{n!}x\\
+    f(x) = 1 - x + x^2 - x^3 + \cdots
     $$
-    \int \frac{\cos(x)}{1+\sin(x)}\:dx = \int \frac{1}{u}\:du = \ln(u)+c = \ln(1+\sin(x)) + c$$
+    Having just included the first few terms.
     
-1. The *Root Mean Square* (RMS) value of a signal over the interval $a$ to $b$ is defined as
-    $$\left(\frac{1}{b-a}\int_{a}^{b} (f(x))^2 \; dx\right)^\frac{1}{2}$$
-    Find the RMS of the voltage signal
-    $$V(t)=3\sin(2t)+5\cos(4t)$$
-    between $a=0$ and $b=2\pi$.
+    a. Note that it is not possible to take the Taylor series about $x=0$ because the derivative of $\sqrt{x}$ does not exist at $0$. Taking the expansion about $x=1$.
+    $$
+    \begin{align}
+    f(x) &= \sqrt{x} = x^\frac{1}{2}    & f(1) &= 1\\
+    f'(x) &= \frac{1}{2}x^{-\frac{1}{2}}        & f'(1) &= \frac{1}{2}\\
+    f''(x) & = -\frac{1}{4}x^{-\frac{3}{2}}       & f''(1) &= -\frac{1}{4}\\
+    f'''(x) &=  \frac{3}{8}x^{-\frac{5}{2}}       & f'''(1) &= \frac{3}{8}
+    \end{align}
+    $$
+    Substituting these into the first few terms of the Taylor series about $x=a$
+    $$
+    f(x-1) = \sum_{n=0}^\infty \frac{f^{(n)}(1)}{n!}(x-1)^n\\
+    f(x-1) = 1 + \frac{1}{2}(x-1) -\frac{1}{4}\frac{(x-1)^2}{2!} + \frac{3}{8}\frac{(x-1)^3}{3!} + \cdots\\
+    f(x-1) = 1 + \frac{1}{2}(x-1) - \frac{(x-1)^2}{8} + \frac{(x-1)^3}{16} + \cdots$$
+  
+1. Derive the Taylor series for $e^x$ at $a=0$ (this converges for all $x$).
 
-    Answer:
+    Answers:
 
-    Firstly, multiply out the square term inside the integral, so
+    Let $f(x)=e^x$.
     \begin{align*}
-    v(t)^2 &= (3\sin(2t) + 5\cos(4t))(3\sin(2t) + 5\cos(4t))\\
-    &= 9\sin^2(2t) + 30\sin(2t)\cos(4t) + 25\cos^2(4t)
+    f(x)&=e^x       & f(0)&=1\\
+    f'(x)&=e^x      & f'(0)&=1\\
+    f^{(n)}(x)&=e^x & f^{(n)}(0)&=1
     \end{align*}
-    So the individual terms in the integral, with constants taken outside of the integral, are
+    The $n^{\text{th}}$ degree Taylor polynomial is
     $$
-    \int_0^{2\pi} (v(t))^2\:dt = 9\int_0^{2\pi} \sin^2(2t)\:dt + 30\int_0^{2\pi} \sin(2t)\cos(4t)\:dt + 25 \int_0^{2\pi}\cos^2(4t)\:dt
+    P_{n,0}(x)=1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+\dotsb+\frac{x^n}{n!}
     $$
-    We evaluate each of the terms separately:
+    and the Taylor series is
     $$
-    9\int_0^{2\pi} \sin^2(2t)\:dt = 9\int_0^{2\pi}\frac{1-\cos(4t)}{2}\:dt$$
-    having used the cosine double-angle formula: $\cos(2\theta) = 1- 2\sin^2(\theta)$.
-    $$
-    \frac{9}{2}\left[t - \frac{1}{4}\sin(4t)\right]_0^{2\pi} = \frac{9}{2}(2\pi - 0) = 9\pi$$
-    For the second term, we again need a trigonometric identity, in this case the product to sum formula $\sin(\theta)\cos(\phi) = \frac{1}{2}(\sin(\theta + \phi) + \sin(\theta - \phi))$:
-    $$
-    30\int_0^{2\pi} \sin(2t)\cos(4t)\: dt = \frac{30}{2}\int_0^{2\pi} = \sin(6t) + \sin(-2t)\:dt = 15\int_0^{2\pi}\sin(6t) - \sin(2t)\:dt \\= 15\left[-\frac{1}{6}\cos(6t) + \frac{1}{2}\cos(2t)\right]_0^{2\pi} = 0
-    $$
-    And finally, using $\cos^2(4t) = \frac{1}{2}(\cos(8t)+1)$:
-    $$
-    25\int_0^{2\pi}\cos^2(4t)\: dt = \frac{25}{2}\int_0^{2\pi}\cos(8t) + 1\:dt \\= \frac{25}{2}\left[\frac{1}{8}\sin(8t) + t\right]_0^{2\pi} = 25\pi
-    $$
-    Putting these three terms together:
-    $$
-    \int_0^{2\pi}(v(t))^2\:dt = 34\pi\\
-    \left(\frac{1}{2\pi - 0}\int_0^{2\pi}(v(t))^2\:dt\right)^{\frac{1}{2}} = \left(\frac{34\pi}{2\pi}\right)^\frac{1}{2} = \sqrt{17}
+    \sum_{n=0}^{\infty}\frac{x^n}{n!}.
     $$
 
-1. The *volume of revolution* of a curve is defined as
-    $$\int_a^b \pi (f(x))^2 \; dx$$
-    Find the volume of revolution of the curve
-    $$f(x)=e^{-2x}$$
-    between $a=1$ and $b=2$.
+1. Derive the Taylor series for $\sin(x+a)$ at $a=\dfrac{\pi}{2}$ (this converges for all $x$).
 
-    Answer:
+    Answers:
 
-    If $f(x) = e^{-2x}$ then $(f(x))^2 = e^{-4x}$. So the voume of revolution of the curve $f(x)$ between $a=1$ and $b=2$ is
-    $$
-    \int_1^2 \pi e^{-4x}\;dx = \pi\left[-\frac{1}{4}e^{-4x}\right]_1^2 = \pi\left(\frac{-e^{-8}}{4} - \frac{-e^{-4}}{4}\right) =0.0141 \text{ to 3d.p.}
-    $$
-
-1. The points $(1,1)$ and $(2,8)$ on the curve $y=x^3$ are joined by a straight line. Calculate the area between the line and the curve.
-
-    Answer:
-
-    The area between two curves described by funtions $f_1(x)$ and $f_2(x)$ is the area between the function $(f_1(x) - f_2(x))$ and the $x$-axis. First, find the equation of the line between the points $(1,1)$ and $(2,8)$:
-    $$
-    f_1(x) = 7x - 6, \quad \text{since the gradient is } \frac{8-1}{2-1}.
-    $$
-    So the area between the line $y=f_1(x)$ and the line $y=f_2(x) = x^3$ is
+    The derivatives at $\dfrac{\pi}{2}$ form a periodic sequence of period $4$
     \begin{align*}
-    \int_1^2 (f_1(x)-f_2(x))\;dx &= \int_1^2 7x-6-x^3\;dx\\
-    &= \left[\frac{7}{2}x^2 - 6x - \frac{1}{4}x^4\right]_1^2\\
-    &= (14-12-4)-(\frac{7}{2} - 6 -\frac{1}{4})\\
-    &= \frac{3}{4}
+    f(x)&=\sin(x)       & f\left(\frac{\pi}{2}\right)&=1\\
+    f^{(1)}(x)&=\cos(x)      & f^{(1)}\left(\frac{\pi}{2}\right)&=0\\
+    f^{(2)}(x)&=-\sin(x)     & f^{(2)}\left(\frac{\pi}{2}\right)&=-1\\
+    f^{(3)}(x)&=-\cos(x)     & f^{(3)}\left(\frac{\pi}{2}\right)&=0\\
+    f^{(4)}(x)&=\sin(x) & f^{(4)}\left(\frac{\pi}{2}\right)&=1
     \end{align*}
+
+    and the Taylor series is
+    $$
+    \sum_{n=0}^{\infty}(-1)^{n}\frac{x^{2n}}{(2n)!}
+    $$
+    which we recognise as the Taylor series for $\cos$ about $0$, which should be unsurprising since $\sin\left(x+\frac{\pi}{2}\right)=\cos(x)$.
+
+
+1. From the Taylor series of $f(x)=\ln(x+1)$ at zero (this converges for $-1 < x \le 1$), show that:
+    $$
+    \sum_{n=1}^{\infty}\frac{(-1)^{n+1}}{n}=\ln(2).
+    $$
+
+    Answers:
+
+    Since we are told that the Taylor series equals $f(x)$ for $-1 < x\le 1$ and $f(1)=\ln(2)$, we have
+    $$
+    \sum_{n=1}^{\infty}(-1)^{n+1}\frac{1}{n}=\ln(2).
+    $$
+
+
+1. The Taylor series for $\tan^{-1}$ at zero is
+    $$\tan^{-1}(x) = \sum_{n=0}^\infty \frac{(-1)^n x^{2n+1}}{2n+1}$$
+    which converges for $|x|\leq 1$. Use this to approximate $\pi$ (you could do this in MATLAB/Python using a for loop to easily experiment with the number of terms in the sum).
+
+
+    Answer:
+
+    We have that $\tan^{-1}(1)=\frac{\pi}{4}$, so can find $\pi$ as $4\tan^{-1}(1)=4\sum_{n=0}^\infty \frac{(-1)^n}{2n+1}$. We can get an approximation by summing over the first $N$ terms of this infinite series.
+
+    ```{verbatim}
+        MATLAB Code:
+        %this is not the most efficient solution but shows a simple method using a for loop
+        %set number of terms in approximation
+        N = 4;
+        x = 1; %set point about which Taylor series is taken
+        sigma_nthterm = 0 %initialise the summation
+        for n = 0:N     %loop over the first N terms
+            nth_term = ((-1)^n * x^(2*x+1))/(2*n+1); %calculate the nth term
+            sigma_nthterm = sigma_nthterm + nth_term;  %add this to the summation
+        end
+
+        pi_approx = sigma_nthterm*4 %calculate the approximation for pi, since tan^{-1}(1) = pi/4
+    ```
+     For N=1000 we get $\pi\approx 3.1426... $
+    
+1. Prove Euler's formula for complex numbers using the Taylor series for $e^x$, $\cos(x)$ and $\sin(x)$ at $0$, .
+ 
+    Answer:
+    First, recall the Taylor series for $e^x$
+    $$
+    e_x = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \frac{x^4}{4!} + \cdots
+    $$
+    And now let $x = i\theta$. The odd terms will become imaginary, while the even powers will have changing signs with $i^2$:
+    
+    \begin{align}
+    e^{i\theta} &= 1 + i\theta + \frac{i^2 \theta^2}{2!} + \frac{i^3 \theta^3}{3!} + \frac{i^4 \theta^4}{4!} + \cdots \\
+    &= 1 + i\theta - \frac{\theta^2}{2!} - i\frac{\theta^3}{3!} + \frac{\theta^4}{4!} + \cdots
+    \end{align}
+    
+    Now, group every second term together to identify the Tarlor series of $\cos(x)$ and $i\sin(x)$.
+    
+    $$
+    e^x = \left(1 - \frac{\theta^2}{2!} + \frac{\theta^4}{4!} + \cdots \right) + i\left(\theta - \frac{\theta^3}{3!} + \frac{x^5}{5!} + \cdots\right)\\
+    e^x = \cos(\theta) + i \sin(\theta)
+    $$
+    
+    
+ 
+1. Find the Taylor series for $\cos(x)$ at zero by differentiating the Taylor series for $\sin(x)$ at zero term by term (we can differentiate any power series term by term for values of $x$ where the series converges).
+
+    Answers:
+    Taking the derivative of the power series, and noting that $\frac{n}{n!} = \frac{1}{(n-1)!}$
+    $$
+    \sin(x) = x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} + \cdots\\
+    \frac{d}{dx}\sin (x)= 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \frac{x^6}{6!} + \cdots = \cos(x)
+    $$
+    
+    
+    
+    
+1. Find the Taylor series of $\dfrac{1}{1-x}$ at $a=0$ (this converges for $|x|<1$). Hence find the Taylor series of $\dfrac{1}{(1-x)^2}$ at $a=0$. 
+
+    Answers:
+
+    \begin{align*}
+    f(x)&=(1-x)^{-1}            & f(0)&=1\\
+    f^{(1)}(x)&=(1-x)^{-2}      & f^{(1)}(0)&=1\\
+    f^{(2)}(x)&=2(1-x)^{-3}     & f^{(2)}(0)&=2\\
+    f^{(3)}(x)&=6(1-x)^{-4}     & f^{(3)}(0)&=6=3!\\
+    f^{(4)}(x)&=24(1-x)^{-5}     & f^{(4)}(0)&=24=4!
+    \end{align*}
+    so the Taylor Series is
+    \begin{equation*}
+    \sum_{n=0}^{\infty}x^n.
+    \end{equation*}
+
+    Now to find the Taylor series of $\frac{1}{(1-x)^2}$ at $0$, we note that $\frac{d}{dx}\frac{1}{(1-x)}=\frac{1}{(1-x)^2}$, hence we can obtain the Taylor series by differentiating the series for $\frac{1}{(1-x)}$ term by term, obtaining:
+    \begin{equation*}
+    \sum_{n=1}^{\infty}nx^{n-1}.
+    \end{equation*}

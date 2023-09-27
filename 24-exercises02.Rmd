@@ -31,35 +31,3 @@ These exercises cover the topics of Functions and Graphs.
  1. If we had the graph of a function $f(x)$, describe what would change qualitatively for the graph of $f(x)+c$ where $c$ is a constant. Consider the cases:
     a. $c>0$
     a. $c<0$
-
-1. Find the solutions to the following equations without using a calculator.
-    a. $x=\log_4(64)$
-    a. $x=\log_{101}(101)$
-    a. $x=\ln(e)$
-    a. $x=\log_{56}(1)$
-    a. $10^x=100000$
-    a. $2^x=128$
-    a. $\log_3(x)=4$
-    a. $\log_x(125)=3$
-
-1. Calculate the following logarithms using a calculator.
-    a. $\ln(2)$
-    a. $\log(20)$
-    a. $\log_{16}(100)$ - do this using your $\log_a(x)$ button and also using the change of base rule with your $\log$ or $\ln$ button.
-
-1. Calculate $4321\times 9876$ using logs: convert both values to logs, add, then convert back.
-
-1. Simplify the following expression involving logarithms.
-     $$\log_a(x^2)+3\log_a(x)-2\log_a(4x^2).$$
-
-1. Solve the following for $x$.
-    $$2\log_a(x)-\log_a(x-1)=\log_a(x+3).$$
-
-1. Find $y$ in terms of $x$:
-    $$5\log_a(y)-2\log_a(x+4)=2\log_a(y)+\log_a(x).$$
-
-1. Use natural logarthims to make $t$ the subject of the formula
-    $$V=1-e^{\frac{-t}{RC}}.$$
-
-1. Show that the following hyperbolic identity holds:
-    $$\cosh^2(x)-\sinh^2(x)=1.$$

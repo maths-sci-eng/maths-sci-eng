@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 3 Solving Equations and Inequalities | Mathematics for Scientists and Engineers</title>
   <meta name="description" content="Mathematics Lecture Notes for UoE Penryn Science and Engineering Disciplines." />
-  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 3 Solving Equations and Inequalities | Mathematics for Scientists and Engineers" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Dr Mark Callaway" />
 
 
-<meta name="date" content="2023-09-14" />
+<meta name="date" content="2023-09-27" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -59,6 +59,10 @@
 
 
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -135,7 +139,8 @@
 <li class="chapter" data-level="3.3.1" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#simultaneous-linear-equations"><i class="fa fa-check"></i><b>3.3.1</b> Simultaneous linear equations</a></li>
 <li class="chapter" data-level="3.3.2" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#non-linear-simultaneous-equations"><i class="fa fa-check"></i><b>3.3.2</b> Non-linear simultaneous equations</a></li>
 </ul></li>
-<li class="chapter" data-level="3.4" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#inequalities-1"><i class="fa fa-check"></i><b>3.4</b> Inequalities</a></li>
+<li class="chapter" data-level="3.4" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#exponentials-and-logarithms"><i class="fa fa-check"></i><b>3.4</b> Exponentials and Logarithms</a></li>
+<li class="chapter" data-level="3.5" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#inequalities-1"><i class="fa fa-check"></i><b>3.5</b> Inequalities</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="trigonometry.html"><a href="trigonometry.html"><i class="fa fa-check"></i><b>4</b> Trigonometry</a>
 <ul>
@@ -353,6 +358,7 @@
 <li class="chapter" data-level="" data-path="exercise-set-15.html"><a href="exercise-set-15.html"><i class="fa fa-check"></i>Exercise Set 15</a></li>
 <li class="chapter" data-level="" data-path="exercise-set-16.html"><a href="exercise-set-16.html"><i class="fa fa-check"></i>Exercise Set 16</a></li>
 <li class="chapter" data-level="" data-path="exercise-set-17.html"><a href="exercise-set-17.html"><i class="fa fa-check"></i>Exercise Set 17</a></li>
+<li class="chapter" data-level="" data-path="exercise-set-18.html"><a href="exercise-set-18.html"><i class="fa fa-check"></i>Exercise Set 18</a></li>
 <li class="chapter" data-level="" data-path="notation.html"><a href="notation.html"><i class="fa fa-check"></i>Notation</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -471,7 +477,7 @@ and so we need to “complete the square” by adding <span class="math inline">
 x&amp;=-3\pm\sqrt{22}.
 \end{align*}\]</span></p>
 </div>
-<p>Another use of completing the square is in determining the location of the minimum or maximum point of a quadratic function. We know that the graph of such a function is a parabola which either opens upwards in a “<span class="math inline">\(\cup\)</span>” shape or opens downwards in a “<span class="math inline">\(\cap\)</span>” shape, so it has a minimum or a maximum, respectively: the sign of the <span class="math inline">\(x^2\)</span> coefficient determines this, with <span class="math inline">\(+\)</span> corresponding to upward opening and <span class="math inline">\(-\)</span> corresponding to downward opening. In the previous example, after completing the square we obtained <span class="math inline">\(y=2(x+3)^2-44\)</span>, and since the coefficient in <span class="math inline">\(2x^2\)</span> is positive the quadratic function must have a minimum somewhere. Since the term <span class="math inline">\((x+3)^2\)</span> must be positive, the smallest it can be is when <span class="math inline">\(x=-3\)</span> and the term is <span class="math inline">\((-3+3)^2=0\)</span>. This means we must have a minimum at <span class="math inline">\(x=-3\)</span> where y=2(-3+3)^2-44=-44$. This idea can be generalised: find the value of <span class="math inline">\(x\)</span> that makes the squared term <span class="math inline">\(0\)</span>, and then the minimum/maximum <span class="math inline">\(y\)</span> value is equal to the constant term.</p>
+<p>Another use of completing the square is in determining the location of the minimum or maximum point of a quadratic function. We know that the graph of such a function is a parabola which either opens upwards in a “<span class="math inline">\(\cup\)</span>” shape or opens downwards in a “<span class="math inline">\(\cap\)</span>” shape, so it has a minimum or a maximum, respectively: the sign of the <span class="math inline">\(x^2\)</span> coefficient determines this, with <span class="math inline">\(+\)</span> corresponding to upward opening and <span class="math inline">\(-\)</span> corresponding to downward opening. In the previous example, after completing the square we obtained <span class="math inline">\(y=2(x+3)^2-44\)</span>, and since the coefficient in <span class="math inline">\(2x^2\)</span> is positive the quadratic function must have a minimum somewhere. Since the term <span class="math inline">\((x+3)^2\)</span> must be positive, the smallest it can be is when <span class="math inline">\(x=-3\)</span> and the term is <span class="math inline">\((-3+3)^2=0\)</span>. This means we must have a minimum at <span class="math inline">\(x=-3\)</span> where <span class="math inline">\(y=2(-3+3)^2-44=-44\)</span>. This idea can be generalised: find the value of <span class="math inline">\(x\)</span> that makes the squared term <span class="math inline">\(0\)</span>, and then the minimum/maximum <span class="math inline">\(y\)</span> value is equal to the constant term.</p>
 </div>
 <div id="the-quadratic-formula" class="section level3 hasAnchor" number="3.1.3">
 <h3><span class="header-section-number">3.1.3</span> The quadratic formula<a href="solving-equations-and-inequalities.html#the-quadratic-formula" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -484,7 +490,7 @@ are given by
 <p>If the quantity <span class="math inline">\(\Delta = b^2-4ac\)</span>, known as the <em>discriminant</em>, is such that <span class="math inline">\(\Delta = 0\)</span> then there will be one repeated solution; if <span class="math inline">\(\Delta\)</span> is negative, then there are no real number solutions (since we cannot take the square root of a negative number).</p>
 </div>
 <div class="exercise">
-<p><span id="exr:quadform" class="exercise"><strong>Exercise 3.1  </strong></span>Derive the quadratic formula. Hint: use the method of “completing the square” on a general quadratic equation.</p>
+<p><span id="exr:quadform" class="exercise"><strong>Exercise 3.1  </strong></span>Derive the quadratic formula. Hint: use the method of “completing the square” on the general form of a quadratic equation <span class="math inline">\(ax^2+bx+c=0\)</span>.</p>
 </div>
 </div>
 </div>
@@ -654,8 +660,13 @@ Figure 3.5: The lines <span class="math inline">\(2x+y=7\)</span> (red line) and
 <p>The example presented above is relatively simple. In some real-world scenarios equations might be very complicated (with many variables or many simultaneous equations), and it is known that some equations are impossible to solve by hand. In these cases we need to turn to computational techniques. We’ll look at some computational techniques in section <a href="numerics.html#numerics">18</a>.</p>
 </div>
 </div>
-<div id="inequalities-1" class="section level2 hasAnchor" number="3.4">
-<h2><span class="header-section-number">3.4</span> Inequalities<a href="solving-equations-and-inequalities.html#inequalities-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="exponentials-and-logarithms" class="section level2 hasAnchor" number="3.4">
+<h2><span class="header-section-number">3.4</span> Exponentials and Logarithms<a href="solving-equations-and-inequalities.html#exponentials-and-logarithms" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Recall that exponentials and logarithms are inverses of one another. When solving equations involing exponentials and logarithms, we usually need to apply the inverse in order to extract the <span class="math inline">\(x\)</span> variable, and make use of the rules of exponentials and logarithms. We shall illustrate this with a series of examples.</p>
+<p>EXAMPLES</p>
+</div>
+<div id="inequalities-1" class="section level2 hasAnchor" number="3.5">
+<h2><span class="header-section-number">3.5</span> Inequalities<a href="solving-equations-and-inequalities.html#inequalities-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Assume we are comparing two expressions <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span> that depend on the variable <span class="math inline">\(x\)</span> and need to find, for example, the values of <span class="math inline">\(x\)</span> for which <span class="math inline">\(P&gt;Q\)</span>. Let us take a look at a range of examples to see how to solve these types of problems.</p>
 <div class="example">
 <p><span id="exm:solvineqs" class="example"><strong>Example 3.9  </strong></span>We wish to find all values of <span class="math inline">\(x\)</span> satisfying the following inequalities.</p>

@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Exercise Set 10 Answers | Mathematics for Scientists and Engineers</title>
   <meta name="description" content="Mathematics Lecture Notes for UoE Penryn Science and Engineering Disciplines." />
-  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Exercise Set 10 Answers | Mathematics for Scientists and Engineers" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Dr Mark Callaway" />
 
 
-<meta name="date" content="2023-09-14" />
+<meta name="date" content="2023-09-27" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -59,6 +59,10 @@
 
 
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -135,7 +139,8 @@
 <li class="chapter" data-level="3.3.1" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#simultaneous-linear-equations"><i class="fa fa-check"></i><b>3.3.1</b> Simultaneous linear equations</a></li>
 <li class="chapter" data-level="3.3.2" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#non-linear-simultaneous-equations"><i class="fa fa-check"></i><b>3.3.2</b> Non-linear simultaneous equations</a></li>
 </ul></li>
-<li class="chapter" data-level="3.4" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#inequalities-1"><i class="fa fa-check"></i><b>3.4</b> Inequalities</a></li>
+<li class="chapter" data-level="3.4" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#exponentials-and-logarithms"><i class="fa fa-check"></i><b>3.4</b> Exponentials and Logarithms</a></li>
+<li class="chapter" data-level="3.5" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#inequalities-1"><i class="fa fa-check"></i><b>3.5</b> Inequalities</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="trigonometry.html"><a href="trigonometry.html"><i class="fa fa-check"></i><b>4</b> Trigonometry</a>
 <ul>
@@ -353,6 +358,7 @@
 <li class="chapter" data-level="" data-path="exercise-set-15.html"><a href="exercise-set-15.html"><i class="fa fa-check"></i>Exercise Set 15</a></li>
 <li class="chapter" data-level="" data-path="exercise-set-16.html"><a href="exercise-set-16.html"><i class="fa fa-check"></i>Exercise Set 16</a></li>
 <li class="chapter" data-level="" data-path="exercise-set-17.html"><a href="exercise-set-17.html"><i class="fa fa-check"></i>Exercise Set 17</a></li>
+<li class="chapter" data-level="" data-path="exercise-set-18.html"><a href="exercise-set-18.html"><i class="fa fa-check"></i>Exercise Set 18</a></li>
 <li class="chapter" data-level="" data-path="notation.html"><a href="notation.html"><i class="fa fa-check"></i>Notation</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -378,180 +384,274 @@
 <div id="exercise-set-10-answers" class="section level1 unlisted unnumbered hasAnchor">
 <h1>Exercise Set 10 Answers<a href="exercise-set-10-answers.html#exercise-set-10-answers" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <ol style="list-style-type: decimal">
-<li><p>Write the series
-<span class="math display">\[\begin{equation*}
-\frac{1}{1\cdot 2}+\frac{1}{2\cdot 3}+\frac{1}{3\cdot 4}+\frac{1}{4\cdot 5}+\frac{1}{5\cdot 6}
-\end{equation*}\]</span>
-using Sigma notation in the forms <span class="math inline">\(\displaystyle\sum_{k=1}^{n}(\dots)\)</span> and <span class="math inline">\(\displaystyle\sum_{l=0}^{m}(\dots)\)</span>.</p>
-<p>Answers:</p>
-<p><span class="math display">\[\sum_{k=1}^{5}\frac{1}{k(k+1)}\]</span>
-<span class="math display">\[\sum_{l=0}^{4}\frac{1}{(l+1)(l+2)}\]</span></p></li>
-<li><p>Evaluate <span class="math inline">\(\displaystyle\sum_{n=1}^{10}\frac{2}{3^n}\)</span> and <span class="math inline">\(\displaystyle\sum_{n=0}^{9}\frac{2}{3^n}\)</span> using the formula for the <span class="math inline">\(n^{\text{th}}\)</span> partial sum of a geometric series.</p>
-<p>Answers:</p>
+<li><p>Find <span class="math inline">\(\dfrac{dy}{dx}\)</span> for the following by implicit differentiation.</p>
 <ol style="list-style-type: lower-alpha">
-<li><p>The geometric series <span class="math inline">\(\displaystyle\sum_{n=1}^{10}\dfrac{2}{3^n}\)</span> has first term <span class="math inline">\(a=\dfrac{2}{3^1}=\dfrac{2}{3}\)</span> and second term <span class="math inline">\(ar=\dfrac{2}{3^2}\)</span> and therefore the common ratio is <span class="math inline">\(r=\dfrac{ar}{a}=\dfrac{1}{3}\)</span>. Since the sum is for <span class="math inline">\(n=1\)</span> to <span class="math inline">\(n=10\)</span>, it is the sum of the first <span class="math inline">\(10\)</span> terms,
-<span class="math display">\[
-S_{10}=\frac{a(1-r^{10})}{1-r}=\frac{2\left (1-\dfrac{1}{3^{10}}\right)}{3\left (1-\dfrac{1}{3}\right )}=1-\dfrac{1}{3^{10}}.
-\]</span></p></li>
-<li><p>The geometric series <span class="math inline">\(\displaystyle\sum_{n=0}^{9}\frac{2}{3^n}\)</span> has first term <span class="math inline">\(a=\dfrac{2}{3^0}=2\)</span> and second term <span class="math inline">\(ar=\dfrac{2}{3^1}\)</span>, and therefore the common ratio is <span class="math inline">\(r=\dfrac{ar}{a}=\dfrac{1}{3}\)</span>. Since the sum is for <span class="math inline">\(n=0\)</span> to <span class="math inline">\(n=9\)</span>, it is the sum of the first <span class="math inline">\(10\)</span> terms,
-<span class="math display">\[
-S_{10}=\dfrac{a(1-r^{10})}{1-r}=\dfrac{2\left(1-\dfrac{1}{3^{10}}\right)}{\left(1-\dfrac{1}{3}\right)}=3\left(1-\dfrac{1}{3^{10}}\right).
-\]</span></p></li>
-</ol></li>
-<li><p>Do the following geometric series converge or diverge? If they converge, find their sum.</p>
-<ol style="list-style-type: lower-alpha">
-<li><span class="math inline">\(\displaystyle\sum_{n=1}^{\infty}\frac{2}{3^n}\)</span></li>
-<li><span class="math inline">\(\displaystyle\sum_{n=1}^{\infty}(-1)^{n-1}\frac{1}{2^{n-1}}\)</span></li>
-<li><span class="math inline">\(\displaystyle\sum_{n=1}^{\infty}\left( \dfrac{\pi}{2}\right)^n\)</span></li>
+<li><span class="math inline">\(x^2y+3xy^3-x=3\)</span></li>
+<li><span class="math inline">\(\sin(x^2y^2)=x\)</span></li>
+<li><span class="math inline">\(xy^2=y+e^{xy}\)</span></li>
 </ol>
 <p>Answers:</p>
 <ol style="list-style-type: lower-alpha">
-<li><p>We already know that the first term is <span class="math inline">\(a=\dfrac{2}{3}\)</span> and the common ratio is <span class="math inline">\(r=\dfrac{1}{3}\)</span>. Since <span class="math inline">\(|r|&lt;1\)</span>, the geometric series converges, with sum
-<span class="math display">\[
-\sum_{n=1}^{\infty}\frac{2}{3^n}=\frac{a}{1-r}=\frac{\frac{2}{3}}{1-\frac{1}{3}}=1.
-\]</span></p></li>
-<li><p>The first term of the series is <span class="math inline">\(a=1\)</span> and the common ratio is <span class="math inline">\(r=-\dfrac{1}{2}\)</span>. Since <span class="math inline">\(|r|&lt;1\)</span> the series converges, and the sum is
-<span class="math display">\[
-\sum_{n=1}^{\infty}(-1)^{n-1}\frac{1}{2^{n-1}}=\frac{1}{1+\frac{1}{2}}=\frac{2}{3}.
-\]</span></p></li>
-<li><p>The first term of the series is <span class="math inline">\(a=\dfrac{\pi}{2}\)</span>, and the common ratio is also <span class="math inline">\(r=\dfrac{\pi}{2}\)</span>. Since <span class="math inline">\(|r|&gt;1\)</span>, the series diverges.</p></li>
+<li><p><span class="math display">\[\begin{align*}
+2xy+x^2\frac{dy}{dx}+3y^3+9xy^2\frac{dy}{dx}-1&amp;=0\\
+(x^2+9xy^2)\frac{dy}{dx}&amp;=1-2xy-3y^3\\
+\frac{dy}{dx}&amp;=\frac{1-2xy-3y^3}{x^2+9xy^2}
+\end{align*}\]</span></p></li>
+<li><p><span class="math display">\[\begin{align*}
+\cos(x^2y^2)\left(2xy^2+2x^2y\frac{dy}{dx}\right)&amp;=1\\
+\frac{dy}{dx}&amp;=\frac{1-2xy^2\cos(x^2y^2)}{2x^2y\cos(x^2y^2)}
+\end{align*}\]</span></p></li>
+<li><p><span class="math display">\[\begin{align*}
+\frac{d}{dx}(xy^2)&amp;=\frac{d}{dx}(y+e^{xy})\\
+2xy\frac{dy}{dx}+y^2&amp;=\frac{dy}{dx}+\frac{d}{dx}e^{xy}\\
+2xy\frac{dy}{dx}+y^2&amp;=\frac{dy}{dx}+e^{xy}\frac{d}{dx}(xy)\\
+2xy\frac{dy}{dx}+y^2&amp;=\frac{dy}{dx}+e^{xy}\left(x\frac{dy}{dx}+y\right)\\
+2xy\frac{dy}{dx}-xe^{xy}\frac{dy}{dx}-\frac{dy}{dx}&amp;=ye^{xy}-y^2\\
+\frac{dy}{dx}(2xy-xe^{xy}-1)&amp;=ye^{xy}-y^2\\
+\frac{dy}{dx}&amp;=\frac{ye^{xy}-y^2}{(2xy-1-xe^{xy})}.
+\end{align*}\]</span></p></li>
 </ol></li>
-<li><p>Find the <span class="math inline">\(3^{\text{rd}}\)</span> degree Taylor polynomials of the following functions.</p>
-<ol style="list-style-type: lower-alpha">
-<li><span class="math inline">\(f(x)=2x^3-x^2+4x+5\)</span> at <span class="math inline">\(a=0\)</span></li>
-<li><span class="math inline">\(f(x)=\dfrac{1}{1+x}\)</span> at <span class="math inline">\(a=0\)</span>.</li>
-<li><span class="math inline">\(f(x)=\sqrt{x}\)</span> at <span class="math inline">\(a=1\)</span></li>
-</ol>
-<p>Answers:</p>
-<ol style="list-style-type: lower-alpha">
-<li><p>The <span class="math inline">\(3^{\text{rd}}\)</span> degree polynomial of this polynomial at <span class="math inline">\(a=0\)</span> will simply be equal to the polynomial itself. For completeness, we still derive the Taylor series to demonstrate this
-<span class="math display">\[\begin{align}
-f(x)&amp;=2x^3 - x^2 + 4x + 5       &amp; f(0)&amp;=5\\
-f&#39;(x)&amp;= 6x^2 - 2x + 4           &amp; f&#39;(0)&amp;=4\\
-f&#39;&#39;(x)&amp;= 12x - 2                &amp; f&#39;&#39;(0) &amp;= -2\\
-f&#39;&#39;&#39;(x) &amp;= 12                   &amp; f&#39;&#39;&#39;(0) &amp;= 12
-\end{align}\]</span>
-Substituting these into the Taylor series about <span class="math inline">\(x=0\)</span>
-<span class="math display">\[
-f(x) = \sum_{n=0}^\infty \frac{f^{(n)}(a)}{n!}x\\
-f(x) = f(0) + \frac{f&#39;(0)}{1}x + \frac{f&#39;&#39;(0)}{2}x^2 + \frac{f&#39;&#39;&#39;(0)}{6}x^3\\
-f(x) = 5 + 4x - x^2 + 2 x^3
-  \]</span>
-since the Taylor series terminates after the <span class="math inline">\(x^3\)</span> term. The original polynomial has been recovered.</p></li>
-<li><p>We start by finding the first 3 derivatives.
-<span class="math display">\[ \begin{align}
-f(x) &amp;= \frac{1}{x+1}        &amp; f(0) &amp;= 1\\
-f&#39;(x) &amp;= \frac{-1}{(x+1)^2}     &amp; f&#39;(0) &amp;= -1\\
-f&#39;&#39;(x) &amp; = \frac{2}{(x+1)^3}    &amp; f&#39;&#39;(0) &amp;= 2\\
-f&#39;&#39;&#39;(x) &amp;= \frac{-6}{(x+1)^4}   &amp; f&#39;&#39;&#39;(0) &amp;= -6
-\end{align}
-\]</span>
-Substituting these terms into the Taylor series expansion about <span class="math inline">\(x=0\)</span>, up to the <span class="math inline">\(3^\text{rd}\)</span> degree term.:
-<span class="math display">\[f(x) = \sum_{n=0}^\infty \frac{f^{(n)}(a)}{n!}x\\
-f(x) = 1 - x + x^2 - x^3 + \cdots
-\]</span>
-Having just included the first few terms.</p></li>
-<li><p>Note that it is not possible to take the Taylor series about <span class="math inline">\(x=0\)</span> because the derivative of <span class="math inline">\(\sqrt{x}\)</span> does not exist at <span class="math inline">\(0\)</span>. Taking the expansion about <span class="math inline">\(x=1\)</span>.
-<span class="math display">\[
-\begin{align}
-f(x) &amp;= \sqrt{x} = x^\frac{1}{2}    &amp; f(1) &amp;= 1\\
-f&#39;(x) &amp;= \frac{1}{2}x^{-\frac{1}{2}}        &amp; f&#39;(1) &amp;= \frac{1}{2}\\
-f&#39;&#39;(x) &amp; = -\frac{1}{4}x^{-\frac{3}{2}}       &amp; f&#39;&#39;(1) &amp;= -\frac{1}{4}\\
-f&#39;&#39;&#39;(x) &amp;=  \frac{3}{8}x^{-\frac{5}{2}}       &amp; f&#39;&#39;&#39;(1) &amp;= \frac{3}{8}
-\end{align}
-\]</span>
-Substituting these into the first few terms of the Taylor series about <span class="math inline">\(x=a\)</span>
-<span class="math display">\[
-f(x-1) = \sum_{n=0}^\infty \frac{f^{(n)}(1)}{n!}(x-1)^n\\
-f(x-1) = 1 + \frac{1}{2}(x-1) -\frac{1}{4}\frac{(x-1)^2}{2!} + \frac{3}{8}\frac{(x-1)^3}{3!} + \cdots\\
-f(x-1) = 1 + \frac{1}{2}(x-1) - \frac{(x-1)^2}{8} + \frac{(x-1)^3}{16} + \cdots\]</span></p></li>
-</ol></li>
-<li><p>Derive the Taylor series for <span class="math inline">\(e^x\)</span> at <span class="math inline">\(a=0\)</span> (this converges for all <span class="math inline">\(x\)</span>).</p>
-<p>Answers:</p>
-<p>Let <span class="math inline">\(f(x)=e^x\)</span>.
-<span class="math display">\[\begin{align*}
-f(x)&amp;=e^x       &amp; f(0)&amp;=1\\
-f&#39;(x)&amp;=e^x      &amp; f&#39;(0)&amp;=1\\
-f^{(n)}(x)&amp;=e^x &amp; f^{(n)}(0)&amp;=1
-\end{align*}\]</span>
-The <span class="math inline">\(n^{\text{th}}\)</span> degree Taylor polynomial is
-<span class="math display">\[
-P_{n,0}(x)=1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+\dotsb+\frac{x^n}{n!}
-\]</span>
-and the Taylor series is
-<span class="math display">\[
-\sum_{n=0}^{\infty}\frac{x^n}{n!}.
-\]</span></p></li>
-<li><p>Derive the Taylor series for <span class="math inline">\(\sin(x+a)\)</span> at <span class="math inline">\(a=\dfrac{\pi}{2}\)</span> (this converges for all <span class="math inline">\(x\)</span>).</p>
-<p>Answers:</p>
-<p>The derivatives at <span class="math inline">\(\dfrac{\pi}{2}\)</span> form a periodic sequence of period <span class="math inline">\(4\)</span>
-<span class="math display">\[\begin{align*}
-f(x)&amp;=\sin(x)       &amp; f\left(\frac{\pi}{2}\right)&amp;=1\\
-f^{(1)}(x)&amp;=\cos(x)      &amp; f^{(1)}\left(\frac{\pi}{2}\right)&amp;=0\\
-f^{(2)}(x)&amp;=-\sin(x)     &amp; f^{(2)}\left(\frac{\pi}{2}\right)&amp;=-1\\
-f^{(3)}(x)&amp;=-\cos(x)     &amp; f^{(3)}\left(\frac{\pi}{2}\right)&amp;=0\\
-f^{(4)}(x)&amp;=\sin(x) &amp; f^{(4)}\left(\frac{\pi}{2}\right)&amp;=1
-\end{align*}\]</span></p>
-<p>and the Taylor series is
-<span class="math display">\[
-\sum_{n=0}^{\infty}(-1)^{n}\frac{x^{2n}}{(2n)!}
-\]</span>
-which we recognise as the Taylor series for <span class="math inline">\(\cos\)</span> about <span class="math inline">\(0\)</span>, which should be unsurprising since <span class="math inline">\(\sin\left(x+\frac{\pi}{2}\right)=\cos(x)\)</span>.</p></li>
-<li><p>From the Taylor series of <span class="math inline">\(f(x)=\ln(x+1)\)</span> at zero (this converges for <span class="math inline">\(-1 &lt; x \le 1\)</span>), show that:
-<span class="math display">\[
-\sum_{n=1}^{\infty}\frac{(-1)^{n+1}}{n}=\ln(2).
-\]</span></p>
-<p>Answers:</p>
-<p>Since we are told that the Taylor series equals <span class="math inline">\(f(x)\)</span> for <span class="math inline">\(-1 &lt; x\le 1\)</span> and <span class="math inline">\(f(1)=\ln(2)\)</span>, we have
-<span class="math display">\[
-\sum_{n=1}^{\infty}(-1)^{n+1}\frac{1}{n}=\ln(2).
-\]</span></p></li>
-<li><p>The Taylor series for <span class="math inline">\(\tan^{-1}\)</span> at zero is
-<span class="math display">\[\tan^{-1}(x) = \sum_{n=0}^\infty \frac{(-1)^n x^{2n+1}}{2n+1}\]</span>
-which converges for <span class="math inline">\(|x|\leq 1\)</span>. Use this to approximate <span class="math inline">\(\pi\)</span> (you could do this in MATLAB/Python using a for loop to easily experiment with the number of terms in the sum).</p>
-<p>Answer:</p>
-<p>We have that <span class="math inline">\(\tan^{-1}(1)=\frac{\pi}{4}\)</span>, so can find <span class="math inline">\(\pi\)</span> as <span class="math inline">\(4\tan^{-1}(1)=4\sum_{n=0}^\infty \frac{(-1)^n}{2n+1}\)</span>. We can get an approximation by summing over the first <span class="math inline">\(N\)</span> terms of this infinite series.</p>
-<p>For N=1000 we get $… $</p></li>
-<li><p>Prove Euler’s formula for complex numbers using the Taylor series for <span class="math inline">\(e^x\)</span>, <span class="math inline">\(\cos(x)\)</span> and <span class="math inline">\(\sin(x)\)</span> at <span class="math inline">\(0\)</span>, .</p>
-<p>Answer:
-First, recall the Taylor series for <span class="math inline">\(e^x\)</span>
-<span class="math display">\[
-e_x = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \frac{x^4}{4!} + \cdots
-\]</span>
-And now let <span class="math inline">\(x = i\theta\)</span>. The odd terms will become imaginary, while the even powers will have changing signs with <span class="math inline">\(i^2\)</span>:</p>
-<p><span class="math display">\[\begin{align}
-e^{i\theta} &amp;= 1 + i\theta + \frac{i^2 \theta^2}{2!} + \frac{i^3 \theta^3}{3!} + \frac{i^4 \theta^4}{4!} + \cdots \\
-&amp;= 1 + i\theta - \frac{\theta^2}{2!} - i\frac{\theta^3}{3!} + \frac{\theta^4}{4!} + \cdots
-\end{align}\]</span></p>
-<p>Now, group every second term together to identify the Tarlor series of <span class="math inline">\(\cos(x)\)</span> and <span class="math inline">\(i\sin(x)\)</span>.</p>
-<p><span class="math display">\[
-e^x = \left(1 - \frac{\theta^2}{2!} + \frac{\theta^4}{4!} + \cdots \right) + i\left(\theta - \frac{\theta^3}{3!} + \frac{x^5}{5!} + \cdots\right)\\
-e^x = \cos(\theta) + i \sin(\theta)
-\]</span></p></li>
-<li><p>Find the Taylor series for <span class="math inline">\(\cos(x)\)</span> at zero by differentiating the Taylor series for <span class="math inline">\(\sin(x)\)</span> at zero term by term (we can differentiate any power series term by term for values of <span class="math inline">\(x\)</span> where the series converges).</p>
-<p>Answers:
-Taking the derivative of the power series, and noting that <span class="math inline">\(\frac{n}{n!} = \frac{1}{(n-1)!}\)</span>
-<span class="math display">\[
-\sin(x) = x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} + \cdots\\
-\frac{d}{dx}\sin (x)= 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \frac{x^6}{6!} + \cdots = \cos(x)
-\]</span></p></li>
-<li><p>Find the Taylor series of <span class="math inline">\(\dfrac{1}{1-x}\)</span> at <span class="math inline">\(a=0\)</span> (this converges for <span class="math inline">\(|x|&lt;1\)</span>). Hence find the Taylor series of <span class="math inline">\(\dfrac{1}{(1-x)^2}\)</span> at <span class="math inline">\(a=0\)</span>.</p>
+<li><p>Consider the curve <span class="math inline">\(x^2+3xy+y^2+2x-7=0\)</span>. Use implicit differentiation to find <span class="math inline">\(\dfrac{dy}{dx}\)</span> and hence compute the equation of the tangent at the point <span class="math inline">\((1,1)\)</span>.</p>
 <p>Answers:</p>
 <p><span class="math display">\[\begin{align*}
-f(x)&amp;=(1-x)^{-1}            &amp; f(0)&amp;=1\\
-f^{(1)}(x)&amp;=(1-x)^{-2}      &amp; f^{(1)}(0)&amp;=1\\
-f^{(2)}(x)&amp;=2(1-x)^{-3}     &amp; f^{(2)}(0)&amp;=2\\
-f^{(3)}(x)&amp;=6(1-x)^{-4}     &amp; f^{(3)}(0)&amp;=6=3!\\
-f^{(4)}(x)&amp;=24(1-x)^{-5}     &amp; f^{(4)}(0)&amp;=24=4!
+2x+3y+3x\frac{dy}{dx}+2\frac{dy}{dx}+2&amp;=0\\
+\frac{dy}{dx}&amp;=-\frac{2x+3y+2}{3x+2}.\\
 \end{align*}\]</span>
-so the Taylor Series is
+At the point <span class="math inline">\((1,1)\)</span>
 <span class="math display">\[\begin{equation*}
-\sum_{n=0}^{\infty}x^n.
-\end{equation*}\]</span></p>
-<p>Now to find the Taylor series of <span class="math inline">\(\frac{1}{(1-x)^2}\)</span> at <span class="math inline">\(0\)</span>, we note that <span class="math inline">\(\frac{d}{dx}\frac{1}{(1-x)}=\frac{1}{(1-x)^2}\)</span>, hence we can obtain the Taylor series by differentiating the series for <span class="math inline">\(\frac{1}{(1-x)}\)</span> term by term, obtaining:
+\frac{dy}{dx}\Bigr|_{\substack{(1,1)}}=-\frac{2+3+2}{3+2}=-\frac{7}{5}
+\end{equation*}\]</span>
+then the equation of the tangent line is
 <span class="math display">\[\begin{equation*}
-\sum_{n=1}^{\infty}nx^{n-1}.
+y=1-\frac{7}{5}(x-1).
 \end{equation*}\]</span></p></li>
+<li><p>Find the slope of the circle <span class="math inline">\(x^2+y^2=25\)</span> at the point <span class="math inline">\((-3,-4)\)</span>. Hence find the equations of the tangent and normal at that point.</p>
+<p>Answers:
+By implicit differentiation
+<span class="math display">\[2x+2y\frac{dy}{dx}=0\]</span>
+hence
+<span class="math display">\[\frac{dy}{dx}=-\frac{x}{y}\]</span>
+and at <span class="math inline">\((-3,-4)\)</span>
+<span class="math display">\[\frac{dy}{dx}=-\frac{3}{4}.\]</span></p>
+<p>The equation of the tangent line is given by
+<span class="math display">\[y-(-4)=-\frac{3}{4}(x-(-3))\]</span>
+or
+<span class="math display">\[y=-\frac{3}{4}x-\frac{25}{4}.\]</span></p>
+<p>The equation of the normal line is
+<span class="math display">\[y-(-4)=\frac{4}{3}(x-(-3))\]</span>
+or
+<span class="math display">\[y=\frac{4}{3}x.\]</span></p></li>
+<li><p>Find <span class="math inline">\(\dfrac{dy}{dx}\)</span> and <span class="math inline">\(\dfrac{d^2y}{dx^2}\)</span> for the following by implicit differentiation.</p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(y+\sin(y)=x\)</span></li>
+<li><span class="math inline">\(x^2-xy+y^2=3\)</span></li>
+</ol>
+<p>Answers:</p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math display">\[\begin{align*}
+\frac{dy}{dx}+\cos(y)\frac{dy}{dx}&amp;=1\\
+\frac{dy}{dx}&amp;=\frac{1}{1+\cos(y)}
+\end{align*}\]</span></li>
+<li><span class="math display">\[\begin{align*}
+2x-y-x\frac{dy}{dx}+2y\frac{dy}{dx}&amp;=0\\
+(x-2y)\frac{dy}{dx}&amp;=2x-y\\
+\frac{dy}{dx}&amp;=\frac{2x-y}{x-2y}
+\end{align*}\]</span></li>
+</ol></li>
+<li><p>Find <span class="math inline">\(\dfrac{dy}{dx}\)</span> and <span class="math inline">\(\dfrac{d^2y}{dx^2}\)</span> for the following parametric equations.</p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(y=\cos(2t)\)</span> and <span class="math inline">\(x=\sin(t)\)</span></li>
+<li><span class="math inline">\(y=\dfrac{3+2t}{1+t}\)</span> and <span class="math inline">\(x=\dfrac{2-3t}{1+t}\)</span></li>
+<li><span class="math inline">\(y=3\sin(\theta)-\sin^3(\theta)\)</span> and <span class="math inline">\(x=\cos^3(\theta)\)</span></li>
+</ol>
+<p>Answers:</p>
+<ol style="list-style-type: lower-alpha">
+<li><p><span class="math display">\[\begin{align*}
+\frac{dy}{dt}=-2\sin(2t)&amp;&amp;\frac{dx}{dt}=\cos(t)
+\end{align*}\]</span>
+The first derivative is
+<span class="math display">\[\begin{align*}
+\frac{dy}{dx}&amp;=\frac{\dfrac{dy}{dt}}{\dfrac{dx}{dt}}\\
+&amp;=\frac{-2\sin(2t)}{\cos(t)}\\
+&amp;=\frac{-4\sin(t)\cos(t)}{\cos(t)}\\
+&amp;=-4\sin(t).
+\end{align*}\]</span>
+The second derivative is (using the chain rule)
+<span class="math display">\[\begin{align*}
+\frac{d^2y}{dx^2}&amp;=\frac{d}{dt}\left(\frac{dy}{dx}\right)\frac{dt}{dx}\\
+&amp;=\frac{d}{dt}(-4\sin(t))\cdot \frac{1}{\cos(t)}\\
+&amp;=-4\cos(t)\cdot \frac{1}{\cos(t)}\\
+&amp;=-4.
+\end{align*}\]</span></p></li>
+<li><p><span class="math display">\[\begin{align*}
+\frac{dy}{dt}=-\frac{1}{(1+t)^2}&amp;&amp;\frac{dx}{dt}=-\frac{5}{(1+t)^2}
+\end{align*}\]</span>
+The first derivative is
+<span class="math display">\[\begin{align*}
+\frac{dy}{dx}&amp;=\frac{\dfrac{dy}{dt}}{\dfrac{dx}{dt}}\\
+&amp;=\frac{1}{(1+t)^2}\cdot \frac{(1+t)^2}{5}\\
+=\frac{1}{5}
+\end{align*}\]</span>
+then the second derivative
+<span class="math display">\[\begin{equation*}
+\frac{d^2y}{dx^2}=0.
+\end{equation*}\]</span></p></li>
+<li><p><span class="math display">\[\begin{align*}
+\frac{dy}{d\theta}=3\cos^3(\theta)&amp;&amp;\frac{dx}{d\theta}=-3\cos^2(\theta)\sin(\theta)
+\end{align*}\]</span>
+The first derivative is
+<span class="math display">\[\begin{align*}
+\frac{dy}{dx}&amp;=\frac{\dfrac{dy}{d\theta}}{\dfrac{dx}{d\theta}}\\
+&amp;=\frac{3\cos^3(\theta)}{-3\cos^2(\theta)\sin(\theta)}\\
+&amp;=-\cot(t)
+\end{align*}\]</span>
+and the second derivative
+<span class="math display">\[\begin{align*}
+\frac{d^2y}{dx^2}&amp;=\frac{d}{d\theta}\left(\frac{dy}{dx}\right)\frac{d\theta}{dx}\\
+&amp;=\frac{d}{d\theta}(-\cot(t))\cdot \frac{1}{-3\cos^2(\theta)\sin(\theta)}\\
+&amp;=\frac{1}{\sin^2(\theta)}\cdot \frac{1}{-3\cos^2(\theta)\sin(\theta)}\\
+&amp;=\frac{-1}{3\cos^2(\theta)\sin^3(\theta)},
+\end{align*}\]</span>
+where we have used
+<span class="math display">\[\begin{align*}
+\frac{d}{d\theta}(-\cot(t))&amp;=\frac{d}{d\theta}\frac{-\cos(\theta)}{\sin(\theta)}\\
+&amp;=\frac{\sin(\theta)\sin(\theta)-(-\cos(\theta))\cos(\theta)}{\sin^2(\theta)}\\
+&amp;=\frac{1}{\sin^2(\theta)}.
+\end{align*}\]</span></p></li>
+</ol></li>
+<li><p>Find the derivative of the following inverse functions by implicit differentiation.</p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(y=\sin^{-1}(x)\)</span></li>
+<li><span class="math inline">\(y=\cosh^{-1}(3x)\)</span></li>
+<li><span class="math inline">\(y=\tan^{-1}(4x^2)\)</span></li>
+</ol>
+<p>Answers:</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>We have that
+<span class="math display">\[\begin{equation*}
+\sin(y)=x
+\end{equation*}\]</span>
+then by implicit differentiation
+<span class="math display">\[\begin{align*}
+\cos(y)\dfrac{dy}{dx}=1\\
+\dfrac{dy}{dx}=\dfrac{1}{\cos(y)}.
+\end{align*}\]</span>
+Using the identity <span class="math inline">\(\cos^2(y)+\sin^2(y)=1\)</span>
+<span class="math display">\[\begin{align*}
+\cos(y)&amp;=\sqrt{1-\sin^2(y)}\\
+&amp;=\sqrt{1-x^2}
+\end{align*}\]</span>
+so,
+<span class="math display">\[\begin{equation*}
+\dfrac{dy}{dx}=\dfrac{1}{\sqrt{1-x^2}}.
+\end{equation*}\]</span></p></li>
+<li><p>We have
+<span class="math display">\[\begin{equation*}
+\cosh(y)=3x
+\end{equation*}\]</span>
+then by implicit differentiation
+<span class="math display">\[\begin{align*}
+\sinh(y)\dfrac{dy}{dx}&amp;=3\\
+\dfrac{dy}{dx}&amp;=\dfrac{3}{\sinh(y)}.
+\end{align*}\]</span></p>
+<p>Since <span class="math inline">\(\cosh^2(y)-\sinh^2(y)=1\)</span>
+<span class="math display">\[\begin{equation*}
+\sinh(y)=\sqrt{\cosh^2(y)-1}=\sqrt{(3x)^2-1}.
+\end{equation*}\]</span>
+So,
+<span class="math display">\[\begin{equation*}
+\dfrac{dy}{dx}=\frac{3}{\sqrt{9x^2-1}}.
+\end{equation*}\]</span></p></li>
+<li><p>We have
+<span class="math display">\[\begin{equation*}
+\tan(y)=4x^2.
+\end{equation*}\]</span>
+By implicit differentiation,
+<span class="math display">\[\begin{align*}
+\sec^2(y)\dfrac{dy}{dx}&amp;=8x\\
+\dfrac{dy}{dx}&amp;=\dfrac{8x}{\sec^2(y)}
+\end{align*}\]</span>
+Using
+<span class="math display">\[\begin{align*}
+\cos^2(y)+\sin^2(y)&amp;=1\\
+1+\tan^2(y)&amp;=\sec^2(y)
+\end{align*}\]</span>
+we have <span class="math inline">\(\sec^2(y)=1+(4x^2)^2\)</span>, and then
+<span class="math display">\[\begin{equation*}
+\dfrac{dy}{dx}=\dfrac{8x}{1+16x^4}.
+\end{equation*}\]</span></p></li>
+</ol></li>
+<li><p>Find <span class="math inline">\(\dfrac{dy}{dx}\)</span> for the following using logarithmic differentiation.</p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(y=a^x\)</span></li>
+<li><span class="math inline">\(y=\dfrac{(x-4)^7(2x+3)^2}{(4x+7)^3}\)</span></li>
+</ol>
+<p>Answers:</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Taking logs and differentiating implicitly
+<span class="math display">\[\begin{align*}
+\ln(y)=\ln(a^x)&amp;=x\ln(a)\\
+\frac{1}{y}\dfrac{dy}{dx}&amp;=\ln(a)\\
+\dfrac{dy}{dx}&amp;=y\ln(a)\\
+\dfrac{dy}{dx}&amp;=a^x\ln(a).
+\end{align*}\]</span></p></li>
+<li><p>Taking logs
+<span class="math display">\[\begin{align*}
+\ln(y)&amp;=\ln\left[\dfrac{(x-4)^7(2x+3)^2}{(4x+7)^3}\right]\\
+&amp;=\ln(x-4)^7+\ln(2x+3)^2-\ln(4x+7)^3\\
+&amp;=7\ln(x-4)+2\ln(2x+3)-3\ln(4x+7)
+\end{align*}\]</span>
+Then differentiating
+<span class="math display">\[\begin{align*}
+\frac{1}{y}\dfrac{dy}{dx}&amp;=\frac{7}{x-4}+\frac{2}{2x+3}\cdot 2-\frac{3}{4x-7}\cdot 4\\
+\dfrac{dy}{dx}&amp;=\dfrac{(x-4)^7(2x+3)^2}{(4x+7)^3}\left[ \frac{7}{x-4}+\frac{4}{2x+3}-\frac{12}{4x-7}\right]
+\end{align*}\]</span></p></li>
+</ol></li>
+<li><p>Find <span class="math inline">\(\dfrac{dy}{dx}\)</span> for the following.</p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(y=x^x\)</span></li>
+<li><span class="math inline">\(y=(\tanh(x))^x\)</span></li>
+<li><span class="math inline">\(x^3+\sin(xy)=xy^2\)</span></li>
+</ol>
+<p>Answers:</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>First take the natural logarithm:
+<span class="math display">\[\begin{equation*}
+\ln(y)=x\ln(x),
+\end{equation*}\]</span>
+then differentiate implicitly:
+<span class="math display">\[\begin{align*}
+\frac{d}{dx}(\ln(y))&amp;=\frac{d}{dx}(x\ln(x))\\
+\frac{1}{y}\frac{dy}{dx}&amp;=\frac{dx}{dx}\ln(x)+x\frac{d}{dx}\ln(x)\\
+\frac{1}{y}\frac{dy}{dx}&amp;=\ln(x)+x\frac{1}{x}\\
+\frac{dy}{dx}&amp;=y(\ln(x)+1)=x^x(\ln(x)+1).
+\end{align*}\]</span></p>
+<p><strong>Important!</strong> The derivative of <span class="math inline">\(x^x\)</span> is <strong>not</strong> <span class="math inline">\(x\cdot x^{x-1}=x^x\)</span>. We can’t treat variable exponents like constant exponents!</p></li>
+<li><p>Taking logs
+<span class="math display">\[\begin{equation*}
+\ln(y)=x\ln(\tanh(x)),
+\end{equation*}\]</span>
+then differentiating
+<span class="math display">\[\begin{align*}
+\frac{1}{y}\dfrac{dy}{dx}&amp;=\ln(\tanh(x))+\frac{x}{\tanh(x)}\textrm{sech}^2(x)\\
+&amp;=\ln(\tanh(x))+\frac{x\cosh(x)}{\sinh(x)\cosh^2(x)}\\
+&amp;=\ln(\tanh(x))+\frac{x}{\sinh(x)\cosh(x)}\\
+&amp;=\ln(\tanh(x))+\frac{2x}{\sinh(2x)}.\\
+\end{align*}\]</span>
+So,
+<span class="math display">\[\begin{equation*}
+\dfrac{dy}{dx}=(\tanh(x))^x\left[ \ln(\tanh(x))+\frac{2x}{\sinh(2x)}\right].
+\end{equation*}\]</span></p></li>
+<li><p>By implicit differentiation and using the product rule
+<span class="math display">\[\begin{align*}
+3x^2+\cos(xy)\left(y+x\dfrac{dy}{dx} \right)&amp;=y^2+2xy\dfrac{dy}{dx}\\
+3x^2+y\cos(xy)-y^2&amp;=2xy\dfrac{dy}{dx}-x\cos(xy)\dfrac{dy}{dx}
+\end{align*}\]</span>
+so,
+<span class="math display">\[\begin{equation*}
+\dfrac{dy}{dx}=\frac{3x^2+y\cos(xy)-y^2}{2xy-x\cos(xy)}
+\end{equation*}\]</span></p></li>
+</ol></li>
 </ol>
 
 </div>

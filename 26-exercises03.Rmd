@@ -1,56 +1,60 @@
 # Exercise Set 3 {-}
 
-These exercises cover the topic of Trigonometry.
-
-Tip: always start by drawing a labelled diagram in trigonometry questions.
-
-1. Consider the smaller of the two angles between the hour hand and minute hand of a clock. Write the angles at the following times in both degrees and radians (in terms of $\pi$).
-    a. 6:00
-    a. 3:00
-    a. 4:00
-    a. 4:30
-    a. 6:45
-
-1. Convert the following angles from degrees to radians (leave your answer in terms of $\pi$ where possible, or to 2 d.p.).
-    a. $330^\circ$
-    a. $22.5^\circ$
-    a. $27^\circ$
-    a. $35^\circ$
-
-1. A *bearing* is the angle measured clockwise from North to the direction of interest.
-A point $K$ is 12km due west of a second point $L$ and 25km due south of a third point $M$. Calculate the bearing of $L$ from $M$.
-
-1.  Solve (i.e. find all unkown angles and side lengths) the triangle $ABC$ where $A = 53^\circ$, $B = 61^\circ$ and $a = 12.6$cm.
-
-1.  Let $AOB$ be a triangle. $OA = 60$mm, $AB = 180$mm and $OB = 200$mm. Find angle $A$.
-
-1. An *angle of elevation* is an angle that an imaginary straight line must be raised from the horizontal ground to line up with a point of interest above the ground.
-An observer is standing at a point $M$ which is $30$m from the base of a tower. On top of the tower is a vertical mast. If the angles of elevation of the top of the tower and the top of the mast from $M$ are $40^\circ$ and $50^\circ$ respectively, calculate the height of the mast.
-
-1. The small hand of a clock is 75% the length of the long hand. Calculate the distance between the ends of the hands at 5 o'clock.
-
-1. A student $1.8$m tall is standing $24$m away from a tree and using a eye level instrument to measure the angle of elevation. The angle measured to the top of the tree is $12^\circ 34'$, calculate the height of the tree. (Degrees can be further subdivided in to *minutes* denoted $x'$ and *seconds* denoted $x''$, with $1'$ being $1/60$ of a degree and $1''$ being $1/60$ of a minute. To use a calculator you will first need to convert minutes and seconds to decimals.)
-
-1.  The angles of elevation of a navigation balloon that is flying in between two points on the ground $A$ and $B$ are $48^\circ$ and $62^\circ$ respectively. If $A$ and $B$ are $0.3$km apart, calculate the height of the balloon. 
-
-1.  The figure below shows a tetrahedron with an equilateral triangle of side 2m forming the base and isosceles triangles of equal side 3m forming the slanting 
-faces. Calculate:
-
-    a. The height of the tetrahedron $ND$;
-    b. The angle that edge $DA$ makes with the plane $ABC$;
-    c. The angle between the planes $ACD$ and $ACB$.
-
-```{r tetra, out.width="30%"}
-knitr::include_graphics("figures/tetra.png")
-```
+1. Solve the following quadratic equations by factorisation.
+    a. $x^2+10x+25$
+    a. $x^2-28x-60=0$
+    a. $p^2=8p-15$
+    a. $-2y^2(3+y^2)=(2y^2+2y-3)(-y^2+y-4)-2$  
+    a. $3x^2-14x+8$
 
 
-1. Write the following in the form $R\cos(\omega t\pm \beta)$.
-    a. $-2\sin(\omega t) + 5\cos(\omega t)$
-    a. $-5\cos(\omega t) + 5 \sin(\omega t)$
+1. Solve the following quadratic equations, giving results correct to 2 d.p.
+    a. $4x^2+x-3=0$
+    a. $x^2+x=5$
+    a. $x+\frac{1}{x}=5$
 
-1. In a spring-mass system the motion of the mass is described by
-$$x=A\cos(\omega t)+B\sin(\omega t)$$
-where $x$ is the distance of the mass from its equilibrium position, $\omega$ is the natural frequency of oscillations, and $A$ and $B$ are constants. For $A=\sqrt{3}$, $B=1$ and $\omega=10$:
-    a. Write $x$ in the form $R\cos(\omega t-\beta)$ and state the amplitude of $x$.
-    a. Sketch one complete cycle of $x$.
+1. Solve the following sets of simultaneous equations.
+    a. $3x+4y=7$, $5x+6y=11$
+    a. $2x+y=7$, $x^2-xy=6$
+    a. $x + y=2$, $x^2-xy+y^2 = 1$  
+
+1. Solve the following inequalities.
+    a. $7-3x>x-5$
+    a. $x^2\ge 4$
+    a. $x^2-x-6<0$
+    a. $x^2-3x-12\le 2x+2$
+    a. $\frac{2}{2x-1} > \frac{3}{3x+1}$
+    a. $\frac{2x}{x-5}\le 3$
+    a. $x^3-9x^2<0$  
+
+1. Find the solutions to the following equations without using a calculator.
+    a. $x=\log_4(64)$
+    a. $x=\log_{101}(101)$
+    a. $x=\ln(e)$
+    a. $x=\log_{56}(1)$
+    a. $10^x=100000$
+    a. $2^x=128$
+    a. $\log_3(x)=4$
+    a. $\log_x(125)=3$
+
+1. Calculate the following logarithms using a calculator.
+    a. $\ln(2)$
+    a. $\log(20)$
+    a. $\log_{16}(100)$ - do this using your $\log_a(x)$ button and also using the change of base rule with your $\log$ or $\ln$ button.
+
+1. Calculate $4321\times 9876$ using logs: convert both values to logs, add, then convert back.
+
+1. Simplify the following expression involving logarithms.
+     $$\log_a(x^2)+3\log_a(x)-2\log_a(4x^2).$$
+
+1. Solve the following for $x$.
+    $$2\log_a(x)-\log_a(x-1)=\log_a(x+3).$$
+
+1. Find $y$ in terms of $x$:
+    $$5\log_a(y)-2\log_a(x+4)=2\log_a(y)+\log_a(x).$$
+
+1. Use natural logarthims to make $t$ the subject of the formula
+    $$V=1-e^{\frac{-t}{RC}}.$$
+
+1. Show that the following hyperbolic identity holds:
+    $$\cosh^2(x)-\sinh^2(x)=1.$$

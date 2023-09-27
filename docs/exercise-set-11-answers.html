@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Exercise Set 11 Answers | Mathematics for Scientists and Engineers</title>
   <meta name="description" content="Mathematics Lecture Notes for UoE Penryn Science and Engineering Disciplines." />
-  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Exercise Set 11 Answers | Mathematics for Scientists and Engineers" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Dr Mark Callaway" />
 
 
-<meta name="date" content="2023-09-14" />
+<meta name="date" content="2023-09-27" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -59,6 +59,10 @@
 
 
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -135,7 +139,8 @@
 <li class="chapter" data-level="3.3.1" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#simultaneous-linear-equations"><i class="fa fa-check"></i><b>3.3.1</b> Simultaneous linear equations</a></li>
 <li class="chapter" data-level="3.3.2" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#non-linear-simultaneous-equations"><i class="fa fa-check"></i><b>3.3.2</b> Non-linear simultaneous equations</a></li>
 </ul></li>
-<li class="chapter" data-level="3.4" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#inequalities-1"><i class="fa fa-check"></i><b>3.4</b> Inequalities</a></li>
+<li class="chapter" data-level="3.4" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#exponentials-and-logarithms"><i class="fa fa-check"></i><b>3.4</b> Exponentials and Logarithms</a></li>
+<li class="chapter" data-level="3.5" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#inequalities-1"><i class="fa fa-check"></i><b>3.5</b> Inequalities</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="trigonometry.html"><a href="trigonometry.html"><i class="fa fa-check"></i><b>4</b> Trigonometry</a>
 <ul>
@@ -353,6 +358,7 @@
 <li class="chapter" data-level="" data-path="exercise-set-15.html"><a href="exercise-set-15.html"><i class="fa fa-check"></i>Exercise Set 15</a></li>
 <li class="chapter" data-level="" data-path="exercise-set-16.html"><a href="exercise-set-16.html"><i class="fa fa-check"></i>Exercise Set 16</a></li>
 <li class="chapter" data-level="" data-path="exercise-set-17.html"><a href="exercise-set-17.html"><i class="fa fa-check"></i>Exercise Set 17</a></li>
+<li class="chapter" data-level="" data-path="exercise-set-18.html"><a href="exercise-set-18.html"><i class="fa fa-check"></i>Exercise Set 18</a></li>
 <li class="chapter" data-level="" data-path="notation.html"><a href="notation.html"><i class="fa fa-check"></i>Notation</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -378,159 +384,180 @@
 <div id="exercise-set-11-answers" class="section level1 unlisted unnumbered hasAnchor">
 <h1>Exercise Set 11 Answers<a href="exercise-set-11-answers.html#exercise-set-11-answers" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <ol style="list-style-type: decimal">
-<li><p>Determine the following indefinite integrals</p>
-<ol style="list-style-type: lower-alpha">
-<li><span class="math inline">\(\int 2x^7\; dx\)</span></li>
-<li><span class="math inline">\(\int 5x^2+2x-1 \; dx\)</span></li>
-<li><span class="math inline">\(\int \sin(\theta)+\cos(\theta) \; d\theta\)</span></li>
-<li><span class="math inline">\(\int 3e^t + \frac{2}{t} \; d t\)</span></li>
-<li><span class="math inline">\(\int x^\frac{1}{2} \; dx\)</span></li>
-</ol>
+<li><p>Write the series
+<span class="math display">\[\begin{equation*}
+\frac{1}{1\cdot 2}+\frac{1}{2\cdot 3}+\frac{1}{3\cdot 4}+\frac{1}{4\cdot 5}+\frac{1}{5\cdot 6}
+\end{equation*}\]</span>
+using Sigma notation in the forms <span class="math inline">\(\displaystyle\sum_{k=1}^{n}(\dots)\)</span> and <span class="math inline">\(\displaystyle\sum_{l=0}^{m}(\dots)\)</span>.</p>
+<p>Answers:</p>
+<p><span class="math display">\[\sum_{k=1}^{5}\frac{1}{k(k+1)}\]</span>
+<span class="math display">\[\sum_{l=0}^{4}\frac{1}{(l+1)(l+2)}\]</span></p></li>
+<li><p>Evaluate <span class="math inline">\(\displaystyle\sum_{n=1}^{10}\frac{2}{3^n}\)</span> and <span class="math inline">\(\displaystyle\sum_{n=0}^{9}\frac{2}{3^n}\)</span> using the formula for the <span class="math inline">\(n^{\text{th}}\)</span> partial sum of a geometric series.</p>
 <p>Answers:</p>
 <ol style="list-style-type: lower-alpha">
-<li><span class="math inline">\(\int 2x^7 \; dx = \frac{1}{4}x^8 + c\)</span></li>
-<li><span class="math inline">\(\int 5x^2 + 2x-1\; dx = \frac{5}{3}x^3 + x^2 - x + c\)</span></li>
-<li><span class="math inline">\(\int \sin(\theta)+\cos(\theta) \; d\theta = -\cos(\theta) + \sin(\theta) + c\)</span></li>
-<li><span class="math inline">\(\int 3e^t + \frac{2}{t} \; dt = 3e^t + 2\ln(t) + c\)</span></li>
-<li><span class="math inline">\(\int x^\frac{1}{2} \; dx = \frac{2}{3}x^{\frac{3}{2}} + c\)</span></li>
-</ol></li>
-<li><p>Determine the following definite integrals</p>
-<ol style="list-style-type: lower-alpha">
-<li><span class="math inline">\(\int_0^2 x^2-2x\; dx\)</span></li>
-<li><span class="math inline">\(\int_4^{16} \frac{2}{\sqrt{x}} \; dx\)</span></li>
-<li><span class="math inline">\(\int_{-r}^r \frac{mx^2}{2r}\: dx\)</span></li>
-<li><span class="math inline">\(\int_{-\frac{\pi}{2}}^\frac{\pi}{2}\cos(x)\; dx\)</span></li>
-<li><span class="math inline">\(\int_{\ln(2)}^{\ln(3)} e^x\; dx\)</span></li>
-</ol>
-<p>Answers:</p>
-<ol style="list-style-type: lower-alpha">
-<li><span class="math inline">\(\int_0^2 x^2-2x\; dx = \left[\frac{x^3}{3} - x^2\right]_0^2 = \left(\frac{2^3}{3} - 2^2\right) - 0 = -\frac{4}{3}\)</span></li>
-<li><span class="math inline">\(\int_4^{16} \frac{2}{\sqrt{x}} \; dx = \int_4^16 2x^{-\frac{1}{2}}\;dx = \left[4x^{\frac{1}{2}}\right]_4^16 = 16 - 8 = 8\)</span></li>
-<li>Note that the limit, <span class="math inline">\(r\)</span>, appears inside the integral, but it is just a constant. It is explicitly taken out of the integral here
-<span class="math inline">\(\int_{-r}^r \frac{mx^2}{2r}\:dx = \frac{m}{2r}\int_{-r}^r x^2 \: dx = \frac{m}{2r}\left[\frac{1}{3}x^3\right]_{-r}^r = \frac{m}{2r}\left(\frac{r^3}{3} + \frac{r^3}{3}\right) = \frac{mr^2}{3}\)</span></li>
-<li><span class="math inline">\(\int_{-\frac{\pi}{2}}^\frac{\pi}{2}\cos(x)\; dx = \left[\sin(x)\right]_{-\frac{\pi}{2}}^\frac{\pi}{2} = \sin(\pi/2) - \sin(\pi/2) = 2\)</span></li>
-<li><span class="math inline">\(\int_{\ln(2)}^{\ln(3)} e^x\; dx = \left[e^x\right]_{\ln(2)}^{\ln(3)} = e^{\ln(3)} - e^{\ln(2)} = 3-2 = 1\)</span></li>
-</ol></li>
-<li><p>Find the area between the curve and the <span class="math inline">\(x\)</span>-axis of the function <span class="math inline">\(f(x)=x^3-x\)</span> and the lines <span class="math inline">\(x=0\)</span> and <span class="math inline">\(x=2\)</span>.</p>
-<p>Answer:</p>
-<p>We are looking for the area enclosed by the function and the <span class="math inline">\(x\)</span>-axis, but we cannot simply take the definite integral from <span class="math inline">\(0\)</span> to <span class="math inline">\(2\)</span> as the function is negative at some points on this interval.</p>
-<p>The roots of <span class="math inline">\(f(x)=x^3-x=x(x+1)(x-1)\)</span> are <span class="math inline">\(-1,0,1\)</span> and these are where the function changes sign. We can plug in values between the roots to see where <span class="math inline">\(f(x)\)</span> is positive and where it is negative. Since we are interested in the interval from <span class="math inline">\(0\)</span> to <span class="math inline">\(2\)</span> we check <span class="math inline">\(f(0.5)=-3.75\)</span> and <span class="math inline">\(f(2)=6\)</span>. So the area will be given by
-<span class="math display">\[A=\int_0^1 -f(x)\, dx + \int_1^2 f(x)\, dx.\]</span>
-Hence
-<span class="math display">\[A=\left[-\frac{1}{4}x^4 + \frac{1}{2}x^2\right]_0^1 + \left[\frac{1}{4}x^4 - \frac{1}{2}x^2\right]_1^2 = (\frac{1}{4}-0) + (2 - (-1/4)) = \frac{5}{2}.\]</span></p></li>
-<li><p>The velocity <span class="math inline">\(v\)</span> (<span class="math inline">\(\text{ms}^{-1}\)</span>) of a particle moving in a straight line at time <span class="math inline">\(t\)</span> (<span class="math inline">\(\text{s}\)</span>) is given by:
-<span class="math display">\[v=6t^2-30t-36\quad t&gt;0\]</span>
-By integrating, find the distance travelled by the particle between <span class="math inline">\(t=3\)</span> and <span class="math inline">\(t=5\)</span> seconds.</p>
-<p>Answer:</p>
-<p><span class="math display">\[\int_3^5 6t^2 - 30t - 36\: dt = \left[2t^3 - 15t^2 - 36t\right]_3^5 = -116\]</span>
-Since we are looking for a distance, we take the absolute value: <span class="math inline">\(116\text{m}\)</span>.</p></li>
-<li><p>Find the following integrals using a suitable substitution.</p>
-<ol style="list-style-type: lower-alpha">
-<li><span class="math inline">\(\int (4x-3)^5 \; dx\)</span></li>
-<li><span class="math inline">\(\int 4\sin(3x+2)\; dx\)</span></li>
-<li><span class="math inline">\(\int_2^5 \frac{1}{1-2x} \; dx\)</span></li>
-<li><span class="math inline">\(\int \frac{1}{\sqrt{(5-3x)^3}}\; dx\)</span></li>
-<li><span class="math inline">\(\int \frac{4x}{\sqrt{(x^2+3)^3}}\; dx\)</span></li>
-<li><span class="math inline">\(\int 2xe^{x^2-5}\; dx\)</span></li>
-<li><span class="math inline">\(\int \frac{\sin(\sqrt{x})}{\sqrt{x}}\; dx\)</span></li>
-<li><span class="math inline">\(\int \cos(\theta)\sin(\theta)\; d\theta\)</span></li>
-<li><span class="math inline">\(\int \frac{\cos(x)}{1+\sin(x)}\; dx\)</span></li>
-</ol>
-<p>Answers:</p>
-<ol style="list-style-type: lower-alpha">
-<li><p><span class="math inline">\(\int (4x-3)^5\:dx\)</span>. Let <span class="math inline">\(u=4x-3\)</span>, so <span class="math inline">\(\frac{du}{dx}=4 \Rightarrow dx = \frac{1}{4}du\)</span>
+<li><p>The geometric series <span class="math inline">\(\displaystyle\sum_{n=1}^{10}\dfrac{2}{3^n}\)</span> has first term <span class="math inline">\(a=\dfrac{2}{3^1}=\dfrac{2}{3}\)</span> and second term <span class="math inline">\(ar=\dfrac{2}{3^2}\)</span> and therefore the common ratio is <span class="math inline">\(r=\dfrac{ar}{a}=\dfrac{1}{3}\)</span>. Since the sum is for <span class="math inline">\(n=1\)</span> to <span class="math inline">\(n=10\)</span>, it is the sum of the first <span class="math inline">\(10\)</span> terms,
 <span class="math display">\[
-\int (4x-3)^5\;dx = \int u^5 \frac{1}{4}du =\frac{u^6}{24} +c = \frac{(4x-3)^6}{24} + c\]</span></p></li>
-<li><p><span class="math inline">\(\int 4\sin(3x+2)\;dx\)</span>. Let <span class="math inline">\(u=3x+2\)</span>, so <span class="math inline">\(\frac{du}{dx} = 3 \Rightarrow dx = \frac{1}{3}du\)</span>,
-<span class="math display">\[
-\int 4\sin(3x+2)\;dx = \frac{4}{3}\int\sin(u)\:du = -\frac{4}{3}\cos(u) + c = -\frac{4}{3}\cos(3x+2) + c
+S_{10}=\frac{a(1-r^{10})}{1-r}=\frac{2\left (1-\dfrac{1}{3^{10}}\right)}{3\left (1-\dfrac{1}{3}\right )}=1-\dfrac{1}{3^{10}}.
 \]</span></p></li>
-<li><p><span class="math inline">\(\int_2^5\frac{1}{1-2x}\:dx\)</span>. Let <span class="math inline">\(u=1-2x\)</span>, so <span class="math inline">\(\frac{du}{dx} = -2 \Rightarrow dx = -\frac{1}{2}du\)</span>. This is a definite integral, so the limits must also be given in terms of u:
-<span class="math display">\[\begin{align*}
-\int_{x=2}^{x=5} \frac{1}{1-2x}\:dx &amp;= -\frac{1}{2}\int_{u=-3}^{u=5}\frac{du}{u} = -\frac{1}{2}\left[\ln(u)\right]_{-3}^{-9}\\
-&amp;= -\frac{1}{2}(\ln(-9) - \ln(-3)) = -\frac{1}{2}\ln\left(\frac{-9}{-3}\right) = -\frac{1}{2}\ln(3)
-\end{align*}\]</span></p></li>
-<li><p><span class="math inline">\(\int\frac{1}{\sqrt{(5-3x)^3}}\:dx\)</span>. Let <span class="math inline">\(u=5-3x\)</span>, so <span class="math inline">\(\frac{du}{dx} = -3 \Rightarrow dx = -\frac{du}{3}\)</span>
+<li><p>The geometric series <span class="math inline">\(\displaystyle\sum_{n=0}^{9}\frac{2}{3^n}\)</span> has first term <span class="math inline">\(a=\dfrac{2}{3^0}=2\)</span> and second term <span class="math inline">\(ar=\dfrac{2}{3^1}\)</span>, and therefore the common ratio is <span class="math inline">\(r=\dfrac{ar}{a}=\dfrac{1}{3}\)</span>. Since the sum is for <span class="math inline">\(n=0\)</span> to <span class="math inline">\(n=9\)</span>, it is the sum of the first <span class="math inline">\(10\)</span> terms,
 <span class="math display">\[
-\int\frac{1}{\sqrt{(5-3x)^3}}\:dx = \int u^{-\frac{3}{2}}\:du = \frac{2}{3}u^{-\frac{1}{2}} + c = \frac{2}{3}(5-3x)^{-\frac{1}{2}} + c
+S_{10}=\dfrac{a(1-r^{10})}{1-r}=\dfrac{2\left(1-\dfrac{1}{3^{10}}\right)}{\left(1-\dfrac{1}{3}\right)}=3\left(1-\dfrac{1}{3^{10}}\right).
 \]</span></p></li>
-<li><p><span class="math inline">\(\int\frac{4x}{\sqrt{(x^2 + 3)^3}}\:dx\)</span>. Let <span class="math inline">\(u=x^2 +3\)</span>, so <span class="math inline">\(\frac{du}{dx} = 2x \Rightarrow dx = \frac{du}{2x}\)</span>. Here, the <span class="math inline">\(4x\)</span> term remains in the denominator after substituting, but will be cancelled out once <span class="math inline">\(dx\)</span> is substituted.
+</ol></li>
+<li><p>Do the following geometric series converge or diverge? If they converge, find their sum.</p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(\displaystyle\sum_{n=1}^{\infty}\frac{2}{3^n}\)</span></li>
+<li><span class="math inline">\(\displaystyle\sum_{n=1}^{\infty}(-1)^{n-1}\frac{1}{2^{n-1}}\)</span></li>
+<li><span class="math inline">\(\displaystyle\sum_{n=1}^{\infty}\left( \dfrac{\pi}{2}\right)^n\)</span></li>
+</ol>
+<p>Answers:</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>We already know that the first term is <span class="math inline">\(a=\dfrac{2}{3}\)</span> and the common ratio is <span class="math inline">\(r=\dfrac{1}{3}\)</span>. Since <span class="math inline">\(|r|&lt;1\)</span>, the geometric series converges, with sum
 <span class="math display">\[
-\int\frac{4x}{\sqrt{(x^2 + 3)^3}}\:dx = \int\frac{4x}{u^{\frac{3}{2}}}\frac{du}{2x} = \int 2u^{-\frac{3}{2}} = -4u^{-\frac{1}{2}} + c = -4(x^2+3)^{-\frac{1}{2}} + c
+\sum_{n=1}^{\infty}\frac{2}{3^n}=\frac{a}{1-r}=\frac{\frac{2}{3}}{1-\frac{1}{3}}=1.
+\]</span></p></li>
+<li><p>The first term of the series is <span class="math inline">\(a=1\)</span> and the common ratio is <span class="math inline">\(r=-\dfrac{1}{2}\)</span>. Since <span class="math inline">\(|r|&lt;1\)</span> the series converges, and the sum is
+<span class="math display">\[
+\sum_{n=1}^{\infty}(-1)^{n-1}\frac{1}{2^{n-1}}=\frac{1}{1+\frac{1}{2}}=\frac{2}{3}.
+\]</span></p></li>
+<li><p>The first term of the series is <span class="math inline">\(a=\dfrac{\pi}{2}\)</span>, and the common ratio is also <span class="math inline">\(r=\dfrac{\pi}{2}\)</span>. Since <span class="math inline">\(|r|&gt;1\)</span>, the series diverges.</p></li>
+</ol></li>
+<li><p>Find the <span class="math inline">\(3^{\text{rd}}\)</span> degree Taylor polynomials of the following functions.</p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(f(x)=2x^3-x^2+4x+5\)</span> at <span class="math inline">\(a=0\)</span></li>
+<li><span class="math inline">\(f(x)=\dfrac{1}{1+x}\)</span> at <span class="math inline">\(a=0\)</span>.</li>
+<li><span class="math inline">\(f(x)=\sqrt{x}\)</span> at <span class="math inline">\(a=1\)</span></li>
+</ol>
+<p>Answers:</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>The <span class="math inline">\(3^{\text{rd}}\)</span> degree polynomial of this polynomial at <span class="math inline">\(a=0\)</span> will simply be equal to the polynomial itself. For completeness, we still derive the Taylor series to demonstrate this
+<span class="math display">\[\begin{align}
+f(x)&amp;=2x^3 - x^2 + 4x + 5       &amp; f(0)&amp;=5\\
+f&#39;(x)&amp;= 6x^2 - 2x + 4           &amp; f&#39;(0)&amp;=4\\
+f&#39;&#39;(x)&amp;= 12x - 2                &amp; f&#39;&#39;(0) &amp;= -2\\
+f&#39;&#39;&#39;(x) &amp;= 12                   &amp; f&#39;&#39;&#39;(0) &amp;= 12
+\end{align}\]</span>
+Substituting these into the Taylor series about <span class="math inline">\(x=0\)</span>
+<span class="math display">\[
+f(x) = \sum_{n=0}^\infty \frac{f^{(n)}(a)}{n!}x\\
+f(x) = f(0) + \frac{f&#39;(0)}{1}x + \frac{f&#39;&#39;(0)}{2}x^2 + \frac{f&#39;&#39;&#39;(0)}{6}x^3\\
+f(x) = 5 + 4x - x^2 + 2 x^3
+  \]</span>
+since the Taylor series terminates after the <span class="math inline">\(x^3\)</span> term. The original polynomial has been recovered.</p></li>
+<li><p>We start by finding the first 3 derivatives.
+<span class="math display">\[ \begin{align}
+f(x) &amp;= \frac{1}{x+1}        &amp; f(0) &amp;= 1\\
+f&#39;(x) &amp;= \frac{-1}{(x+1)^2}     &amp; f&#39;(0) &amp;= -1\\
+f&#39;&#39;(x) &amp; = \frac{2}{(x+1)^3}    &amp; f&#39;&#39;(0) &amp;= 2\\
+f&#39;&#39;&#39;(x) &amp;= \frac{-6}{(x+1)^4}   &amp; f&#39;&#39;&#39;(0) &amp;= -6
+\end{align}
 \]</span>
-This could also have been solved by reverse chain rule (think about how the answer would be differentiated, and see that the integral was of the form <span class="math inline">\(g&#39;(x)f(g(x))\)</span>.</p></li>
-<li><p><span class="math inline">\(\int 2x e^{x^2-5}\:dx\)</span>. Let <span class="math inline">\(u=x^2 - 5\)</span> so <span class="math inline">\(\frac{du}{dx} = 2x \Rightarrow dx = \frac{du}{2x}\)</span>. Again, the remaining term in <span class="math inline">\(x\)</span> is removed after substituting for <span class="math inline">\(u\)</span> without needed to take a square root.
-<span class="math display">\[
-\int 2x e^u \frac{du}{2x} = \int e^u \: du = e^u + c = e^{x^2 -5} + c
+Substituting these terms into the Taylor series expansion about <span class="math inline">\(x=0\)</span>, up to the <span class="math inline">\(3^\text{rd}\)</span> degree term.:
+<span class="math display">\[f(x) = \sum_{n=0}^\infty \frac{f^{(n)}(a)}{n!}x\\
+f(x) = 1 - x + x^2 - x^3 + \cdots
 \]</span>
-Which could have been solved by identifying reverse chain rule.</p></li>
-<li><p><span class="math inline">\(\int \frac{\sin(\sqrt{x})}{\sqrt{x}} dx\)</span>. Let <span class="math inline">\(u= \sqrt{x}\)</span> so <span class="math inline">\(\frac{du}{dx} = \frac{1}{2\sqrt{x}} \Rightarrow \frac{1}{\sqrt{x}}dx = 2du\)</span>.
-<span class="math display">\[\int \frac{\sin(\sqrt{x})}{\sqrt{x}} dx=2\int \sin(u) du = -2\cos(u)+c=-2\sin(\sqrt{x})+c.\]</span></p></li>
-<li><p><span class="math inline">\(\int \cos(\theta)\sin(\theta)\: d\theta\)</span>. Let <span class="math inline">\(u= \sin(\theta)\)</span> so <span class="math inline">\(\frac{du}{d\theta} = \cos(\theta) \Rightarrow d\theta = \frac{du}{\cos(\theta)}\)</span>.
+Having just included the first few terms.</p></li>
+<li><p>Note that it is not possible to take the Taylor series about <span class="math inline">\(x=0\)</span> because the derivative of <span class="math inline">\(\sqrt{x}\)</span> does not exist at <span class="math inline">\(0\)</span>. Taking the expansion about <span class="math inline">\(x=1\)</span>.
 <span class="math display">\[
-\int \cos(\theta)\sin(\theta)\: d\theta = \int \cos(\theta)u\frac{du}{\cos(\theta)} = \int u\: du = \frac{1}{2}u^2 + c = \frac{1}{2}\sin^2(\theta) + c
-\]</span></p></li>
-<li><p><span class="math inline">\(\int \frac{\cos(x)}{1+\sin(x)}\:dx\)</span>. Let <span class="math inline">\(u=1+\sin(x)\)</span> so <span class="math inline">\(\frac{du}{dx} = \cos(x) \Rightarrow dx = \frac{du}{\cos(x)}\)</span>
+\begin{align}
+f(x) &amp;= \sqrt{x} = x^\frac{1}{2}    &amp; f(1) &amp;= 1\\
+f&#39;(x) &amp;= \frac{1}{2}x^{-\frac{1}{2}}        &amp; f&#39;(1) &amp;= \frac{1}{2}\\
+f&#39;&#39;(x) &amp; = -\frac{1}{4}x^{-\frac{3}{2}}       &amp; f&#39;&#39;(1) &amp;= -\frac{1}{4}\\
+f&#39;&#39;&#39;(x) &amp;=  \frac{3}{8}x^{-\frac{5}{2}}       &amp; f&#39;&#39;&#39;(1) &amp;= \frac{3}{8}
+\end{align}
+\]</span>
+Substituting these into the first few terms of the Taylor series about <span class="math inline">\(x=a\)</span>
 <span class="math display">\[
-\int \frac{\cos(x)}{1+\sin(x)}\:dx = \int \frac{1}{u}\:du = \ln(u)+c = \ln(1+\sin(x)) + c\]</span></p></li>
+f(x-1) = \sum_{n=0}^\infty \frac{f^{(n)}(1)}{n!}(x-1)^n\\
+f(x-1) = 1 + \frac{1}{2}(x-1) -\frac{1}{4}\frac{(x-1)^2}{2!} + \frac{3}{8}\frac{(x-1)^3}{3!} + \cdots\\
+f(x-1) = 1 + \frac{1}{2}(x-1) - \frac{(x-1)^2}{8} + \frac{(x-1)^3}{16} + \cdots\]</span></p></li>
 </ol></li>
-<li><p>The <em>Root Mean Square</em> (RMS) value of a signal over the interval <span class="math inline">\(a\)</span> to <span class="math inline">\(b\)</span> is defined as
-<span class="math display">\[\left(\frac{1}{b-a}\int_{a}^{b} (f(x))^2 \; dx\right)^\frac{1}{2}\]</span>
-Find the RMS of the voltage signal
-<span class="math display">\[V(t)=3\sin(2t)+5\cos(4t)\]</span>
-between <span class="math inline">\(a=0\)</span> and <span class="math inline">\(b=2\pi\)</span>.</p>
-<p>Answer:</p>
-<p>Firstly, multiply out the square term inside the integral, so
+<li><p>Derive the Taylor series for <span class="math inline">\(e^x\)</span> at <span class="math inline">\(a=0\)</span> (this converges for all <span class="math inline">\(x\)</span>).</p>
+<p>Answers:</p>
+<p>Let <span class="math inline">\(f(x)=e^x\)</span>.
 <span class="math display">\[\begin{align*}
-v(t)^2 &amp;= (3\sin(2t) + 5\cos(4t))(3\sin(2t) + 5\cos(4t))\\
-&amp;= 9\sin^2(2t) + 30\sin(2t)\cos(4t) + 25\cos^2(4t)
+f(x)&amp;=e^x       &amp; f(0)&amp;=1\\
+f&#39;(x)&amp;=e^x      &amp; f&#39;(0)&amp;=1\\
+f^{(n)}(x)&amp;=e^x &amp; f^{(n)}(0)&amp;=1
 \end{align*}\]</span>
-So the individual terms in the integral, with constants taken outside of the integral, are
+The <span class="math inline">\(n^{\text{th}}\)</span> degree Taylor polynomial is
 <span class="math display">\[
-\int_0^{2\pi} (v(t))^2\:dt = 9\int_0^{2\pi} \sin^2(2t)\:dt + 30\int_0^{2\pi} \sin(2t)\cos(4t)\:dt + 25 \int_0^{2\pi}\cos^2(4t)\:dt
+P_{n,0}(x)=1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+\dotsb+\frac{x^n}{n!}
 \]</span>
-We evaluate each of the terms separately:
+and the Taylor series is
 <span class="math display">\[
-9\int_0^{2\pi} \sin^2(2t)\:dt = 9\int_0^{2\pi}\frac{1-\cos(4t)}{2}\:dt\]</span>
-having used the cosine double-angle formula: <span class="math inline">\(\cos(2\theta) = 1- 2\sin^2(\theta)\)</span>.
-<span class="math display">\[
-\frac{9}{2}\left[t - \frac{1}{4}\sin(4t)\right]_0^{2\pi} = \frac{9}{2}(2\pi - 0) = 9\pi\]</span>
-For the second term, we again need a trigonometric identity, in this case the product to sum formula <span class="math inline">\(\sin(\theta)\cos(\phi) = \frac{1}{2}(\sin(\theta + \phi) + \sin(\theta - \phi))\)</span>:
-<span class="math display">\[
-30\int_0^{2\pi} \sin(2t)\cos(4t)\: dt = \frac{30}{2}\int_0^{2\pi} = \sin(6t) + \sin(-2t)\:dt = 15\int_0^{2\pi}\sin(6t) - \sin(2t)\:dt \\= 15\left[-\frac{1}{6}\cos(6t) + \frac{1}{2}\cos(2t)\right]_0^{2\pi} = 0
-\]</span>
-And finally, using <span class="math inline">\(\cos^2(4t) = \frac{1}{2}(\cos(8t)+1)\)</span>:
-<span class="math display">\[
-25\int_0^{2\pi}\cos^2(4t)\: dt = \frac{25}{2}\int_0^{2\pi}\cos(8t) + 1\:dt \\= \frac{25}{2}\left[\frac{1}{8}\sin(8t) + t\right]_0^{2\pi} = 25\pi
-\]</span>
-Putting these three terms together:
-<span class="math display">\[
-\int_0^{2\pi}(v(t))^2\:dt = 34\pi\\
-\left(\frac{1}{2\pi - 0}\int_0^{2\pi}(v(t))^2\:dt\right)^{\frac{1}{2}} = \left(\frac{34\pi}{2\pi}\right)^\frac{1}{2} = \sqrt{17}
+\sum_{n=0}^{\infty}\frac{x^n}{n!}.
 \]</span></p></li>
-<li><p>The <em>volume of revolution</em> of a curve is defined as
-<span class="math display">\[\int_a^b \pi (f(x))^2 \; dx\]</span>
-Find the volume of revolution of the curve
-<span class="math display">\[f(x)=e^{-2x}\]</span>
-between <span class="math inline">\(a=1\)</span> and <span class="math inline">\(b=2\)</span>.</p>
-<p>Answer:</p>
-<p>If <span class="math inline">\(f(x) = e^{-2x}\)</span> then <span class="math inline">\((f(x))^2 = e^{-4x}\)</span>. So the voume of revolution of the curve <span class="math inline">\(f(x)\)</span> between <span class="math inline">\(a=1\)</span> and <span class="math inline">\(b=2\)</span> is
-<span class="math display">\[
-\int_1^2 \pi e^{-4x}\;dx = \pi\left[-\frac{1}{4}e^{-4x}\right]_1^2 = \pi\left(\frac{-e^{-8}}{4} - \frac{-e^{-4}}{4}\right) =0.0141 \text{ to 3d.p.}
-\]</span></p></li>
-<li><p>The points <span class="math inline">\((1,1)\)</span> and <span class="math inline">\((2,8)\)</span> on the curve <span class="math inline">\(y=x^3\)</span> are joined by a straight line. Calculate the area between the line and the curve.</p>
-<p>Answer:</p>
-<p>The area between two curves described by funtions <span class="math inline">\(f_1(x)\)</span> and <span class="math inline">\(f_2(x)\)</span> is the area between the function <span class="math inline">\((f_1(x) - f_2(x))\)</span> and the <span class="math inline">\(x\)</span>-axis. First, find the equation of the line between the points <span class="math inline">\((1,1)\)</span> and <span class="math inline">\((2,8)\)</span>:
-<span class="math display">\[
-f_1(x) = 7x - 6, \quad \text{since the gradient is } \frac{8-1}{2-1}.
-\]</span>
-So the area between the line <span class="math inline">\(y=f_1(x)\)</span> and the line <span class="math inline">\(y=f_2(x) = x^3\)</span> is
+<li><p>Derive the Taylor series for <span class="math inline">\(\sin(x+a)\)</span> at <span class="math inline">\(a=\dfrac{\pi}{2}\)</span> (this converges for all <span class="math inline">\(x\)</span>).</p>
+<p>Answers:</p>
+<p>The derivatives at <span class="math inline">\(\dfrac{\pi}{2}\)</span> form a periodic sequence of period <span class="math inline">\(4\)</span>
 <span class="math display">\[\begin{align*}
-\int_1^2 (f_1(x)-f_2(x))\;dx &amp;= \int_1^2 7x-6-x^3\;dx\\
-&amp;= \left[\frac{7}{2}x^2 - 6x - \frac{1}{4}x^4\right]_1^2\\
-&amp;= (14-12-4)-(\frac{7}{2} - 6 -\frac{1}{4})\\
-&amp;= \frac{3}{4}
-\end{align*}\]</span></p></li>
+f(x)&amp;=\sin(x)       &amp; f\left(\frac{\pi}{2}\right)&amp;=1\\
+f^{(1)}(x)&amp;=\cos(x)      &amp; f^{(1)}\left(\frac{\pi}{2}\right)&amp;=0\\
+f^{(2)}(x)&amp;=-\sin(x)     &amp; f^{(2)}\left(\frac{\pi}{2}\right)&amp;=-1\\
+f^{(3)}(x)&amp;=-\cos(x)     &amp; f^{(3)}\left(\frac{\pi}{2}\right)&amp;=0\\
+f^{(4)}(x)&amp;=\sin(x) &amp; f^{(4)}\left(\frac{\pi}{2}\right)&amp;=1
+\end{align*}\]</span></p>
+<p>and the Taylor series is
+<span class="math display">\[
+\sum_{n=0}^{\infty}(-1)^{n}\frac{x^{2n}}{(2n)!}
+\]</span>
+which we recognise as the Taylor series for <span class="math inline">\(\cos\)</span> about <span class="math inline">\(0\)</span>, which should be unsurprising since <span class="math inline">\(\sin\left(x+\frac{\pi}{2}\right)=\cos(x)\)</span>.</p></li>
+<li><p>From the Taylor series of <span class="math inline">\(f(x)=\ln(x+1)\)</span> at zero (this converges for <span class="math inline">\(-1 &lt; x \le 1\)</span>), show that:
+<span class="math display">\[
+\sum_{n=1}^{\infty}\frac{(-1)^{n+1}}{n}=\ln(2).
+\]</span></p>
+<p>Answers:</p>
+<p>Since we are told that the Taylor series equals <span class="math inline">\(f(x)\)</span> for <span class="math inline">\(-1 &lt; x\le 1\)</span> and <span class="math inline">\(f(1)=\ln(2)\)</span>, we have
+<span class="math display">\[
+\sum_{n=1}^{\infty}(-1)^{n+1}\frac{1}{n}=\ln(2).
+\]</span></p></li>
+<li><p>The Taylor series for <span class="math inline">\(\tan^{-1}\)</span> at zero is
+<span class="math display">\[\tan^{-1}(x) = \sum_{n=0}^\infty \frac{(-1)^n x^{2n+1}}{2n+1}\]</span>
+which converges for <span class="math inline">\(|x|\leq 1\)</span>. Use this to approximate <span class="math inline">\(\pi\)</span> (you could do this in MATLAB/Python using a for loop to easily experiment with the number of terms in the sum).</p>
+<p>Answer:</p>
+<p>We have that <span class="math inline">\(\tan^{-1}(1)=\frac{\pi}{4}\)</span>, so can find <span class="math inline">\(\pi\)</span> as <span class="math inline">\(4\tan^{-1}(1)=4\sum_{n=0}^\infty \frac{(-1)^n}{2n+1}\)</span>. We can get an approximation by summing over the first <span class="math inline">\(N\)</span> terms of this infinite series.</p>
+<p>For N=1000 we get $… $</p></li>
+<li><p>Prove Euler’s formula for complex numbers using the Taylor series for <span class="math inline">\(e^x\)</span>, <span class="math inline">\(\cos(x)\)</span> and <span class="math inline">\(\sin(x)\)</span> at <span class="math inline">\(0\)</span>, .</p>
+<p>Answer:
+First, recall the Taylor series for <span class="math inline">\(e^x\)</span>
+<span class="math display">\[
+e_x = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \frac{x^4}{4!} + \cdots
+\]</span>
+And now let <span class="math inline">\(x = i\theta\)</span>. The odd terms will become imaginary, while the even powers will have changing signs with <span class="math inline">\(i^2\)</span>:</p>
+<p><span class="math display">\[\begin{align}
+e^{i\theta} &amp;= 1 + i\theta + \frac{i^2 \theta^2}{2!} + \frac{i^3 \theta^3}{3!} + \frac{i^4 \theta^4}{4!} + \cdots \\
+&amp;= 1 + i\theta - \frac{\theta^2}{2!} - i\frac{\theta^3}{3!} + \frac{\theta^4}{4!} + \cdots
+\end{align}\]</span></p>
+<p>Now, group every second term together to identify the Tarlor series of <span class="math inline">\(\cos(x)\)</span> and <span class="math inline">\(i\sin(x)\)</span>.</p>
+<p><span class="math display">\[
+e^x = \left(1 - \frac{\theta^2}{2!} + \frac{\theta^4}{4!} + \cdots \right) + i\left(\theta - \frac{\theta^3}{3!} + \frac{x^5}{5!} + \cdots\right)\\
+e^x = \cos(\theta) + i \sin(\theta)
+\]</span></p></li>
+<li><p>Find the Taylor series for <span class="math inline">\(\cos(x)\)</span> at zero by differentiating the Taylor series for <span class="math inline">\(\sin(x)\)</span> at zero term by term (we can differentiate any power series term by term for values of <span class="math inline">\(x\)</span> where the series converges).</p>
+<p>Answers:
+Taking the derivative of the power series, and noting that <span class="math inline">\(\frac{n}{n!} = \frac{1}{(n-1)!}\)</span>
+<span class="math display">\[
+\sin(x) = x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} + \cdots\\
+\frac{d}{dx}\sin (x)= 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \frac{x^6}{6!} + \cdots = \cos(x)
+\]</span></p></li>
+<li><p>Find the Taylor series of <span class="math inline">\(\dfrac{1}{1-x}\)</span> at <span class="math inline">\(a=0\)</span> (this converges for <span class="math inline">\(|x|&lt;1\)</span>). Hence find the Taylor series of <span class="math inline">\(\dfrac{1}{(1-x)^2}\)</span> at <span class="math inline">\(a=0\)</span>.</p>
+<p>Answers:</p>
+<p><span class="math display">\[\begin{align*}
+f(x)&amp;=(1-x)^{-1}            &amp; f(0)&amp;=1\\
+f^{(1)}(x)&amp;=(1-x)^{-2}      &amp; f^{(1)}(0)&amp;=1\\
+f^{(2)}(x)&amp;=2(1-x)^{-3}     &amp; f^{(2)}(0)&amp;=2\\
+f^{(3)}(x)&amp;=6(1-x)^{-4}     &amp; f^{(3)}(0)&amp;=6=3!\\
+f^{(4)}(x)&amp;=24(1-x)^{-5}     &amp; f^{(4)}(0)&amp;=24=4!
+\end{align*}\]</span>
+so the Taylor Series is
+<span class="math display">\[\begin{equation*}
+\sum_{n=0}^{\infty}x^n.
+\end{equation*}\]</span></p>
+<p>Now to find the Taylor series of <span class="math inline">\(\frac{1}{(1-x)^2}\)</span> at <span class="math inline">\(0\)</span>, we note that <span class="math inline">\(\frac{d}{dx}\frac{1}{(1-x)}=\frac{1}{(1-x)^2}\)</span>, hence we can obtain the Taylor series by differentiating the series for <span class="math inline">\(\frac{1}{(1-x)}\)</span> term by term, obtaining:
+<span class="math display">\[\begin{equation*}
+\sum_{n=1}^{\infty}nx^{n-1}.
+\end{equation*}\]</span></p></li>
 </ol>
 
 </div>

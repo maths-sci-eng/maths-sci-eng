@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Exercise Set 12 Answers | Mathematics for Scientists and Engineers</title>
   <meta name="description" content="Mathematics Lecture Notes for UoE Penryn Science and Engineering Disciplines." />
-  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Exercise Set 12 Answers | Mathematics for Scientists and Engineers" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Dr Mark Callaway" />
 
 
-<meta name="date" content="2023-09-14" />
+<meta name="date" content="2023-09-27" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -59,6 +59,10 @@
 
 
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -135,7 +139,8 @@
 <li class="chapter" data-level="3.3.1" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#simultaneous-linear-equations"><i class="fa fa-check"></i><b>3.3.1</b> Simultaneous linear equations</a></li>
 <li class="chapter" data-level="3.3.2" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#non-linear-simultaneous-equations"><i class="fa fa-check"></i><b>3.3.2</b> Non-linear simultaneous equations</a></li>
 </ul></li>
-<li class="chapter" data-level="3.4" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#inequalities-1"><i class="fa fa-check"></i><b>3.4</b> Inequalities</a></li>
+<li class="chapter" data-level="3.4" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#exponentials-and-logarithms"><i class="fa fa-check"></i><b>3.4</b> Exponentials and Logarithms</a></li>
+<li class="chapter" data-level="3.5" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#inequalities-1"><i class="fa fa-check"></i><b>3.5</b> Inequalities</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="trigonometry.html"><a href="trigonometry.html"><i class="fa fa-check"></i><b>4</b> Trigonometry</a>
 <ul>
@@ -353,6 +358,7 @@
 <li class="chapter" data-level="" data-path="exercise-set-15.html"><a href="exercise-set-15.html"><i class="fa fa-check"></i>Exercise Set 15</a></li>
 <li class="chapter" data-level="" data-path="exercise-set-16.html"><a href="exercise-set-16.html"><i class="fa fa-check"></i>Exercise Set 16</a></li>
 <li class="chapter" data-level="" data-path="exercise-set-17.html"><a href="exercise-set-17.html"><i class="fa fa-check"></i>Exercise Set 17</a></li>
+<li class="chapter" data-level="" data-path="exercise-set-18.html"><a href="exercise-set-18.html"><i class="fa fa-check"></i>Exercise Set 18</a></li>
 <li class="chapter" data-level="" data-path="notation.html"><a href="notation.html"><i class="fa fa-check"></i>Notation</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -378,135 +384,159 @@
 <div id="exercise-set-12-answers" class="section level1 unlisted unnumbered hasAnchor">
 <h1>Exercise Set 12 Answers<a href="exercise-set-12-answers.html#exercise-set-12-answers" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <ol style="list-style-type: decimal">
-<li>Determine the following integrals by making use of trigonometric or hyperbolic identities.
+<li><p>Determine the following indefinite integrals</p>
 <ol style="list-style-type: lower-alpha">
-<li><span class="math inline">\(\displaystyle \int_0^{\pi/4}4\sin(3\theta)\cos(\theta)d\theta\)</span></li>
-<li><span class="math inline">\(\displaystyle \int \left( \cos\left(\frac{x}{2}\right) - \sin\left(\frac{x}{2}\right)\right)^2 \, dx\)</span></li>
-<li><span class="math inline">\(\displaystyle \int \sin^3(x)\, dx\)</span></li>
-<li><span class="math inline">\(\displaystyle \int \frac{ \cos(2x)} { \cos^2(x) \sin^2(x)} \, dx\)</span></li>
-<li><span class="math inline">\(\displaystyle \int \cos(x) \sin(2x) \, dx\)</span></li>
-<li><span class="math inline">\(\displaystyle \int \tan(2x) \,dx\)</span></li>
-<li><span class="math inline">\(\displaystyle \int \sinh^3(x) \cosh^2(x)\)</span></li>
+<li><span class="math inline">\(\int 2x^7\; dx\)</span></li>
+<li><span class="math inline">\(\int 5x^2+2x-1 \; dx\)</span></li>
+<li><span class="math inline">\(\int \sin(\theta)+\cos(\theta) \; d\theta\)</span></li>
+<li><span class="math inline">\(\int 3e^t + \frac{2}{t} \; d t\)</span></li>
+<li><span class="math inline">\(\int x^\frac{1}{2} \; dx\)</span></li>
 </ol>
-Answers:
+<p>Answers:</p>
 <ol style="list-style-type: lower-alpha">
-<li><span class="math display">\[\int_0^{\frac{\pi}{4}}4\sin(3\theta)\cos(\theta)\, d\theta\]</span>
-Use the product to sum trigonometric identity: <span class="math inline">\(\sin(A)\cos(B) = \frac{1}{2}\left(\sin(A+B) + \sin(A+B)\right)\)</span>.
+<li><span class="math inline">\(\int 2x^7 \; dx = \frac{1}{4}x^8 + c\)</span></li>
+<li><span class="math inline">\(\int 5x^2 + 2x-1\; dx = \frac{5}{3}x^3 + x^2 - x + c\)</span></li>
+<li><span class="math inline">\(\int \sin(\theta)+\cos(\theta) \; d\theta = -\cos(\theta) + \sin(\theta) + c\)</span></li>
+<li><span class="math inline">\(\int 3e^t + \frac{2}{t} \; dt = 3e^t + 2\ln(t) + c\)</span></li>
+<li><span class="math inline">\(\int x^\frac{1}{2} \; dx = \frac{2}{3}x^{\frac{3}{2}} + c\)</span></li>
+</ol></li>
+<li><p>Determine the following definite integrals</p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(\int_0^2 x^2-2x\; dx\)</span></li>
+<li><span class="math inline">\(\int_4^{16} \frac{2}{\sqrt{x}} \; dx\)</span></li>
+<li><span class="math inline">\(\int_{-r}^r \frac{mx^2}{2r}\: dx\)</span></li>
+<li><span class="math inline">\(\int_{-\frac{\pi}{2}}^\frac{\pi}{2}\cos(x)\; dx\)</span></li>
+<li><span class="math inline">\(\int_{\ln(2)}^{\ln(3)} e^x\; dx\)</span></li>
+</ol>
+<p>Answers:</p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(\int_0^2 x^2-2x\; dx = \left[\frac{x^3}{3} - x^2\right]_0^2 = \left(\frac{2^3}{3} - 2^2\right) - 0 = -\frac{4}{3}\)</span></li>
+<li><span class="math inline">\(\int_4^{16} \frac{2}{\sqrt{x}} \; dx = \int_4^16 2x^{-\frac{1}{2}}\;dx = \left[4x^{\frac{1}{2}}\right]_4^16 = 16 - 8 = 8\)</span></li>
+<li>Note that the limit, <span class="math inline">\(r\)</span>, appears inside the integral, but it is just a constant. It is explicitly taken out of the integral here
+<span class="math inline">\(\int_{-r}^r \frac{mx^2}{2r}\:dx = \frac{m}{2r}\int_{-r}^r x^2 \: dx = \frac{m}{2r}\left[\frac{1}{3}x^3\right]_{-r}^r = \frac{m}{2r}\left(\frac{r^3}{3} + \frac{r^3}{3}\right) = \frac{mr^2}{3}\)</span></li>
+<li><span class="math inline">\(\int_{-\frac{\pi}{2}}^\frac{\pi}{2}\cos(x)\; dx = \left[\sin(x)\right]_{-\frac{\pi}{2}}^\frac{\pi}{2} = \sin(\pi/2) - \sin(\pi/2) = 2\)</span></li>
+<li><span class="math inline">\(\int_{\ln(2)}^{\ln(3)} e^x\; dx = \left[e^x\right]_{\ln(2)}^{\ln(3)} = e^{\ln(3)} - e^{\ln(2)} = 3-2 = 1\)</span></li>
+</ol></li>
+<li><p>Find the area between the curve and the <span class="math inline">\(x\)</span>-axis of the function <span class="math inline">\(f(x)=x^3-x\)</span> and the lines <span class="math inline">\(x=0\)</span> and <span class="math inline">\(x=2\)</span>.</p>
+<p>Answer:</p>
+<p>We are looking for the area enclosed by the function and the <span class="math inline">\(x\)</span>-axis, but we cannot simply take the definite integral from <span class="math inline">\(0\)</span> to <span class="math inline">\(2\)</span> as the function is negative at some points on this interval.</p>
+<p>The roots of <span class="math inline">\(f(x)=x^3-x=x(x+1)(x-1)\)</span> are <span class="math inline">\(-1,0,1\)</span> and these are where the function changes sign. We can plug in values between the roots to see where <span class="math inline">\(f(x)\)</span> is positive and where it is negative. Since we are interested in the interval from <span class="math inline">\(0\)</span> to <span class="math inline">\(2\)</span> we check <span class="math inline">\(f(0.5)=-3.75\)</span> and <span class="math inline">\(f(2)=6\)</span>. So the area will be given by
+<span class="math display">\[A=\int_0^1 -f(x)\, dx + \int_1^2 f(x)\, dx.\]</span>
+Hence
+<span class="math display">\[A=\left[-\frac{1}{4}x^4 + \frac{1}{2}x^2\right]_0^1 + \left[\frac{1}{4}x^4 - \frac{1}{2}x^2\right]_1^2 = (\frac{1}{4}-0) + (2 - (-1/4)) = \frac{5}{2}.\]</span></p></li>
+<li><p>The velocity <span class="math inline">\(v\)</span> (<span class="math inline">\(\text{ms}^{-1}\)</span>) of a particle moving in a straight line at time <span class="math inline">\(t\)</span> (<span class="math inline">\(\text{s}\)</span>) is given by:
+<span class="math display">\[v=6t^2-30t-36\quad t&gt;0\]</span>
+By integrating, find the distance travelled by the particle between <span class="math inline">\(t=3\)</span> and <span class="math inline">\(t=5\)</span> seconds.</p>
+<p>Answer:</p>
+<p><span class="math display">\[\int_3^5 6t^2 - 30t - 36\: dt = \left[2t^3 - 15t^2 - 36t\right]_3^5 = -116\]</span>
+Since we are looking for a distance, we take the absolute value: <span class="math inline">\(116\text{m}\)</span>.</p></li>
+<li><p>Find the following integrals using a suitable substitution.</p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(\int (4x-3)^5 \; dx\)</span></li>
+<li><span class="math inline">\(\int 4\sin(3x+2)\; dx\)</span></li>
+<li><span class="math inline">\(\int_2^5 \frac{1}{1-2x} \; dx\)</span></li>
+<li><span class="math inline">\(\int \frac{1}{\sqrt{(5-3x)^3}}\; dx\)</span></li>
+<li><span class="math inline">\(\int \frac{4x}{\sqrt{(x^2+3)^3}}\; dx\)</span></li>
+<li><span class="math inline">\(\int 2xe^{x^2-5}\; dx\)</span></li>
+<li><span class="math inline">\(\int \frac{\sin(\sqrt{x})}{\sqrt{x}}\; dx\)</span></li>
+<li><span class="math inline">\(\int \cos(\theta)\sin(\theta)\; d\theta\)</span></li>
+<li><span class="math inline">\(\int \frac{\cos(x)}{1+\sin(x)}\; dx\)</span></li>
+</ol>
+<p>Answers:</p>
+<ol style="list-style-type: lower-alpha">
+<li><p><span class="math inline">\(\int (4x-3)^5\:dx\)</span>. Let <span class="math inline">\(u=4x-3\)</span>, so <span class="math inline">\(\frac{du}{dx}=4 \Rightarrow dx = \frac{1}{4}du\)</span>
+<span class="math display">\[
+\int (4x-3)^5\;dx = \int u^5 \frac{1}{4}du =\frac{u^6}{24} +c = \frac{(4x-3)^6}{24} + c\]</span></p></li>
+<li><p><span class="math inline">\(\int 4\sin(3x+2)\;dx\)</span>. Let <span class="math inline">\(u=3x+2\)</span>, so <span class="math inline">\(\frac{du}{dx} = 3 \Rightarrow dx = \frac{1}{3}du\)</span>,
+<span class="math display">\[
+\int 4\sin(3x+2)\;dx = \frac{4}{3}\int\sin(u)\:du = -\frac{4}{3}\cos(u) + c = -\frac{4}{3}\cos(3x+2) + c
+\]</span></p></li>
+<li><p><span class="math inline">\(\int_2^5\frac{1}{1-2x}\:dx\)</span>. Let <span class="math inline">\(u=1-2x\)</span>, so <span class="math inline">\(\frac{du}{dx} = -2 \Rightarrow dx = -\frac{1}{2}du\)</span>. This is a definite integral, so the limits must also be given in terms of u:
 <span class="math display">\[\begin{align*}
-2\int_0^{\frac{\pi}{4}}\sin(4\theta) + \sin(2\theta)\, d\theta &amp;= 2\left[\frac{-\cos(4\theta)}{4} + \frac{-\cos(2\theta)}{2}\right]_0^{\frac{\pi}{4}}\\
-&amp; = 2\left(\frac{1}{4} - 0 + \frac{1}{4}+\frac{1}{2}\right)\\
-&amp; = 2
-\end{align*}\]</span></li>
-<li><span class="math display">\[\begin{align*}
-\int \left( \cos \frac{x}{2} - \sin \frac{x}{2}\right)^2 \, dx &amp;=  \int \left(\cos^2 \frac{x}{2}+\sin^2 \frac{x}{2}- \sin x \right) \, dx\\
-&amp;= \int \left(1 - \sin x \right) \, dx\\
-&amp;=  x+\cos x+ C
-\end{align*}\]</span></li>
-<li><span class="math display">\[\begin{align*}
-\int \sin^3 x \, dx &amp;= \int \sin x (1 - \cos^2 x) \, dx\\
-&amp; =  -\cos x + \frac{1}{3} \cos^3 x + C
-\end{align*}\]</span></li>
-<li><span class="math display">\[\begin{align*}
-\int \frac{ \cos 2x} { \cos^2 x \sin^2 x} \, dx&amp;= \int \frac{\cos^2x - \sin^2 x} { \cos^2 x \sin^2 x} \, dx\\
-&amp;=\int \left( \frac{1} { \sin^2 x } - \frac{1} { \cos^2 x} \right) \, dx\\
-&amp;= -\cot x -\tan x+C
-\end{align*}\]</span></li>
-<li><span class="math display">\[\begin{align*}
-\int \cos x \sin 2x \, dx = \int 2 \sin x \cos^2 x  \, dx = -{2 \over 3} \cos^3 x + C
+\int_{x=2}^{x=5} \frac{1}{1-2x}\:dx &amp;= -\frac{1}{2}\int_{u=-3}^{u=5}\frac{du}{u} = -\frac{1}{2}\left[\ln(u)\right]_{-3}^{-9}\\
+&amp;= -\frac{1}{2}(\ln(-9) - \ln(-3)) = -\frac{1}{2}\ln\left(\frac{-9}{-3}\right) = -\frac{1}{2}\ln(3)
+\end{align*}\]</span></p></li>
+<li><p><span class="math inline">\(\int\frac{1}{\sqrt{(5-3x)^3}}\:dx\)</span>. Let <span class="math inline">\(u=5-3x\)</span>, so <span class="math inline">\(\frac{du}{dx} = -3 \Rightarrow dx = -\frac{du}{3}\)</span>
+<span class="math display">\[
+\int\frac{1}{\sqrt{(5-3x)^3}}\:dx = \int u^{-\frac{3}{2}}\:du = \frac{2}{3}u^{-\frac{1}{2}} + c = \frac{2}{3}(5-3x)^{-\frac{1}{2}} + c
+\]</span></p></li>
+<li><p><span class="math inline">\(\int\frac{4x}{\sqrt{(x^2 + 3)^3}}\:dx\)</span>. Let <span class="math inline">\(u=x^2 +3\)</span>, so <span class="math inline">\(\frac{du}{dx} = 2x \Rightarrow dx = \frac{du}{2x}\)</span>. Here, the <span class="math inline">\(4x\)</span> term remains in the denominator after substituting, but will be cancelled out once <span class="math inline">\(dx\)</span> is substituted.
+<span class="math display">\[
+\int\frac{4x}{\sqrt{(x^2 + 3)^3}}\:dx = \int\frac{4x}{u^{\frac{3}{2}}}\frac{du}{2x} = \int 2u^{-\frac{3}{2}} = -4u^{-\frac{1}{2}} + c = -4(x^2+3)^{-\frac{1}{2}} + c
+\]</span>
+This could also have been solved by reverse chain rule (think about how the answer would be differentiated, and see that the integral was of the form <span class="math inline">\(g&#39;(x)f(g(x))\)</span>.</p></li>
+<li><p><span class="math inline">\(\int 2x e^{x^2-5}\:dx\)</span>. Let <span class="math inline">\(u=x^2 - 5\)</span> so <span class="math inline">\(\frac{du}{dx} = 2x \Rightarrow dx = \frac{du}{2x}\)</span>. Again, the remaining term in <span class="math inline">\(x\)</span> is removed after substituting for <span class="math inline">\(u\)</span> without needed to take a square root.
+<span class="math display">\[
+\int 2x e^u \frac{du}{2x} = \int e^u \: du = e^u + c = e^{x^2 -5} + c
+\]</span>
+Which could have been solved by identifying reverse chain rule.</p></li>
+<li><p><span class="math inline">\(\int \frac{\sin(\sqrt{x})}{\sqrt{x}} dx\)</span>. Let <span class="math inline">\(u= \sqrt{x}\)</span> so <span class="math inline">\(\frac{du}{dx} = \frac{1}{2\sqrt{x}} \Rightarrow \frac{1}{\sqrt{x}}dx = 2du\)</span>.
+<span class="math display">\[\int \frac{\sin(\sqrt{x})}{\sqrt{x}} dx=2\int \sin(u) du = -2\cos(u)+c=-2\sin(\sqrt{x})+c.\]</span></p></li>
+<li><p><span class="math inline">\(\int \cos(\theta)\sin(\theta)\: d\theta\)</span>. Let <span class="math inline">\(u= \sin(\theta)\)</span> so <span class="math inline">\(\frac{du}{d\theta} = \cos(\theta) \Rightarrow d\theta = \frac{du}{\cos(\theta)}\)</span>.
+<span class="math display">\[
+\int \cos(\theta)\sin(\theta)\: d\theta = \int \cos(\theta)u\frac{du}{\cos(\theta)} = \int u\: du = \frac{1}{2}u^2 + c = \frac{1}{2}\sin^2(\theta) + c
+\]</span></p></li>
+<li><p><span class="math inline">\(\int \frac{\cos(x)}{1+\sin(x)}\:dx\)</span>. Let <span class="math inline">\(u=1+\sin(x)\)</span> so <span class="math inline">\(\frac{du}{dx} = \cos(x) \Rightarrow dx = \frac{du}{\cos(x)}\)</span>
+<span class="math display">\[
+\int \frac{\cos(x)}{1+\sin(x)}\:dx = \int \frac{1}{u}\:du = \ln(u)+c = \ln(1+\sin(x)) + c\]</span></p></li>
+</ol></li>
+<li><p>The <em>Root Mean Square</em> (RMS) value of a signal over the interval <span class="math inline">\(a\)</span> to <span class="math inline">\(b\)</span> is defined as
+<span class="math display">\[\left(\frac{1}{b-a}\int_{a}^{b} (f(x))^2 \; dx\right)^\frac{1}{2}\]</span>
+Find the RMS of the voltage signal
+<span class="math display">\[V(t)=3\sin(2t)+5\cos(4t)\]</span>
+between <span class="math inline">\(a=0\)</span> and <span class="math inline">\(b=2\pi\)</span>.</p>
+<p>Answer:</p>
+<p>Firstly, multiply out the square term inside the integral, so
+<span class="math display">\[\begin{align*}
+v(t)^2 &amp;= (3\sin(2t) + 5\cos(4t))(3\sin(2t) + 5\cos(4t))\\
+&amp;= 9\sin^2(2t) + 30\sin(2t)\cos(4t) + 25\cos^2(4t)
 \end{align*}\]</span>
-Having used <span class="math inline">\(\sin(2x) = 2\sin(x)\cos(x)\)</span> and using reverse chain rule, identifying that the integral was of the form <span class="math inline">\(g&#39;(x)f&#39;(g(x))\)</span>, with <span class="math inline">\(g&#39;(x) = \cos(x)\)</span>, <span class="math inline">\(f&#39;(x) = \cos^2(x)\)</span>, <span class="math inline">\(\int g&#39;(x)f&#39;(g(x))\, dx = f(g(x))\)</span>, since <span class="math inline">\(\frac{d}{dx} (f(g(x))) = g&#39;(x)f&#39;(g(x))\)</span>.
-Or, can use the product to sum identity again:
-<span class="math display">\[\int \cos x \sin 2x \, dx = \int \frac{1}{2} (\sin 3 x +\sin x) \, dx = - \frac{1}{6} \cos 3x - {1 \over 2} \cos x + C.\]</span></li>
-<li><span class="math display">\[\int \tan 2x \,dx =  - {1  \over 2} \ln \vert \cos 2x \vert  + C = {1 \over 2} \ln \vert \sec 2 x \vert +C\]</span>
-Where <span class="math inline">\(\int\tan(x)dx\)</span> can be solved with substitution, by letting <span class="math inline">\(t =\cos(t)\)</span> and <span class="math inline">\(dx = \frac{dt}{-\sin(x)}\)</span>, so <span class="math inline">\(\int \frac{-1}{t}\, dt = -\ln(t) + C = \ln(\csc(x)) + c\)</span>. Alternatively, the integral of <span class="math inline">\(\tan(x)\)</span> can be identified as reverse chain rule: <span class="math inline">\(\int g&#39;(x)f&#39;(g(x))\,dx = f(g(x))\)</span>.</li>
-<li><span class="math display">\[\begin{align*}
-\int \sinh^3 x \cosh^2 x \, dx &amp;= \int \sinh x (\cosh^2 x - 1) \cosh^2 x \, dx\\
-&amp;= - {1 \over 3} \cosh^3 x +{1 \over 5} \cosh^5 x +C
-\end{align*}\]</span>
-having used <span class="math inline">\(\sinh^2(x) = 1 - \cosh^2(x)\)</span> and reverse chain rule, or substitution with <span class="math inline">\(u = \cosh(x)\)</span> and <span class="math inline">\(du = \sinh(x)dx\)</span>.</li>
-</ol></li>
-<li>Determine the following integrals using the method of partial fractions.
-<ol style="list-style-type: lower-alpha">
-<li><span class="math inline">\(\displaystyle \int \frac{1}{x^2+x-6} \, dx\)</span></li>
-<li><span class="math inline">\(\displaystyle \int \frac{-12u-13}{(2u+1)(u-3)} \, du\)</span></li>
-<li><span class="math inline">\(\displaystyle \int \frac{4x^2+13x-4}{2x^2+5x-3}\, dx\)</span></li>
-<li><span class="math inline">\(\displaystyle \int \frac{x^3}{x^2-1}\, dx\)</span></li>
-<li><span class="math inline">\(\displaystyle \int \frac{x^5-2x^2}{x^2-1} \, dx\)</span></li>
-<li><span class="math inline">\(\displaystyle \int \frac{z+1}{(z-1)^2} \, dz\)</span></li>
-<li><span class="math inline">\(\displaystyle \int \frac{5y^2}{(y^2+1)(2y-1)} \, dy\)</span></li>
-</ol>
-Answers:
-<ol style="list-style-type: lower-alpha">
-<li><span class="math display">\[\frac{1}{x^2+x-6} = \frac{1}{(x+3)(x-2)} = \frac{A}{x+3}+\frac{B}{x-2} \frac{A(x-2) + B(x+3)}{(x+3)(x-2)}\]</span>
-Equating the powers of <span class="math inline">\(x\)</span> and solving the resulting simultaneous equations gives <span class="math inline">\(A + B = 0\)</span> and <span class="math inline">\(3B-2A = 1\)</span>, so <span class="math inline">\(A = -\frac{1}{5}. B = \frac{1}{5}\)</span>. So
-<span class="math display">\[\int\frac{1}{x^2+x-6}\,dx = \int \frac{-1}{5(x+3)} + \frac{1}{5(x-2)}\, dx = -\frac{1}{5}\ln(x+3) + \frac{1}{5}\ln(x-2) + c\]</span></li>
-<li><span class="math display">\[\frac{-12u - 13}{(2u+1)(u-3)} = \frac{A}{2u+1} + \frac{B}{u-3} = \frac{A(u-3) + B(2u+1)}{(2u+1)(u-3)}\]</span>
-With the numerator given two simultaneous equations solved by <span class="math inline">\(A=2,B=-7\)</span>. So
-<span class="math display">\[\int\frac{-12u-13}{(2u+1)(u-3)}\,du = \int \frac{2}{2u+1} + \frac{-7}{u-2}\,du = \ln(2u+1) - 7\ln(u-3) + c\]</span></li>
-<li><span class="math display">\[\frac{4x^2 + 13x - 4}{2x^2 + 5x - 3} = \frac{A}{2x-1} + \frac{B}{x+3} + C\]</span>
-Since the order of the numerator is equal to the order of the denominator, a constant term must be included. This gives three equations in <span class="math inline">\(A,B,C\)</span>, which are solved by <span class="math inline">\(A=1,B=1,C=2\)</span>. So
+So the individual terms in the integral, with constants taken outside of the integral, are
+<span class="math display">\[
+\int_0^{2\pi} (v(t))^2\:dt = 9\int_0^{2\pi} \sin^2(2t)\:dt + 30\int_0^{2\pi} \sin(2t)\cos(4t)\:dt + 25 \int_0^{2\pi}\cos^2(4t)\:dt
+\]</span>
+We evaluate each of the terms separately:
+<span class="math display">\[
+9\int_0^{2\pi} \sin^2(2t)\:dt = 9\int_0^{2\pi}\frac{1-\cos(4t)}{2}\:dt\]</span>
+having used the cosine double-angle formula: <span class="math inline">\(\cos(2\theta) = 1- 2\sin^2(\theta)\)</span>.
+<span class="math display">\[
+\frac{9}{2}\left[t - \frac{1}{4}\sin(4t)\right]_0^{2\pi} = \frac{9}{2}(2\pi - 0) = 9\pi\]</span>
+For the second term, we again need a trigonometric identity, in this case the product to sum formula <span class="math inline">\(\sin(\theta)\cos(\phi) = \frac{1}{2}(\sin(\theta + \phi) + \sin(\theta - \phi))\)</span>:
+<span class="math display">\[
+30\int_0^{2\pi} \sin(2t)\cos(4t)\: dt = \frac{30}{2}\int_0^{2\pi} = \sin(6t) + \sin(-2t)\:dt = 15\int_0^{2\pi}\sin(6t) - \sin(2t)\:dt \\= 15\left[-\frac{1}{6}\cos(6t) + \frac{1}{2}\cos(2t)\right]_0^{2\pi} = 0
+\]</span>
+And finally, using <span class="math inline">\(\cos^2(4t) = \frac{1}{2}(\cos(8t)+1)\)</span>:
+<span class="math display">\[
+25\int_0^{2\pi}\cos^2(4t)\: dt = \frac{25}{2}\int_0^{2\pi}\cos(8t) + 1\:dt \\= \frac{25}{2}\left[\frac{1}{8}\sin(8t) + t\right]_0^{2\pi} = 25\pi
+\]</span>
+Putting these three terms together:
+<span class="math display">\[
+\int_0^{2\pi}(v(t))^2\:dt = 34\pi\\
+\left(\frac{1}{2\pi - 0}\int_0^{2\pi}(v(t))^2\:dt\right)^{\frac{1}{2}} = \left(\frac{34\pi}{2\pi}\right)^\frac{1}{2} = \sqrt{17}
+\]</span></p></li>
+<li><p>The <em>volume of revolution</em> of a curve is defined as
+<span class="math display">\[\int_a^b \pi (f(x))^2 \; dx\]</span>
+Find the volume of revolution of the curve
+<span class="math display">\[f(x)=e^{-2x}\]</span>
+between <span class="math inline">\(a=1\)</span> and <span class="math inline">\(b=2\)</span>.</p>
+<p>Answer:</p>
+<p>If <span class="math inline">\(f(x) = e^{-2x}\)</span> then <span class="math inline">\((f(x))^2 = e^{-4x}\)</span>. So the voume of revolution of the curve <span class="math inline">\(f(x)\)</span> between <span class="math inline">\(a=1\)</span> and <span class="math inline">\(b=2\)</span> is
+<span class="math display">\[
+\int_1^2 \pi e^{-4x}\;dx = \pi\left[-\frac{1}{4}e^{-4x}\right]_1^2 = \pi\left(\frac{-e^{-8}}{4} - \frac{-e^{-4}}{4}\right) =0.0141 \text{ to 3d.p.}
+\]</span></p></li>
+<li><p>The points <span class="math inline">\((1,1)\)</span> and <span class="math inline">\((2,8)\)</span> on the curve <span class="math inline">\(y=x^3\)</span> are joined by a straight line. Calculate the area between the line and the curve.</p>
+<p>Answer:</p>
+<p>The area between two curves described by funtions <span class="math inline">\(f_1(x)\)</span> and <span class="math inline">\(f_2(x)\)</span> is the area between the function <span class="math inline">\((f_1(x) - f_2(x))\)</span> and the <span class="math inline">\(x\)</span>-axis. First, find the equation of the line between the points <span class="math inline">\((1,1)\)</span> and <span class="math inline">\((2,8)\)</span>:
+<span class="math display">\[
+f_1(x) = 7x - 6, \quad \text{since the gradient is } \frac{8-1}{2-1}.
+\]</span>
+So the area between the line <span class="math inline">\(y=f_1(x)\)</span> and the line <span class="math inline">\(y=f_2(x) = x^3\)</span> is
 <span class="math display">\[\begin{align*}
-\int\frac{4x^2 + 13x - 4}{2x^2 + 5x - 3}\, dx &amp;= \int \frac{1}{2x-2} + \frac{1}{x+3} + 2 \, dx\\
-&amp;= \frac{1}{2}\ln(2x-1) + \ln(x+3) + 2x + c
-\end{align*}\]</span></li>
-<li><span class="math display">\[\frac{x^3}{x^2-1} = \frac{x^3}{(x+1)(x-1)} = \frac{A}{x+1} + \frac{B}{x-1} + Cx + D\]</span>
-since the numerator is one order higher than the denominator, a linear term must be included.
-<span class="math display">\[\frac{A(x-1) + B(x+1) + Cx(x^2-1) + D(x^2-1)}{x^2-1} = \frac{x^3}{x^2-1}\]</span>
-Giving <span class="math inline">\(A+B=1, B-A = 0\)</span> and <span class="math inline">\(C=1\)</span>. So <span class="math inline">\(A=\frac{1}{2}, B=\frac{1}{2}, C=1\)</span> and
-<span class="math display">\[\begin{align*}
-\int\frac{x^3}{x^2-1}\, dx &amp;= \int \frac{1}{2(x+1)} + \frac{1}{2(x-1)} + 1\, dx\\
-&amp;= \frac{1}{2}\ln(x+1) + \frac{1}{2}\ln(x-1) + x + c\\
-&amp;= \frac{1}{2}\ln(x^2-1) + x + c = \ln((x^2-1)^{\frac{1}{2}}) + x + c
-\end{align*}\]</span></li>
-<li><span class="math display">\[\frac{z+1}{(x-1)^2} = \frac{A}{z-1} + \frac{B}{(x-1)^2}\]</span>
-Since there is a repeated root of the form <span class="math inline">\((z-\alpha)^n\)</span>, so the first <span class="math inline">\(n\)</span> powers of <span class="math inline">\((z-\alpha)\)</span> must appear as denominators in the partial fractions exapnsion.
-<span class="math display">\[\frac{A}{z-1} + \frac{B}{(z-1)^2} = \frac{A(z-1) + B}{(z-1)^2} = \frac{z+1}{(z-1)^2}\]</span>
-The numerator is solved by <span class="math inline">\(A=1\)</span> and <span class="math inline">\(B=3\)</span>, so
-<span class="math display">\[\int \frac{z+1}{(z-1)^2}\,dz = \int \frac{1}{z-1} + \frac{3}{(z-1)^2} \, dz = \ln(z-1) - (z-1)^{-3} + c\]</span></li>
-<li><span class="math display">\[\frac{5y^2}{(y^2+1)(2y-1)} = \frac{Ay+B}{y^2+1} + \frac{C}{2y-1}\]</span>
-with the numerator of the first partial fraction being a linear polynomial since the quadratic in the denominator is irreducible.
-<span class="math display">\[
-\frac{(Ay+B)(2y-1) + C(y^2+1)}{(y^2+1)(2y-1)} = \frac{2Ay^2 - Ay + 2By - B + Cy^2 + 1}{(y^2+1)(2y-1)} = \frac{5y^2}{(y^2+1)(2y-1)}\]</span>
-Equating the powers of <span class="math inline">\(y\)</span> gives
-<span class="math display">\[2A+C = 5,\quad 2B-A = 0,\quad 1-B = 0\\
-\Rightarrow A=2,B=1,C=1\]</span>
-so the integral can be rewritten as the partial fractions
-<span class="math display">\[
-\int \frac{5y^2}{(y^2+1)(2y-1)}\;dy = \int \frac{2y+1}{y^2+1} + \frac{1}{2y-1}\, dy = \tan^{-1}(y) + \ln(y^2+1) + \frac{1}{2}\ln(2y-1) + c\]</span></li>
-</ol></li>
-<li>Determine the following integrals using the method of integration by parts.
-<ol style="list-style-type: lower-alpha">
-<li><span class="math inline">\(\displaystyle \int x \cos(x) \,dx\)</span></li>
-<li><span class="math inline">\(\displaystyle \int t^2 e^{t} \, dt\)</span></li>
-<li><span class="math inline">\(\displaystyle \int e^{x}\sin(x) \, dx\)</span></li>
-<li><span class="math inline">\(\displaystyle \int (x+1)^2 e^{-2x} \, dx\)</span></li>
-<li>$^{-1}(x) , dx $.</li>
-</ol>
-Answers:
-<ol style="list-style-type: lower-alpha">
-<li>Using integration by parts, <span class="math inline">\(\int u\,dv = uv - \int v\,du\)</span> with <span class="math inline">\(u=x\)</span> and <span class="math inline">\(dv = \cos(x)\)</span>
-<span class="math display">\[\int x \cos (x) \, dx = x \sin (x) - \int \sin (x) \, dx = x \sin (x) + \cos (x) + C \]</span></li>
-<li>Let <span class="math inline">\(u = t^2, du = 2t, dv = e^t, v = e^t\)</span>
-<span class="math display">\[\int t^2 e^t \,dt = t^2e^t - \int 2te^t \,dt\]</span>
-Here, perform integration by parts once again. Let <span class="math inline">\(u=t, du = 1, dv = e^t, v = e^t\)</span>
-<span class="math display">\[\int te^t \,dt = te^t - \int e^t \,dt = (t-1)e^t\]</span>
-and the orignal integral becomes
-<span class="math display">\[\int t^2 e^t\,dt = t^2 e^t - 2\int te^t\,dt = t^2 e^t - 2(t-1)e^t = (t^2 -2t + 2)e^t + c\]</span></li>
-<li>Integrating by parts, <span class="math inline">\(\int f\,dg = fg - \int g\,df\)</span> with <span class="math inline">\(f = \sin(x),df = \cos(x), dv = e^x, v = e^x\)</span>.
-<span class="math display">\[
-\int e^x \sin(x)\,dx = e^x \sin(x) - \int e^x \cos(x)\,dx\]</span>
-And we are still left with an integral that must be solved by parts. It looks like this cycle might keep repeating, but in fact, trying out the next step will reveal the answer. Let <span class="math inline">\(u= \cos(x),du=-\sin(x), dv=e^x,v=e^x\)</span>
-<span class="math display">\[\int e^x \cos(x) \,dx = e^x \cos(x) + \int e^x \sin(x)\,dx\]</span>
-And examining the original integral we see that <span class="math inline">\(\int e^x \sin(x)\,dx\)</span> appears on both sides:
-<span class="math display">\[
-\int e^x \sin(x)\,dx = e^x\sin(x) - \left(e^x\cos(x)+\int e^x \sin(x)\,dx\right)\\
-2\int e^x \sin(x)\,dx = e^x\sin(x) - e^x\cos(x)\\
-\int e^x \sin(x)\,dx = \frac{1}{2}e^x\left(\sin(x)-\cos(x)\right) + c\]</span></li>
-<li><span class="math display">\[\int (x+1)^2 e^{-2x} \, dx = -{1 \over 2}(x+1)^2 e^{-2x} + \int (x+1) e^{-2x} \, dx = -{1 \over 2}(x+1)^2 e^{-2x} - {1 \over 2}(x+1) e^{-2x}\]</span></li>
-<li><span class="math display">\[y = \sin^{-1} x \Rightarrow \sin y = x \Rightarrow  \cos y {\frac{dy}{dx}} = 1 \Rightarrow {\frac{dy}{dx}} =  (1 - x^2)^{-1/2},\]</span>
-so
-<span class="math display">\[\int \sin^{-1} x \, dx = x \sin^{-1} x - \int x (1-x^2)^{-1/2} \, dx = x \sin^{-1} x + (1 - x^2)^{1/2} + C \]</span></li>
-</ol></li>
+\int_1^2 (f_1(x)-f_2(x))\;dx &amp;= \int_1^2 7x-6-x^3\;dx\\
+&amp;= \left[\frac{7}{2}x^2 - 6x - \frac{1}{4}x^4\right]_1^2\\
+&amp;= (14-12-4)-(\frac{7}{2} - 6 -\frac{1}{4})\\
+&amp;= \frac{3}{4}
+\end{align*}\]</span></p></li>
 </ol>
 
 </div>

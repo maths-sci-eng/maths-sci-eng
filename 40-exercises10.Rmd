@@ -1,39 +1,34 @@
 # Exercise Set 10 {-}
 
-1. Write the series
-    \begin{equation*}
-    \frac{1}{1\cdot 2}+\frac{1}{2\cdot 3}+\frac{1}{3\cdot 4}+\frac{1}{4\cdot 5}+\frac{1}{5\cdot 6}
-    \end{equation*}
-    using Sigma notation in the forms $\displaystyle\sum_{k=1}^{n}(\dots)$ and $\displaystyle\sum_{l=0}^{m}(\dots)$.
+1. Find $\dfrac{dy}{dx}$ for the following by implicit differentiation.
 
-1. Evaluate $\displaystyle\sum_{n=1}^{10}\frac{2}{3^n}$ and $\displaystyle\sum_{n=0}^{9}\frac{2}{3^n}$ using the formula for the $n^{\text{th}}$ partial sum of a geometric series.
+    a. $x^2y+3xy^3-x=3$
+    a. $\sin(x^2y^2)=x$
+    a. $xy^2=y+e^{xy}$
 
-1. Do the following geometric series converge or diverge? If they converge, find their sum.
-    a. $\displaystyle\sum_{n=1}^{\infty}\frac{2}{3^n}$
-    a. $\displaystyle\sum_{n=1}^{\infty}(-1)^{n-1}\frac{1}{2^{n-1}}$
-    a. $\displaystyle\sum_{n=1}^{\infty}\left( \dfrac{\pi}{2}\right)^n$
+1. Consider the curve $x^2+3xy+y^2+2x-7=0$. Use implicit differentiation to find $\dfrac{dy}{dx}$ and hence compute the equation of the tangent at the point $(1,1)$.
 
-1. Find the $3^{\text{rd}}$ degree Taylor polynomials of the following functions.
-    a. $f(x)=2x^3-x^2+4x+5$ at $a=0$
-    a. $f(x)=\dfrac{1}{1+x}$ at $a=0$. 
-    a. $f(x)=\sqrt{x}$ at $a=1$
+1. Find the slope of the circle $x^2+y^2=25$ at the point $(-3,-4)$. Hence find the equations of the tangent and normal at that point.
 
-1. Derive the Taylor series for $e^x$ at $a=0$ (this converges for all $x$).
+1. Find $\dfrac{dy}{dx}$ and $\dfrac{d^2y}{dx^2}$ for the following by implicit differentiation.
+    a. $y+\sin(y)=x$
+    a. $x^2-xy+y^2=3$
 
-1. Derive the Taylor series for $\sin(x)$ at $a=\dfrac{\pi}{2}$ (this converges for all $x$).
+1. Find $\dfrac{dy}{dx}$ and $\dfrac{d^2y}{dx^2}$ for the following parametric equations.
+    a. $y=\cos(2t)$ and $x=\sin(t)$
+    a. $y=\dfrac{3+2t}{1+t}$ and $x=\dfrac{2-3t}{1+t}$
+    a. $y=3\sin(\theta)-\sin^3(\theta)$ and $x=\cos^3(\theta)$
 
-1. From the Taylor series of $f(x)=\ln(x+1)$ at zero (this converges for $-1 < x \le 1$), show that:
-    \begin{equation*}
-    \sum_{n=1}^{\infty}\frac{(-1)^{n+1}}{n}=\ln(2).
-    \end{equation*}
+1. Find the derivative of the following inverse functions by implicit differentiation.
+    a. $y=\sin^{-1}(x)$
+    a. $y=\cosh^{-1}(3x)$
+    a. $y=\tan^{-1}(4x^2)$
 
-1. The Taylor series for $\tan^{-1}$ at zero is
-    $$\tan^{-1}(x) = \sum_{n=0}^\infty \frac{(-1)^n x^{2n+1}}{2n+1}$$
-    which converges for $|x|\leq 1$. Use this to approximate $\pi$ (you could do this in MATLAB/Python using a for loop to easily experiment with the number of terms in the sum).
+1. Find $\dfrac{dy}{dx}$ for the following using logarithmic differentiation.
+    a. $y=a^x$
+    a. $y=\dfrac{(x-4)^7(2x+3)^2}{(4x+7)^3}$
 
-1. Prove Euler's formula for complex numbers using the Taylor series for $e^x$, $\cos(x)$ and $\sin(x)$ at $0$, .
- 
-1. Find the Taylor series for $\cos(x)$ at zero by differentiating the Taylor series for $\sin(x)$ at zero term by term (we can differentiate any power series term by term for values of $x$ where the series converges).
-
-1. Find the Taylor series of $\dfrac{1}{1-x}$ at $a=0$ (this converges for $|x|<1$). Hence find the Taylor series of $\dfrac{1}{(1-x)^2}$ at $a=0$. 
-
+1. Find $\dfrac{dy}{dx}$ for the following.
+    a. $y=x^x$
+    a. $y=(\tanh(x))^x$
+    a. $x^3+\sin(xy)=xy^2$

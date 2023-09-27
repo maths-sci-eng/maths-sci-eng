@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Exercise Set 9 | Mathematics for Scientists and Engineers</title>
   <meta name="description" content="Mathematics Lecture Notes for UoE Penryn Science and Engineering Disciplines." />
-  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Exercise Set 9 | Mathematics for Scientists and Engineers" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Dr Mark Callaway" />
 
 
-<meta name="date" content="2023-09-14" />
+<meta name="date" content="2023-09-27" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -59,6 +59,10 @@
 
 
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -135,7 +139,8 @@
 <li class="chapter" data-level="3.3.1" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#simultaneous-linear-equations"><i class="fa fa-check"></i><b>3.3.1</b> Simultaneous linear equations</a></li>
 <li class="chapter" data-level="3.3.2" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#non-linear-simultaneous-equations"><i class="fa fa-check"></i><b>3.3.2</b> Non-linear simultaneous equations</a></li>
 </ul></li>
-<li class="chapter" data-level="3.4" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#inequalities-1"><i class="fa fa-check"></i><b>3.4</b> Inequalities</a></li>
+<li class="chapter" data-level="3.4" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#exponentials-and-logarithms"><i class="fa fa-check"></i><b>3.4</b> Exponentials and Logarithms</a></li>
+<li class="chapter" data-level="3.5" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#inequalities-1"><i class="fa fa-check"></i><b>3.5</b> Inequalities</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="trigonometry.html"><a href="trigonometry.html"><i class="fa fa-check"></i><b>4</b> Trigonometry</a>
 <ul>
@@ -353,6 +358,7 @@
 <li class="chapter" data-level="" data-path="exercise-set-15.html"><a href="exercise-set-15.html"><i class="fa fa-check"></i>Exercise Set 15</a></li>
 <li class="chapter" data-level="" data-path="exercise-set-16.html"><a href="exercise-set-16.html"><i class="fa fa-check"></i>Exercise Set 16</a></li>
 <li class="chapter" data-level="" data-path="exercise-set-17.html"><a href="exercise-set-17.html"><i class="fa fa-check"></i>Exercise Set 17</a></li>
+<li class="chapter" data-level="" data-path="exercise-set-18.html"><a href="exercise-set-18.html"><i class="fa fa-check"></i>Exercise Set 18</a></li>
 <li class="chapter" data-level="" data-path="notation.html"><a href="notation.html"><i class="fa fa-check"></i>Notation</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -378,42 +384,77 @@
 <div id="exercise-set-9" class="section level1 unnumbered hasAnchor">
 <h1>Exercise Set 9<a href="exercise-set-9.html#exercise-set-9" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <ol style="list-style-type: decimal">
-<li><p>Find <span class="math inline">\(\dfrac{dy}{dx}\)</span> for the following by implicit differentiation.</p>
+<li><p>Find the first and second dervatives of the following expressions.</p>
 <ol style="list-style-type: lower-alpha">
-<li><span class="math inline">\(x^2y+3xy^3-x=3\)</span></li>
-<li><span class="math inline">\(\sin(x^2y^2)=x\)</span></li>
-<li><span class="math inline">\(xy^2=y+e^{xy}\)</span></li>
+<li><span class="math inline">\(y=3x^5+2x-1\)</span></li>
+<li><span class="math inline">\(y=4x^{-1}\)</span></li>
+<li><span class="math inline">\(y=x^{\frac{1}{2}}+x^{\frac{1}{3}}\)</span></li>
+<li><span class="math inline">\(y=x^7+\sin(x)\)</span></li>
+<li><span class="math inline">\(y=e^x+5\)</span></li>
 </ol></li>
-<li><p>Consider the curve <span class="math inline">\(x^2+3xy+y^2+2x-7=0\)</span>. Use implicit differentiation to find <span class="math inline">\(\dfrac{dy}{dx}\)</span> and hence compute the equation of the tangent at the point <span class="math inline">\((1,1)\)</span>.</p></li>
-<li><p>Find the slope of the circle <span class="math inline">\(x^2+y^2=25\)</span> at the point <span class="math inline">\((-3,-4)\)</span>. Hence find the equations of the tangent and normal at that point.</p></li>
-<li><p>Find <span class="math inline">\(\dfrac{dy}{dx}\)</span> and <span class="math inline">\(\dfrac{d^2y}{dx^2}\)</span> for the following by implicit differentiation.</p>
+<li><p>Find the derivative of <span class="math inline">\((1+2x)(x-x^2)\)</span> in two ways: first, expand and find the derivative; second, use the product rule. Your answers should agree!</p></li>
+<li><p>Use the product rule to show that <span class="math inline">\((af)&#39;(x)=af&#39;(x)\)</span> for any differentiable function <span class="math inline">\(f\)</span> and number <span class="math inline">\(a\)</span>.</p></li>
+<li><p>Use the chain rule to show that <span class="math inline">\((f(ax+b))&#39;=af&#39;(ax+b)\)</span> for any differentiable function <span class="math inline">\(f\)</span> and numbers <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>.</p></li>
+<li><p>Find the derivatives of the following functions (you may like to use the additional rules you have just derived in the previous two questions).</p>
 <ol style="list-style-type: lower-alpha">
-<li><span class="math inline">\(y+\sin(y)=x\)</span></li>
-<li><span class="math inline">\(x^2-xy+y^2=3\)</span></li>
+<li><span class="math inline">\(f(x)=\sqrt{2}\sin(x)\)</span></li>
+<li><span class="math inline">\(f(x)=\ln(2)\ln(x)\)</span></li>
+<li><span class="math inline">\(f(x)=\cos(3x)\)</span></li>
+<li><span class="math inline">\(f(x)=\sin(5x+2)\)</span></li>
+<li><span class="math inline">\(f(x)=3e^{2x}\)</span></li>
+<li><span class="math inline">\(f(x)=3e^{2x+1}\)</span></li>
 </ol></li>
-<li><p>Find <span class="math inline">\(\dfrac{dy}{dx}\)</span> and <span class="math inline">\(\dfrac{d^2y}{dx^2}\)</span> for the following parametric equations.</p>
+<li><p>Find the derivatives of the following functions using the product rule.</p>
 <ol style="list-style-type: lower-alpha">
-<li><span class="math inline">\(y=\cos(2t)\)</span> and <span class="math inline">\(x=\sin(t)\)</span></li>
-<li><span class="math inline">\(y=\dfrac{3+2t}{1+t}\)</span> and <span class="math inline">\(x=\dfrac{2-3t}{1+t}\)</span></li>
-<li><span class="math inline">\(y=3\sin(\theta)-\sin^3(\theta)\)</span> and <span class="math inline">\(x=\cos^3(\theta)\)</span></li>
+<li><span class="math inline">\(f(x)=3x^2\sin(x)\)</span></li>
+<li><span class="math inline">\(f(x)=\sin(x)\cos(x)\)</span></li>
+<li><span class="math inline">\(f(x)=(x^3-x)e^x\)</span></li>
+<li><span class="math inline">\(f(x)=x\ln(x)\)</span></li>
 </ol></li>
-<li><p>Find the derivative of the following inverse functions by implicit differentiation.</p>
+<li><p>Find the derivatives of the following functions using the chain rule.</p>
 <ol style="list-style-type: lower-alpha">
-<li><span class="math inline">\(y=\sin^{-1}(x)\)</span></li>
-<li><span class="math inline">\(y=\cosh^{-1}(3x)\)</span></li>
-<li><span class="math inline">\(y=\tan^{-1}(4x^2)\)</span></li>
+<li><span class="math inline">\(f(x)=\cos(x^2)\)</span></li>
+<li><span class="math inline">\(f(x)=\sin(\cos(x))\)</span></li>
+<li><span class="math inline">\(f(x)=e^{\sin(x)}\)</span></li>
+<li><span class="math inline">\(f(x)=\sin^{100}(x)\)</span></li>
 </ol></li>
-<li><p>Find <span class="math inline">\(\dfrac{dy}{dx}\)</span> for the following using logarithmic differentiation.</p>
+<li><p>Find the derivatives of the following functions using the quotient rule.</p>
 <ol style="list-style-type: lower-alpha">
-<li><span class="math inline">\(y=a^x\)</span></li>
-<li><span class="math inline">\(y=\dfrac{(x-4)^7(2x+3)^2}{(4x+7)^3}\)</span></li>
+<li><span class="math inline">\(f(x)=\dfrac{1}{1+x^2}\)</span></li>
+<li><span class="math inline">\(f(x)=\dfrac{x^2}{1+x^2}\)</span></li>
+<li><span class="math inline">\(f(x)=\dfrac{x^3}{e^{3x}}\)</span></li>
+<li><span class="math inline">\(f(x)=\dfrac{x-\sqrt{x}}{x^2}\)</span></li>
+<li><span class="math inline">\(f(x)=\dfrac{\sin(x)}{\cos(x)}\)</span></li>
 </ol></li>
-<li><p>Find <span class="math inline">\(\dfrac{dy}{dx}\)</span> for the following.</p>
+<li><p>Find the derivatives of the following functions.</p>
 <ol style="list-style-type: lower-alpha">
-<li><span class="math inline">\(y=x^x\)</span></li>
-<li><span class="math inline">\(y=(\tanh(x))^x\)</span></li>
-<li><span class="math inline">\(x^3+\sin(xy)=xy^2\)</span></li>
+<li><span class="math inline">\(f(x)=\sin^2(\sin(x))\)</span></li>
+<li><span class="math inline">\(f(x)=\ln(x^2)\)</span></li>
+<li><span class="math inline">\(f(x)=a^x\)</span> for any <span class="math inline">\(a&gt;0\)</span></li>
+<li><span class="math inline">\(f(x)=e^x\sin(x^2)\)</span></li>
 </ol></li>
+<li><p>Show that <span class="math inline">\(\frac{d}{dx}\sinh(x)=\cosh(x)\)</span> and <span class="math inline">\(\frac{d}{dx}\cosh(x)=\sinh(x)\)</span>.</p></li>
+<li><p>Find all local maxima and minima of the following functions. Are there any global maxima or minima? Also sketch their graphs.</p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(f(x)=x^2+3x+1\)</span></li>
+<li><span class="math inline">\(f(x)=x^3-3x\)</span></li>
+</ol></li>
+<li><p>A particle moving in a straight line has displacement <span class="math inline">\(x\)</span> as a function of time <span class="math inline">\(t\geq 0\)</span> given by
+<span class="math display">\[x=-t^{3}+5t^{2}+t.\]</span></p>
+<ol style="list-style-type: lower-alpha">
+<li>Find the velocity <span class="math inline">\(v\)</span> and acceleration <span class="math inline">\(a\)</span>.</li>
+<li>What is the initial velocity?</li>
+<li>What is the largest positive displacement?</li>
+<li>At what time does the particle return to the origin?</li>
+</ol></li>
+<li><p>Find the points of inflection of the following functions.</p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(f(x)=\dfrac{x^3}{3}-\dfrac{x^2}{2}-2x+5\)</span></li>
+<li><span class="math inline">\(f(x)=x+\sin(x)\)</span></li>
+</ol></li>
+<li><p>A rectangular box with no lid is made from a thin sheet of metal. The base is <span class="math inline">\(2x\text{ mm}\)</span> long and <span class="math inline">\(x\text{ mm}\)</span> wide, and the volume is <span class="math inline">\(48000\text{ mm}^3\)</span>. Show that the area <span class="math inline">\(A\)</span> of metal used is given by
+<span class="math display">\[A=2x^2+144000x^{-1} \text{ mm}^2.\]</span>
+Find the value of <span class="math inline">\(x\)</span> for which the minimum area of metal is used along with the value of the minimum area.</p></li>
 </ol>
 
 </div>
