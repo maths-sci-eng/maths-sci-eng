@@ -318,8 +318,43 @@ The example presented above is relatively simple. In some real-world scenarios e
 
 ## Exponentials and Logarithms
 
-Recall that exponentials and logarithms are inverses of one another. When solving equations involing exponentials and logarithms, we usually need to apply the inverse in order to extract the $x$ variable, and make use of the rules of exponentials and logarithms. We shall illustrate this with a series of examples.
+We shall now look at solving some equations involving exponentials and logarithms: recall that these functions are inverses of one another. First, we look at some of the rules for manipulating logs (which can be derived from the rules of exponents).
 
+Rules of Logs:
+
+1\. &emsp; $\log_a(xy)=\log_a(x)+\log_a(y)$
+
+2\. &emsp; $\log_a(x^p)=p\log_a(x)$
+
+3\. &emsp; $\log_a(\frac{x}{y})=\log_a(x)-\log_a(y)$
+
+4\. &emsp; $\log_a(1)=0$
+
+5\. &emsp; $\log_a(a)=1$
+
+### Standard Bases
+
+In science and engineering applications it is common to use base $e$, base $2$ and base $10$. For base $10$, the following notation is sometimes used
+
+$$\log(x)=\log_{10}(x)$$
+
+but we should always check what the author intends as sometimes $\log(x)$ is used to mean $\ln(x)$.
+
+We can also change between bases in logarithms with the following rule:
+
+\begin{equation*}
+\log_a(y)=\dfrac{\log_b (y)}{\log_b (a)}.
+\end{equation*}
+This allows us to calculate $\log_a$ of a number in terms of $\log_b$.
+
+### Change of Base for Exponentials
+
+An exponential function with base $a$ can be re-written in any other base $b$ with a constant factor in the argument as follows:
+
+$$\begin{aligned}a^x&=b^{\log_b (a^x)} \quad \text{(note that } b^{\log_b y}=y\text{)} \\&=b^{x\log_b (a)}\\&=b^{kx},\quad \text{where }k=\log_b(a).\end{aligned}$$
+
+The "natural" choice of base for mathematical use is $b=e$ and hence we usually only consider exponential functions in the form
+$$e^{kx} \text{ where } k=\ln(a).$$
 
 
 

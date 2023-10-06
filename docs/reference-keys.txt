@@ -246,6 +246,8 @@ simultaneous-equations
 simultaneous-linear-equations
 non-linear-simultaneous-equations
 exponentials-and-logarithms
+standard-bases
+change-of-base-for-exponentials
 inequalities-1
 trigonometry
 pythagoras
