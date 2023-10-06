@@ -4,9 +4,7 @@
     a. $x^2+10x+25$
     a. $x^2-28x-60=0$
     a. $p^2=8p-15$
-    a. $-2y^2(3+y^2)=(2y^2+2y-3)(-y^2+y-4)-2$  
-    a. $3x^2-14x+8$
-
+    a. $3x^2-14x+8=0$
 
 1. Solve the following quadratic equations, giving results correct to 2 d.p.
     a. $4x^2+x-3=0$
@@ -18,14 +16,12 @@
     a. $2x+y=7$, $x^2-xy=6$
     a. $x + y=2$, $x^2-xy+y^2 = 1$  
 
-1. Solve the following inequalities.
-    a. $7-3x>x-5$
-    a. $x^2\ge 4$
-    a. $x^2-x-6<0$
-    a. $x^2-3x-12\le 2x+2$
-    a. $\frac{2}{2x-1} > \frac{3}{3x+1}$
-    a. $\frac{2x}{x-5}\le 3$
-    a. $x^3-9x^2<0$  
+1. Show that the following hyperbolic identity holds:
+    $$\cosh^2(x)-\sinh^2(x)=1$$
+    (you will first need to find the definitions of $\cosh$ and $\sinh$ in terms of $e$ - these are in the lecture notes, or use Google).
+
+1. Use natural logarthims to make $t$ the subject of the formula
+    $$V=1-e^{\frac{-t}{RC}}.$$
 
 1. Find the solutions to the following equations without using a calculator.
     a. $x=\log_4(64)$
@@ -50,11 +46,28 @@
 1. Solve the following for $x$.
     $$2\log_a(x)-\log_a(x-1)=\log_a(x+3).$$
 
-1. Find $y$ in terms of $x$:
-    $$5\log_a(y)-2\log_a(x+4)=2\log_a(y)+\log_a(x).$$
+1. Solve the following for $x$.
+    $$\log_a(x^2-10)-\log_a(x)=2\log_a(3).$$
 
-1. Use natural logarthims to make $t$ the subject of the formula
-    $$V=1-e^{\frac{-t}{RC}}.$$
+1. Bacteria are undergoing cell division every 30 minutes. Approximating the number of bacteria as a continuous variable $x$, if there are initially 5 bacteria, write an equation for the number of bacteria $x$ at time $t$ in the form
+$$x=A2^{kt}$$
+where $t$ is measured in minutes.
+Also express this in the form
+$$x=Ae^{\lambda t}$$
+by finding the appropriate value of $\lambda$.
 
-1. Show that the following hyperbolic identity holds:
-    $$\cosh^2(x)-\sinh^2(x)=1.$$
+1. A quantity $x$ is increasing exponentially with respect to time $t$. We have the measurements $x=21$ at $t=0$ and $x=156$ at $t=10$. Find an equation for $x$ in the form $x=Ae^{kt}$.
+
+1. The number of specimens of an invasive plant species is observed to be increasing at a particular location. The number of plants observed last year was $N=52$ and this year is $N=76$. We shall approximate the number of plants as a continuous variable $x$.
+
+    a. Assuming continuous exponential growth $x=Ae^{\lambda t}$, find the growth rate $\lambda$.
+    b. Approxiately how many plants are predicted by this model after 10 years from now?
+
+1. Solve the following inequalities.
+    a. $7-3x>x-5$
+    a. $x^2\ge 4$
+    a. $x^2-x-6<0$
+    a. $x^2-3x-12\le 2x+2$
+    a. $\frac{2}{2x-1} > \frac{3}{3x+1}$
+    a. $\frac{2x}{x-5}\le 3$
+    a. $x^3-9x^2<0$  

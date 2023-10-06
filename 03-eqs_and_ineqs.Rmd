@@ -1,6 +1,6 @@
 # Solving Equations and Inequalities
 
-In this section we shall look at some solutions methods to some forms of commonly encountered equations and inequalities.
+In this section we shall look at some solution methods to some forms of commonly encountered equations and inequalities.
 
 ## Quadratic equations {#quad-eqs}
 
@@ -15,9 +15,11 @@ knitr::include_url("https://www.desmos.com/calculator/qk8eaxcjx4")
 ```
 :::
 
-We explore three different methods for finding the roots of a quadratic below.
+We'll explore three different methods for finding the roots of a quadratic.
 
-### Factorisation by inspection
+---
+
+# Factorisation by inspection
 
 First consider a quadratic where $a=1$, that is
 
@@ -66,15 +68,17 @@ $$(2x+3)(2x+1).$$
 
 The solutions then come from solving for each factor being $0$, giving
 $$x=-\frac{3}{2}\quad\text{ or }\quad x= -\frac{1}{2}$$
+
+Alternatively, we can start by looking for two numbers that add to give the $b$ coefficient, and multiply to give $ac$. In this case, we are looking for numbers that add to give $8$ and multiply to give $4\times3=12$. The only option is $2$ and $6$. Now we write $8x=2x+6x$ to give
+$$4x^2 + 2x + 6x + 3 = 0$$
+and next, we factorise the first two terms and last two terms to give
+$$2x(2x+1)+3(2x+1)$$
+and noticing the common factor of $(2x+1)$, we can factorise this to give
+$$(2x+3)(2x+1)$$
+as before.
 :::
 
-Not all quadratics will factorise "nicely", that is to say, where the coefficients in the linear factors will be integers. We can first test if the quadratic will factorise with integer coefficients by computing the quantity
-
-$$\Delta = b^2 - 4ac$$
-
-which is known as the *discriminant* of a quadratic: if this number is a perfect square, then the linear factors will have integer coefficients; if it is not a perfect square, the coefficients will not be integers.
-
-In the case where the coefficients are not integers it can be difficult to determine the coefficients by inspection and the following two methods can be applied instead.
+Not all quadratics will factorise "nicely", that is to say, where the coefficients in the linear factors will be integers. In this case, it can be very difficult to determine the coefficients by inspection and the following two methods can be applied instead.
 
 ### Completing the square
 
@@ -84,7 +88,7 @@ into the form
 $$a(x-h)^2+k=0$$
 that is, a squared term plus a constant, hence the name "completing the square".
 
-We then solve by rearranging and taking sqaure roots
+We then solve by rearranging and taking square roots
 \begin{align*}
 (x-h)^2+k&=0\\
 (x-h)^2&=-k\\
@@ -125,7 +129,7 @@ Another use of completing the square is in determining the location of the minim
 
 ### The quadratic formula
 
-Sometimes it is difficult to find the solutions using the above methods and so thankfully we have a forumula for finding them (or to determine if there are no real number solutions).
+Sometimes it is difficult to find the solutions using the above methods and so thankfully we have a general forumula for finding them (or to determine if there are no real number solutions).
 
 ::: {.theorem #quadform name="Quadratic Formula"}
 The solutions to the quadratic equation
@@ -133,7 +137,7 @@ $$ax^2+bx+c=0$$
 are given by
 $$x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}.$$
 
-If the quantity $\Delta = b^2-4ac$, known as the *discriminant*, is such that $\Delta = 0$ then there will be one repeated solution; if $\Delta$ is negative, then there are no real number solutions (since we cannot take the square root of a negative number).
+If the quantity $\Delta = b^2-4ac$, known as the *discriminant*, is such that $\Delta>0$ then there will be two different solutions, if $\Delta = 0$ then there will be one solution; if $\Delta$ is negative, then there are no real number solutions (since we cannot take the square root of a negative number).
 :::
 
 ::: {.exercise #quadform}
@@ -317,7 +321,6 @@ The example presented above is relatively simple. In some real-world scenarios e
 Recall that exponentials and logarithms are inverses of one another. When solving equations involing exponentials and logarithms, we usually need to apply the inverse in order to extract the $x$ variable, and make use of the rules of exponentials and logarithms. We shall illustrate this with a series of examples.
 
 
-EXAMPLES
 
 
 

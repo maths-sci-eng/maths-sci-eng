@@ -13,7 +13,7 @@ which we know to be the equation of a line in the Cartesian plane (see section \
 a_{11}x_1+a_{12}x_2&=b_1\\
 a_{21}x_1+a_{22}x_2&=b_2
 \end{align*}
-where now the first subscipt $i$ on the $a_{ij}$'s and $b_i$'s denotes the equation it belongs to and the second subscipt $j$ denotes the variable it belongs to. If we need to solve these equations to find the values of $x_1$ and $x_2$ that satisfy both equations simultaneously, then we call this a *system of linear simultaneous equations*.
+where now the first subscipt $i$ on the $a_{ij}$'s and $b_i$'s denotes the equation it belongs to and the second subscipt $j$ denotes the variable it belongs to. If we need to solve these equations to find the values of $x_1$ and $x_2$ that satisfy both equations simultaneously, then we call this a *system of linear equations*.
 
 ```{r sim-lines, fig.cap = "The two intersecting lines from example \\ref@(exm:gaus1).", fig.alt = "The two intersecting lines from example \\ref@(exm:gaus1)."}
 knitr::include_url("https://www.desmos.com/calculator/inagw05txf")
@@ -39,7 +39,7 @@ Then it is possible that:
 1. The three lines don't cross at a common point -- there are **no solutions**. This is the most probable scenario in this set-up: whilst any two of the lines might cross at a point, we need all three to cross at the same point in order for there to be a solution to the simultaneous equations.
 1. Finally, it is possible that the three equations actually describe the same line and again there are **infinitely many solutions**.
 
-When there are more equations than variables, the system is sometimes called *overdetermined*, since then we usually have scenario 2 above where trying to satsify the contraints impossed by the three equations is not possible. On the other hand, a system with less equations is sometimes called "underdetermined", since in these cases we usually have an infinite number of solutions. For example, if we had a system with just one equation in two variables
+When there are more equations than variables, the system is sometimes called *overdetermined*, since then we usually have scenario 2 above where trying to satsify the contraints impossed by the three equations is not possible. On the other hand, a system with less equations is sometimes called *underdetermined*, since in these cases we usually have an infinite number of solutions. For example, if we had a system with just one equation in two variables
 \begin{align*}
 a_{11}x_1+a_{12}x_2&=b_1\\
 \end{align*}
