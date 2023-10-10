@@ -23,7 +23,7 @@
 <meta name="author" content="Dr Mark Callaway" />
 
 
-<meta name="date" content="2023-10-06" />
+<meta name="date" content="2023-10-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -387,7 +387,7 @@
             <section class="normal" id="section-">
 <div id="exercise-set-3-answers" class="section level1 unlisted unnumbered hasAnchor">
 <h1>Exercise Set 3 Answers<a href="exercise-set-3-answers.html#exercise-set-3-answers" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<ol start="7" style="list-style-type: decimal">
+<ol style="list-style-type: decimal">
 <li><p>Solve the following quadratic equations by factorisation.</p>
 <ol style="list-style-type: lower-alpha">
 <li><span class="math inline">\(x^2-28x-60=0\)</span></li>
@@ -481,7 +481,7 @@ x = 4.79, 0.21
 \text{subtracting the right equaltion from the left:}\\
 2y = 2 \Rightarrow y=1,x=1
 \]</span>
-It will be seen that this is equivalent to Gaussian elimination of matrices. This could also have been solved via direct substitution (e.g., <span class="math inline">\(x = (7-4y)/3\)</span>), as the following are.</p></li>
+This could also have been solved via direct substitution (e.g., <span class="math inline">\(x = (7-4y)/3\)</span>).</p></li>
 <li><p><span class="math display">\[ 2x + y = 7,\quad x^2 - xy = 6\\
 \Rightarrow y=7-2x \. \text{substitute into right hand equation}\\
 x^2 - x(7-2x) = 6\\
@@ -511,6 +511,172 @@ and again, we must give <span class="math inline">\(x\)</span> for both cases. T
 x=1,y=1\quad\text{and }x =5,y=-3
 \]</span></p></li>
 </ol></li>
+<li><p>Show that the following hyperbolic identity holds:
+<span class="math display">\[\cosh^2(x)-\sinh^2(x)=1.\]</span></p></li>
+</ol>
+<p>Answer:
+Use the definitions of <span class="math inline">\(\cosh(x) = \frac{e^x + e^-x}{2}\)</span> and <span class="math inline">\(\sinh(x) = \frac{e^x - e^{-x}}{2}\)</span>
+<span class="math display">\[
+\begin{align}
+\cosh^2(x) - \sinh^2(x) &amp;=(\cosh(x) + \sinh{x})(\cosh(x) - \sinh(x))\\
+&amp;=\left(\frac{e^x + e^{-x} + e^x - e^{-x}}{2}\right)\left(\frac{e^x + e^{-x} - e^x + e^{-x}}{2}\right)\\
+&amp;=e^x e^{-x}\\
+&amp;= 1 \text{ as required}
+\end{align}
+\]</span></p>
+<ol style="list-style-type: decimal">
+<li>Use natural logarthims to make <span class="math inline">\(t\)</span> the subject of the formula
+<span class="math display">\[V=1-e^{\frac{-t}{RC}}.\]</span></li>
+</ol>
+<p>Answer:
+Make the exponential term the subject and then take the natural logarithms of both sides
+<span class="math display">\[
+\begin{align}
+V &amp;= 1- e^{\frac{-t}{RC}}\\
+e^{\frac{-t}{RC}} &amp;= 1- v\\
+\ln\left(e^{\frac{-t}{RC}}\right) &amp;= \ln(1- v)\\
+\frac{-t}{RC} &amp;= \ln(1-v)\\
+t &amp;= -RC\ln(1-v)
+\end{align}
+\]</span></p>
+<ol style="list-style-type: decimal">
+<li>Find the solutions to the following equations without using a calculator.
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(x=\log_4(64)\)</span></li>
+<li><span class="math inline">\(x=\log_{101}(101)\)</span></li>
+<li><span class="math inline">\(x=\ln(e)\)</span></li>
+<li><span class="math inline">\(x=\log_{56}(1)\)</span></li>
+<li><span class="math inline">\(10^x=100000\)</span></li>
+<li><span class="math inline">\(2^x=128\)</span></li>
+<li><span class="math inline">\(\log_3(x)=4\)</span></li>
+<li><span class="math inline">\(\log_x(125)=3\)</span></li>
+</ol>
+Answers:
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(x = \log_4(64) = \log_4(4^3)=3\)</span></li>
+<li><span class="math inline">\(x = \log_{101}(101) =\log_{101}(101^1)=1\)</span></li>
+<li><span class="math inline">\(x = \ln(e) =\log_e(e^1)= 1\)</span></li>
+<li><span class="math inline">\(x = log_{56}(1) =\log_{56}(56^0)=0\)</span></li>
+<li><span class="math inline">\(10^x = 100000=10^5 \Rightarrow x = 5\)</span></li>
+<li><span class="math inline">\(2^x = 128=2^7\)</span> x = 7$ the powers of 2 are useful to know</li>
+<li><span class="math inline">\(3^{\log_3(x)} = 3^4 \Rightarrow x = 3^4 = 3^2 \times 3^2 = 81\)</span></li>
+<li><span class="math inline">\(\log_x(125) = 3 \Rightarrow x^3 = 125 \Rightarrow x = 5\)</span></li>
+</ol></li>
+<li>Calculate the following logarithms using a calculator.
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(\ln(2)\)</span></li>
+<li><span class="math inline">\(\log(20)\)</span></li>
+<li><span class="math inline">\(\log_{16}(100)\)</span> - do this using your <span class="math inline">\(\log_a(x)\)</span> button and also using the change of base rule with your <span class="math inline">\(\log\)</span> or <span class="math inline">\(\ln\)</span> button.</li>
+</ol>
+Answers:
+To 2 d.p.
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(\ln(2) = 0.69\)</span></li>
+<li><span class="math inline">\(\log(20) = 1.30\)</span></li>
+<li><span class="math inline">\(\log_{16}(100) = 1.66\)</span> or using the change of base rule with <span class="math inline">\(\log_{10}\)</span>, <span class="math inline">\(\log_{16}=\frac{\log_{10}(100)}{\log_{10}(16)}=\frac{2}{\log_{10}(16)}=1.66\)</span></li>
+</ol></li>
+<li>Calculate <span class="math inline">\(4321\times 9876\)</span> using logs: convert both values to logs, add, then convert back.</li>
+</ol>
+<p>Answer:
+<span class="math display">\[\log(4321 \times 9876)=\log(4321) + \log(9876) = 7.630165..., \text{ the product rule of logarithms}\\
+4321 \times 9876=10^{7.630165...} = 42674196
+\]</span></p>
+<ol style="list-style-type: decimal">
+<li>Simplify the following expression involving logarithms.
+<span class="math display">\[\log_a(x^2)+3\log_a(x)-2\log_a(4x^2).\]</span></li>
+</ol>
+<p>Answer:
+Applying the various log rules, starting with the power rules then product and quotient rules:
+<span class="math display">\[
+\begin{aligned}
+&amp; \log_a(x^2)+3\log_a(x)-2\log_a(4x^2)\\
+&amp;= \log_a(x^2) + \log_a(x^3) - log_a(16x^4)\\
+&amp;= \log_a(\frac{x^5}{16x^4})\\
+&amp;= \log_a(\frac{x}{16})
+\end{aligned}
+\]</span></p>
+<ol style="list-style-type: decimal">
+<li>Solve the following for <span class="math inline">\(x\)</span>.
+<span class="math display">\[2\log_a(x)-\log_a(x-1)=\log_a(x+3).\]</span></li>
+</ol>
+<p>Answer:
+<span class="math display">\[
+\begin{aligned}
+2 \log_a(x) - \log_a(x-1) &amp;= \log_a(x+3)\\
+\log_a\left(\frac{x^2}{x-1}\right) &amp;= \log_a(x+3)\\
+\log_a\left(\frac{x^2}{(x-1)(x+3)}\right) &amp;= 0, \text{ since } \log_a(1) = 0\\
+\frac{x^2}{(x-1)(x+3)} &amp;= 1\\
+x^2 &amp;= (x-1)(x+3) = x^2 + 2x - 3\\
+x &amp;= \frac{3}{2}
+\end{aligned}
+\]</span></p>
+<ol style="list-style-type: decimal">
+<li>Solve the following for <span class="math inline">\(x\)</span>.
+<span class="math display">\[\log_a(x^2-10)-\log_a(x)=2\log_a(3).\]</span></li>
+</ol>
+<p>Answer:
+<span class="math display">\[
+\begin{align}
+\log_a(x^2-10)-\log_a(x)&amp;=2\log_a(3)\\
+\log_a(x^2-10) &amp;= \log_a(x) + \log_a(3^2)\\
+\log_a(x^2-10) &amp;= \log_a(9x)\\
+x^2-10&amp;=9x\\
+x^2-9x-10&amp;=0\\
+(x+1)(x-10)&amp;=0\\
+\end{align}
+\]</span>
+Hence <span class="math inline">\(x=-1\)</span> or <span class="math inline">\(x=10\)</span>.</p>
+<ol style="list-style-type: decimal">
+<li>Bacteria are undergoing cell division every 30 minutes. Approximating the number of bacteria as a continuous variable <span class="math inline">\(x\)</span>, if there are initially 5 bacteria, write an equation for the number of bacteria <span class="math inline">\(x\)</span> at time <span class="math inline">\(t\)</span> in the form
+<span class="math display">\[x=A2^{kt}\]</span>
+where <span class="math inline">\(t\)</span> is measured in minutes.
+Also express this in the form
+<span class="math display">\[x=Ae^{\lambda t}\]</span>
+by finding the appropriate value of <span class="math inline">\(\lambda\)</span>.</li>
+</ol>
+<p>Answers:
+Since <span class="math inline">\(t\)</span> is in minutes and the bacteria double every 30 mins, we have
+<span class="math display">\[x=A2^{\frac{1}{30}t}.\]</span>
+At the initial time <span class="math inline">\(t=0\)</span>
+<span class="math display">\[x=A2^{\frac{1}{30}\times 0}=A2^0=A\times 1=A\]</span>
+hence <span class="math inline">\(A=5\)</span> and we have
+<span class="math display">\[x=5\times2^{\frac{1}{30}t}.\]</span></p>
+<p>We can write <span class="math inline">\(2^{\frac{1}{30}t}=(2^{\frac{1}{30}})^t\)</span> and hence <span class="math inline">\(\lambda=\ln(2^{\frac{1}{30}})=\frac{\ln(2)}{30}\)</span>. Then
+<span class="math display">\[x=5e^{\frac{\ln(2)}{30}t}.\]</span></p>
+<ol style="list-style-type: decimal">
+<li>A quantity <span class="math inline">\(x\)</span> is increasing exponentially with respect to time <span class="math inline">\(t\)</span>. We have the measurements <span class="math inline">\(x=21\)</span> at <span class="math inline">\(t=0\)</span> and <span class="math inline">\(x=156\)</span> at <span class="math inline">\(t=10\)</span>. Find an equation for <span class="math inline">\(x\)</span> in the form <span class="math inline">\(x=Ae^{kt}\)</span>.</li>
+</ol>
+<p>Answers:
+At <span class="math inline">\(t=0\)</span>
+<span class="math display">\[x=Ae^{k\times0}=A\times 1=21\]</span>
+so <span class="math inline">\(A=21\)</span>.</p>
+<p>At <span class="math inline">\(t=10\)</span>
+<span class="math display">\[x=21e^{k\times 10}=156.\]</span>
+Taking natural logs
+<span class="math display">\[\ln(21e^{10k})=\ln(21)+10k=\ln(156)\]</span>
+hence
+<span class="math display">\[k=\frac{1}{10}\left(\ln(\frac{156}{21})\right)=0.20 (2 d.p.)\]</span>.
+Then
+<span class="math display">\[x=21e^{0.2t}.\]</span></p>
+<ol style="list-style-type: decimal">
+<li><p>The number of specimens of an invasive plant species is observed to be increasing at a particular location. The number of plants observed last year was <span class="math inline">\(N=52\)</span> and this year is <span class="math inline">\(N=76\)</span>. We shall approximate the number of plants as a continuous variable <span class="math inline">\(x\)</span>.</p>
+<ol style="list-style-type: lower-alpha">
+<li>Assuming continuous exponential growth <span class="math inline">\(x=Ae^{\lambda t}\)</span>, find the growth rate <span class="math inline">\(\lambda\)</span>.</li>
+<li>Approxiately how many plants are predicted by this model after 10 years from now?</li>
+</ol></li>
+</ol>
+<p>Answer:</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>We can take last year as the starting time <span class="math inline">\(t=0\)</span>, so that <span class="math inline">\(x=Ae^{\lambda\times 0}=A=52\)</span>. Then taking time in units of years, we have
+<span class="math display">\[x=52e^{\lambda\times 1}=76.\]</span>
+Taking natural logs of both sides,
+<span class="math display">\[\ln(52)+\lambda=\ln(76)\]</span>
+Hence
+<span class="math display">\[\lambda = \ln\left(\frac{76}{52}\right)=0.38 (2 d.p.)\]</span></p></li>
+<li><p>10 years from now corresponds to <span class="math inline">\(t=11\)</span>, so we have
+<span class="math display">\[x=52e^{0.38\times 11}\approx 3380 \text{ plants}.\]</span></p></li>
+</ol>
+<ol style="list-style-type: decimal">
 <li><p>Solve the following inequalities.</p>
 <ol style="list-style-type: lower-alpha">
 <li><span class="math inline">\(7-3x&gt;x-5\)</span></li>
@@ -589,121 +755,6 @@ x^2(x-9) &amp;&lt; 0\\
 The <span class="math inline">\(x^2\)</span> factor is always positive, so the whole inequality holds when <span class="math inline">\(x-9\)</span> is negative. Hence, <span class="math inline">\(x&lt;9\)</span></li>
 </ol></li>
 </ol>
-<ol style="list-style-type: decimal">
-<li>Find the solutions to the following equations without using a calculator.
-<ol style="list-style-type: lower-alpha">
-<li><span class="math inline">\(x=\log_4(64)\)</span></li>
-<li><span class="math inline">\(x=\log_{101}(101)\)</span></li>
-<li><span class="math inline">\(x=\ln(e)\)</span></li>
-<li><span class="math inline">\(x=\log_{56}(1)\)</span></li>
-<li><span class="math inline">\(10^x=100000\)</span></li>
-<li><span class="math inline">\(2^x=128\)</span></li>
-<li><span class="math inline">\(\log_3(x)=4\)</span></li>
-<li><span class="math inline">\(\log_x(125)=3\)</span></li>
-</ol>
-Answers:
-<ol style="list-style-type: lower-alpha">
-<li><span class="math inline">\(x = \log_4(64) = \log_4(4^3)=3\)</span></li>
-<li><span class="math inline">\(x = \log_{101}(101) =\log_{101}(101^1)=1\)</span></li>
-<li><span class="math inline">\(x = \ln(e) =\log_e(e^1)= 1\)</span></li>
-<li><span class="math inline">\(x = log_{56}(1) =\log_{56}(56^0)=0\)</span></li>
-<li><span class="math inline">\(10^x = 100000=10^5 \Rightarrow x = 5\)</span></li>
-<li><span class="math inline">\(2^x = 128=2^7\)</span> x = 7$ the powers of 2 are useful to know</li>
-<li><span class="math inline">\(3^{\log_3(x)} = 3^4 \Rightarrow x = 3^4 = 3^2 \times 3^2 = 81\)</span></li>
-<li><span class="math inline">\(\log_x(125) = 3 \Rightarrow x^3 = 125 \Rightarrow x = 5\)</span></li>
-</ol></li>
-<li>Calculate the following logarithms using a calculator.
-<ol style="list-style-type: lower-alpha">
-<li><span class="math inline">\(\ln(2)\)</span></li>
-<li><span class="math inline">\(\log(20)\)</span></li>
-<li><span class="math inline">\(\log_{16}(100)\)</span> - do this using your <span class="math inline">\(\log_a(x)\)</span> button and also using the change of base rule with your <span class="math inline">\(\log\)</span> or <span class="math inline">\(\ln\)</span> button.</li>
-</ol>
-Answers:
-To 2 d.p.
-<ol style="list-style-type: lower-alpha">
-<li><span class="math inline">\(\ln(2) = 0.69\)</span></li>
-<li><span class="math inline">\(\log(20) = 1.30\)</span></li>
-<li><span class="math inline">\(\log_{16}(100) = 1.66\)</span> or using the change of base rule with <span class="math inline">\(\log_{10}\)</span>, <span class="math inline">\(\log_{16}=\frac{\log_{10}(100)}{\log_{10}(16)}=\frac{2}{\log_{10}(16)}=1.66\)</span></li>
-</ol></li>
-<li>Calculate <span class="math inline">\(4321\times 9876\)</span> using logs: convert both values to logs, add, then convert back.</li>
-</ol>
-<p>Answer:
-<span class="math display">\[\log(4321 \times 9876)=\log(4321) + \log(9876) = 7.630165..., \text{ the product rule of logarithms}\\
-4321 \times 9876=10^{7.630165...} = 42674196
-\]</span></p>
-<ol style="list-style-type: decimal">
-<li>Simplify the following expression involving logarithms.
-<span class="math display">\[\log_a(x^2)+3\log_a(x)-2\log_a(4x^2).\]</span></li>
-</ol>
-<p>Answer:
-Applying the various log rules, starting with the power rules then product and quotient rules:
-<span class="math display">\[
-\begin{aligned}
-&amp; \log_a(x^2)+3\log_a(x)-2\log_a(4x^2)\\
-&amp;= \log_a(x^2) + \log_a(x^3) - log_a(16x^4)\\
-&amp;= \log_a(\frac{x^5}{16x^4})\\
-&amp;= \log_a(\frac{x}{16})
-\end{aligned}
-\]</span></p>
-<ol style="list-style-type: decimal">
-<li>Solve the following for <span class="math inline">\(x\)</span>.
-<span class="math display">\[2\log_a(x)-\log_a(x-1)=\log_a(x+3).\]</span></li>
-</ol>
-<p>Answer:
-<span class="math display">\[
-\begin{aligned}
-2 \log_a(x) - \log_a(x-1) &amp;= \log_a(x+3)\\
-\log_a\left(\frac{x^2}{x-1}\right) &amp;= \log_a(x+3)\\
-\log_a\left(\frac{x^2}{(x-1)(x+3)}\right) &amp;= 0, \text{ since } \log_a(1) = 0\\
-\frac{x^2}{(x-1)(x+3)} &amp;= 1\\
-x^2 &amp;= (x-1)(x+3) = x^2 + 2x - 3\\
-x &amp;= \frac{3}{2}
-\end{aligned}
-\]</span></p>
-<ol style="list-style-type: decimal">
-<li>Find <span class="math inline">\(y\)</span> in terms of <span class="math inline">\(x\)</span>:
-<span class="math display">\[5\log_a(y)-2\log_a(x+4)=2\log_a(y)+\log_a(x).\]</span></li>
-</ol>
-<p>Answer:
-First, rearrange and then apply the logarithm power, product and quotient rules:
-<span class="math display">\[
-\begin{align}
-5\log_a(y)-2\log_a(x+4)&amp;=2\log_a(y)+\log_a(x)\\
-\Rightarrow \log_a(y^5) - \log_a(y^2) &amp;= \log_a(x) + 2\log_a(x+4)\\
-= \log_a(y^3) &amp;= \log_a((x+4)^2)\\
-\Rightarrow y^3 &amp;= x(x+4)^2\\
-y &amp;= \left(x(x+4)^2\right)^{\frac{1}{3}}
-\end{align}
-\]</span></p>
-<ol style="list-style-type: decimal">
-<li>Use natural logarthims to make <span class="math inline">\(t\)</span> the subject of the formula
-<span class="math display">\[V=1-e^{\frac{-t}{RC}}.\]</span></li>
-</ol>
-<p>Answer:
-Make the exponential term the subject and then take the natural logarithms of both sides
-<span class="math display">\[
-\begin{align}
-V &amp;= 1- e^{\frac{-t}{RC}}\\
-e^{\frac{-t}{RC}} &amp;= 1- v\\
-\ln\left(e^{\frac{-t}{RC}}\right) &amp;= \ln(1- v)\\
-\frac{-t}{RC} &amp;= \ln(1-v)\\
-t &amp;= -RC\ln(1-v)
-\end{align}
-\]</span></p>
-<ol style="list-style-type: decimal">
-<li>Show that the following hyperbolic identity holds:
-<span class="math display">\[\cosh^2(x)-\sinh^2(x)=1.\]</span></li>
-</ol>
-<p>Answer:
-Use the definitions of <span class="math inline">\(\cosh(x) = \frac{e^x + e^-x}{2}\)</span> and <span class="math inline">\(\sinh(x) = \frac{e^x - e^{-x}}{2}\)</span>
-<span class="math display">\[
-\begin{align}
-\cosh^2(x) - \sinh^2(x) &amp;=(\cosh(x) + \sinh{x})(\cosh(x) - \sinh(x))\\
-&amp;=\left(\frac{e^x + e^{-x} + e^x - e^{-x}}{2}\right)\left(\frac{e^x + e^{-x} - e^x + e^{-x}}{2}\right)\\
-&amp;=e^x e^{-x}\\
-&amp;= 1 \text{ as required}
-\end{align}
-\]</span></p>
 
 </div>
             </section>
