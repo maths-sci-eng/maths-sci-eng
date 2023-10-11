@@ -19,7 +19,7 @@ We'll explore three different methods for finding the roots of a quadratic.
 
 ---
 
-# Factorisation by inspection
+### Factorisation by inspection
 
 First consider a quadratic where $a=1$, that is
 

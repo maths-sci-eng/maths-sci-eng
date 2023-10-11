@@ -4,9 +4,8 @@
 
     a.  $x^2-28x-60=0$
     b.  $p^2=8p-15$
-    c.  $-2y^2(3+y^2)=(2y^2+2y-3)(-y^2+y-4)-2$
-    d.  $3x^2-14x+8$
-    e.  $x^2+10x+25$
+    c.  $3x^2-14x+8$
+    d.  $x^2+10x+25$
 
     Answers:
     
@@ -33,18 +32,8 @@
     (p-3)(p-5) &= 0\\
     \Rightarrow p = 3,5
     \end{align*}
-    
-    d.Multiply out and group powers of $y$. Third and fourth powers cancel in this question.Then factorise by inspection, in this case into one term of the form $(3y+a)$ and one of the form $(y+b)$
-    
-    \begin{align*}
-    -2y^2(3+y^2) &= (2y^2 + 2y - 3)(-y^2 + y -4) -2\\
-    -6y^2 - 2y^4 &= -2y^4 + 2y^3 - 8y^2 - 2y^3 + 2y^2 - 8y = 3y^2 - 3y + 12 -2\\
-    3y^2 - 11y + 10 &= 0\\
-    (3y-5)(y-2)&=0\\
-    \Rightarrow y = 2,5
-    \end{align*}
 
-    e. We are looking for two factors of $3\times 8 = 24$ with summation equals to -14. These factors are $-12$ and $-2$
+    d. We are looking for two factors of $3\times 8 = 24$ with summation equals to -14. These factors are $-12$ and $-2$
     \begin{align*}
     3x^2 - 14x + 8 &= 3x^2 - 12x - 2x + 8\\
     &= 3x(x-4) - 2(x-4) = (x-4)(3x-2)
