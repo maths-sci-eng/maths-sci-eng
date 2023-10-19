@@ -33,7 +33,7 @@ An alternative measure of angle is *radians*. In this case, we start from the fa
 $$
 C=2\pi r
 $$
-where $r$ is the radius of the circle. If we had a circle with radius $r=1$, then the circumference is $C=2\pi$. Now we consider this circle to be split into $2\pi$ segments^[Note this is not an integer number of segments! It is approximately 6.283 segments.], with each segment being 1 radian, or $1 \text{ rad}$. A full circle is then $2\pi \text{ rad} = 6.283 \text{ rad}$ (to 3 sig. fig.).
+where $r$ is the radius of the circle. If we had a circle with radius $r=1$, then the circumference is $C=2\pi$. Now we consider this circle to be split into $2\pi$ segments^[Note this is not an integer number of segments! It is approximately 6.283 segments.], with each segment being 1 radian, or $1 \text{ rad}$. A full circle is then $2\pi \text{ rad} = 6.283 \text{ rad}$ (to 3 d.p.).
 
 Sometimes it is more convenient to work in degrees, and other times it is more convenient to work in radians. We can easily convert between degrees and radians as follows. If we have an angle $D^\circ$ in degrees, then the corresponding angle in radians $R \text{ rad}$ is:
 $$
