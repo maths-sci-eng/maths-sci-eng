@@ -4,7 +4,7 @@ These exercises cover the topic of Trigonometry.
 
 Tip: always start by drawing a labelled diagram in trigonometry questions.
 
-1. Consider the smaller of the two angles between the hour hand and minute hand of a clock. Write the angles at the following times in both degrees and radians (in terms of $\pi$).
+1. Consider the smaller of the two angles between the hour hand and minute hand of a clock (remembering that the hour hand moves continuously!). Write the angles at the following times in both degrees and radians (in terms of $\pi$).
     a. 6:00
     a. 3:00
     a. 4:00
@@ -19,7 +19,7 @@ Tip: always start by drawing a labelled diagram in trigonometry questions.
     a. $67.5^\circ$, $\frac{3\pi}{8}\text{ rad}$
 
 
-1. Convert the following angles from degrees to radians (leave your answer in terms of $\pi$ where possible, or to 2 d.p.).
+1. Convert the following angles from degrees to radians. Give answers both in terms of $\pi$ and to 2 d.p.
     a. $330^\circ$
     a. $22.5^\circ$
     a. $27^\circ$
@@ -32,7 +32,7 @@ Tip: always start by drawing a labelled diagram in trigonometry questions.
     a. $\frac{7}{36}\pi\text{ rad}$ or $0.61\text{ rad}$
 
 
-1. A *bearing* is the angle measured clockwise from North to the direction of interest.
+1. A *bearing* is the angle measured clockwise from North to the direction of interest (note how this differs to how we measure angles in the coordinate plane).
     A point $K$ is 12km due west of a second point $L$ and 25km due south of a third point $M$. Calculate the bearing of $L$ from $M$.
 
     Answers:
@@ -42,7 +42,7 @@ Tip: always start by drawing a labelled diagram in trigonometry questions.
     The bearing of $L$ from $M$ is the angle clockwise from a line pointing North from $M$, so the bearing is:
     $$180^\circ -25.6^\circ=154.4^\circ.$$
 
-1.  Solve (i.e. find all unkown angles and side lengths) the triangle $ABC$ where $A = 53^\circ$, $B = 61^\circ$ and $a = 12.6$cm.
+1.  Solve (i.e. find all unknown angles and side lengths) the triangle $ABC$ where $A = 53^\circ$, $B = 61^\circ$ and $a = 12.6$cm.
 
     Answers:
 
@@ -57,6 +57,23 @@ Tip: always start by drawing a labelled diagram in trigonometry questions.
     and
 
     $$c=\frac{a}{\sin(A)}\sin(C)=\frac{12.6}{\sin(66^\circ)}\sin(53^\circ)=14.4\text{ cm}.$$
+
+1.  Solve (i.e. find all unknown angles and side lengths) the triangle $ABC$ where $a=10.2$m, $c=14.6$m and $C = 32.5^\circ$.
+
+    Answer:
+
+    We have $C$, $c$ and $a$, so we can use the sine rule to find $A$:
+
+    $$\sin(A)=\frac{a\sin(C)}{c}=\frac{10.2\times 0.537}{14.6}=0.375,$$
+    $$A=\sin^{-1}(0.375)=22.05^\circ.$$
+
+    Now we can find the angle $B$
+
+    $$B=180^\circ -A-C= 180^\circ-22.05^\circ-32.5^\circ=125.45^\circ.$$
+
+    Finally, we find $b$ using the sine rule again:
+
+    $$b=\frac{c\sin(B)}{\sin(C)}=\frac{14.6\times 0.815}{0.537}=22.16\text{m}.$$
 
 1.  Let $AOB$ be a triangle. $OA = 60$mm, $AB = 180$mm and $OB = 200$mm. Find angle $A$.
 
@@ -85,7 +102,7 @@ An observer is standing at a point $O$ which is $30$m from the base of a tower. 
     $$TM=OM-OT=35.8-25.2=10.6\text{ m}.$$
 
 
-1. The small hand of a clock is 75% the length of the long hand. Calculate the distance between the ends of the hands at 5 o'clock.
+1. The small hand of a clock is 75% the length of the long hand, which has length $x$. Calculate the distance between the ends of the hands at 5 o'clock.
 
     Answers:
 
@@ -144,70 +161,73 @@ faces. Calculate:
 
     a. By similar reasoning to the above, this is left for the reader to verify as being $78.2^\circ$.
 
+1. This is a harder question using trigonometric identities. Here we shall derive a special (slightly simpler) case of the sum of two sinusoidal waves of the same frequency that was shown in lectures. We will consider two waves of the form
+$$y_1=A_1\sin(\omega t),\qquad y_2=A_2\cos(\omega t)$$.
+    a. First assume we can write $y_1+y_2$ in the form $A\sin(\omega t+\phi)$. Then using the trigonometric identity
+    $$\sin(\theta+\phi)=\sin(\theta)\cos(\phi)+\cos(\theta)\sin(\phi)$$
+    deduce that $A_1=A\cos(\phi)$ and $A_2=A\sin(\phi)$.
+    a. Now using the trigonometric identity $\sin^2(\theta)+\cos^2(\theta)=1$ show that $A^2=A_1^2+A_2^2$.
+    a. Finally, using $\tan(\theta)=\frac{\sin(\theta)}{\cos(\theta)}$, show that $\tan(\phi)=\frac{A_2}{A_1}$.
+
+    Answers:
+
+    a. We assume $A\sin(\omega t+\phi)=y_1+y_2=A_1\sin(\omega t)+A_2\cos(\omega t)$
+       Now using the trig. identity on the l.h.s.
+        $$A\sin(\omega t+\phi)=A(\sin(\omega t)\cos(\phi)+\cos(\omega t)\sin(\phi))=A\cos(\phi)\sin(\omega t)+A\sin(\phi)\cos(\omega t)$$
+        and comparing this to the r.h.s and equating coefficients of $\sin(\omega t)$ and $\cos(\omega t)$, we must have
+        $A_1=A\cos(\phi)$ and $A_2=A\sin(\phi)$.
+
+    a. We have:    
+        $$A_1^2+A_2^2=A^2\cos^2(\phi)+A^2\sin^2(\phi)=A^2(\cos^2(\phi)+\sin^2(\phi))=A^2(1)=A^2$$
+        as required.
+
+    a. We have:
+        $$\tan(\phi)=\frac{\sin(\phi)}{\cos(\phi)}=\frac{A\sin(\phi)}{A\cos(\phi)}=\frac{A_2}{A_1}$$
+        as required.
+
+
 1. Write the following in the form $R\cos(\omega t\pm \beta)$.
     a. $-2\sin(\omega t) + 5\cos(\omega t)$
     a. $-5\cos(\omega t) + 5 \sin(\omega t)$
 
     Answers:
-    a. Using the compound angle identity
+    a. Using $A=\sqrt{A_1^2+A_2^2}$, we have
+        $$A=\sqrt{(-2)^2+5^2}=\sqrt{29}.$$
+        Now using $\tan(\phi)=\frac{A_2}{A_1}$
+        $$\tan(\phi)=\frac{5}{-2}$$
+        hence we are in the second quandrant and
+        $$\phi=\tan^{-1}\left(\frac{5}{-2}\right)+180^\circ=111.80^\circ.$$
+        Finally we have,
+        $$-2\sin(\omega t) + 5\cos(\omega t)=\sqrt{29}\sin(\omega t+111.80)$$
 
-        $$R\cos(\omega t+\beta)=R(\cos(\omega t)\cos(\beta)-\sin(\omega t)\sin(\beta))$$
-        and comparing the r.h.s. with $-2\sin(\omega t) + 5\cos(\omega t)$ and equating coefficients of sin and cos,
-        $$R\cos(\beta)=5\quad\text{and}\quad R\sin(\beta)=2.$$
-        Since $\sin(\theta)$ and $\cos(\theta)$ are both positive only for $0^\circ\leq\theta\leq 90^\circ$ (i.e. in the first quadrant) then
-        $$\beta=\tan^{-1}\left(\frac{2}{5}\right)=21.80^\circ\quad\text{or}\quad 0.38\text{ rad}.$$
-        Now using
-        $$\cos^2(\theta)+\sin^2(\theta)=1$$
-        we have
-        $$R^2cos^2(\beta)+R^2\sin(\beta)=R^2(\cos^2(\beta)+\sin(\beta))=R^2$$
-        so
-        $$R=\sqrt{5^2+2^2}=\sqrt{29}.$$
-        Finally we have
-        $$-2\sin(\omega t) + 5\cos(\omega t)=\sqrt{29}\cos(\omega t + 0.38).$$
-
-    a. Using the compound angle identity
-
-        $$R\cos(\omega t-\beta)=R(\cos(\omega t)\cos(\beta)+\sin(\omega t)\sin(\beta))$$
-        and comparing the r.h.s. with $-5\cos(\omega t) + 5\sin(\omega t)$ and equating coefficients of sin and cos,
-        $$R\cos(\beta)=-5\quad\text{and}\quad R\sin(\beta)=5.$$
-        Since $\sin(\theta)$ is positive and $\cos(\theta)$ is negative only for $90^\circ\leq\theta\leq 180^\circ$ (i.e. in the second quadrant) then
-        $$\beta=180^\circ-\tan^{-1}\left(\frac{5}{5}\right)=135^\circ\quad\text{or}\quad 2.36\text{ rad}.$$
-        Now using
-        $$\cos^2(\theta)+\sin^2(\theta)=1$$
-        we have
-        $$R^2cos^2(\beta)+R^2\sin(\beta)=R^2(\cos^2(\beta)+\sin(\beta))=R^2$$
-        so
-        $$R=\sqrt{5^2+5^2}=5\sqrt{2}.$$
-        Finally we have
-        $$-5\cos(\omega t) + 5\sin(\omega t)=5\sqrt{2}\cos(\omega t + 2.36).$$
-
+    a. Using $A=\sqrt{A_1^2+A_2^2}$, we have
+        $$A=\sqrt{5^2+(-5)^2}=\sqrt{2\times 5^2}=5\sqrt{2}.$$
+        Now using $\tan(\phi)=\frac{A_2}{A_1}$
+        $$\tan(\phi)=\frac{-5}{5}$$
+        hence we are in the fourth quandrant and
+        $$\phi=\tan^{-1}\left(\frac{-5}{5}\right)=-45^\circ.$$
+        Finally we have,
+        $$-5\cos(\omega t) + 5\sin(\omega t)=5\sqrt{2}\sin(\omega t-45)$$
 
 1. In a spring-mass system the motion of the mass is described by
-$$x=A\cos(\omega t)+B\sin(\omega t)$$
-where $x$ is the distance of the mass from its equilibrium position, $\omega$ is the natural frequency of oscillations, and $A$ and $B$ are constants. For $A=\sqrt{3}$, $B=1$ and $\omega=10$:
-    a. Write $x$ in the form $R\cos(\omega t-\beta)$ and state the amplitude of $x$.
-    a. Sketch one complete cycle of $x$.
+$$x=A_1\sin(\omega t)+A_2\cos(\omega t)$$
+where $x$ is the distance of the mass from its equilibrium position, $\omega$ is the natural frequency of oscillations, and $A$ and $B$ are constants. For $A_1=1$, $A_2=\sqrt{3}$ and $\omega=10\,\text{rad s}^{-1}$:
+    a. Write $x$ in the form $A\sin(\omega t-\phi)$ and state the amplitude of $x$.
+    a. Sketch one complete cycle of $x$, labelling $A$, $\phi$ and the period $T$
 
     Answers:
-    a. Using the compound angle identity
+    a. Using $A=\sqrt{A_1^2+A_2^2}$, we have
+        $$A=\sqrt{1^2+\sqrt{3}^2}=\sqrt{4}=2.$$
+        Now using $\tan(\phi)=\frac{A_2}{A_1}$
+        $$\tan(\phi)=\frac{\sqrt{3}}{1}$$
+        hence we are in the first quandrant and
+        $$\phi=\tan^{-1}\left(\sqrt{3}\right)=\frac{\pi}{3}\,\text{rad}.$$
+        Finally we have,
+        $$x(t)=\sin(10 t) + \sqrt{3}\cos(10 t)=2\sin(10 t+\frac{\pi}{3})$$
 
-        $$R\cos(\omega t-\beta)=R(\cos(\omega t)\cos(\beta)+\sin(\omega t)\sin(\beta))$$
-        and comparing the r.h.s. with $\sqrt{3}\cos(10 t) + \sin(10 t)$ and equating coefficients of sin and cos,
-        $$R\cos(\beta)=\sqrt{3}\quad\text{and}\quad R\sin(\beta)=1.$$
-        Since $\sin(\theta)$ and $\cos(\theta)$ are both positive only for $0^\circ\leq\theta\leq 90^\circ$ (i.e. in the first quadrant) then
-        $$\beta=\tan^{-1}\left(\frac{1}{\sqrt{3}}\right)=30\circ\quad\text{or}\quad \frac{\pi}{6}\text{ rad}.$$
-        Now using
-        $$\cos^2(\theta)+\sin^2(\theta)=1$$
-        we have
-        $$R^2cos^2(\beta)+R^2\sin(\beta)=R^2(\cos^2(\beta)+\sin(\beta))=R^2$$
-        so
-        $$R=\sqrt{\sqrt{3}^2+1^2}=2$$
-        Finally we have
-        $$x(t)=\sqrt{3}\cos(10 t) + \sin(10 t)=2\cos(10 t -\frac{\pi}{6}).$$
+        From this we can read off the amplitude as $A=2$.
 
-        From this we can read off the amplitude as $R=2$.
-
-    a. The period is $T=\frac{2\pi}{10}=\frac{\pi}{5}$ and the displacement of the peak at $0$ is $\frac{\pi/6}{10}=\frac{\pi}{60}$.
+    a. The period is $T=\frac{2\pi}{10}=\frac{\pi}{5}$.
 
         ```{r coswave, out.width="50%"}
         knitr::include_graphics("figures/ex3coswave.png")
