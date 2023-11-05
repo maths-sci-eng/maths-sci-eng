@@ -18,7 +18,7 @@
 
 1. Use your result to the previous question to find the following indefinite integrals
     a. $\int (2x+6)^2\; dx$
-    a. $\int (2x+6)^99 \; dx$
+    a. $\int (2x+6)^{99} \; dx$
     a. $\int \sin(3x+2) \; dx$
     a. $\int \cos(-4x-1) \; dx$
     a. $\int \sec^2(9x+2) \; dx$
