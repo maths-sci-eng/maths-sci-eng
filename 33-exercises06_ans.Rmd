@@ -264,7 +264,7 @@ Note that the questions are independent of one another, so the definition of a v
 
     and
 
-    $\mathbf{a}\times\mathbf{c}=-\mathbf{i}-(4\alpha+2)\mathbf{j}+\alpha\mathbf{k}$.
+    $\mathbf{a}\times\mathbf{c}=-\mathbf{i}-(4\alpha+2)\mathbf{j}-\alpha\mathbf{k}$.
 
     Then for perpendicularity we solve $(\mathbf{a}\times\mathbf{b})\cdot(\mathbf{a}\times\mathbf{c})=0$. We have
 

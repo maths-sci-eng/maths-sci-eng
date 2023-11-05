@@ -49,56 +49,7 @@
 
     $$\int_3^5 6t^2 - 30t - 36\: dt = \left[2t^3 - 15t^2 - 36t\right]_3^5 = -116$$
     Since we are looking for a distance, we take the absolute value: $116\text{m}$.
-    
-1. Find the following integrals using a suitable substitution.
-    a. $\int (4x-3)^5 \; dx$
-    a. $\int 4\sin(3x+2)\; dx$
-    a. $\int_2^5 \frac{1}{1-2x} \; dx$
-    a. $\int \frac{1}{\sqrt{(5-3x)^3}}\; dx$
-    a. $\int \frac{4x}{\sqrt{(x^2+3)^3}}\; dx$
-    a. $\int 2xe^{x^2-5}\; dx$
-    a. $\int \frac{\sin(\sqrt{x})}{\sqrt{x}}\; dx$
-    a. $\int \cos(\theta)\sin(\theta)\; d\theta$
-    a. $\int \frac{\cos(x)}{1+\sin(x)}\; dx$
 
-    Answers:
-
-    a. $\int (4x-3)^5\:dx$. Let $u=4x-3$, so $\frac{du}{dx}=4 \Rightarrow dx = \frac{1}{4}du$
-    $$
-    \int (4x-3)^5\;dx = \int u^5 \frac{1}{4}du =\frac{u^6}{24} +c = \frac{(4x-3)^6}{24} + c$$
-    a. $\int 4\sin(3x+2)\;dx$. Let $u=3x+2$, so $\frac{du}{dx} = 3 \Rightarrow dx = \frac{1}{3}du$,
-    $$
-    \int 4\sin(3x+2)\;dx = \frac{4}{3}\int\sin(u)\:du = -\frac{4}{3}\cos(u) + c = -\frac{4}{3}\cos(3x+2) + c
-    $$
-    a. $\int_2^5\frac{1}{1-2x}\:dx$. Let $u=1-2x$, so $\frac{du}{dx} = -2 \Rightarrow dx = -\frac{1}{2}du$. This is a definite integral, so the limits must also be given in terms of u:
-    \begin{align*}
-    \int_{x=2}^{x=5} \frac{1}{1-2x}\:dx &= -\frac{1}{2}\int_{u=-3}^{u=5}\frac{du}{u} = -\frac{1}{2}\left[\ln(u)\right]_{-3}^{-9}\\
-    &= -\frac{1}{2}(\ln(-9) - \ln(-3)) = -\frac{1}{2}\ln\left(\frac{-9}{-3}\right) = -\frac{1}{2}\ln(3)
-    \end{align*}
-    a. $\int\frac{1}{\sqrt{(5-3x)^3}}\:dx$. Let $u=5-3x$, so $\frac{du}{dx} = -3 \Rightarrow dx = -\frac{du}{3}$
-    $$
-    \int\frac{1}{\sqrt{(5-3x)^3}}\:dx = \int u^{-\frac{3}{2}}\:du = \frac{2}{3}u^{-\frac{1}{2}} + c = \frac{2}{3}(5-3x)^{-\frac{1}{2}} + c
-    $$
-    a. $\int\frac{4x}{\sqrt{(x^2 + 3)^3}}\:dx$. Let $u=x^2 +3$, so $\frac{du}{dx} = 2x \Rightarrow dx = \frac{du}{2x}$. Here, the $4x$ term remains in the denominator after substituting, but will be cancelled out once $dx$ is substituted.
-    $$
-    \int\frac{4x}{\sqrt{(x^2 + 3)^3}}\:dx = \int\frac{4x}{u^{\frac{3}{2}}}\frac{du}{2x} = \int 2u^{-\frac{3}{2}} = -4u^{-\frac{1}{2}} + c = -4(x^2+3)^{-\frac{1}{2}} + c
-    $$
-    This could also have been solved by reverse chain rule (think about how the answer would be differentiated, and see that the integral was of the form $g'(x)f(g(x))$.
-    a. $\int 2x e^{x^2-5}\:dx$. Let $u=x^2 - 5$ so $\frac{du}{dx} = 2x \Rightarrow dx = \frac{du}{2x}$. Again, the remaining term in $x$ is removed after substituting for $u$ without needed to take a square root.
-    $$
-    \int 2x e^u \frac{du}{2x} = \int e^u \: du = e^u + c = e^{x^2 -5} + c
-    $$
-    Which could have been solved by identifying reverse chain rule.
-    a. $\int \frac{\sin(\sqrt{x})}{\sqrt{x}} dx$. Let $u= \sqrt{x}$ so $\frac{du}{dx} = \frac{1}{2\sqrt{x}} \Rightarrow \frac{1}{\sqrt{x}}dx = 2du$.
-    $$\int \frac{\sin(\sqrt{x})}{\sqrt{x}} dx=2\int \sin(u) du = -2\cos(u)+c=-2\sin(\sqrt{x})+c.$$
-
-    a. $\int \cos(\theta)\sin(\theta)\: d\theta$. Let $u= \sin(\theta)$ so $\frac{du}{d\theta} = \cos(\theta) \Rightarrow d\theta = \frac{du}{\cos(\theta)}$.
-    $$
-    \int \cos(\theta)\sin(\theta)\: d\theta = \int \cos(\theta)u\frac{du}{\cos(\theta)} = \int u\: du = \frac{1}{2}u^2 + c = \frac{1}{2}\sin^2(\theta) + c
-    $$
-    a. $\int \frac{\cos(x)}{1+\sin(x)}\:dx$. Let $u=1+\sin(x)$ so $\frac{du}{dx} = \cos(x) \Rightarrow dx = \frac{du}{\cos(x)}$
-    $$
-    \int \frac{\cos(x)}{1+\sin(x)}\:dx = \int \frac{1}{u}\:du = \ln(u)+c = \ln(1+\sin(x)) + c$$
     
 1. The *Root Mean Square* (RMS) value of a signal over the interval $a$ to $b$ is defined as
     $$\left(\frac{1}{b-a}\int_{a}^{b} (f(x))^2 \; dx\right)^\frac{1}{2}$$

@@ -68,7 +68,7 @@
     \end{align*}
     a. Because $A$ is a $4\times 4$ and $B$ is a $4\times 3$ matrix, $A + B$, $A - B$, $B^2$, and $BA$ are not defined. We have
     \begin{align*}
-    A^2 = \begin{pmatrix} 3 & 0 & 1 & -2\\ 1 & 2 & 2 & 0\\ 0 & 1 & 1 & 1\\ 0 & 0 & 1 & 1 \end{pmatrix}, \qquad
+    A^2 = \begin{pmatrix} 3 & 0 & 2 & -2\\ 1 & 2 & 2 & 0\\ 0 & 1 & 1 & 1\\ 0 & 0 & 1 & 1 \end{pmatrix}, \qquad
     AB = \begin{pmatrix} 2 & -1 & 0\\ 2 & 0 & 2\\ 1 & 1 & 1\\ 1 & 2 & 0 \end{pmatrix}.
     \end{align*}
 

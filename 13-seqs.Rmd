@@ -7,7 +7,7 @@ A *sequence* is an ordered list of objects (usually numbers, but also vectors, m
 * A finite sequence: $2, 4, 6, 8$
 * Square numbers:  $1, 4, 9, 16,\dotsc$
 * Fibonacci: $0, 1, 1, 2, 3, 5, 8, 13, 21, 34,\dotsc$
-* What comes next?: $1, 11, 21, 1211, 111221, 312211,\dotsc$ (the "look-and-say'' sequence)
+* What comes next?: $1, 11, 21, 1211, 111221, 312211,\dotsc$ (the "look-and-say" sequence)
 
 We write
 \begin{align*}

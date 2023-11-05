@@ -114,8 +114,6 @@ $f(x)= f(-x)$ (e.g. $\cos(x)$, $x^2$)}
 :::
 
 
-
-
 The key theorem of calculus that links differentiation and integration is known as the *Fundamental Theorem of Calculus*. 
 
 ::: {.theorem #FTC name="Fundamental Theorem of Calculus (FTC)"}

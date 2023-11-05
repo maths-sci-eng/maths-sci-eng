@@ -14,22 +14,25 @@
     a. $\int_{-\frac{\pi}{2}}^\frac{\pi}{2}\cos(x)\; dx$
     a. $\int_{\ln(2)}^{\ln(3)} e^x\; dx$
 
+1. Let $F(x)$ be an anti-derivative of $f(x)$. Find an anti-derivative of $f(ax+b)$ where $a$ and $b$ are constants. Hint: use the chain rule on $F(ax+b)$.
+
+1. Use your result to the previous question to find the following indefinite integrals
+    a. $\int (2x+6)^2\; dx$
+    a. $\int (2x+6)^99 \; dx$
+    a. $\int \sin(3x+2) \; dx$
+    a. $\int \cos(-4x-1) \; dx$
+    a. $\int \sec^2(9x+2) \; dx$
+    a. $\int \frac{1}{2x+7}\; dx$
+    a. $\int e^{-3x+1}\; dx$
+    a. $\int \frac{1}{(5x+1)^2}\; dx$
+    a. $\int \sqrt{3x+4}\; dx$
+
 1. Find the area between the curve and the $x$-axis of the function $f(x)=x^3-x$ and the lines $x=0$ and $x=2$.
 
 1. The velocity $v$ ($\text{ms}^{-1}$) of a particle moving in a straight line at time $t$ ($\text{s}$) is given by:
     $$v=6t^2-30t-36\quad t>0$$
     By integrating, find the distance travelled by the particle between $t=3$ and $t=5$ seconds.
 
-1. Find the following integrals using a suitable substitution.
-    a. $\int (4x-3)^5 \; dx$
-    a. $\int 4\sin(3x+2)\; dx$
-    a. $\int_2^5 \frac{1}{1-2x} \; dx$
-    a. $\int \frac{1}{\sqrt{(5-3x)^3}}\; dx$
-    a. $\int \frac{4x}{\sqrt{(x^2+3)^3}}\; dx$
-    a. $\int 2xe^{x^2-5}\; dx$
-    a. $\int \frac{\sqrt{x}}{\sqrt{x}}\; dx$
-    a. $\int \cos(\theta)\sin(\theta)\; d\theta$
-    a. $\int \frac{\cos(x)}{1+\sin(x)}\; dx$
 
 1. The *Root Mean Square* (RMS) value of a signal over the interval $a$ to $b$ is defined as
     $$\left(\frac{1}{b-a}\int_{a}^{b} (f(x))^2 \; dx\right)^\frac{1}{2}$$

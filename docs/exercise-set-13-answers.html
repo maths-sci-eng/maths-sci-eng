@@ -23,7 +23,7 @@
 <meta name="author" content="Dr Mark Callaway" />
 
 
-<meta name="date" content="2023-10-19" />
+<meta name="date" content="2023-11-05" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -388,7 +388,57 @@
 <div id="exercise-set-13-answers" class="section level1 unlisted unnumbered hasAnchor">
 <h1>Exercise Set 13 Answers<a href="exercise-set-13-answers.html#exercise-set-13-answers" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <ol style="list-style-type: decimal">
-<li>Determine the following integrals by making use of trigonometric or hyperbolic identities.
+<li><p>Find the following integrals using a suitable substitution.</p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(\int (4x-3)^5 \; dx\)</span></li>
+<li><span class="math inline">\(\int 4\sin(3x+2)\; dx\)</span></li>
+<li><span class="math inline">\(\int_2^5 \frac{1}{1-2x} \; dx\)</span></li>
+<li><span class="math inline">\(\int \frac{1}{\sqrt{(5-3x)^3}}\; dx\)</span></li>
+<li><span class="math inline">\(\int \frac{4x}{\sqrt{(x^2+3)^3}}\; dx\)</span></li>
+<li><span class="math inline">\(\int 2xe^{x^2-5}\; dx\)</span></li>
+<li><span class="math inline">\(\int \frac{\sin(\sqrt{x})}{\sqrt{x}}\; dx\)</span></li>
+<li><span class="math inline">\(\int \cos(\theta)\sin(\theta)\; d\theta\)</span></li>
+<li><span class="math inline">\(\int \frac{\cos(x)}{1+\sin(x)}\; dx\)</span></li>
+</ol>
+<p>Answers:</p>
+<ol style="list-style-type: lower-alpha">
+<li><p><span class="math inline">\(\int (4x-3)^5\:dx\)</span>. Let <span class="math inline">\(u=4x-3\)</span>, so <span class="math inline">\(\frac{du}{dx}=4 \Rightarrow dx = \frac{1}{4}du\)</span>
+<span class="math display">\[
+\int (4x-3)^5\;dx = \int u^5 \frac{1}{4}du =\frac{u^6}{24} +c = \frac{(4x-3)^6}{24} + c\]</span></p></li>
+<li><p><span class="math inline">\(\int 4\sin(3x+2)\;dx\)</span>. Let <span class="math inline">\(u=3x+2\)</span>, so <span class="math inline">\(\frac{du}{dx} = 3 \Rightarrow dx = \frac{1}{3}du\)</span>,
+<span class="math display">\[
+\int 4\sin(3x+2)\;dx = \frac{4}{3}\int\sin(u)\:du = -\frac{4}{3}\cos(u) + c = -\frac{4}{3}\cos(3x+2) + c
+\]</span></p></li>
+<li><p><span class="math inline">\(\int_2^5\frac{1}{1-2x}\:dx\)</span>. Let <span class="math inline">\(u=1-2x\)</span>, so <span class="math inline">\(\frac{du}{dx} = -2 \Rightarrow dx = -\frac{1}{2}du\)</span>. This is a definite integral, so the limits must also be given in terms of u:
+<span class="math display">\[\begin{align*}
+\int_{x=2}^{x=5} \frac{1}{1-2x}\:dx &amp;= -\frac{1}{2}\int_{u=-3}^{u=5}\frac{du}{u} = -\frac{1}{2}\left[\ln(u)\right]_{-3}^{-9}\\
+&amp;= -\frac{1}{2}(\ln(-9) - \ln(-3)) = -\frac{1}{2}\ln\left(\frac{-9}{-3}\right) = -\frac{1}{2}\ln(3)
+\end{align*}\]</span></p></li>
+<li><p><span class="math inline">\(\int\frac{1}{\sqrt{(5-3x)^3}}\:dx\)</span>. Let <span class="math inline">\(u=5-3x\)</span>, so <span class="math inline">\(\frac{du}{dx} = -3 \Rightarrow dx = -\frac{du}{3}\)</span>
+<span class="math display">\[
+\int\frac{1}{\sqrt{(5-3x)^3}}\:dx = \int u^{-\frac{3}{2}}\:du = \frac{2}{3}u^{-\frac{1}{2}} + c = \frac{2}{3}(5-3x)^{-\frac{1}{2}} + c
+\]</span></p></li>
+<li><p><span class="math inline">\(\int\frac{4x}{\sqrt{(x^2 + 3)^3}}\:dx\)</span>. Let <span class="math inline">\(u=x^2 +3\)</span>, so <span class="math inline">\(\frac{du}{dx} = 2x \Rightarrow dx = \frac{du}{2x}\)</span>. Here, the <span class="math inline">\(4x\)</span> term remains in the denominator after substituting, but will be cancelled out once <span class="math inline">\(dx\)</span> is substituted.
+<span class="math display">\[
+\int\frac{4x}{\sqrt{(x^2 + 3)^3}}\:dx = \int\frac{4x}{u^{\frac{3}{2}}}\frac{du}{2x} = \int 2u^{-\frac{3}{2}} = -4u^{-\frac{1}{2}} + c = -4(x^2+3)^{-\frac{1}{2}} + c
+\]</span>
+This could also have been solved by reverse chain rule (think about how the answer would be differentiated, and see that the integral was of the form <span class="math inline">\(g&#39;(x)f(g(x))\)</span>.</p></li>
+<li><p><span class="math inline">\(\int 2x e^{x^2-5}\:dx\)</span>. Let <span class="math inline">\(u=x^2 - 5\)</span> so <span class="math inline">\(\frac{du}{dx} = 2x \Rightarrow dx = \frac{du}{2x}\)</span>. Again, the remaining term in <span class="math inline">\(x\)</span> is removed after substituting for <span class="math inline">\(u\)</span> without needed to take a square root.
+<span class="math display">\[
+\int 2x e^u \frac{du}{2x} = \int e^u \: du = e^u + c = e^{x^2 -5} + c
+\]</span>
+Which could have been solved by identifying reverse chain rule.</p></li>
+<li><p><span class="math inline">\(\int \frac{\sin(\sqrt{x})}{\sqrt{x}} dx\)</span>. Let <span class="math inline">\(u= \sqrt{x}\)</span> so <span class="math inline">\(\frac{du}{dx} = \frac{1}{2\sqrt{x}} \Rightarrow \frac{1}{\sqrt{x}}dx = 2du\)</span>.
+<span class="math display">\[\int \frac{\sin(\sqrt{x})}{\sqrt{x}} dx=2\int \sin(u) du = -2\cos(u)+c=-2\sin(\sqrt{x})+c.\]</span></p></li>
+<li><p><span class="math inline">\(\int \cos(\theta)\sin(\theta)\: d\theta\)</span>. Let <span class="math inline">\(u= \sin(\theta)\)</span> so <span class="math inline">\(\frac{du}{d\theta} = \cos(\theta) \Rightarrow d\theta = \frac{du}{\cos(\theta)}\)</span>.
+<span class="math display">\[
+\int \cos(\theta)\sin(\theta)\: d\theta = \int \cos(\theta)u\frac{du}{\cos(\theta)} = \int u\: du = \frac{1}{2}u^2 + c = \frac{1}{2}\sin^2(\theta) + c
+\]</span></p></li>
+<li><p><span class="math inline">\(\int \frac{\cos(x)}{1+\sin(x)}\:dx\)</span>. Let <span class="math inline">\(u=1+\sin(x)\)</span> so <span class="math inline">\(\frac{du}{dx} = \cos(x) \Rightarrow dx = \frac{du}{\cos(x)}\)</span>
+<span class="math display">\[
+\int \frac{\cos(x)}{1+\sin(x)}\:dx = \int \frac{1}{u}\:du = \ln(u)+c = \ln(1+\sin(x)) + c\]</span></p></li>
+</ol></li>
+<li><p>Determine the following integrals by making use of trigonometric or hyperbolic identities.</p>
 <ol style="list-style-type: lower-alpha">
 <li><span class="math inline">\(\displaystyle \int_0^{\pi/4}4\sin(3\theta)\cos(\theta)d\theta\)</span></li>
 <li><span class="math inline">\(\displaystyle \int \left( \cos\left(\frac{x}{2}\right) - \sin\left(\frac{x}{2}\right)\right)^2 \, dx\)</span></li>
@@ -398,7 +448,7 @@
 <li><span class="math inline">\(\displaystyle \int \tan(2x) \,dx\)</span></li>
 <li><span class="math inline">\(\displaystyle \int \sinh^3(x) \cosh^2(x)\)</span></li>
 </ol>
-Answers:
+<p>Answers:</p>
 <ol style="list-style-type: lower-alpha">
 <li><span class="math display">\[\int_0^{\frac{\pi}{4}}4\sin(3\theta)\cos(\theta)\, d\theta\]</span>
 Use the product to sum trigonometric identity: <span class="math inline">\(\sin(A)\cos(B) = \frac{1}{2}\left(\sin(A+B) + \sin(A+B)\right)\)</span>.
@@ -435,7 +485,7 @@ Where <span class="math inline">\(\int\tan(x)dx\)</span> can be solved with subs
 \end{align*}\]</span>
 having used <span class="math inline">\(\sinh^2(x) = 1 - \cosh^2(x)\)</span> and reverse chain rule, or substitution with <span class="math inline">\(u = \cosh(x)\)</span> and <span class="math inline">\(du = \sinh(x)dx\)</span>.</li>
 </ol></li>
-<li>Determine the following integrals using the method of partial fractions.
+<li><p>Determine the following integrals using the method of partial fractions.</p>
 <ol style="list-style-type: lower-alpha">
 <li><span class="math inline">\(\displaystyle \int \frac{1}{x^2+x-6} \, dx\)</span></li>
 <li><span class="math inline">\(\displaystyle \int \frac{-12u-13}{(2u+1)(u-3)} \, du\)</span></li>
@@ -445,7 +495,7 @@ having used <span class="math inline">\(\sinh^2(x) = 1 - \cosh^2(x)\)</span> and
 <li><span class="math inline">\(\displaystyle \int \frac{z+1}{(z-1)^2} \, dz\)</span></li>
 <li><span class="math inline">\(\displaystyle \int \frac{5y^2}{(y^2+1)(2y-1)} \, dy\)</span></li>
 </ol>
-Answers:
+<p>Answers:</p>
 <ol style="list-style-type: lower-alpha">
 <li><span class="math display">\[\frac{1}{x^2+x-6} = \frac{1}{(x+3)(x-2)} = \frac{A}{x+3}+\frac{B}{x-2} \frac{A(x-2) + B(x+3)}{(x+3)(x-2)}\]</span>
 Equating the powers of <span class="math inline">\(x\)</span> and solving the resulting simultaneous equations gives <span class="math inline">\(A + B = 0\)</span> and <span class="math inline">\(3B-2A = 1\)</span>, so <span class="math inline">\(A = -\frac{1}{5}. B = \frac{1}{5}\)</span>. So
@@ -484,7 +534,7 @@ so the integral can be rewritten as the partial fractions
 <span class="math display">\[
 \int \frac{5y^2}{(y^2+1)(2y-1)}\;dy = \int \frac{2y+1}{y^2+1} + \frac{1}{2y-1}\, dy = \tan^{-1}(y) + \ln(y^2+1) + \frac{1}{2}\ln(2y-1) + c\]</span></li>
 </ol></li>
-<li>Determine the following integrals using the method of integration by parts.
+<li><p>Determine the following integrals using the method of integration by parts.</p>
 <ol style="list-style-type: lower-alpha">
 <li><span class="math inline">\(\displaystyle \int x \cos(x) \,dx\)</span></li>
 <li><span class="math inline">\(\displaystyle \int t^2 e^{t} \, dt\)</span></li>
@@ -492,7 +542,7 @@ so the integral can be rewritten as the partial fractions
 <li><span class="math inline">\(\displaystyle \int (x+1)^2 e^{-2x} \, dx\)</span></li>
 <li>$^{-1}(x) , dx $.</li>
 </ol>
-Answers:
+<p>Answers:</p>
 <ol style="list-style-type: lower-alpha">
 <li>Using integration by parts, <span class="math inline">\(\int u\,dv = uv - \int v\,du\)</span> with <span class="math inline">\(u=x\)</span> and <span class="math inline">\(dv = \cos(x)\)</span>
 <span class="math display">\[\int x \cos (x) \, dx = x \sin (x) - \int \sin (x) \, dx = x \sin (x) + \cos (x) + C \]</span></li>

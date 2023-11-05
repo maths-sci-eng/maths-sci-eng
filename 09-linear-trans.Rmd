@@ -300,7 +300,7 @@ Note that the formula only makes sense if $\det(A)\neq 0$. It turns out that the
 An $n\times n$ matrix $A$ is invertible if and only if $\det(A)\neq 0$. If $A$ is not invertible, then we say that $A$ is *singular*.
 :::
 
-This is analagous to not being able to divide by zero in the one-dimensional case: we cannot solve $ax=b$ if $a=0$. 
+This is an extension to not being able to divide by zero in the one-dimensional case: we cannot solve $ax=b$ if $a=0$. 
 
 ::: {.example #inverse name="2 x 2 inverse examples"}
 

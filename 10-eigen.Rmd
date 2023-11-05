@@ -532,7 +532,7 @@ One of the most important applications of diagaonalisation is in computing power
 
 $$A=PDP^{-1}$$
 
-Now if we want to cmopute $A^2$, we have
+Now if we want to compute $A^2$, we have
 $$A^2=PDP^{-1}PDP^{-1}=PD^2P^{-1}$$
 where we used $P^{-1}P=I$. Now, more generally
 $$

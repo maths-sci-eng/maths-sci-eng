@@ -314,7 +314,7 @@ $$
 $$
 the *Taylor series for $f$ at $a$*. When a Taylor series is formulated at the point $a=0$, it is often referred to as a *Maclaurin series*.
 
-A Taylor series is a type of power series. In the previous section we saw that a power series might only converge for certain values of $x$. Generally, the Taylor series of a functino will either converge to the function for all values of $x$ or within some interval. Here we list some commonly used Taylor series derived at $a=0$, which you should familiarise yourself with. The Validity column states the interval around $0$ for which the Taylor series is equal to the original function.
+A Taylor series is a type of power series. In the previous section we saw that a power series might only converge for certain values of $x$. Generally, the Taylor series of a function will either converge to the function for all values of $x$ or within some interval. Here we list some commonly used Taylor series derived at $a=0$, which you should familiarise yourself with. The Validity column states the interval around $0$ for which the Taylor series is equal to the original function.
 
 |Series|Validity|
 |---|---|
