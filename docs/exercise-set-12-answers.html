@@ -23,7 +23,7 @@
 <meta name="author" content="Dr Mark Callaway" />
 
 
-<meta name="date" content="2023-11-05" />
+<meta name="date" content="2023-11-21" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -415,11 +415,44 @@
 <p>Answers:</p>
 <ol style="list-style-type: lower-alpha">
 <li><span class="math inline">\(\int_0^2 x^2-2x\; dx = \left[\frac{x^3}{3} - x^2\right]_0^2 = \left(\frac{2^3}{3} - 2^2\right) - 0 = -\frac{4}{3}\)</span></li>
-<li><span class="math inline">\(\int_4^{16} \frac{2}{\sqrt{x}} \; dx = \int_4^16 2x^{-\frac{1}{2}}\;dx = \left[4x^{\frac{1}{2}}\right]_4^16 = 16 - 8 = 8\)</span></li>
+<li><span class="math inline">\(\int_4^{16} \frac{2}{\sqrt{x}} \; dx = \int_4^{16} 2x^{-\frac{1}{2}}\;dx = \left[4x^{\frac{1}{2}}\right]_4^16 = 16 - 8 = 8\)</span></li>
 <li>Note that the limit, <span class="math inline">\(r\)</span>, appears inside the integral, but it is just a constant. It is explicitly taken out of the integral here
 <span class="math inline">\(\int_{-r}^r \frac{mx^2}{2r}\:dx = \frac{m}{2r}\int_{-r}^r x^2 \: dx = \frac{m}{2r}\left[\frac{1}{3}x^3\right]_{-r}^r = \frac{m}{2r}\left(\frac{r^3}{3} + \frac{r^3}{3}\right) = \frac{mr^2}{3}\)</span></li>
 <li><span class="math inline">\(\int_{-\frac{\pi}{2}}^\frac{\pi}{2}\cos(x)\; dx = \left[\sin(x)\right]_{-\frac{\pi}{2}}^\frac{\pi}{2} = \sin(\pi/2) - \sin(\pi/2) = 2\)</span></li>
 <li><span class="math inline">\(\int_{\ln(2)}^{\ln(3)} e^x\; dx = \left[e^x\right]_{\ln(2)}^{\ln(3)} = e^{\ln(3)} - e^{\ln(2)} = 3-2 = 1\)</span></li>
+</ol></li>
+<li><p>Let <span class="math inline">\(F(x)\)</span> be an anti-derivative of <span class="math inline">\(f(x)\)</span>. Find an anti-derivative of <span class="math inline">\(f(ax+b)\)</span> where <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are constants. Hint: use the chain rule on <span class="math inline">\(F(ax+b)\)</span>.</p>
+<p>Answer:</p>
+<p>Let <span class="math inline">\(u(x)=ax+b\)</span>, then the derivative of <span class="math inline">\(F(ax+b)=F(u)\)</span> is (using the chain rule)
+<span class="math display">\[\frac{dF(ax+b)}{dx}=\frac{dF}{du}\times\frac{du}{dx}=f(u)\times a=af(ax+b)\]</span>
+where we have used the fact that <span class="math inline">\(\frac{dF(u)}{du}=f(u)\)</span>, since <span class="math inline">\(F(x)\)</span> is an anti-derivative of <span class="math inline">\(f(x)\)</span>.
+This means that
+<span class="math display">\[\frac{d\frac{1}{a}F(ax+b)}{dx}=f(ax+b)\]</span>
+that is, <span class="math inline">\(\frac{1}{a}F(ax+b)\)</span> is an anti-derivative of <span class="math inline">\(f(ax+b)\)</span>. Hence,
+<span class="math display">\[\int f(ax+b)\; dx = \frac{1}{a}F(ax+b).\]</span></p></li>
+<li><p>Use your result to the previous question to find the following indefinite integrals</p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(\int (2x+6)^2\; dx\)</span></li>
+<li><span class="math inline">\(\int (2x+6)^{99} \; dx\)</span></li>
+<li><span class="math inline">\(\int \sin(3x+2) \; dx\)</span></li>
+<li><span class="math inline">\(\int \cos(-4x-1) \; dx\)</span></li>
+<li><span class="math inline">\(\int \sec^2(9x+2) \; dx\)</span></li>
+<li><span class="math inline">\(\int \frac{1}{2x+7}\; dx\)</span></li>
+<li><span class="math inline">\(\int e^{-3x+1}\; dx\)</span></li>
+<li><span class="math inline">\(\int \frac{1}{(5x+1)^2}\; dx\)</span></li>
+<li><span class="math inline">\(\int \sqrt{3x+4}\; dx\)</span></li>
+</ol>
+<p>Answer:</p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(\int (2x+6)^2\; dx=\frac{1}{2}\times\frac{1}{3}(2x+6)^3+C=\frac{1}{6}(2x+6)^3+C\)</span></li>
+<li><span class="math inline">\(\int (2x+6)^{99} \; dx=\frac{1}{2}\times\frac{1}{100}(2x+6)^{100}+C=\frac{1}{200}(2x+6)^{100}+C\)</span></li>
+<li><span class="math inline">\(\int \sin(3x+2) \; dx=-\frac{1}{3}\cos(3x+2)+C\)</span></li>
+<li><span class="math inline">\(\int \cos(-4x-1) \; dx=\frac{1}{4}\sin(-4x-1)+C\)</span></li>
+<li><span class="math inline">\(\int \sec^2(9x+2) \; dx=\frac{1}{9}\tan(9x+2)+C\)</span></li>
+<li><span class="math inline">\(\int \frac{1}{2x+7}\; dx= \frac{1}{2}\ln(2x+7)+C\)</span></li>
+<li><span class="math inline">\(\int e^{-3x+1}\; dx= -\frac{1}{3}e^{-3x+1}+C\)</span></li>
+<li><span class="math inline">\(\int \frac{1}{(5x+1)^2}\; dx= \int (5x+1)^{-2}\; dx=\frac{1}{5}\times\frac{1}{-1}(5x+1)^{-1}+C=-\frac{1}{5(5x+1)}+C\)</span></li>
+<li><span class="math inline">\(\int \sqrt{3x+4}\; dx= \int (3x+4)^\frac{1}{2}\; dx=\frac{1}{3}\frac{2}{3}(3x+4)^\frac{3}{2}+C=\frac{2}{9}(3x+4)^\frac{3}{2}+C\)</span></li>
 </ol></li>
 <li><p>Find the area between the curve and the <span class="math inline">\(x\)</span>-axis of the function <span class="math inline">\(f(x)=x^3-x\)</span> and the lines <span class="math inline">\(x=0\)</span> and <span class="math inline">\(x=2\)</span>.</p>
 <p>Answer:</p>

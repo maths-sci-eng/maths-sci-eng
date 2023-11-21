@@ -163,7 +163,7 @@ Other cases:
 $$\frac{p(x)}{q(x)}=s(x)+\frac{r(x)}{q(x)}$$
 where the degree of $r$ will be strictly less that the degree of $q$, and we can then perform partial fractions on the remainder term $\frac{r}{q}$.
 
-* If $q(x)$ contains an irreducible quadratic factor --- factors of the form $x^2+bx+c$ that cannot be factorised into a product of linear factors $(x-\alpha)(x-\beta)$ with integer coefficients --- then the numerator in the partial fractions will be a linear polynomial. For example,
+* If $q(x)$ contains an irreducible quadratic factor --- factors of the form $x^2+bx+c$ that cannot be factorised into a product of linear factors $(x-\alpha)(x-\beta)$ with real coefficients --- then the numerator in the partial fractions will be a linear polynomial. For example,
 $$\frac{x^2+1}{(x+2)(x-1)(x^2+x+1)}=\frac{c_1}{(x+2)}+\frac{c_2}{x-1}+\frac{bx+c}{x^2+x+1}.$$
 
 * If $q(x)$ contains repeated roots --- factors of the form $(x-\alpha)^t$ --- then the first $t$ powers of $(x-\alpha)$ will appear as denominators (although possibly with a zero numerator). For example,

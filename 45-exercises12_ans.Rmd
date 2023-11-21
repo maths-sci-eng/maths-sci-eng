@@ -23,12 +23,47 @@
     
     Answers:
     a. $\int_0^2 x^2-2x\; dx = \left[\frac{x^3}{3} - x^2\right]_0^2 = \left(\frac{2^3}{3} - 2^2\right) - 0 = -\frac{4}{3}$
-    a. $\int_4^{16} \frac{2}{\sqrt{x}} \; dx = \int_4^16 2x^{-\frac{1}{2}}\;dx = \left[4x^{\frac{1}{2}}\right]_4^16 = 16 - 8 = 8$
+    a. $\int_4^{16} \frac{2}{\sqrt{x}} \; dx = \int_4^{16} 2x^{-\frac{1}{2}}\;dx = \left[4x^{\frac{1}{2}}\right]_4^16 = 16 - 8 = 8$
     a. Note that the limit, $r$, appears inside the integral, but it is just a constant. It is explicitly taken out of the integral here
     $\int_{-r}^r \frac{mx^2}{2r}\:dx = \frac{m}{2r}\int_{-r}^r x^2 \: dx = \frac{m}{2r}\left[\frac{1}{3}x^3\right]_{-r}^r = \frac{m}{2r}\left(\frac{r^3}{3} + \frac{r^3}{3}\right) = \frac{mr^2}{3}$
     a. $\int_{-\frac{\pi}{2}}^\frac{\pi}{2}\cos(x)\; dx = \left[\sin(x)\right]_{-\frac{\pi}{2}}^\frac{\pi}{2} = \sin(\pi/2) - \sin(\pi/2) = 2$
     a. $\int_{\ln(2)}^{\ln(3)} e^x\; dx = \left[e^x\right]_{\ln(2)}^{\ln(3)} = e^{\ln(3)} - e^{\ln(2)} = 3-2 = 1$
     
+
+1. Let $F(x)$ be an anti-derivative of $f(x)$. Find an anti-derivative of $f(ax+b)$ where $a$ and $b$ are constants. Hint: use the chain rule on $F(ax+b)$.
+
+    Answer:
+
+    Let $u(x)=ax+b$, then the derivative of $F(ax+b)=F(u)$ is (using the chain rule)
+    $$\frac{dF(ax+b)}{dx}=\frac{dF}{du}\times\frac{du}{dx}=f(u)\times a=af(ax+b)$$
+    where we have used the fact that $\frac{dF(u)}{du}=f(u)$, since $F(x)$ is an anti-derivative of $f(x)$.
+    This means that
+    $$\frac{d\frac{1}{a}F(ax+b)}{dx}=f(ax+b)$$
+    that is, $\frac{1}{a}F(ax+b)$ is an anti-derivative of $f(ax+b)$. Hence,
+    $$\int f(ax+b)\; dx = \frac{1}{a}F(ax+b).$$
+
+1. Use your result to the previous question to find the following indefinite integrals
+    a. $\int (2x+6)^2\; dx$
+    a. $\int (2x+6)^{99} \; dx$
+    a. $\int \sin(3x+2) \; dx$
+    a. $\int \cos(-4x-1) \; dx$
+    a. $\int \sec^2(9x+2) \; dx$
+    a. $\int \frac{1}{2x+7}\; dx$
+    a. $\int e^{-3x+1}\; dx$
+    a. $\int \frac{1}{(5x+1)^2}\; dx$
+    a. $\int \sqrt{3x+4}\; dx$
+
+    Answer:
+    a. $\int (2x+6)^2\; dx=\frac{1}{2}\times\frac{1}{3}(2x+6)^3+C=\frac{1}{6}(2x+6)^3+C$
+    a. $\int (2x+6)^{99} \; dx=\frac{1}{2}\times\frac{1}{100}(2x+6)^{100}+C=\frac{1}{200}(2x+6)^{100}+C$
+    a. $\int \sin(3x+2) \; dx=-\frac{1}{3}\cos(3x+2)+C$
+    a. $\int \cos(-4x-1) \; dx=\frac{1}{4}\sin(-4x-1)+C$
+    a. $\int \sec^2(9x+2) \; dx=\frac{1}{9}\tan(9x+2)+C$
+    a. $\int \frac{1}{2x+7}\; dx= \frac{1}{2}\ln(2x+7)+C$
+    a. $\int e^{-3x+1}\; dx= -\frac{1}{3}e^{-3x+1}+C$
+    a. $\int \frac{1}{(5x+1)^2}\; dx= \int (5x+1)^{-2}\; dx=\frac{1}{5}\times\frac{1}{-1}(5x+1)^{-1}+C=-\frac{1}{5(5x+1)}+C$
+    a. $\int \sqrt{3x+4}\; dx= \int (3x+4)^\frac{1}{2}\; dx=\frac{1}{3}\frac{2}{3}(3x+4)^\frac{3}{2}+C=\frac{2}{9}(3x+4)^\frac{3}{2}+C$
+
 
 1. Find the area between the curve and the $x$-axis of the function $f(x)=x^3-x$ and the lines $x=0$ and $x=2$.
 
