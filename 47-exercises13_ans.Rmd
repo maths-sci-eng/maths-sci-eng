@@ -151,7 +151,7 @@
     a. $\displaystyle \int t^2 e^{t} \, dt$
     a. $\displaystyle \int e^{x}\sin(x) \, dx$
     a. $\displaystyle \int (x+1)^2 e^{-2x} \, dx$
-    a. $\displaystyle \int \sin^{-1}(x) \, dx $.
+    a. $\displaystyle \int \sin^{-1}(x) \, dx$.
     
     Answers:
     a. Using integration by parts, $\int u\,dv = uv - \int v\,du$ with $u=x$ and $dv = \cos(x)$
