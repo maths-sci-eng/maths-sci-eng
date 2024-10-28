@@ -33,7 +33,7 @@ knitr::include_graphics("figures/-2x2+2.png")
 knitr::include_graphics("figures/x2-x-1.png")
 ```
 
-    a. This is an exponential $a^x$ with $a>1$. All exponential functions cross the y axis at $a^0=1$ and the do not cross the $x$ axis.
+    a. This is an exponential $a^x$ with $a>1$. All exponential functions cross the y axis at $a^0=1$ and they do not cross the $x$ axis.
 ```{r, out.width="50%"}
 knitr::include_graphics("figures/3x.png")
 ```

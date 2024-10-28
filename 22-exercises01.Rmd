@@ -3,9 +3,9 @@
 These exercises cover the topics of Algebra. 
 
 1. Simplify each of the following (*Hint*: use the rules of exponents where needed).
-    a. $x = 3pq+5pr=2qr+qp-6rp$
-    a. $y = 5l^2mn+2nl^2m-3mln^2+l^2nm+4n^2ml-nm^2$
-    a. $z = \dfrac{(s^\frac{1}{3})^\frac{3}{4}\times (t^\frac{1}{4})^{-1}}{(t^\frac{1}{2}\times (s^{-\frac{1}{4}})^{-1})}$  
+    a. $3pq+5pr-2qr+qp-6rp$
+    a. $5l^2mn+2nl^2m-3mln^2+l^2nm+4n^2ml-nm^2$
+    a. $\dfrac{(s^\frac{1}{3})^\frac{3}{4}\times (t^\frac{1}{4})^{-1}}{(t^\frac{1}{2}\times (s^{-\frac{1}{4}})^{-1})}$  
 
 1. Expand the brackets in each of the following and simplify the expression.
     a. $-4x(2x-y)(3x+2y)$
