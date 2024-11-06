@@ -18,7 +18,7 @@
 
 1. Show that the following hyperbolic identity holds:
     $$\cosh^2(x)-\sinh^2(x)=1$$
-    (you will first need to find the definitions of $\cosh$ and $\sinh$, which are called *hyperbolic functions* in terms of $e$ - these are in the lecture notes, or use Google).
+    (you will first need to find the definitions of $\cosh$ and $\sinh$ in terms of $e$ - these are called *hyperbolic functions* and can be found in the lecture notes, or use Google).
 
 1. Use natural logarthims to make $t$ the subject of the formula
     $$V=1-e^{\frac{-t}{RC}}.$$

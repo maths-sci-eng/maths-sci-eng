@@ -319,9 +319,9 @@ A Taylor series is a type of power series. In the previous section we saw that a
 |Series|Validity|
 |---|---|
 | $\frac{1}{1-x}=1+x+x^2+x^3+\dotsb=\sum_{n=0}^{\infty}x^n$ | $-1< x < 1$ |
-| $e^x=1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+\dotsb = \sum_{n=0}^{\infty}\frac{x^n}{n!}$ | $-\infty\leq x \leq \infty$ |
-| $\cos(x)=1-\frac{x^2}{2!}+\frac{x^4}{4!}-\dotsb= \sum_{n=0}^{\infty}(-1)^n\frac{x^{2n}}{(2n)!}$ | $-\infty\leq x \leq \infty$ |
-| $\sin(x)=x-\frac{x^3}{3!}+\frac{x^5}{5!}-\dotsb=\sum_{n=0}^{\infty}(-1)^n\frac{x^{2n+1}}{(2n+1)!}$ | $-\infty\leq x \leq \infty$ |
+| $e^x=1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+\dotsb = \sum_{n=0}^{\infty}\frac{x^n}{n!}$ | $-\infty < x < \infty$ |
+| $\cos(x)=1-\frac{x^2}{2!}+\frac{x^4}{4!}-\dotsb= \sum_{n=0}^{\infty}(-1)^n\frac{x^{2n}}{(2n)!}$ | $-\infty < x < \infty$ |
+| $\sin(x)=x-\frac{x^3}{3!}+\frac{x^5}{5!}-\dotsb=\sum_{n=0}^{\infty}(-1)^n\frac{x^{2n+1}}{(2n+1)!}$ | $-\infty < x < \infty$ |
 |$\ln(x+1)=x-\frac{x^2}{2!}+\frac{x^3}{3!}-\dotsb= \sum_{n=1}^{\infty}(-1)^{n+1}\frac{x^{n}}{n!}$ | $-1< x \leq 1$ |
 | $\tan^{-1}(x)=x-\frac{x^3}{3}+\frac{x^5}{5}-\dotsb= \sum_{n=0}^{\infty}(-1)^n\frac{x^{2n+1}}{2n+1}$ | $-1\leq x \leq 1$ |
 

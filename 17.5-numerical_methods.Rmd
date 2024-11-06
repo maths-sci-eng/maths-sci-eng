@@ -5,9 +5,10 @@ In general, many mathematical problems do not have algebraic solution methods. I
 
 ## Numerical Root Finding
 
+
 We have seen how to solve linear and quadratic equations algebraically. We mentioned in section \@ref(polynomials) that there also exist formulae for finding roots of cubic and quartic polynomial equations, but not quintic or higher.
 
-We often need to find the roots (values of $x$ for which $f(x)=0$) of some function
+We often need to find the roots (values of $x$ for which $f(x)=0$) of some function...
 
 ## Numerical differentiation
 
