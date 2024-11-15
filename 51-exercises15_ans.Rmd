@@ -38,7 +38,7 @@
 
     $${}_{15} P_4=\frac{15!}{(15-4)!}=\frac{15!}{11!}=32760.$$
 
-1. In a meal deal you can choose any 3 items from: sandwich, wrap, pasta, sushi, crisps, drink, chocolate. How many different meal deals are there?
+1. In a meal deal you can choose any 3 different items from: sandwich, wrap, pasta, sushi, crisps, drink, chocolate. How many different meal deals are there?
 
     Answer:
 

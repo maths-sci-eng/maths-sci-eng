@@ -15,7 +15,7 @@
 
 1. How many four letter arrangements are there of letters from the word UNCOPYRIGHTABLE?
 
-1. In a meal deal you can choose any 3 items from: sandwich, wrap, pasta, sushi, crisps, drink, chocolate. How many different meal deals are there?
+1. In a meal deal you can choose any 3 different items from: sandwich, wrap, pasta, sushi, crisps, drink, chocolate. How many different meal deals are there?
 
 1. How many arrangements of he word MISSISSIPPI are there? How many of these contain the "word" SSSS?
 
