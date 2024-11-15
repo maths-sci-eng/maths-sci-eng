@@ -76,6 +76,8 @@
 
     Answers:
 
+    There are ${ 52 \choose 5}=2598960$ poker hands in total.
+
     a. *four-of-a-kind*: There are ${13 \choose 1}$ way of choosing the number on the four-of-a-kind, and then given the number, there are ${4 \choose 4} = 1$ ways to choose the suits. Then we have ${12 \choose 1}$ ways to choose the number for the remaining card, and ${4 \choose 1}$ ways to choose the suit. Hence the answer is:
         $$
         {13 \choose 1}{12 \choose 1}{4 \choose 1} = 13 \times 12 \times 4 = 624.
@@ -90,7 +92,6 @@
         $$
         {10 \choose 1}{4 \choose 1}^5 - 40 = (10 \times 1,024) - 40 = 10200.
         $$
-
 
 1. A box contains 7 rock samples; 4 have an independent property set A and the other 3 have a property set B. We withdraw two rock samples one at a time without replacement. Find the probabilities:
     a. the samples have different property sets
